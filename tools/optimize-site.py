@@ -60,6 +60,33 @@ def patch_engine(site_dir, dry_run=False):
     return bool(patched)
 
 
+SW_TAG = '<script src="/sw-register.js"></script>'
+
+
+def inject_sw(site_dir, dry_run=False):
+    """在 index.html 里挂上 Service Worker 注册脚本（超时重试 + 缓存）。"""
+    index = os.path.join(site_dir, "index.html")
+    if not os.path.isfile(index):
+        raise SystemExit(f"找不到 {index}")
+
+    with open(index, encoding="utf-8") as fh:
+        html = fh.read()
+
+    if SW_TAG in html:
+        print("  index.html 已挂载 sw-register.js")
+        return False
+
+    if "</head>" not in html:
+        raise SystemExit("index.html 里没有 </head>，无法注入 sw-register.js")
+
+    html = html.replace("</head>", f"    {SW_TAG}\n</head>", 1)
+    if not dry_run:
+        with open(index, "w", encoding="utf-8", newline="") as fh:
+            fh.write(html)
+    print("  index.html 已注入 sw-register.js")
+    return True
+
+
 def convert(site_dir, quality, dry_run=False):
     assets = os.path.join(site_dir, "assets")
     pngs = []
@@ -120,6 +147,7 @@ def main():
     site = os.path.abspath(args.dir)
     print(f"优化目录: {site}  (webp quality={args.quality}{'  DRY-RUN' if args.dry_run else ''})")
     patch_engine(site, args.dry_run)
+    inject_sw(site, args.dry_run)
     convert(site, args.quality, args.dry_run)
     if not args.dry_run:
         report(site)
