@@ -1,70 +1,93 @@
 /* 四纹章静态站 Service Worker
  *
- * 目的：国内到 Cloudflare 的线路会间歇性「卡住」——请求发出去了、响应头也可能回来了，
- * 但响应体传一半就停住（实测 6.79 MB 的引擎包卡在 2.4 MB，30 秒没动静）。
- * Cocos 的加载器没有超时重试机制，一个请求卡住就永远黑屏。
+ * 背景：国内到 Cloudflare 免费线路的带宽很不稳定（实测单连接 50–300 KB/s，且会间歇性「断流」）。
+ * 站点最大的文件是引擎包 cocos-js/_virtual_cc-*.js（6.79 MB，brotli 后约 2.4 MB），
+ * Cocos 的加载器没有超时/重试，一次断流就永远黑屏。
  *
  * 这里做三件事：
- * 1. 给每个同源请求加超时：超过 TIMEOUT 仍没下载完就中止并重试（最多 RETRIES 次）
- * 2. 下载完成的资源写入 Cache Storage，第二次访问直接命中缓存（0 网络请求）
+ * 1. 流式下载 + 「断流检测」：只要还在收数据就一直等（慢没关系），连续 IDLE_TIMEOUT 毫秒收不到数据
+ *    才判定卡死，中止并重试（最多 RETRIES 次）
+ * 2. 下载完成的资源写入 Cache Storage，第二次访问直接命中（0 网络流量），越玩越快
  * 3. 入口文件（html/js 清单）走「网络优先」，保证发版后能拿到新版本
  */
 
-const VERSION = 'fe-v1';
+const VERSION = 'fe-v2';
 const CACHE = `four-emblems-${VERSION}`;
-const TIMEOUT = 30000;
-const RETRIES = 3;
+const IDLE_TIMEOUT = 15000; // 连续 15 秒没有数据才认为卡死
+const RETRIES = 4;
 
 // 入口文件：必须网络优先，否则发版后用户会卡在旧版本
-function isEntry(url) {
+function isEntry(pathname) {
   return (
-    url.endsWith('/') ||
-    url.endsWith('/index.html') ||
-    url.endsWith('/sw.js') ||
-    url.endsWith('/sw-register.js') ||
-    url.endsWith('/index.js') ||
-    url.endsWith('/application.js') ||
-    url.endsWith('/src/settings.json') ||
-    url.endsWith('/src/import-map.json') ||
-    url.endsWith('/style.css')
+    pathname === '/' ||
+    pathname.endsWith('/index.html') ||
+    pathname.endsWith('/sw.js') ||
+    pathname.endsWith('/sw-register.js') ||
+    pathname.endsWith('/index.js') ||
+    pathname.endsWith('/application.js') ||
+    pathname.endsWith('/src/settings.json') ||
+    pathname.endsWith('/src/import-map.json') ||
+    pathname.endsWith('/style.css')
   );
 }
 
-function withTimeout(promise, ms, label) {
-  return new Promise((resolve, reject) => {
-    const timer = setTimeout(() => reject(new Error(`timeout: ${label}`)), ms);
-    promise.then(
-      (v) => { clearTimeout(timer); resolve(v); },
-      (e) => { clearTimeout(timer); reject(e); }
-    );
-  });
-}
+// 流式读取响应体；只要持续有数据就不打断，长时间没数据才中止
+async function readFully(request) {
+  const ctrl = new AbortController();
+  let timer = null;
+  const armIdle = () => {
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(() => ctrl.abort(), IDLE_TIMEOUT);
+  };
 
-// 完整下载响应体（含超时），返回可复用的 Response
-async function download(request, attempt) {
-  const label = `${attempt + 1}/${RETRIES} ${new URL(request.url).pathname}`;
-  const res = await fetch(request, { cache: 'no-store' });
-  if (!res.ok) throw new Error(`HTTP ${res.status} ${label}`);
-  if (res.status === 206) return res; // Range 请求不做缓存与重写
+  let res;
+  try {
+    armIdle();
+    res = await fetch(request, { cache: 'no-store', signal: ctrl.signal });
+  } finally {
+    if (timer) clearTimeout(timer);
+  }
 
-  // 关键：body 也要在超时内读完，否则「头回来了、体卡住」的情况抓不到
-  const buf = await withTimeout(res.clone().arrayBuffer(), TIMEOUT, label);
-  return new Response(buf, {
-    status: res.status,
-    statusText: res.statusText,
-    headers: res.headers,
-  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  if (!res.body) return res;
+
+  const reader = res.body.getReader();
+  const chunks = [];
+  try {
+    for (;;) {
+      armIdle();
+      const { done, value } = await reader.read();
+      if (done) break;
+      if (value && value.length) chunks.push(value);
+    }
+  } finally {
+    if (timer) clearTimeout(timer);
+  }
+
+  const size = chunks.reduce((sum, c) => sum + c.length, 0);
+  const body = new Uint8Array(size);
+  let offset = 0;
+  for (const chunk of chunks) {
+    body.set(chunk, offset);
+    offset += chunk.length;
+  }
+
+  // 响应体已经解压，原始的 content-encoding / content-length 不能再带过去
+  const headers = new Headers(res.headers);
+  headers.delete('content-encoding');
+  headers.delete('content-length');
+
+  return new Response(body, { status: res.status, statusText: res.statusText, headers });
 }
 
 async function fetchWithRetry(request) {
   let lastErr;
   for (let attempt = 0; attempt < RETRIES; attempt++) {
     try {
-      return await download(request, attempt);
+      return await readFully(request);
     } catch (err) {
       lastErr = err;
-      // 递增退避，给线路一点恢复时间
-      if (attempt < RETRIES - 1) await new Promise((r) => setTimeout(r, 800 * (attempt + 1)));
+      if (attempt < RETRIES - 1) await new Promise((r) => setTimeout(r, 600 * (attempt + 1)));
     }
   }
   throw lastErr;
@@ -88,6 +111,7 @@ self.addEventListener('fetch', (event) => {
 
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return; // 放过第三方（analytics 等）
+  if (request.headers.has('range')) return;        // Range 请求交给浏览器
 
   event.respondWith(
     (async () => {
@@ -105,7 +129,6 @@ self.addEventListener('fetch', (event) => {
         }
       }
 
-      // 静态资源：缓存优先 + 超时重试
       const cached = await cache.match(request);
       if (cached) return cached;
 
