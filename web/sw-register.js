@@ -1,23 +1,25 @@
-// 页面最早执行的脚本：错误捕获 + 移动端诊断面板 + Service Worker 注册策略
+// 页面最早执行的脚本：加载提示 + 错误即时上报 + 移动端诊断面板 + Service Worker 注册策略
 (function () {
   // ---- 1. 先挂错误收集，必须在模块加载之前 ----
   window.__feErrors = [];
   window.addEventListener('error', function (e) {
     var msg = (e && e.message) || '';
     var where = e && e.filename ? ' @' + e.filename.split('/').pop() + ':' + e.lineno : '';
-    if (msg || where) window.__feErrors.push(msg + where);
+    var text = (msg || 'error') + where + (e && e.target && e.target.src ? ' src=' + e.target.src.split('/').pop() : '');
+    window.__feErrors.push(text);
+    showDiag(); // 一有错误立刻显示，不用等
   }, true);
   window.addEventListener('unhandledrejection', function (e) {
     var r = e && e.reason;
     window.__feErrors.push('reject: ' + ((r && (r.message || r.name)) || String(r)).slice(0, 200));
+    showDiag();
   });
 
-  // ---- 2. 如果 15 秒还没进游戏，直接在页面上打印诊断信息 ----
-  // 手机上没有控制台，只能靠这个面板把信息带回来看
-  setTimeout(function () {
+  // ---- 2. 诊断面板 ----
+  function showDiag() {
     try {
-      if (window.cc && cc.director && cc.director.getTotalFrames && cc.director.getTotalFrames() > 10) return;
       if (document.getElementById('fe-diag')) return;
+      if (window.cc && cc.director && cc.director.getTotalFrames && cc.director.getTotalFrames() > 10) return;
 
       var c2 = document.createElement('canvas');
       var gl2 = null, gl1 = null;
@@ -33,12 +35,14 @@
         'ES Module: ' + ('noModule' in HTMLScriptElement.prototype ? '支持' : '不支持'),
         'WebGL2: ' + (gl2 ? '支持' : '不支持'),
         'WebGL1: ' + (gl1 ? '支持' : '不支持'),
-        'fetch/async: ' + (typeof fetch === 'function' && typeof Promise === 'function' ? 'ok' : '缺失'),
         'ServiceWorker: ' + (navigator.serviceWorker ? (navigator.serviceWorker.controller ? '已接管' : '未接管') : '不支持'),
         'window.cc: ' + (window.cc ? '已加载' : '未加载'),
+        'canvas: ' + (document.querySelector('canvas') ? '有' : '无'),
         '',
         '错误(' + window.__feErrors.length + '):',
         window.__feErrors.slice(0, 8).join('\n') || '(无)',
+        '',
+        '页面资源: ' + performance.getEntriesByType('resource').length + ' 个请求',
       ];
 
       var box = document.createElement('div');
@@ -50,11 +54,31 @@
         '-webkit-user-select:text', 'user-select:text',
       ].join(';');
       box.textContent = lines.join('\n');
-      document.body.appendChild(box);
+      (document.body || document.documentElement).appendChild(box);
     } catch (e) {
       /* 忽略 */
     }
-  }, 15000);
+  }
+
+  // 15 秒还没进游戏 → 直接显示面板
+  setTimeout(showDiag, 15000);
+
+  // 3 秒时的加载提示（让人知道在加载，而不是白屏坏了）
+  setTimeout(function () {
+    try {
+      if (window.cc || document.getElementById('fe-loading') || document.getElementById('fe-diag')) return;
+      var tip = document.createElement('div');
+      tip.id = 'fe-loading';
+      tip.textContent = '正在加载游戏…';
+      tip.style.cssText = [
+        'position:fixed', 'left:0', 'right:0', 'bottom:24px', 'z-index:2147483000',
+        'text-align:center', 'color:#cfe3d6', 'font:14px/1.6 system-ui,sans-serif', 'pointer-events:none',
+      ].join(';');
+      (document.body || document.documentElement).appendChild(tip);
+    } catch (e) {
+      /* 忽略 */
+    }
+  }, 3000);
 
   // ---- 3. Service Worker 注册 ----
   // iPhone / Safari / 微信里不注册：Safari 对 Service Worker 合成响应的处理与 Chrome 不同，
@@ -67,7 +91,6 @@
   var isWeChat = /MicroMessenger/i.test(ua);
 
   if (isIOS || isSafari || isWeChat) {
-    // 救急：注销旧版本可能已经注册的 Service Worker
     navigator.serviceWorker
       .getRegistrations()
       .then(function (regs) { return Promise.all(regs.map(function (r) { return r.unregister(); })); })
@@ -98,8 +121,8 @@
     try {
       var cc = window.cc;
       var frames = cc && cc.director && cc.director.getTotalFrames ? cc.director.getTotalFrames() : 0;
-      if (frames > 10) return;                    // 已经在正常跑了
-      if (sessionStorage.getItem(KEY)) return;    // 本次会话只自动重载一次
+      if (frames > 10) return;
+      if (sessionStorage.getItem(KEY)) return;
       sessionStorage.setItem(KEY, '1');
       location.reload();
     } catch (e) {
