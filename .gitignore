@@ -28,3 +28,4 @@ node_modules/
 
 # Local backup of the original single-file build (34 MB, keep out of git)
 _backup/
+_work/

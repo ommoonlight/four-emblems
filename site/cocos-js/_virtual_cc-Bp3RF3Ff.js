@@ -23831,7 +23831,7 @@ System.register([], (function (exports, module) {
           }
         }]);
         return ImageAsset;
-      }(Asset), _class3$V.extnames = ['.png', '.jpg', '.jpeg', '.bmp', '.webp', '.pvr', '.pkm', '.astc'], _class3$V._sharedPlaceHolderCanvas = null, _class3$V), (_applyDecoratedDescriptor(_class2$2$.prototype, "_nativeAsset", [override$1], Object.getOwnPropertyDescriptor(_class2$2$.prototype, "_nativeAsset"), _class2$2$.prototype)), _class2$2$)) || _class$3n));
+      }(Asset), _class3$V.extnames = ['.webp', '.jpg', '.jpeg', '.bmp', '.webp', '.pvr', '.pkm', '.astc'], _class3$V._sharedPlaceHolderCanvas = null, _class3$V), (_applyDecoratedDescriptor(_class2$2$.prototype, "_nativeAsset", [override$1], Object.getOwnPropertyDescriptor(_class2$2$.prototype, "_nativeAsset"), _class2$2$.prototype)), _class2$2$)) || _class$3n));
       function _getGlobalDevice() {
         return deviceManager.gfxDevice;
       }

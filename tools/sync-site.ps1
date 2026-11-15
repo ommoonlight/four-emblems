@@ -1,4 +1,4 @@
-﻿param(
+param(
     [string]$GameRoot = 'D:\Project\Cocos\HX',
     [switch]$Rebuild
 )
@@ -24,13 +24,14 @@ robocopy $buildDir $siteDir /MIR /NFL /NDL /NJH /NJS /NP | Out-Null
 if ($LASTEXITCODE -gt 7) { throw "robocopy 失败，退出码 $LASTEXITCODE" }
 
 $files = Get-ChildItem $siteDir -Recurse -File -Force
-$sizeMB = [math]::Round((($files | Measure-Object Length -Sum).Sum) / 1MB, 2)
-$maxMB  = [math]::Round((($files | Measure-Object Length -Maximum).Maximum) / 1MB, 2)
-Write-Output "同步完成：$($files.Count) 个文件, $sizeMB MB, 单文件最大 $maxMB MB"
+Write-Output "同步完成：$($files.Count) 个文件"
 
-if ($maxMB -gt 25) {
-    Write-Output "警告：存在超过 25 MiB 的文件，Cloudflare 静态资源会拒绝部署。"
-}
+# 构建产物是 PNG 纹理，必须转 WebP 才能压到 16 MB 左右
+$py = Get-Command python -ErrorAction SilentlyContinue
+if (-not $py) { throw "找不到 python，无法执行 WebP 优化（tools\optimize-site.py）" }
+Write-Output "正在优化素材（PNG -> WebP）..."
+& $py.Source (Join-Path $PSScriptRoot 'optimize-site.py') --dir $siteDir
+if ($LASTEXITCODE -ne 0) { throw "素材优化失败，退出码 $LASTEXITCODE" }
 
 Write-Output ""
 Write-Output "下一步提交并发布："
