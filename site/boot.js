@@ -49,7 +49,12 @@
         'color:#e6edf3;font:12px/1.55 ui-monospace,Menlo,Consolas,monospace;padding:14px;white-space:pre-wrap;' +
         'word-break:break-all;overflow:auto;-webkit-user-select:text;user-select:text';
       box.textContent = lines.join('\n');
+      var close = document.createElement('div');
+      close.textContent = '✕ 收起';
+      close.style.cssText = 'position:fixed;right:14px;top:10px;z-index:2147483647;color:#9fb3c8;font:13px system-ui';
       (document.body || document.documentElement).appendChild(box);
+      box.appendChild(close);
+      close.onclick = function (ev) { ev.stopPropagation(); box.remove(); window.__feDiagClosed = true; };
     } catch (e) { /* 忽略 */ }
   }
   window.addEventListener('error', function (e) {
@@ -65,7 +70,7 @@
   });
 
   // ---------- 1. 进度条 ----------
-  var loaded = 0, total = 0, bar = null, label = null, hideTimer = null;
+  var loaded = 0, total = 0, bar = null, label = null, hideTimer = null, startedAt = Date.now(), lastProgressAt = Date.now();
 
   function ensureUI() {
     if (bar || !document.body) return;
@@ -91,9 +96,10 @@
     if (!bar) return;
     var pct = total > 0 ? Math.min(99, Math.round((loaded / total) * 100)) : null;
     bar.style.width = (pct === null ? 10 : pct) + '%';
-    label.textContent = pct === null
+    var slow = Date.now() - startedAt > 30000 ? '\n线路较慢，仍在下载…' : '';
+    label.textContent = (pct === null
       ? '正在加载游戏…'
-      : '正在加载游戏… ' + pct + '%（' + (loaded / 1048576).toFixed(1) + ' / ' + (total / 1048576).toFixed(1) + ' MB）';
+      : '正在加载游戏… ' + pct + '%（' + (loaded / 1048576).toFixed(1) + ' / ' + (total / 1048576).toFixed(1) + ' MB）') + slow;
     window.__feLoadedMB = (loaded / 1048576).toFixed(1);
     window.__feTotalMB = (total / 1048576).toFixed(1);
   }
@@ -101,6 +107,7 @@
   function bump(bytes) {
     if (!bytes) return;
     loaded += bytes;
+    lastProgressAt = Date.now();
     paint();
   }
 
@@ -114,7 +121,7 @@
         var s = rs[i].decodedBodySize;
         if (s) sum += s;
       }
-      if (sum > loaded) { loaded = sum; paint(); }
+      if (sum > loaded) { loaded = sum; lastProgressAt = Date.now(); paint(); }
     } catch (e) { /* 忽略 */ }
   }, 600);
 
@@ -136,11 +143,16 @@
     }
   }, 700);
 
-  // 45 秒还没进游戏 → 显示诊断面板（同时保留进度条，方便看到卡在哪）
-  setTimeout(function () {
-    var f = window.cc && cc.director && cc.director.getTotalFrames ? cc.director.getTotalFrames() : 0;
-    if (f <= 10) showDiag(true);
-  }, 45000);
+  // 只有「真的卡住」才弹诊断面板：连续 25 秒没有任何进度才认为断流死了。
+  // 单纯慢（还在下载）不弹，只让进度条一直走。
+  setInterval(function () {
+    try {
+      var f = window.cc && cc.director && cc.director.getTotalFrames ? cc.director.getTotalFrames() : 0;
+      if (f > 10) return;
+      if (window.__feDiagClosed || document.getElementById('fe-diag')) return;
+      if (Date.now() - lastProgressAt > 25000) showDiag(true);
+    } catch (e) { /* 忽略 */ }
+  }, 5000);
 
   // ---------- 2. 带重试与断流检测的 fetch ----------
   var CACHE_NAME = 'four-emblems-assets-v3';
