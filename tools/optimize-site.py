@@ -12,6 +12,7 @@ engine 中的 `extnames[0]`（构建产物里写作 `xxx.extnames = ['.png', ...
     python tools/optimize-site.py --dry-run      # 只估算，不改文件
 """
 import argparse
+import json
 import os
 import re
 import sys
@@ -60,11 +61,12 @@ def patch_engine(site_dir, dry_run=False):
     return bool(patched)
 
 
-SW_TAG = '<script src="/sw-register.js"></script>'
+BOOT_TAG = '<script src="/boot.js"></script>'
+LEGACY_TAGS = ('<script src="/sw-register.js"></script>',)
 
 
-def inject_sw(site_dir, dry_run=False):
-    """在 index.html 里挂上 Service Worker 注册脚本（超时重试 + 缓存）。"""
+def inject_boot(site_dir, dry_run=False):
+    """在 index.html 里挂上启动层（断流重试 + 进度条 + 缓存）。"""
     index = os.path.join(site_dir, "index.html")
     if not os.path.isfile(index):
         raise SystemExit(f"找不到 {index}")
@@ -72,19 +74,50 @@ def inject_sw(site_dir, dry_run=False):
     with open(index, encoding="utf-8") as fh:
         html = fh.read()
 
-    if SW_TAG in html:
-        print("  index.html 已挂载 sw-register.js")
-        return False
+    for tag in LEGACY_TAGS:
+        if tag in html:
+            html = html.replace(f"    {tag}\n", "").replace(tag, "")
+            print("  清理旧的 sw-register.js 挂载")
+
+    if BOOT_TAG in html:
+        changed = False
+        if not dry_run:
+            with open(index, "w", encoding="utf-8", newline="") as fh:
+                fh.write(html)
+        else:
+            changed = True
+        print("  index.html 已挂载 boot.js")
+        return changed
 
     if "</head>" not in html:
-        raise SystemExit("index.html 里没有 </head>，无法注入 sw-register.js")
+        raise SystemExit("index.html 里没有 </head>，无法注入 boot.js")
 
-    html = html.replace("</head>", f"    {SW_TAG}\n</head>", 1)
+    html = html.replace("</head>", f"    {BOOT_TAG}\n</head>", 1)
     if not dry_run:
         with open(index, "w", encoding="utf-8", newline="") as fh:
             fh.write(html)
-    print("  index.html 已注入 sw-register.js")
+    print("  index.html 已注入 boot.js")
     return True
+
+
+def write_manifest(site_dir, dry_run=False):
+    """写 build-manifest.json，给进度条一个总字节数。"""
+    total, count, newest = 0, 0, 0
+    for root, _dirs, files in os.walk(site_dir):
+        for name in files:
+            if name == "build-manifest.json" or name == "index.html":
+                continue
+            path = os.path.join(root, name)
+            size = os.path.getsize(path)
+            total += size
+            count += 1
+            newest = max(newest, int(os.path.getmtime(path)))
+    payload = json.dumps({"totalBytes": total, "files": count, "builtAt": newest}, ensure_ascii=False)
+    if not dry_run:
+        with open(os.path.join(site_dir, "build-manifest.json"), "w", encoding="utf-8") as fh:
+            fh.write(payload)
+    print(f"  build-manifest.json: {count} 个文件 / {total / 1048576:.2f} MB")
+    return total
 
 
 def convert(site_dir, quality, dry_run=False):
@@ -147,8 +180,9 @@ def main():
     site = os.path.abspath(args.dir)
     print(f"优化目录: {site}  (webp quality={args.quality}{'  DRY-RUN' if args.dry_run else ''})")
     patch_engine(site, args.dry_run)
-    inject_sw(site, args.dry_run)
+    inject_boot(site, args.dry_run)
     convert(site, args.quality, args.dry_run)
+    write_manifest(site, args.dry_run)
     if not args.dry_run:
         report(site)
     return 0
