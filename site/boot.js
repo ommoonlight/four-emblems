@@ -104,8 +104,23 @@
     paint();
   }
 
+  // 网页里大多数响应没有 content-length（brotli 流式传输），
+  // 所以用 Resource Timing 的 decodedBodySize 来算真实进度（未压缩字节，和 manifest 同口径）。
+  var poller = setInterval(function () {
+    try {
+      var rs = performance.getEntriesByType('resource');
+      var sum = 0;
+      for (var i = 0; i < rs.length; i++) {
+        var s = rs[i].decodedBodySize;
+        if (s) sum += s;
+      }
+      if (sum > loaded) { loaded = sum; paint(); }
+    } catch (e) { /* 忽略 */ }
+  }, 600);
+
   function done() {
     if (hideTimer) return;
+    if (poller) clearInterval(poller);
     hideTimer = setTimeout(function () {
       var el = document.getElementById('fe-progress');
       if (el) el.remove();
