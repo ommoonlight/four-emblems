@@ -1,0 +1,30 @@
+# OS junk
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Dependencies (only if you add a build step)
+node_modules/
+
+# Logs / temp
+*.log
+*.tmp
+
+# Secrets — never commit these
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Archives
+*.zip
+*.7z
+
+# Local backup of the original single-file build (34 MB, keep out of git)
+_backup/
