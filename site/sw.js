@@ -11,7 +11,7 @@
  * 3. 入口文件（html/js 清单）走「网络优先」，保证发版后能拿到新版本
  */
 
-const VERSION = 'fe-v2';
+const VERSION = 'fe-v3';
 const CACHE = `four-emblems-${VERSION}`;
 const IDLE_TIMEOUT = 15000; // 连续 15 秒没有数据才认为卡死
 const RETRIES = 4;
