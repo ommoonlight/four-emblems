@@ -1,7 +1,9 @@
-System.register("chunks:///_virtual/ActorArt.ts", ['cc'], function (exports) {
-  var cclegacy;
+System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+  var _extends, cclegacy;
   return {
     setters: [function (module) {
+      _extends = module.extends;
+    }, function (module) {
       cclegacy = module.cclegacy;
     }],
     execute: function () {
@@ -362,6 +364,207 @@ System.register("chunks:///_virtual/ActorArt.ts", ['cc'], function (exports) {
           "sourceFacing": "left"
         }
       });
+
+      // Game-sized supplied character derivatives (right-facing source convention).
+      portraitBottomPadding['npc-chief'] = 0.018072289156626505;
+      portraitFootprint['npc-chief'] = [.18, .82];
+      actorArt['npc-chief'] = {
+        baseOpacity: 1,
+        headY: 0.018072289156626505,
+        centerX: .5,
+        centerY: .5,
+        projectileX: .7,
+        projectileY: .45,
+        shadowOffsetX: 0,
+        shadowOffsetY: 0,
+        shadowScale: 1,
+        sourceFacing: 'right'
+      };
+      portraitBottomPadding['npc-villager'] = 0.018072289156626505;
+      portraitFootprint['npc-villager'] = [.18, .82];
+      actorArt['npc-villager'] = {
+        baseOpacity: 1,
+        headY: 0.018072289156626505,
+        centerX: .5,
+        centerY: .5,
+        projectileX: .7,
+        projectileY: .45,
+        shadowOffsetX: 0,
+        shadowOffsetY: 0,
+        shadowScale: 1,
+        sourceFacing: 'right'
+      };
+      portraitBottomPadding['npc-villager-down'] = 0.018072289156626505;
+      portraitFootprint['npc-villager-down'] = [.18, .82];
+      actorArt['npc-villager-down'] = {
+        baseOpacity: 1,
+        headY: 0.29819277108433734,
+        centerX: .5,
+        centerY: .5,
+        projectileX: .7,
+        projectileY: .45,
+        shadowOffsetX: 0,
+        shadowOffsetY: 0,
+        shadowScale: 1,
+        sourceFacing: 'right'
+      };
+      portraitBottomPadding['murloc-mage'] = 0.018072289156626505;
+      portraitFootprint['murloc-mage'] = [.18, .82];
+      actorArt['murloc-mage'] = {
+        baseOpacity: 1,
+        headY: 0.018072289156626505,
+        centerX: .5,
+        centerY: .5,
+        projectileX: .7,
+        projectileY: .45,
+        shadowOffsetX: 0,
+        shadowOffsetY: 0,
+        shadowScale: 1,
+        sourceFacing: 'right'
+      };
+      portraitBottomPadding['murloc-spear'] = 0.018072289156626505;
+      portraitFootprint['murloc-spear'] = [.18, .82];
+      actorArt['murloc-spear'] = {
+        baseOpacity: 1,
+        headY: 0.02108433734939759,
+        centerX: .5,
+        centerY: .5,
+        projectileX: .7,
+        projectileY: .45,
+        shadowOffsetX: 0,
+        shadowOffsetY: 0,
+        shadowScale: 1,
+        sourceFacing: 'right'
+      };
+      portraitBottomPadding['murloc-axe'] = 0.018072289156626505;
+      portraitFootprint['murloc-axe'] = [.18, .82];
+      actorArt['murloc-axe'] = {
+        baseOpacity: 1,
+        headY: 0.08132530120481928,
+        centerX: .5,
+        centerY: .5,
+        projectileX: .7,
+        projectileY: .45,
+        shadowOffsetX: 0,
+        shadowOffsetY: 0,
+        shadowScale: 1,
+        sourceFacing: 'right'
+      };
+      portraitBottomPadding['forest-treant'] = 0.018072289156626505;
+      portraitFootprint['forest-treant'] = [.18, .82];
+      actorArt['forest-treant'] = {
+        baseOpacity: 1,
+        headY: 0.018072289156626505,
+        centerX: .5,
+        centerY: .5,
+        projectileX: .7,
+        projectileY: .45,
+        shadowOffsetX: 0,
+        shadowOffsetY: 0,
+        shadowScale: 1,
+        sourceFacing: 'right'
+      };
+      portraitBottomPadding['wolf'] = 0.018072289156626505;
+      portraitFootprint['wolf'] = [.18, .82];
+      actorArt['wolf'] = {
+        baseOpacity: 1,
+        headY: 0.30120481927710846,
+        centerX: .5,
+        centerY: .5,
+        projectileX: .7,
+        projectileY: .45,
+        shadowOffsetX: 0,
+        shadowOffsetY: 0,
+        shadowScale: 1,
+        sourceFacing: 'right'
+      };
+      portraitBottomPadding['forest-leafguard'] = 0.018072289156626505;
+      portraitFootprint['forest-leafguard'] = [.18, .82];
+      actorArt['forest-leafguard'] = {
+        baseOpacity: 1,
+        headY: 0.018072289156626505,
+        centerX: .5,
+        centerY: .5,
+        projectileX: .7,
+        projectileY: .45,
+        shadowOffsetX: 0,
+        shadowOffsetY: 0,
+        shadowScale: 1,
+        sourceFacing: 'right'
+      };
+      portraitBottomPadding['forest-stone'] = 0.018072289156626505;
+      portraitFootprint['forest-stone'] = [.18, .82];
+      actorArt['forest-stone'] = {
+        baseOpacity: 1,
+        headY: 0.018072289156626505,
+        centerX: .5,
+        centerY: .5,
+        projectileX: .7,
+        projectileY: .45,
+        shadowOffsetX: 0,
+        shadowOffsetY: 0,
+        shadowScale: 1,
+        sourceFacing: 'right'
+      };
+      portraitBottomPadding['forest-bear'] = 0.018072289156626505;
+      portraitFootprint['forest-bear'] = [.18, .82];
+      actorArt['forest-bear'] = {
+        baseOpacity: 1,
+        headY: 0.21686746987951808,
+        centerX: .5,
+        centerY: .5,
+        projectileX: .7,
+        projectileY: .45,
+        shadowOffsetX: 0,
+        shadowOffsetY: 0,
+        shadowScale: 1,
+        sourceFacing: 'right'
+      };
+      portraitBottomPadding['forest-bug'] = 0.018072289156626505;
+      portraitFootprint['forest-bug'] = [.18, .82];
+      actorArt['forest-bug'] = {
+        baseOpacity: 1,
+        headY: 0.12951807228915663,
+        centerX: .5,
+        centerY: .5,
+        projectileX: .7,
+        projectileY: .45,
+        shadowOffsetX: 0,
+        shadowOffsetY: 0,
+        shadowScale: 1,
+        sourceFacing: 'right'
+      };
+      portraitBottomPadding['boss'] = 0.018072289156626505;
+      portraitFootprint['boss'] = [.18, .82];
+      actorArt['boss'] = {
+        baseOpacity: 1,
+        headY: 0.30120481927710846,
+        centerX: .5,
+        centerY: .5,
+        projectileX: .7,
+        projectileY: .45,
+        shadowOffsetX: 0,
+        shadowOffsetY: 0,
+        shadowScale: 1,
+        sourceFacing: 'right'
+      };
+      Object.assign(enemyPortraitSize, {
+        'forest-bear': 160,
+        'forest-treant': 116,
+        'forest-stone': 142,
+        'forest-leafguard': 112,
+        'forest-bug': 88,
+        'murloc-mage': 126,
+        'murloc-spear': 100,
+        'murloc-axe': 116
+      });
+      actorArt['forest-wolf'] = _extends({}, actorArt.wolf, {
+        sourceFacing: 'right',
+        headY: 0.171875
+      });
+      portraitBottomPadding['forest-wolf'] = 0.025;
+      portraitFootprint['forest-wolf'] = [.15, .85];
+      enemyPortraitSize['forest-wolf'] = 94;
       cclegacy._RF.pop();
     }
   };
@@ -2043,24 +2246,52 @@ System.register("chunks:///_virtual/BattleMotion.ts", ['./rollupPluginModLoBabel
         function BattleMotion() {
           this.pending = new Map();
           this.paused = false;
+          this.idleWaiters = new Set();
           this.cancelled = false;
           this.reduced = typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
         }
         var _proto = BattleMotion.prototype;
+        _proto.whenIdle = function whenIdle() {
+          var _this = this;
+          if (this.cancelled) return Promise.resolve(false);
+          if (!this.pending.size) return Promise.resolve(true);
+          return new Promise(function (resolve) {
+            return _this.idleWaiters.add(resolve);
+          });
+        };
+        _proto.releaseIdle = function releaseIdle(ok) {
+          if (ok && this.pending.size) return;
+          this.idleWaiters.forEach(function (resolve) {
+            return resolve(ok);
+          });
+          this.idleWaiters.clear();
+        };
         _proto.duration = function duration(seconds) {
           return this.reduced ? Math.min(seconds, .001) : seconds;
         };
         _proto.play = function play(motion) {
-          var _this = this;
+          var _this2 = this;
           if (this.cancelled || this.pending.has(motion)) return Promise.resolve(false);
           return new Promise(function (resolve) {
-            _this.pending.set(motion, resolve);
+            _this2.pending.set(motion, resolve);
             motion.call(function () {
-              if (_this.cancelled || !_this.pending["delete"](motion)) return;
+              if (_this2.cancelled || !_this2.pending["delete"](motion)) return;
               resolve(true);
+              _this2.releaseIdle(true);
             }).start();
-            if (_this.paused) motion.pause();
+            if (_this2.paused) motion.pause();
           });
+        }
+
+        /** Stop one owned presentation, including its receipt; the session stays valid. */;
+        _proto.stop = function stop(motion) {
+          var resolve = this.pending.get(motion);
+          if (!resolve) return false;
+          this.pending["delete"](motion);
+          motion.stop();
+          resolve(false);
+          this.releaseIdle(true);
+          return true;
         };
         _proto.pause = function pause() {
           this.paused = true;
@@ -2082,6 +2313,7 @@ System.register("chunks:///_virtual/BattleMotion.ts", ['./rollupPluginModLoBabel
             return interrupted.push([motion, resolve]);
           });
           this.pending.clear();
+          this.releaseIdle(false);
           for (var _i = 0, _interrupted = interrupted; _i < _interrupted.length; _i++) {
             var _interrupted$_i = _interrupted[_i],
               motion = _interrupted$_i[0],
@@ -2113,6 +2345,7 @@ System.register("chunks:///_virtual/BattleRules.ts", ['cc'], function (exports) 
       exports({
         applyBattleCry: applyBattleCry,
         endOathRound: endOathRound,
+        oathArmorLayers: oathArmorLayers,
         oathDamage: oathDamage,
         oathEnemyPower: oathEnemyPower,
         planOathSkill: planOathSkill,
@@ -2260,8 +2493,11 @@ System.register("chunks:///_virtual/BattleRules.ts", ['cc'], function (exports) 
         return Math.round(attack * .8);
       }
       function oathDamage(state, id, raw, armor, magic) {
-        var layers = Math.max(0, Math.min(4, armor) - (magic ? 0 : Number(id in state.shred)));
+        var layers = oathArmorLayers(state, id, armor, magic);
         return Math.round(raw * (1 - .25 * layers));
+      }
+      function oathArmorLayers(state, id, armor, magic) {
+        return Math.max(0, Math.min(4, armor) - (magic ? 0 : Number(id in state.shred)));
       }
       function planOathSkill(type, length, wave, tier, attack, fullGuard, state, hasCore, buff) {
         var _s$m$stone$fist$staff;
@@ -2802,6 +3038,7 @@ System.register("chunks:///_virtual/Board.ts", ['./rollupPluginModLoBabelHelpers
         for (var _i = 0, _arr = [1, cols]; _i < _arr.length; _i++) {
           var stride = _arr[_i];
           for (var i = 0; i < board.length; i++) {
+            if (board[i] === 'miner') continue;
             var length = stride === 1 ? cols - i % cols : rows - Math.floor(i / cols);
             var group = [i];
             for (var k = 1; k < length && board[i + k * stride] === board[i]; k++) group.push(i + k * stride);
@@ -3054,12 +3291,238 @@ System.register("chunks:///_virtual/Board.ts", ['./rollupPluginModLoBabelHelpers
   };
 });
 
-System.register("chunks:///_virtual/Chapter.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
-  var _createForOfIteratorHelperLoose, _extends, cclegacy;
+System.register("chunks:///_virtual/BoardMechanics.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Board.ts'], function (exports) {
+  var _createForOfIteratorHelperLoose, cclegacy, cols, rows, matches, legalMove;
   return {
     setters: [function (module) {
       _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+    }, function (module) {
+      cols = module.cols;
+      rows = module.rows;
+      matches = module.matches;
+      legalMove = module.legalMove;
+    }],
+    execute: function () {
+      exports({
+        deliveryAdvanceScore: deliveryAdvanceScore,
+        deliveryStarts: deliveryStarts,
+        identityPreservingRecovery: identityPreservingRecovery,
+        minersAtExits: minersAtExits,
+        retireMinerBoard: retireMinerBoard,
+        shockTarget: shockTarget,
+        validateDelivery: validateDelivery
+      });
+      cclegacy._RF.push({}, "68d8e6vmY5Jg4qJ1p1N2HNF", "BoardMechanics", undefined);
+      var minerEmblem = exports('minerEmblem', 'miner');
+      function validateDelivery(spec) {
+        if (!Number.isSafeInteger(spec.required) || spec.required < 1 || spec.starts.length !== spec.required || new Set(spec.starts).size !== spec.starts.length || !spec.exits.length || [].concat(spec.starts, spec.exits).some(function (i) {
+          return !Number.isSafeInteger(i) || i < 0 || i >= cols * rows;
+        }) || spec.starts.some(function (i) {
+          return spec.exits.includes(i);
+        })) throw Error('Invalid miner delivery configuration');
+      }
+      function minersAtExits(board, spec) {
+        return spec.exits.filter(function (index) {
+          return board[index] === minerEmblem;
+        });
+      }
+      function shockTarget(tiers, random) {
+        var candidates = tiers.flatMap(function (tier, index) {
+          return tier === 'skill' ? [index] : [];
+        });
+        if (!candidates.length) return undefined;
+        return candidates[Math.min(candidates.length - 1, Math.floor(random() * candidates.length))];
+      }
+      // A candidate permutation only: caller commits tiles/IDs together after validation.
+      function identityPreservingRecovery(board, random) {
+        for (var attempt = 0; attempt < 256; attempt++) {
+          var order = board.map(function (_, i) {
+            return i;
+          });
+          for (var i = order.length - 1; i > 0; i--) {
+            var j = Math.floor(random() * (i + 1));
+            var _ref = [order[j], order[i]];
+            order[i] = _ref[0];
+            order[j] = _ref[1];
+          }
+          var candidate = order.map(function (i) {
+            return board[i];
+          });
+          if (!matches(candidate).length && legalMove(candidate)) return order;
+        }
+        return undefined; // Explicit failure, never replace or downgrade special tiles.
+      }
+
+      /** Remove room-scoped delivery tokens without moving any ordinary survivor. */
+      function retireMinerBoard(board, types) {
+        var candidate = board.slice(),
+          indices = board.flatMap(function (type, i) {
+            return type === minerEmblem ? [i] : [];
+          });
+        function fill(k) {
+          if (k === indices.length) return !matches(candidate).length && !!legalMove(candidate);
+          for (var _iterator = _createForOfIteratorHelperLoose(types), _step; !(_step = _iterator()).done;) {
+            var type = _step.value;
+            candidate[indices[k]] = type;
+            if (fill(k + 1)) return true;
+          }
+          candidate[indices[k]] = minerEmblem;
+          return false;
+        }
+        return fill(0) ? candidate : undefined;
+      }
+
+      /** Prefer authored starts; never overwrite a carried enhanced crest. */
+      function deliveryStarts(spec, charged) {
+        var selected = [];
+        var _loop = function _loop() {
+            var desired = _step2.value;
+            var candidates = [desired].concat(Array.from({
+              length: cols * rows
+            }, function (_, i) {
+              return i;
+            }).sort(function (a, b) {
+              return Math.abs(a - desired) - Math.abs(b - desired) || a - b;
+            }));
+            var next = candidates.find(function (i) {
+              return !charged.has(i) && !spec.exits.includes(i) && !selected.includes(i);
+            });
+            if (next === undefined) return {
+              v: undefined
+            };
+            selected.push(next);
+          },
+          _ret;
+        for (var _iterator2 = _createForOfIteratorHelperLoose(spec.starts), _step2; !(_step2 = _iterator2()).done;) {
+          _ret = _loop();
+          if (_ret) return _ret.v;
+        }
+        return selected;
+      }
+
+      /** Objective-only heuristic: no random draw and no authoritative board mutation. */
+      function deliveryAdvanceScore(before, after, spec, routes) {
+        var distance = function distance(index) {
+          var route = routes.find(function (row) {
+            return row.includes(index);
+          });
+          if (!route) return 0;
+          var at = route.indexOf(index),
+            ends = spec.exits.map(function (i) {
+              return route.indexOf(i);
+            }).filter(function (i) {
+              return i >= at;
+            });
+          return ends.length ? Math.min.apply(Math, ends) - at : 0;
+        };
+        var sum = function sum(board) {
+          return board.reduce(function (n, type, i) {
+            return n + (type === minerEmblem ? distance(i) : 0);
+          }, 0);
+        };
+        var escaped = minersAtExits(after, spec).length;
+        return escaped * 250 + (sum(before) - sum(after)) * 20;
+      }
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/BuffView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+  var _createForOfIteratorHelperLoose, _createClass, cclegacy;
+  return {
+    setters: [function (module) {
+      _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
+      _createClass = module.createClass;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+    }],
+    execute: function () {
+      cclegacy._RF.push({}, "59d57f9q/VFqaaZ0Q48o7O5", "BuffView", undefined);
+      /** Read-only projection. Owners are scene nodes, never combat state owners. */
+      var BuffView = exports('BuffView', /*#__PURE__*/function () {
+        function BuffView(create, count) {
+          this.owners = new Map();
+          this.create = create;
+          this.count = count;
+        }
+        var _proto = BuffView.prototype;
+        _proto.sync = function sync(parent, badges, top) {
+          var _this = this;
+          if (top === void 0) {
+            top = -24;
+          }
+          for (var _iterator = _createForOfIteratorHelperLoose(this.owners), _step; !(_step = _iterator()).done;) {
+            var _step$value = _step.value,
+              owner = _step$value[0];
+            if (!owner.isValid) this.owners["delete"](owner);
+          }
+          if (!(parent != null && parent.isValid)) return;
+          var slots = this.owners.get(parent);
+          if (!slots) {
+            slots = new Map();
+            this.owners.set(parent, slots);
+          }
+          var wanted = new Set(badges.map(function (b) {
+            return b.id;
+          }));
+          for (var _iterator2 = _createForOfIteratorHelperLoose(slots), _step2; !(_step2 = _iterator2()).done;) {
+            var _step2$value = _step2.value,
+              id = _step2$value[0],
+              _node2 = _step2$value[1];
+            if (!wanted.has(id)) {
+              _node2.removeFromParent();
+              _node2.destroy();
+              slots["delete"](id);
+            }
+          }
+          badges.forEach(function (badge, index) {
+            var _node;
+            var node = slots.get(badge.id);
+            if (!((_node = node) != null && _node.isValid)) {
+              node = _this.create(parent, badge);
+              slots.set(badge.id, node);
+            }
+            node.setPosition(-51 + index % 5 * 25, top - Math.floor(index / 5) * 24);
+            _this.count(node, badge.count);
+          });
+        };
+        _proto.dispose = function dispose() {
+          for (var _iterator3 = _createForOfIteratorHelperLoose(this.owners.values()), _step3; !(_step3 = _iterator3()).done;) {
+            var slots = _step3.value;
+            for (var _iterator4 = _createForOfIteratorHelperLoose(slots.values()), _step4; !(_step4 = _iterator4()).done;) {
+              var _node3 = _step4.value;
+              if (_node3.isValid) {
+                _node3.removeFromParent();
+                _node3.destroy();
+              }
+            }
+          }
+          this.owners.clear();
+        };
+        _createClass(BuffView, [{
+          key: "size",
+          get: function get() {
+            return Array.from(this.owners.values()).reduce(function (n, m) {
+              return n + m.size;
+            }, 0);
+          }
+        }]);
+        return BuffView;
+      }());
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/Chapter.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+  var _extends, _createForOfIteratorHelperLoose, cclegacy;
+  return {
+    setters: [function (module) {
       _extends = module.extends;
+      _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
     }, function (module) {
       cclegacy = module.cclegacy;
     }],
@@ -3134,6 +3597,7 @@ System.register("chunks:///_virtual/Chapter.ts", ['./rollupPluginModLoBabelHelpe
         return options;
       }
       var enemyTags = {
+        'forest-wolf': ['living', 'beast', 'melee'],
         wolf: ['living', 'beast', 'melee'],
         boss: ['living', 'beast', 'melee', 'giant', 'boss'],
         boar: ['living', 'beast', 'melee'],
@@ -3147,7 +3611,15 @@ System.register("chunks:///_virtual/Chapter.ts", ['./rollupPluginModLoBabelHelpe
         lich: ['undead', 'humanoid', 'ranged', 'mage'],
         knight: ['undead', 'humanoid', 'melee', 'armor'],
         wizard: ['undead', 'humanoid', 'ranged', 'mage'],
-        dragon: ['undead', 'beast', 'giant', 'ranged']
+        dragon: ['undead', 'beast', 'giant', 'ranged'],
+        'forest-bug': ['living', 'beast', 'melee'],
+        'forest-leafguard': ['living', 'plant', 'melee'],
+        'forest-treant': ['living', 'plant', 'melee'],
+        'forest-stone': ['elemental', 'giant', 'armor', 'melee'],
+        'forest-bear': ['living', 'beast', 'giant', 'melee'],
+        'murloc-spear': ['living', 'humanoid', 'melee'],
+        'murloc-axe': ['living', 'humanoid', 'melee'],
+        'murloc-mage': ['living', 'humanoid', 'ranged', 'mage']
       };
       function enemy(name, art, hp, atk, extraTags) {
         var _enemyTags$art;
@@ -3155,13 +3627,15 @@ System.register("chunks:///_virtual/Chapter.ts", ['./rollupPluginModLoBabelHelpe
           extraTags = [];
         }
         var tags = Array.from(new Set([].concat((_enemyTags$art = enemyTags[art]) != null ? _enemyTags$art : [], extraTags)));
-        return {
+        return _extends({
           name: name,
           art: art,
           hp: hp,
           atk: atk,
           tags: tags
-        };
+        }, ['golem', 'forest-stone'].includes(art) ? {
+          skill: 'shock'
+        } : {});
       }
       var locations = exports('locations', ['forest', 'village', 'tower', 'mine', 'swamp']);
       var locationNames = exports('locationNames', {
@@ -3179,8 +3653,8 @@ System.register("chunks:///_virtual/Chapter.ts", ['./rollupPluginModLoBabelHelpe
             gold: 7,
             herb: 2
           },
-          enemies: [enemy('林间野猪', 'boar', 110, 13), enemy('藤蔓怪', 'vine', 125, 12)],
-          boss: enemy('森林巨兽', 'bear', 220, 19, ['boss'])
+          enemies: [enemy('苔芽小虫', 'forest-bug', 100, 11), enemy('绿叶守护者', 'forest-leafguard', 120, 12), enemy('树人战士', 'forest-treant', 130, 13), enemy('苔岩守卫', 'forest-stone', 140, 13)],
+          boss: enemy('苔林熊灵', 'forest-bear', 220, 19, ['boss'])
         },
         mine: {
           depth: 5,
@@ -3197,8 +3671,8 @@ System.register("chunks:///_virtual/Chapter.ts", ['./rollupPluginModLoBabelHelpe
             gold: 10,
             essence: 2
           },
-          enemies: [enemy('雾中幽灵', 'ghost', 170, 18), enemy('毒蛙', 'frog', 190, 18)],
-          boss: enemy('沼泽巫妖', 'lich', 340, 26, ['boss'])
+          enemies: [enemy('鱼人长矛手', 'murloc-spear', 170, 18), enemy('青鳞斧卫', 'murloc-axe', 190, 18)],
+          boss: enemy('紫袍鱼人祭司', 'murloc-mage', 340, 26, ['boss'])
         },
         tower: {
           depth: 7,
@@ -3301,16 +3775,26 @@ System.register("chunks:///_virtual/Chapter.ts", ['./rollupPluginModLoBabelHelpe
           random = Math.random;
         }
         if (id === 'mine') {
-          var rescue = encounter(id, 2, 'battle', function () {
-            return .8;
+          var guard = _extends({}, enemy('封洞石甲守卫', 'beetle', 1400, 6, ['armor']), {
+            armor: {
+              physical: 2,
+              magic: 1
+            }
           });
           return [encounter(id, 0, 'battle', function () {
             return 0;
           }), {
             kind: 'rest'
-          }, _extends({}, rescue, {
-            rescueCells: [23, 30]
-          }), {
+          }, {
+            kind: 'battle',
+            enemies: [guard.hp],
+            encounters: [guard],
+            delivery: {
+              required: 3,
+              starts: [43, 45, 53],
+              exits: [48, 49]
+            }
+          }, {
             kind: 'chest'
           }, encounter(id, 4, 'boss', random)];
         }
@@ -3378,9 +3862,19 @@ System.register("chunks:///_virtual/Chapter.ts", ['./rollupPluginModLoBabelHelpe
           kind: 'battle',
           coinReward: 4,
           enemies: [72, 72],
-          encounters: [enemy('灰狼', 'wolf', 72, 3), enemy('林狼', 'wolf', 72, 3)]
+          encounters: [enemy('灰狼', 'wolf', 72, 3), enemy('林狼', 'forest-wolf', 72, 3)]
+        }, {
+          kind: 'battle',
+          coinReward: 4,
+          enemies: [65],
+          encounters: [enemy('苔芽小虫', 'forest-bug', 65, 3)]
         }, {
           kind: 'rescue'
+        }, {
+          kind: 'battle',
+          coinReward: 4,
+          enemies: [78],
+          encounters: [enemy('迷路的树人', 'forest-treant', 78, 4)]
         }, {
           kind: 'recruit'
         }, {
@@ -4764,18 +5258,29 @@ System.register("chunks:///_virtual/DungeonDirector.ts", ['./rollupPluginModLoBa
     execute: function () {
       cclegacy._RF.push({}, "5f2fd6RWPlBbaRGIWxzlwZ6", "DungeonDirector", undefined);
       var DungeonDirector = exports('DungeonDirector', /*#__PURE__*/function () {
-        function DungeonDirector(route) {
+        function DungeonDirector(route, testLoop) {
+          if (testLoop === void 0) {
+            testLoop = false;
+          }
           this.position = 0;
           this.route = void 0;
+          this.testLoop = void 0;
           this.route = route;
+          this.testLoop = testLoop;
         }
+        var _proto = DungeonDirector.prototype;
+        _proto.repeatTestBattle = function repeatTestBattle(expected, next) {
+          if (!this.testLoop || this.room !== expected || expected.kind !== 'battle' || next.kind !== 'battle') return false;
+          this.route.splice(0, this.route.length, next);
+          this.position = 0;
+          return true;
+        };
         DungeonDirector.restore = function restore(route, cursor) {
           if (!route.length || !Number.isSafeInteger(cursor) || cursor < 0 || cursor > route.length) throw Error('Invalid persisted dungeon cursor');
           var director = new DungeonDirector(structuredClone([].concat(route)));
           director.position = cursor;
           return director;
         };
-        var _proto = DungeonDirector.prototype;
         _proto.advance = function advance(expected) {
           if (!expected || this.room !== expected) return false;
           this.position++;
@@ -5003,6 +5508,240 @@ System.register("chunks:///_virtual/effects.ts", ['./rollupPluginModLoBabelHelpe
               return remove(i, 'room-end');
             });
           }
+        };
+      }
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/EnemySkills.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+  var _extends, cclegacy;
+  return {
+    setters: [function (module) {
+      _extends = module.extends;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+    }],
+    execute: function () {
+      exports('planEnemyAction', planEnemyAction);
+      cclegacy._RF.push({}, "16da2uk291ENKKEvFfGQHJY", "EnemySkills", undefined);
+      var strike = function strike(id, name, extra) {
+        if (extra === void 0) {
+          extra = {};
+        }
+        return _extends({
+          id: id,
+          name: name,
+          kind: 'attack',
+          ratio: 1
+        }, extra);
+      };
+      var mend = function mend(id, name, target) {
+        if (target === void 0) {
+          target = 'self';
+        }
+        return {
+          id: id,
+          name: name,
+          kind: 'heal',
+          ratio: .15,
+          target: target
+        };
+      };
+      /** Each entry is a real action, not a display alias for one aggregate faction hit. */
+      var enemySkills = exports('enemySkills', {
+        wolf: {
+          basic: strike('wolf-bite', '灰狼撕咬'),
+          special: strike('wolf-pounce', '扑击', {
+            ratio: 1.25
+          })
+        },
+        'forest-wolf': {
+          basic: strike('leaf-fang', '叶影利齿'),
+          special: strike('leaf-double', '叶影连扑', {
+            ratio: .6,
+            hits: 2
+          })
+        },
+        boss: {
+          basic: strike('alpha-fang', '裂印獠牙'),
+          special: strike('alpha-rend', '狼王撕裂', {
+            ratio: 1.3
+          })
+        },
+        boar: {
+          basic: strike('tusk', '獠牙冲顶'),
+          special: strike('boar-charge', '蛮力冲撞', {
+            ratio: 1.3
+          })
+        },
+        vine: {
+          basic: strike('vine-dart', '藤刺投射', {
+            projectile: true
+          }),
+          special: mend('vine-regrow', '再生藤芽')
+        },
+        bear: {
+          basic: strike('bear-claw', '厚掌猛击'),
+          special: strike('bear-roar', '震地咆哮', {
+            ratio: 1.25
+          })
+        },
+        bat: {
+          basic: strike('bat-echo', '声波掠袭', {
+            projectile: true,
+            magic: true
+          }),
+          special: strike('bat-double', '回声连击', {
+            projectile: true,
+            magic: true,
+            ratio: .6,
+            hits: 2
+          })
+        },
+        beetle: {
+          basic: strike('beetle-pincer', '甲刃钳击'),
+          special: mend('shell-mend', '甲壳修复')
+        },
+        golem: {
+          basic: strike('stone-shock', '震荡重拳', {
+            shock: true
+          })
+        },
+        ghost: {
+          basic: strike('ghost-orb', '幽影弹', {
+            magic: true,
+            projectile: true
+          }),
+          special: strike('soul-drain', '汲魂触袭', {
+            magic: true,
+            projectile: true,
+            ratio: .9,
+            drain: .5
+          })
+        },
+        frog: {
+          basic: strike('frog-tongue', '长舌鞭击'),
+          special: strike('bog-glob', '沼液弹', {
+            magic: true,
+            projectile: true,
+            ratio: 1.2
+          })
+        },
+        lich: {
+          basic: strike('bone-bolt', '寒骨箭', {
+            magic: true,
+            projectile: true
+          }),
+          special: mend('soul-stitch', '亡魂缝合', 'injured')
+        },
+        knight: {
+          basic: strike('rust-blade', '锈剑斩击'),
+          special: strike('bone-combo', '亡骨连斩', {
+            ratio: .6,
+            hits: 2
+          })
+        },
+        wizard: {
+          basic: strike('abyss-bolt', '深渊魔弹', {
+            magic: true,
+            projectile: true
+          }),
+          special: strike('shadow-salvo', '暗影连弹', {
+            magic: true,
+            projectile: true,
+            ratio: .6,
+            hits: 2
+          })
+        },
+        dragon: {
+          basic: strike('dragon-ember', '龙息弹', {
+            magic: true,
+            projectile: true
+          }),
+          special: strike('dragon-inferno', '灭焰吐息', {
+            magic: true,
+            projectile: true,
+            ratio: 1.4
+          })
+        },
+        'forest-bug': {
+          basic: strike('sprout-ram', '芽刺冲撞'),
+          special: strike('acid-spit', '酸液喷射', {
+            magic: true,
+            projectile: true,
+            ratio: 1.2
+          })
+        },
+        'forest-leafguard': {
+          basic: strike('leaf-blade', '叶刃挥击'),
+          special: mend('leaf-mend', '绿叶修复', 'injured')
+        },
+        'forest-treant': {
+          basic: strike('root-swing', '根须挥击'),
+          special: strike('root-combo', '缠根连刺', {
+            ratio: .6,
+            hits: 2
+          })
+        },
+        'forest-stone': {
+          basic: strike('moss-shock', '苔岩震荡', {
+            shock: true
+          })
+        },
+        'forest-bear': {
+          basic: strike('moss-claw', '苔林重掌'),
+          special: strike('moss-roar', '山林震吼', {
+            ratio: 1.25
+          })
+        },
+        'murloc-spear': {
+          basic: strike('spear-thrust', '穿刺长枪'),
+          special: strike('spear-combo', '刺枪连突', {
+            ratio: .6,
+            hits: 2
+          })
+        },
+        'murloc-axe': {
+          basic: strike('scale-axe', '青鳞斧击'),
+          special: strike('axe-spin', '旋斧重劈', {
+            ratio: 1.3
+          })
+        },
+        'murloc-mage': {
+          basic: strike('tide-bolt', '水波弹', {
+            magic: true,
+            projectile: true
+          }),
+          special: mend('tide-mend', '潮汐疗愈', 'injured')
+        }
+      });
+      function planEnemyAction(foe, index, opportunities, hp, max, teaching) {
+        if (teaching === void 0) {
+          teaching = false;
+        }
+        var book = enemySkills[foe.art];
+        if (!book) throw Error('Missing enemy skill configuration: ' + foe.art);
+        var move = book.basic,
+          target = index;
+        if (!teaching && book.special && opportunities % 3 === 0) {
+          var candidate = book.special;
+          if (candidate.kind === 'heal') {
+            var targets = candidate.target === 'self' ? [index] : hp.flatMap(function (n, i) {
+              return n > 0 ? [i] : [];
+            });
+            target = targets.reduce(function (best, i) {
+              return hp[i] / max[i] < hp[best] / max[best] ? i : best;
+            }, index);
+            if (hp[target] < max[target] * .85) move = candidate;
+          } else move = candidate;
+        }
+        return {
+          move: _extends({}, move, {
+            shock: move.shock || foe.skill === 'shock'
+          }),
+          target: target
         };
       }
       cclegacy._RF.pop();
@@ -5894,12 +6633,13 @@ System.register("chunks:///_virtual/FormalSaveGate.ts", ['./rollupPluginModLoBab
   };
 });
 
-System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './ActorArt.ts', './Inventory.ts', './GameAudio.ts', './DungeonDirector.ts', './Chapter.ts', './CombatTags.ts', './mine-recovery.ts', './FormalSaveGate.ts', './battle-core.ts', './potion-bridge.ts', './formal-rules.ts', './cocos-board-adapter.ts', './Board.ts', './BattleMotion.ts', './CombatSceneLab.ts', './BattleRules.ts', './MineTrial.ts', './TemplateBoardFx.ts', './StageTravel.ts', './StageLayout.ts'], function (exports) {
-  var _inheritsLoose, _createForOfIteratorHelperLoose, _extends, _asyncToGenerator, _regeneratorRuntime, _createClass, cclegacy, _decorator, Node, UITransform, Graphics, Color, Label, Sprite, SpriteFrame, Rect, Size, Mask, view, Vec4, Vec3, tween, UIOpacity, Material, Tween, Component, resources, Texture2D, JsonAsset, EffectAsset, sys, profiler, actorArt, portraitBottomPadding, enemyPortraitSize, portraitFootprint, Inventory, heroes, equipment, resourceNames, GameAudio, DungeonDirector, locations, dungeonIds, enemy, tutorialRoute, dungeonRewardMultiplier, dungeons, unlocked, locationNames, makeRoute, drawUpgrades, encounter, worldPoints, roomRewards, battleCoinReward, worldRoute, worldTrack, partyFormation, readMineRecovery, planMineRest, planMineFormalClose, planMineTestClose, planMineLegacyVictory, planMinePotion, planMineFirstVictory, planMineChest, FormalSaveGate, createBattleCore, createPotionBridge, setupFormalRoom, IsolatedBoardSession, validExchange, legalMove, matches, newBoard, opening, cols, adjacent, planRefill, mineGravity, planWave, BattleMotion, openCombatSceneLab, newOathState, rosterEmblems, oathDamage, selectTargets, planOathSkill, endOathRound, oathEnemyPower, applyBattleCry, skillOwner, mineTrialTitle, mineTrialRandom, makeMineTrial, TemplateBoardFx, StageTravel, stageCover, stageGrid, stageX, stageReelCrop;
+System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './EnemySkills.ts', './BoardMechanics.ts', './ActorArt.ts', './Inventory.ts', './GameAudio.ts', './DungeonDirector.ts', './Chapter.ts', './CombatTags.ts', './mine-recovery.ts', './FormalSaveGate.ts', './battle-core.ts', './potion-bridge.ts', './formal-rules.ts', './cocos-board-adapter.ts', './Board.ts', './BattleMotion.ts', './CombatSceneLab.ts', './BattleRules.ts', './MineTrial.ts', './TemplateBoardFx.ts', './StageTravel.ts', './StageLayout.ts', './BuffView.ts', './TownRules.ts'], function (exports) {
+  var _inheritsLoose, _createForOfIteratorHelperLoose, _construct, _extends, _asyncToGenerator, _regeneratorRuntime, _createClass, cclegacy, _decorator, Node, UITransform, Graphics, Color, Label, Sprite, SpriteFrame, Rect, Size, Mask, Material, Vec4, view, tween, Vec3, UIOpacity, Tween, Component, resources, JsonAsset, EffectAsset, Font, sys, profiler, Texture2D, planEnemyAction, validateDelivery, deliveryStarts, minerEmblem, deliveryAdvanceScore, identityPreservingRecovery, minersAtExits, retireMinerBoard, shockTarget, actorArt, portraitBottomPadding, enemyPortraitSize, portraitFootprint, Inventory, heroes, equipment, resourceNames, GameAudio, DungeonDirector, locations, dungeonIds, enemy, worldPoints, tutorialRoute, dungeonRewardMultiplier, dungeons, unlocked, locationNames, makeRoute, drawUpgrades, encounter, roomRewards, battleCoinReward, worldRoute, worldTrack, partyFormation, readMineRecovery, planMineRest, planMineFormalClose, planMineTestClose, planMineLegacyVictory, planMinePotion, planMineFirstVictory, planMineChest, FormalSaveGate, createBattleCore, createPotionBridge, setupFormalRoom, IsolatedBoardSession, validExchange, legalMove, matches, newBoard, opening, cols, adjacent, planWave, planRefill, mineGravity, BattleMotion, openCombatSceneLab, newOathState, oathArmorLayers, rosterEmblems, oathDamage, selectTargets, planOathSkill, endOathRound, oathEnemyPower, applyBattleCry, skillOwner, mineTrialTitle, mechanismPage, testMechanisms, mineTrialRandom, makeMineTrial, mineTestEncounter, TemplateBoardFx, StageTravel, stageCover, stageGrid, stageX, stageReelCrop, BuffView, restoreTown, exitBlessing, newTownProgress, claimAltar;
   return {
     setters: [function (module) {
       _inheritsLoose = module.inheritsLoose;
       _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
+      _construct = module.construct;
       _extends = module.extends;
       _asyncToGenerator = module.asyncToGenerator;
       _regeneratorRuntime = module.regeneratorRuntime;
@@ -5917,20 +6657,32 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
       Rect = module.Rect;
       Size = module.Size;
       Mask = module.Mask;
-      view = module.view;
-      Vec4 = module.Vec4;
-      Vec3 = module.Vec3;
-      tween = module.tween;
-      UIOpacity = module.UIOpacity;
       Material = module.Material;
+      Vec4 = module.Vec4;
+      view = module.view;
+      tween = module.tween;
+      Vec3 = module.Vec3;
+      UIOpacity = module.UIOpacity;
       Tween = module.Tween;
       Component = module.Component;
       resources = module.resources;
-      Texture2D = module.Texture2D;
       JsonAsset = module.JsonAsset;
       EffectAsset = module.EffectAsset;
+      Font = module.Font;
       sys = module.sys;
       profiler = module.profiler;
+      Texture2D = module.Texture2D;
+    }, function (module) {
+      planEnemyAction = module.planEnemyAction;
+    }, function (module) {
+      validateDelivery = module.validateDelivery;
+      deliveryStarts = module.deliveryStarts;
+      minerEmblem = module.minerEmblem;
+      deliveryAdvanceScore = module.deliveryAdvanceScore;
+      identityPreservingRecovery = module.identityPreservingRecovery;
+      minersAtExits = module.minersAtExits;
+      retireMinerBoard = module.retireMinerBoard;
+      shockTarget = module.shockTarget;
     }, function (module) {
       actorArt = module.actorArt;
       portraitBottomPadding = module.portraitBottomPadding;
@@ -5949,6 +6701,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
       locations = module.locations;
       dungeonIds = module.dungeonIds;
       enemy = module.enemy;
+      worldPoints = module.worldPoints;
       tutorialRoute = module.tutorialRoute;
       dungeonRewardMultiplier = module.dungeonRewardMultiplier;
       dungeons = module.dungeons;
@@ -5957,7 +6710,6 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
       makeRoute = module.makeRoute;
       drawUpgrades = module.drawUpgrades;
       encounter = module.encounter;
-      worldPoints = module.worldPoints;
       roomRewards = module.roomRewards;
       battleCoinReward = module.battleCoinReward;
       worldRoute = module.worldRoute;
@@ -5991,15 +6743,16 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
       opening = module.opening;
       cols = module.cols;
       adjacent = module.adjacent;
+      planWave = module.planWave;
       planRefill = module.planRefill;
       mineGravity = module.mineGravity;
-      planWave = module.planWave;
     }, function (module) {
       BattleMotion = module.BattleMotion;
     }, function (module) {
       openCombatSceneLab = module.openCombatSceneLab;
     }, function (module) {
       newOathState = module.newOathState;
+      oathArmorLayers = module.oathArmorLayers;
       rosterEmblems = module.rosterEmblems;
       oathDamage = module.oathDamage;
       selectTargets = module.selectTargets;
@@ -6010,8 +6763,11 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
       skillOwner = module.skillOwner;
     }, function (module) {
       mineTrialTitle = module.mineTrialTitle;
+      mechanismPage = module.mechanismPage;
+      testMechanisms = module.testMechanisms;
       mineTrialRandom = module.mineTrialRandom;
       makeMineTrial = module.makeMineTrial;
+      mineTestEncounter = module.mineTestEncounter;
     }, function (module) {
       TemplateBoardFx = module.TemplateBoardFx;
     }, function (module) {
@@ -6021,6 +6777,13 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
       stageGrid = module.stageGrid;
       stageX = module.stageX;
       stageReelCrop = module.stageReelCrop;
+    }, function (module) {
+      BuffView = module.BuffView;
+    }, function (module) {
+      restoreTown = module.restoreTown;
+      exitBlessing = module.exitBlessing;
+      newTownProgress = module.newTownProgress;
+      claimAltar = module.claimAltar;
     }],
     execute: function () {
       var _dec, _class;
@@ -6102,6 +6865,11 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           _this.inventory = new Inventory();
           _this.audio = void 0;
           _this.textures = new Map();
+          _this.gameFont = void 0;
+          _this.allArt = [];
+          _this.contentReady = false;
+          _this.contentLoading = void 0;
+          _this.releaseVersion = '20261119-enemy-actions-2';
           _this.stageTravel = void 0;
           _this.forestLayout = void 0;
           _this.forestForeground = new WeakMap();
@@ -6115,6 +6883,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           _this.stageFrames = new Map();
           _this.stageReels = new Map();
           _this.actorEffect = void 0;
+          _this.forestEffect = void 0;
+          _this.waveAudit = [];
           _this.skillSweep = void 0;
           _this.tintedFrame = void 0;
           _this.hintIdle = 0;
@@ -6144,6 +6914,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           _this.stunned = new Set();
           _this.foes = [];
           _this.healthBar = void 0;
+          _this.buffView = void 0;
           _this.guardBar = void 0;
           _this.enemyMeters = [];
           _this.coinText = void 0;
@@ -6156,6 +6927,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           _this.chargedTiles = new WeakMap();
           _this.carriedBoard = void 0;
           _this.rescueCells = new Set();
+          _this.rescuedMiners = 0;
+          _this.deliveryEvents = [];
           _this.automatic = false;
           _this.battleRoot = void 0;
           _this.saveKey = 'four-emblems-cocos-chapter-one-v1';
@@ -6172,6 +6945,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           _this.taught = false;
           _this.reported = false;
           _this.villageGuidePending = false;
+          _this.town = newTownProgress();
           _this.location = 0;
           _this.gold = 20;
           _this.exp = 0;
@@ -6186,11 +6960,15 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           _this.lock = void 0;
           _this.heroes = new Map();
           _this.enemyMax = [];
+          _this.arrivedEncounter = void 0;
+          _this.encounterTravelAudit = void 0;
+          _this.enemyActionAudit = [];
           _this.hp = 45;
           _this.enemies = [72, 72];
           _this.potion = 1;
           _this.status = void 0;
           _this.pageMotions = new Set();
+          _this.recoveryPlaying = false;
           _this.actorStates = new WeakMap();
           _this.popupLayer = void 0;
           _this.popupPool = [];
@@ -6238,27 +7016,36 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                 case 0:
                   profiler.hideStats();
                   if (!(typeof location !== 'undefined' && new URLSearchParams(location.search).has('m5-stage2'))) {
-                    _context.next = 5;
+                    _context.next = 6;
                     break;
                   }
                   seed = Number((_URLSearchParams$get = new URLSearchParams(location.search).get('seed')) != null ? _URLSearchParams$get : 8);
                   globalThis.m5SceneLab = openCombatSceneLab(this.node, seed, new URLSearchParams(location.search).has('formal'));
+                  globalThis.__fourEmblemsReady = true;
                   return _context.abrupt("return");
-                case 5:
+                case 6:
                   this.saveGate = new FormalSaveGate(this.saveKey, sys.localStorage, function (raw) {
                     return _this2.recoveryOptIn() && !!readMineRecovery(raw);
                   });
                   if (typeof window !== 'undefined') window.addEventListener('pagehide', this.closeSaveGate);
-                  _context.next = 9;
+                  _context.next = 10;
                   return this.saveGate.acquire(typeof navigator === 'undefined' ? undefined : navigator.locks);
-                case 9:
+                case 10:
                   if (this.isValid) {
-                    _context.next = 11;
+                    _context.next = 12;
                     break;
                   }
                   return _context.abrupt("return");
-                case 11:
+                case 12:
                   this.audio = new GameAudio(this.node);
+                  _context.next = 15;
+                  return new Promise(function (resolve) {
+                    return resources.load('fonts/game-round', Font, function (error, font) {
+                      if (!error) _this2.gameFont = font;
+                      resolve();
+                    });
+                  });
+                case 15:
                   fx = TemplateBoardFx.load().then(function (frames) {
                     _this2.templateFxFrames = frames;
                   });
@@ -6284,17 +7071,23 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                       resolve();
                     });
                   });
-                  _context.next = 16;
+                  _context.next = 19;
                   return new Promise(function (resolve) {
                     return resources.load('effects/actor-state', EffectAsset, function (error, effect) {
                       if (!error) _this2.actorEffect = effect;
                       resolve();
                     });
                   });
-                case 16:
-                  sceneArt = ['map-parchment', 'world-travel', 'world-village-cut', 'gear-stage', 'village-chief-stage', 'village-shop-stage', 'village-tavern-stage', 'village-smith-stage', 'npc-chief', 'npc-shop', 'npc-innkeeper', 'npc-smith', 'village-ground', 'dungeon-traveler', 'dungeon-chest', 'dungeon-merchant'].concat(['chief', 'shop', 'tavern', 'smith', 'gate'].map(function (name) {
-                    return 'village-building-' + name;
-                  }), ['slot-main', 'slot-off', 'slot-armor', 'slot-accessory', 'gear-arrow', 'travel-plains', 'travel-village-edge', 'travel-mine-edge'], dungeonIds.filter(function (id) {
+                case 19:
+                  _context.next = 21;
+                  return new Promise(function (resolve) {
+                    return resources.load('effects/forest-depth', EffectAsset, function (error, effect) {
+                      if (!error) _this2.forestEffect = effect;
+                      resolve();
+                    });
+                  });
+                case 21:
+                  sceneArt = ['map-parchment', 'world-travel', 'world-village-cut', 'gear-stage', 'village-chief-stage', 'village-shop-stage', 'village-tavern-stage', 'village-smith-stage', 'npc-chief', 'npc-shop', 'npc-innkeeper', 'npc-smith', 'dungeon-traveler', 'dungeon-chest', 'dungeon-merchant', 'slot-main', 'slot-off', 'slot-armor', 'slot-accessory', 'tool-base', 'gear-arrow', 'travel-plains', 'travel-village-edge', 'travel-mine-edge'].concat(dungeonIds.filter(function (id) {
                     return id !== 'forest' || _this2.useForestReel;
                   }).map(function (id) {
                     return id + '-reel';
@@ -6303,32 +7096,26 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   }));
                   if (!this.useForestReel) sceneArt.push.apply(sceneArt, forestLabLayers.concat(['forest-props']));
                   if (this.useForestReel) {
-                    _context.next = 21;
+                    _context.next = 26;
                     break;
                   }
-                  _context.next = 21;
+                  _context.next = 26;
                   return new Promise(function (resolve) {
                     resources.load('art/forest-props-layout', JsonAsset, function (error, asset) {
                       if (!error) _this2.forestLayout = asset.json;
                       resolve();
                     });
                   });
-                case 21:
+                case 26:
                   skillArt = ['skill-frame', 'advanced-frame'];
-                  _context.next = 24;
-                  return Promise.all([fx, sweep].concat([].concat(sceneArt, skillArt, ['world', 'village', 'village-stage', 'wolf', 'boss', 'boar', 'vine', 'bear', 'bat', 'beetle', 'golem', 'ghost', 'frog', 'lich', 'dragon', 'knight', 'wizard', 's', 'd', 'm', 'h', 'stone', 'fist', 'cry', 'staff', 'hero-s', 'hero-d', 'hero-m', 'hero-h', 'combat-impact', 'trial-ui-banner', 'trial-ui-button', 'trial-ui-button-off', 'trial-ui-clear', 'trial-ui-back']).map(function (name) {
-                    return new Promise(function (resolve) {
-                      return resources.load('art/' + name + '/texture', Texture2D, function (error, texture) {
-                        if (!error) {
-                          var _frame = new SpriteFrame();
-                          _frame.texture = texture;
-                          _this2.textures.set(name, _frame);
-                        }
-                        resolve();
-                      });
-                    });
-                  })));
-                case 24:
+                  this.allArt = [].concat(sceneArt, skillArt, ['village-stage', 'wolf', 'forest-wolf', 'boss', 'boar', 'vine', 'bear', 'bat', 'beetle', 'golem', 'ghost', 'frog', 'lich', 'dragon', 'knight', 'wizard', 's', 'd', 'm', 'h', 'stone', 'fist', 'cry', 'staff', 'hero-s', 'hero-d', 'hero-m', 'hero-h', 'combat-impact', 'forest-bug', 'forest-leafguard', 'forest-treant', 'forest-stone', 'forest-bear', 'murloc-spear', 'murloc-axe', 'murloc-mage', 'npc-villager', 'npc-villager-down'], equipment.map(function (item) {
+                    return 'gear-' + item.id;
+                  }), ['game-logo', 'village-navigation', 'trial-ui-banner', 'trial-ui-button', 'trial-ui-button-off', 'trial-ui-back']);
+                  // First experience only. Later destinations/characters are loaded at a
+                  // guarded navigation boundary, never eagerly in the background.
+                  _context.next = 30;
+                  return Promise.all([fx, sweep, this.loadArt([].concat(!this.useForestReel ? [].concat(forestLabLayers, ['forest-props']) : ['forest-reel'], skillArt, ['game-logo', 'wolf', 'forest-wolf', 'hero-s', 's', 'stone', 'fist', 'cry', 'combat-impact', 'trial-ui-banner', 'trial-ui-button', 'trial-ui-button-off', 'trial-ui-back']))]);
+                case 30:
                   if (this.isValid) {
                     atlas = this.textures.get('forest-props');
                     if (atlas && this.forestLayout) this.forestPropFrames = this.forestLayout.frames.map(function (_ref) {
@@ -6340,8 +7127,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     });
                     this.prepareStageReels();
                     this.menu();
+                    globalThis.__fourEmblemsReady = true;
                   }
-                case 25:
+                case 31:
                 case "end":
                   return _context.stop();
               }
@@ -6352,6 +7140,65 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }
           return start;
         }();
+        _proto.loadArt = /*#__PURE__*/function () {
+          var _loadArt = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(names) {
+            var _this3 = this;
+            return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+              while (1) switch (_context2.prev = _context2.next) {
+                case 0:
+                  _context2.next = 2;
+                  return Promise.all(Array.from(new Set(names)).filter(function (name) {
+                    return !_this3.textures.has(name);
+                  }).map(function (name) {
+                    return new Promise(function (resolve, reject) {
+                      return resources.load('art/' + name + '/texture', Texture2D, function (error, texture) {
+                        if (error) {
+                          reject(Error('资源加载失败: ' + name));
+                          return;
+                        }
+                        if (!_this3.isValid) {
+                          resolve();
+                          return;
+                        }
+                        var frame = new SpriteFrame();
+                        frame.texture = texture;
+                        _this3.textures.set(name, frame);
+                        resolve();
+                      });
+                    });
+                  }));
+                case 2:
+                case "end":
+                  return _context2.stop();
+              }
+            }, _callee2);
+          }));
+          function loadArt(_x) {
+            return _loadArt.apply(this, arguments);
+          }
+          return loadArt;
+        }();
+        _proto.deferContent = function deferContent(action) {
+          var _this4 = this;
+          if (this.contentReady) return false;
+          if (this.contentLoading) return true;
+          this.page('正在前往下一段旅程', '首次进入时加载后续场景，已加载的首场教学资源继续保留。', 'stage-forest-0');
+          var root = this.ui;
+          this.contentLoading = this.loadArt(this.allArt).then(function () {
+            _this4.contentReady = true;
+            _this4.contentLoading = undefined;
+            _this4.prepareStageReels();
+            if (_this4.isValid && _this4.ui === root) action();
+          })["catch"](function (error) {
+            _this4.contentLoading = undefined;
+            if (!_this4.isValid || _this4.ui !== root) return;
+            _this4.label(String(error.message), 0, 0, 430, 18);
+            _this4.button('重新加载', -65, function () {
+              return _this4.deferContent(action);
+            });
+          });
+          return true;
+        };
         _proto.box = function box(name, x, y, w, h, color, parent) {
           if (parent === void 0) {
             parent = this.ui;
@@ -6382,11 +7229,19 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var node = this.box(value, x, y, w, size * 2, undefined, parent);
           var label = node.addComponent(Label);
           label.string = value;
-          label.fontSize = size;
-          label.fontFamily = 'Microsoft YaHei';
-          label.lineHeight = size + 5;
+          label.fontSize = size * 2;
+          label.fontFamily = 'ZCOOL KuaiLe';
+          if (this.gameFont) {
+            label.useSystemFont = false;
+            label.font = this.gameFont;
+          }
+          label.lineHeight = (size + 5) * 2;
           label.color = Color.fromHEX(new Color(), '#fff3d2');
           label.overflow = Label.Overflow.SHRINK;
+          // Switching to an imported font may resize Label while its default
+          // overflow is NONE. Restore the intended box after all font setters.
+          node.getComponent(UITransform).setContentSize(w * 2, size * 4);
+          node.setScale(.5, .5, 1);
           return label;
         };
         _proto.art = function art(name, x, y, w, h, parent) {
@@ -6423,10 +7278,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           return frame;
         };
         _proto.prepareStageReels = function prepareStageReels() {
-          var _this3 = this;
+          var _this5 = this;
           var _loop = function _loop() {
             var id = _step2.value;
-            var source = _this3.textures.get(id + '-reel');
+            var source = _this5.textures.get(id + '-reel');
             if (!source) return 1; // continue
             var _source$rect = source.rect,
               w = _source$rect.width,
@@ -6440,14 +7295,14 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               aperture = _stageReelCrop.h,
               window = _stageReelCrop.window,
               drawnWidth = _stageReelCrop.drawnWidth;
-            var cropped = _this3.frameCrop(source, 0, y, w, aperture);
-            _this3.stageFrames.set(id + '-reel', cropped);
-            _this3.stageReels.set(id, {
+            var cropped = _this5.frameCrop(source, 0, y, w, aperture);
+            _this5.stageFrames.set(id + '-reel', cropped);
+            _this5.stageReels.set(id, {
               width: drawnWidth,
               stops: stops
             });
             stops.forEach(function (stop, i) {
-              return _this3.stageFrames.set('stage-' + id + '-' + i, _this3.frameCrop(source, stop * (w - window), y, window, aperture));
+              return _this5.stageFrames.set('stage-' + id + '-' + i, _this5.frameCrop(source, stop * (w - window), y, window, aperture));
             });
           };
           for (var _iterator2 = _createForOfIteratorHelperLoose(dungeonIds), _step2; !(_step2 = _iterator2()).done;) {
@@ -6455,7 +7310,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }
         };
         _proto.stageBackdrop = function stageBackdrop(name, x, y, parent) {
-          var _frame2;
+          var _frame;
           if (x === void 0) {
             x = 0;
           }
@@ -6471,6 +7326,21 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           if (forestStop !== undefined) {
             var _view = this.box(name, x, y, width, height, undefined, parent);
             _view.addComponent(Mask).type = Mask.Type.GRAPHICS_RECT;
+            if (this.forestEffect) {
+              var sky = this.paintFrame('森林渐变天空', this.textures.get('forest-props'), 0, 0, width, height, _view);
+              var material = new Material();
+              material.initialize({
+                effectAsset: this.forestEffect,
+                defines: {
+                  USE_TEXTURE: true,
+                  SKY: true
+                }
+              });
+              sky.getComponent(Sprite).customMaterial = material;
+              sky.once(Node.EventType.NODE_DESTROYED, function () {
+                return material.destroy();
+              });
+            }
             for (var _iterator3 = _createForOfIteratorHelperLoose(forestLabLayers), _step3; !(_step3 = _iterator3()).done;) {
               var layer = _step3.value;
               var image = this.textures.get(layer);
@@ -6497,17 +7367,19 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               this.stageFrames.set(name, frame);
             }
           }
-          (_frame2 = frame) != null ? _frame2 : frame = this.stageFrames.get('stage-forest-0');
+          (_frame = frame) != null ? _frame : frame = this.stageFrames.get('stage-forest-0');
           if (frame) return this.paintFrame(name, frame, x, y, width, height, parent);
           return this.box(name, x, y, width, height, '#24342b', parent);
         };
         _proto.forestLabStop = function forestLabStop(name) {
-          var _this4 = this;
+          var _this6 = this,
+            _this$dungeon$rooms$l,
+            _this$dungeon;
           var forest = /^stage-forest-(\d+)$/.exec(name);
           if (!forest || !this.forestLayout || !this.forestPropFrames.length || !forestLabLayers.every(function (layer) {
-            return _this4.textures.has(layer);
+            return _this6.textures.has(layer);
           })) return undefined;
-          return dungeonReels.forest.stops[Number(forest[1])];
+          return Number(forest[1]) / (Math.max(2, (_this$dungeon$rooms$l = (_this$dungeon = this.dungeon) == null ? void 0 : _this$dungeon.rooms.length) != null ? _this$dungeon$rooms$l : 5) - 1);
         };
         _proto.positionForestLab = function positionForestLab(view, progress) {
           // Ground and foreground share a world strip; shorter strips travel
@@ -6515,6 +7387,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           for (var _iterator4 = _createForOfIteratorHelperLoose(view.children.concat((_this$forestForegroun = (_this$forestForegroun2 = this.forestForeground.get(view)) == null ? void 0 : _this$forestForegroun2.layer) != null ? _this$forestForegroun : [])), _step4; !(_step4 = _iterator4()).done;) {
             var _this$forestForegroun, _this$forestForegroun2;
             var layer = _step4.value;
+            if (!layer.name.startsWith('forest-lab-')) continue;
             var overflow = layer.getComponent(UITransform).width - stageGrid.width;
             layer.setPosition((.5 - progress) * overflow, 0);
             this.updateForestSurface(layer, progress * overflow);
@@ -6573,7 +7446,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         };
         _proto.updateForestProps = function updateForestProps(layer, left) {
           var _this$forestLayout2,
-            _this5 = this;
+            _this7 = this;
           var props = (_this$forestLayout2 = this.forestLayout) == null ? void 0 : _this$forestLayout2.layers[layer.name.slice('forest-lab-'.length)];
           if (!(props != null && props.length)) return;
           var active = this.forestPropWindows.get(layer);
@@ -6596,15 +7469,16 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                 node.removeFromParent();
                 node.destroy();
                 active["delete"](index);
-                _this5.forestNodeStats.recycled++;
+                _this7.forestNodeStats.recycled++;
               }
               return;
             }
-            if (node || !_this5.forestPropFrames[frame]) return;
-            _this5.forestNodeStats.created++;
-            _this5.forestNodeStats.peak = Math.max(_this5.forestNodeStats.peak, active.size + 1);
-            var prop = _this5.paintFrame('场景切图', _this5.forestPropFrames[frame], x - layerWidth / 2, stageGrid.height / 2 - y + h / 2, w, h, layer);
+            if (node || !_this7.forestPropFrames[frame]) return;
+            _this7.forestNodeStats.created++;
+            _this7.forestNodeStats.peak = Math.max(_this7.forestNodeStats.peak, active.size + 1);
+            var prop = _this7.paintFrame('场景切图', _this7.forestPropFrames[frame], x - layerWidth / 2, stageGrid.height / 2 - y + h / 2, w, h, layer);
             if (flip) prop.setScale(-1, 1, 1);
+            _this7.applyForestDepth(prop, layer.name, frame);
             var nextSibling = prop.getSiblingIndex();
             for (var _iterator6 = _createForOfIteratorHelperLoose(active), _step6; !(_step6 = _iterator6()).done;) {
               var _step6$value = _step6.value,
@@ -6656,7 +7530,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.pageMotions.clear();
         };
         _proto.onDestroy = function onDestroy() {
-          var _this$motion, _this$stageTravel;
+          var _this$buffView, _this$motion, _this$stageTravel;
+          (_this$buffView = this.buffView) == null || _this$buffView.dispose();
           this.closeSaveGate();
           if (typeof window !== 'undefined') window.removeEventListener('pagehide', this.closeSaveGate);
           this.stopStage4A('destroy');
@@ -6664,11 +7539,39 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.cancelPageMotions();
           (_this$stageTravel = this.stageTravel) == null || _this$stageTravel.dispose();
         };
+        _proto.applyForestDepth = function applyForestDepth(node, layer, frameIndex) {
+          if (!this.forestEffect) return;
+          var depth = layer.endsWith('-far') ? 0 : layer.endsWith('-mist') ? 1 : layer.endsWith('-middle') ? 2 : -1;
+          if (depth < 0) return;
+          var material = new Material();
+          material.initialize({
+            effectAsset: this.forestEffect,
+            defines: {
+              USE_TEXTURE: true
+            }
+          });
+          var _this$forestLayout$fr = this.forestLayout.frames[frameIndex],
+            x = _this$forestLayout$fr[0],
+            y = _this$forestLayout$fr[1],
+            w = _this$forestLayout$fr[2],
+            h = _this$forestLayout$fr[3],
+            texture = this.textures.get('forest-props').texture;
+          material.setProperty('bounds', new Vec4((x + .5) / texture.width, (y + .5) / texture.height, (x + w - .5) / texture.width, (y + h - .5) / texture.height));
+          material.setProperty('fog', _construct(Vec4, [[.18, .44, .43, .78], [.086, .36, .318, .49], [.094, .349, .294, .10]][depth]));
+          material.setProperty('depth', new Vec4([.25, .57, .92][depth], [.48, .72, .96][depth], .7 / texture.width, .7 / texture.height));
+          node.getComponent(Sprite).customMaterial = material;
+          node.once(Node.EventType.NODE_DESTROYED, function () {
+            return material.destroy();
+          });
+        };
         _proto.reset = function reset(background) {
-          var _this$stageTravel2, _this$boardFx, _this$ui, _this$ui2;
+          var _this$buffView2, _this$stageTravel2, _this$boardFx, _this$ui, _this$ui2;
           if (background === void 0) {
             background = 'travel-forest-plains';
           }
+          if (background === 'travel-forest-plains' && !this.textures.has(background)) background = 'stage-forest-0';
+          (_this$buffView2 = this.buffView) == null || _this$buffView2.dispose();
+          this.buffView = undefined;
           this.stopStage4A('reset');
           this.cancelPageMotions();
           (_this$stageTravel2 = this.stageTravel) == null || _this$stageTravel2.dispose();
@@ -6685,7 +7588,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.stageBackdrop(background);
         };
         _proto.button = function button(text, y, action, x, w, selected) {
-          var _this6 = this;
+          var _this8 = this;
           if (x === void 0) {
             x = 0;
           }
@@ -6701,13 +7604,13 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var title = this.label(text, 0, 3, w - 16, 19, button);
           title.color = Color.fromHEX(new Color(), '#2a382d');
           button.on(Node.EventType.TOUCH_END, function () {
-            _this6.audio.play('click');
+            _this8.audio.play('click');
             action();
           });
           return button;
         };
         _proto.trialButton = function trialButton(text, y, action, x, w, icon, muted) {
-          var _this7 = this;
+          var _this9 = this;
           if (x === void 0) {
             x = 0;
           }
@@ -6722,7 +7625,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           if (icon) this.art(icon, -w / 2 + 26, 1, 20, 20, button);
           var label = this.outline(this.label(text, icon ? 9 : 0, 1, w - (icon ? 46 : 12), 19, button));
           button.on(Node.EventType.TOUCH_END, function () {
-            _this7.audio.playTrial('click');
+            _this9.audio.playTrial('click');
             action();
           });
           return {
@@ -6752,6 +7655,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             hp: hp,
             potion: potion,
             inventory: inventory,
+            town: this.town,
             cleared: Array.from(this.cleared),
             hunt: this.hunt,
             villageGuidePending: this.villageGuidePending
@@ -6771,6 +7675,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             this.inventory = new Inventory();
             this.inventory.restore(state.inventory);
             this.reported = state.reported === true;
+            this.town = restoreTown(state.town, true);
             this.villageGuidePending = state.villageGuidePending === true && !this.reported;
             this.location = safe(state.location, locations.length - 1, 0);
             this.cleared = new Set(Array.isArray(state.cleared) ? dungeonIds.filter(function (id) {
@@ -6807,13 +7712,24 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           return typeof location !== 'undefined' && new URLSearchParams(location.search).has('m5-stage4a');
         };
         _proto.continueSavedGame = function continueSavedGame() {
-          var _this$saveGate4,
+          var _this10 = this,
+            _this$saveGate4,
             _state$mineRecovery$p,
-            _state$mineRecovery$p2,
-            _this8 = this;
+            _state$mineRecovery$p2;
+          if (this.deferContent(function () {
+            return _this10.continueSavedGame();
+          })) return;
           var raw = (_this$saveGate4 = this.saveGate) == null ? void 0 : _this$saveGate4.readRecovery();
           if (!raw) {
-            if (this.resume()) this.map();
+            if (this.resume()) {
+              if (this.town.blessingInDungeon) {
+                var next = exitBlessing(this.town, this.hp, this.baseMaxHP, false);
+                this.town = next.town;
+                this.hp = next.hp;
+                this.save();
+              }
+              this.map();
+            }
             return;
           }
           var state = readMineRecovery(raw);
@@ -6826,7 +7742,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.types = this.formalTypes();
           var board = (_state$mineRecovery$p = (_state$mineRecovery$p2 = state.mineRecovery.potion) == null ? void 0 : _state$mineRecovery$p2.board) != null ? _state$mineRecovery$p : state.run.board;
           if (board.tiles.some(function (tile) {
-            return !_this8.types.includes(tile.emblem);
+            return !_this10.types.includes(tile.emblem);
           }) || !legalMove(board.tiles.map(function (t) {
             return t.emblem;
           })) || state.player.hp !== this.hp || state.player.dp !== this.dp) {
@@ -6905,7 +7821,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         };
         _proto.persistMineRecovery = function persistMineRecovery(live, next, retry) {
           var _this$saveGate5,
-            _this9 = this;
+            _this11 = this;
           if (this.mineRecovery !== live) return false;
           var raw = JSON.stringify(next);
           var result = (_this$saveGate5 = this.saveGate) == null ? void 0 : _this$saveGate5.writeRecovery(raw, live.raw);
@@ -6914,7 +7830,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               this.popup('保存失败，未执行操作。', 0, 105);
               if (retry) {
                 var button = this.button('重试保存', -325, function () {
-                  if (_this9.mineRecovery !== live) return;
+                  if (_this11.mineRecovery !== live) return;
                   button.destroy();
                   retry();
                 });
@@ -6937,7 +7853,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           });
         };
         _proto.stopLegacyMineBoard = function stopLegacyMineBoard(reason) {
-          var _this10 = this;
+          var _this12 = this;
           var live = this.mineRecovery;
           if (!live || live.state.mineRecovery.source !== 'formal') return;
           this.automatic = false;
@@ -6947,17 +7863,17 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.page('棋盘结算已中断', detail + '。可恢复最近保存的同一房间。');
           var root = this.ui;
           this.button('恢复房间检查点', 20, function () {
-            var _this10$saveGate;
-            if (_this10.ui !== root || _this10.mineRecovery !== live) return;
-            if (((_this10$saveGate = _this10.saveGate) == null ? void 0 : _this10$saveGate.readRecovery()) !== live.raw) {
-              _this10.showRecoveryStop('检查点已变更，请重新加载。');
+            var _this12$saveGate;
+            if (_this12.ui !== root || _this12.mineRecovery !== live) return;
+            if (((_this12$saveGate = _this12.saveGate) == null ? void 0 : _this12$saveGate.readRecovery()) !== live.raw) {
+              _this12.showRecoveryStop('检查点已变更，请重新加载。');
               return;
             }
-            _this10.continueSavedGame();
+            _this12.continueSavedGame();
           });
         };
         _proto.closeMineRecovery = function closeMineRecovery(outcome) {
-          var _this11 = this;
+          var _this13 = this;
           var live = this.mineRecovery;
           if (!live || live.state.run.closed) return;
           if (live.state.mineRecovery.source === 'formal') {
@@ -6970,12 +7886,12 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             });
             if (!next) return;
             var commit = function commit() {
-              if (!_this11.persistMineRecovery(live, next, commit)) return;
+              if (!_this13.persistMineRecovery(live, next, commit)) return;
               try {
-                if (!_this11.resume(next.player)) throw Error('player projection mismatch');
-                _this11.showFormalMineSettlement(_this11.mineRecovery.raw, next);
+                if (!_this13.resume(next.player)) throw Error('player projection mismatch');
+                _this13.showFormalMineSettlement(_this13.mineRecovery.raw, next);
               } catch (_unused3) {
-                _this11.showRecoveryStop('结算已保存，场景需重新加载。');
+                _this13.showRecoveryStop('结算已保存，场景需重新加载。');
               }
             };
             commit();
@@ -6994,7 +7910,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         };
         _proto.showFormalMineSettlement = function showFormalMineSettlement(raw, state) {
           var _this$motion3,
-            _this12 = this;
+            _this14 = this;
           (_this$motion3 = this.motion) == null || _this$motion3.cancel();
           this.automatic = false;
           this.dungeon = undefined;
@@ -7005,11 +7921,11 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var reward = state.mineRecovery.settlement.preview;
           this.page(outcome === 'complete' ? '地牢通关' : outcome === 'fail' ? '探索失败' : '撤离结算', '本次带回：金币 ×' + reward.gold + ' · 经验 ×' + reward.xp, outcome === 'fail' ? 'village-tavern-stage' : 'stage-mine-0');
           this.button(outcome === 'fail' ? '起身，回到酒馆' : '返回章节地图', 28, function () {
-            var _this12$saveGate;
-            var result = (_this12$saveGate = _this12.saveGate) == null ? void 0 : _this12$saveGate.releaseRecovery(JSON.stringify(state.player), raw);
+            var _this14$saveGate;
+            var result = (_this14$saveGate = _this14.saveGate) == null ? void 0 : _this14$saveGate.releaseRecovery(JSON.stringify(state.player), raw);
             if (result === 'committed' || result === 'reconciled') {
-              if (outcome === 'fail') _this12.tavern(true);else _this12.map();
-            } else if (result === 'write-failed') _this12.popup('保存失败，请重试。', 0, 105);else _this12.showRecoveryStop('存档未能确认，请重新加载。');
+              if (outcome === 'fail') _this14.tavern(true);else _this14.map();
+            } else if (result === 'write-failed') _this14.popup('保存失败，请重试。', 0, 105);else _this14.showRecoveryStop('存档未能确认，请重新加载。');
           });
         };
         _proto.minePermit = function minePermit(director, room) {
@@ -7026,14 +7942,14 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           };
         };
         _proto.stableMineBoard = function stableMineBoard() {
-          var _this13 = this;
+          var _this15 = this;
           if (this.tiles.length !== 56 || matches(this.board).length || !this.legalMove()) return;
           var tiles = this.tiles.map(function (node, index) {
-            var id = _this13.restoredTileIds.get(node);
-            var tier = _this13.chargedTiles.get(node);
+            var id = _this15.restoredTileIds.get(node);
+            var tier = _this15.chargedTiles.get(node);
             return _extends({
               id: id,
-              emblem: _this13.board[index]
+              emblem: _this15.board[index]
             }, tier ? {
               tier: tier
             } : {});
@@ -7079,10 +7995,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.commitMineRoom(current.live, _final, director, room);
         };
         _proto.commitMineRoom = function commitMineRoom(live, next, director, room, coinsAt) {
-          var _this14 = this;
+          var _this16 = this;
           if (this.dungeon !== director || director.room !== room || director.depth !== live.state.run.cursor) return;
           if (!this.persistMineRecovery(live, next, this.ui === this.battleRoot ? function () {
-            return _this14.commitMineRoom(live, next, director, room);
+            return _this16.commitMineRoom(live, next, director, room);
           } : undefined)) return;
           var committed = this.mineRecovery,
             root = this.ui;
@@ -7090,11 +8006,11 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             try {
               if (!director.advance(room) || director.depth !== next.run.cursor) throw Error('room projection mismatch');
               if (next.run.closed) {
-                if (!_this14.resume(next.player)) throw Error('player projection mismatch');
-                _this14.showFormalMineSettlement(_this14.mineRecovery.raw, next);
-              } else _this14.projectMineRecovery(director, next);
+                if (!_this16.resume(next.player)) throw Error('player projection mismatch');
+                _this16.showFormalMineSettlement(_this16.mineRecovery.raw, next);
+              } else _this16.projectMineRecovery(director, next);
             } catch (_unused4) {
-              _this14.showRecoveryStop('结果已保存，场景需重新加载。');
+              _this16.showRecoveryStop('结果已保存，场景需重新加载。');
             }
           };
           if (!coinsAt) {
@@ -7102,28 +8018,28 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             return true;
           }
           var motion = this.newPageMotion();
-          void _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+          void _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
             var amount;
-            return _regeneratorRuntime().wrap(function _callee2$(_context2) {
-              while (1) switch (_context2.prev = _context2.next) {
+            return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+              while (1) switch (_context3.prev = _context3.next) {
                 case 0:
-                  _context2.prev = 0;
+                  _context3.prev = 0;
                   amount = next.run.pending.coins - live.state.run.pending.coins;
-                  _context2.next = 4;
-                  return _this14.animateCoins(motion, amount, _this14.coinText, coinsAt, stageGrid.groundY);
+                  _context3.next = 4;
+                  return _this16.animateCoins(motion, amount, _this16.coinText, coinsAt, stageGrid.groundY);
                 case 4:
-                  if (_this14.ui === root && _this14.mineRecovery === committed && !motion.cancelled) show();
-                  _context2.next = 10;
+                  if (_this16.ui === root && _this16.mineRecovery === committed && !motion.cancelled) show();
+                  _context3.next = 10;
                   break;
                 case 7:
-                  _context2.prev = 7;
-                  _context2.t0 = _context2["catch"](0);
-                  if (_this14.ui === root && _this14.mineRecovery === committed) _this14.showRecoveryStop('宝箱已保存，场景需重新加载。');
+                  _context3.prev = 7;
+                  _context3.t0 = _context3["catch"](0);
+                  if (_this16.ui === root && _this16.mineRecovery === committed) _this16.showRecoveryStop('宝箱已保存，场景需重新加载。');
                 case 10:
                 case "end":
-                  return _context2.stop();
+                  return _context3.stop();
               }
-            }, _callee2, null, [[0, 7]]);
+            }, _callee3, null, [[0, 7]]);
           }))();
           return true;
         };
@@ -7137,84 +8053,115 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.page('验证探索已关闭', '已记录关闭回执。测试收益不会发给角色。');
         };
         _proto.menu = function menu() {
-          var _this15 = this,
+          var _this17 = this,
             _this$saveGate6,
             _this$saveGate7,
             _this$saveGate8;
           this.reset();
           this.button('冒险手册', -213, function () {
-            return _this15.showRules(0, function () {
-              return _this15.menu();
+            return _this17.showRules(0, function () {
+              return _this17.menu();
             });
           }, 0, 360);
           this.box('Title frame', 0, 65, 420, 135, '#23372f');
           this.box('Title rule', 0, 29, 164, 2, '#cfac6e');
           var title = this.label('四纹章地牢', 0, 82, 420, 42);
           title.isBold = true;
+          this.label('版本 ' + this.releaseVersion, 0, -380, 440, 14);
           this.label('结界逆转，队伍在苔石森林失散。', 0, -11, 440, 19);
           this.art('hero-s', 0, 263, 104, 104);
           var persistedRecovery = (_this$saveGate6 = this.saveGate) == null ? void 0 : _this$saveGate6.readRecovery();
           if (persistedRecovery || (_this$saveGate7 = this.saveGate) != null && _this$saveGate7.read()) this.button('继续冒险', -144, function () {
-            return _this15.continueSavedGame();
+            return _this17.continueSavedGame();
           });
           if (!((_this$saveGate8 = this.saveGate) != null && _this$saveGate8.writable)) this.label('存档只读 · 本次进度不会写入', 0, -264, 420, 15);
           if (persistedRecovery) return;
-          this.trialButton('矿坑轨道试玩', -302, function () {
-            return _this15.startMineTrial();
+          this.trialButton('测试关卡', -302, function () {
+            return _this17.testLevelMenu();
           });
           this.button('在林中醒来', -80, function () {
-            _this15.taught = false;
-            _this15.reported = false;
-            _this15.villageGuidePending = false;
-            _this15.cleared.clear();
-            _this15.hunt = undefined;
-            _this15.adventure = undefined;
-            _this15.inventory = new Inventory();
-            _this15.party = ['s'];
-            _this15.types = ['s', 'stone', 'fist', 'cry'];
-            _this15.location = 0;
-            _this15.gold = 20;
-            _this15.exp = 0;
-            _this15.dp = 0;
-            _this15.phase = 'wolves';
-            _this15.firstSwap = true;
-            _this15.hp = 45;
-            _this15.potion = 1;
-            _this15.enemies = [72, 72];
-            _this15.startTutorial();
+            _this17.taught = false;
+            _this17.reported = false;
+            _this17.villageGuidePending = false;
+            _this17.town = newTownProgress();
+            _this17.cleared.clear();
+            _this17.hunt = undefined;
+            _this17.adventure = undefined;
+            _this17.inventory = new Inventory();
+            _this17.party = ['s'];
+            _this17.types = ['s', 'stone', 'fist', 'cry'];
+            _this17.location = 0;
+            _this17.gold = 20;
+            _this17.exp = 0;
+            _this17.dp = 0;
+            _this17.phase = 'wolves';
+            _this17.firstSwap = true;
+            _this17.hp = 45;
+            _this17.potion = 1;
+            _this17.enemies = [72, 72];
+            _this17.startTutorial();
           });
         };
         _proto.beginBattle = function beginBattle(reveal) {
-          var _this$motion5,
+          var _this$arrivedEncounte,
+            _this$arrivedEncounte2,
+            _this$dungeon2,
+            _this$motion5,
             _this$carriedBoard,
             _this$carriedBoard2,
-            _this$dungeon,
+            _this$dungeon3,
             _this$mineRecovery,
             _checkpoint$marks,
             _activeRoom$rescueCel,
-            _this$dungeon2,
+            _this$dungeon4,
             _carried$board$slice,
             _this$trial,
+            _this18 = this,
             _this$ui$getChildByNa,
-            _this$dungeon3,
-            _this16 = this,
+            _this$dungeon5,
             _carried$ids;
+          var alreadyArrived = ((_this$arrivedEncounte = this.arrivedEncounter) == null ? void 0 : _this$arrivedEncounte.director) === this.dungeon && ((_this$arrivedEncounte2 = this.arrivedEncounter) == null ? void 0 : _this$arrivedEncounte2.room) === ((_this$dungeon2 = this.dungeon) == null ? void 0 : _this$dungeon2.room);
+          this.arrivedEncounter = undefined;
+          this.audio.prepareBoard();
           this.stopStage4A('new battle');
           (_this$motion5 = this.motion) == null || _this$motion5.cancel();
           this.motion = new BattleMotion();
           this.lastFallen = undefined;
           this.enemyMax = [].concat(this.enemies);
           var carried = ((_this$carriedBoard = this.carriedBoard) == null ? void 0 : _this$carriedBoard.director) === this.dungeon && ((_this$carriedBoard2 = this.carriedBoard) == null ? void 0 : _this$carriedBoard2.types) === this.types.join(',') ? this.carriedBoard : undefined;
-          var activeRoom = (_this$dungeon = this.dungeon) == null ? void 0 : _this$dungeon.room;
+          var activeRoom = (_this$dungeon3 = this.dungeon) == null ? void 0 : _this$dungeon3.room;
           var checkpoint = (_this$mineRecovery = this.mineRecovery) == null ? void 0 : _this$mineRecovery.state.mineRecovery.potion;
           this.rescueCells = new Set((_checkpoint$marks = checkpoint == null ? void 0 : checkpoint.marks) != null ? _checkpoint$marks : (activeRoom == null ? void 0 : activeRoom.kind) === 'battle' ? (_activeRoom$rescueCel = activeRoom.rescueCells) != null ? _activeRoom$rescueCel : [] : []);
           if (checkpoint) this.enemies = [].concat(checkpoint.enemies);
-          if (this.phase === 'mine' && !this.trial && ((_this$dungeon2 = this.dungeon) == null ? void 0 : _this$dungeon2.depth) === 0 && this.recoveryOptIn()) {
+          if (this.phase === 'mine' && !this.trial && ((_this$dungeon4 = this.dungeon) == null ? void 0 : _this$dungeon4.depth) === 0 && this.recoveryOptIn()) {
             var seed = this.stage4ASeed();
             this.board = newBoard(this.types, function () {
               return (seed = Math.imul(seed, 1664525) + 1013904223 >>> 0) / Math.pow(2, 32);
             });
           } else this.board = (_carried$board$slice = carried == null ? void 0 : carried.board.slice()) != null ? _carried$board$slice : this.phase === 'wolves' && this.firstSwap ? opening(this.types) : newBoard(this.types, (_this$trial = this.trial) == null ? void 0 : _this$trial.random);
+          this.rescuedMiners = 0;
+          this.deliveryEvents = [];
+          var deliverySpawns = new Set();
+          if ((activeRoom == null ? void 0 : activeRoom.kind) === 'battle' && activeRoom.delivery) {
+            var _carried$charged$map;
+            validateDelivery(activeRoom.delivery);
+            var starts = deliveryStarts(activeRoom.delivery, new Set((_carried$charged$map = carried == null ? void 0 : carried.charged.map(function (_ref4) {
+              var index = _ref4[0];
+              return index;
+            })) != null ? _carried$charged$map : []));
+            if (!starts) {
+              this.page('营救布置暂停', '普通格不足，保留强化棋子，不替换棋盘。');
+              this.button('撤离', -150, function () {
+                return _this18.finishAdventure('retreat');
+              });
+              return;
+            }
+            for (var _iterator7 = _createForOfIteratorHelperLoose(starts), _step7; !(_step7 = _iterator7()).done;) {
+              var _index = _step7.value;
+              this.board[_index] = minerEmblem;
+              deliverySpawns.add(_index);
+            }
+          }
           this.selected = -1;
           this.busy = true;
           this.battlePhase = 'entering';
@@ -7245,12 +8192,12 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.guideLayer = undefined;
           this.guideHand = undefined;
           this.battleModal = undefined;
-          var room = (_this$dungeon3 = this.dungeon) == null ? void 0 : _this$dungeon3.room;
+          var room = (_this$dungeon5 = this.dungeon) == null ? void 0 : _this$dungeon5.room;
           var encounters = (room == null ? void 0 : room.kind) === 'battle' ? room.encounters : undefined;
-          var defaults = this.phase === 'wolves' ? [enemy('灰狼', 'wolf', 72, 3), enemy('林狼', 'wolf', 72, 3)] : [enemy('裂印巨狼', 'boss', 100, 7)];
+          var defaults = this.phase === 'wolves' ? [enemy('灰狼', 'wolf', 72, 3), enemy('林狼', 'forest-wolf', 72, 3)] : [enemy('裂印巨狼', 'boss', 100, 7)];
           this.foes = this.enemies.map(function (hp, i) {
-            var _ref4, _encounters$i;
-            return (_ref4 = (_encounters$i = encounters == null ? void 0 : encounters[i]) != null ? _encounters$i : defaults[i]) != null ? _ref4 : enemy('裂印兽', 'boar', hp, 10);
+            var _ref5, _encounters$i;
+            return (_ref5 = (_encounters$i = encounters == null ? void 0 : encounters[i]) != null ? _encounters$i : defaults[i]) != null ? _ref5 : enemy('裂印兽', 'boar', hp, 10);
           });
           var stageTitle = this.trial ? mineTrialTitle : this.phase === 'wolves' || this.phase === 'lessonBoss' ? '苔石森林 · 序章' : {
             forest: '苔石森林',
@@ -7262,50 +8209,55 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.healthBar = this.makeMeter(-stageGrid.meterX, stageGrid.hpY, 139, '#7ecb82');
           this.guardBar = this.makeMeter(-stageGrid.meterX, stageGrid.secondaryY, 139, '#63b5df');
           this.guardBar.root.active = this.showsGuard;
-          this.outline(this.label(this.partyName, -stageGrid.meterX, stageGrid.hpY + 23, 139, 14));
           this.coinText = this.makeCoinDisplay();
           this.status = this.outline(this.label('', 0, 169, 450, 17));
+          this.status.node.active = false;
           this.setBattleStatus(this.trial ? '敌人入场 · 棋盘底部沿轨道滑动' : '敌人正在入场');
           this.showParty();
-          for (var _iterator7 = _createForOfIteratorHelperLoose(this.heroes.values()), _step7; !(_step7 = _iterator7()).done;) {
-            var hero = _step7.value;
+          for (var _iterator8 = _createForOfIteratorHelperLoose(this.heroes.values()), _step8; !(_step8 = _iterator8()).done;) {
+            var hero = _step8.value;
             hero.setParent(this.stageContent, true);
           }
           this.enemyMeters = [];
+          this.enemyOpportunities = this.foes.map(function (_, i) {
+            var _checkpoint$oath$enem, _checkpoint$oath;
+            return (_checkpoint$oath$enem = checkpoint == null || (_checkpoint$oath = checkpoint.oath) == null || (_checkpoint$oath = _checkpoint$oath.enemyActions) == null ? void 0 : _checkpoint$oath[i]) != null ? _checkpoint$oath$enem : 0;
+          });
+          this.enemyActionAudit = [];
           this.enemyNodes = this.enemies.map(function (_, i) {
-            var _enemyPortraitSize$fo, _enemyPortraitSize$fo2, _actorArt$foe$art, _actorArt$foe$art$hea, _actorArt$foe$art2;
-            var foe = _this16.foes[i];
-            var hasPair = _this16.enemies.length > 1;
+            var _actorArt$foe$art, _actorArt$foe$art$hea, _actorArt$foe$art2;
+            var foe = _this18.foes[i];
+            var hasPair = _this18.enemies.length > 1;
             var isBoss = foe.tags.includes('boss');
-            var x = hasPair ? 93 + i * 87 : isBoss ? stageX(381) : stageGrid.meterX;
-            var ground = hasPair && i === 0 ? stageGrid.rearGroundY : isBoss ? stageGrid.bossGroundY : stageGrid.groundY;
-            var size = hasPair ? Math.min((_enemyPortraitSize$fo = enemyPortraitSize[foe.art]) != null ? _enemyPortraitSize$fo : 94, 112) : (_enemyPortraitSize$fo2 = enemyPortraitSize[foe.art]) != null ? _enemyPortraitSize$fo2 : 94;
-            // Ghosts visibly hover; grounded enemies use the actual opaque foot silhouette.
-            var hover = foe.tags.includes('flying') ? size / 2 : foe.art === 'ghost' ? 7 : 0;
-            var n = _this16.box('Enemy ' + i, x, _this16.portraitY(foe.art, ground + hover, size), size, size, undefined, _this16.stageContent);
-            _this16.groundShadow(n, ground - n.position.y, foe.art, size);
-            var portrait = _this16.art(foe.art, 0, 0, size, size, n);
+            var _this18$enemyPlacemen = _this18.enemyPlacement(foe, _this18.enemies.length, i),
+              x = _this18$enemyPlacemen.x,
+              ground = _this18$enemyPlacemen.ground,
+              size = _this18$enemyPlacemen.size,
+              y = _this18$enemyPlacemen.y;
+            var n = _this18.box('Enemy ' + i, x, y, size, size, undefined, _this18.stageContent);
+            _this18.groundShadow(n, ground - n.position.y, foe.art, size);
+            var portrait = _this18.art(foe.art, 0, 0, size, size, n);
             if (portrait) portrait.setScale(((_actorArt$foe$art = actorArt[foe.art]) == null ? void 0 : _actorArt$foe$art.sourceFacing) === 'left' ? 1 : -1, 1, 1);
-            if (!portrait) _this16.label(foe.name, 0, 0, size, 16, n);
+            if (!portrait) _this18.label(foe.name, 0, 0, size, 16, n);
             if (foe.art === 'ghost' && portrait) {
-              var _this16$actorMaterial;
+              var _this18$actorMaterial;
               var sprite = portrait.getComponent(Sprite);
-              if (sprite) (_this16$actorMaterial = _this16.actorMaterial(sprite)) == null || _this16$actorMaterial.setProperty('state', new Vec4(0, 1, 1, .85));
+              if (sprite) (_this18$actorMaterial = _this18.actorMaterial(sprite)) == null || _this18$actorMaterial.setProperty('state', new Vec4(0, 1, 1, .85));
             }
             var meterY = Math.min(stageGrid.centerY + stageGrid.height / 2 - 76, n.position.y + size * (.5 - ((_actorArt$foe$art$hea = (_actorArt$foe$art2 = actorArt[foe.art]) == null ? void 0 : _actorArt$foe$art2.headY) != null ? _actorArt$foe$art$hea : .1)) + 12);
-            var stats = _this16.box('敌方状态 ' + i, x, meterY, 84, 48);
-            var meter = _this16.makeMeter(0, 0, hasPair ? 85 : 128, '#c34e61', stats);
-            _this16.enemyMeters.push(_extends({}, meter, {
+            var stats = _this18.box('敌方状态 ' + i, x, meterY, 84, 48);
+            var meter = _this18.makeMeter(0, 0, hasPair ? 85 : 128, '#c34e61', stats);
+            _this18.enemyMeters.push(_extends({}, meter, {
               root: stats
             }));
-            _this16.outline(_this16.label(foe.name, 0, 23, hasPair ? 85 : 128, 14, stats));
+            _this18.outline(_this18.label(foe.name, 0, 23, hasPair ? 85 : 128, 14, stats));
             return n;
           });
           this.liftForestForeground(this.stageContent.getChildByName(background), this.stageContent);
           this.box('棋盘外框', 0, -111.5, 435, 498, '#15221e');
           this.cells = this.board.map(function (_, i) {
-            var node = _this16.box('Cell ' + i, (i % 7 - 3) * 61, 102 - Math.floor(i / 7) * 61, 55, 55, (i + Math.floor(i / 7)) % 2 ? '#3b5046' : '#34463e');
-            _this16.bindTileInput(node, function () {
+            var node = _this18.box('Cell ' + i, (i % 7 - 3) * 61, 102 - Math.floor(i / 7) * 61, 55, 55, (i + Math.floor(i / 7)) % 2 ? '#3b5046' : '#34463e');
+            _this18.bindTileInput(node, function () {
               return i;
             });
             return node;
@@ -7318,48 +8270,64 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.lock = this.box('棋盘锁定', 0, -111.5, 428, 495, '#19172963');
           this.lockText = this.outline(this.label('敌人入场', 0, -209, 300, 17, this.lock));
           this.buildTiles();
-          carried == null || carried.charged.forEach(function (_ref5) {
-            var index = _ref5[0],
-              tier = _ref5[1];
-            return _this16.markCharged(index, tier);
+          carried == null || carried.charged.forEach(function (_ref6) {
+            var index = _ref6[0],
+              tier = _ref6[1];
+            if (!deliverySpawns.has(index)) _this18.markCharged(index, tier);
           });
           carried == null || (_carried$ids = carried.ids) == null || _carried$ids.forEach(function (id, index) {
-            return _this16.restoredTileIds.set(_this16.tiles[index], id);
+            if (!deliverySpawns.has(index)) _this18.restoredTileIds.set(_this18.tiles[index], id);
           });
-          for (var _iterator8 = _createForOfIteratorHelperLoose(this.rescueCells), _step8; !(_step8 = _iterator8()).done;) {
-            var _index = _step8.value;
-            var point = this.cells[_index].position;
-            var marker = this.outline(this.label('救', point.x + 18, point.y + 18, 20, 15));
-            marker.node.name = '营救标记 ' + _index;
+          for (var _iterator9 = _createForOfIteratorHelperLoose(this.rescueCells), _step9; !(_step9 = _iterator9()).done;) {
+            var _index3 = _step9.value;
+            var _point = this.cells[_index3].position;
+            var marker = this.outline(this.label('净', _point.x + 18, _point.y + 18, 20, 15));
+            marker.node.name = '营救标记 ' + _index3;
+          }
+          if ((activeRoom == null ? void 0 : activeRoom.kind) === 'battle' && activeRoom.delivery) {
+            for (var _iterator10 = _createForOfIteratorHelperLoose(activeRoom.delivery.exits), _step10; !(_step10 = _iterator10()).done;) {
+              var _index2 = _step10.value;
+              var point = this.cells[_index2].position;
+              var _x2 = _index2 % 7 === 0 ? -218 : 218;
+              var gate = this.box('矿工出口 ' + _index2, _x2, point.y, 25, 39, undefined);
+              var cave = gate.addComponent(Graphics);
+              cave.fillColor = Color.fromHEX(new Color(), '#74615b');
+              cave.roundRect(-13, -20, 26, 39, 11);
+              cave.fill();
+              cave.fillColor = Color.fromHEX(new Color(), '#211b29');
+              cave.roundRect(-8, -20, 16, 31, 8);
+              cave.fill();
+              this.outline(this.label('出口', _x2, point.y - 25, 32, 10));
+            }
           }
           this.setupStage4A();
           this.battleTool('药水', 0, function () {
-            if (_this16.stage4A) {
-              _this16.useStage4APotion();
+            if (_this18.stage4A) {
+              _this18.useStage4APotion();
               return;
             }
-            _this16.usePotion();
+            _this18.usePotion();
           });
           this.battleTool('自动战斗', 1, function () {
-            if (_this16.battleModal || _this16.guideMode || _this16.battlePhase === 'entering') return;
-            _this16.selected = -1;
-            _this16.automatic = !_this16.automatic;
-            _this16.drawBoard();
-            _this16.autoStep();
+            if (_this18.battleModal || _this18.guideMode || _this18.battlePhase === 'entering') return;
+            _this18.selected = -1;
+            _this18.automatic = !_this18.automatic;
+            _this18.drawBoard();
+            _this18.autoStep();
           });
           this.battleTool('战斗记录', 2, function () {
-            return _this16.openBattleModal('log');
+            return _this18.openBattleModal('log');
           });
           this.battleTool('撤离', 3, function () {
-            return _this16.openBattleModal('retreat');
+            return _this18.openBattleModal('retreat');
           });
           this.drawBoard();
-          void this.enterBattle(this.motion, reveal);
+          void this.enterBattle(this.motion, reveal, alreadyArrived);
         };
         _proto.battleTool = function battleTool(name, index, action) {
-          var _this17 = this;
+          var _this19 = this;
           var activate = function activate() {
-            if (!_this17.battleModal) action();
+            if (!_this19.battleModal) action();
           };
           var x = battleToolbar.x + index * battleToolbar.gap;
           this.trialButton(name, battleToolbar.y, activate, x, battleToolbar.width);
@@ -7377,7 +8345,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.trialFxViewport = this.box('棋盘反馈裁剪', 0, -111.5, 428, 495);
           this.trialFxViewport.addComponent(Mask).type = Mask.Type.GRAPHICS_RECT;
           var effects = this.box('棋盘反馈', 0, 111.5, 428, 483, undefined, this.trialFxViewport);
-          this.boardFx = new TemplateBoardFx(effects, this.templateFxFrames);
+          this.boardFx = new TemplateBoardFx(effects, this.templateFxFrames, this.gameFont);
         };
         _proto.syncBattleTools = function syncBattleTools() {
           var auto = this.ui.getChildByName('自动战斗');
@@ -7389,32 +8357,43 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.lockText.string = this.battlePhase === 'entering' ? '敌人入场' : this.battlePhase === 'enemy' ? '敌方回合' : this.automatic && this.battlePhase === 'input' ? '自动战斗' : '结算中';
         };
         _proto.enterBattle = /*#__PURE__*/function () {
-          var _enterBattle = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(motion, reveal) {
+          var _enterBattle = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4(motion, reveal, alreadyArrived) {
             var _this$stage4A;
             var homes, arrived;
-            return _regeneratorRuntime().wrap(function _callee3$(_context3) {
-              while (1) switch (_context3.prev = _context3.next) {
+            return _regeneratorRuntime().wrap(function _callee4$(_context4) {
+              while (1) switch (_context4.prev = _context4.next) {
                 case 0:
+                  if (alreadyArrived === void 0) {
+                    alreadyArrived = false;
+                  }
                   homes = this.enemyNodes.map(function (n) {
                     return n.position.clone();
                   });
-                  this.enemyNodes.forEach(function (n, i) {
+                  if (!alreadyArrived) this.enemyNodes.forEach(function (n, i) {
                     return n.setPosition(homes[i].x + 205, homes[i].y);
                   });
                   if (!reveal) {
-                    _context3.next = 5;
+                    _context4.next = 6;
                     break;
                   }
-                  _context3.next = 5;
+                  _context4.next = 6;
                   return reveal();
-                case 5:
+                case 6:
                   if (!(motion.cancelled || motion !== this.motion)) {
-                    _context3.next = 7;
+                    _context4.next = 8;
                     break;
                   }
-                  return _context3.abrupt("return");
-                case 7:
-                  _context3.next = 9;
+                  return _context4.abrupt("return");
+                case 8:
+                  if (!alreadyArrived) {
+                    _context4.next = 12;
+                    break;
+                  }
+                  _context4.t0 = [true];
+                  _context4.next = 15;
+                  break;
+                case 12:
+                  _context4.next = 14;
                   return Promise.all(this.enemyNodes.map(function (n, i) {
                     return motion.play(tween(n).delay(motion.duration(i * .09)).to(motion.duration(.32), {
                       position: homes[i]
@@ -7422,30 +8401,32 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                       easing: 'quadOut'
                     }));
                   }));
-                case 9:
-                  arrived = _context3.sent;
+                case 14:
+                  _context4.t0 = _context4.sent;
+                case 15:
+                  arrived = _context4.t0;
                   if (!(!arrived.every(Boolean) || motion.cancelled)) {
-                    _context3.next = 12;
+                    _context4.next = 18;
                     break;
                   }
-                  return _context3.abrupt("return");
-                case 12:
+                  return _context4.abrupt("return");
+                case 18:
                   this.audio.play('door');
                   if (!((_this$stage4A = this.stage4A) != null && _this$stage4A.error)) {
-                    _context3.next = 16;
+                    _context4.next = 22;
                     break;
                   }
                   this.setBattleStatus('验证战斗已阻断 · 可撤离');
-                  return _context3.abrupt("return");
-                case 16:
+                  return _context4.abrupt("return");
+                case 22:
                   this.resumeBattleInput('轮到玩家，交换相邻纹章');
-                case 17:
+                case 23:
                 case "end":
-                  return _context3.stop();
+                  return _context4.stop();
               }
-            }, _callee3, this);
+            }, _callee4, this);
           }));
-          function enterBattle(_x, _x2) {
+          function enterBattle(_x3, _x4, _x5) {
             return _enterBattle.apply(this, arguments);
           }
           return enterBattle;
@@ -7453,7 +8434,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         _proto.outline = function outline(label) {
           label.enableOutline = true;
           label.outlineColor = Color.fromHEX(new Color(), '#233027');
-          label.outlineWidth = 3;
+          label.outlineWidth = 4;
           return label;
         };
         _proto.makeMeter = function makeMeter(x, y, w, color, parent) {
@@ -7469,47 +8450,185 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           frame.fillColor = Color.fromHEX(new Color(), '#263029');
           frame.roundRect(-w / 2 + 3, -height / 2 + 3, w - 6, height - 6, (height - 6) / 2);
           frame.fill();
-          var fill = this.box('填充', 0, 0, w - 6, height - 6, undefined, node);
+          var clip = this.box('条芯圆角裁剪', 0, 0, w - 6, height - 6, undefined, node);
+          var mask = clip.addComponent(Mask);
+          mask.type = Mask.Type.GRAPHICS_STENCIL;
+          var stencil = clip.getComponent(Graphics);
+          stencil.clear();
+          stencil.fillColor = Color.WHITE;
+          stencil.roundRect(-(w - 6) / 2, -(height - 6) / 2, w - 6, height - 6, (height - 6) / 2);
+          stencil.fill();
+          var trail = this.box('缓动追赶', 0, 0, w - 6, height - 6, undefined, clip);
+          trail.addComponent(Graphics);
+          var fill = this.box('填充', 0, 0, w - 6, height - 6, undefined, clip);
           fill.addComponent(Graphics);
           var label = this.outline(this.label('', 0, 0, w - 8, 14, node));
-          label.node.getComponent(UITransform).setContentSize(w - 8, height);
-          label.lineHeight = 17;
+          label.node.getComponent(UITransform).setContentSize((w - 8) * 2, height * 2);
+          label.lineHeight = 34;
           label.outlineWidth = 2;
           return {
             width: w - 6,
             root: node,
             fill: fill,
+            trail: trail,
             label: label,
             color: Color.fromHEX(new Color(), color)
           };
         };
         _proto.setMeter = function setMeter(meter, value, maximum, text) {
           var ratio = Math.min(1, Math.max(0, value / Math.max(1, maximum)));
-          var ink = meter.fill.getComponent(Graphics);
-          ink.clear();
-          var width = meter.width * ratio;
-          if (width > 0) {
-            ink.fillColor = meter.color;
-            ink.roundRect(-meter.width / 2, -9.5, width, 19, Math.min(9.5, width / 2));
+          var draw = function draw(node, r, color) {
+            if (!node.isValid) return;
+            var ink = node.getComponent(Graphics);
+            ink.clear();
+            var width = meter.width * r;
+            if (width <= 0) return;
+            ink.fillColor = color;
+            ink.rect(-meter.width / 2, -9.5, width, 19);
             ink.fill();
+          };
+          var previous = meter.ratio;
+          if (previous !== ratio) {
+            var _meter$animation;
+            (_meter$animation = meter.animation) == null || _meter$animation.stop();
+            var state = {
+              value: previous != null ? previous : ratio
+            };
+            draw(meter.trail, state.value, new Color(236, 194, 135));
+            draw(meter.fill, ratio, meter.color);
+            meter.animation = tween(state).delay(previous === undefined ? 0 : .12).to(.48, {
+              value: ratio
+            }, {
+              easing: 'sineOut',
+              onUpdate: function onUpdate() {
+                draw(meter.trail, state.value, new Color(236, 194, 135));
+              }
+            }).call(function () {
+              return draw(meter.fill, ratio, meter.color);
+            }).start();
+            meter.ratio = ratio;
+            if (previous === undefined) meter.root.once(Node.EventType.NODE_DESTROYED, function () {
+              var _meter$animation2;
+              return (_meter$animation2 = meter.animation) == null ? void 0 : _meter$animation2.stop();
+            });
           }
           meter.label.string = text;
         };
         _proto.updateHUD = function updateHUD() {
-          var _this18 = this;
+          var _this20 = this;
           this.setMeter(this.healthBar, this.hp, this.maxHP, String(Math.max(0, this.hp)));
           if (this.showsGuard) this.setMeter(this.guardBar, this.dp, this.maxDP, String(this.dp));
           this.coinText.string = String(this.walletGold);
           this.enemies.forEach(function (hp, i) {
-            return _this18.setMeter(_this18.enemyMeters[i], hp, _this18.enemyMax[i], String(Math.max(0, hp)));
+            return _this20.setMeter(_this20.enemyMeters[i], hp, _this20.enemyMax[i], String(Math.max(0, hp)));
           });
+          this.syncBuffViews();
           this.syncBattleTools();
         };
+        _proto.syncBuffViews = function syncBuffViews() {
+          var _this$buffView3,
+            _this21 = this;
+          (_this$buffView3 = this.buffView) != null ? _this$buffView3 : this.buffView = new BuffView(function (parent, badge) {
+            var node = _this21.box('Buff ' + badge.id, 0, 0, 22, 22, '#25322fea', parent);
+            _this21.art(badge.icon, 0, 0, 18, 18, node);
+            var label = _this21.outline(_this21.label(badge.count, 6, -5, 24, 11, node));
+            label.node.name = '计数';
+            label.isBold = true;
+            return node;
+          }, function (node, text) {
+            var _node$getChildByName;
+            var label = (_node$getChildByName = node.getChildByName('计数')) == null ? void 0 : _node$getChildByName.getComponent(Label);
+            if (label) label.string = text;
+          });
+          var team = [];
+          if (this.oath.rally > 1) team.push({
+            id: 'rally',
+            icon: 'cry',
+            count: Math.round((this.oath.rally - 1) * 100) + '%',
+            name: '下一次攻击增益'
+          });
+          if (this.oath.roundBoost > 1) team.push({
+            id: 'round-boost',
+            icon: 's',
+            count: '1',
+            name: '本回合伤害增益'
+          });
+          if (this.oath.guard) team.push({
+            id: 'guard',
+            icon: 'd',
+            count: '1',
+            name: '本回合15%减伤'
+          });
+          if (this.town.blessing) team.push({
+            id: 'altar',
+            icon: 'h',
+            count: '1',
+            name: '祭坛祝福 · HP上限+100'
+          });
+          for (var _i3 = 0, _Object$entries = Object.entries((_this$adventure$buffs = (_this$adventure2 = this.adventure) == null ? void 0 : _this$adventure2.buffs) != null ? _this$adventure$buffs : {}); _i3 < _Object$entries.length; _i3++) {
+            var _this$adventure$buffs, _this$adventure2, _heal$def$mag$id;
+            var _Object$entries$_i = _Object$entries[_i3],
+              id = _Object$entries$_i[0],
+              count = _Object$entries$_i[1];
+            if (count) team.push({
+              id: 'run-' + id,
+              icon: (_heal$def$mag$id = {
+                heal: 'h',
+                def: 'd',
+                mag: 'm'
+              }[id]) != null ? _heal$def$mag$id : 's',
+              count: String(count),
+              name: id
+            });
+          }
+          this.buffView.sync(this.healthBar.root, team, this.showsGuard ? -58 : -25);
+          this.enemyMeters.forEach(function (meter, i) {
+            var list = [];
+            if (_this21.enemies[i] > 0) {
+              var _this21$foes$i;
+              var armor = (_this21$foes$i = _this21.foes[i]) == null ? void 0 : _this21$foes$i.armor;
+              if (armor) {
+                var _armor$physical, _armor$magic;
+                list.push({
+                  id: 'physical-armor',
+                  icon: 'd',
+                  count: String(oathArmorLayers(_this21.oath, String(i), (_armor$physical = armor == null ? void 0 : armor.physical) != null ? _armor$physical : 0, false)),
+                  name: '物理护甲层数'
+                });
+                list.push({
+                  id: 'magic-armor',
+                  icon: 'm',
+                  count: String(oathArmorLayers(_this21.oath, String(i), (_armor$magic = armor == null ? void 0 : armor.magic) != null ? _armor$magic : 0, true)),
+                  name: '魔法护甲层数'
+                });
+              }
+              if (String(i) in _this21.oath.shred) list.push({
+                id: 'shred',
+                icon: 's',
+                count: String(Math.max(1, _this21.oath.shred[String(i)] - _this21.turn + 1)),
+                name: '物理破甲'
+              });
+              if (_this21.stunned.has(i)) list.push({
+                id: 'stun',
+                icon: 'fist',
+                count: '1',
+                name: '眩晕'
+              });
+              if (_this21.oath.weaken.includes(String(i))) list.push({
+                id: 'weaken',
+                icon: 'staff',
+                count: '1',
+                name: '衰弱'
+              });
+            }
+            _this21.buffView.sync(meter.root, list);
+          });
+        };
         _proto.makeCoinDisplay = function makeCoinDisplay() {
-          var display = this.outline(this.label(String(this.walletGold), 191, stageGrid.titleY, 65, 20));
+          var display = this.outline(this.label(String(this.walletGold), -176, stageGrid.titleY, 65, 20));
           display.node.name = '金币 ' + display.string;
           display.color = Color.fromHEX(new Color(), '#ffe594');
-          var coin = this.box('金币', 147, stageGrid.titleY, 20, 20).addComponent(Graphics);
+          var coin = this.box('金币', -220, stageGrid.titleY, 20, 20).addComponent(Graphics);
           this.drawCoin(coin, 8);
           return display;
         };
@@ -7535,7 +8654,11 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           return this.phase === 'wolves' || this.phase === 'lessonBoss';
         };
         _proto.usePotion = function usePotion() {
-          var _recipient$position$x, _recipient$position$y, _this$heroes$get$posi, _this$heroes$get;
+          var _recipient$position$x,
+            _recipient$position$y,
+            _this$heroes$get$posi,
+            _this$heroes$get,
+            _this22 = this;
           if (this.busy || this.automatic || this.potion <= 0 || this.guideMode === 'swap' || this.hp >= this.maxHP) return;
           var healed = Math.min(this.maxHP - this.hp, 45);
           if (this.mineRecovery) {
@@ -7567,17 +8690,24 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.audio.play('potion');
           this.setBattleStatus("\u836F\u6C34\u6062\u590D " + healed + " HP");
           var recipient = Array.from(this.heroes.values())[0];
-          void this.combatPopup(this.motion, '+' + healed + ' HP', (_recipient$position$x = recipient == null ? void 0 : recipient.position.x) != null ? _recipient$position$x : -94, (_recipient$position$y = recipient == null ? void 0 : recipient.position.y) != null ? _recipient$position$y : 286, '#adf4b0', 27);
-          void this.supportHalo(this.motion, (_this$heroes$get$posi = (_this$heroes$get = this.heroes.get('s')) == null ? void 0 : _this$heroes$get.position) != null ? _this$heroes$get$posi : new Vec3(-94, 245, 0), '#87eaa5');
+          var motion = this.motion,
+            restore = this.focusCombat(motion, recipient ? [recipient] : []);
+          this.busy = true;
+          this.battlePhase = 'resolve';
+          this.syncBattleTools();
+          void Promise.all([this.combatPopup(motion, '+' + healed + ' HP', (_recipient$position$x = recipient == null ? void 0 : recipient.position.x) != null ? _recipient$position$x : -94, (_recipient$position$y = recipient == null ? void 0 : recipient.position.y) != null ? _recipient$position$y : 286, '#adf4b0', 27), this.supportHalo(motion, (_this$heroes$get$posi = (_this$heroes$get = this.heroes.get('s')) == null ? void 0 : _this$heroes$get.position) != null ? _this$heroes$get$posi : new Vec3(-94, 245, 0), '#87eaa5')])["finally"](function () {
+            restore();
+            if (!motion.cancelled && _this22.motion === motion) _this22.resumeBattleInput('药水恢复完成');
+          });
           this.updateHUD();
         };
         _proto.bindTileInput = function bindTileInput(node, indexOf) {
-          var _this19 = this;
+          var _this23 = this;
           var start;
           node.on(Node.EventType.TOUCH_START, function (event) {
-            _this19.clearIdleHint();
+            _this23.clearIdleHint();
             var index = indexOf();
-            if (!_this19.canSelect(index)) return;
+            if (!_this23.canSelect(index)) return;
             var _event$getUILocation = event.getUILocation(),
               x = _event$getUILocation.x,
               y = _event$getUILocation.y;
@@ -7590,12 +8720,12 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           });
           var preview = -1;
           var restore = function restore() {
-            if (start && _this19.tiles[start.index]) _this19.tiles[start.index].setPosition(_this19.cells[start.index].position);
-            if (preview >= 0 && _this19.tiles[preview]) _this19.tiles[preview].setPosition(_this19.cells[preview].position);
+            if (start && _this23.tiles[start.index]) _this23.tiles[start.index].setPosition(_this23.cells[start.index].position);
+            if (preview >= 0 && _this23.tiles[preview]) _this23.tiles[preview].setPosition(_this23.cells[preview].position);
             preview = -1;
           };
           var project = function project(event) {
-            if (!start || start.id !== event.getID() || !_this19.canSelect(start.index)) return;
+            if (!start || start.id !== event.getID() || !_this23.canSelect(start.index)) return;
             restore();
             var end = event.getUILocation();
             var dx = end.x - start.x,
@@ -7604,13 +8734,13 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             var delta = horizontal ? dx : dy;
             if (Math.abs(delta) < 7) return;
             var target = start.index + (horizontal ? Math.sign(delta) : -cols * Math.sign(delta));
-            if (!adjacent(start.index, target) || !_this19.cells[target] || !_this19.canSelect(target)) return;
+            if (!adjacent(start.index, target) || !_this23.cells[target] || !_this23.canSelect(target)) return;
             preview = target;
-            var first = _this19.cells[start.index].position;
-            var second = _this19.cells[target].position;
+            var first = _this23.cells[start.index].position;
+            var second = _this23.cells[target].position;
             var fraction = Math.min(1, Math.abs(delta) / 61);
-            _this19.tiles[start.index].setPosition(Vec3.lerp(new Vec3(), first, second, fraction));
-            _this19.tiles[target].setPosition(Vec3.lerp(new Vec3(), second, first, fraction));
+            _this23.tiles[start.index].setPosition(Vec3.lerp(new Vec3(), first, second, fraction));
+            _this23.tiles[target].setPosition(Vec3.lerp(new Vec3(), second, first, fraction));
           };
           node.on(Node.EventType.TOUCH_MOVE, project);
           var finish = function finish(event, mayTap) {
@@ -7622,18 +8752,18 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             var end = event.getUILocation();
             if (Math.max(Math.abs(end.x - x), Math.abs(end.y - y)) >= 20) {
               project(event);
-              if (preview >= 0 && _this19.canSelect(index)) {
+              if (preview >= 0 && _this23.canSelect(index)) {
                 var target = preview;
                 preview = -1;
                 start = undefined;
-                _this19.selected = index;
-                void _this19.tap(target, false, true);
+                _this23.selected = index;
+                void _this23.tap(target, false, true);
                 return;
               }
             }
             restore();
             start = undefined;
-            if (mayTap && Math.max(Math.abs(end.x - x), Math.abs(end.y - y)) < 7) void _this19.tap(index);
+            if (mayTap && Math.max(Math.abs(end.x - x), Math.abs(end.y - y)) < 7) void _this23.tap(index);
           };
           node.on(Node.EventType.TOUCH_END, function (event) {
             return finish(event, true);
@@ -7648,6 +8778,12 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         };
         _proto.tileIcon = function tileIcon(type, parent) {
           var _this$art;
+          if (type === minerEmblem) {
+            this.art('npc-villager', 0, -1, 42, 42, parent);
+            this.box('矿工安全帽', 0, 15, 24, 8, '#e9bd42', parent);
+            var lamp = this.box('矿灯', 0, 16, 7, 7, '#fff2b5', parent);
+            return;
+          }
           var shadow = (_this$art = this.art(type, 1, -3, 48, 48, parent)) == null ? void 0 : _this$art.getComponent(Sprite);
           if (shadow) {
             var _this$actorMaterial;
@@ -7657,31 +8793,28 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.art(type, 0, 0, 48, 48, parent);
         };
         _proto.tile = function tile(type, index, position) {
-          var _this20 = this;
+          var _this24 = this;
           if (position === void 0) {
             position = this.cells[index].position;
           }
           var node = this.box(type, position.x, position.y, 48, 48, undefined, this.tileLayer);
           this.tileIcon(type, node);
           this.bindTileInput(node, function () {
-            return _this20.tiles.indexOf(node);
+            return _this24.tiles.indexOf(node);
           });
           return node;
         };
         _proto.buildTiles = function buildTiles() {
-          var _this21 = this,
-            _this$mineRecovery2;
+          var _this25 = this;
           this.tiles.forEach(function (n) {
             return n.destroy();
           });
           this.tiles = this.board.map(function (type, index) {
-            return _this21.tile(type, index);
+            return _this25.tile(type, index);
           });
-          if (((_this$mineRecovery2 = this.mineRecovery) == null ? void 0 : _this$mineRecovery2.state.mineRecovery.source) === 'formal') {
-            for (var _iterator9 = _createForOfIteratorHelperLoose(this.tiles), _step9; !(_step9 = _iterator9()).done;) {
-              var node = _step9.value;
-              this.restoredTileIds.set(node, crypto.randomUUID());
-            }
+          for (var _iterator11 = _createForOfIteratorHelperLoose(this.tiles), _step11; !(_step11 = _iterator11()).done;) {
+            var node = _step11.value;
+            this.restoredTileIds.set(node, crypto.randomUUID());
           }
           this.raiseBoardOverlays();
         };
@@ -7691,9 +8824,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           (_this$trialFxViewport = this.trialFxViewport) == null || _this$trialFxViewport.setSiblingIndex(this.ui.children.length - 1);
         };
         _proto.drawBoard = function drawBoard() {
-          var _this22 = this;
+          var _this26 = this;
           this.tiles.forEach(function (node, i) {
-            return node.setScale(_this22.selected === i ? .85 : 1, _this22.selected === i ? .85 : 1, 1);
+            return node.setScale(_this26.selected === i ? .85 : 1, _this26.selected === i ? .85 : 1, 1);
           });
           this.updateHUD();
         };
@@ -7705,32 +8838,32 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }));
         };
         _proto.drop = /*#__PURE__*/function () {
-          var _drop = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4(motion, removed, plan) {
-            var _this23 = this;
-            var previous, next, _iterator10, _step10, _index2, slides, animate, _iterator11, _step11, _step11$value, from, to, path, _iterator12, _step12, _this$mineRecovery3, _step12$value, _to, _path, direction, distance, entry, position;
-            return _regeneratorRuntime().wrap(function _callee4$(_context4) {
-              while (1) switch (_context4.prev = _context4.next) {
+          var _drop = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5(motion, removed, plan) {
+            var _this27 = this;
+            var previous, next, _iterator12, _step12, _index4, slides, animate, _iterator13, _step13, _step13$value, from, to, path, _iterator14, _step14, _step14$value, _to, _path, direction, distance, entry, position;
+            return _regeneratorRuntime().wrap(function _callee5$(_context5) {
+              while (1) switch (_context5.prev = _context5.next) {
                 case 0:
                   previous = this.tiles;
                   next = previous.slice();
-                  for (_iterator10 = _createForOfIteratorHelperLoose(removed); !(_step10 = _iterator10()).done;) {
-                    _index2 = _step10.value;
-                    previous[_index2].destroy();
+                  for (_iterator12 = _createForOfIteratorHelperLoose(removed); !(_step12 = _iterator12()).done;) {
+                    _index4 = _step12.value;
+                    previous[_index4].destroy();
                   }
                   slides = [];
                   animate = function animate(tile, path, entrySteps) {
                     if (entrySteps === void 0) {
                       entrySteps = 0;
                     }
-                    if (_this23.phase !== 'mine') {
-                      slides.push(_this23.moveTile(motion, tile, path[path.length - 1], .18));
+                    if (_this27.phase !== 'mine') {
+                      slides.push(_this27.moveTile(motion, tile, path[path.length - 1], .18));
                       return;
                     }
                     var slide = tween(tile);
                     for (var k = entrySteps ? 0 : 1; k < path.length; k++) {
                       var steps = k === 0 ? entrySteps : 1;
                       slide.to(motion.duration(.052 * steps), {
-                        position: _this23.cells[path[k]].position.clone()
+                        position: _this27.cells[path[k]].position.clone()
                       });
                     }
                     if (!motion.reduced) slide.to(.045, {
@@ -7740,32 +8873,32 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     });
                     slides.push(motion.play(slide));
                   };
-                  for (_iterator11 = _createForOfIteratorHelperLoose(plan.moves); !(_step11 = _iterator11()).done;) {
-                    _step11$value = _step11.value, from = _step11$value.from, to = _step11$value.to, path = _step11$value.path;
+                  for (_iterator13 = _createForOfIteratorHelperLoose(plan.moves); !(_step13 = _iterator13()).done;) {
+                    _step13$value = _step13.value, from = _step13$value.from, to = _step13$value.to, path = _step13$value.path;
                     next[to] = previous[from];
                     animate(next[to], path);
                   }
-                  for (_iterator12 = _createForOfIteratorHelperLoose(plan.spawns); !(_step12 = _iterator12()).done;) {
-                    _step12$value = _step12.value, _to = _step12$value.to, _path = _step12$value.path, direction = _step12$value.direction, distance = _step12$value.distance;
+                  for (_iterator14 = _createForOfIteratorHelperLoose(plan.spawns); !(_step14 = _iterator14()).done;) {
+                    _step14$value = _step14.value, _to = _step14$value.to, _path = _step14$value.path, direction = _step14$value.direction, distance = _step14$value.distance;
                     entry = this.cells[_path[0]].position;
                     position = new Vec3(entry.x - direction.x * 61 * distance, entry.y + direction.y * 61 * distance, 0);
                     next[_to] = this.tile(plan.board[_to], _to, position);
-                    if (((_this$mineRecovery3 = this.mineRecovery) == null ? void 0 : _this$mineRecovery3.state.mineRecovery.source) === 'formal') this.restoredTileIds.set(next[_to], crypto.randomUUID());
+                    this.restoredTileIds.set(next[_to], crypto.randomUUID());
                     animate(next[_to], _path, distance);
                   }
                   this.tiles = next;
                   this.raiseBoardOverlays();
-                  _context4.next = 11;
+                  _context5.next = 11;
                   return Promise.all(slides);
                 case 11:
                   if (this.trial && !motion.cancelled) this.audio.playTrial('drop');
                 case 12:
                 case "end":
-                  return _context4.stop();
+                  return _context5.stop();
               }
-            }, _callee4, this);
+            }, _callee5, this);
           }));
-          function drop(_x3, _x4, _x5) {
+          function drop(_x6, _x7, _x8) {
             return _drop.apply(this, arguments);
           }
           return drop;
@@ -7774,44 +8907,70 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           return legalMove(this.board);
         };
         _proto.autoStep = function autoStep() {
-          var _this24 = this;
+          var _this28 = this;
           var root = this.ui;
           var request = ++this.autoRequest;
           if (!this.automatic || this.busy || root !== this.battleRoot || this.guideMode || this.battleModal) return;
           this.scheduleOnce(function () {
-            if (request !== _this24.autoRequest || !_this24.automatic || _this24.busy || root !== _this24.ui || _this24.battleModal) return;
-            var move = _this24.bestAutoMove();
+            if (request !== _this28.autoRequest || !_this28.automatic || _this28.busy || root !== _this28.ui || _this28.battleModal) return;
+            var move = _this28.bestAutoMove();
             if (move) {
-              _this24.selected = move[0];
-              void _this24.tap(move[1], true);
+              _this28.selected = move[0];
+              void _this28.tap(move[1], true);
             }
           }, .38);
         };
         _proto.bestAutoMove = function bestAutoMove() {
-          var _this25 = this;
+          var _this29 = this;
           var best;
           var bestScore = 0;
-          for (var a = 0; a < this.board.length; a++) {
-            var _loop2 = function _loop2() {
-              var b = _arr2[_i3];
-              if (b >= _this25.board.length || !adjacent(a, b)) return 1; // continue
-              var next = _this25.board.slice();
-              var _ref6 = [next[b], next[a]];
-              next[a] = _ref6[0];
-              next[b] = _ref6[1];
-              var score = matches(next).reduce(function (sum, group) {
-                var type = next[group[0]];
-                var weight = type === 'h' && _this25.hp < _this25.maxHP * .6 ? 2 : type === 'd' && _this25.dp < _this25.maxDP * .4 ? 1.7 : type === 'cry' ? .5 : 1;
-                return sum + group.length * weight;
-              }, 0);
-              if (score > bestScore) {
-                best = [a, b];
-                bestScore = score;
-              }
-            };
-            for (var _i3 = 0, _arr2 = [a + 1, a + 7]; _i3 < _arr2.length; _i3++) {
-              if (_loop2()) continue;
+          var _loop2 = function _loop2(a) {
+            var _loop3 = function _loop3() {
+                var _this29$dungeon;
+                var b = _arr2[_i4];
+                if (b >= _this29.board.length || !adjacent(a, b)) return 0; // continue
+                var next = _this29.board.slice();
+                var _ref7 = [next[b], next[a]];
+                next[a] = _ref7[0];
+                next[b] = _ref7[1];
+                var groups = matches(next);
+                if (!groups.length) return 0; // continue
+                var score = groups.reduce(function (sum, group) {
+                  var type = next[group[0]];
+                  var weight = type === 'h' && _this29.hp < _this29.maxHP * .6 ? 2 : type === 'd' && _this29.dp < _this29.maxDP * .4 ? 1.7 : type === 'cry' ? .5 : 1;
+                  return sum + group.length * weight;
+                }, 0);
+                var room = (_this29$dungeon = _this29.dungeon) == null ? void 0 : _this29$dungeon.room;
+                if ((room == null ? void 0 : room.kind) === 'battle' && room.delivery) {
+                  var plan = planWave(groups, function (index) {
+                    return _this29.chargedTiles.get(_this29.tiles[index === a ? b : index === b ? a : index]);
+                  }, [b, a]);
+                  var gravity = planRefill(next, plan.removed, _this29.types, function () {
+                    return 0;
+                  }, _this29.phase === 'mine' ? mineGravity : undefined);
+                  score += deliveryAdvanceScore(_this29.board, gravity.board, room.delivery, _this29.phase === 'mine' ? mineGravity : Array.from({
+                    length: 7
+                  }, function (_, col) {
+                    return Array.from({
+                      length: 8
+                    }, function (_, row) {
+                      return row * 7 + col;
+                    });
+                  }));
+                }
+                if (!best || score > bestScore) {
+                  best = [a, b];
+                  bestScore = score;
+                }
+              },
+              _ret;
+            for (var _i4 = 0, _arr2 = [a + 1, a + 7]; _i4 < _arr2.length; _i4++) {
+              _ret = _loop3();
+              if (_ret === 0) continue;
             }
+          };
+          for (var a = 0; a < this.board.length; a++) {
+            _loop2(a);
           }
           return best;
         };
@@ -7836,9 +8995,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           return Number((_URLSearchParams$get2 = new URLSearchParams(location.search).get('seed')) != null ? _URLSearchParams$get2 : Date.now()) >>> 0;
         };
         _proto.setupStage4A = function setupStage4A() {
-          var _this$dungeon4,
-            _this26 = this;
-          var room = (_this$dungeon4 = this.dungeon) == null ? void 0 : _this$dungeon4.room;
+          var _this$dungeon6,
+            _this30 = this;
+          var room = (_this$dungeon6 = this.dungeon) == null ? void 0 : _this$dungeon6.room;
           if (!this.wantsStage4A() || (room == null ? void 0 : room.kind) !== 'battle') return;
           var generation = ++this.stage4AGeneration;
           var live = {
@@ -7855,7 +9014,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           };
           this.stage4A = live; // Lock ownership even if this room cannot start.
           try {
-            var _room$rescueCells2, _this$adventure2;
+            var _room$rescueCells2, _this$adventure3;
             var gear = Object.values(this.inventory.slots);
             if ((_room$rescueCells2 = room.rescueCells) != null && _room$rescueCells2.length || gear.includes('healcore')) throw Error('该配置包含尚未决定的救援或生命圣杯规则');
             var seed = this.stage4ASeed();
@@ -7863,12 +9022,12 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               return _extends({
                 id: "room:" + generation + ":" + i,
                 emblem: emblem
-              }, _this26.chargedTiles.get(_this26.tiles[i]) ? {
-                tier: _this26.chargedTiles.get(_this26.tiles[i])
+              }, _this30.chargedTiles.get(_this30.tiles[i]) ? {
+                tier: _this30.chargedTiles.get(_this30.tiles[i])
               } : {});
             });
             tiles.forEach(function (tile, i) {
-              return live.nodes.set(tile.id, _this26.tiles[i]);
+              return live.nodes.set(tile.id, _this30.tiles[i]);
             });
             var ids = this.enemies.map(function (_, i) {
               return 'enemy:' + i;
@@ -7885,10 +9044,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               revisedSkills: true,
               roles: [].concat(this.party),
               attacks: Object.fromEntries(this.party.map(function (role) {
-                return [role, _this26.heroAttack(role)];
+                return [role, _this30.heroAttack(role)];
               })),
               gear: gear,
-              buffs: _extends({}, (_this$adventure2 = this.adventure) == null ? void 0 : _this$adventure2.buffs),
+              buffs: _extends({}, (_this$adventure3 = this.adventure) == null ? void 0 : _this$adventure3.buffs),
               enemies: this.foes.map(function (foe, i) {
                 return {
                   id: ids[i],
@@ -7898,7 +9057,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                 };
               }),
               enemyHP: Object.fromEntries(ids.map(function (id, i) {
-                return [id, _this26.enemies[i]];
+                return [id, _this30.enemies[i]];
               })),
               tiles: tiles,
               rescue: [],
@@ -7913,9 +9072,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             live.session = new IsolatedBoardSession(core);
             live.potion = createPotionBridge(core, {
               reserve: function reserve() {
-                var gate = _this26.saveGate;
+                var gate = _this30.saveGate;
                 var raw = gate == null ? void 0 : gate.read();
-                if (!(gate != null && gate.writable) || !raw || _this26.potion <= 0) return undefined;
+                if (!(gate != null && gate.writable) || !raw || _this30.potion <= 0) return undefined;
                 var stored;
                 try {
                   stored = JSON.parse(raw);
@@ -7924,20 +9083,20 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                 }
                 if (!stored || typeof stored !== 'object') return undefined;
                 var stock = stored.potion === true ? 1 : stored.potion;
-                if (stock !== _this26.potion) return undefined;
+                if (stock !== _this30.potion) return undefined;
                 var after = stock - 1;
                 return {
                   release: function release() {},
                   confirm: function confirm() {
-                    if (_this26.stage4A !== live || gate.write(JSON.stringify(_extends({}, stored, {
+                    if (_this30.stage4A !== live || gate.write(JSON.stringify(_extends({}, stored, {
                       potion: after
                     })), raw) !== 'committed') throw Error('Potion stock could not be confirmed normally');
-                    _this26.potion = after;
+                    _this30.potion = after;
                   }
                 };
               }
             }, function () {
-              return _this26.stage4A === live;
+              return _this30.stage4A === live;
             });
           } catch (error) {
             live.error = String(error);
@@ -7946,7 +9105,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         _proto.useStage4APotion = function useStage4APotion() {
           var _this$heroes$get$posi2,
             _this$heroes$get2,
-            _this27 = this;
+            _this31 = this;
           var live = this.stage4A;
           if (!(live != null && live.core) || !live.potion || live.error || this.busy || this.automatic || this.battlePhase !== 'input') return;
           var result = live.potion(live.core.snapshot().fixture.battleId + ':potion:' + ++live.potionSequence);
@@ -7968,54 +9127,54 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.setBattleStatus('药水恢复 ' + event.payload.amount + ' HP');
           var motion = this.motion;
           void this.supportHalo(motion, (_this$heroes$get$posi2 = (_this$heroes$get2 = this.heroes.get('s')) == null ? void 0 : _this$heroes$get2.position) != null ? _this$heroes$get$posi2 : new Vec3(-94, 245, 0), '#87eaa5').then(function () {
-            if (_this27.stage4A === live && !motion.cancelled) live.core.acknowledgePresentation(event.eventId);
+            if (_this31.stage4A === live && !motion.cancelled) live.core.acknowledgePresentation(event.eventId);
           });
           this.updateHUD();
         };
         _proto.stage4ASwap = /*#__PURE__*/function () {
-          var _stage4ASwap = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee13(a, b, preview) {
-            var _this28 = this;
-            var live, core, session, motion, current, _this$boardFx2, swapView, waves, tail, releaseFocus, attackTier, returnAnimation, clearFocus, cursor, parents, view, enqueue, publish, ticket, _reason, _live$journal$at, result, _iterator15, _step15, wave, _iterator17, _step17, _play, _i4, _tail, play, _iterator16, _step16, event, snapshot;
-            return _regeneratorRuntime().wrap(function _callee13$(_context13) {
-              while (1) switch (_context13.prev = _context13.next) {
+          var _stage4ASwap = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee14(a, b, preview) {
+            var _this32 = this;
+            var live, core, session, motion, current, _this$boardFx2, swapView, waves, tail, releaseFocus, attackTier, returnAnimation, clearFocus, cursor, parents, view, enqueue, publish, ticket, _reason, _live$journal$at, result, _iterator17, _step17, wave, _iterator19, _step19, _play, _i5, _tail, play, _iterator18, _step18, event, snapshot;
+            return _regeneratorRuntime().wrap(function _callee14$(_context14) {
+              while (1) switch (_context14.prev = _context14.next) {
                 case 0:
                   live = this.stage4A;
                   core = live.core, session = live.session;
                   motion = this.motion;
                   current = function current() {
-                    return _this28.stage4A === live && !motion.cancelled;
+                    return _this32.stage4A === live && !motion.cancelled;
                   };
                   this.selected = -1;
                   if (!(!core || !session || live.error || core.disposition !== 'active')) {
-                    _context13.next = 7;
+                    _context14.next = 7;
                     break;
                   }
-                  return _context13.abrupt("return");
+                  return _context14.abrupt("return");
                 case 7:
                   this.busy = true;
                   this.battlePhase = 'resolve';
                   this.drawBoard();
                   this.audio.playTrial('swap');
                   if (validExchange(core.snapshot().state.board, [a, b])) {
-                    _context13.next = 17;
+                    _context14.next = 17;
                     break;
                   }
                   this.audio.playTrial('invalid');
-                  _context13.next = 15;
+                  _context14.next = 15;
                   return Promise.all([this.moveTile(motion, this.tiles[a], a, .12), this.moveTile(motion, this.tiles[b], b, .12), (_this$boardFx2 = this.boardFx) == null ? void 0 : _this$boardFx2.reject(motion, [this.cells[a].position, this.cells[b].position])]);
                 case 15:
                   if (current()) this.resumeBattleInput('没有成组，换位已还原');
-                  return _context13.abrupt("return");
+                  return _context14.abrupt("return");
                 case 17:
                   // Core facts are submitted independently. Presentation replays their causal waves.
                   swapView = Promise.all([this.moveTile(motion, this.tiles[a], b, preview ? .06 : .12), this.moveTile(motion, this.tiles[b], a, preview ? .06 : .12)]).then(function () {
                     if (!current()) return;
-                    var _ref7 = [_this28.tiles[b], _this28.tiles[a]];
-                    _this28.tiles[a] = _ref7[0];
-                    _this28.tiles[b] = _ref7[1];
-                    var _ref8 = [_this28.board[b], _this28.board[a]];
-                    _this28.board[a] = _ref8[0];
-                    _this28.board[b] = _ref8[1];
+                    var _ref8 = [_this32.tiles[b], _this32.tiles[a]];
+                    _this32.tiles[a] = _ref8[0];
+                    _this32.tiles[b] = _ref8[1];
+                    var _ref9 = [_this32.board[b], _this32.board[a]];
+                    _this32.board[a] = _ref9[0];
+                    _this32.board[b] = _ref9[1];
                   });
                   waves = new Map();
                   tail = [];
@@ -8026,19 +9185,19 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   cursor = live.journal.length;
                   parents = new Map();
                   view = function view(lane, event, play) {
-                    return /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5() {
+                    return /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6() {
                       var start;
-                      return _regeneratorRuntime().wrap(function _callee5$(_context5) {
-                        while (1) switch (_context5.prev = _context5.next) {
+                      return _regeneratorRuntime().wrap(function _callee6$(_context6) {
+                        while (1) switch (_context6.prev = _context6.next) {
                           case 0:
                             if (current()) {
-                              _context5.next = 2;
+                              _context6.next = 2;
                               break;
                             }
-                            return _context5.abrupt("return");
+                            return _context6.abrupt("return");
                           case 2:
                             start = performance.now();
-                            _context5.next = 5;
+                            _context6.next = 5;
                             return play();
                           case 5:
                             if (current()) live.samples.push({
@@ -8049,9 +9208,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                             });
                           case 6:
                           case "end":
-                            return _context5.stop();
+                            return _context6.stop();
                         }
-                      }, _callee5);
+                      }, _callee6);
                     }));
                   };
                   enqueue = function enqueue(lane, event, play) {
@@ -8070,9 +9229,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   publish = function publish() {
                     var snap = core.snapshot();
                     live.journal = snap.events;
-                    var _loop3 = function _loop3() {
+                    var _loop4 = function _loop4() {
                       var _event$sourceId, _event$targetId;
-                      var event = _step13.value;
+                      var event = _step15.value;
                       parents.set(event.eventId, event.parentEventId);
                       live.published.push({
                         id: event.eventId,
@@ -8085,85 +9244,85 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                         var matched = facts.removed.concat(facts.generated.map(function (g) {
                           return g.index;
                         }));
-                        var clear = view('board', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6() {
-                          var _this28$boardFx, _this28$boardFx2;
-                          var oldNodes, _iterator14, _step14, _step14$value, _index3, tile;
-                          return _regeneratorRuntime().wrap(function _callee6$(_context6) {
-                            while (1) switch (_context6.prev = _context6.next) {
+                        var clear = view('board', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee7() {
+                          var _this32$boardFx, _this32$boardFx2;
+                          var oldNodes, _iterator16, _step16, _step16$value, _index5, tile;
+                          return _regeneratorRuntime().wrap(function _callee7$(_context7) {
+                            while (1) switch (_context7.prev = _context7.next) {
                               case 0:
-                                oldNodes = _this28.tiles.slice();
-                                _iterator14 = _createForOfIteratorHelperLoose(facts.generated);
+                                oldNodes = _this32.tiles.slice();
+                                _iterator16 = _createForOfIteratorHelperLoose(facts.generated);
                               case 2:
-                                if ((_step14 = _iterator14()).done) {
-                                  _context6.next = 9;
+                                if ((_step16 = _iterator16()).done) {
+                                  _context7.next = 9;
                                   break;
                                 }
-                                _step14$value = _step14.value, _index3 = _step14$value.index, tile = _step14$value.tile;
-                                if (!(live.nodes.get(tile.id) !== oldNodes[_index3])) {
-                                  _context6.next = 6;
+                                _step16$value = _step16.value, _index5 = _step16$value.index, tile = _step16$value.tile;
+                                if (!(live.nodes.get(tile.id) !== oldNodes[_index5])) {
+                                  _context7.next = 6;
                                   break;
                                 }
                                 throw Error('强化演出棋子身份不一致');
                               case 6:
-                                _this28.markCharged(_index3, tile.tier);
+                                _this32.markCharged(_index5, tile.tier);
                               case 7:
-                                _context6.next = 2;
+                                _context7.next = 2;
                                 break;
                               case 9:
-                                _this28.audio.playChain(facts.wave - 1);
-                                if (facts.generated.length) _this28.audio.playTrial('create');
-                                _context6.next = 13;
-                                return Promise.all([_this28.flashTiles(motion, matched, removed, false)].concat(facts.generated.map(function (_ref11) {
-                                  var index = _ref11.index;
-                                  return _this28.dropCharge(motion, oldNodes[index]);
-                                }), [(_this28$boardFx = _this28.boardFx) == null ? void 0 : _this28$boardFx.combo(motion, facts.wave, new Vec3(0, 80, 0)), (_this28$boardFx2 = _this28.boardFx) == null ? void 0 : _this28$boardFx2.chargeReady(motion, facts.generated.map(function (_ref12) {
+                                _this32.audio.playChain(facts.wave - 1);
+                                if (facts.generated.length) _this32.audio.playTrial('create');
+                                _context7.next = 13;
+                                return Promise.all([_this32.flashTiles(motion, matched, removed, false)].concat(facts.generated.map(function (_ref12) {
                                   var index = _ref12.index;
+                                  return _this32.dropCharge(motion, oldNodes[index]);
+                                }), [(_this32$boardFx = _this32.boardFx) == null ? void 0 : _this32$boardFx.combo(motion, facts.wave, new Vec3(0, 80, 0)), (_this32$boardFx2 = _this32.boardFx) == null ? void 0 : _this32$boardFx2.chargeReady(motion, facts.generated.map(function (_ref13) {
+                                  var index = _ref13.index;
                                   return {
-                                    position: _this28.cells[index].position
+                                    position: _this32.cells[index].position
                                   };
                                 }))]));
                               case 13:
                               case "end":
-                                return _context6.stop();
+                                return _context7.stop();
                             }
-                          }, _callee6);
+                          }, _callee7);
                         })));
-                        var refill = view('board', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee7() {
+                        var refill = view('board', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee8() {
                           var paths, nextNodes;
-                          return _regeneratorRuntime().wrap(function _callee7$(_context7) {
-                            while (1) switch (_context7.prev = _context7.next) {
+                          return _regeneratorRuntime().wrap(function _callee8$(_context8) {
+                            while (1) switch (_context8.prev = _context8.next) {
                               case 0:
                                 // The committed frame supplies colors and stable IDs; geometry uses the previous frame.
-                                paths = planRefill(_this28.board, removed, [''], function () {
+                                paths = planRefill(_this32.board, removed, [''], function () {
                                   return 0;
                                 }, mineGravity);
                                 paths.board = frame.board.tiles.map(function (t) {
                                   return t.emblem;
                                 });
-                                _this28.board = paths.board;
-                                _this28.audio.playTrial('drop');
-                                _context7.next = 6;
-                                return _this28.drop(motion, removed, paths);
+                                _this32.board = paths.board;
+                                _this32.audio.playTrial('drop');
+                                _context8.next = 6;
+                                return _this32.drop(motion, removed, paths);
                               case 6:
                                 if (current()) {
-                                  _context7.next = 8;
+                                  _context8.next = 8;
                                   break;
                                 }
-                                return _context7.abrupt("return");
+                                return _context8.abrupt("return");
                               case 8:
                                 nextNodes = new Map();
-                                frame.board.tiles.forEach(function (_ref14, i) {
-                                  var id = _ref14.id;
+                                frame.board.tiles.forEach(function (_ref15, i) {
+                                  var id = _ref15.id;
                                   var previous = live.nodes.get(id);
-                                  if (previous && previous !== _this28.tiles[i]) throw Error('矿轨演出棋子身份不一致');
-                                  nextNodes.set(id, _this28.tiles[i]);
+                                  if (previous && previous !== _this32.tiles[i]) throw Error('矿轨演出棋子身份不一致');
+                                  nextNodes.set(id, _this32.tiles[i]);
                                 });
                                 live.nodes = nextNodes;
                               case 11:
                               case "end":
-                                return _context7.stop();
+                                return _context8.stop();
                             }
-                          }, _callee7);
+                          }, _callee8);
                         })));
                         waves.set(event.eventId, {
                           clear: clear,
@@ -8172,65 +9331,65 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                         });
                       }
                       if (event.type === 'CAST_STARTED' && event.sourceId) {
-                        var actor = _this28.heroes.get(event.sourceId);
-                        if (actor) enqueue('actor', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee8() {
+                        var actor = _this32.heroes.get(event.sourceId);
+                        if (actor) enqueue('actor', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee9() {
                           var home, cast, targets, target, color, _target$getChildByNam, _target$getChildByNam2, _actor$getChildByName, _actor$getChildByName2, _ground, foot, contact;
-                          return _regeneratorRuntime().wrap(function _callee8$(_context8) {
-                            while (1) switch (_context8.prev = _context8.next) {
+                          return _regeneratorRuntime().wrap(function _callee9$(_context9) {
+                            while (1) switch (_context9.prev = _context9.next) {
                               case 0:
                                 home = actor.position.clone();
                                 cast = event.payload;
                                 targets = cast.targets.flatMap(function (id) {
-                                  var target = _this28.enemyNodes[Number(id.split(':')[1])];
+                                  var target = _this32.enemyNodes[Number(id.split(':')[1])];
                                   return target != null && target.active ? [target] : [];
                                 });
                                 target = targets[0];
                                 clearFocus();
                                 attackTier = cast.tier;
-                                releaseFocus = _this28.focusCombat(motion, [].concat(targets, [actor]));
-                                if (cast.tier || cast.kind !== 'attack') _this28.audio.play('charge');
+                                releaseFocus = _this32.focusCombat(motion, [].concat(targets, [actor]));
+                                if (cast.tier || cast.kind !== 'attack') _this32.audio.play('charge');
                                 if (!(cast.tier && !motion.reduced)) {
-                                  _context8.next = 11;
+                                  _context9.next = 11;
                                   break;
                                 }
-                                _context8.next = 11;
-                                return _this28.castSkillEffect(motion, home, cast.tier === 'advanced');
+                                _context9.next = 11;
+                                return _this32.castSkillEffect(motion, home, cast.tier === 'advanced');
                               case 11:
                                 if (current()) {
-                                  _context8.next = 13;
+                                  _context9.next = 13;
                                   break;
                                 }
-                                return _context8.abrupt("return");
+                                return _context9.abrupt("return");
                               case 13:
                                 if (!(cast.kind !== 'attack')) {
-                                  _context8.next = 19;
+                                  _context9.next = 19;
                                   break;
                                 }
                                 color = cast.kind === 'heal' ? '#81f4a4' : cast.kind === 'guard' ? '#8bcbff' : '#ffbc60';
-                                _context8.next = 17;
-                                return Promise.all([_this28.supportHalo(motion, home, color)].concat(_this28.burst(motion, home.x, home.y, color, 6)));
+                                _context9.next = 17;
+                                return Promise.all([_this32.supportHalo(motion, home, color)].concat(_this32.burst(motion, home.x, home.y, color, 6)));
                               case 17:
-                                _context8.next = 31;
+                                _context9.next = 31;
                                 break;
                               case 19:
                                 if (!(target && (cast.skill === 'm' || cast.skill === 'stone'))) {
-                                  _context8.next = 24;
+                                  _context9.next = 24;
                                   break;
                                 }
-                                _context8.next = 22;
-                                return _this28.flyProjectile(motion, cast.skill, home, target.position.clone());
+                                _context9.next = 22;
+                                return _this32.flyProjectile(motion, cast.skill, home, target.position.clone());
                               case 22:
-                                _context8.next = 31;
+                                _context9.next = 31;
                                 break;
                               case 24:
                                 if (!target) {
-                                  _context8.next = 31;
+                                  _context9.next = 31;
                                   break;
                                 }
                                 _ground = target.position.y + ((_target$getChildByNam = (_target$getChildByNam2 = target.getChildByName('脚底投影')) == null ? void 0 : _target$getChildByNam2.position.y) != null ? _target$getChildByNam : -34);
                                 foot = (_actor$getChildByName = (_actor$getChildByName2 = actor.getChildByName('脚底投影')) == null ? void 0 : _actor$getChildByName2.position.y) != null ? _actor$getChildByName : -34;
                                 contact = new Vec3(target.position.x - 36, _ground - foot, 0);
-                                _context8.next = 30;
+                                _context9.next = 30;
                                 return motion.play(tween(actor).to(motion.duration(.105), {
                                   position: contact
                                 }));
@@ -8242,16 +9401,16 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                                 }));
                               case 31:
                               case "end":
-                                return _context8.stop();
+                                return _context9.stop();
                             }
-                          }, _callee8);
+                          }, _callee9);
                         })));
                       }
-                      if (event.type === 'CAST_COMPLETED') enqueue('actor', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee9() {
-                        return _regeneratorRuntime().wrap(function _callee9$(_context9) {
-                          while (1) switch (_context9.prev = _context9.next) {
+                      if (event.type === 'CAST_COMPLETED') enqueue('actor', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee10() {
+                        return _regeneratorRuntime().wrap(function _callee10$(_context10) {
+                          while (1) switch (_context10.prev = _context10.next) {
                             case 0:
-                              _context9.next = 2;
+                              _context10.next = 2;
                               return returnAnimation;
                             case 2:
                               returnAnimation = undefined;
@@ -8259,41 +9418,41 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                               attackTier = undefined;
                             case 5:
                             case "end":
-                              return _context9.stop();
+                              return _context10.stop();
                           }
-                        }, _callee9);
+                        }, _callee10);
                       })));
                       if (event.type === 'ACTION_OPPORTUNITY' && (_event$sourceId = event.sourceId) != null && _event$sourceId.startsWith('enemy:') && !snap.events.some(function (e) {
                         return e.parentEventId === event.eventId && e.type === 'ACTION_SKIPPED';
                       })) {
-                        var _index4 = Number(event.sourceId.split(':')[1]);
-                        enqueue('actor', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee10() {
-                          var node, home, art, _this28$heroes$values, _this28$heroes$values2;
-                          return _regeneratorRuntime().wrap(function _callee10$(_context10) {
-                            while (1) switch (_context10.prev = _context10.next) {
+                        var _index6 = Number(event.sourceId.split(':')[1]);
+                        enqueue('actor', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee11() {
+                          var node, home, art, _this32$heroes$values, _this32$heroes$values2;
+                          return _regeneratorRuntime().wrap(function _callee11$(_context11) {
+                            while (1) switch (_context11.prev = _context11.next) {
                               case 0:
-                                node = _this28.enemyNodes[_index4];
+                                node = _this32.enemyNodes[_index6];
                                 if (node) {
-                                  _context10.next = 3;
+                                  _context11.next = 3;
                                   break;
                                 }
-                                return _context10.abrupt("return");
+                                return _context11.abrupt("return");
                               case 3:
                                 home = node.position.clone();
                                 clearFocus();
-                                releaseFocus = _this28.focusCombat(motion, [].concat(Array.from(_this28.heroes.values()), [node]));
-                                art = _this28.foes[_index4].art;
+                                releaseFocus = _this32.focusCombat(motion, [].concat(Array.from(_this32.heroes.values()), [node]));
+                                art = _this32.foes[_index6].art;
                                 if (!(art === 'wizard' || art === 'vine')) {
-                                  _context10.next = 12;
+                                  _context11.next = 12;
                                   break;
                                 }
-                                _context10.next = 10;
-                                return _this28.flyProjectile(motion, art === 'wizard' ? 'm' : 'stone', home, (_this28$heroes$values = (_this28$heroes$values2 = _this28.heroes.values().next().value) == null ? void 0 : _this28$heroes$values2.position) != null ? _this28$heroes$values : new Vec3(-100, 240, 0));
+                                _context11.next = 10;
+                                return _this32.flyProjectile(motion, art === 'wizard' ? 'm' : 'stone', home, (_this32$heroes$values = (_this32$heroes$values2 = _this32.heroes.values().next().value) == null ? void 0 : _this32$heroes$values2.position) != null ? _this32$heroes$values : new Vec3(-100, 240, 0));
                               case 10:
-                                _context10.next = 14;
+                                _context11.next = 14;
                                 break;
                               case 12:
-                                _context10.next = 14;
+                                _context11.next = 14;
                                 return motion.play(tween(node).to(motion.duration(.14), {
                                   position: home.clone().add(new Vec3(-27, 0, 0))
                                 }).to(motion.duration(.17), {
@@ -8301,113 +9460,113 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                                 }));
                               case 14:
                               case "end":
-                                return _context10.stop();
-                            }
-                          }, _callee10);
-                        })));
-                      }
-                      if (event.type === 'HEAL_APPLIED' || event.type === 'DP_RESTORED' || event.type === 'ENEMY_AGGREGATE_RESOLVED') {
-                        var meters = event.payload;
-                        enqueue('actor', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee11() {
-                          var _meters$amount, _meters$amount2;
-                          var _meters$remainingHP, _meters$remainingDP, _meters$lost, lost, _meters$absorbed, absorbed;
-                          return _regeneratorRuntime().wrap(function _callee11$(_context11) {
-                            while (1) switch (_context11.prev = _context11.next) {
-                              case 0:
-                                if (event.type === 'HEAL_APPLIED') _this28.hp = Math.min(_this28.maxHP, _this28.hp + ((_meters$amount = meters.amount) != null ? _meters$amount : 0));else if (event.type === 'DP_RESTORED') _this28.dp = Math.min(_this28.maxDP, _this28.dp + ((_meters$amount2 = meters.amount) != null ? _meters$amount2 : 0));else {
-                                  _this28.hp = (_meters$remainingHP = meters.remainingHP) != null ? _meters$remainingHP : _this28.hp;
-                                  _this28.dp = (_meters$remainingDP = meters.remainingDP) != null ? _meters$remainingDP : _this28.dp;
-                                }
-                                _this28.updateHUD();
-                                if (!(event.type === 'ENEMY_AGGREGATE_RESOLVED')) {
-                                  _context11.next = 9;
-                                  break;
-                                }
-                                _meters$lost = meters.lost, lost = _meters$lost === void 0 ? 0 : _meters$lost, _meters$absorbed = meters.absorbed, absorbed = _meters$absorbed === void 0 ? 0 : _meters$absorbed;
-                                if (!(lost || absorbed)) {
-                                  _context11.next = 8;
-                                  break;
-                                }
-                                _this28.audio.play('hurt');
-                                _context11.next = 8;
-                                return Promise.all([_this28.combatPopup(motion, [lost && '−' + lost + ' HP', absorbed && '−' + absorbed + ' DP'].filter(Boolean).join(' · '), -100, 283, '#ffaaa2')].concat(Array.from(_this28.heroes.values(), function (hero) {
-                                  return _this28.hitReaction(motion, hero);
-                                }), [lost && _this28.hp <= _this28.maxHP * .30 ? _this28.lowHealthFlash(motion) : undefined]));
-                              case 8:
-                                clearFocus();
-                              case 9:
-                              case "end":
                                 return _context11.stop();
                             }
                           }, _callee11);
                         })));
                       }
-                      if (event.type === 'HIT_RESOLVED' && (_event$targetId = event.targetId) != null && _event$targetId.startsWith('enemy:')) {
-                        var _index5 = Number(event.targetId.split(':')[1]);
-                        var hit = event.payload;
+                      if (event.type === 'HEAL_APPLIED' || event.type === 'DP_RESTORED' || event.type === 'ENEMY_AGGREGATE_RESOLVED') {
+                        var meters = event.payload;
                         enqueue('actor', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee12() {
-                          var node, home, fallen, effects, _node$getChildByName$, _node$getChildByName, _node$getComponent, alpha;
+                          var _meters$amount, _meters$amount2;
+                          var _meters$remainingHP, _meters$remainingDP, _meters$lost, lost, _meters$absorbed, absorbed;
                           return _regeneratorRuntime().wrap(function _callee12$(_context12) {
                             while (1) switch (_context12.prev = _context12.next) {
                               case 0:
-                                _this28.enemies[_index5] = Math.max(0, _this28.enemies[_index5] - hit.lost);
-                                _this28.updateHUD();
-                                node = _this28.enemyNodes[_index5];
-                                if (node) {
-                                  _context12.next = 5;
+                                if (event.type === 'HEAL_APPLIED') _this32.hp = Math.min(_this32.maxHP, _this32.hp + ((_meters$amount = meters.amount) != null ? _meters$amount : 0));else if (event.type === 'DP_RESTORED') _this32.dp = Math.min(_this32.maxDP, _this32.dp + ((_meters$amount2 = meters.amount) != null ? _meters$amount2 : 0));else {
+                                  _this32.hp = (_meters$remainingHP = meters.remainingHP) != null ? _meters$remainingHP : _this32.hp;
+                                  _this32.dp = (_meters$remainingDP = meters.remainingDP) != null ? _meters$remainingDP : _this32.dp;
+                                }
+                                _this32.updateHUD();
+                                if (!(event.type === 'ENEMY_AGGREGATE_RESOLVED')) {
+                                  _context12.next = 9;
                                   break;
                                 }
-                                return _context12.abrupt("return");
-                              case 5:
-                                home = node.position.clone();
-                                fallen = _this28.enemies[_index5] === 0;
-                                _this28.audio.play('hit');
-                                effects = [_this28.hitReaction(motion, node), _this28.combatPopup(motion, '−' + hit.lost, home.x, home.y + 51, attackTier === 'advanced' ? '#ffd66b' : '#ffe7b0', attackTier === 'advanced' ? 38 : attackTier ? 32 : 27), motion.play(tween(node).to(motion.duration(.065), {
-                                  position: home.clone().add(new Vec3(11, 0, 0))
-                                }).to(motion.duration(.10), {
-                                  position: home
-                                }))].concat(_this28.burst(motion, home.x, home.y, _this28.foes[_index5].tags.includes('armor') ? '#ffde86' : event.sourceId === 'm' ? '#d4a6ff' : '#ffb784', 6));
-                                if (fallen) {
-                                  _this28.lastFallen = {
-                                    origin: home,
-                                    ground: home.y + ((_node$getChildByName$ = (_node$getChildByName = node.getChildByName('脚底投影')) == null ? void 0 : _node$getChildByName.position.y) != null ? _node$getChildByName$ : -34)
-                                  };
-                                  alpha = (_node$getComponent = node.getComponent(UIOpacity)) != null ? _node$getComponent : node.addComponent(UIOpacity);
-                                  effects.push(motion.play(tween(alpha).delay(motion.duration(.17)).to(motion.duration(.25), {
-                                    opacity: 0
-                                  })), _this28.soulRise(motion, home));
+                                _meters$lost = meters.lost, lost = _meters$lost === void 0 ? 0 : _meters$lost, _meters$absorbed = meters.absorbed, absorbed = _meters$absorbed === void 0 ? 0 : _meters$absorbed;
+                                if (!(lost || absorbed)) {
+                                  _context12.next = 8;
+                                  break;
                                 }
-                                _context12.next = 12;
-                                return Promise.all(effects);
-                              case 12:
-                                if (current() && fallen) {
-                                  node.active = false;
-                                  _this28.enemyMeters[_index5].root.active = false;
-                                }
-                              case 13:
+                                _this32.audio.play('hurt');
+                                _context12.next = 8;
+                                return Promise.all([_this32.combatPopup(motion, [lost && '−' + lost + ' HP', absorbed && '−' + absorbed + ' DP'].filter(Boolean).join(' · '), -100, 283, '#ffaaa2')].concat(Array.from(_this32.heroes.values(), function (hero) {
+                                  return _this32.hitReaction(motion, hero);
+                                }), [lost && _this32.hp <= _this32.maxHP * .30 ? _this32.lowHealthFlash(motion) : undefined]));
+                              case 8:
+                                clearFocus();
+                              case 9:
                               case "end":
                                 return _context12.stop();
                             }
                           }, _callee12);
                         })));
                       }
+                      if (event.type === 'HIT_RESOLVED' && (_event$targetId = event.targetId) != null && _event$targetId.startsWith('enemy:')) {
+                        var _index7 = Number(event.targetId.split(':')[1]);
+                        var hit = event.payload;
+                        enqueue('actor', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee13() {
+                          var node, home, fallen, effects, _node$getChildByName$, _node$getChildByName2, _node$getComponent, alpha;
+                          return _regeneratorRuntime().wrap(function _callee13$(_context13) {
+                            while (1) switch (_context13.prev = _context13.next) {
+                              case 0:
+                                _this32.enemies[_index7] = Math.max(0, _this32.enemies[_index7] - hit.lost);
+                                _this32.updateHUD();
+                                node = _this32.enemyNodes[_index7];
+                                if (node) {
+                                  _context13.next = 5;
+                                  break;
+                                }
+                                return _context13.abrupt("return");
+                              case 5:
+                                home = node.position.clone();
+                                fallen = _this32.enemies[_index7] === 0;
+                                _this32.audio.play('hit');
+                                effects = [_this32.hitReaction(motion, node), _this32.combatPopup(motion, '−' + hit.lost, home.x, home.y + 51, attackTier === 'advanced' ? '#ffd66b' : '#ffe7b0', attackTier === 'advanced' ? 38 : attackTier ? 32 : 27), motion.play(tween(node).to(motion.duration(.065), {
+                                  position: home.clone().add(new Vec3(11, 0, 0))
+                                }).to(motion.duration(.10), {
+                                  position: home
+                                }))].concat(_this32.burst(motion, home.x, home.y, _this32.foes[_index7].tags.includes('armor') ? '#ffde86' : event.sourceId === 'm' ? '#d4a6ff' : '#ffb784', 6));
+                                if (fallen) {
+                                  _this32.lastFallen = {
+                                    origin: home,
+                                    ground: home.y + ((_node$getChildByName$ = (_node$getChildByName2 = node.getChildByName('脚底投影')) == null ? void 0 : _node$getChildByName2.position.y) != null ? _node$getChildByName$ : -34)
+                                  };
+                                  alpha = (_node$getComponent = node.getComponent(UIOpacity)) != null ? _node$getComponent : node.addComponent(UIOpacity);
+                                  effects.push(motion.play(tween(alpha).delay(motion.duration(.17)).to(motion.duration(.25), {
+                                    opacity: 0
+                                  })), _this32.soulRise(motion, home));
+                                }
+                                _context13.next = 12;
+                                return Promise.all(effects);
+                              case 12:
+                                if (current() && fallen) {
+                                  node.active = false;
+                                  _this32.enemyMeters[_index7].root.active = false;
+                                }
+                              case 13:
+                              case "end":
+                                return _context13.stop();
+                            }
+                          }, _callee13);
+                        })));
+                      }
                     };
-                    for (var _iterator13 = _createForOfIteratorHelperLoose(snap.events.slice(cursor)), _step13; !(_step13 = _iterator13()).done;) {
-                      _loop3();
+                    for (var _iterator15 = _createForOfIteratorHelperLoose(snap.events.slice(cursor)), _step15; !(_step15 = _iterator15()).done;) {
+                      _loop4();
                     }
                     cursor = snap.events.length;
                   };
-                  _context13.prev = 26;
+                  _context14.prev = 26;
                   ticket = core.submit({
                     swap: 'move'
                   });
                   publish();
                 case 29:
                   if (!(ticket && current())) {
-                    _context13.next = 44;
+                    _context14.next = 44;
                     break;
                   }
-                  _context13.next = 32;
+                  _context14.next = 32;
                   return session.resolve(ticket, _extends({}, ticket.wave === 1 ? {
                     swap: [a, b]
                   } : {}, {
@@ -8415,101 +9574,101 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     gravity: 'mine'
                   }));
                 case 32:
-                  result = _context13.sent;
+                  result = _context14.sent;
                   if (current()) {
-                    _context13.next = 35;
+                    _context14.next = 35;
                     break;
                   }
-                  return _context13.abrupt("return");
+                  return _context14.abrupt("return");
                 case 35:
                   publish();
                   if (result.ok) {
-                    _context13.next = 38;
+                    _context14.next = 38;
                     break;
                   }
                   throw Error(String((_reason = (_live$journal$at = live.journal.at(-1)) == null || (_live$journal$at = _live$journal$at.payload) == null ? void 0 : _live$journal$at.reason) != null ? _reason : '棋盘请求失败；请查看事件记录'));
                 case 38:
                   ticket = result.next;
                   if (!ticket) {
-                    _context13.next = 42;
+                    _context14.next = 42;
                     break;
                   }
-                  _context13.next = 42;
+                  _context14.next = 42;
                   return new Promise(function (resolve) {
                     return requestAnimationFrame(function () {
                       return resolve();
                     });
                   });
                 case 42:
-                  _context13.next = 29;
+                  _context14.next = 29;
                   break;
                 case 44:
-                  _context13.next = 46;
+                  _context14.next = 46;
                   return swapView;
                 case 46:
                   if (current()) {
-                    _context13.next = 48;
+                    _context14.next = 48;
                     break;
                   }
-                  return _context13.abrupt("return");
+                  return _context14.abrupt("return");
                 case 48:
-                  _iterator15 = _createForOfIteratorHelperLoose(waves.values());
+                  _iterator17 = _createForOfIteratorHelperLoose(waves.values());
                 case 49:
-                  if ((_step15 = _iterator15()).done) {
-                    _context13.next = 66;
+                  if ((_step17 = _iterator17()).done) {
+                    _context14.next = 66;
                     break;
                   }
-                  wave = _step15.value;
-                  _context13.next = 53;
+                  wave = _step17.value;
+                  _context14.next = 53;
                   return wave.clear();
                 case 53:
-                  _iterator17 = _createForOfIteratorHelperLoose(wave.actors);
+                  _iterator19 = _createForOfIteratorHelperLoose(wave.actors);
                 case 54:
-                  if ((_step17 = _iterator17()).done) {
-                    _context13.next = 60;
+                  if ((_step19 = _iterator19()).done) {
+                    _context14.next = 60;
                     break;
                   }
-                  _play = _step17.value;
-                  _context13.next = 58;
+                  _play = _step19.value;
+                  _context14.next = 58;
                   return _play();
                 case 58:
-                  _context13.next = 54;
+                  _context14.next = 54;
                   break;
                 case 60:
-                  _context13.next = 62;
+                  _context14.next = 62;
                   return wave.refill();
                 case 62:
                   if (current()) {
-                    _context13.next = 64;
+                    _context14.next = 64;
                     break;
                   }
-                  return _context13.abrupt("return");
+                  return _context14.abrupt("return");
                 case 64:
-                  _context13.next = 49;
+                  _context14.next = 49;
                   break;
                 case 66:
-                  _i4 = 0, _tail = tail;
+                  _i5 = 0, _tail = tail;
                 case 67:
-                  if (!(_i4 < _tail.length)) {
-                    _context13.next = 74;
+                  if (!(_i5 < _tail.length)) {
+                    _context14.next = 74;
                     break;
                   }
-                  play = _tail[_i4];
-                  _context13.next = 71;
+                  play = _tail[_i5];
+                  _context14.next = 71;
                   return play();
                 case 71:
-                  _i4++;
-                  _context13.next = 67;
+                  _i5++;
+                  _context14.next = 67;
                   break;
                 case 74:
                   if (current()) {
-                    _context13.next = 76;
+                    _context14.next = 76;
                     break;
                   }
-                  return _context13.abrupt("return");
+                  return _context14.abrupt("return");
                 case 76:
-                  for (_iterator16 = _createForOfIteratorHelperLoose(live.journal); !(_step16 = _iterator16()).done;) {
-                    event = _step16.value;
+                  for (_iterator18 = _createForOfIteratorHelperLoose(live.journal); !(_step18 = _iterator18()).done;) {
+                    event = _step18.value;
                     core.acknowledgePresentation(event.eventId);
                   }
                   snapshot = core.snapshot();
@@ -8528,35 +9687,35 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     this.setBattleStatus('首房战斗已结束');
                     if (snapshot.result.outcome === 'win') this.commitMineFirstVictory(live, this.dungeon, this.dungeon.room);else this.audio.play('defeat');
                   } else this.resumeBattleInput('轮到玩家，交换相邻纹章');
-                  _context13.next = 96;
+                  _context14.next = 96;
                   break;
                 case 86:
-                  _context13.prev = 86;
-                  _context13.t0 = _context13["catch"](26);
+                  _context14.prev = 86;
+                  _context14.t0 = _context14["catch"](26);
                   if (!(this.stage4A !== live || motion.cancelled)) {
-                    _context13.next = 90;
+                    _context14.next = 90;
                     break;
                   }
-                  return _context13.abrupt("return");
+                  return _context14.abrupt("return");
                 case 90:
-                  live.error = String(_context13.t0);
+                  live.error = String(_context14.t0);
                   session.cancel('stage4a-failed');
                   motion.cancel();
-                  _context13.next = 95;
+                  _context14.next = 95;
                   return Promise.allSettled([swapView]);
                 case 95:
                   if (this.stage4A === live) this.setBattleStatus('验证战斗已阻断 · 可撤离');
                 case 96:
-                  _context13.prev = 96;
+                  _context14.prev = 96;
                   clearFocus();
-                  return _context13.finish(96);
+                  return _context14.finish(96);
                 case 99:
                 case "end":
-                  return _context13.stop();
+                  return _context14.stop();
               }
-            }, _callee13, this, [[26, 86, 96, 99]]);
+            }, _callee14, this, [[26, 86, 96, 99]]);
           }));
-          function stage4ASwap(_x6, _x7, _x8) {
+          function stage4ASwap(_x9, _x10, _x11) {
             return _stage4ASwap.apply(this, arguments);
           }
           return stage4ASwap;
@@ -8564,7 +9723,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         _proto.commitMineFirstVictory = function commitMineFirstVictory(live, director, room) {
           var _snapshot$result,
             _snapshot$state$deriv,
-            _this29 = this,
+            _this33 = this,
             _this$lastFallen;
           if (this.stage4A !== live || this.stage4AGeneration !== live.generation || this.dungeon !== director || director.room !== room || director.depth !== 0 || !this.wantsStage4A() || !live.eligible || live.error || this.mineRecovery) return;
           var snapshot = live.core.snapshot();
@@ -8577,8 +9736,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var board = snapshot.state.board;
           var gate = this.saveGate;
           var raw = gate == null ? void 0 : gate.read();
-          if (((_snapshot$result = snapshot.result) == null ? void 0 : _snapshot$result.outcome) !== 'win' || snapshot.result.roomId !== 'mine:0' || ends.length !== 1 || ends[0].battleId !== snapshot.result.battleId || !settled || settled.sequence >= ends[0].sequence || snapshot.state.producers.length || snapshot.state.partyQueue.length || snapshot.state.delayed.length || snapshot.state.personal.some(function (_ref20) {
-            var queue = _ref20[1];
+          if (((_snapshot$result = snapshot.result) == null ? void 0 : _snapshot$result.outcome) !== 'win' || snapshot.result.roomId !== 'mine:0' || ends.length !== 1 || ends[0].battleId !== snapshot.result.battleId || !settled || settled.sequence >= ends[0].sequence || snapshot.state.producers.length || snapshot.state.partyQueue.length || snapshot.state.delayed.length || snapshot.state.personal.some(function (_ref21) {
+            var queue = _ref21[1];
             return queue.length;
           }) || (_snapshot$state$deriv = snapshot.state.derivation) != null && _snapshot$state$deriv.requests.length || snapshot.events.some(function (e) {
             return live.core.frame(e.eventId);
@@ -8644,10 +9803,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           if (result === 'write-failed') {
             if (!live.retrySave) live.retrySave = this.button('重试保存首房结果', -325, function () {
               var _live$retrySave;
-              if (_this29.stage4A !== live) return;
+              if (_this33.stage4A !== live) return;
               (_live$retrySave = live.retrySave) == null || _live$retrySave.destroy();
               live.retrySave = undefined;
-              _this29.commitMineFirstVictory(live, director, room);
+              _this33.commitMineFirstVictory(live, director, room);
             });
             this.setBattleStatus('首房奖励尚未保存');
             return;
@@ -8673,53 +9832,53 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           };
           this.audio.play('victory');
           var reveal = /*#__PURE__*/function () {
-            var _ref21 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee14() {
-              return _regeneratorRuntime().wrap(function _callee14$(_context14) {
-                while (1) switch (_context14.prev = _context14.next) {
+            var _ref22 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee15() {
+              return _regeneratorRuntime().wrap(function _callee15$(_context15) {
+                while (1) switch (_context15.prev = _context15.next) {
                   case 0:
-                    _context14.prev = 0;
-                    _context14.next = 3;
-                    return _this29.animateCoins(motion, next.run.pending.coins, _this29.coinText, drop.origin, drop.ground);
+                    _context15.prev = 0;
+                    _context15.next = 3;
+                    return _this33.animateCoins(motion, next.run.pending.coins, _this33.coinText, drop.origin, drop.ground);
                   case 3:
-                    _context14.next = 9;
+                    _context15.next = 9;
                     break;
                   case 5:
-                    _context14.prev = 5;
-                    _context14.t0 = _context14["catch"](0);
-                    if (_this29.ui === root) _this29.showRecoveryStop('首房已保存，场景需重新加载。');
-                    return _context14.abrupt("return");
+                    _context15.prev = 5;
+                    _context15.t0 = _context15["catch"](0);
+                    if (_this33.ui === root) _this33.showRecoveryStop('首房已保存，场景需重新加载。');
+                    return _context15.abrupt("return");
                   case 9:
-                    if (!(_this29.ui !== root || _this29.stage4A !== live || motion.cancelled)) {
-                      _context14.next = 11;
+                    if (!(_this33.ui !== root || _this33.stage4A !== live || motion.cancelled)) {
+                      _context15.next = 11;
                       break;
                     }
-                    return _context14.abrupt("return");
+                    return _context15.abrupt("return");
                   case 11:
-                    _this29.stopStage4A('first room committed');
+                    _this33.stopStage4A('first room committed');
                     try {
-                      _this29.projectMineRecovery(director, next);
+                      _this33.projectMineRecovery(director, next);
                     } catch (_unused8) {
-                      _this29.showRecoveryStop('首房已保存，场景需重新加载。');
+                      _this33.showRecoveryStop('首房已保存，场景需重新加载。');
                     }
                   case 13:
                   case "end":
-                    return _context14.stop();
+                    return _context15.stop();
                 }
-              }, _callee14, null, [[0, 5]]);
+              }, _callee15, null, [[0, 5]]);
             }));
             return function reveal() {
-              return _ref21.apply(this, arguments);
+              return _ref22.apply(this, arguments);
             };
           }();
           void reveal();
         };
         _proto.tap = /*#__PURE__*/function () {
-          var _tap = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee15(i, fromAuto, preview) {
-            var _this30 = this,
+          var _tap = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee16(i, fromAuto, preview) {
+            var _this34 = this,
               _room$rescueCells3;
-            var motion, a, _ref22, groups, _this$boardFx3, _ref23, _ref24, _loop4, _ret, wave, _this$mineRecovery4, _this$trial2, director, room, rescued, _this$adventure3, _this$lastFallen2, reward, drop, played;
-            return _regeneratorRuntime().wrap(function _callee15$(_context16) {
-              while (1) switch (_context16.prev = _context16.next) {
+            var motion, a, _ref23, groups, _this$boardFx3, _ref24, _ref25, _loop5, _ret2, wave, _this$mineRecovery2, _this$dungeon7, _this$trial$random, _this$trial2, order, old, _this$trial3, director, room, rescued, _this$adventure4, _this$lastFallen2, reward, drop, played;
+            return _regeneratorRuntime().wrap(function _callee16$(_context17) {
+              while (1) switch (_context17.prev = _context17.next) {
                 case 0:
                   if (fromAuto === void 0) {
                     fromAuto = false;
@@ -8728,222 +9887,319 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     preview = false;
                   }
                   if (!(this.busy || this.battleModal || !fromAuto && !this.canSelect(i))) {
-                    _context16.next = 4;
+                    _context17.next = 4;
                     break;
                   }
-                  return _context16.abrupt("return");
+                  return _context17.abrupt("return");
                 case 4:
                   this.clearIdleHint();
                   motion = this.motion;
                   a = this.selected;
                   this.selected = i === a ? -1 : i;
                   if (!(a < 0 || !adjacent(a, i))) {
-                    _context16.next = 11;
+                    _context17.next = 11;
                     break;
                   }
                   this.drawBoard();
-                  return _context16.abrupt("return");
+                  return _context17.abrupt("return");
                 case 11:
                   if (!this.stage4A) {
-                    _context16.next = 15;
+                    _context17.next = 15;
                     break;
                   }
-                  _context16.next = 14;
+                  _context17.next = 14;
                   return this.stage4ASwap(a, i, preview);
                 case 14:
-                  return _context16.abrupt("return");
+                  return _context17.abrupt("return");
                 case 15:
                   if (this.boardFx) this.audio.playTrial('swap');else this.audio.play('swap');
                   this.busy = true;
                   this.battlePhase = 'resolve';
                   this.selected = -1;
                   this.clearGuide();
-                  _ref22 = [this.board[i], this.board[a]];
-                  this.board[a] = _ref22[0];
-                  this.board[i] = _ref22[1];
-                  groups = matches(this.board);
-                  this.drawBoard();
-                  if (!(!preview || groups.length)) {
-                    _context16.next = 28;
-                    break;
-                  }
-                  _context16.next = 28;
-                  return Promise.all([this.moveTile(motion, this.tiles[a], i, preview ? .06 : .12), this.moveTile(motion, this.tiles[i], a, preview ? .06 : .12)]);
-                case 28:
-                  if (!motion.cancelled) {
-                    _context16.next = 30;
-                    break;
-                  }
-                  return _context16.abrupt("return");
-                case 30:
-                  if (groups.length) {
-                    _context16.next = 39;
-                    break;
-                  }
                   _ref23 = [this.board[i], this.board[a]];
                   this.board[a] = _ref23[0];
                   this.board[i] = _ref23[1];
+                  groups = matches(this.board);
+                  this.drawBoard();
+                  if (!(!preview || groups.length)) {
+                    _context17.next = 28;
+                    break;
+                  }
+                  _context17.next = 28;
+                  return Promise.all([this.moveTile(motion, this.tiles[a], i, preview ? .06 : .12), this.moveTile(motion, this.tiles[i], a, preview ? .06 : .12)]);
+                case 28:
+                  if (!motion.cancelled) {
+                    _context17.next = 30;
+                    break;
+                  }
+                  return _context17.abrupt("return");
+                case 30:
+                  if (groups.length) {
+                    _context17.next = 39;
+                    break;
+                  }
+                  _ref24 = [this.board[i], this.board[a]];
+                  this.board[a] = _ref24[0];
+                  this.board[i] = _ref24[1];
                   if (this.boardFx) this.audio.playTrial('invalid');
-                  _context16.next = 37;
+                  _context17.next = 37;
                   return Promise.all([this.moveTile(motion, this.tiles[a], a, .12), this.moveTile(motion, this.tiles[i], i, .12), (_this$boardFx3 = this.boardFx) == null ? void 0 : _this$boardFx3.reject(motion, [this.cells[a].position, this.cells[i].position])]);
                 case 37:
                   if (!motion.cancelled) this.resumeBattleInput('没有成组，换位已还原');
-                  return _context16.abrupt("return");
+                  return _context17.abrupt("return");
                 case 39:
-                  _ref24 = [this.tiles[i], this.tiles[a]];
-                  this.tiles[a] = _ref24[0];
-                  this.tiles[i] = _ref24[1];
+                  _ref25 = [this.tiles[i], this.tiles[a]];
+                  this.tiles[a] = _ref25[0];
+                  this.tiles[i] = _ref25[1];
                   if (this.trial) this.trial.moves++;
                   if (this.phase === 'wolves') this.firstSwap = false;
-                  _loop4 = /*#__PURE__*/_regeneratorRuntime().mark(function _loop4() {
-                    var _this30$boardFx, _this30$boardFx2, _this30$trial;
-                    var plan, removed, _iterator18, _step18, _step18$value, _index6, tier, _iterator19, _step19, _this30$ui$getChildBy, _index7, _iterator20, _step20, group, active, advanced, refill;
-                    return _regeneratorRuntime().wrap(function _loop4$(_context15) {
-                      while (1) switch (_context15.prev = _context15.next) {
+                  this.waveAudit = [];
+                  _loop5 = /*#__PURE__*/_regeneratorRuntime().mark(function _loop5() {
+                    var _this34$boardFx, _this34$boardFx2, _this34$trial;
+                    var plan, removed, _iterator20, _step20, _step20$value, _index8, tier, _iterator21, _step21, _this34$ui$getChildBy, _index9, _iterator22, _step22, group, active, advanced, refill;
+                    return _regeneratorRuntime().wrap(function _loop5$(_context16) {
+                      while (1) switch (_context16.prev = _context16.next) {
                         case 0:
-                          if (_this30.trial) _this30.trial.longestChain = Math.max(_this30.trial.longestChain, wave + 1);
-                          _this30.setBattleStatus("\u7B2C " + (wave + 1) + " \u6B21\u8FDE\u9501 \xB7 " + groups.length + " \u7EC4\u6D88\u9664");
+                          if (_this34.trial) _this34.trial.longestChain = Math.max(_this34.trial.longestChain, wave + 1);
+                          _this34.setBattleStatus("\u7B2C " + (wave + 1) + " \u6B21\u8FDE\u9501 \xB7 " + groups.length + " \u7EC4\u6D88\u9664");
                           plan = planWave(groups, function (index) {
-                            return _this30.chargedTiles.get(_this30.tiles[index]);
+                            return _this34.chargedTiles.get(_this34.tiles[index]);
                           }, wave === 0 ? [i, a] : []);
                           removed = plan.removed;
-                          if (_this30.boardFx) {
-                            _this30.audio.playChain(wave);
-                            if (plan.anchors.size) _this30.audio.playTrial('create');
-                          } else _this30.audio.play('clear');
-                          for (_iterator18 = _createForOfIteratorHelperLoose(plan.created); !(_step18 = _iterator18()).done;) {
-                            _step18$value = _step18.value, _index6 = _step18$value[0], tier = _step18$value[1];
-                            _this30.markCharged(_index6, tier);
+                          if (_this34.boardFx) {
+                            _this34.audio.playChain(wave);
+                            if (plan.anchors.size) _this34.audio.playTrial('create');
+                          } else _this34.audio.play('clear');
+                          for (_iterator20 = _createForOfIteratorHelperLoose(plan.created); !(_step20 = _iterator20()).done;) {
+                            _step20$value = _step20.value, _index8 = _step20$value[0], tier = _step20$value[1];
+                            _this34.markCharged(_index8, tier);
                           }
-                          for (_iterator19 = _createForOfIteratorHelperLoose(removed); !(_step19 = _iterator19()).done;) {
-                            _index7 = _step19.value;
-                            if (_this30.rescueCells["delete"](_index7)) (_this30$ui$getChildBy = _this30.ui.getChildByName('营救标记 ' + _index7)) == null || _this30$ui$getChildBy.destroy();
+                          for (_iterator21 = _createForOfIteratorHelperLoose(removed); !(_step21 = _iterator21()).done;) {
+                            _index9 = _step21.value;
+                            if (_this34.rescueCells["delete"](_index9)) (_this34$ui$getChildBy = _this34.ui.getChildByName('营救标记 ' + _index9)) == null || _this34$ui$getChildBy.destroy();
                           }
-                          _context15.next = 9;
-                          return Promise.all([_this30.flashTiles(motion, Array.from(plan.matched), removed, false)].concat(Array.from(plan.anchors, function (index) {
-                            return _this30.dropCharge(motion, _this30.tiles[index]);
-                          }), [(_this30$boardFx = _this30.boardFx) == null ? void 0 : _this30$boardFx.combo(motion, wave + 1, new Vec3(0, 80, 0)), (_this30$boardFx2 = _this30.boardFx) == null ? void 0 : _this30$boardFx2.chargeReady(motion, Array.from(plan.anchors, function (index) {
+                          _context16.next = 9;
+                          return Promise.all([_this34.flashTiles(motion, Array.from(plan.matched), removed, false)].concat(Array.from(plan.anchors, function (index) {
+                            return _this34.dropCharge(motion, _this34.tiles[index]);
+                          }), [(_this34$boardFx = _this34.boardFx) == null ? void 0 : _this34$boardFx.combo(motion, wave + 1, new Vec3(0, 80, 0)), (_this34$boardFx2 = _this34.boardFx) == null ? void 0 : _this34$boardFx2.chargeReady(motion, Array.from(plan.anchors, function (index) {
                             return {
-                              position: _this30.cells[index].position
+                              position: _this34.cells[index].position
                             };
                           }))]));
                         case 9:
                           if (!motion.cancelled) {
-                            _context15.next = 11;
+                            _context16.next = 11;
                             break;
                           }
-                          return _context15.abrupt("return", {
+                          return _context16.abrupt("return", {
                             v: void 0
                           });
                         case 11:
                           if (!plan.columns.size) {
-                            _context15.next = 15;
+                            _context16.next = 15;
                             break;
                           }
-                          if (_this30.trial) _this30.audio.playTrial('charge');else _this30.audio.play('charge');
-                          _context15.next = 15;
-                          return _this30.flashTiles(motion, plan.propagated, removed, true, Array.from(plan.columns));
+                          if (_this34.trial) _this34.audio.playTrial('charge');else _this34.audio.play('charge');
+                          _context16.next = 15;
+                          return _this34.flashTiles(motion, plan.propagated, removed, true, Array.from(plan.columns));
                         case 15:
                           if (!motion.cancelled) {
-                            _context15.next = 17;
+                            _context16.next = 17;
                             break;
                           }
-                          return _context15.abrupt("return", {
+                          return _context16.abrupt("return", {
                             v: void 0
                           });
                         case 17:
-                          _iterator20 = _createForOfIteratorHelperLoose(plan.components);
+                          _iterator22 = _createForOfIteratorHelperLoose(plan.components);
                         case 18:
-                          if ((_step20 = _iterator20()).done) {
-                            _context15.next = 28;
+                          if ((_step22 = _iterator22()).done) {
+                            _context16.next = 30;
                             break;
                           }
-                          group = _step20.value;
+                          group = _step22.value;
                           active = group.filter(function (index) {
                             return plan.charged.has(index);
                           });
                           advanced = active.some(function (index) {
-                            return _this30.chargedTiles.get(_this30.tiles[index]) === 'advanced';
+                            return _this34.chargedTiles.get(_this34.tiles[index]) === 'advanced';
                           });
-                          _context15.next = 24;
-                          return _this30.applySkill(motion, _this30.board[group[0]], group.length, wave + 1, active.length > 0, advanced);
-                        case 24:
+                          _this34.waveAudit.push({
+                            wave: wave + 1,
+                            kind: 'COMMAND_STARTED',
+                            type: _this34.board[group[0]],
+                            group: group.slice(),
+                            charged: active.length > 0,
+                            advanced: advanced
+                          });
+                          _context16.next = 25;
+                          return _this34.applySkill(motion, _this34.board[group[0]], group.length, wave + 1, active.length > 0, advanced);
+                        case 25:
+                          if (!motion.cancelled) _this34.waveAudit.push({
+                            wave: wave + 1,
+                            kind: 'COMMAND_COMPLETED',
+                            type: _this34.board[group[0]]
+                          });
                           if (!motion.cancelled) {
-                            _context15.next = 26;
+                            _context16.next = 28;
                             break;
                           }
-                          return _context15.abrupt("return", {
+                          return _context16.abrupt("return", {
                             v: void 0
                           });
-                        case 26:
-                          _context15.next = 18;
-                          break;
                         case 28:
-                          refill = planRefill(_this30.board, removed, _this30.types, (_this30$trial = _this30.trial) == null ? void 0 : _this30$trial.random, _this30.phase === 'mine' ? mineGravity : undefined);
-                          _this30.board = refill.board;
-                          _context15.next = 32;
-                          return _this30.drop(motion, removed, refill);
-                        case 32:
+                          _context16.next = 18;
+                          break;
+                        case 30:
+                          _this34.waveAudit.push({
+                            wave: wave + 1,
+                            kind: 'REFILL_STARTED'
+                          });
+                          refill = planRefill(_this34.board, removed, _this34.types, (_this34$trial = _this34.trial) == null ? void 0 : _this34$trial.random, _this34.phase === 'mine' ? mineGravity : undefined);
+                          _this34.board = refill.board;
+                          _context16.next = 35;
+                          return _this34.drop(motion, removed, refill);
+                        case 35:
                           if (!motion.cancelled) {
-                            _context15.next = 34;
+                            _context16.next = 37;
                             break;
                           }
-                          return _context15.abrupt("return", {
+                          return _context16.abrupt("return", {
                             v: void 0
                           });
-                        case 34:
-                          groups = matches(_this30.board);
-                        case 35:
+                        case 37:
+                          _context16.next = 39;
+                          return _this34.releaseMiners(motion);
+                        case 39:
+                          if (!motion.cancelled) {
+                            _context16.next = 41;
+                            break;
+                          }
+                          return _context16.abrupt("return", {
+                            v: void 0
+                          });
+                        case 41:
+                          groups = matches(_this34.board);
+                        case 42:
                         case "end":
-                          return _context15.stop();
+                          return _context16.stop();
                       }
-                    }, _loop4);
+                    }, _loop5);
                   });
                   wave = 0;
-                case 46:
+                case 47:
                   if (!(groups.length && wave < 12)) {
-                    _context16.next = 54;
+                    _context17.next = 55;
                     break;
                   }
-                  return _context16.delegateYield(_loop4(), "t0", 48);
-                case 48:
-                  _ret = _context16.t0;
-                  if (!_ret) {
-                    _context16.next = 51;
+                  return _context17.delegateYield(_loop5(), "t0", 49);
+                case 49:
+                  _ret2 = _context17.t0;
+                  if (!_ret2) {
+                    _context17.next = 52;
                     break;
                   }
-                  return _context16.abrupt("return", _ret.v);
-                case 51:
+                  return _context17.abrupt("return", _ret2.v);
+                case 52:
                   wave++;
-                  _context16.next = 46;
+                  _context17.next = 47;
                   break;
-                case 54:
+                case 55:
                   if (!(groups.length || !this.legalMove())) {
-                    _context16.next = 61;
+                    _context17.next = 81;
                     break;
                   }
-                  if (!(((_this$mineRecovery4 = this.mineRecovery) == null ? void 0 : _this$mineRecovery4.state.mineRecovery.source) === 'formal')) {
-                    _context16.next = 58;
+                  if (!(((_this$mineRecovery2 = this.mineRecovery) == null ? void 0 : _this$mineRecovery2.state.mineRecovery.source) === 'formal')) {
+                    _context17.next = 59;
                     break;
                   }
                   this.stopLegacyMineBoard(groups.length ? 'legacy-wave-limit' : 'no-legal-move');
-                  return _context16.abrupt("return");
-                case 58:
+                  return _context17.abrupt("return");
+                case 59:
                   if (this.trial) this.audio.playTrial('shuffle');
-                  this.board = newBoard(this.types, (_this$trial2 = this.trial) == null ? void 0 : _this$trial2.random);
+                  if (!(this.trial || ((_this$dungeon7 = this.dungeon) == null || (_this$dungeon7 = _this$dungeon7.room) == null ? void 0 : _this$dungeon7.kind) === 'battle' && this.dungeon.room.delivery)) {
+                    _context17.next = 79;
+                    break;
+                  }
+                  if (!groups.length) {
+                    _context17.next = 64;
+                    break;
+                  }
+                  this.setBattleStatus('连锁尚未完成：暂停诊断，不替换棋盘');
+                  return _context17.abrupt("return");
+                case 64:
+                  order = identityPreservingRecovery(this.board, (_this$trial$random = (_this$trial2 = this.trial) == null ? void 0 : _this$trial2.random) != null ? _this$trial$random : Math.random);
+                  if (order) {
+                    _context17.next = 68;
+                    break;
+                  }
+                  this.setBattleStatus('无解恢复未找到保留身份的候选，已暂停');
+                  return _context17.abrupt("return");
+                case 68:
+                  old = this.tiles;
+                  this.board = order.map(function (i) {
+                    return _this34.board[i];
+                  });
+                  this.tiles = order.map(function (i) {
+                    return old[i];
+                  });
+                  _context17.next = 73;
+                  return Promise.all(this.tiles.map(function (tile, i) {
+                    return _this34.moveTile(motion, tile, i, .22);
+                  }));
+                case 73:
+                  _context17.next = 75;
+                  return this.releaseMiners(motion);
+                case 75:
+                  if (!motion.cancelled) {
+                    _context17.next = 77;
+                    break;
+                  }
+                  return _context17.abrupt("return");
+                case 77:
+                  _context17.next = 81;
+                  break;
+                case 79:
+                  this.board = newBoard(this.types, (_this$trial3 = this.trial) == null ? void 0 : _this$trial3.random);
                   this.buildTiles();
-                case 61:
+                case 81:
                   director = this.dungeon;
                   room = director == null ? void 0 : director.room;
-                  rescued = (room == null ? void 0 : room.kind) === 'battle' && !!((_room$rescueCells3 = room.rescueCells) != null && _room$rescueCells3.length) && !this.rescueCells.size;
+                  rescued = (room == null ? void 0 : room.kind) === 'battle' && (!!((_room$rescueCells3 = room.rescueCells) != null && _room$rescueCells3.length) && !this.rescueCells.size || !!room.delivery && this.rescuedMiners >= room.delivery.required);
                   if (!(this.enemies.every(function (hp) {
                     return hp <= 0;
                   }) || rescued)) {
-                    _context16.next = 79;
+                    _context17.next = 110;
                     break;
                   }
+                  _context17.t1 = (room == null ? void 0 : room.kind) === 'battle' && room.delivery;
+                  if (!_context17.t1) {
+                    _context17.next = 90;
+                    break;
+                  }
+                  _context17.next = 89;
+                  return this.retireRoomMiners(motion);
+                case 89:
+                  _context17.t1 = !_context17.sent;
+                case 90:
+                  if (!_context17.t1) {
+                    _context17.next = 92;
+                    break;
+                  }
+                  return _context17.abrupt("return");
+                case 92:
+                  if (!this.trial) {
+                    _context17.next = 96;
+                    break;
+                  }
+                  _context17.next = 95;
+                  return this.repeatTestEncounter(motion);
+                case 95:
+                  return _context17.abrupt("return");
+                case 96:
                   if (!this.mineRecovery) {
-                    _context16.next = 68;
+                    _context17.next = 99;
                     break;
                   }
                   if (this.mineRecovery.state.mineRecovery.source === 'formal' && director && room) {
@@ -8952,45 +10208,49 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     this.automatic = false;
                     this.commitLegacyMineVictory(director, room);
                   } else this.showRecoveryStop('测试快照的后继奖励未启用。');
-                  return _context16.abrupt("return");
-                case 68:
+                  return _context17.abrupt("return");
+                case 99:
                   if (this.dungeon) this.carriedBoard = {
                     director: this.dungeon,
                     types: this.types.join(','),
                     board: this.board.slice(),
                     charged: this.tiles.flatMap(function (tile, index) {
-                      var tier = _this30.chargedTiles.get(tile);
+                      var tier = _this34.chargedTiles.get(tile);
                       return tier ? [[index, tier]] : [];
+                    }),
+                    ids: this.tiles.map(function (tile) {
+                      var _this34$restoredTileI;
+                      return (_this34$restoredTileI = _this34.restoredTileIds.get(tile)) != null ? _this34$restoredTileI : crypto.randomUUID();
                     })
                   };
                   if (rescued) this.setBattleStatus('营救成功');
                   this.battlePhase = 'complete';
                   if (!(director && (room == null ? void 0 : room.kind) === 'battle')) {
-                    _context16.next = 78;
+                    _context17.next = 109;
                     break;
                   }
-                  reward = battleCoinReward(room, (_this$adventure3 = this.adventure) == null ? void 0 : _this$adventure3.id);
+                  reward = battleCoinReward(room, (_this$adventure4 = this.adventure) == null ? void 0 : _this$adventure4.id);
                   drop = (_this$lastFallen2 = this.lastFallen) != null ? _this$lastFallen2 : {
                     origin: new Vec3(rescued ? 72 : 132, stageGrid.groundY + 30),
                     ground: stageGrid.groundY
                   };
-                  _context16.next = 76;
+                  _context17.next = 107;
                   return this.animateCoins(motion, reward, this.coinText, drop.origin, drop.ground);
-                case 76:
-                  played = _context16.sent;
+                case 107:
+                  played = _context17.sent;
                   if (played) this.victory(director, room, reward);
-                case 78:
-                  return _context16.abrupt("return");
-                case 79:
-                  _context16.next = 81;
+                case 109:
+                  return _context17.abrupt("return");
+                case 110:
+                  _context17.next = 112;
                   return this.enemyTurn(motion);
-                case 81:
+                case 112:
                 case "end":
-                  return _context16.stop();
+                  return _context17.stop();
               }
-            }, _callee15, this);
+            }, _callee16, this);
           }));
-          function tap(_x9, _x10, _x11) {
+          function tap(_x12, _x13, _x14) {
             return _tap.apply(this, arguments);
           }
           return tap;
@@ -9042,16 +10302,16 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }
         };
         _proto.dropCharge = /*#__PURE__*/function () {
-          var _dropCharge = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee16(motion, tile) {
-            var children, _iterator21, _step21, _step21$value, child, home;
-            return _regeneratorRuntime().wrap(function _callee16$(_context17) {
-              while (1) switch (_context17.prev = _context17.next) {
+          var _dropCharge = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee17(motion, tile) {
+            var children, _iterator23, _step23, _step23$value, child, home;
+            return _regeneratorRuntime().wrap(function _callee17$(_context18) {
+              while (1) switch (_context18.prev = _context18.next) {
                 case 0:
                   if (!motion.reduced) {
-                    _context17.next = 2;
+                    _context18.next = 2;
                     break;
                   }
-                  return _context17.abrupt("return");
+                  return _context18.abrupt("return");
                 case 2:
                   children = tile.children.map(function (child) {
                     return {
@@ -9059,15 +10319,15 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                       home: child.position.clone()
                     };
                   });
-                  for (_iterator21 = _createForOfIteratorHelperLoose(children); !(_step21 = _iterator21()).done;) {
-                    _step21$value = _step21.value, child = _step21$value.child, home = _step21$value.home;
+                  for (_iterator23 = _createForOfIteratorHelperLoose(children); !(_step23 = _iterator23()).done;) {
+                    _step23$value = _step23.value, child = _step23$value.child, home = _step23$value.home;
                     child.setPosition(home.x, home.y + 13, home.z);
                     child.setScale(.86, 1.10, 1);
                   }
-                  _context17.next = 6;
-                  return Promise.all(children.map(function (_ref25) {
-                    var child = _ref25.child,
-                      home = _ref25.home;
+                  _context18.next = 6;
+                  return Promise.all(children.map(function (_ref26) {
+                    var child = _ref26.child,
+                      home = _ref26.home;
                     return motion.play(tween(child).to(.14, {
                       position: home,
                       scale: new Vec3(1.15, .78, 1)
@@ -9081,21 +10341,21 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   }));
                 case 6:
                 case "end":
-                  return _context17.stop();
+                  return _context18.stop();
               }
-            }, _callee16);
+            }, _callee17);
           }));
-          function dropCharge(_x12, _x13) {
+          function dropCharge(_x15, _x16) {
             return _dropCharge.apply(this, arguments);
           }
           return dropCharge;
         }();
         _proto.flashTiles = /*#__PURE__*/function () {
-          var _flashTiles = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee17(motion, indices, removed, propagated, columns) {
-            var _this31 = this;
-            var cleared, moves, palette, points, lanes, effects, _loop5, _iterator22, _step22;
-            return _regeneratorRuntime().wrap(function _callee17$(_context19) {
-              while (1) switch (_context19.prev = _context19.next) {
+          var _flashTiles = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee18(motion, indices, removed, propagated, columns) {
+            var _this35 = this;
+            var cleared, moves, palette, points, lanes, effects, _loop6, _iterator24, _step24;
+            return _regeneratorRuntime().wrap(function _callee18$(_context20) {
+              while (1) switch (_context20.prev = _context20.next) {
                 case 0:
                   if (columns === void 0) {
                     columns = [];
@@ -9105,7 +10365,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   });
                   moves = indices.map(function (index) {
                     var _tile$getComponent;
-                    var tile = _this31.tiles[index];
+                    var tile = _this35.tiles[index];
                     var opacity = (_tile$getComponent = tile.getComponent(UIOpacity)) != null ? _tile$getComponent : tile.addComponent(UIOpacity);
                     return motion.play(tween(opacity).set({
                       opacity: 160
@@ -9114,7 +10374,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     }));
                   });
                   if (!this.boardFx) {
-                    _context19.next = 10;
+                    _context20.next = 10;
                     break;
                   }
                   palette = {
@@ -9127,36 +10387,36 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     staff: '#ffe3a3'
                   };
                   points = cleared.map(function (index) {
-                    var _palette$_this31$boar;
+                    var _palette$_this35$boar;
                     return {
-                      position: _this31.cells[index].position,
-                      color: Color.fromHEX(new Color(), (_palette$_this31$boar = palette[_this31.board[index]]) != null ? _palette$_this31$boar : '#fff0c2')
+                      position: _this35.cells[index].position,
+                      color: Color.fromHEX(new Color(), (_palette$_this35$boar = palette[_this35.board[index]]) != null ? _palette$_this35$boar : '#fff0c2')
                     };
                   });
                   lanes = columns.map(function (col) {
                     return {
-                      from: _this31.cells[col].position,
-                      to: _this31.cells[_this31.cells.length - cols + col].position
+                      from: _this35.cells[col].position,
+                      to: _this35.cells[_this35.cells.length - cols + col].position
                     };
                   });
-                  _context19.next = 9;
+                  _context20.next = 9;
                   return Promise.all([].concat(moves, [this.boardFx.clear(motion, points, propagated ? 'charge' : 'match', lanes)]));
                 case 9:
-                  return _context19.abrupt("return");
+                  return _context20.abrupt("return");
                 case 10:
                   effects = cleared.slice(0, 8).flatMap(function (index) {
-                    var p = _this31.cells[index].position;
-                    return _this31.burst(motion, p.x, p.y, propagated ? '#c196ff' : '#fcd687', 3);
+                    var p = _this35.cells[index].position;
+                    return _this35.burst(motion, p.x, p.y, propagated ? '#c196ff' : '#fcd687', 3);
                   });
-                  _loop5 = /*#__PURE__*/_regeneratorRuntime().mark(function _loop5() {
+                  _loop6 = /*#__PURE__*/_regeneratorRuntime().mark(function _loop6() {
                     var col, first, last, beam, opacity;
-                    return _regeneratorRuntime().wrap(function _loop5$(_context18) {
-                      while (1) switch (_context18.prev = _context18.next) {
+                    return _regeneratorRuntime().wrap(function _loop6$(_context19) {
+                      while (1) switch (_context19.prev = _context19.next) {
                         case 0:
-                          col = _step22.value;
-                          first = _this31.cells[col].position;
-                          last = _this31.cells[_this31.cells.length - cols + col].position;
-                          beam = _this31.box('整列传导', first.x, (first.y + last.y) / 2, 17, first.y - last.y + 45, '#ffcf68');
+                          col = _step24.value;
+                          first = _this35.cells[col].position;
+                          last = _this35.cells[_this35.cells.length - cols + col].position;
+                          beam = _this35.box('整列传导', first.x, (first.y + last.y) / 2, 17, first.y - last.y + 45, '#ffcf68');
                           opacity = beam.addComponent(UIOpacity);
                           opacity.opacity = 210;
                           effects.push(motion.play(tween(opacity).to(motion.duration(.23), {
@@ -9167,39 +10427,39 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                           }));
                         case 7:
                         case "end":
-                          return _context18.stop();
+                          return _context19.stop();
                       }
-                    }, _loop5);
+                    }, _loop6);
                   });
-                  _iterator22 = _createForOfIteratorHelperLoose(columns);
+                  _iterator24 = _createForOfIteratorHelperLoose(columns);
                 case 13:
-                  if ((_step22 = _iterator22()).done) {
-                    _context19.next = 17;
+                  if ((_step24 = _iterator24()).done) {
+                    _context20.next = 17;
                     break;
                   }
-                  return _context19.delegateYield(_loop5(), "t0", 15);
+                  return _context20.delegateYield(_loop6(), "t0", 15);
                 case 15:
-                  _context19.next = 13;
+                  _context20.next = 13;
                   break;
                 case 17:
-                  _context19.next = 19;
+                  _context20.next = 19;
                   return Promise.all([].concat(moves, effects));
                 case 19:
                 case "end":
-                  return _context19.stop();
+                  return _context20.stop();
               }
-            }, _callee17, this);
+            }, _callee18, this);
           }));
-          function flashTiles(_x14, _x15, _x16, _x17, _x18) {
+          function flashTiles(_x17, _x18, _x19, _x20, _x21) {
             return _flashTiles.apply(this, arguments);
           }
           return flashTiles;
         }();
         _proto.castSkillEffect = /*#__PURE__*/function () {
-          var _castSkillEffect = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee18(motion, at, advanced) {
+          var _castSkillEffect = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee19(motion, at, advanced) {
             var ring, shape, flash, ink, light;
-            return _regeneratorRuntime().wrap(function _callee18$(_context20) {
-              while (1) switch (_context20.prev = _context20.next) {
+            return _regeneratorRuntime().wrap(function _callee19$(_context21) {
+              while (1) switch (_context21.prev = _context21.next) {
                 case 0:
                   ring = this.box('技能蓄力光环', at.x, at.y, 138, 138);
                   shape = ring.addComponent(Graphics);
@@ -9207,7 +10467,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   shape.lineWidth = 5;
                   shape.circle(0, 0, 56);
                   shape.stroke();
-                  _context20.next = 8;
+                  _context21.next = 8;
                   return motion.play(tween(ring).to(advanced ? .34 : .19, {
                     scale: new Vec3(.43, .43, 1)
                   }, {
@@ -9216,10 +10476,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                 case 8:
                   ring.destroy();
                   if (!(!advanced || motion.cancelled)) {
-                    _context20.next = 11;
+                    _context21.next = 11;
                     break;
                   }
-                  return _context20.abrupt("return");
+                  return _context21.abrupt("return");
                 case 11:
                   flash = this.box('大招反差环', at.x, at.y, 134, 134);
                   ink = flash.addComponent(Graphics);
@@ -9233,7 +10493,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   ink.stroke();
                   light = flash.addComponent(UIOpacity);
                   light.opacity = 255;
-                  _context20.next = 25;
+                  _context21.next = 25;
                   return motion.play(tween(light).to(.10, {
                     opacity: 15
                   }).delay(.10).to(.06, {
@@ -9243,18 +10503,17 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   flash.destroy();
                 case 26:
                 case "end":
-                  return _context20.stop();
+                  return _context21.stop();
               }
-            }, _callee18, this);
+            }, _callee19, this);
           }));
-          function castSkillEffect(_x19, _x20, _x21) {
+          function castSkillEffect(_x22, _x23, _x24) {
             return _castSkillEffect.apply(this, arguments);
           }
           return castSkillEffect;
         }();
         _proto.focusCombat = function focusCombat(motion, actors) {
-          var _this32 = this,
-            _layer$getChildByName;
+          var _this36 = this;
           if (motion.reduced) return function () {};
           var layer = this.stageContent;
           var order = layer.children.slice();
@@ -9267,34 +10526,107 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           ink.rect(-width / 2, -height / 2, width, height);
           ink.fill();
           var activeHeroes = actors.filter(function (actor) {
-            return Array.from(_this32.heroes.values()).includes(actor);
+            return Array.from(_this36.heroes.values()).includes(actor);
           });
           var activeEnemies = actors.filter(function (actor) {
-            return _this32.enemyNodes.includes(actor);
+            return _this36.enemyNodes.includes(actor);
           });
           var faded = [];
+          var fades = [];
+          var fade = function fade(alpha, value) {
+            var animation = tween(alpha).to(.07, {
+              opacity: value
+            });
+            fades.push(animation);
+            void motion.play(animation);
+          };
           var peers = activeHeroes.length || activeEnemies.length ? Array.from(this.heroes.values()).concat(this.enemyNodes) : [];
-          for (var _iterator23 = _createForOfIteratorHelperLoose(peers), _step23; !(_step23 = _iterator23()).done;) {
+          for (var _iterator25 = _createForOfIteratorHelperLoose(peers), _step25; !(_step25 = _iterator25()).done;) {
             var _peer$getComponent;
-            var peer = _step23.value;
+            var peer = _step25.value;
             if (!(peer != null && peer.isValid) || actors.includes(peer)) continue;
             var alpha = (_peer$getComponent = peer.getComponent(UIOpacity)) != null ? _peer$getComponent : peer.addComponent(UIOpacity);
             faded.push({
               alpha: alpha,
               value: alpha.opacity
             });
-            void motion.play(tween(alpha).to(.07, {
-              opacity: alpha.opacity * .5
-            }));
+            fade(alpha, alpha.opacity * .5);
           }
-          for (var _iterator24 = _createForOfIteratorHelperLoose(actors), _step24; !(_step24 = _iterator24()).done;) {
-            var actor = _step24.value;
-            actor.setSiblingIndex(layer.children.length - 1);
+          var bright = new Set();
+          if (activeHeroes.length) {
+            bright.add(this.healthBar.root);
+            if (this.showsGuard) bright.add(this.guardBar.root);
           }
-          (_layer$getChildByName = layer.getChildByName('400 森林前景')) == null || _layer$getChildByName.setSiblingIndex(layer.children.length - 1);
+          for (var _iterator26 = _createForOfIteratorHelperLoose(activeEnemies), _step26; !(_step26 = _iterator26()).done;) {
+            var actor = _step26.value;
+            var _index10 = this.enemyNodes.indexOf(actor);
+            if (this.enemyMeters[_index10]) bright.add(this.enemyMeters[_index10].root);
+          }
+          // Status emphasis is symmetric: only the acting/receiving faction stays clear.
+          var mutedHUD = [];
+          var hudColors = [];
+          var meters = [this.healthBar, this.guardBar].concat(this.enemyMeters);
+          for (var _iterator27 = _createForOfIteratorHelperLoose(meters), _step27; !(_step27 = _iterator27()).done;) {
+            var meter = _step27.value;
+            if (!(meter != null && meter.root.activeInHierarchy) || bright.has(meter.root)) continue;
+            var cover = this.box('非参与状态遮蔽', 0, 0, meter.width + 6, 25, undefined, meter.root);
+            var _ink = cover.addComponent(Graphics);
+            _ink.fillColor = new Color(8, 11, 19, 205);
+            _ink.roundRect(-(meter.width + 6) / 2, -12.5, meter.width + 6, 25, 12.5);
+            _ink.fill();
+            mutedHUD.push(cover);
+            for (var _i9 = 0, _arr3 = [].concat(meter.root.getComponentsInChildren(Label), meter.root.getComponentsInChildren(Sprite)); _i9 < _arr3.length; _i9++) {
+              var component = _arr3[_i9];
+              var color = component.color.clone(),
+                outline = component instanceof Label ? component.outlineColor.clone() : undefined;
+              hudColors.push({
+                component: component,
+                color: color,
+                outline: outline
+              });
+              component.color = new Color(color.r * .22, color.g * .22, color.b * .22, color.a);
+              if (component instanceof Label) component.outlineColor = new Color(8, 11, 19, color.a);
+            }
+          }
+          for (var _iterator28 = _createForOfIteratorHelperLoose(this.ui.children), _step28; !(_step28 = _iterator28()).done;) {
+            var _this$stageContent, _node$getComponent2;
+            var node = _step28.value;
+            if (node === ((_this$stageContent = this.stageContent) == null ? void 0 : _this$stageContent.parent) || node === this.popupLayer || bright.has(node) || node.position.y < 175) continue;
+            if (Array.from(this.heroes.values()).includes(node)) continue;
+            var _alpha = (_node$getComponent2 = node.getComponent(UIOpacity)) != null ? _node$getComponent2 : node.addComponent(UIOpacity);
+            faded.push({
+              alpha: _alpha,
+              value: _alpha.opacity
+            });
+            fade(_alpha, _alpha.opacity * .4);
+          }
+          for (var _iterator29 = _createForOfIteratorHelperLoose(actors), _step29; !(_step29 = _iterator29()).done;) {
+            var _actor = _step29.value;
+            _actor.setSiblingIndex(layer.children.length - 1);
+          }
           return function () {
-            for (var _i5 = 0, _faded = faded; _i5 < _faded.length; _i5++) {
-              var _faded$_i = _faded[_i5],
+            for (var _i6 = 0, _hudColors = hudColors; _i6 < _hudColors.length; _i6++) {
+              var _hudColors$_i = _hudColors[_i6],
+                component = _hudColors$_i.component,
+                color = _hudColors$_i.color,
+                outline = _hudColors$_i.outline;
+              if (component.isValid) {
+                component.color = color;
+                if (outline && component instanceof Label) component.outlineColor = outline;
+              }
+            }
+            for (var _i7 = 0, _mutedHUD = mutedHUD; _i7 < _mutedHUD.length; _i7++) {
+              var cover = _mutedHUD[_i7];
+              if (cover.isValid) {
+                cover.removeFromParent();
+                cover.destroy();
+              }
+            }
+            fades.forEach(function (animation) {
+              return motion.stop(animation);
+            });
+            for (var _i8 = 0, _faded = faded; _i8 < _faded.length; _i8++) {
+              var _faded$_i = _faded[_i8],
                 alpha = _faded$_i.alpha,
                 value = _faded$_i.value;
               if (alpha.isValid) alpha.opacity = value;
@@ -9309,11 +10641,11 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           };
         };
         _proto.applySkill = /*#__PURE__*/function () {
-          var _applySkill = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee19(motion, type, length, chain, charged, advanced) {
-            var _this33 = this;
-            var owner, tutorial, attack, skill, actor, _actor$position$x, _actor$position$y, restore, _actor$position, cap, beforeDP, before, gained, unit, position, color, followup, tags, primary, splash, targets, hit, _iterator25, _step25, target, _enemy, home, restoreFocus, _ref26, _enemy$getChildByName3, _enemy$getChildByName4, origin, _enemy$getChildByName, _enemy$getChildByName2, _actor$getChildByName3, _actor$getChildByName4, _origin, enemyGround, footOffset, arrived, immune, raw, stun, layers, afterArmor, damage, fallen, number, armor, effects, flinch, _enemy$getComponent;
-            return _regeneratorRuntime().wrap(function _callee19$(_context21) {
-              while (1) switch (_context21.prev = _context21.next) {
+          var _applySkill = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee20(motion, type, length, chain, charged, advanced) {
+            var _this37 = this;
+            var owner, tutorial, attack, skill, actor, _actor$position$x, _actor$position$y, restore, _actor$position, cap, beforeDP, before, gained, unit, position, color, followup, tags, primary, splash, targets, hit, _iterator30, _step30, target, _enemy, home, restoreFocus, _ref27, _enemy$getChildByName3, _enemy$getChildByName4, origin, _enemy$getChildByName, _enemy$getChildByName2, _actor$getChildByName3, _actor$getChildByName4, _origin, enemyGround, footOffset, arrived, immune, raw, stun, layers, afterArmor, damage, fallen, number, armor, effects, flinch, _enemy$getComponent;
+            return _regeneratorRuntime().wrap(function _callee20$(_context22) {
+              while (1) switch (_context22.prev = _context22.next) {
                 case 0:
                   if (advanced === void 0) {
                     advanced = false;
@@ -9321,51 +10653,68 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   if (!this.enemies.every(function (hp) {
                     return hp <= 0;
                   })) {
-                    _context21.next = 3;
+                    _context22.next = 3;
                     break;
                   }
-                  return _context21.abrupt("return");
+                  return _context22.abrupt("return");
                 case 3:
                   owner = skillOwner(type);
                   tutorial = this.isTutorialBattle();
                   attack = tutorial ? owner === 'h' ? 12 : 26 : this.heroAttack(owner);
                   skill = planOathSkill(type, length, chain, advanced ? 'advanced' : charged ? 'skill' : undefined, attack, this.dp >= this.maxDP, this.oath, function (id) {
-                    return _this33.inventory.hasEquipped(id);
+                    return _this37.inventory.hasEquipped(id);
                   }, function (id) {
-                    return _this33.buff(id);
+                    return _this37.buff(id);
                   });
                   actor = this.heroes.get(owner);
-                  if (!(charged && actor && !motion.reduced)) {
-                    _context21.next = 13;
+                  _context22.t0 = actor;
+                  if (!_context22.t0) {
+                    _context22.next = 13;
                     break;
                   }
-                  _context21.next = 11;
-                  return this.castSkillEffect(motion, actor.position, advanced);
-                case 11:
-                  if (!motion.cancelled) {
-                    _context21.next = 13;
-                    break;
-                  }
-                  return _context21.abrupt("return");
+                  _context22.next = 12;
+                  return this.skillWindup(motion, actor, skill.name, advanced);
+                case 12:
+                  _context22.t0 = !_context22.sent;
                 case 13:
+                  if (!_context22.t0) {
+                    _context22.next = 15;
+                    break;
+                  }
+                  return _context22.abrupt("return");
+                case 15:
+                  if (!(charged && actor && !motion.reduced)) {
+                    _context22.next = 20;
+                    break;
+                  }
+                  _context22.next = 18;
+                  return this.castSkillEffect(motion, actor.position, advanced);
+                case 18:
+                  if (!motion.cancelled) {
+                    _context22.next = 20;
+                    break;
+                  }
+                  return _context22.abrupt("return");
+                case 20:
                   if (!(skill.kind === 'rally')) {
-                    _context21.next = 20;
+                    _context22.next = 28;
                     break;
                   }
                   applyBattleCry(this.oath, skill.multiplier, skill.boost);
+                  this.syncBuffViews();
                   this.setBattleStatus('战吼：下一次攻击增伤');
                   this.audio.play('charge');
-                  _context21.next = 19;
+                  _context22.next = 27;
                   return Promise.all(this.burst(motion, (_actor$position$x = actor == null ? void 0 : actor.position.x) != null ? _actor$position$x : -70, (_actor$position$y = actor == null ? void 0 : actor.position.y) != null ? _actor$position$y : 270, '#ffbc60', 6));
-                case 19:
-                  return _context21.abrupt("return");
-                case 20:
+                case 27:
+                  return _context22.abrupt("return");
+                case 28:
                   if (!(skill.kind === 'heal' || skill.kind === 'guard')) {
-                    _context21.next = 40;
+                    _context22.next = 48;
                     break;
                   }
                   restore = actor ? this.focusCombat(motion, [actor]) : function () {};
-                  _context21.prev = 22;
+                  _context22.prev = 30;
                   cap = skill.kind === 'heal' ? this.maxHP : this.maxDP;
                   beforeDP = this.dp;
                   before = skill.kind === 'heal' ? this.hp : this.dp;
@@ -9386,20 +10735,20 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   position = (_actor$position = actor == null ? void 0 : actor.position) != null ? _actor$position : new Vec3(-70, 270, 0);
                   if (skill.kind === 'heal' && this.dp > beforeDP) void this.combatPopup(motion, '+' + (this.dp - beforeDP) + ' DP', position.x + 24, position.y + 16, '#90aec4', 27);
                   color = skill.kind === 'heal' ? '#81f4a4' : '#8bcbff';
-                  _context21.next = 37;
+                  _context22.next = 45;
                   return Promise.all([this.combatPopup(motion, '+' + gained + ' ' + unit, position.x, position.y, skill.kind === 'heal' ? advanced ? '#27934b' : '#adf4b0' : advanced ? '#385a78' : '#90aec4', advanced ? 38 : 27), this.supportHalo(motion, position, color)].concat(this.burst(motion, position.x, position.y, color, 6)));
-                case 37:
-                  _context21.prev = 37;
+                case 45:
+                  _context22.prev = 45;
                   restore();
-                  return _context21.finish(37);
-                case 40:
+                  return _context22.finish(45);
+                case 48:
                   followup = skill.kind === 'guard' ? skill.followup : undefined;
                   if (!(skill.kind !== 'attack' && followup === undefined)) {
-                    _context21.next = 43;
+                    _context22.next = 51;
                     break;
                   }
-                  return _context21.abrupt("return");
-                case 43:
+                  return _context22.abrupt("return");
+                case 51:
                   tags = this.foes.map(function (foe) {
                     var _foe$tags;
                     return (_foe$tags = foe.tags) != null ? _foe$tags : [];
@@ -9411,85 +10760,85 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     return hp > 0 && !primary.includes(i) ? [i] : [];
                   }));
                   hit = 0;
-                case 49:
+                case 57:
                   if (!(hit < (skill.kind === 'attack' ? skill.hits : 1))) {
-                    _context21.next = 111;
+                    _context22.next = 119;
                     break;
                   }
-                  _iterator25 = _createForOfIteratorHelperLoose(targets);
-                case 51:
-                  if ((_step25 = _iterator25()).done) {
-                    _context21.next = 108;
+                  _iterator30 = _createForOfIteratorHelperLoose(targets);
+                case 59:
+                  if ((_step30 = _iterator30()).done) {
+                    _context22.next = 116;
                     break;
                   }
-                  target = _step25.value;
+                  target = _step30.value;
                   if (!(this.enemies[target] <= 0)) {
-                    _context21.next = 55;
+                    _context22.next = 63;
                     break;
                   }
-                  return _context21.abrupt("continue", 106);
-                case 55:
+                  return _context22.abrupt("continue", 114);
+                case 63:
                   _enemy = this.enemyNodes[target];
                   home = _enemy.position.clone();
                   restoreFocus = this.focusCombat(motion, actor ? [_enemy, actor] : [_enemy]);
-                  _context21.prev = 58;
+                  _context22.prev = 66;
                   if (!(type === 'stone' || type === 'm')) {
-                    _context21.next = 67;
+                    _context22.next = 75;
                     break;
                   }
                   origin = actor ? this.emissionPoint(actor) : new Vec3(-70, 270, 0);
-                  _context21.next = 63;
+                  _context22.next = 71;
                   return this.flyProjectile(motion, type, origin, home);
-                case 63:
-                  if (_context21.sent) {
-                    _context21.next = 65;
+                case 71:
+                  if (_context22.sent) {
+                    _context22.next = 73;
                     break;
                   }
-                  return _context21.abrupt("return");
-                case 65:
-                  _context21.next = 77;
+                  return _context22.abrupt("return");
+                case 73:
+                  _context22.next = 85;
                   break;
-                case 67:
+                case 75:
                   if (!actor) {
-                    _context21.next = 77;
+                    _context22.next = 85;
                     break;
                   }
                   _origin = actor.position.clone();
                   enemyGround = home.y + ((_enemy$getChildByName = (_enemy$getChildByName2 = _enemy.getChildByName('脚底投影')) == null ? void 0 : _enemy$getChildByName2.position.y) != null ? _enemy$getChildByName : -34);
                   footOffset = (_actor$getChildByName3 = (_actor$getChildByName4 = actor.getChildByName('脚底投影')) == null ? void 0 : _actor$getChildByName4.position.y) != null ? _actor$getChildByName3 : -34;
-                  _context21.next = 73;
+                  _context22.next = 81;
                   return motion.play(tween(actor).to(motion.duration(.105), {
                     position: new Vec3(home.x - 36, enemyGround - footOffset, 0)
                   }, {
                     easing: 'sineInOut'
                   }));
-                case 73:
-                  arrived = _context21.sent;
+                case 81:
+                  arrived = _context22.sent;
                   if (arrived) {
-                    _context21.next = 76;
+                    _context22.next = 84;
                     break;
                   }
-                  return _context21.abrupt("return");
-                case 76:
+                  return _context22.abrupt("return");
+                case 84:
                   void motion.play(tween(actor).to(motion.duration(.18), {
                     position: _origin
                   }, {
                     easing: 'quadOut'
                   }));
-                case 77:
+                case 85:
                   if (!motion.cancelled) {
-                    _context21.next = 79;
+                    _context22.next = 87;
                     break;
                   }
-                  return _context21.abrupt("return");
-                case 79:
+                  return _context22.abrupt("return");
+                case 87:
                   immune = tags[target].some(function (tag) {
                     return tag === 'boss' || tag === 'stun-immune';
                   });
                   raw = skill.kind === 'attack' ? primary.includes(target) ? skill.damage : splash : followup;
                   stun = skill.kind === 'attack' && skill.stun;
                   layers = this.foes[target].armor;
-                  afterArmor = oathDamage(this.oath, String(target), raw, (_ref26 = type === 'm' ? layers == null ? void 0 : layers.magic : layers == null ? void 0 : layers.physical) != null ? _ref26 : 0, type === 'm');
+                  afterArmor = oathDamage(this.oath, String(target), raw, (_ref27 = type === 'm' ? layers == null ? void 0 : layers.magic : layers == null ? void 0 : layers.physical) != null ? _ref27 : 0, type === 'm');
                   damage = Math.min(this.enemies[target], Math.round(afterArmor * (stun && immune ? 1.25 : 1)));
                   this.enemies[target] -= damage;
                   if (this.enemies[target] > 0 && skill.kind === 'attack') {
@@ -9518,107 +10867,191 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     (_enemy$getComponent = _enemy.getComponent(UIOpacity)) != null ? _enemy$getComponent : _enemy.addComponent(UIOpacity);
                     effects.push(this.fadeActor(motion, _enemy));
                   }
-                  _context21.next = 100;
+                  _context22.next = 108;
                   return Promise.all([number, motion.play(flinch)].concat(effects));
-                case 100:
+                case 108:
                   if (!motion.cancelled) {
-                    _context21.next = 102;
+                    _context22.next = 110;
                     break;
                   }
-                  return _context21.abrupt("return");
-                case 102:
+                  return _context22.abrupt("return");
+                case 110:
                   if (fallen) {
                     _enemy.active = false;
                     this.enemyMeters[target].root.active = false;
                   }
-                case 103:
-                  _context21.prev = 103;
-                  restoreFocus();
-                  return _context21.finish(103);
-                case 106:
-                  _context21.next = 51;
-                  break;
-                case 108:
-                  hit++;
-                  _context21.next = 49;
-                  break;
                 case 111:
+                  _context22.prev = 111;
+                  restoreFocus();
+                  return _context22.finish(111);
+                case 114:
+                  _context22.next = 59;
+                  break;
+                case 116:
+                  hit++;
+                  _context22.next = 57;
+                  break;
+                case 119:
                 case "end":
-                  return _context21.stop();
+                  return _context22.stop();
               }
-            }, _callee19, this, [[22,, 37, 40], [58,, 103, 106]]);
+            }, _callee20, this, [[30,, 45, 48], [66,, 111, 114]]);
           }));
-          function applySkill(_x22, _x23, _x24, _x25, _x26, _x27) {
+          function applySkill(_x25, _x26, _x27, _x28, _x29, _x30) {
             return _applySkill.apply(this, arguments);
           }
           return applySkill;
         }();
-        _proto.lowHealthFlash = /*#__PURE__*/function () {
-          var _lowHealthFlash = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee20(motion) {
-            var flash, opacity, board, home;
-            return _regeneratorRuntime().wrap(function _callee20$(_context22) {
-              while (1) switch (_context22.prev = _context22.next) {
+        _proto.presentRecovery = /*#__PURE__*/function () {
+          var _presentRecovery = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee21(kind, commit) {
+            var root, motion, before, cap, meter, alpha, _this$coinText, _actor$position$x2, _actor$position$y2, after, actor;
+            return _regeneratorRuntime().wrap(function _callee21$(_context23) {
+              while (1) switch (_context23.prev = _context23.next) {
                 case 0:
-                  if (!(motion.reduced || motion.cancelled)) {
-                    _context22.next = 2;
+                  if (!this.recoveryPlaying) {
+                    _context23.next = 2;
                     break;
                   }
-                  return _context22.abrupt("return", true);
+                  return _context23.abrupt("return");
                 case 2:
-                  flash = this.box('重伤闪红', 0, -111.5, 428, 495, '#65091e');
-                  opacity = flash.addComponent(UIOpacity);
-                  opacity.opacity = 0;
+                  this.recoveryPlaying = true;
+                  root = this.ui, motion = this.newPageMotion();
+                  before = kind === 'hp' ? this.hp : this.dp, cap = kind === 'hp' ? this.maxHP : this.maxDP;
+                  meter = this.makeMeter(-stageGrid.meterX, kind === 'hp' ? stageGrid.hpY : stageGrid.secondaryY, 139, kind === 'hp' ? '#7ecb82' : '#63b5df');
+                  this.setMeter(meter, before, cap, String(before));
+                  alpha = meter.root.addComponent(UIOpacity);
+                  alpha.opacity = 0;
+                  _context23.prev = 9;
+                  _context23.next = 12;
+                  return motion.play(tween(alpha).to(.35, {
+                    opacity: 255
+                  }));
+                case 12:
+                  _context23.t0 = !_context23.sent;
+                  if (_context23.t0) {
+                    _context23.next = 15;
+                    break;
+                  }
+                  _context23.t0 = this.ui !== root;
+                case 15:
+                  if (!_context23.t0) {
+                    _context23.next = 17;
+                    break;
+                  }
+                  return _context23.abrupt("return");
+                case 17:
+                  if (commit()) {
+                    _context23.next = 19;
+                    break;
+                  }
+                  return _context23.abrupt("return");
+                case 19:
+                  if ((_this$coinText = this.coinText) != null && _this$coinText.isValid) this.coinText.string = String(this.walletGold);
+                  after = kind === 'hp' ? this.hp : this.dp;
+                  this.setMeter(meter, after, kind === 'hp' ? this.maxHP : this.maxDP, String(after));
+                  this.audio.play('charge');
+                  actor = Array.from(this.heroes.values())[0];
+                  _context23.next = 26;
+                  return this.combatPopup(motion, '+' + (after - before) + ' ' + kind.toUpperCase(), (_actor$position$x2 = actor == null ? void 0 : actor.position.x) != null ? _actor$position$x2 : -90, (_actor$position$y2 = actor == null ? void 0 : actor.position.y) != null ? _actor$position$y2 : 245, kind === 'hp' ? '#adf4b0' : '#90aec4');
+                case 26:
+                  if (motion.cancelled) {
+                    _context23.next = 29;
+                    break;
+                  }
+                  _context23.next = 29;
+                  return motion.play(tween(alpha).delay(.65).to(.4, {
+                    opacity: 0
+                  }));
+                case 29:
+                  _context23.prev = 29;
+                  if (meter.root.isValid) meter.root.destroy();
+                  this.pageMotions["delete"](motion);
+                  this.recoveryPlaying = false;
+                  return _context23.finish(29);
+                case 34:
+                case "end":
+                  return _context23.stop();
+              }
+            }, _callee21, this, [[9,, 29, 34]]);
+          }));
+          function presentRecovery(_x31, _x32) {
+            return _presentRecovery.apply(this, arguments);
+          }
+          return presentRecovery;
+        }();
+        _proto.ensurePopupLayer = function ensurePopupLayer() {
+          var _this$popupLayer;
+          if (!((_this$popupLayer = this.popupLayer) != null && _this$popupLayer.isValid) || this.popupLayer.parent !== this.ui) this.popupLayer = this.box('500 跳字层', 0, 0, 480, 854);
+          this.popupLayer.setSiblingIndex(this.ui.children.length - 1);
+          return this.popupLayer;
+        };
+        _proto.skillCallout = function skillCallout(motion, name, position, advanced) {
+          var layer = this.ensurePopupLayer();
+          var label = this.outline(this.label(name, Math.max(-130, Math.min(130, position.x)), Math.min(335, position.y + 60), 270, advanced ? 25 : 22, layer));
+          label.isBold = true;
+          label.color = Color.fromHEX(new Color(), advanced ? '#ffe296' : '#fff3d2');
+          label.node.name = '技能喊招 ' + name;
+          var opacity = label.node.addComponent(UIOpacity);
+          opacity.opacity = 0;
+          return motion.play(tween(opacity).to(motion.duration(.10), {
+            opacity: 255
+          }).delay(motion.duration(.95)).to(motion.duration(.22), {
+            opacity: 0
+          }))["finally"](function () {
+            if (label.node.isValid) label.node.destroy();
+          });
+        };
+        _proto.lowHealthFlash = /*#__PURE__*/function () {
+          var _lowHealthFlash = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee22(motion) {
+            var board, home;
+            return _regeneratorRuntime().wrap(function _callee22$(_context24) {
+              while (1) switch (_context24.prev = _context24.next) {
+                case 0:
+                  this.audio.play('hurt');
+                  if (!(motion.reduced || motion.cancelled)) {
+                    _context24.next = 3;
+                    break;
+                  }
+                  return _context24.abrupt("return", true);
+                case 3:
                   board = this.tileLayer;
                   if (board != null && board.isValid) {
-                    home = board.position.clone();
-                    void motion.play(tween(board).by(.04, {
-                      position: new Vec3(-3, 0, 0)
-                    }).by(.06, {
-                      position: new Vec3(6, 0, 0)
-                    }).to(.08, {
-                      position: home
-                    }));
+                    _context24.next = 6;
+                    break;
                   }
-                  _context22.prev = 7;
-                  _context22.next = 10;
-                  return motion.play(tween(opacity).to(.045, {
-                    opacity: 190
-                  }, {
-                    easing: 'quadOut'
-                  }).to(.23, {
-                    opacity: 0
-                  }, {
-                    easing: 'quadIn'
-                  }));
-                case 10:
-                  return _context22.abrupt("return", _context22.sent);
-                case 11:
-                  _context22.prev = 11;
-                  flash.destroy();
-                  return _context22.finish(11);
-                case 14:
+                  return _context24.abrupt("return", false);
+                case 6:
+                  home = board.position.clone();
+                  return _context24.abrupt("return", motion.play(tween(board).by(.04, {
+                    position: new Vec3(-3, 0, 0)
+                  }).by(.06, {
+                    position: new Vec3(6, 0, 0)
+                  }).to(.08, {
+                    position: home
+                  })));
+                case 8:
                 case "end":
-                  return _context22.stop();
+                  return _context24.stop();
               }
-            }, _callee20, this, [[7,, 11, 14]]);
+            }, _callee22, this);
           }));
-          function lowHealthFlash(_x28) {
+          function lowHealthFlash(_x33) {
             return _lowHealthFlash.apply(this, arguments);
           }
           return lowHealthFlash;
         }();
         _proto.hitReaction = /*#__PURE__*/function () {
-          var _hitReaction = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee21(motion, actor) {
-            var _this34 = this;
+          var _hitReaction = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee23(motion, actor) {
+            var _this38 = this;
             var portrait, impact, alpha, sprite, material, state, update;
-            return _regeneratorRuntime().wrap(function _callee21$(_context23) {
-              while (1) switch (_context23.prev = _context23.next) {
+            return _regeneratorRuntime().wrap(function _callee23$(_context25) {
+              while (1) switch (_context25.prev = _context25.next) {
                 case 0:
                   if (!(motion.reduced || motion.cancelled)) {
-                    _context23.next = 2;
+                    _context25.next = 2;
                     break;
                   }
-                  return _context23.abrupt("return", true);
+                  return _context25.abrupt("return", true);
                 case 2:
                   portrait = actor.children.find(function (node) {
                     return node.getComponent(Sprite);
@@ -9631,13 +11064,13 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     flash: 1
                   };
                   update = function update() {
-                    if (sprite) _this34.setActorState(sprite, {
+                    if (sprite) _this38.setActorState(sprite, {
                       flash: state.flash
                     });
                   };
                   update();
-                  _context23.prev = 10;
-                  _context23.next = 13;
+                  _context25.prev = 10;
+                  _context25.next = 13;
                   return Promise.all([motion.play(tween(actor).to(.055, {
                     scale: new Vec3(1.12, .90, 1)
                   }).to(.12, {
@@ -9652,21 +11085,21 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     return results.every(Boolean);
                   });
                 case 13:
-                  return _context23.abrupt("return", _context23.sent);
+                  return _context25.abrupt("return", _context25.sent);
                 case 14:
-                  _context23.prev = 14;
+                  _context25.prev = 14;
                   if (material && sprite != null && sprite.isValid) this.setActorState(sprite, {
                     flash: 0
                   });
                   impact == null || impact.destroy();
-                  return _context23.finish(14);
+                  return _context25.finish(14);
                 case 18:
                 case "end":
-                  return _context23.stop();
+                  return _context25.stop();
               }
-            }, _callee21, this, [[10,, 14, 18]]);
+            }, _callee23, this, [[10,, 14, 18]]);
           }));
-          function hitReaction(_x29, _x30) {
+          function hitReaction(_x34, _x35) {
             return _hitReaction.apply(this, arguments);
           }
           return hitReaction;
@@ -9709,16 +11142,16 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           return Promise.resolve(true);
         };
         _proto.fadeActor = /*#__PURE__*/function () {
-          var _fadeActor = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee22(motion, actor) {
+          var _fadeActor = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee24(motion, actor) {
             var _actor$children$find,
               _actorArt$baseOpacity,
               _actorArt,
               _sprite$node$name,
-              _this35 = this,
+              _this39 = this,
               _actor$getComponent;
-            var sprite, material, state, update, alpha, home;
-            return _regeneratorRuntime().wrap(function _callee22$(_context24) {
-              while (1) switch (_context24.prev = _context24.next) {
+            var sprite, material, state, update, alpha;
+            return _regeneratorRuntime().wrap(function _callee24$(_context26) {
+              while (1) switch (_context26.prev = _context26.next) {
                 case 0:
                   sprite = (_actor$children$find = actor.children.find(function (n) {
                     return n.getComponent(Sprite);
@@ -9730,14 +11163,14 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   };
                   (_actorArt$baseOpacity = (_actorArt = actorArt[(_sprite$node$name = sprite == null ? void 0 : sprite.node.name) != null ? _sprite$node$name : '']) == null ? void 0 : _actorArt.baseOpacity) != null ? _actorArt$baseOpacity : 1;
                   update = function update() {
-                    if (sprite) _this35.setActorState(sprite, {
+                    if (sprite) _this39.setActorState(sprite, {
                       tone: state.tone,
                       fade: state.fade
                     });
                   };
                   alpha = (_actor$getComponent = actor.getComponent(UIOpacity)) != null ? _actor$getComponent : actor.addComponent(UIOpacity);
-                  home = actor.position.clone();
-                  return _context24.abrupt("return", Promise.all([motion.play(tween(state).to(.13, {
+                  actor.position.clone();
+                  return _context26.abrupt("return", Promise.all([motion.play(tween(state).to(.13, {
                     tone: .3
                   }, {
                     onUpdate: update
@@ -9748,159 +11181,283 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     onUpdate: update
                   })), material ? Promise.resolve(true) : motion.play(tween(alpha).delay(.13).to(.33, {
                     opacity: 0
-                  })), motion.play(tween(actor).delay(.13).to(.33, {
-                    position: new Vec3(home.x + 18, home.y + 15, 0)
-                  }, {
-                    easing: 'sineIn'
-                  }))]).then(function (results) {
+                  })), Promise.resolve(true)]).then(function (results) {
                     return results.every(Boolean);
                   }));
                 case 8:
                 case "end":
-                  return _context24.stop();
+                  return _context26.stop();
               }
-            }, _callee22, this);
+            }, _callee24, this);
           }));
-          function fadeActor(_x31, _x32) {
+          function fadeActor(_x36, _x37) {
             return _fadeActor.apply(this, arguments);
           }
           return fadeActor;
         }();
         _proto.enemyTurn = /*#__PURE__*/function () {
-          var _enemyTurn = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee23(motion) {
-            var _this36 = this;
-            var attackers, restoreFocus, base, attack, absorbed, lost, _struck$position, struck, center, effects, _iterator26, _step26, hero, stageNodes, _iterator27, _step27, node, home;
-            return _regeneratorRuntime().wrap(function _callee23$(_context25) {
-              while (1) switch (_context25.prev = _context25.next) {
+          var _enemyTurn = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee25(motion) {
+            var _index11, _this$enemyOpportunit, actor, count, _planEnemyAction, move, target, recipients, restore, healed, recipient, hit, _move$hits, _struck$position, home, struck, center, base, damage, absorbed, lost, effects, _iterator31, _step31, hero, amount;
+            return _regeneratorRuntime().wrap(function _callee25$(_context27) {
+              while (1) switch (_context27.prev = _context27.next) {
                 case 0:
                   this.battlePhase = 'enemy';
                   this.setBattleStatus('敌方行动');
                   this.syncBattleTools();
-                  attackers = this.enemyNodes.flatMap(function (node, i) {
-                    return _this36.enemies[i] > 0 && !_this36.stunned.has(i) ? [node] : [];
-                  });
-                  restoreFocus = attackers.length ? this.focusCombat(motion, Array.from(this.heroes.values()).concat(attackers)) : function () {};
-                  _context25.prev = 5;
-                  _context25.next = 8;
-                  return Promise.all(attackers.map(function (node) {
-                    var origin = node.position.clone();
-                    var art = _this36.foes[_this36.enemyNodes.indexOf(node)].art;
-                    if (art === 'wizard' || art === 'vine') {
-                      var _target$position;
-                      var target = _this36.heroes.values().next().value;
-                      return _this36.flyProjectile(motion, art === 'wizard' ? 'm' : 'stone', _this36.emissionPoint(node), (_target$position = target == null ? void 0 : target.position) != null ? _target$position : new Vec3(-100, 240, 0));
-                    }
-                    return motion.play(tween(node).to(motion.duration(.14), {
-                      position: new Vec3(origin.x - 27, origin.y, 0)
-                    }).to(motion.duration(.17), {
-                      position: origin
-                    }));
-                  }));
-                case 8:
-                  if (!motion.cancelled) {
-                    _context25.next = 10;
+                  _index11 = 0;
+                case 4:
+                  if (!(_index11 < this.foes.length)) {
+                    _context27.next = 102;
                     break;
                   }
-                  return _context25.abrupt("return");
-                case 10:
-                  base = this.enemies.reduce(function (sum, hp, i) {
-                    return sum + (hp > 0 && !_this36.stunned.has(i) ? oathEnemyPower(_this36.oath, String(i), _this36.foes[i].atk) : 0);
-                  }, 0);
-                  this.stunned.clear();
-                  attack = this.oath.guard ? Math.round(base * .85) : base;
-                  this.oath.guard = false;
-                  absorbed = Math.min(this.dp, attack);
-                  lost = Math.min(this.hp, attack - absorbed);
+                  if (!(motion.cancelled || this.hp <= 0)) {
+                    _context27.next = 7;
+                    break;
+                  }
+                  return _context27.abrupt("return");
+                case 7:
+                  if (!(this.enemies[_index11] <= 0)) {
+                    _context27.next = 9;
+                    break;
+                  }
+                  return _context27.abrupt("continue", 99);
+                case 9:
+                  if (!this.stunned["delete"](_index11)) {
+                    _context27.next = 12;
+                    break;
+                  }
+                  this.enemyActionAudit.push({
+                    kind: 'SKIPPED_STUN',
+                    enemy: _index11
+                  });
+                  return _context27.abrupt("continue", 99);
+                case 12:
+                  actor = this.enemyNodes[_index11];
+                  if (actor != null && actor.isValid) {
+                    _context27.next = 15;
+                    break;
+                  }
+                  return _context27.abrupt("continue", 99);
+                case 15:
+                  count = this.enemyOpportunities[_index11] = ((_this$enemyOpportunit = this.enemyOpportunities[_index11]) != null ? _this$enemyOpportunit : 0) + 1;
+                  _planEnemyAction = planEnemyAction(this.foes[_index11], _index11, count, this.enemies, this.enemyMax, this.isTutorialBattle()), move = _planEnemyAction.move, target = _planEnemyAction.target;
+                  this.enemyActionAudit.push({
+                    kind: 'DECIDED',
+                    enemy: _index11,
+                    skill: move.id
+                  });
+                  recipients = move.kind === 'heal' ? [this.enemyNodes[target]] : Array.from(this.heroes.values());
+                  restore = this.focusCombat(motion, [actor].concat(recipients.filter(Boolean)));
+                  _context27.prev = 20;
+                  _context27.next = 23;
+                  return this.skillWindup(motion, actor, move.name);
+                case 23:
+                  if (_context27.sent) {
+                    _context27.next = 25;
+                    break;
+                  }
+                  return _context27.abrupt("return");
+                case 25:
+                  this.enemyActionAudit.push({
+                    kind: 'CAST_STARTED',
+                    enemy: _index11,
+                    skill: move.id
+                  });
+                  if (!(move.kind === 'heal')) {
+                    _context27.next = 36;
+                    break;
+                  }
+                  healed = Math.min(this.enemyMax[target] - this.enemies[target], Math.round(this.enemyMax[target] * move.ratio));
+                  this.enemies[target] += healed;
+                  this.updateHUD();
+                  this.audio.play('charge');
+                  recipient = this.enemyNodes[target];
+                  _context27.next = 34;
+                  return Promise.all([this.supportHalo(motion, recipient.position, '#adf4b0'), this.combatPopup(motion, '+' + healed + ' HP', recipient.position.x, recipient.position.y, '#adf4b0')]);
+                case 34:
+                  _context27.next = 85;
+                  break;
+                case 36:
+                  hit = 0;
+                case 37:
+                  if (!(hit < ((_move$hits = move.hits) != null ? _move$hits : 1))) {
+                    _context27.next = 85;
+                    break;
+                  }
+                  if (!motion.cancelled) {
+                    _context27.next = 40;
+                    break;
+                  }
+                  return _context27.abrupt("return");
+                case 40:
+                  if (!(this.hp <= 0)) {
+                    _context27.next = 42;
+                    break;
+                  }
+                  return _context27.abrupt("break", 85);
+                case 42:
+                  home = actor.position.clone(), struck = Array.from(this.heroes.values()).find(function (n) {
+                    return n.isValid;
+                  });
+                  center = (_struck$position = struck == null ? void 0 : struck.position) != null ? _struck$position : new Vec3(-100, 270, 0);
+                  if (!move.projectile) {
+                    _context27.next = 51;
+                    break;
+                  }
+                  _context27.next = 47;
+                  return this.flyProjectile(motion, move.magic ? 'm' : 'stone', this.emissionPoint(actor), center);
+                case 47:
+                  if (_context27.sent) {
+                    _context27.next = 49;
+                    break;
+                  }
+                  return _context27.abrupt("return");
+                case 49:
+                  _context27.next = 55;
+                  break;
+                case 51:
+                  _context27.next = 53;
+                  return motion.play(tween(actor).to(motion.duration(.12), {
+                    position: new Vec3(center.x + 35, home.y, 0)
+                  }, {
+                    easing: 'sineInOut'
+                  }));
+                case 53:
+                  if (_context27.sent) {
+                    _context27.next = 55;
+                    break;
+                  }
+                  return _context27.abrupt("return");
+                case 55:
+                  if (!motion.cancelled) {
+                    _context27.next = 57;
+                    break;
+                  }
+                  return _context27.abrupt("return");
+                case 57:
+                  base = Math.round(oathEnemyPower(this.oath, String(_index11), this.foes[_index11].atk) * move.ratio);
+                  damage = this.oath.guard ? Math.round(base * .85) : base;
+                  absorbed = Math.min(this.dp, damage), lost = Math.min(this.hp, damage - absorbed);
                   this.dp -= absorbed;
                   this.hp -= lost;
                   this.updateHUD();
-                  if (!attack) {
-                    _context25.next = 42;
-                    break;
-                  }
                   this.audio.play('hurt');
-                  this.setBattleStatus("\u654C\u65B9\u653B\u51FB \xB7 HP \u2212" + lost + " \xB7 DP \u2212" + absorbed);
-                  struck = Array.from(this.heroes.values()).find(function (n) {
-                    return n.isValid;
+                  this.enemyActionAudit.push({
+                    kind: 'HIT',
+                    enemy: _index11,
+                    skill: move.id,
+                    hit: hit,
+                    hp: this.hp,
+                    dp: this.dp,
+                    damage: absorbed + lost
                   });
-                  center = (_struck$position = struck == null ? void 0 : struck.position) != null ? _struck$position : new Vec3(-100, 283, 0);
+                  this.setBattleStatus(this.foes[_index11].name + " \xB7 " + move.name + " \xB7 HP \u2212" + lost + " \xB7 DP \u2212" + absorbed);
                   effects = [];
-                  if (lost) effects.push(this.combatPopup(motion, '−' + lost, center.x, center.y, '#ffffff', 27));
-                  if (absorbed) effects.push(this.combatPopup(motion, '−' + absorbed + ' DP', center.x + 22, center.y + 18, '#90aec4', 27));
-                  for (_iterator26 = _createForOfIteratorHelperLoose(this.heroes.values()); !(_step26 = _iterator26()).done;) {
-                    hero = _step26.value;
+                  if (lost) effects.push(this.combatPopup(motion, '−' + lost, center.x, center.y, move.magic ? '#8b92f6' : '#ffffff'));
+                  if (absorbed) effects.push(this.combatPopup(motion, '−' + absorbed + ' DP', center.x + 22, center.y + 18, '#90aec4'));
+                  for (_iterator31 = _createForOfIteratorHelperLoose(this.heroes.values()); !(_step31 = _iterator31()).done;) {
+                    hero = _step31.value;
                     effects.push(this.hitReaction(motion, hero));
                   }
-                  if (!(lost && this.hp <= this.maxHP * .30 && !motion.reduced)) {
-                    _context25.next = 40;
-                    break;
-                  }
-                  effects.push(this.lowHealthFlash(motion));
-                  stageNodes = Array.from(this.heroes.values()).concat(attackers);
-                  _iterator27 = _createForOfIteratorHelperLoose(stageNodes);
-                case 32:
-                  if ((_step27 = _iterator27()).done) {
-                    _context25.next = 40;
-                    break;
-                  }
-                  node = _step27.value;
-                  if (node) {
-                    _context25.next = 36;
-                    break;
-                  }
-                  return _context25.abrupt("continue", 38);
-                case 36:
-                  home = node.position.clone();
-                  effects.push(motion.play(tween(node).to(.06, {
-                    position: new Vec3(home.x - 2, home.y, 0)
-                  }).to(.06, {
-                    position: new Vec3(home.x + 2, home.y, 0)
-                  }).to(.09, {
+                  if (!move.projectile) effects.push(motion.play(tween(actor).to(motion.duration(.17), {
                     position: home
+                  }, {
+                    easing: 'sineOut'
                   })));
-                case 38:
-                  _context25.next = 32;
-                  break;
-                case 40:
-                  _context25.next = 42;
+                  if (lost && this.hp <= this.maxHP * .3) effects.push(this.lowHealthFlash(motion));
+                  _context27.next = 74;
                   return Promise.all(effects);
-                case 42:
+                case 74:
                   if (!motion.cancelled) {
-                    _context25.next = 44;
+                    _context27.next = 76;
                     break;
                   }
-                  return _context25.abrupt("return");
-                case 44:
-                  _context25.prev = 44;
-                  restoreFocus();
-                  return _context25.finish(44);
-                case 47:
+                  return _context27.abrupt("return");
+                case 76:
+                  if (!(move.drain && lost)) {
+                    _context27.next = 82;
+                    break;
+                  }
+                  amount = Math.min(this.enemyMax[_index11] - this.enemies[_index11], Math.round(lost * move.drain));
+                  this.enemies[_index11] += amount;
+                  this.updateHUD();
+                  _context27.next = 82;
+                  return this.combatPopup(motion, '+' + amount + ' HP', actor.position.x, actor.position.y, '#adf4b0');
+                case 82:
+                  hit++;
+                  _context27.next = 37;
+                  break;
+                case 85:
+                  if (!motion.cancelled) {
+                    _context27.next = 87;
+                    break;
+                  }
+                  return _context27.abrupt("return");
+                case 87:
+                  if (!(move.shock && this.hp > 0)) {
+                    _context27.next = 92;
+                    break;
+                  }
+                  _context27.next = 90;
+                  return this.shockDowngrade(motion, _index11);
+                case 90:
+                  if (!motion.cancelled) {
+                    _context27.next = 92;
+                    break;
+                  }
+                  return _context27.abrupt("return");
+                case 92:
+                  this.enemyActionAudit.push({
+                    kind: 'ACTION_COMPLETED',
+                    enemy: _index11,
+                    skill: move.id,
+                    hp: this.hp,
+                    dp: this.dp
+                  });
+                case 93:
+                  _context27.prev = 93;
+                  restore();
+                  return _context27.finish(93);
+                case 96:
                   if (!(this.hp <= 0)) {
-                    _context25.next = 50;
+                    _context27.next = 99;
                     break;
                   }
                   this.finishAdventure('fail');
-                  return _context25.abrupt("return");
-                case 50:
+                  return _context27.abrupt("return");
+                case 99:
+                  _index11++;
+                  _context27.next = 4;
+                  break;
+                case 102:
+                  if (!motion.cancelled) {
+                    _context27.next = 104;
+                    break;
+                  }
+                  return _context27.abrupt("return");
+                case 104:
                   endOathRound(this.oath, this.turn);
                   this.turn++;
                   this.resumeBattleInput('轮到玩家，交换相邻纹章');
-                case 53:
+                case 107:
                 case "end":
-                  return _context25.stop();
+                  return _context27.stop();
               }
-            }, _callee23, this, [[5,, 44, 47]]);
+            }, _callee25, this, [[20,, 93, 96]]);
           }));
-          function enemyTurn(_x33) {
+          function enemyTurn(_x38) {
             return _enemyTurn.apply(this, arguments);
           }
           return enemyTurn;
         }();
         _proto.resumeBattleInput = function resumeBattleInput(message) {
+          var _this$dungeon8;
           this.clearIdleHint();
           this.busy = false;
           this.battlePhase = 'input';
-          this.setBattleStatus(this.rescueCells.size ? "\u8425\u6551 \xB7 \u6E05\u9664\u300C\u6551\u300D\u6807\u8BB0\u683C\u8FD8\u5269 " + this.rescueCells.size + " \u5904" : message);
+          this.syncBuffViews();
+          var room = (_this$dungeon8 = this.dungeon) == null ? void 0 : _this$dungeon8.room;
+          this.setBattleStatus((room == null ? void 0 : room.kind) === 'battle' && room.delivery ? "\u8425\u6551\u77FF\u5DE5 " + this.rescuedMiners + "/" + room.delivery.required + " \xB7 \u5C06\u77FF\u5DE5\u9001\u5165\u6D1E\u53E3" : this.rescueCells.size ? "\u51C0\u5316 \xB7 \u6307\u5B9A\u683C\u8FD8\u5269 " + this.rescueCells.size + " \u5904" : message);
           this.drawBoard();
           this.refreshGuide();
           this.autoStep();
@@ -9912,7 +11469,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.stopHint = undefined;
         };
         _proto.update = function update(delta) {
-          var _this37 = this;
+          var _this40 = this;
           if (this.ui !== this.battleRoot || this.battlePhase !== 'input' || this.busy || this.automatic || this.guideMode || this.battleModal || this.motion.reduced) {
             if (this.hintIdle || this.stopHint) this.clearIdleHint();
             return;
@@ -9923,7 +11480,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var move = this.legalMove();
           if (!move) return;
           var _move$map = move.map(function (index) {
-              return _this37.tiles[index];
+              return _this40.tiles[index];
             }),
             a = _move$map[0],
             b = _move$map[1];
@@ -9945,20 +11502,20 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             };
           });
           this.stopHint = function () {
-            for (var _iterator28 = _createForOfIteratorHelperLoose(entries), _step28; !(_step28 = _iterator28()).done;) {
-              var _step28$value = _step28.value,
-                node = _step28$value.node,
-                home = _step28$value.home,
-                animation = _step28$value.animation;
+            for (var _iterator32 = _createForOfIteratorHelperLoose(entries), _step32; !(_step32 = _iterator32()).done;) {
+              var _step32$value = _step32.value,
+                node = _step32$value.node,
+                home = _step32$value.home,
+                animation = _step32$value.animation;
               animation.stop();
               if (node.isValid) node.setPosition(home);
             }
           };
           entries[0].animation.call(function () {
-            _this37.stopHint = undefined;
+            _this40.stopHint = undefined;
           });
-          entries.forEach(function (_ref27) {
-            var animation = _ref27.animation;
+          entries.forEach(function (_ref28) {
+            var animation = _ref28.animation;
             return animation.start();
           });
         };
@@ -9971,7 +11528,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.guideMode = undefined;
         };
         _proto.refreshGuide = function refreshGuide() {
-          var _this38 = this;
+          var _this41 = this;
           this.clearGuide();
           if (this.phase !== 'wolves' || this.busy || this.battleModal) return;
           var mode = this.firstSwap ? 'swap' : this.potion > 0 && this.hp <= 30 ? 'potion' : undefined;
@@ -9984,7 +11541,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var layer = this.guideLayer = this.box('教学遮罩', 0, 0, 480, 854);
           var graphics = layer.addComponent(Graphics);
           var holes = mode === 'swap' ? [0, 1, 2, 8].map(function (index) {
-            var p = _this38.cells[index].position;
+            var p = _this41.cells[index].position;
             return {
               x: p.x,
               y: p.y,
@@ -10008,7 +11565,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             return a - b;
           });
           graphics.fillColor = Color.fromHEX(new Color(), '#101c20ad');
-          var _loop6 = function _loop6() {
+          var _loop7 = function _loop7() {
             var low = breaks[row - 1],
               high = breaks[row],
               mid = (high + low) / 2;
@@ -10018,24 +11575,26 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               return a.x - b.x;
             });
             var left = -240;
-            for (var _iterator30 = _createForOfIteratorHelperLoose(openings), _step30; !(_step30 = _iterator30()).done;) {
-              var hole = _step30.value;
+            for (var _iterator34 = _createForOfIteratorHelperLoose(openings), _step34; !(_step34 = _iterator34()).done;) {
+              var hole = _step34.value;
               graphics.rect(left, low, hole.x - hole.w / 2 - left, high - low);
               left = hole.x + hole.w / 2;
             }
             graphics.rect(left, low, 240 - left, high - low);
           };
           for (var row = 1; row < breaks.length; row++) {
-            _loop6();
+            _loop7();
           }
           graphics.fill();
-          graphics.strokeColor = Color.fromHEX(new Color(), '#ffe49d');
-          graphics.lineWidth = 3;
-          for (var _iterator29 = _createForOfIteratorHelperLoose(holes), _step29; !(_step29 = _iterator29()).done;) {
-            var h = _step29.value;
-            graphics.roundRect(h.x - h.w / 2, h.y - h.h / 2, h.w, h.h, 8);
+          if (mode !== 'swap') {
+            graphics.strokeColor = Color.fromHEX(new Color(), '#ffe49d');
+            graphics.lineWidth = 3;
+            for (var _iterator33 = _createForOfIteratorHelperLoose(holes), _step33; !(_step33 = _iterator33()).done;) {
+              var h = _step33.value;
+              graphics.roundRect(h.x - h.w / 2, h.y - h.h / 2, h.w, h.h, 8);
+            }
+            graphics.stroke();
           }
-          graphics.stroke();
           var caption = mode === 'swap' ? '滑动或依次点击高亮的两枚纹章' : '点击药水恢复生命';
           this.box('教学提示底板', 0, 159, 419, 36, '#27362ef0', layer);
           this.outline(this.label(caption, 0, 159, 411, 19, layer));
@@ -10101,37 +11660,57 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           hand.angle = handAngle;
           var opacity = hand.addComponent(UIOpacity);
           opacity.opacity = 0;
-          var state = {
-            progress: 0
+          // Animate the actual opacity component, not a dummy progress value whose
+          // reset/repeat boundaries can collapse the fade into a single frame.
+          var clock = {
+            t: 0
           };
-          var sequence = tween(state).call(function () {
-            if (!hand.isValid) return;
-            hand.setPosition(place(source, swap ? 0 : 35));
-            opacity.opacity = 0;
-          }).to(.22, {
-            progress: 1
+          var fade = .6,
+            hold = .4,
+            move = swap ? .65 : .7,
+            dwell = .65,
+            out = .6,
+            gap = .35,
+            total = fade + hold + move + dwell + out + gap;
+          var update = function update() {
+            var t = clock.t;
+            var alpha = t < fade ? t / fade : t < fade + hold + move + dwell ? 1 : Math.max(0, 1 - (t - fade - hold - move - dwell) / out);
+            var progress = Math.max(0, Math.min(1, (t - fade - hold) / move));
+            var a = place(source, swap ? 0 : 35),
+              b = place(dest);
+            hand.setPosition(Vec3.lerp(new Vec3(), a, b, progress));
+            var _byte = Math.round(255 * alpha);
+            opacity.opacity = _byte;
+            glove.clear();
+            glove.fillColor = new Color(255, 248, 223, _byte);
+            glove.strokeColor = new Color(49, 41, 32, _byte);
+            glove.lineWidth = 2;
+            glove.moveTo(-3, 17);
+            glove.quadraticCurveTo(-9, 20, -10, 14);
+            glove.lineTo(-10, 0);
+            glove.quadraticCurveTo(-16, 4, -17, -2);
+            glove.lineTo(-10, -12);
+            glove.quadraticCurveTo(-7, -18, -1, -18);
+            glove.lineTo(7, -18);
+            glove.quadraticCurveTo(13, -17, 15, -11);
+            glove.lineTo(17, 0);
+            glove.quadraticCurveTo(17, 7, 10, 5);
+            glove.quadraticCurveTo(6, 9, 1, 6);
+            glove.lineTo(1, 13);
+            glove.quadraticCurveTo(1, 17, -3, 17);
+            glove.close();
+            glove.fill();
+            glove.stroke();
+            hand['guideAlpha'] = _byte;
+          };
+          update();
+          var loop = tween(clock).repeatForever(tween(clock).set({
+            t: 0
+          }).to(total, {
+            t: total
           }, {
-            onUpdate: function onUpdate(_target, ratio) {
-              if (hand.isValid) opacity.opacity = 255 * ratio;
-            }
-          }).delay(swap ? .35 : .12).to(swap ? .55 : .65, {
-            progress: 0
-          }, {
-            easing: 'sineInOut',
-            onUpdate: function onUpdate(_target, ratio) {
-              if (!hand.isValid) return;
-              var from = place(source, swap ? 0 : 35),
-                to = place(dest);
-              hand.setPosition(from.x + (to.x - from.x) * ratio, from.y + (to.y - from.y) * ratio, 0);
-            }
-          }).delay(.65).to(.24, {
-            progress: 1
-          }, {
-            onUpdate: function onUpdate(_target, ratio) {
-              if (hand.isValid) opacity.opacity = 255 * (1 - ratio);
-            }
-          }).delay(.3);
-          var loop = tween(state).repeatForever(sequence).start();
+            onUpdate: update
+          })).start();
           layer.once(Node.EventType.NODE_DESTROYED, function () {
             loop.stop();
             Tween.stopAllByTarget(glow);
@@ -10139,7 +11718,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           });
         };
         _proto.openBattleModal = function openBattleModal(mode) {
-          var _this39 = this;
+          var _this42 = this;
           if (this.battleModal || this.battlePhase === 'complete') return;
           this.clearGuide();
           this.motion.pause();
@@ -10149,24 +11728,24 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.outline(this.label(mode === 'log' ? '战斗记录' : '撤离探索', 0, mode === 'log' ? 204 : 80, 390, 25, card));
           if (mode === 'log') {
             this.battleLogs.slice(-9).forEach(function (line, i) {
-              return _this39.label(line, 0, 152 - i * 34, 396, 16, card);
+              return _this42.label(line, 0, 152 - i * 34, 396, 16, card);
             });
           } else this.label('确定撤离当前探索？', 0, 19, 396, 19, card);
           var dismiss = function dismiss() {
-            if (_this39.battleModal !== panel) return;
+            if (_this42.battleModal !== panel) return;
             panel.destroy();
-            _this39.battleModal = undefined;
-            _this39.motion.resume();
-            _this39.refreshGuide();
-            _this39.autoStep();
+            _this42.battleModal = undefined;
+            _this42.motion.resume();
+            _this42.refreshGuide();
+            _this42.autoStep();
           };
           var choice = function choice(label, x, y, action) {
-            var button = _this39.box(label, x, y, 169, 46, '#567052', card);
-            if (_this39.trial) _this39.slicedArt('trial-ui-button', 0, 0, 169, 46, button);
-            _this39.label(label, 0, 0, 164, 18, button);
+            var button = _this42.box(label, x, y, 169, 46, '#567052', card);
+            if (_this42.trial) _this42.slicedArt('trial-ui-button', 0, 0, 169, 46, button);
+            _this42.label(label, 0, 0, 164, 18, button);
             button.on(Node.EventType.TOUCH_END, function () {
-              if (_this39.battleModal !== panel) return;
-              if (_this39.trial) _this39.audio.playTrial('click');
+              if (_this42.battleModal !== panel) return;
+              if (_this42.trial) _this42.audio.playTrial('click');
               action();
             });
           };
@@ -10178,47 +11757,47 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                 location.reload();
                 return;
               }
-              if (_this39.stage4A) {
-                _this39.stopStage4A('retreat');
-                _this39.battleModal = undefined;
-                _this39.automatic = false;
-                _this39.busy = false;
-                _this39.map();
+              if (_this42.stage4A) {
+                _this42.stopStage4A('retreat');
+                _this42.battleModal = undefined;
+                _this42.automatic = false;
+                _this42.busy = false;
+                _this42.map();
                 return;
               }
-              _this39.motion.cancel();
-              _this39.battleModal = undefined;
-              _this39.finishAdventure('retreat');
+              _this42.motion.cancel();
+              _this42.battleModal = undefined;
+              _this42.finishAdventure('retreat');
             });
           } else choice('返回战斗', 0, -192, dismiss);
         };
         _proto.animateCoins = /*#__PURE__*/function () {
-          var _animateCoins = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee26(motion, amount, label, origin, groundY) {
-            var _this40 = this;
-            var root, active, base, setAmount, count, spacing, left, coins, hud, destination, displayed, target, pulse, rolling, rollCounter, _i6, _coins, node;
-            return _regeneratorRuntime().wrap(function _callee26$(_context28) {
-              while (1) switch (_context28.prev = _context28.next) {
+          var _animateCoins = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee28(motion, amount, label, origin, groundY) {
+            var _this43 = this;
+            var root, active, base, setAmount, count, spacing, left, coins, hud, destination, displayed, target, pulse, rolling, rollCounter, _i10, _coins, node;
+            return _regeneratorRuntime().wrap(function _callee28$(_context30) {
+              while (1) switch (_context30.prev = _context30.next) {
                 case 0:
                   root = this.ui;
                   active = function active() {
-                    return !motion.cancelled && _this40.ui === root && label.isValid;
+                    return !motion.cancelled && _this43.ui === root && label.isValid;
                   };
                   if (!(!active() || amount <= 0)) {
-                    _context28.next = 4;
+                    _context30.next = 4;
                     break;
                   }
-                  return _context28.abrupt("return", active());
+                  return _context30.abrupt("return", active());
                 case 4:
                   base = Number(label.string);
                   setAmount = function setAmount(value) {
                     if (active()) label.string = String(value);
                   };
                   if (!motion.reduced) {
-                    _context28.next = 9;
+                    _context30.next = 9;
                     break;
                   }
                   setAmount(base + amount);
-                  return _context28.abrupt("return", true);
+                  return _context30.abrupt("return", true);
                 case 9:
                   count = Math.min(amount, 8);
                   spacing = 14;
@@ -10226,8 +11805,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   coins = Array.from({
                     length: count
                   }, function (_, i) {
-                    var node = _this40.box('飞行金币', origin.x, origin.y, 13, 13);
-                    _this40.drawCoin(node.addComponent(Graphics), 6);
+                    var node = _this43.box('飞行金币', origin.x, origin.y, 13, 13);
+                    _this43.drawCoin(node.addComponent(Graphics), 6);
                     var ground = new Vec3(left + i * spacing, groundY + 6 + i % 2 * 4, 0);
                     return {
                       node: node,
@@ -10240,45 +11819,45 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   target = base;
                   pulse = 0;
                   rollCounter = /*#__PURE__*/function () {
-                    var _ref28 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee24() {
+                    var _ref29 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee26() {
                       var step;
-                      return _regeneratorRuntime().wrap(function _callee24$(_context26) {
-                        while (1) switch (_context26.prev = _context26.next) {
+                      return _regeneratorRuntime().wrap(function _callee26$(_context28) {
+                        while (1) switch (_context28.prev = _context28.next) {
                           case 0:
                             step = Math.max(1, Math.ceil(amount / 20));
                           case 1:
                             if (!(displayed < target && active())) {
-                              _context26.next = 10;
+                              _context28.next = 10;
                               break;
                             }
-                            _context26.next = 4;
+                            _context28.next = 4;
                             return motion.play(tween({}).delay(.038));
                           case 4:
-                            if (_context26.sent) {
-                              _context26.next = 6;
+                            if (_context28.sent) {
+                              _context28.next = 6;
                               break;
                             }
-                            return _context26.abrupt("return");
+                            return _context28.abrupt("return");
                           case 6:
                             displayed = Math.min(target, displayed + step);
                             setAmount(displayed);
-                            _context26.next = 1;
+                            _context28.next = 1;
                             break;
                           case 10:
                           case "end":
-                            return _context26.stop();
+                            return _context28.stop();
                         }
-                      }, _callee24);
+                      }, _callee26);
                     }));
                     return function rollCounter() {
-                      return _ref28.apply(this, arguments);
+                      return _ref29.apply(this, arguments);
                     };
                   }();
-                  _context28.prev = 19;
-                  _context28.next = 22;
-                  return Promise.all(coins.map(function (_ref29, i) {
-                    var node = _ref29.node,
-                      ground = _ref29.ground;
+                  _context30.prev = 19;
+                  _context30.next = 22;
+                  return Promise.all(coins.map(function (_ref30, i) {
+                    var node = _ref30.node,
+                      ground = _ref30.ground;
                     return motion.play(tween(node).to(.14, {
                       position: new Vec3((ground.x + origin.x) / 2, origin.y + 24 + i % 3 * 4, 0)
                     }, {
@@ -10291,104 +11870,104 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   }));
                 case 22:
                   if (active()) {
-                    _context28.next = 24;
+                    _context30.next = 24;
                     break;
                   }
-                  return _context28.abrupt("return", false);
+                  return _context30.abrupt("return", false);
                 case 24:
-                  _context28.next = 26;
-                  return Promise.all(coins.map( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee25(_ref30, i) {
+                  _context30.next = 26;
+                  return Promise.all(coins.map( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee27(_ref31, i) {
                     var _rolling;
                     var node, ground, bend, arrived, current;
-                    return _regeneratorRuntime().wrap(function _callee25$(_context27) {
-                      while (1) switch (_context27.prev = _context27.next) {
+                    return _regeneratorRuntime().wrap(function _callee27$(_context29) {
+                      while (1) switch (_context29.prev = _context29.next) {
                         case 0:
-                          node = _ref30.node, ground = _ref30.ground;
+                          node = _ref31.node, ground = _ref31.ground;
                           bend = (i - (count - 1) / 2) * 12;
-                          _context27.next = 4;
+                          _context29.next = 4;
                           return motion.play(tween({
                             progress: 0
                           }).delay(.15 + i * .064).to(.35, {
                             progress: 1
                           }, {
                             easing: 'quadIn',
-                            onUpdate: function onUpdate(_ref32) {
-                              var progress = _ref32.progress;
+                            onUpdate: function onUpdate(_ref33) {
+                              var progress = _ref33.progress;
                               if (!node.isValid) return;
                               var arc = Math.sin(Math.PI * progress);
                               node.setPosition(ground.x + (destination.x - ground.x) * progress + bend * arc, ground.y + (destination.y - ground.y) * progress + (38 + i % 2 * 9) * arc);
                             }
                           }));
                         case 4:
-                          arrived = _context27.sent;
+                          arrived = _context29.sent;
                           if (!(!arrived || !active())) {
-                            _context27.next = 7;
+                            _context29.next = 7;
                             break;
                           }
-                          return _context27.abrupt("return");
+                          return _context29.abrupt("return");
                         case 7:
                           node.destroy();
-                          _this40.audio.play('coins');
+                          _this43.audio.play('coins');
                           target += Math.floor((i + 1) * amount / count) - Math.floor(i * amount / count);
                           (_rolling = rolling) != null ? _rolling : rolling = rollCounter()["finally"](function () {
                             rolling = undefined;
                           });
                           current = ++pulse;
-                          hud.setScale(1.17, 1.17, 1);
-                          _context27.next = 15;
+                          hud.setScale(.585, .585, 1);
+                          _context29.next = 15;
                           return motion.play(tween({
                             scale: 1.17
                           }).to(.12, {
                             scale: 1
                           }, {
-                            onUpdate: function onUpdate(_ref33) {
-                              var scale = _ref33.scale;
-                              if (current === pulse && active()) hud.setScale(scale, scale, 1);
+                            onUpdate: function onUpdate(_ref34) {
+                              var scale = _ref34.scale;
+                              if (current === pulse && active()) hud.setScale(scale * .5, scale * .5, 1);
                             }
                           }));
                         case 15:
                         case "end":
-                          return _context27.stop();
+                          return _context29.stop();
                       }
-                    }, _callee25);
+                    }, _callee27);
                   }))));
                 case 26:
-                  _context28.next = 28;
+                  _context30.next = 28;
                   return rolling;
                 case 28:
                   if (active()) {
-                    _context28.next = 30;
+                    _context30.next = 30;
                     break;
                   }
-                  return _context28.abrupt("return", false);
+                  return _context30.abrupt("return", false);
                 case 30:
                   setAmount(base + amount);
-                  return _context28.abrupt("return", true);
+                  return _context30.abrupt("return", true);
                 case 32:
-                  _context28.prev = 32;
-                  for (_i6 = 0, _coins = coins; _i6 < _coins.length; _i6++) {
-                    node = _coins[_i6].node;
+                  _context30.prev = 32;
+                  for (_i10 = 0, _coins = coins; _i10 < _coins.length; _i10++) {
+                    node = _coins[_i10].node;
                     if (node.isValid) node.destroy();
                   }
-                  if (hud.isValid) hud.setScale(1, 1, 1);
+                  if (hud.isValid) hud.setScale(.5, .5, 1);
                   if (!active() && this.ui === root && label.isValid) label.string = String(base);
-                  return _context28.finish(32);
+                  return _context30.finish(32);
                 case 37:
                 case "end":
-                  return _context28.stop();
+                  return _context30.stop();
               }
-            }, _callee26, this, [[19,, 32, 37]]);
+            }, _callee28, this, [[19,, 32, 37]]);
           }));
-          function animateCoins(_x34, _x35, _x36, _x37, _x38) {
+          function animateCoins(_x39, _x40, _x41, _x42, _x43) {
             return _animateCoins.apply(this, arguments);
           }
           return animateCoins;
         }();
         _proto.combatPopup = function combatPopup(motion, value, x, y, color, size) {
           var _this$popupPool$pop,
-            _this$popupLayer,
+            _this$popupLayer2,
             _n$getComponent,
-            _this41 = this;
+            _this44 = this;
           if (size === void 0) {
             size = 27;
           }
@@ -10396,7 +11975,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             return node.isValid;
           });
           var n = (_this$popupPool$pop = this.popupPool.pop()) != null ? _this$popupPool$pop : this.outline(this.label('', 0, 0, 220, 27)).node;
-          if (!((_this$popupLayer = this.popupLayer) != null && _this$popupLayer.isValid) || this.popupLayer.parent !== this.ui) this.popupLayer = this.box('500 跳字层', 0, 0, 480, 854);
+          if (!((_this$popupLayer2 = this.popupLayer) != null && _this$popupLayer2.isValid) || this.popupLayer.parent !== this.ui) this.popupLayer = this.box('500 跳字层', 0, 0, 480, 854);
           this.popupLayer.setSiblingIndex(this.ui.children.length - 1);
           n.setParent(this.popupLayer);
           n.active = true;
@@ -10405,21 +11984,21 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           n.setSiblingIndex(this.popupLayer.children.length - 1);
           var label = n.getComponent(Label);
           label.string = value;
-          label.fontSize = 27;
-          label.lineHeight = 35;
+          label.fontSize = 54;
+          label.lineHeight = 70;
           label.isBold = true;
           label.color = Color.fromHEX(new Color(), color);
           var alpha = (_n$getComponent = n.getComponent(UIOpacity)) != null ? _n$getComponent : n.addComponent(UIOpacity);
           alpha.opacity = 255;
           var critical = size >= 38;
-          n.setScale(.65, .65, 1);
+          n.setScale(.325, .325, 1);
           var move = motion.play(tween(n).to(motion.duration(.09), {
             position: new Vec3(x, y + 9, 0),
-            scale: new Vec3(critical ? 1.65 : 1.2, critical ? 1.65 : 1.2, 1)
+            scale: new Vec3(critical ? .825 : .6, critical ? .825 : .6, 1)
           }, {
             easing: 'quadOut'
           }).to(motion.duration(.13), {
-            scale: new Vec3(1, 1, 1)
+            scale: new Vec3(.5, .5, 1)
           }).delay(motion.duration(.32)).to(motion.duration(.25), {
             position: new Vec3(x, y + 38, 0)
           }));
@@ -10431,7 +12010,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           })["finally"](function () {
             if (!n.isValid) return;
             n.active = false;
-            if (_this41.popupPool.length < 24) _this41.popupPool.push(n);else n.destroy();
+            if (_this44.popupPool.length < 24) _this44.popupPool.push(n);else n.destroy();
           });
         };
         _proto.emissionPoint = function emissionPoint(actor) {
@@ -10446,23 +12025,23 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           return new Vec3(actor.position.x + (profile.projectileX - .5) * bounds.width * side, actor.position.y + (.5 - profile.projectileY) * bounds.height, 0);
         };
         _proto.flyProjectile = /*#__PURE__*/function () {
-          var _flyProjectile = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee27(motion, type, origin, target) {
-            var _this42 = this;
+          var _flyProjectile = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee29(motion, type, origin, target) {
+            var _this45 = this;
             var projectile, trails, arrived;
-            return _regeneratorRuntime().wrap(function _callee27$(_context29) {
-              while (1) switch (_context29.prev = _context29.next) {
+            return _regeneratorRuntime().wrap(function _callee29$(_context31) {
+              while (1) switch (_context31.prev = _context31.next) {
                 case 0:
                   projectile = this.art(type, origin.x, origin.y, 32, 32);
                   if (projectile) {
-                    _context29.next = 3;
+                    _context31.next = 3;
                     break;
                   }
-                  return _context29.abrupt("return", true);
+                  return _context31.abrupt("return", true);
                 case 3:
                   trails = motion.reduced ? [] : Array.from({
                     length: 4
                   }, function (_, i) {
-                    var n = _this42.box('投射物拖尾', origin.x, origin.y, 8 - i, 8 - i, type === 'm' ? '#ba90f0' : '#d1b58a');
+                    var n = _this45.box('投射物拖尾', origin.x, origin.y, 8 - i, 8 - i, type === 'm' ? '#ba90f0' : '#d1b58a');
                     var alpha = n.addComponent(UIOpacity);
                     alpha.opacity = 143 - i * 25;
                     n.setSiblingIndex(projectile.getSiblingIndex());
@@ -10476,26 +12055,26 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                       return played;
                     });
                   });
-                  _context29.next = 6;
+                  _context31.next = 6;
                   return motion.play(tween(projectile).to(motion.duration(.18), {
                     position: target.clone()
                   }, {
                     easing: 'quadIn'
                   }));
                 case 6:
-                  arrived = _context29.sent;
+                  arrived = _context31.sent;
                   if (projectile.isValid) projectile.destroy();
-                  _context29.next = 10;
+                  _context31.next = 10;
                   return Promise.all(trails);
                 case 10:
-                  return _context29.abrupt("return", arrived && !motion.cancelled);
+                  return _context31.abrupt("return", arrived && !motion.cancelled);
                 case 11:
                 case "end":
-                  return _context29.stop();
+                  return _context31.stop();
               }
-            }, _callee27, this);
+            }, _callee29, this);
           }));
-          function flyProjectile(_x41, _x42, _x43, _x44) {
+          function flyProjectile(_x46, _x47, _x48, _x49) {
             return _flyProjectile.apply(this, arguments);
           }
           return flyProjectile;
@@ -10523,16 +12102,16 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           });
         };
         _proto.burst = function burst(motion, x, y, color, count) {
-          var _this43 = this;
+          var _this46 = this;
           if (motion.reduced) return [];
           return Array.from({
             length: count
           }, function (_, i) {
-            var _this43$particlePool$, _node$getComponent2;
+            var _this46$particlePool$, _node$getComponent3;
             var angle = i * 2 * Math.PI / count;
-            var root = _this43.ui;
-            var node = (_this43$particlePool$ = _this43.particlePool.pop()) != null ? _this43$particlePool$ : _this43.box('粒子', x, y, 8, 8);
-            var g = (_node$getComponent2 = node.getComponent(Graphics)) != null ? _node$getComponent2 : node.addComponent(Graphics);
+            var root = _this46.ui;
+            var node = (_this46$particlePool$ = _this46.particlePool.pop()) != null ? _this46$particlePool$ : _this46.box('粒子', x, y, 8, 8);
+            var g = (_node$getComponent3 = node.getComponent(Graphics)) != null ? _node$getComponent3 : node.addComponent(Graphics);
             g.clear();
             g.fillColor = Color.fromHEX(new Color(), color);
             g.circle(0, 0, 4);
@@ -10545,9 +12124,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               position: new Vec3(x + Math.cos(angle) * 30, y + Math.sin(angle) * 25, 0),
               scale: new Vec3(.2, .2, 1)
             })).then(function (played) {
-              if (node.isValid && _this43.ui === root) {
+              if (node.isValid && _this46.ui === root) {
                 node.active = false;
-                _this43.particlePool.push(node);
+                _this46.particlePool.push(node);
               }
               return played;
             });
@@ -10564,9 +12143,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         };
         _proto.groundShadow = function groundShadow(parent, y, art, width) {
           var _portraitFootprint$ar, _profile$shadowOffset, _profile$shadowOffset2, _profile$shadowScale;
-          var _ref34 = (_portraitFootprint$ar = portraitFootprint[art]) != null ? _portraitFootprint$ar : [.14, .86],
-            left = _ref34[0],
-            right = _ref34[1];
+          var _ref35 = (_portraitFootprint$ar = portraitFootprint[art]) != null ? _portraitFootprint$ar : [.14, .86],
+            left = _ref35[0],
+            right = _ref35[1];
           var profile = actorArt[art];
           var x = ((left + right) * .5 - .5) * width + ((_profile$shadowOffset = profile == null ? void 0 : profile.shadowOffsetX) != null ? _profile$shadowOffset : 0);
           y += (_profile$shadowOffset2 = profile == null ? void 0 : profile.shadowOffsetY) != null ? _profile$shadowOffset2 : 0;
@@ -10578,6 +12157,69 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           g.ellipse(0, 0, radius, height);
           g.fill();
         };
+        _proto.enemyPlacement = function enemyPlacement(foe, count, index) {
+          var _enemyPortraitSize$fo, _enemyPortraitSize$fo2;
+          var pair = count > 1,
+            boss = foe.tags.includes('boss');
+          var x = (pair ? 93 + index * 87 : boss ? stageX(381) : stageGrid.meterX) - 10;
+          var ground = pair ? index === 0 ? stageGrid.rearGroundY : stageGrid.groundY : this.partyGroundCenter();
+          var size = pair ? Math.min((_enemyPortraitSize$fo = enemyPortraitSize[foe.art]) != null ? _enemyPortraitSize$fo : 94, 112) : (_enemyPortraitSize$fo2 = enemyPortraitSize[foe.art]) != null ? _enemyPortraitSize$fo2 : 94;
+          var hover = foe.tags.includes('flying') ? size / 2 : foe.art === 'ghost' ? 7 : 0;
+          return {
+            x: x,
+            ground: ground,
+            size: size,
+            y: this.portraitY(foe.art, ground + hover, size)
+          };
+        };
+        _proto.partyGroundCenter = function partyGroundCenter() {
+          var slots = partyFormation(this.party, function (id) {
+            return heroes[id].tags;
+          });
+          return slots.reduce(function (sum, slot) {
+            return sum + (slot.front ? stageGrid.groundY : stageGrid.rearGroundY);
+          }, 0) / Math.max(1, slots.length);
+        };
+        _proto.mapLabelPoint = function mapLabelPoint(id) {
+          var _id;
+          return (_id = {
+            forest: [18.8, 63.8],
+            village: [47.7, 88.7],
+            swamp: [83.7, 84.0]
+          }[id]) != null ? _id : [worldPoints[id][0], worldPoints[id][1] + 5];
+        };
+        _proto.skillWindup = /*#__PURE__*/function () {
+          var _skillWindup = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee30(motion, actor, name, advanced) {
+            var scale, ok;
+            return _regeneratorRuntime().wrap(function _callee30$(_context32) {
+              while (1) switch (_context32.prev = _context32.next) {
+                case 0:
+                  if (advanced === void 0) {
+                    advanced = false;
+                  }
+                  void this.skillCallout(motion, name, actor.position, advanced);
+                  scale = actor.scale.clone();
+                  _context32.next = 5;
+                  return motion.play(tween(actor).to(motion.duration(.1), {
+                    scale: new Vec3(scale.x * 1.035, scale.y * .965, scale.z)
+                  }, {
+                    easing: 'sineIn'
+                  }));
+                case 5:
+                  ok = _context32.sent;
+                  if (actor.isValid) actor.setScale(scale);
+                  return _context32.abrupt("return", ok && !motion.cancelled);
+                case 8:
+                case "end":
+                  return _context32.stop();
+              }
+            }, _callee30, this);
+          }));
+          function skillWindup(_x50, _x51, _x52, _x53) {
+            return _skillWindup.apply(this, arguments);
+          }
+          return skillWindup;
+        }();
         _proto.showParty = function showParty() {
           this.heroes.clear();
           var size = 94;
@@ -10586,28 +12228,28 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }).sort(function (a, b) {
             return Number(a.front) - Number(b.front);
           });
-          for (var _iterator31 = _createForOfIteratorHelperLoose(slots), _step31; !(_step31 = _iterator31()).done;) {
-            var _step31$value = _step31.value,
-              id = _step31$value.id,
-              _x45 = _step31$value.x,
-              front = _step31$value.front;
+          for (var _iterator35 = _createForOfIteratorHelperLoose(slots), _step35; !(_step35 = _iterator35()).done;) {
+            var _step35$value = _step35.value,
+              id = _step35$value.id,
+              _x54 = _step35$value.x,
+              front = _step35$value.front;
             var _ground2 = front ? stageGrid.groundY : stageGrid.rearGroundY;
             var art = 'hero-' + id;
             var y = this.portraitY(art, _ground2, size);
-            var actor = this.box(art, _x45, y, size, size);
+            var actor = this.box(art, _x54 + 10, y, size, size);
             this.groundShadow(actor, _ground2 - y, art, size);
             this.art(art, 0, 0, size, size, actor);
             this.heroes.set(id, actor);
           }
-          for (var _iterator32 = _createForOfIteratorHelperLoose(this.ui.children.slice()), _step32; !(_step32 = _iterator32()).done;) {
-            var backdrop = _step32.value;
+          for (var _iterator36 = _createForOfIteratorHelperLoose(this.ui.children.slice()), _step36; !(_step36 = _iterator36()).done;) {
+            var backdrop = _step36.value;
             if (backdrop.getChildByName('forest-lab-front')) this.liftForestForeground(backdrop, this.ui);
           }
         };
         _proto.page = function page(title, detail, background, options) {
           var _exec,
             _Array$from$find,
-            _this44 = this;
+            _this47 = this;
           if (background === void 0) {
             background = 'travel-forest-plains';
           }
@@ -10624,10 +12266,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             this.box('Scene information', 0, 122, 456, 27, '#263c32');
             this.label(detail, 0, 122, 442, 17);
           }
-          if (options.meters !== false) {
+          if (options.meters === true) {
             var hp = Math.max(0, this.hp),
               maxHP = this.maxHP;
-            if (options.party !== false) this.outline(this.label(this.partyName, -stageGrid.meterX, stageGrid.hpY + 23, 139, 14));
             var stageStats = this.makeMeter(-stageGrid.meterX, stageGrid.hpY, 139, '#7ecb82');
             this.setMeter(stageStats, hp, maxHP, String(hp));
             if (this.showsGuard) {
@@ -10636,10 +12277,15 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             }
           }
           if (options.gold !== false) this.coinText = this.makeCoinDisplay();
-          var speaker = (_Array$from$find = Array.from(this.heroes.entries()).find(function (_ref35) {
+          if (this.town.blessing) {
+            var node = this.box('全局祝福', -150, this.showsGuard ? 299 : 330, 24, 24, '#314e3a');
+            this.art('h', 0, 0, 20, 20, node);
+            this.outline(this.label('1', 7, -7, 18, 11, node));
+          }
+          var speaker = (_Array$from$find = Array.from(this.heroes.entries()).find(function (_ref36) {
             var _heroes$id;
-            var id = _ref35[0];
-            return ((_heroes$id = heroes[id]) == null ? void 0 : _heroes$id.name) === _this44.speechOwner;
+            var id = _ref36[0];
+            return ((_heroes$id = heroes[id]) == null ? void 0 : _heroes$id.name) === _this47.speechOwner;
           })) == null ? void 0 : _Array$from$find[1];
           if (speaker) this.popSpeaker(speaker);
         };
@@ -10650,8 +12296,389 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.dungeon = new DungeonDirector(tutorialRoute());
           this.showRoom();
         };
+        _proto.testLevelMenu = function testLevelMenu(page) {
+          var _this48 = this,
+            _this$ui$getComponent;
+          if (page === void 0) {
+            page = 0;
+          }
+          var paging = mechanismPage(page);
+          this.page('测试关卡', '固定四人 · 无装备与增益 · 棋盘保留 · 无限战斗');
+          testMechanisms.slice(paging.start, paging.end).forEach(function (entry, i) {
+            _this48.button(entry.title, 70 - Math.floor(i / 3) * 100, function () {
+              return _this48.startMineTrial();
+            }, (i % 3 - 1) * 150, 142);
+          });
+          this.label(paging.page + 1 + " / " + paging.pages, 0, -235, 160, 18);
+          if (paging.page > 0) this.button('上一页', -235, function () {
+            return _this48.testLevelMenu(page - 1);
+          }, -145, 120);
+          if (paging.page + 1 < paging.pages) this.button('下一页', -235, function () {
+            return _this48.testLevelMenu(page + 1);
+          }, 145, 120);
+          this.button('返回主菜单', -302, function () {
+            return _this48.menu();
+          });
+          var motion = this.newPageMotion(),
+            opacity = (_this$ui$getComponent = this.ui.getComponent(UIOpacity)) != null ? _this$ui$getComponent : this.ui.addComponent(UIOpacity);
+          opacity.opacity = 100;
+          void motion.play(tween(opacity).to(motion.duration(.18), {
+            opacity: 255
+          }));
+        };
+        _proto.repeatTestEncounter = /*#__PURE__*/function () {
+          var _repeatTestEncounter = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee31(motion) {
+            var _this49 = this;
+            var trial, director, room;
+            return _regeneratorRuntime().wrap(function _callee31$(_context33) {
+              while (1) switch (_context33.prev = _context33.next) {
+                case 0:
+                  trial = this.trial, director = this.dungeon, room = director == null ? void 0 : director.room;
+                  if (!(!trial || !director || !room)) {
+                    _context33.next = 3;
+                    break;
+                  }
+                  return _context33.abrupt("return");
+                case 3:
+                  this.busy = true;
+                  this.automatic = false;
+                  this.battlePhase = 'complete';
+                  _context33.next = 8;
+                  return motion.whenIdle();
+                case 8:
+                  _context33.t2 = !_context33.sent;
+                  if (_context33.t2) {
+                    _context33.next = 11;
+                    break;
+                  }
+                  _context33.t2 = this.trial !== trial;
+                case 11:
+                  _context33.t1 = _context33.t2;
+                  if (_context33.t1) {
+                    _context33.next = 14;
+                    break;
+                  }
+                  _context33.t1 = this.dungeon !== director;
+                case 14:
+                  _context33.t0 = _context33.t1;
+                  if (_context33.t0) {
+                    _context33.next = 17;
+                    break;
+                  }
+                  _context33.t0 = director.room !== room;
+                case 17:
+                  if (!_context33.t0) {
+                    _context33.next = 19;
+                    break;
+                  }
+                  return _context33.abrupt("return");
+                case 19:
+                  this.carriedBoard = {
+                    director: director,
+                    types: this.types.join(','),
+                    board: this.board.slice(),
+                    charged: this.tiles.flatMap(function (tile, index) {
+                      var tier = _this49.chargedTiles.get(tile);
+                      return tier ? [[index, tier]] : [];
+                    }),
+                    ids: this.tiles.map(function (tile) {
+                      var id = _this49.restoredTileIds.get(tile);
+                      if (!id) {
+                        id = crypto.randomUUID();
+                        _this49.restoredTileIds.set(tile, id);
+                      }
+                      return id;
+                    })
+                  };
+                  if (director.repeatTestBattle(room, mineTestEncounter(++trial.rounds))) {
+                    _context33.next = 22;
+                    break;
+                  }
+                  return _context33.abrupt("return");
+                case 22:
+                  this.hp = this.maxHP;
+                  this.dp = this.maxDP;
+                  this.potion = 2;
+                  this.adventure = {
+                    id: 'mine',
+                    coins: 0,
+                    loot: {},
+                    xp: 0,
+                    ordinaryWins: 0,
+                    buffs: {}
+                  };
+                  this.showRoom();
+                case 27:
+                case "end":
+                  return _context33.stop();
+              }
+            }, _callee31, this);
+          }));
+          function repeatTestEncounter(_x55) {
+            return _repeatTestEncounter.apply(this, arguments);
+          }
+          return repeatTestEncounter;
+        }();
+        _proto.releaseMiners = /*#__PURE__*/function () {
+          var _releaseMiners = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee32(motion) {
+            var _this$dungeon9,
+              _this50 = this;
+            var room, _this$dungeon10, _this$trial4, exits, _iterator37, _step37, _index12, played, _iterator38, _step38, _index13, removed, refill;
+            return _regeneratorRuntime().wrap(function _callee32$(_context34) {
+              while (1) switch (_context34.prev = _context34.next) {
+                case 0:
+                  room = (_this$dungeon9 = this.dungeon) == null ? void 0 : _this$dungeon9.room;
+                  if (!((room == null ? void 0 : room.kind) !== 'battle' || !room.delivery)) {
+                    _context34.next = 3;
+                    break;
+                  }
+                  return _context34.abrupt("return");
+                case 3:
+                  if (motion.cancelled) {
+                    _context34.next = 21;
+                    break;
+                  }
+                  exits = minersAtExits(this.board, room.delivery);
+                  if (exits.length) {
+                    _context34.next = 7;
+                    break;
+                  }
+                  return _context34.abrupt("return");
+                case 7:
+                  for (_iterator37 = _createForOfIteratorHelperLoose(exits); !(_step37 = _iterator37()).done;) {
+                    _index12 = _step37.value;
+                    this.deliveryEvents.push({
+                      type: 'MINER_EXIT_STARTED',
+                      index: _index12,
+                      id: this.restoredTileIds.get(this.tiles[_index12])
+                    });
+                  }
+                  _context34.next = 10;
+                  return Promise.all(exits.map(function (index) {
+                    var _tile$getComponent2;
+                    var tile = _this50.tiles[index],
+                      opacity = (_tile$getComponent2 = tile.getComponent(UIOpacity)) != null ? _tile$getComponent2 : tile.addComponent(UIOpacity);
+                    var target = tile.position.clone();
+                    target.x += index % 7 === 0 ? -30 : 30;
+                    target.y -= 8;
+                    return Promise.all([motion.play(tween(tile).to(motion.duration(.42), {
+                      position: target,
+                      scale: new Vec3(.55, .55, 1)
+                    }, {
+                      easing: 'quadIn'
+                    })), motion.play(tween(opacity).to(motion.duration(.42), {
+                      opacity: 0
+                    }))]).then(function (results) {
+                      return results.every(Boolean);
+                    });
+                  }));
+                case 10:
+                  played = _context34.sent;
+                  if (!(motion.cancelled || played.some(function (ok) {
+                    return !ok;
+                  }) || ((_this$dungeon10 = this.dungeon) == null ? void 0 : _this$dungeon10.room) !== room)) {
+                    _context34.next = 13;
+                    break;
+                  }
+                  return _context34.abrupt("return");
+                case 13:
+                  for (_iterator38 = _createForOfIteratorHelperLoose(exits); !(_step38 = _iterator38()).done;) {
+                    _index13 = _step38.value;
+                    this.rescuedMiners++;
+                    this.deliveryEvents.push({
+                      type: 'MINER_EXIT_COMPLETED',
+                      index: _index13,
+                      id: this.restoredTileIds.get(this.tiles[_index13])
+                    });
+                  }
+                  this.setBattleStatus("\u8425\u6551\u77FF\u5DE5 " + this.rescuedMiners + "/" + room.delivery.required);
+                  removed = new Set(exits), refill = planRefill(this.board, removed, this.types, (_this$trial4 = this.trial) == null ? void 0 : _this$trial4.random, this.phase === 'mine' ? mineGravity : undefined);
+                  this.board = refill.board;
+                  _context34.next = 19;
+                  return this.drop(motion, removed, refill);
+                case 19:
+                  _context34.next = 3;
+                  break;
+                case 21:
+                case "end":
+                  return _context34.stop();
+              }
+            }, _callee32, this);
+          }));
+          function releaseMiners(_x56) {
+            return _releaseMiners.apply(this, arguments);
+          }
+          return releaseMiners;
+        }();
+        _proto.retireRoomMiners = /*#__PURE__*/function () {
+          var _retireRoomMiners = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee33(motion) {
+            var _this51 = this;
+            var indices, next, faded, _iterator39, _step39, _index14, old, tile;
+            return _regeneratorRuntime().wrap(function _callee33$(_context35) {
+              while (1) switch (_context35.prev = _context35.next) {
+                case 0:
+                  indices = this.board.flatMap(function (type, i) {
+                    return type === minerEmblem ? [i] : [];
+                  });
+                  if (indices.length) {
+                    _context35.next = 3;
+                    break;
+                  }
+                  return _context35.abrupt("return", true);
+                case 3:
+                  next = retireMinerBoard(this.board, this.types);
+                  if (next) {
+                    _context35.next = 7;
+                    break;
+                  }
+                  this.setBattleStatus('营救棋子离房清理无合法候选，暂停诊断');
+                  return _context35.abrupt("return", false);
+                case 7:
+                  _context35.next = 9;
+                  return Promise.all(indices.map(function (index) {
+                    var _tile$getComponent3;
+                    var tile = _this51.tiles[index],
+                      opacity = (_tile$getComponent3 = tile.getComponent(UIOpacity)) != null ? _tile$getComponent3 : tile.addComponent(UIOpacity);
+                    return motion.play(tween(opacity).to(motion.duration(.22), {
+                      opacity: 0
+                    }));
+                  }));
+                case 9:
+                  faded = _context35.sent;
+                  if (!(motion.cancelled || faded.some(function (ok) {
+                    return !ok;
+                  }))) {
+                    _context35.next = 12;
+                    break;
+                  }
+                  return _context35.abrupt("return", false);
+                case 12:
+                  this.board = next;
+                  for (_iterator39 = _createForOfIteratorHelperLoose(indices); !(_step39 = _iterator39()).done;) {
+                    _index14 = _step39.value;
+                    old = this.tiles[_index14];
+                    old.removeFromParent();
+                    old.destroy();
+                    tile = this.tile(next[_index14], _index14);
+                    this.tiles[_index14] = tile;
+                    this.restoredTileIds.set(tile, crypto.randomUUID());
+                    tile.setScale(.65, .65, 1);
+                  }
+                  _context35.next = 16;
+                  return Promise.all(indices.map(function (index) {
+                    return motion.play(tween(_this51.tiles[index]).to(motion.duration(.20), {
+                      scale: new Vec3(1, 1, 1)
+                    }, {
+                      easing: 'backOut'
+                    }));
+                  }));
+                case 16:
+                  return _context35.abrupt("return", !motion.cancelled);
+                case 17:
+                case "end":
+                  return _context35.stop();
+              }
+            }, _callee33, this);
+          }));
+          function retireRoomMiners(_x57) {
+            return _retireRoomMiners.apply(this, arguments);
+          }
+          return retireRoomMiners;
+        }();
+        _proto.shockDowngrade = /*#__PURE__*/function () {
+          var _shockDowngrade = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee34(motion, enemyIndex) {
+            var _this52 = this,
+              _this$trial$random2,
+              _this$trial5,
+              _this$templateFxFrame,
+              _this$templateFxFrame2,
+              _puff$getComponent;
+            var index, tile, decorations, smoke, smokeSprite, puff, opacity, work, frame;
+            return _regeneratorRuntime().wrap(function _callee34$(_context36) {
+              while (1) switch (_context36.prev = _context36.next) {
+                case 0:
+                  index = shockTarget(this.tiles.map(function (tile) {
+                    return _this52.chargedTiles.get(tile);
+                  }), (_this$trial$random2 = (_this$trial5 = this.trial) == null ? void 0 : _this$trial5.random) != null ? _this$trial$random2 : Math.random);
+                  if (!(index === undefined)) {
+                    _context36.next = 3;
+                    break;
+                  }
+                  return _context36.abrupt("return");
+                case 3:
+                  tile = this.tiles[index];
+                  this.chargedTiles["delete"](tile);
+                  this.setBattleStatus(this.foes[enemyIndex].name + " \xB7 \u9707\u8361\uFF1A\u4E00\u7EA7\u5F3A\u5316\u964D\u7EA7");
+                  this.audio.play('hurt');
+                  decorations = tile.children.filter(function (child) {
+                    return child.name === '技能纹章底色' || child.name === 'skill-frame';
+                  });
+                  smoke = this.box('降级烟雾', 0, 0, 50, 50, undefined, tile);
+                  smokeSprite = smoke.addComponent(Sprite);
+                  smokeSprite.spriteFrame = (_this$templateFxFrame = (_this$templateFxFrame2 = this.templateFxFrames) == null ? void 0 : _this$templateFxFrame2.get('burst-05')) != null ? _this$templateFxFrame : null;
+                  // Template textures live in a separate atlas; fall back to a soft local smoke silhouette.
+                  puff = smoke != null ? smoke : this.box('降级烟雾', 0, 0, 39, 28, '#bcc3c9aa', tile);
+                  puff.setSiblingIndex(decorations.length);
+                  opacity = (_puff$getComponent = puff.getComponent(UIOpacity)) != null ? _puff$getComponent : puff.addComponent(UIOpacity);
+                  work = decorations.map(function (child) {
+                    var _child$getComponent;
+                    var alpha = (_child$getComponent = child.getComponent(UIOpacity)) != null ? _child$getComponent : child.addComponent(UIOpacity);
+                    return Promise.all([motion.play(tween(child).to(motion.duration(.10), {
+                      scale: new Vec3(1.18, 1.18, 1),
+                      angle: 8
+                    }).to(motion.duration(.08), {
+                      angle: -8
+                    }).to(motion.duration(.18), {
+                      scale: new Vec3(1.35, 1.35, 1),
+                      angle: 0
+                    })), motion.play(tween(alpha).delay(motion.duration(.12)).to(motion.duration(.24), {
+                      opacity: 0
+                    }))]);
+                  });
+                  frame = {
+                    value: 0
+                  };
+                  _context36.next = 18;
+                  return Promise.all([].concat(work, [motion.play(tween(opacity).to(motion.duration(.36), {
+                    opacity: 0
+                  })), motion.play(tween(frame).to(motion.duration(.36), {
+                    value: 12
+                  }, {
+                    onUpdate: function onUpdate() {
+                      var _this52$templateFxFra, _this52$templateFxFra2;
+                      var key = 'burst-' + String(5 + Math.min(12, Math.floor(frame.value))).padStart(2, '0');
+                      smokeSprite.spriteFrame = (_this52$templateFxFra = (_this52$templateFxFra2 = _this52.templateFxFrames) == null ? void 0 : _this52$templateFxFra2.get(key)) != null ? _this52$templateFxFra : null;
+                    }
+                  }))]));
+                case 18:
+                  if (!(motion.cancelled || !tile.isValid)) {
+                    _context36.next = 20;
+                    break;
+                  }
+                  return _context36.abrupt("return");
+                case 20:
+                  decorations.forEach(function (node) {
+                    node.removeFromParent();
+                    node.destroy();
+                  });
+                  puff.removeFromParent();
+                  puff.destroy();
+                case 23:
+                case "end":
+                  return _context36.stop();
+              }
+            }, _callee34, this);
+          }));
+          function shockDowngrade(_x58, _x59) {
+            return _shockDowngrade.apply(this, arguments);
+          }
+          return shockDowngrade;
+        }();
         _proto.startMineTrial = function startMineTrial() {
-          var _this45 = this;
+          var _this53 = this;
+          if (this.deferContent(function () {
+            return _this53.startMineTrial();
+          })) return;
           if (this.trial) return;
           var snapshot = {
             party: this.party,
@@ -10662,17 +12689,28 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             potion: this.potion,
             inventory: this.inventory,
             dungeon: this.dungeon,
-            adventure: this.adventure
+            adventure: this.adventure,
+            town: this.town,
+            carriedBoard: this.carriedBoard,
+            mineRecovery: this.mineRecovery
           };
           this.trial = {
             random: mineTrialRandom(),
             restore: function restore() {
-              return Object.assign(_this45, snapshot);
+              return Object.assign(_this53, snapshot);
             },
             moves: 0,
-            longestChain: 0
+            longestChain: 0,
+            rounds: 0
           };
           this.inventory = new Inventory();
+          this.inventory.owned = [];
+          this.inventory.slots = {};
+          this.mineRecovery = undefined;
+          this.town = _extends({}, this.town, {
+            blessing: false,
+            blessingInDungeon: false
+          });
           this.party = ['s', 'd', 'h', 'm'];
           this.types = this.formalTypes();
           this.phase = 'mine';
@@ -10684,24 +12722,24 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             ordinaryWins: 0,
             buffs: {}
           };
-          this.dungeon = new DungeonDirector(makeMineTrial());
+          this.dungeon = new DungeonDirector(makeMineTrial(), true);
           this.hp = this.maxHP;
-          this.dp = 0;
+          this.dp = this.maxDP;
           this.potion = 2;
           this.page(mineTrialTitle, '小队沿废弃轨道前进，找到深处的晶岩守卫。', this.dungeonBackdrop(0));
           this.box('轨道试玩说明', 0, -45, 416, 232, '#20372f');
           this.mineTrialCaption('棋盘轨道', 48);
           this.label('上方六排向下落子', 0, 2, 378, 19);
           this.label('倒数第二排从左补棋，最底排从右补棋', 0, -36, 390, 18);
-          this.label('遭遇战 · 营地 · 营救 · 晶岩守卫', 0, -84, 388, 17);
+          this.label('无限遭遇 · 胜败自动恢复 · 不产生收益', 0, -84, 388, 17);
           var root = this.ui;
           this.trialButton('进入矿道', -203, function () {
-            if (_this45.ui !== root) return;
-            _this45.audio.playTrial('open');
-            _this45.showRoom();
+            if (_this53.ui !== root) return;
+            _this53.audio.playTrial('open');
+            _this53.showRoom();
           });
           this.trialButton('返回标题', -269, function () {
-            return _this45.leaveMineTrial();
+            return _this53.leaveMineTrial();
           }, 0, 230, 'trial-ui-back', true);
         };
         _proto.mineTrialCaption = function mineTrialCaption(value, y) {
@@ -10721,11 +12759,11 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.audio.stopTrial();
           this.trial = undefined;
           trial.restore();
-          if (retry) this.startMineTrial();else this.menu();
+          if (retry) this.startMineTrial();else this.testLevelMenu();
         };
         _proto.finishMineTrial = function finishMineTrial(outcome) {
           var _this$motion8,
-            _this46 = this;
+            _this54 = this;
           (_this$motion8 = this.motion) == null || _this$motion8.cancel();
           this.audio.stopTrial();
           this.dungeon = undefined;
@@ -10737,7 +12775,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.mineTrialCaption('挑战结果', 66);
           if (outcome === 'win') {
             this.audio.playTrial('victory');
-            var star = this.art('trial-ui-clear', 0, -12, 85, 85);
+            var star = this.art('game-logo', 0, -12, 85, 85);
             var _root = this.ui;
             if (star) {
               var reveal = this.newPageMotion();
@@ -10749,7 +12787,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                 }, {
                   easing: 'backOut'
                 }).call(function () {
-                  if (_this46.ui === _root) _this46.audio.playTrial('reward');
+                  if (_this54.ui === _root) _this54.audio.playTrial('reward');
                 }).to(.11, {
                   scale: new Vec3(1, 1, 1)
                 }));
@@ -10758,22 +12796,21 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             this.label("\u6709\u6548\u6362\u4F4D " + this.trial.moves + " \u6B21\u3000\u6700\u9AD8 " + this.trial.longestChain + " \u8FDE\u9501", 0, -83, 390, 17);
           } else if (outcome === 'fail') this.audio.playTrial('defeat');
           this.trialButton('再试一次', -164, function () {
-            return _this46.leaveMineTrial(true);
+            return _this54.leaveMineTrial(true);
           });
           this.trialButton('返回标题', -230, function () {
-            return _this46.leaveMineTrial();
+            return _this54.leaveMineTrial();
           }, 0, 230, 'trial-ui-back', true);
         };
         _proto.victory = function victory(director, room, reward) {
-          var _this47 = this;
+          var _this55 = this;
           if (this.mineRecovery) return;
           if (this.dungeon !== director || director.room !== room || this.rewardedRooms.has(room)) return;
           this.rewardedRooms.add(room);
           var run = this.adventure;
-          this.receiveGold(reward);
+          if (!this.trial) this.receiveGold(reward);
           if (this.trial) {
-            if (room.type !== 'boss') this.audio.playTrial('victory');
-            this.advanceRoom(director, room);
+            void this.repeatTestEncounter(this.motion);
             return;
           }
           this.audio.play('victory');
@@ -10789,7 +12826,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               this.save();
               this.page('裂印暂时封闭', '带着救出的村民前往溪桥村，向村长交付村徽。', 'stage-forest-4');
               this.button('返回章节地图', 14, function () {
-                return _this47.map();
+                return _this55.map();
               });
               return;
             }
@@ -10799,9 +12836,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           run.xp += room.enemies.length * 2;
           var multiplier = dungeonRewardMultiplier(room.type);
           var loot = dungeons[run.id].loot;
-          for (var _i7 = 0, _arr3 = Object.keys(loot); _i7 < _arr3.length; _i7++) {
+          for (var _i11 = 0, _arr4 = Object.keys(loot); _i11 < _arr4.length; _i11++) {
             var _run$loot$key;
-            var key = _arr3[_i7];
+            var key = _arr4[_i11];
             if (key === 'gold') continue;
             run.loot[key] = ((_run$loot$key = run.loot[key]) != null ? _run$loot$key : 0) + Math.ceil(loot[key] * multiplier);
           }
@@ -10809,25 +12846,30 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.advanceRoom(director, room);
         };
         _proto.finishAdventure = function finishAdventure(outcome) {
-          var _this48 = this;
+          var _this56 = this;
           if (this.mineRecovery) {
             if (outcome === 'win') this.showRecoveryStop('正式通关事务未启用。');else this.closeMineRecovery(outcome);
             return;
           }
           if (this.trial) {
-            this.finishMineTrial(outcome);
+            if (outcome === 'fail') void this.repeatTestEncounter(this.motion);else this.leaveMineTrial();
             return;
           }
           var run = this.adventure;
           this.adventure = undefined;
+          if (run) {
+            var exit = exitBlessing(this.town, this.hp, this.baseMaxHP, outcome === 'win');
+            this.town = exit.town;
+            this.hp = exit.hp;
+          }
           this.dungeon = undefined;
           this.automatic = false;
           this.busy = false;
           if (run) {
             var rate = outcome === 'win' ? 1 : outcome === 'retreat' ? .7 : .5;
             var earned = {};
-            for (var _i8 = 0, _arr4 = Object.keys(run.loot); _i8 < _arr4.length; _i8++) {
-              var key = _arr4[_i8];
+            for (var _i12 = 0, _arr5 = Object.keys(run.loot); _i12 < _arr5.length; _i12++) {
+              var key = _arr5[_i12];
               earned[key] = Math.floor(run.loot[key] * rate);
             }
             earned.gold = Math.floor(run.coins * rate);
@@ -10865,10 +12907,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                 this.label('高塔的裂印已封闭，接下来要找出运单的收货人。', 0, 62, 434, 16);
               }
               this.button('返回章节地图', 30, function () {
-                return _this48.map();
+                return _this56.map();
               });
               this.button('整理角色与装备', -34, function () {
-                return _this48.roster();
+                return _this56.roster();
               });
               return;
             }
@@ -10876,19 +12918,21 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           if (outcome === 'fail') {
             this.audio.play('defeat');
             this.hp = this.maxHP;
-            this.dp = this.maxDP;
+            this.dp = 0;
             this.location = locations.indexOf('village');
             this.save();
-            this.page('探索失败', '你在溪桥村的酒馆醒来，队伍已恢复生命与 DP。', 'village-tavern-stage');
+            this.page('探索失败', '你在溪桥村的酒馆醒来，生命已恢复。护甲需要在铁匠铺修补。', 'village-tavern-stage');
             this.button('起身，回到酒馆', 14, function () {
-              return _this48.tavern(true);
+              return _this56.tavern(true);
             });
           } else this.menu();
         };
         _proto.map = function map() {
-          var _this$art5,
-            _root$getChildByName,
-            _this49 = this;
+          var _this57 = this,
+            _root$getChildByName;
+          if (this.deferContent(function () {
+            return _this57.map();
+          })) return;
           this.dungeon = undefined;
           this.adventure = undefined;
           var saved = locations[this.location];
@@ -10901,71 +12945,76 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           });
           var mapY = -121;
           var mapSize = 460;
-          (_this$art5 = this.art('world-travel', 0, mapY, mapSize, mapSize)) != null ? _this$art5 : this.art('world', 0, mapY, mapSize, mapSize);
+          this.art('world-travel', 0, mapY, mapSize, mapSize);
           var settlementX = (444.5 / 940 - .5) * mapSize;
           var settlementY = (.5 - 722.5 / 940) * mapSize + mapY;
           var villageArt = this.art('world-village-cut', settlementX, settlementY, 349 / 940 * mapSize, 243 / 940 * mapSize);
-          var at = function at(_ref36) {
-            var x = _ref36[0],
-              y = _ref36[1];
+          var at = function at(_ref37) {
+            var x = _ref37[0],
+              y = _ref37[1];
             return new Vec3((x - 50) * mapSize / 100, (50 - y) * mapSize / 100 + mapY, 0);
           };
-          var marker = at(worldPoints[current]);
-          var tokenY = 29;
+          var marker = at(this.mapLabelPoint(current));
+          var tokenY = 52;
           var token = this.art('hero-s', marker.x, marker.y + tokenY, 68, 68);
+          if (token && this.town.blessing) {
+            var badge = this.box('地图祝福', 0, 44, 22, 22, '#314e3a', token);
+            this.art('h', 0, 0, 18, 18, badge);
+            this.outline(this.label('1', 6, -6, 14, 10, badge));
+          }
           var traveling = false;
           var root = this.ui;
           var caption = (_root$getChildByName = root.getChildByName('第一章 · 苔石边境')) == null ? void 0 : _root$getChildByName.getComponent(Label);
-          var _loop7 = function _loop7() {
-            var _this49$hunt;
-            var id = _step33.value;
-            var pt = at(worldPoints[id]);
-            var ready = unlocked(id, _this49.cleared);
-            var dx = id === 'forest' ? -10 : 0;
-            var dy = id === 'forest' ? -5 : id === 'village' ? -25 : id === 'swamp' ? -10 : 0;
-            var node = _this49.box(locationNames[id], pt.x + dx, pt.y - 23 + dy, 104, 38);
-            var settlement = id === 'village' ? _this49.box('村庄建筑点击区', settlementX - pt.x - dx, settlementY - (pt.y - 23 + dy) - 16, 113, 48, undefined, node) : undefined;
+          var _loop8 = function _loop8() {
+            var _this57$hunt;
+            var id = _step40.value;
+            var pt = at(_this57.mapLabelPoint(id));
+            var ready = unlocked(id, _this57.cleared);
+            var dx = 0,
+              dy = 0;
+            var node = _this57.box(locationNames[id], pt.x + dx, pt.y + dy, 104, 38);
+            var settlement = id === 'village' ? _this57.box('村庄建筑点击区', settlementX - pt.x - dx, settlementY - (pt.y + dy) - 16, 113, 48, undefined, node) : undefined;
             if (guide && id === 'village') {
-              _this49.mapQuestHighlight(node);
-              _this49.mapGuide(node.position);
+              _this57.mapQuestHighlight(node);
+              _this57.mapGuide(node.position);
             }
-            var banner = _this49.slicedArt('map-parchment', 0, 0, 104, 37, node);
-            if (banner) banner.getComponent(Sprite).grayscale = !ready;else _this49.box('地图名称备用底框', 0, 0, 104, 37, ready ? '#f8dfb4' : '#c3b9a9', node);
-            var title = _this49.label(locationNames[id], 0, 0, 82, 16, node);
+            var banner = _this57.slicedArt('map-parchment', 0, 0, 104, 37, node);
+            if (banner) banner.getComponent(Sprite).grayscale = !ready;else _this57.box('地图名称备用底框', 0, 0, 104, 37, ready ? '#f8dfb4' : '#c3b9a9', node);
+            var title = _this57.label(locationNames[id], 0, 0, 82, 16, node);
             title.isBold = true;
             title.color = Color.fromHEX(new Color(), ready ? '#573724' : '#625b54');
-            if (((_this49$hunt = _this49.hunt) == null ? void 0 : _this49$hunt.state) === 'active' && _this49.hunt.target === id) {
-              var badge = _this49.box('讨伐标记', 41, 17, 21, 21, undefined, node);
-              var ink = badge.addComponent(Graphics);
+            if (((_this57$hunt = _this57.hunt) == null ? void 0 : _this57$hunt.state) === 'active' && _this57.hunt.target === id) {
+              var _badge = _this57.box('讨伐标记', 41, 17, 21, 21, undefined, node);
+              var ink = _badge.addComponent(Graphics);
               ink.fillColor = Color.fromHEX(new Color(), '#d63c41');
               ink.strokeColor = Color.fromHEX(new Color(), '#622331');
               ink.lineWidth = 2;
               ink.circle(0, 0, 9);
               ink.fill();
               ink.stroke();
-              _this49.outline(_this49.label('!', 0, 0, 17, 14, badge));
+              _this57.outline(_this57.label('!', 0, 0, 17, 14, _badge));
             }
             var visit = /*#__PURE__*/function () {
-              var _ref37 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee28() {
+              var _ref38 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee35() {
                 var _root$getChildByName2, _root$getChildByName3, _root$getChildByName4;
                 var path, places, travelTime, pathPoints;
-                return _regeneratorRuntime().wrap(function _callee28$(_context30) {
-                  while (1) switch (_context30.prev = _context30.next) {
+                return _regeneratorRuntime().wrap(function _callee35$(_context37) {
+                  while (1) switch (_context37.prev = _context37.next) {
                     case 0:
-                      if (!(traveling || !ready || _this49.ui !== root || guide && id !== 'village')) {
-                        _context30.next = 2;
+                      if (!(traveling || !ready || _this57.ui !== root || guide && id !== 'village')) {
+                        _context37.next = 2;
                         break;
                       }
-                      return _context30.abrupt("return");
+                      return _context37.abrupt("return");
                     case 2:
                       path = worldRoute(current, id, function (point) {
-                        return !locations.includes(point) || unlocked(point, _this49.cleared);
+                        return !locations.includes(point) || unlocked(point, _this57.cleared);
                       });
                       if (path.length) {
-                        _context30.next = 5;
+                        _context37.next = 5;
                         break;
                       }
-                      return _context30.abrupt("return");
+                      return _context37.abrupt("return");
                     case 5:
                       traveling = true;
                       (_root$getChildByName2 = root.getChildByName('引导手套')) == null || _root$getChildByName2.destroy();
@@ -10973,74 +13022,76 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                       (_root$getChildByName4 = root.getChildByName('村庄教学遮罩')) == null || _root$getChildByName4.destroy();
                       if (caption) caption.string = '前往' + locationNames[id];
                       if (!(path.length > 1)) {
-                        _context30.next = 16;
+                        _context37.next = 18;
                         break;
                       }
-                      places = _this49.mapTravelViews(current, id);
+                      places = _this57.mapTravelViews(current, id);
                       travelTime = Math.max(1.3, (places.length - 1) * .46, path.length * .24);
-                      pathPoints = worldTrack(path).map(at);
-                      _context30.next = 16;
-                      return Promise.all([_this49.walkParty(travelTime, places), _this49.moveMapToken(token, pathPoints, tokenY, travelTime)]);
-                    case 16:
-                      if (!(_this49.ui !== root)) {
-                        _context30.next = 18;
-                        break;
-                      }
-                      return _context30.abrupt("return");
+                      pathPoints = worldTrack(path).slice(0, -1).map(at);
+                      pathPoints.push(at(_this57.mapLabelPoint(id)));
+                      if (current !== id) pathPoints.unshift(at(worldPoints[current]));
+                      _context37.next = 18;
+                      return Promise.all([_this57.walkParty(travelTime, places), _this57.moveMapToken(token, pathPoints, tokenY, travelTime)]);
                     case 18:
+                      if (!(_this57.ui !== root)) {
+                        _context37.next = 20;
+                        break;
+                      }
+                      return _context37.abrupt("return");
+                    case 20:
                       if (!(id === 'village')) {
-                        _context30.next = 24;
+                        _context37.next = 26;
                         break;
                       }
-                      _this49.location = locations.indexOf(id);
-                      _this49.villageGuidePending = false;
-                      _this49.save();
-                      _this49.village();
-                      return _context30.abrupt("return");
-                    case 24:
-                      _this49.audio.play('door');
-                      _context30.next = 27;
-                      return _this49.curtain(false);
-                    case 27:
-                      if (!(_this49.ui !== root)) {
-                        _context30.next = 29;
-                        break;
-                      }
-                      return _context30.abrupt("return");
+                      _this57.location = locations.indexOf(id);
+                      _this57.villageGuidePending = false;
+                      _this57.save();
+                      _this57.village();
+                      return _context37.abrupt("return");
+                    case 26:
+                      _this57.audio.play('door');
+                      _context37.next = 29;
+                      return _this57.curtain(false);
                     case 29:
-                      _this49.location = locations.indexOf(id);
-                      _this49.save();
-                      _this49.enter(id, function () {
-                        return _this49.curtain(true);
+                      if (!(_this57.ui !== root)) {
+                        _context37.next = 31;
+                        break;
+                      }
+                      return _context37.abrupt("return");
+                    case 31:
+                      _this57.location = locations.indexOf(id);
+                      _this57.save();
+                      _this57.enter(id, function () {
+                        return _this57.curtain(true);
                       });
-                    case 32:
+                    case 34:
                     case "end":
-                      return _context30.stop();
+                      return _context37.stop();
                   }
-                }, _callee28);
+                }, _callee35);
               }));
               return function visit() {
-                return _ref37.apply(this, arguments);
+                return _ref38.apply(this, arguments);
               };
             }();
             node.on(Node.EventType.TOUCH_END, visit);
             settlement == null || settlement.on(Node.EventType.TOUCH_END, visit);
             if (id === 'village') villageArt == null || villageArt.on(Node.EventType.TOUCH_END, visit);
           };
-          for (var _iterator33 = _createForOfIteratorHelperLoose(locations), _step33; !(_step33 = _iterator33()).done;) {
-            _loop7();
+          for (var _iterator40 = _createForOfIteratorHelperLoose(locations), _step40; !(_step40 = _iterator40()).done;) {
+            _loop8();
           }
           token == null || token.setSiblingIndex(this.ui.children.length - 1);
           if (guide) this.label('点击高亮的溪桥村', 0, -364, 240, 16);
           var footerY = guide ? -399 : -386;
           this.button('小队配置', footerY, function () {
-            if (!traveling && !guide) _this49.roster();
+            if (!traveling && !guide) _this57.roster();
           }, -145, 135);
           this.button('规则', footerY, function () {
-            if (!traveling && !guide) _this49.showRules();
+            if (!traveling && !guide) _this57.showRules();
           }, 0, 112);
           this.button('返回主菜单', footerY, function () {
-            if (!traveling && !guide) _this49.menu();
+            if (!traveling && !guide) _this57.menu();
           }, 145, 135);
         };
         _proto.mapGuide = function mapGuide(target) {
@@ -11060,10 +13111,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         };
         _proto.mapQuestHighlight = function mapQuestHighlight(node) {
           var glow = this.box('任务目标高亮', 0, 0, 120, 50, undefined, node).addComponent(Graphics);
-          for (var _i9 = 0, _arr5 = [[14, 20], [9, 42], [5, 98], [2, 255]]; _i9 < _arr5.length; _i9++) {
-            var _arr5$_i = _arr5[_i9],
-              _width = _arr5$_i[0],
-              alpha = _arr5$_i[1];
+          for (var _i13 = 0, _arr6 = [[14, 20], [9, 42], [5, 98], [2, 255]]; _i13 < _arr6.length; _i13++) {
+            var _arr6$_i = _arr6[_i13],
+              _width = _arr6$_i[0],
+              alpha = _arr6$_i[1];
             glow.strokeColor = new Color(255, 207, 79, alpha);
             glow.lineWidth = _width;
             glow.roundRect(-52, -17, 104, 34, 9);
@@ -11071,7 +13122,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }
         };
         _proto.moveMapToken = function moveMapToken(token, points, floorOffset, seconds) {
-          var _this50 = this;
+          var _this58 = this;
           if (!token || !points.length) return Promise.resolve();
           return new Promise(function (resolve) {
             var motion = tween(token);
@@ -11088,7 +13139,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               return sum + length;
             }, 0);
             targets.forEach(function (position, i) {
-              return motion.to(_this50.travelDuration(seconds * lengths[i] / Math.max(1, total)), {
+              return motion.to(_this58.travelDuration(seconds * lengths[i] / Math.max(1, total)), {
                 position: position
               });
             });
@@ -11098,25 +13149,25 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           });
         };
         _proto.showRules = function showRules(tab, back) {
-          var _this51 = this;
+          var _this59 = this;
           if (tab === void 0) {
             tab = 0;
           }
           if (back === void 0) {
             back = function back() {
-              return _this51.map();
+              return _this59.map();
             };
           }
           var labels = ['战斗', '探索', '存档'];
           var lines = [['交换相邻纹章。剑和星攻击，盾回复 DP，心恢复 HP。', '四连留下银框技能纹章，再消触发小技能。', '五格以上留下金色高级纹章，再消触发大招。'], ['首战直接开始，战斗结束后队伍自动前进。', '商人、剧情和分支门需要先完成当前选择。'], ['局外装备、资源、进度与成长自动保存。', '刷新会结束当前地牢并恢复出发前的存档。', '通关、主动撤离、失败分别保留全部、70%、50% 战利品。']];
           this.page('冒险规则', '');
           labels.forEach(function (label, i) {
-            return _this51.button(label, 88, function () {
-              return _this51.showRules(i, back);
+            return _this59.button(label, 88, function () {
+              return _this59.showRules(i, back);
             }, (i - 1) * 143, 132);
           });
           lines[tab].forEach(function (line, i) {
-            return _this51.label(line, 0, 10 - i * 55, 444, 19);
+            return _this59.label(line, 0, 10 - i * 55, 444, 19);
           });
           this.button('返回', -370, back, 0, 180);
         };
@@ -11135,27 +13186,28 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           return 'stage-' + id + '-' + (dungeonReels[id].stops.length - 1);
         };
         _proto.dungeonBackdrop = function dungeonBackdrop(depth) {
-          var _this$adventure$id, _this$adventure4, _this$dungeon$rooms$l, _this$dungeon6;
+          var _this$adventure$id, _this$adventure5, _this$dungeon$rooms$l2, _this$dungeon12;
           if (depth === void 0) {
-            var _this$dungeon$depth, _this$dungeon5;
-            depth = (_this$dungeon$depth = (_this$dungeon5 = this.dungeon) == null ? void 0 : _this$dungeon5.depth) != null ? _this$dungeon$depth : 0;
+            var _this$dungeon$depth, _this$dungeon11;
+            depth = (_this$dungeon$depth = (_this$dungeon11 = this.dungeon) == null ? void 0 : _this$dungeon11.depth) != null ? _this$dungeon$depth : 0;
           }
-          var id = (_this$adventure$id = (_this$adventure4 = this.adventure) == null ? void 0 : _this$adventure4.id) != null ? _this$adventure$id : 'forest';
-          var count = (_this$dungeon$rooms$l = (_this$dungeon6 = this.dungeon) == null ? void 0 : _this$dungeon6.rooms.length) != null ? _this$dungeon$rooms$l : 1;
+          var id = (_this$adventure$id = (_this$adventure5 = this.adventure) == null ? void 0 : _this$adventure5.id) != null ? _this$adventure$id : 'forest';
+          var count = (_this$dungeon$rooms$l2 = (_this$dungeon12 = this.dungeon) == null ? void 0 : _this$dungeon12.rooms.length) != null ? _this$dungeon$rooms$l2 : 1;
           var last = dungeonReels[id].stops.length - 1;
+          if (id === 'forest' && !this.useForestReel) return 'stage-forest-' + Math.max(0, depth);
           if (depth >= count - 1 && count > 1) return this.lastDungeonBackdrop(id);
           return 'stage-' + id + '-' + Math.max(0, Math.min(depth, last - 1));
         };
         _proto.mapTravelViews = function mapTravelViews(from, to) {
-          var _this52 = this;
+          var _this60 = this;
           return [this.locationBackdrop(from), 'travel-plains', this.locationBackdrop(to)].filter(function (name, index, frames) {
-            return (_this52.textures.has(name) || _this52.stageFrames.has(name)) && name !== frames[index - 1];
+            return (_this60.textures.has(name) || _this60.stageFrames.has(name)) && name !== frames[index - 1];
           });
         };
-        _proto.walkParty = function walkParty(seconds, views, direction) {
+        _proto.walkParty = function walkParty(seconds, views, direction, incoming) {
           var _sequence$,
             _sequence$2,
-            _this53 = this;
+            _this61 = this;
           if (direction === void 0) {
             direction = 1;
           }
@@ -11185,16 +13237,16 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               progress: labTo
             }, {
               onUpdate: function onUpdate() {
-                if (backdrop.isValid && _this53.ui === root) _this53.positionForestLab(backdrop, camera.progress);
+                if (backdrop.isValid && _this61.ui === root) _this61.positionForestLab(backdrop, camera.progress);
               }
             })).then(function (played) {
-              if (played && backdrop.isValid && _this53.ui === root) _this53.positionForestLab(backdrop, labTo);
+              if (played && backdrop.isValid && _this61.ui === root) _this61.positionForestLab(backdrop, labTo);
             }));
           } else if (backdrop && fromRoom && toRoom && sceneryFrame && reelInfo) {
             var layer = backdrop.getSiblingIndex();
-            var _frame3 = this.box('行进风景', 0, centerY, width, height);
-            _frame3.addComponent(Mask).type = Mask.Type.GRAPHICS_RECT;
-            _frame3.setSiblingIndex(layer);
+            var _frame2 = this.box('行进风景', 0, centerY, width, height);
+            _frame2.addComponent(Mask).type = Mask.Type.GRAPHICS_RECT;
+            _frame2.setSiblingIndex(layer);
             backdrop.removeFromParent();
             backdrop.destroy();
             if (reelName !== 'forest-reel') {
@@ -11203,9 +13255,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               this.stageTravel = new StageTravel(Math.ceil(reelInfo.width / width), width, 1, function (index) {
                 var start = index * width;
                 var span = Math.min(width, reelInfo.width - start);
-                var chunk = _this53.box(reelName + ' ' + index, 0, 0, width, height, undefined, _frame3);
-                var crop = _this53.frameCrop(sceneryFrame, rect.x + start * pixelScale, rect.y, span * pixelScale, rect.height);
-                _this53.paintFrame(reelName, crop, (span - width) / 2, 0, span, height, chunk);
+                var chunk = _this61.box(reelName + ' ' + index, 0, 0, width, height, undefined, _frame2);
+                var crop = _this61.frameCrop(sceneryFrame, rect.x + start * pixelScale, rect.y, span * pixelScale, rect.height);
+                _this61.paintFrame(reelName, crop, (span - width) / 2, 0, span, height, chunk);
                 chunk.once(Node.EventType.NODE_DESTROYED, function () {
                   return crop.destroy();
                 });
@@ -11219,7 +13271,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               var offset = function offset(n) {
                 return (.5 - reelInfo.stops[Number(n)]) * (reelInfo.width - width);
               };
-              var reel = this.paintFrame(reelName, sceneryFrame, offset(fromRoom[2]), 0, reelInfo.width, height, _frame3);
+              var reel = this.paintFrame(reelName, sceneryFrame, offset(fromRoom[2]), 0, reelInfo.width, height, _frame2);
               movements.push(walking.play(tween(reel).to(seconds, {
                 position: new Vec3(offset(toRoom[2]), 0, 0)
               })).then(function () {}));
@@ -11232,15 +13284,65 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             backdrop.setParent(viewport);
             backdrop.setPosition(0, 0);
             this.stageTravel = new StageTravel(sequence.length, width, direction, function (index) {
-              return _this53.stageBackdrop(sequence[index], 0, 0, viewport);
+              return _this61.stageBackdrop(sequence[index], 0, 0, viewport);
             }, backdrop);
             movements.push(this.stageTravel.play(seconds));
           }
-          var _loop8 = function _loop8() {
+          if (incoming != null && incoming.length) {
+            var distance = width;
+            if (labFrom !== undefined && labTo !== undefined) distance = Math.abs(labTo - labFrom) * (this.forestLayout.bounds.ground[0] - width);else if (fromRoom && toRoom && reelInfo) distance = Math.abs(reelInfo.stops[Number(toRoom[2])] - reelInfo.stops[Number(fromRoom[2])]) * (reelInfo.width - width);
+            var preview = this.box('行进遇敌', 0, centerY, width, height, undefined, root);
+            preview.addComponent(Mask).type = Mask.Type.GRAPHICS_RECT;
+            var front = root.getChildByName('400 森林前景');
+            if (front) preview.setSiblingIndex(front.getSiblingIndex());
+            var actors = incoming.map(function (foe, i) {
+              var _actorArt$foe$art3;
+              var _this61$enemyPlacemen = _this61.enemyPlacement(foe, incoming.length, i),
+                x = _this61$enemyPlacemen.x,
+                y = _this61$enemyPlacemen.y,
+                size = _this61$enemyPlacemen.size,
+                ground = _this61$enemyPlacemen.ground;
+              var node = _this61.box('遇敌预览 ' + i, x + distance, y - centerY, size, size, undefined, preview);
+              _this61.groundShadow(node, ground - y, foe.art, size);
+              var portrait = _this61.art(foe.art, 0, 0, size, size, node);
+              portrait == null || portrait.setScale(((_actorArt$foe$art3 = actorArt[foe.art]) == null ? void 0 : _actorArt$foe$art3.sourceFacing) === 'left' ? 1 : -1, 1, 1);
+              return {
+                node: node,
+                x: x,
+                y: y - centerY
+              };
+            });
+            var _state = {
+              offset: 0
+            };
+            var audit = this.encounterTravelAudit = {
+              distance: distance,
+              seconds: seconds,
+              samples: []
+            };
+            movements.push(walking.play(tween(_state).to(seconds, {
+              offset: distance
+            }, {
+              onUpdate: function onUpdate() {
+                if (_this61.ui !== root) return;
+                actors.forEach(function (_ref39) {
+                  var node = _ref39.node,
+                    x = _ref39.x,
+                    y = _ref39.y;
+                  if (node.isValid) node.setPosition(x + distance - _state.offset, y);
+                });
+                if (audit.samples.length < 90) audit.samples.push({
+                  time: _state.offset / Math.max(distance, 1) * seconds,
+                  x: actors[0].x + distance - _state.offset
+                });
+              }
+            })).then(function () {}));
+          }
+          var _loop9 = function _loop9() {
             var _portraitBottomPaddin2, _portrait$name2;
-            var _step34$value = _step34.value,
-              heroIndex = _step34$value[0],
-              hero = _step34$value[1];
+            var _step41$value = _step41.value,
+              heroIndex = _step41$value[0],
+              hero = _step41$value[1];
             var home = hero.position.clone();
             var portrait = hero.children.find(function (n) {
               return n.getComponent(Sprite);
@@ -11278,20 +13380,22 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               });
             }));
           };
-          for (var _iterator34 = _createForOfIteratorHelperLoose(Array.from(this.heroes.values()).entries()), _step34; !(_step34 = _iterator34()).done;) {
-            _loop8();
+          for (var _iterator41 = _createForOfIteratorHelperLoose(Array.from(this.heroes.values()).entries()), _step41; !(_step41 = _iterator41()).done;) {
+            _loop9();
           }
           var finishWalking = this.audio.beginWalking();
           root.once(Node.EventType.NODE_DESTROYED, function () {
             return walking.cancel();
           });
-          return Promise.all(movements)["finally"](function () {
+          return Promise.all(movements).then(function () {
+            return !walking.cancelled && _this61.ui === root;
+          })["finally"](function () {
             finishWalking();
-            _this53.pageMotions["delete"](walking);
+            _this61.pageMotions["delete"](walking);
           });
         };
         _proto.curtain = function curtain(opening) {
-          var _this54 = this;
+          var _this62 = this;
           var root = this.ui;
           var centerY = stageGrid.centerY,
             width = stageGrid.width,
@@ -11305,13 +13409,13 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             ink.clear();
             ink.fillColor = Color.BLACK;
             var cell = 10;
-            for (var _x46 = 0; _x46 < width; _x46 += cell) {
-              var offset = (opening ? width - _x46 - cell : _x46) / (width - cell);
+            for (var _x60 = 0; _x60 < width; _x60 += cell) {
+              var offset = (opening ? width - _x60 - cell : _x60) / (width - cell);
               var growth = Math.max(0, Math.min(1, (state.progress - offset * .66) / .34));
               var size = cell * (opening ? 1 - growth : growth);
               if (!size) continue;
               for (var y = 0; y < height; y += cell) {
-                var left = _x46 + (cell - size) / 2;
+                var left = _x60 + (cell - size) / 2;
                 var bottom = y + (cell - size) / 2;
                 ink.rect(left - width / 2, bottom - height / 2, size, size);
               }
@@ -11320,11 +13424,11 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           };
           draw();
           return new Promise(function (resolve) {
-            tween(state).to(_this54.travelDuration(.46), {
+            tween(state).to(_this62.travelDuration(.46), {
               progress: 1
             }, {
               onUpdate: function onUpdate() {
-                if (overlay.isValid && _this54.ui === root) draw();
+                if (overlay.isValid && _this62.ui === root) draw();
               }
             }).call(function () {
               if (opening && overlay.isValid) overlay.destroy();
@@ -11333,13 +13437,13 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           });
         };
         _proto.roster = function roster(selected, back) {
-          var _this55 = this;
+          var _this63 = this;
           if (selected === void 0) {
             selected = this.party[0];
           }
           if (back === void 0) {
             back = function back() {
-              return _this55.map();
+              return _this63.map();
             };
           }
           var hero = heroes[selected];
@@ -11354,26 +13458,26 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.label('HP ' + stats.hp + '　DP ' + stats.dp + '　攻击 ' + stats.attack + '　EXP ' + rank.progress + '/' + rank.level * 2, 0, 155, 336, 15);
           var root = this.ui;
           var active = function active() {
-            return _this55.ui === root && !root.getChildByName('物品操作');
+            return _this63.ui === root && !root.getChildByName('物品操作');
           };
           var cycle = function cycle(offset) {
-            if (!active() || _this55.party.length < 2) return;
-            var index = _this55.party.indexOf(selected);
-            _this55.roster(_this55.party[(index + offset + _this55.party.length) % _this55.party.length], back);
+            if (!active() || _this63.party.length < 2) return;
+            var index = _this63.party.indexOf(selected);
+            _this63.roster(_this63.party[(index + offset + _this63.party.length) % _this63.party.length], back);
           };
-          var _loop9 = function _loop9() {
-            var side = _arr6[_i10];
-            var arrow = _this55.box(side < 0 ? '上一位角色' : '下一位角色', side * 205, 267, 44, 54);
-            var frame = _this55.textures.get('trial-ui-back');
+          var _loop10 = function _loop10() {
+            var side = _arr7[_i14];
+            var arrow = _this63.box(side < 0 ? '上一位角色' : '下一位角色', side * 205, 267, 44, 54);
+            var frame = _this63.textures.get('trial-ui-back');
             var fit = frame ? Math.min(34 / frame.originalSize.width, 42 / frame.originalSize.height) : 1;
-            var icon = frame ? _this55.art('trial-ui-back', 0, 0, frame.originalSize.width * fit, frame.originalSize.height * fit, arrow) : undefined;
-            if (icon) icon.setScale(-side, 1, 1);else _this55.outline(_this55.label(side < 0 ? '‹' : '›', 0, 0, 40, 31, arrow));
+            var icon = frame ? _this63.art('trial-ui-back', 0, 0, frame.originalSize.width * fit, frame.originalSize.height * fit, arrow) : undefined;
+            if (icon) icon.setScale(-side, 1, 1);else _this63.outline(_this63.label(side < 0 ? '‹' : '›', 0, 0, 40, 31, arrow));
             arrow.on(Node.EventType.TOUCH_END, function () {
               return cycle(side);
             });
           };
-          for (var _i10 = 0, _arr6 = [-1, 1]; _i10 < _arr6.length; _i10++) {
-            _loop9();
+          for (var _i14 = 0, _arr7 = [-1, 1]; _i14 < _arr7.length; _i14++) {
+            _loop10();
           }
           var slots = [{
             id: 'weapon',
@@ -11400,29 +13504,32 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             x: 133,
             y: 242
           }];
-          var _loop10 = function _loop10() {
-            var slot = _slots[_i11];
+          var _loop11 = function _loop11() {
+            var slot = _slots[_i15];
             var item = equipment.find(function (entry) {
-              return entry.id === _this55.inventory.slots[selected + ':' + slot.id];
+              return entry.id === _this63.inventory.slots[selected + ':' + slot.id];
             });
-            var node = _this55.box(slot.name, slot.x, slot.y, 71, 71, item ? '#694e2d' : '#263a35');
-            var backdrop = _this55.art(slot.icon, 0, 0, 50, 50, node);
-            if (backdrop) backdrop.addComponent(UIOpacity).opacity = item ? 88 : 126;
-            if (item) _this55.outline(_this55.label(item.name, 0, -24, 69, 13, node));
+            var node = _this63.box(slot.name, slot.x, slot.y, 71, 71);
+            var backdrop = _this63.art(item ? 'tool-base' : slot.icon, 0, 0, item ? 71 : 50, item ? 71 : 50, node);
+            if (backdrop && !item) backdrop.addComponent(UIOpacity).opacity = 126;
+            if (item) {
+              _this63.art('gear-' + item.id, 0, 4, 49, 49, node);
+              _this63.outline(_this63.label(item.name, 0, -24, 69, 13, node));
+            }
             node.on(Node.EventType.TOUCH_END, function () {
               if (!active()) return;
               if (item) {
-                _this55.gearActions(item.id, true, selected, back);
+                _this63.gearActions(item.id, true, selected, back);
                 return;
               }
               var compatible = equipment.find(function (entry) {
-                return entry.owner === selected && entry.slot === slot.id && _this55.inventory.bag.includes(entry.id);
+                return entry.owner === selected && entry.slot === slot.id && _this63.inventory.bag.includes(entry.id);
               });
-              if (compatible) _this55.gearActions(compatible.id, false, selected, back);else _this55.popup('没有可装配物品', 0, 108);
+              if (compatible) _this63.gearActions(compatible.id, false, selected, back);else _this63.popup('没有可装配物品', 0, 108);
             });
           };
-          for (var _i11 = 0, _slots = slots; _i11 < _slots.length; _i11++) {
-            _loop10();
+          for (var _i15 = 0, _slots = slots; _i15 < _slots.length; _i15++) {
+            _loop11();
           }
           this.box('背包底板', 0, -106, 430, 447, '#263931');
           this.label('背包', 0, 91, 400, 23).isBold = true;
@@ -11432,45 +13539,42 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             icon: '',
             item: null
           }] : [], equipment.filter(function (item) {
-            return _this55.inventory.bag.includes(item.id);
+            return _this63.inventory.bag.includes(item.id);
           }).map(function (item) {
-            var _slots$find$icon, _slots$find;
             return {
               id: item.id,
               label: item.name,
-              icon: (_slots$find$icon = (_slots$find = slots.find(function (slot) {
-                return slot.id === item.slot;
-              })) == null ? void 0 : _slots$find.icon) != null ? _slots$find$icon : '',
+              icon: 'gear-' + item.id,
               item: item
             };
           }));
-          var _loop11 = function _loop11() {
-            var content = bag[_index8];
-            var x = (_index8 % 4 - 1.5) * 102,
-              y = 28 - Math.floor(_index8 / 4) * 108;
-            var cell = _this55.box(content ? '背包 · ' + content.label : '空背包格 ' + _index8, x, y, 94, 100, content ? '#47604c' : '#31473b');
+          var _loop12 = function _loop12() {
+            var content = bag[_index15];
+            var x = (_index15 % 4 - 1.5) * 102,
+              y = 28 - Math.floor(_index15 / 4) * 108;
+            var cell = _this63.box(content ? '背包 · ' + content.label : '空背包格 ' + _index15, x, y, 94, 100, content ? '#47604c' : '#31473b');
             if (!content) return 1; // continue
-            if (content.id === 'potion') _this55.drawPotion(cell);else if (!_this55.art(content.icon, 0, 11, 45, 45, cell)) _this55.label('◇', 0, 11, 45, 25, cell);
-            _this55.label(content.label, 0, -28, 90, 15, cell);
+            if (content.id === 'potion') _this63.drawPotion(cell);else if (!_this63.art(content.icon, 0, 11, 45, 45, cell)) _this63.label('◇', 0, 11, 45, 25, cell);
+            _this63.label(content.label, 0, -28, 90, 15, cell);
             cell.on(Node.EventType.TOUCH_END, function () {
               if (!active()) return;
-              if (content.id !== 'potion') _this55.gearActions(content.id, false, selected, back);else _this55.itemActions('治疗药水', '恢复至多 45 HP。', [['使用药水', function () {
-                if (!_this55.potion || _this55.hp >= _this55.maxHP) return false;
-                _this55.potion--;
-                _this55.hp = Math.min(_this55.maxHP, _this55.hp + 45);
-                _this55.audio.play('potion');
+              if (content.id !== 'potion') _this63.gearActions(content.id, false, selected, back);else _this63.itemActions('治疗药水', '恢复至多 45 HP。', [['使用药水', function () {
+                if (!_this63.potion || _this63.hp >= _this63.maxHP) return false;
+                _this63.potion--;
+                _this63.hp = Math.min(_this63.maxHP, _this63.hp + 45);
+                _this63.audio.play('potion');
                 return true;
               }], ['丢弃 1 瓶', function () {
-                if (!_this55.potion) return false;
-                _this55.potion--;
+                if (!_this63.potion) return false;
+                _this63.potion--;
                 return true;
               }]], function () {
-                return _this55.roster(selected, back);
+                return _this63.roster(selected, back);
               });
             });
           };
-          for (var _index8 = 0; _index8 < 12; _index8++) {
-            if (_loop11()) continue;
+          for (var _index15 = 0; _index15 < 12; _index15++) {
+            if (_loop12()) continue;
           }
           this.button('返回地图', -380, back, 0, 300);
         };
@@ -11493,7 +13597,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         };
         _proto.gearActions = function gearActions(id, equipped, selected, back) {
           var _item$effect,
-            _this56 = this;
+            _this64 = this;
           var item = equipment.find(function (entry) {
             return entry.id === id;
           });
@@ -11501,17 +13605,17 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var description = [item.attack ? '攻击 +' + item.attack : '', item.hp ? 'HP +' + item.hp : '', item.dp ? 'DP +' + item.dp : '', (_item$effect = item.effect) != null ? _item$effect : ''].filter(Boolean).join(' · ');
           var actions = [];
           if (equipped || this.party.includes(item.owner)) actions.push([equipped ? '卸下装备' : '装备给' + heroes[item.owner].name, function () {
-            return _this56.inventory.hasEquipped(id) === equipped && _this56.inventory.toggle(id);
+            return _this64.inventory.hasEquipped(id) === equipped && _this64.inventory.toggle(id);
           }]);
           actions.push(['丢弃装备', function () {
-            return _this56.inventory.discard(id);
+            return _this64.inventory.discard(id);
           }]);
           this.itemActions(item.name, description, actions, function () {
-            return _this56.roster(selected, back);
+            return _this64.roster(selected, back);
           });
         };
         _proto.itemActions = function itemActions(title, detail, actions, redraw) {
-          var _this57 = this;
+          var _this65 = this;
           var root = this.ui;
           var overlay = this.box('物品操作', 0, 0, 480, 854, '#101913c2');
           overlay.on(Node.EventType.TOUCH_START, function () {});
@@ -11519,19 +13623,19 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.box('物品操作卡', 0, -75, 394, 320, '#2b4037', overlay);
           this.label(title, 0, 47, 340, 25, overlay).isBold = true;
           this.label(detail, 0, 4, 345, 16, overlay);
-          actions.forEach(function (_ref38, index) {
-            var label = _ref38[0],
-              perform = _ref38[1];
-            var button = _this57.button(label, -62 - index * 62, function () {
-              if (_this57.ui !== root || !overlay.isValid) return;
+          actions.forEach(function (_ref40, index) {
+            var label = _ref40[0],
+              perform = _ref40[1];
+            var button = _this65.button(label, -62 - index * 62, function () {
+              if (_this65.ui !== root || !overlay.isValid) return;
               if (!perform()) {
-                _this57.popup('现在无法执行', 0, 146);
+                _this65.popup('现在无法执行', 0, 146);
                 return;
               }
-              _this57.hp = Math.min(_this57.hp, _this57.maxHP);
-              _this57.dp = Math.min(_this57.dp, _this57.maxDP);
-              _this57.audio.play('equip');
-              _this57.save();
+              _this65.hp = Math.min(_this65.hp, _this65.maxHP);
+              _this65.dp = Math.min(_this65.dp, _this65.maxDP);
+              _this65.audio.play('equip');
+              _this65.save();
               redraw();
             }, 0, 294);
             button.setParent(overlay);
@@ -11543,106 +13647,170 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           close.setParent(overlay);
         };
         _proto.village = function village() {
-          var _this58 = this;
+          var _this66 = this;
+          if (this.deferContent(function () {
+            return _this66.village();
+          })) return;
           this.save();
           var guided = !this.reported;
-          var findRoland = this.reported && !this.party.includes('d');
-          var quest = guided ? '点击描金的村长家，交付村徽' : findRoland ? '前往酒馆，与盾卫罗兰会合' : '休整或领取讨伐委托';
+          var findRoland = this.town.knightQuest && !this.party.includes('d');
+          var chiefTask = this.town.rescued && !this.reported || this.reported && !this.party.includes('d') && !this.town.knightQuest || this.cleared.has('swamp') && !this.party.includes('m') && !this.town.mageQuest;
+          var quest = guided ? '点击红色任务标记的村长家' : findRoland ? '前往酒馆，与盾卫罗兰会合' : '休整或领取委托';
           this.page('溪桥村', quest, 'village-stage');
-          var hasGround = this.textures.has('village-ground');
-          this.art(hasGround ? 'village-ground' : 'village', 0, -129, 464, 464);
-          if (hasGround) this.villageGarden(122, -239);
+          this.art('village-navigation', 0, -129, 464, 464);
+          // Building anchors measured from the supplied 1254-square navigation map.
           var destinations = [{
             name: '村长家',
+            caption: '村长家',
             art: 'chief',
-            x: 0,
-            y: 13,
-            highlight: guided,
+            x: -128,
+            y: -24,
+            highlight: chiefTask,
             action: function action() {
-              return _this58.chief();
+              return _this66.chief();
             }
           }, {
             name: '商店',
+            caption: '商店',
             art: 'shop',
-            x: -134,
-            y: -67,
+            x: 125,
+            y: -167,
             highlight: false,
             action: function action() {
-              return _this58.villageShop();
+              return _this66.villageShop();
             }
           }, {
             name: '铁匠铺',
+            caption: '铁匠铺',
             art: 'smith',
-            x: -123,
-            y: -235,
+            x: 155,
+            y: -39,
             highlight: false,
             action: function action() {
-              return _this58.smithy();
+              return _this66.smithy();
             }
           }, {
             name: '酒馆',
+            caption: '酒馆',
             art: 'tavern',
-            x: 134,
-            y: -67,
+            x: -116,
+            y: -160,
             highlight: findRoland,
             action: function action() {
-              return _this58.tavern();
+              return _this66.tavern();
+            }
+          }, {
+            name: '祭坛',
+            caption: '教堂',
+            art: 'altar',
+            x: 32,
+            y: 37,
+            highlight: false,
+            action: function action() {
+              return _this66.altar();
             }
           }, {
             name: '村口 · 返回地图',
+            caption: '村口 · 返回地图',
             art: 'gate',
             x: 0,
-            y: -318,
+            y: -291,
             highlight: false,
             action: function action() {
-              return _this58.map();
+              return _this66.map();
             }
           }];
           var root = this.ui;
-          var _loop12 = function _loop12() {
-            var site = _destinations[_i12];
+          var _loop13 = function _loop13() {
+            var site = _destinations[_i16];
             var gate = site.art === 'gate';
             var width = gate ? 180 : 151;
             var height = gate ? 64 : 112;
-            var node = _this58.box(site.name, site.x, site.y, width, height);
-            if (site.highlight) {
-              var glow = _this58.box('任务金光', 0, 0, width + 10, height + 10, undefined, node).addComponent(Graphics);
-              for (var _iterator35 = _createForOfIteratorHelperLoose([[8, '#fbc84a30'], [4, '#ffd26360'], [0, '#fadd76']]), _step35; !(_step35 = _iterator35()).done;) {
-                var _step35$value = _step35.value,
-                  padding = _step35$value[0],
-                  color = _step35$value[1];
-                glow.strokeColor = Color.fromHEX(new Color(), color);
-                glow.lineWidth = padding ? 4 : 2.6;
-                glow.roundRect(-width / 2 - padding, -height / 2 - padding, width + padding * 2, height + padding * 2, 13);
-                glow.stroke();
-              }
-            }
-            if (hasGround) {
-              var _this58$textures$get;
-              var name = 'village-building-' + site.art;
-              var size = (_this58$textures$get = _this58.textures.get(name)) == null ? void 0 : _this58$textures$get.originalSize;
-              if (size) {
-                var spriteWidth = gate ? 84 : 143;
-                var spriteHeight = spriteWidth * size.height / size.width;
-                var baseY = gate ? -17 : -36;
-                _this58.art(name, 0, baseY + spriteHeight / 2, spriteWidth, spriteHeight, node);
-              }
-            }
-            var caption = _this58.label(site.name, 0, -height / 2 + 13, width - 18, 17, node);
+            var node = _this66.box(site.name, site.x, site.y, width, height);
+            if (site.highlight) _this66.taskMark(node, width / 2 - 12, -height / 2 + 13);
+            var caption = _this66.label(site.caption, 0, -height / 2 + 13, width - 18, 17, node);
             caption.color = Color.fromHEX(new Color(), '#523420');
             caption.isBold = true;
             caption.enableOutline = true;
             caption.outlineColor = Color.fromHEX(new Color(), '#fff0cf');
             caption.outlineWidth = 3;
             node.on(Node.EventType.TOUCH_END, function () {
-              if (_this58.ui !== root || guided && site.art !== 'chief') return;
-              _this58.audio.play('door');
+              if (_this66.ui !== root) return;
+              _this66.audio.play('door');
               site.action();
             });
           };
-          for (var _i12 = 0, _destinations = destinations; _i12 < _destinations.length; _i12++) {
-            _loop12();
+          for (var _i16 = 0, _destinations = destinations; _i16 < _destinations.length; _i16++) {
+            _loop13();
           }
+        };
+        _proto.taskMark = function taskMark(parent, x, y, text) {
+          if (text === void 0) {
+            text = '!';
+          }
+          var node = this.box('红色任务标记', x, y, 18, 18, undefined, parent);
+          var ink = node.addComponent(Graphics);
+          ink.fillColor = new Color(206, 49, 58);
+          ink.strokeColor = new Color(73, 30, 26);
+          ink.lineWidth = 2;
+          ink.circle(0, 0, 8);
+          ink.fill();
+          ink.stroke();
+          this.label(text, 0, 1, 14, 13, node).isBold = true;
+          return node;
+        };
+        _proto.townWrite = function townWrite(change) {
+          var _this$saveGate9;
+          var before = {
+            town: structuredClone(this.town),
+            hp: this.hp,
+            dp: this.dp,
+            gold: this.gold,
+            reported: this.reported,
+            party: [].concat(this.party)
+          };
+          if (!((_this$saveGate9 = this.saveGate) != null && _this$saveGate9.writable)) {
+            this.popup('当前页面不能写入存档', 0, 85);
+            return false;
+          }
+          change();
+          var result = this.save();
+          if (result === 'committed' || result === 'reconciled') return true;
+          if (result === 'uncertain') {
+            this.showRecoveryStop('操作结果无法核对，请重新加载。');
+            return false;
+          }
+          Object.assign(this, before);
+          this.popup('保存失败，未执行操作', 0, 85);
+          return false;
+        };
+        _proto.altar = function altar() {
+          var _this67 = this;
+          this.page('溪桥村祭坛', "\u796D\u575B\u795D\u798F " + this.town.altarCharge + "/1 \xB7 \u901A\u5173\u4EFB\u610F\u526F\u672C\u540E\u91CD\u65B0\u5145\u80FD\u3002", 'village-stage');
+          var source = this.textures.get('village-navigation');
+          if (source && !this.textures.has('altar-object')) this.textures.set('altar-object', this.frameCrop(source, source.rect.width * .41, source.rect.height * .01, source.rect.width * .23, source.rect.height * .28));
+          this.sceneActor('altar-object', 140, 114, '祭坛 ');
+          this.label('祝福：生命上限 +100，并恢复 100 HP。', 0, 46, 430, 20);
+          this.label('进入副本后持续，离开副本时消耗。', 0, 7, 430, 17);
+          this.button(this.town.blessing ? '已获得祝福' : "\u7948\u613F \xB7 \u514D\u8D39\u9886\u53D6 (" + this.town.altarCharge + "/1)", -59, function () {
+            var next = claimAltar(_this67.town, _this67.hp, _this67.baseMaxHP);
+            if (!next) {
+              _this67.popup(_this67.town.blessing ? '已有祝福' : '祭坛尚未充能', 0, 91);
+              return;
+            }
+            var root = _this67.ui;
+            void _this67.presentRecovery('hp', function () {
+              return _this67.townWrite(function () {
+                _this67.town = next.town;
+                _this67.hp = next.hp;
+              });
+            }).then(function () {
+              if (_this67.ui === root) _this67.altar();
+            });
+          });
+          this.button('返回村庄', -136, function () {
+            return _this67.village();
+          });
         };
         _proto.villageGarden = function villageGarden(x, y) {
           var g = this.box('村庄菜圃', x, y, 116, 89).addComponent(Graphics);
@@ -11685,7 +13853,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }));
         };
         _proto.sceneActor = function sceneActor(art, x, height, prefix, flip) {
-          var _this59 = this;
+          var _this68 = this;
           if (prefix === void 0) {
             prefix = '剧情人物 ';
           }
@@ -11704,65 +13872,133 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             if (portrait && x > 0 && !art.startsWith('hero-')) portrait.setScale(((_actorArt$art = actorArt[art]) == null ? void 0 : _actorArt$art.sourceFacing) === 'left' ? 1 : -1, 1, 1);
             if (flip) actor.setScale(-1, 1, 1);
             var partySpeaker = Object.values(heroes).some(function (hero) {
-              return hero.name === _this59.speechOwner;
+              return hero.name === _this68.speechOwner;
             });
-            if (this.speechOwner && !partySpeaker && !prefix.includes('道具')) this.popSpeaker(actor);
+            var owner = {
+              'npc-chief': '村长',
+              'npc-villager': '村民'
+            }[art];
+            if (this.speechOwner && !partySpeaker && !prefix.includes('道具') && (!owner || owner === this.speechOwner)) this.popSpeaker(actor);
             (_this$ui$getChildByNa2 = this.ui.getChildByName('400 森林前景')) == null || _this$ui$getChildByNa2.setSiblingIndex(this.ui.children.length - 1);
           }
           return new Vec3(x, y, 0);
         };
-        _proto.chief = function chief(step) {
-          var _this60 = this;
+        _proto.chief = function chief(step, topic) {
+          var _this69 = this;
           if (step === void 0) {
-            step = 0;
+            step = -1;
+          }
+          if (topic === void 0) {
+            topic = 'rescue';
           }
           this.audio.play('dialogue');
-          if (this.reported) {
-            this.townInterior('村长家', step ? '村长：运单盖着矿镇火印。问问酒馆里的罗兰，再沿旧道往北。' : '村长：村民已回家。归印会运走的东西还没查到。', 'chief', 'npc-chief', false);
-            if (!step) this.button('询问归印会的去向', 39, function () {
-              return _this60.chief(1);
+          var pending = this.town.rescued && !this.reported;
+          if (step < 0) {
+            this.townInterior('村长家', '村长：欢迎回来。有什么消息要告诉我？', 'chief', 'npc-chief', false);
+            if (pending) this.sceneActor('npc-villager', 65, 96, '康复村民 ');
+            var y = 52;
+            var option = function option(name, action, task) {
+              if (task === void 0) {
+                task = false;
+              }
+              var button = _this69.button(name, y, action);
+              if (task) _this69.taskMark(button, -153, 3);
+              y -= 68;
+            };
+            if (pending) option('拯救村民 · 交付任务', function () {
+              return _this69.chief(0);
+            }, true);
+            if (this.reported && !this.party.includes('d')) option(this.town.knightQuest ? '新队友 · 查看任务' : '新队友 · 领取任务', function () {
+              return _this69.chief(0, 'knight');
+            }, !this.town.knightQuest);
+            if (this.cleared.has('swamp') && !this.party.includes('m')) option(this.town.mageQuest ? '法师的下落 · 查看任务' : '法师的下落 · 领取任务', function () {
+              return _this69.chief(0, 'mage');
+            }, !this.town.mageQuest);
+            option('询问归印会的去向', function () {
+              return _this69.chief(0, 'order');
             });
-            this.button('返回村庄', -36, function () {
-              return _this60.village();
+            option('离开 · 返回村庄', function () {
+              return _this69.village();
             });
             return;
           }
-          var lines = ['村长：你带回了溪桥村的铜徽。林子里还有人吗？', '雷恩：我沿脚印找到他们，把他们从裂印兽旁带了回来。', '村长：那就好。徽章请交给我，这份酬金是大家凑的。'];
+          if (topic === 'order') {
+            this.townInterior('村长家', '村长：归印会运走了结界石。矿镇运单上留着火印，他们正沿旧道向北。', 'chief', 'npc-chief', false);
+            if (pending) this.sceneActor('npc-villager', 65, 96, '康复村民 ');
+            this.button('返回话题', 30, function () {
+              return _this69.chief();
+            });
+            return;
+          }
+          if (topic === 'knight' || topic === 'mage') {
+            var knight = topic === 'knight',
+              _active = knight ? this.town.knightQuest : this.town.mageQuest;
+            this.townInterior('村长家', knight ? '村长：盾卫罗兰在酒馆休整，去和他谈谈吧。' : '村长：沼泽的雾已经散了。法师伊芙去了高塔，请把她平安带回来。', 'chief', 'npc-chief', false);
+            if (!_active) {
+              var button = this.button(knight ? '接受任务 · 寻找罗兰' : '接受任务 · 法师的下落', 32, function () {
+                if (_this69.townWrite(function () {
+                  if (knight) _this69.town.knightQuest = true;else _this69.town.mageQuest = true;
+                })) _this69.chief();
+              });
+              this.taskMark(button, -153, 3);
+            } else this.label(knight ? '任务目标：前往酒馆与罗兰汇合。' : '任务目标：前往高塔与伊芙汇合。', 0, 32, 420, 18);
+            this.button('返回话题', -40, function () {
+              return _this69.chief();
+            });
+            return;
+          }
+          if (!pending) {
+            this.chief();
+            return;
+          }
+          var lines = ['村长：你们真的把他救回来了！快说说林子里发生了什么。', '雷恩：灰狼堵住了林道。我们清开道路，把他带回了村子。', '米拉：他的伤已经处理好了，只要静养几天就能康复。', '村民：归印会夺走了我们的结界石！多谢两位，我先回家报平安。', '村长：愿他平安。谢谢你们，请收下村民们凑出的这份酬金。'];
+          step = Math.min(step, 4);
           var position = this.townInterior('村长家', lines[step], 'chief', 'npc-chief', false);
+          this.sceneActor('npc-villager', 65, 96, '康复村民 ');
           var root = this.ui;
           var rewardPlaying = false;
           var advance = function advance(text, action) {
-            return _this60.button(text, 38, function () {
-              if (_this60.ui !== root) return;
+            return _this69.button(text, 38, function () {
+              if (_this69.ui !== root) return;
               action();
             });
           };
-          if (step < 2) advance(step === 0 ? '说说林中的救援' : '听村长的答复', function () {
-            return _this60.chief(step + 1);
-          });else advance('交付村徽 · 获得 20 金币', /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee29() {
-            var goldBefore, motion, hud, balance, panelOpacity, textOpacity, fade;
-            return _regeneratorRuntime().wrap(function _callee29$(_context31) {
-              while (1) switch (_context31.prev = _context31.next) {
+          if (step < 3) advance(['说说林中的救援', '听米拉说明伤情', '听村民讲述'][step], function () {
+            return _this69.chief(step + 1);
+          });else if (step === 3) advance('听村长答谢', function () {
+            return _this69.chief(4);
+          });else advance('交付村徽 · 获得 20 金币', /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee36() {
+            var _icon$getComponent, _balance$node$getComp;
+            var goldBefore, motion, balance, icon, panelOpacity, textOpacity, fade, villager, _villager$getComponen, alpha;
+            return _regeneratorRuntime().wrap(function _callee36$(_context38) {
+              while (1) switch (_context38.prev = _context38.next) {
                 case 0:
-                  if (!_this60.reported) {
-                    _context31.next = 2;
+                  if (!(_this69.reported || rewardPlaying)) {
+                    _context38.next = 2;
                     break;
                   }
-                  return _context31.abrupt("return");
+                  return _context38.abrupt("return");
                 case 2:
-                  goldBefore = _this60.gold;
+                  goldBefore = _this69.gold;
                   rewardPlaying = true;
-                  _this60.reported = true;
-                  _this60.addMaterials({
-                    gold: 20
-                  });
-                  _this60.save();
-                  motion = _this60.newPageMotion();
-                  hud = _this60.box('任务金币', 175, 343, 105, 36, '#244036e9');
-                  _this60.art('trial-ui-clear', -32, 0, 17, 17, hud);
-                  balance = _this60.outline(_this60.label(String(goldBefore), 184, 343, 67, 21));
-                  panelOpacity = hud.addComponent(UIOpacity);
-                  textOpacity = balance.node.addComponent(UIOpacity);
+                  if (_this69.townWrite(function () {
+                    _this69.reported = true;
+                    _this69.addMaterials({
+                      gold: 20
+                    });
+                  })) {
+                    _context38.next = 7;
+                    break;
+                  }
+                  rewardPlaying = false;
+                  return _context38.abrupt("return");
+                case 7:
+                  motion = _this69.newPageMotion();
+                  balance = _this69.coinText = _this69.makeCoinDisplay();
+                  balance.string = String(goldBefore);
+                  icon = _this69.ui.getChildByName('金币');
+                  panelOpacity = (_icon$getComponent = icon.getComponent(UIOpacity)) != null ? _icon$getComponent : icon.addComponent(UIOpacity);
+                  textOpacity = (_balance$node$getComp = balance.node.getComponent(UIOpacity)) != null ? _balance$node$getComp : balance.node.addComponent(UIOpacity);
                   fade = function fade(value, seconds) {
                     return Promise.all([panelOpacity, textOpacity].map(function (alpha) {
                       return motion.play(tween(alpha).to(motion.duration(seconds), {
@@ -11771,181 +14007,222 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     }));
                   };
                   panelOpacity.opacity = textOpacity.opacity = 0;
-                  _context31.next = 17;
+                  _context38.next = 17;
                   return fade(255, .19);
                 case 17:
-                  if (!(_this60.ui !== root)) {
-                    _context31.next = 20;
+                  if (!(_this69.ui !== root)) {
+                    _context38.next = 20;
                     break;
                   }
                   motion.cancel();
-                  return _context31.abrupt("return");
+                  return _context38.abrupt("return");
                 case 20:
-                  _context31.next = 22;
-                  return _this60.animateCoins(motion, 20, balance, position, stageGrid.groundY);
+                  _context38.next = 22;
+                  return _this69.animateCoins(motion, 20, balance, position, stageGrid.groundY);
                 case 22:
-                  if (!(_this60.ui !== root)) {
-                    _context31.next = 25;
+                  if (!(_this69.ui !== root)) {
+                    _context38.next = 25;
                     break;
                   }
                   motion.cancel();
-                  return _context31.abrupt("return");
+                  return _context38.abrupt("return");
                 case 25:
-                  _context31.next = 27;
+                  villager = root.getChildByName('康复村民 npc-villager');
+                  if (!villager) {
+                    _context38.next = 30;
+                    break;
+                  }
+                  alpha = (_villager$getComponen = villager.getComponent(UIOpacity)) != null ? _villager$getComponen : villager.addComponent(UIOpacity);
+                  _context38.next = 30;
+                  return motion.play(tween(alpha).to(.4, {
+                    opacity: 0
+                  }));
+                case 30:
+                  _context38.next = 32;
                   return fade(0, .26);
-                case 27:
-                  if (_this60.ui === root) _this60.chief(1);
-                case 28:
+                case 32:
+                  if (_this69.ui === root) _this69.chief();
+                case 33:
                 case "end":
-                  return _context31.stop();
+                  return _context38.stop();
               }
-            }, _callee29);
+            }, _callee36);
           })));
           this.button('返回村庄', -36, function () {
-            if (!rewardPlaying) _this60.village();
+            if (!rewardPlaying) _this69.village();
           });
         };
         _proto.villageShop = function villageShop() {
-          var _this61 = this;
+          var _this70 = this;
           this.audio.play('door');
           this.townInterior('村庄商店', '老板：药水 5 金币一瓶。已携带 ' + this.potion + ' 瓶。', 'shop', 'npc-shop');
           this.button('购买治疗药水 · 5 金币', 42, function () {
-            if (_this61.gold < 5) {
-              _this61.popup('金币不足', 0, 91);
+            if (_this70.gold < 5) {
+              _this70.popup('金币不足', 0, 91);
               return;
             }
-            if (_this61.potion >= 99) {
-              _this61.popup('背包药水已满', 0, 91);
+            if (_this70.potion >= 99) {
+              _this70.popup('背包药水已满', 0, 91);
               return;
             }
-            _this61.gold -= 5;
-            _this61.potion++;
-            _this61.save();
-            _this61.villageShop();
+            _this70.gold -= 5;
+            _this70.potion++;
+            _this70.save();
+            _this70.villageShop();
           });
           this.button('返回村庄', -78, function () {
-            return _this61.village();
+            return _this70.village();
           });
         };
         _proto.smithy = function smithy(page) {
-          var _this62 = this;
+          var _this71 = this;
           if (page === void 0) {
             page = 0;
           }
-          var materials = Object.entries(this.inventory.materials).map(function (_ref40) {
-            var key = _ref40[0],
-              value = _ref40[1];
+          var materials = Object.entries(this.inventory.materials).map(function (_ref42) {
+            var key = _ref42[0],
+              value = _ref42[1];
             return resourceNames[key] + ' ' + value;
           }).join(' · ');
           this.townInterior('溪桥村铁匠铺', materials, 'smith', 'npc-smith');
           var recipes = equipment.filter(function (item) {
-            return !_this62.inventory.owned.includes(item.id);
+            return !_this71.inventory.owned.includes(item.id);
+          });
+          this.button('修补护甲 · 恢复 DP · 10 金币', -286, function () {
+            if (!_this71.party.includes('d')) {
+              _this71.popup('盾卫入队后开放修甲', 0, 91);
+              return;
+            }
+            if (_this71.dp >= _this71.maxDP) {
+              _this71.popup('DP 已满', 0, 91);
+              return;
+            }
+            if (_this71.gold < 10) {
+              _this71.popup('金币不足', 0, 91);
+              return;
+            }
+            void _this71.presentRecovery('dp', function () {
+              return _this71.townWrite(function () {
+                _this71.gold -= 10;
+                _this71.dp = _this71.maxDP;
+              });
+            });
           });
           var lastPage = Math.max(0, Math.ceil(recipes.length / 3) - 1);
           page = Math.min(page, lastPage);
           if (!recipes.length) this.label('已掌握的装备均已制作', 0, 42, 420, 19);
           recipes.slice(page * 3, page * 3 + 3).forEach(function (item, index) {
-            var cost = Object.entries(item.cost).map(function (_ref41) {
-              var key = _ref41[0],
-                value = _ref41[1];
+            var cost = Object.entries(item.cost).map(function (_ref43) {
+              var key = _ref43[0],
+                value = _ref43[1];
               return resourceNames[key] + ' ' + value;
             }).join(' · ');
             var y = 47 - index * 88;
-            _this62.button(item.name + ' · ' + cost, y, function () {
-              var paid = _this62.inventory.craft(item.id, _this62.gold);
+            _this71.button(item.name + ' · ' + cost, y, function () {
+              var paid = _this71.inventory.craft(item.id, _this71.gold);
               if (paid === null) {
-                _this62.popup('材料不足', 0, 99);
+                _this71.popup('材料不足', 0, 99);
                 return;
               }
-              _this62.gold -= paid;
-              _this62.audio.play('equip');
-              _this62.save();
-              _this62.smithy(page);
+              _this71.gold -= paid;
+              _this71.audio.play('equip');
+              _this71.save();
+              _this71.smithy(page);
             });
-            if (item.effect) _this62.label(item.effect, 0, y - 37, 375, 15);
+            if (item.effect) _this71.label(item.effect, 0, y - 37, 375, 15);
           });
           if (page > 0) this.button('上一页', -228, function () {
-            return _this62.smithy(page - 1);
+            return _this71.smithy(page - 1);
           }, -94, 160);
           if (page < lastPage) this.button('下一页', -228, function () {
-            return _this62.smithy(page + 1);
+            return _this71.smithy(page + 1);
           }, 94, 160);
           this.button('返回村庄', -354, function () {
-            return _this62.village();
+            return _this71.village();
           });
         };
         _proto.tavern = function tavern(revived) {
           var _this$hunt2,
             _this$hunt3,
             _this$hunt4,
-            _this63 = this;
+            _this72 = this;
           if (revived === void 0) {
             revived = false;
           }
           this.save();
           this.audio.play('dialogue');
-          var join = this.taught && this.reported && !this.party.includes('d');
+          var join = this.taught && this.reported && this.town.knightQuest && !this.party.includes('d');
           var active = ((_this$hunt2 = this.hunt) == null ? void 0 : _this$hunt2.state) === 'active' ? this.hunt : undefined;
           var ready = ((_this$hunt3 = this.hunt) == null ? void 0 : _this$hunt3.state) === 'ready';
           var cooling = ((_this$hunt4 = this.hunt) == null ? void 0 : _this$hunt4.state) === 'cooldown' && this.hunt.until > Date.now();
           var detail = revived ? '酒馆老板救回了小队。' : join ? '罗兰带来矿镇运单，法师伊芙正在调查迷雾高塔。' : active ? '当前委托：通关' + locationNames[active.target] + '。' : cooling ? '新委托稍后刷新。' : '休息或接受附近地牢的讨伐委托。';
           this.townInterior('溪桥村酒馆', detail, 'tavern', 'npc-innkeeper');
-          if (join) this.button('与盾卫罗兰会合', 42, function () {
-            if (_this63.party.includes('d')) return;
-            var oldHP = _this63.maxHP,
-              oldDP = _this63.maxDP;
-            _this63.party.push('d');
-            _this63.hp += _this63.maxHP - oldHP;
-            _this63.dp += _this63.maxDP - oldDP;
-            _this63.tavern();
-          });
+          if (join) {
+            var button = this.button('与盾卫罗兰会合', 42, function () {
+              if (_this72.party.includes('d')) return;
+              var oldHP = _this72.maxHP,
+                oldDP = _this72.maxDP;
+              if (!_this72.townWrite(function () {
+                _this72.party.push('d');
+                _this72.hp += _this72.maxHP - oldHP;
+                _this72.dp += _this72.maxDP - oldDP;
+              })) return;
+              _this72.tavern();
+            });
+            this.taskMark(button, -153, 3);
+          }
           var restCost = 10;
-          this.button('休息 · 恢复生命与 DP · 10 金币', -29, function () {
-            if (_this63.hp >= _this63.maxHP && _this63.dp >= _this63.maxDP) {
-              _this63.popup('生命和 DP 已满', 0, 87);
+          this.button('休息 · 恢复生命 · 10 金币', -29, function () {
+            if (_this72.hp >= _this72.maxHP) {
+              _this72.popup('生命已满', 0, 87);
               return;
             }
-            if (_this63.gold < restCost) {
-              _this63.popup('金币不足', 0, 87);
+            if (_this72.gold < restCost) {
+              _this72.popup('金币不足', 0, 87);
               return;
             }
-            _this63.gold -= restCost;
-            _this63.hp = _this63.maxHP;
-            _this63.dp = _this63.maxDP;
-            _this63.tavern();
-            _this63.popup('已恢复', 0, 87);
+            void _this72.presentRecovery('hp', function () {
+              return _this72.townWrite(function () {
+                _this72.gold -= restCost;
+                _this72.hp = _this72.maxHP;
+              });
+            });
           });
           if (this.taught && ready) this.button('交付讨伐 · 获得 12 金币', -100, function () {
-            var _this63$hunt;
-            if (((_this63$hunt = _this63.hunt) == null ? void 0 : _this63$hunt.state) !== 'ready') return;
-            _this63.hunt = {
+            var _this72$hunt;
+            if (((_this72$hunt = _this72.hunt) == null ? void 0 : _this72$hunt.state) !== 'ready') return;
+            _this72.hunt = {
               state: 'cooldown',
               until: Date.now() + 60000
             };
-            _this63.addMaterials({
+            _this72.addMaterials({
               gold: 12
             });
-            _this63.tavern();
+            _this72.tavern();
           });
           if (this.taught && !active && !ready && !cooling) this.button('领取附近地牢讨伐', -100, function () {
-            if (_this63.hunt && !(_this63.hunt.state === 'cooldown' && _this63.hunt.until <= Date.now())) return;
+            if (_this72.hunt && !(_this72.hunt.state === 'cooldown' && _this72.hunt.until <= Date.now())) return;
             var available = dungeonIds.filter(function (id) {
-              return unlocked(id, _this63.cleared);
+              return unlocked(id, _this72.cleared);
             });
-            _this63.hunt = {
+            _this72.hunt = {
               state: 'active',
               target: available[Math.floor(Math.random() * available.length)]
             };
-            _this63.tavern();
+            _this72.tavern();
           });
           this.button(this.taught ? '返回村庄' : '重新开始教学', -171, function () {
-            return _this63.taught ? _this63.village() : _this63.menu();
+            return _this72.taught ? _this72.village() : _this72.menu();
           });
         };
         _proto.formalTypes = function formalTypes() {
           return rosterEmblems(this.party);
         };
         _proto.enter = function enter(id, reveal) {
+          if (this.town.blessing) {
+            this.town.blessingInDungeon = true;
+            this.save();
+          }
           this.phase = id;
           this.types = this.formalTypes();
           this.adventure = {
@@ -11965,7 +14242,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.afterRoom(director);
         };
         _proto.afterRoom = function afterRoom(director) {
-          var _this64 = this;
+          var _this73 = this;
           if (this.dungeon !== director) return;
           if (!director.room) {
             this.finishAdventure('win');
@@ -11975,23 +14252,31 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var after = this.dungeonBackdrop(director.depth);
           this.page('沿路前进', '小队正在前往下一房间。', before);
           var root = this.ui;
-          void this.walkParty(before === after ? .45 : this.forestLabStop(before) !== undefined ? .82 : 1.05, before === after ? [before] : [before, after]).then(function () {
-            if (_this64.ui === root && _this64.dungeon === director) _this64.showRoom();
+          var nextRoom = director.room;
+          var incoming = nextRoom.kind === 'battle' ? nextRoom.encounters : undefined;
+          void this.walkParty(this.forestLabStop(before) !== undefined ? 1.05 : before === after ? .45 : 1.05, before === after ? [before] : [before, after], 1, incoming).then(function (played) {
+            if (played && _this73.ui === root && _this73.dungeon === director) {
+              if (incoming) _this73.arrivedEncounter = {
+                director: director,
+                room: nextRoom
+              };
+              _this73.showRoom();
+            }
           });
         };
         _proto.buff = function buff(id) {
-          var _this$adventure$buffs, _this$adventure5;
-          return (_this$adventure$buffs = (_this$adventure5 = this.adventure) == null ? void 0 : _this$adventure5.buffs[id]) != null ? _this$adventure$buffs : 0;
+          var _this$adventure$buffs2, _this$adventure6;
+          return (_this$adventure$buffs2 = (_this$adventure6 = this.adventure) == null ? void 0 : _this$adventure6.buffs[id]) != null ? _this$adventure$buffs2 : 0;
         };
         _proto.offerUpgrade = function offerUpgrade(director, room, proceed) {
-          var _this65 = this;
+          var _this74 = this;
           var run = this.adventure;
           if (!run) {
             proceed();
             return;
           }
           var options = drawUpgrades(run.buffs, function (id) {
-            return _this65.inventory.hasEquipped(id);
+            return _this74.inventory.hasEquipped(id);
           });
           if (!options.length) {
             proceed();
@@ -12000,23 +14285,26 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.page('选择临时强化', '强化仅在本次地牢探索中生效。', this.dungeonBackdrop());
           var root = this.ui;
           options.forEach(function (option, index) {
-            return _this65.button(option.name + ' · ' + option.description, 43 - index * 72, function () {
-              if (_this65.ui !== root || _this65.dungeon !== director || director.room !== room) return;
-              run.buffs[option.id] = _this65.buff(option.id) + 1;
-              if (option.id === 'vital') _this65.hp = Math.min(_this65.maxHP, _this65.hp + 30);
-              _this65.audio.play('charge');
+            return _this74.button(option.name + ' · ' + option.description, 43 - index * 72, function () {
+              if (_this74.ui !== root || _this74.dungeon !== director || director.room !== room) return;
+              run.buffs[option.id] = _this74.buff(option.id) + 1;
+              if (option.id === 'vital') _this74.hp = Math.min(_this74.maxHP, _this74.hp + 30);
+              _this74.audio.play('charge');
               proceed();
             });
           });
           this.button('撤离', -380, function () {
-            if (_this65.ui === root && _this65.dungeon === director) _this65.finishAdventure('retreat');
+            if (_this74.ui === root && _this74.dungeon === director) _this74.finishAdventure('retreat');
           });
         };
         _proto.showRoom = function showRoom(reveal) {
-          var _this66 = this;
+          var _this75 = this;
           var director = this.dungeon;
           var room = director == null ? void 0 : director.room;
           if (!room) return;
+          if (director.depth > 0 && !this.contentReady && this.deferContent(function () {
+            return _this75.showRoom(reveal);
+          })) return;
           var run = this.adventure;
           if (this.mineRecovery && room.kind !== 'battle' && room.kind !== 'rest' && !(room.kind === 'chest' && this.mineRecovery.state.mineRecovery.source === 'formal')) {
             this.showRecoveryStop('该房间尚未接入探索事务。');
@@ -12025,22 +14313,22 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           if (room.kind === 'battle') {
             this.enemies = [].concat(room.enemies);
             if (!run) this.phase = room.type === 'boss' ? 'lessonBoss' : 'wolves';
-            if ((run == null ? void 0 : run.id) === 'tower' && director.depth === 0 && !this.party.includes('m')) {
+            if ((run == null ? void 0 : run.id) === 'tower' && director.depth === 0 && !this.party.includes('m') && this.town.mageQuest) {
               this.page('高塔里的回声', '法师伊芙：高塔的结界失控了，我和你们一起进去。', this.dungeonBackdrop());
               this.sceneActor('hero-m', 144, 102, '剧情人物 ', true);
               var _root2 = this.ui;
               var allowMeeting = function allowMeeting() {
-                if (_this66.ui !== _root2 || _this66.dungeon !== director) return;
-                _this66.button('与法师伊芙会合', 32, function () {
-                  if (_this66.ui !== _root2 || _this66.party.includes('m')) return;
-                  var oldHP = _this66.maxHP,
-                    oldDP = _this66.maxDP;
-                  _this66.party.push('m');
-                  _this66.hp += _this66.maxHP - oldHP;
-                  _this66.dp += _this66.maxDP - oldDP;
-                  _this66.types = _this66.formalTypes();
-                  _this66.save();
-                  _this66.beginBattle();
+                if (_this75.ui !== _root2 || _this75.dungeon !== director) return;
+                _this75.button('与法师伊芙会合', 32, function () {
+                  if (_this75.ui !== _root2 || _this75.party.includes('m')) return;
+                  var oldHP = _this75.maxHP,
+                    oldDP = _this75.maxDP;
+                  _this75.party.push('m');
+                  _this75.hp += _this75.maxHP - oldHP;
+                  _this75.dp += _this75.maxDP - oldDP;
+                  _this75.types = _this75.formalTypes();
+                  _this75.save();
+                  _this75.beginBattle();
                 });
               };
               if (reveal) void reveal().then(allowMeeting);else allowMeeting();
@@ -12048,34 +14336,35 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             return;
           }
           var advance = function advance() {
-            return _this66.advanceRoom(director, room);
+            return _this75.advanceRoom(director, room);
           };
           if (room.kind === 'rescue' || room.kind === 'recruit') {
             var recruit = room.kind === 'recruit';
             this.audio.play('dialogue');
             this.page(recruit ? '失散的牧师' : '林中的求救声', recruit ? '米拉：结界碎片就在前面。我来治疗，你来开路。' : '村民：归印会改接了结界。请把这枚村徽带给村长。', this.dungeonBackdrop());
-            if (recruit) this.sceneActor('hero-h', 144, 102, '剧情人物 ', true);else this.sceneActor('dungeon-traveler', 144, 99);
+            if (recruit) this.sceneActor('hero-h', 144, 102, '剧情人物 ', true);else this.sceneActor('npc-villager-down', 144, 86);
             var _root3 = this.ui;
             this.button(recruit ? '邀请米拉入队' : '救下村民，接下报信任务', 30, function () {
-              if (_this66.ui !== _root3 || _this66.dungeon !== director || director.room !== room) return;
-              if (recruit && !_this66.party.includes('h')) {
-                _this66.party.push('h');
-                _this66.types = ['s', 'fist', 'h', 'staff'];
-                _this66.hp = Math.min(_this66.maxHP, _this66.hp + 55);
+              if (_this75.ui !== _root3 || _this75.dungeon !== director || director.room !== room) return;
+              if (recruit && !_this75.party.includes('h')) {
+                _this75.party.push('h');
+                _this75.types = ['s', 'fist', 'h', 'staff'];
+                _this75.hp = Math.min(_this75.maxHP, _this75.hp + 55);
               }
+              if (!recruit && !run) _this75.town.rescued = true;
               advance();
             });
             this.button('撤离', -380, function () {
-              return _this66.finishAdventure('retreat');
+              return _this75.finishAdventure('retreat');
             });
             return;
           }
           if (!run) return;
           var payingReward = false;
           var action = function action(label, y, apply) {
-            var root = _this66.ui;
-            _this66.button(label, y, function () {
-              if (payingReward || _this66.ui !== root || _this66.dungeon !== director || director.room !== room) return;
+            var root = _this75.ui;
+            _this75.button(label, y, function () {
+              if (payingReward || _this75.ui !== root || _this75.dungeon !== director || director.room !== room) return;
               apply();
             });
           };
@@ -12086,56 +14375,56 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             });
           };
           var goldDecision = function goldDecision(label, amount, origin, takeMaterials) {
-            return action(label, 42, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee30() {
+            return action(label, 42, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee37() {
               var root, motion, played;
-              return _regeneratorRuntime().wrap(function _callee30$(_context32) {
-                while (1) switch (_context32.prev = _context32.next) {
+              return _regeneratorRuntime().wrap(function _callee37$(_context39) {
+                while (1) switch (_context39.prev = _context39.next) {
                   case 0:
                     payingReward = true;
-                    root = _this66.ui;
-                    motion = _this66.newPageMotion();
-                    _context32.next = 5;
-                    return _this66.animateCoins(motion, amount, _this66.coinText, origin, stageGrid.groundY);
+                    root = _this75.ui;
+                    motion = _this75.newPageMotion();
+                    _context39.next = 5;
+                    return _this75.animateCoins(motion, amount, _this75.coinText, origin, stageGrid.groundY);
                   case 5:
-                    played = _context32.sent;
+                    played = _context39.sent;
                     payingReward = false;
-                    if (!(!played || _this66.ui !== root || _this66.dungeon !== director || director.room !== room || _this66.adventure !== run)) {
-                      _context32.next = 9;
+                    if (!(!played || _this75.ui !== root || _this75.dungeon !== director || director.room !== room || _this75.adventure !== run)) {
+                      _context39.next = 9;
                       break;
                     }
-                    return _context32.abrupt("return");
+                    return _context39.abrupt("return");
                   case 9:
-                    _this66.receiveGold(amount);
+                    _this75.receiveGold(amount);
                     takeMaterials == null || takeMaterials();
                     advance();
                   case 12:
                   case "end":
-                    return _context32.stop();
+                    return _context39.stop();
                 }
-              }, _callee30);
+              }, _callee37);
             })));
           };
           var show = function show(title, detail) {
-            return _this66.page(title, detail, _this66.dungeonBackdrop(director.depth));
+            return _this75.page(title, detail, _this75.dungeonBackdrop(director.depth));
           };
           if (room.kind === 'merchant') {
             show('旅行商人', '金币 ' + this.walletGold + ' · 治疗药水 ×' + this.potion);
             this.sceneActor('dungeon-merchant', 151, 116);
             action('购买治疗药水 · 5 金币', 42, function () {
-              if (_this66.potion >= 99 || !_this66.spendGold(5)) {
-                _this66.popup('无法购买', 0, 91);
+              if (_this75.potion >= 99 || !_this75.spendGold(5)) {
+                _this75.popup('无法购买', 0, 91);
                 return;
               }
-              _this66.potion++;
-              _this66.showRoom();
+              _this75.potion++;
+              _this75.showRoom();
             });
             action('小队休整 · 3 金币，恢复 30 HP', -25, function () {
-              if (_this66.hp >= _this66.maxHP || !_this66.spendGold(3)) {
-                _this66.popup('无法休整', 0, 91);
+              if (_this75.hp >= _this75.maxHP || !_this75.spendGold(3)) {
+                _this75.popup('无法休整', 0, 91);
                 return;
               }
-              _this66.hp = Math.min(_this66.maxHP, _this66.hp + 30);
-              _this66.showRoom();
+              _this75.hp = Math.min(_this75.maxHP, _this75.hp + 30);
+              _this75.showRoom();
             });
             action('离开商人房间', -92, advance);
           } else if (room.kind === 'event') {
@@ -12143,7 +14432,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             var traveler = this.sceneActor('dungeon-traveler', 144, 99);
             goldDecision("\u534F\u52A9\u65C5\u4EBA\uFF0C\u83B7\u5F97 " + roomRewards.travelerGold + " \u91D1\u5E01", roomRewards.travelerGold, traveler);
             decision('谨慎休整，恢复 22 HP', -25, function () {
-              _this66.hp = Math.min(_this66.maxHP, _this66.hp + 22);
+              _this75.hp = Math.min(_this75.maxHP, _this75.hp + 22);
             });
           } else if (room.kind === 'rest') {
             if (this.trial) {
@@ -12152,32 +14441,32 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               var _root4 = this.ui;
               var supply = function supply(restore) {
                 return function () {
-                  if (_this66.ui !== _root4 || _this66.dungeon !== director || director.room !== room) return;
+                  if (_this75.ui !== _root4 || _this75.dungeon !== director || director.room !== room) return;
                   restore();
                   advance();
                 };
               };
               this.trialButton('恢复 45 HP', -26, supply(function () {
-                _this66.hp = Math.min(_this66.maxHP, _this66.hp + 45);
+                _this75.hp = Math.min(_this75.maxHP, _this75.hp + 45);
               }));
               this.trialButton('恢复 35 DP', -92, supply(function () {
-                _this66.dp = Math.min(_this66.maxDP, _this66.dp + 35);
+                _this75.dp = Math.min(_this75.maxDP, _this75.dp + 35);
               }));
             } else if (this.mineRecovery) {
               show('休息营地', '队伍发现了安全的休息地点。');
               action('恢复 45 HP', 42, function () {
-                return _this66.commitMineRest(director, room, 'hp');
+                return _this75.commitMineRest(director, room, 'hp');
               });
               action('恢复 35 DP', -25, function () {
-                return _this66.commitMineRest(director, room, 'dp');
+                return _this75.commitMineRest(director, room, 'dp');
               });
             } else {
               show('休息营地', '队伍发现了安全的休息地点。');
               decision('恢复 45 HP', 42, function () {
-                _this66.hp = Math.min(_this66.maxHP, _this66.hp + 45);
+                _this75.hp = Math.min(_this75.maxHP, _this75.hp + 45);
               });
               decision('恢复 35 DP', -25, function () {
-                _this66.dp = Math.min(_this66.maxDP, _this66.dp + 35);
+                _this75.dp = Math.min(_this75.maxDP, _this75.dp + 35);
               });
             }
           } else if (room.kind === 'chest') {
@@ -12186,10 +14475,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             chest.y += 11;
             if (this.mineRecovery) {
               action("\u53D6\u8D70\u7269\u8D44 \xB7 " + roomRewards.chestGold + " \u91D1\u5E01\uFF0C" + roomRewards.chestOre + " \u94C1\u77FF", 42, function () {
-                var current = _this66.minePermit(director, room);
+                var current = _this75.minePermit(director, room);
                 if (!current) return;
                 var next = planMineChest(current.live.state, current.permit);
-                if (next) payingReward = _this66.commitMineRoom(current.live, next, director, room, chest) === true;
+                if (next) payingReward = _this75.commitMineRoom(current.live, next, director, room, chest) === true;
               });
             } else goldDecision("\u53D6\u8D70\u7269\u8D44 \xB7 " + roomRewards.chestGold + " \u91D1\u5E01\uFF0C" + roomRewards.chestOre + " \u94C1\u77FF", roomRewards.chestGold, chest, function () {
               var _run$loot$ore;
@@ -12201,39 +14490,53 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             var choices = [['血色门 · 普通战斗', encounter(run.id, director.depth + 1, 'battle')], ['铜色门 · 补给或商人', {
               kind: _supply[Math.floor(Math.random() * _supply.length)]
             }], ['黑铁门 · 精英战斗', encounter(run.id, director.depth + 1, 'elite')]];
-            choices.forEach(function (_ref43, index) {
-              var label = _ref43[0],
-                next = _ref43[1];
+            choices.forEach(function (_ref45, index) {
+              var label = _ref45[0],
+                next = _ref45[1];
               return action(label, 42 - index * 67, function () {
-                if (director.choose(room, next)) _this66.afterRoom(director);
+                if (director.choose(room, next)) _this75.afterRoom(director);
               });
             });
           }
           action('撤离', -380, function () {
-            return _this66.finishAdventure('retreat');
+            return _this75.finishAdventure('retreat');
           });
         };
         _createClass(FourEmblemsGame, [{
+          key: "enemyOpportunities",
+          get: function get() {
+            var _this$oath$enemyActio;
+            return (_this$oath$enemyActio = this.oath.enemyActions) != null ? _this$oath$enemyActio : this.oath.enemyActions = [];
+          },
+          set: function set(value) {
+            this.oath.enemyActions = value;
+          }
+        }, {
+          key: "baseMaxHP",
+          get: function get() {
+            var _this76 = this;
+            return this.party.reduce(function (sum, id) {
+              return sum + _this76.inventory.stats(id).hp;
+            }, 0) + 15 * this.buff('vital');
+          }
+        }, {
           key: "maxHP",
           get: function get() {
-            var _this67 = this;
-            return this.party.reduce(function (sum, id) {
-              return sum + _this67.inventory.stats(id).hp;
-            }, 0) + 15 * this.buff('vital');
+            return this.baseMaxHP + (this.town.blessing ? 100 : 0);
           }
         }, {
           key: "maxDP",
           get: function get() {
-            var _this68 = this;
+            var _this77 = this;
             return this.party.reduce(function (sum, id) {
-              return sum + _this68.inventory.stats(id).dp;
+              return sum + _this77.inventory.stats(id).dp;
             }, 0);
           }
         }, {
           key: "walletGold",
           get: function get() {
-            var _this$adventure$coins2, _this$adventure6;
-            var found = (_this$adventure$coins2 = (_this$adventure6 = this.adventure) == null ? void 0 : _this$adventure6.coins) != null ? _this$adventure$coins2 : 0;
+            var _this$adventure$coins2, _this$adventure7;
+            var found = (_this$adventure$coins2 = (_this$adventure7 = this.adventure) == null ? void 0 : _this$adventure7.coins) != null ? _this$adventure$coins2 : 0;
             return this.trial ? found : this.gold + found;
           }
         }, {
@@ -12266,18 +14569,18 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
 });
 
 System.register("chunks:///_virtual/GameAudio.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
-  var _createForOfIteratorHelperLoose, cclegacy, tween, sys, Node, AudioSource, resources, AudioClip;
+  var _createForOfIteratorHelperLoose, cclegacy, resources, AudioClip, tween, sys, Node, AudioSource;
   return {
     setters: [function (module) {
       _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
     }, function (module) {
       cclegacy = module.cclegacy;
+      resources = module.resources;
+      AudioClip = module.AudioClip;
       tween = module.tween;
       sys = module.sys;
       Node = module.Node;
       AudioSource = module.AudioSource;
-      resources = module.resources;
-      AudioClip = module.AudioClip;
     }],
     execute: function () {
       cclegacy._RF.push({}, "bfd82Vxu5ZKlJaF9JtrHRwH", "GameAudio", undefined);
@@ -12351,7 +14654,6 @@ System.register("chunks:///_virtual/GameAudio.ts", ['./rollupPluginModLoBabelHel
       };
       var GameAudio = exports('GameAudio', /*#__PURE__*/function () {
         function GameAudio(root) {
-          var _this = this;
           this.voices = void 0;
           this.clips = new Map();
           this.lastPlayed = new Map();
@@ -12361,6 +14663,7 @@ System.register("chunks:///_virtual/GameAudio.ts", ['./rollupPluginModLoBabelHel
           this.steps = void 0;
           this.walking = 0;
           this.fade = void 0;
+          this.pending = new Set();
           this.enabled = true;
           var footsteps = new Node('Footsteps');
           root.addChild(footsteps);
@@ -12376,22 +14679,27 @@ System.register("chunks:///_virtual/GameAudio.ts", ['./rollupPluginModLoBabelHel
             voice.playOnAwake = false;
             return voice;
           });
-          var trialFiles = Object.values(trialCues).flatMap(function (cue) {
-            return Array.from(cue.files, function (file) {
-              return 'trial-' + file;
-            });
-          });
-          var _loop = function _loop() {
+          for (var _iterator = _createForOfIteratorHelperLoose(baseCues), _step; !(_step = _iterator()).done;) {
             var name = _step.value;
-            resources.load('audio/' + name, AudioClip, function (error, clip) {
-              if (!error) _this.clips.set(name, clip);
-            });
-          };
-          for (var _iterator = _createForOfIteratorHelperLoose(baseCues.concat(trialFiles)), _step; !(_step = _iterator()).done;) {
-            _loop();
+            this.loadClip(name);
           }
         }
         var _proto = GameAudio.prototype;
+        _proto.loadClip = function loadClip(name) {
+          var _this = this;
+          if (this.clips.has(name) || this.pending.has(name)) return;
+          this.pending.add(name);
+          resources.load('audio/' + name, AudioClip, function (error, clip) {
+            _this.pending["delete"](name);
+            if (!error) _this.clips.set(name, clip);
+          });
+        };
+        _proto.prepareBoard = function prepareBoard() {
+          for (var _i = 0, _arr = ['swap', 'invalid', 'clear', 'drop', 'create', 'combo', 'charge']; _i < _arr.length; _i++) {
+            var cue = _arr[_i];
+            this.loadClip('trial-' + cue);
+          }
+        };
         _proto.play = function play(name) {
           this.emit(name, this.clips.get(name), .23);
         };
@@ -12418,6 +14726,7 @@ System.register("chunks:///_virtual/GameAudio.ts", ['./rollupPluginModLoBabelHel
         _proto.playChain = function playChain(wave) {
           var _this$clips$get;
           var name = wave ? 'combo' : 'clear';
+          this.loadClip('trial-' + name);
           var clip = (_this$clips$get = this.clips.get('trial-' + name)) != null ? _this$clips$get : this.clips.get('clear');
           this.emit('chain', clip, Math.min(.40, .21 + wave * .045), true);
         };
@@ -12426,6 +14735,7 @@ System.register("chunks:///_virtual/GameAudio.ts", ['./rollupPluginModLoBabelHel
           var cue = trialCues[name];
           var variant = (_this$trialVariants$g = this.trialVariants.get(name)) != null ? _this$trialVariants$g : 0;
           var filename = 'trial-' + cue.files[variant % cue.files.length];
+          this.loadClip(filename);
           var clip = (_this$clips$get2 = this.clips.get(filename)) != null ? _this$clips$get2 : this.clips.get(cue.fallback);
           if (this.emit('trial-' + name, clip, cue.volume, true)) {
             this.trialVariants.set(name, (variant + 1) % cue.files.length);
@@ -12747,9 +15057,9 @@ System.register("chunks:///_virtual/Inventory.ts", ['./rollupPluginModLoBabelHel
   };
 });
 
-System.register("chunks:///_virtual/main", ['./ActorArt.ts', './BattleMotion.ts', './BattleRules.ts', './BattleSession.ts', './Board.ts', './Chapter.ts', './battle-core.ts', './board-bridge.ts', './cocos-board-adapter.ts', './damage.ts', './derivation.ts', './effects.ts', './experiment.ts', './exploration-save.ts', './formal-rules.ts', './mine-recovery.ts', './potion-bridge.ts', './CombatSceneLab.ts', './CombatTags.ts', './DungeonDirector.ts', './FormalSaveGate.ts', './Game.ts', './GameAudio.ts', './Inventory.ts', './MineTrial.ts', './StageLayout.ts', './StageTravel.ts', './TemplateBoardFx.ts'], function () {
+System.register("chunks:///_virtual/main", ['./ActorArt.ts', './BattleMotion.ts', './BattleRules.ts', './BattleSession.ts', './Board.ts', './BoardMechanics.ts', './BuffView.ts', './Chapter.ts', './battle-core.ts', './board-bridge.ts', './cocos-board-adapter.ts', './damage.ts', './derivation.ts', './effects.ts', './experiment.ts', './exploration-save.ts', './formal-rules.ts', './mine-recovery.ts', './potion-bridge.ts', './CombatSceneLab.ts', './CombatTags.ts', './DungeonDirector.ts', './EnemySkills.ts', './FormalSaveGate.ts', './Game.ts', './GameAudio.ts', './Inventory.ts', './MineTrial.ts', './StageLayout.ts', './StageTravel.ts', './TemplateBoardFx.ts', './TownRules.ts'], function () {
   return {
-    setters: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+    setters: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
     execute: function () {}
   };
 });
@@ -13000,7 +15310,7 @@ System.register("chunks:///_virtual/mine-recovery.ts", ['./rollupPluginModLoBabe
         }) && Array.isArray(p.marks) && new Set(p.marks).size === p.marks.length && p.marks.every(function (i) {
           var _room$rescueCells2;
           return (_room$rescueCells2 = room.rescueCells) == null ? void 0 : _room$rescueCells2.includes(i);
-        }) && (!((_room$rescueCells3 = room.rescueCells) != null && _room$rescueCells3.length) || p.marks.length > 0) && (p.oath === undefined || [1, 1.4, 1.55, 1.7].includes(p.oath.rally) && [1, 1.1].includes(p.oath.roundBoost) && typeof p.oath.guard === 'boolean' && p.oath.shred && Object.entries(p.oath.shred).every(function (_ref2) {
+        }) && (!((_room$rescueCells3 = room.rescueCells) != null && _room$rescueCells3.length) || p.marks.length > 0) && (p.oath === undefined || [1, 1.4, 1.55, 1.7].includes(p.oath.rally) && [1, 1.1].includes(p.oath.roundBoost) && (p.oath.enemyActions === undefined || Array.isArray(p.oath.enemyActions) && p.oath.enemyActions.length === p.enemies.length && p.oath.enemyActions.every(count)) && typeof p.oath.guard === 'boolean' && p.oath.shred && Object.entries(p.oath.shred).every(function (_ref2) {
           var id = _ref2[0],
             n = _ref2[1];
           return count(Number(id)) && Number(id) < p.enemies.length && count(n);
@@ -13129,11 +15439,25 @@ System.register("chunks:///_virtual/mine-recovery.ts", ['./rollupPluginModLoBabe
           inventory.experience[id] += preview.xp;
         }
         var hunt = player.hunt;
+        // Optional new town state lives in the same authoritative player snapshot.
+        // Old checkpoints without this field retain their exact previous projection.
+        var town = player.town;
+        var baseHP = player.party.reduce(function (sum, id) {
+          return sum + inventory.stats(id).hp;
+        }, 0);
+        var townPatch = town ? {
+          town: _extends({}, town, {
+            blessing: town.blessingInDungeon ? false : town.blessing,
+            blessingInDungeon: false,
+            altarCharge: outcome === 'complete' ? 1 : town.altarCharge
+          }),
+          hp: town.blessingInDungeon ? Math.min(meters.hp, baseHP) : meters.hp
+        } : {};
         var _save$mineRecovery2 = save.mineRecovery,
           potion = _save$mineRecovery2.potion,
           metadata = _objectWithoutPropertiesLoose(_save$mineRecovery2, _excluded2);
         return _extends({}, save, {
-          player: _extends({}, player, meters, {
+          player: _extends({}, player, meters, townPatch, {
             inventory: inventory,
             gold: (count(player.gold) ? player.gold : 0) + preview.gold,
             exp: (count(player.exp) ? player.exp : 0) + preview.xp,
@@ -13160,43 +15484,62 @@ System.register("chunks:///_virtual/mine-recovery.ts", ['./rollupPluginModLoBabe
   };
 });
 
-System.register("chunks:///_virtual/MineTrial.ts", ['cc', './Chapter.ts'], function (exports) {
-  var cclegacy, enemy;
+System.register("chunks:///_virtual/MineTrial.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Chapter.ts'], function (exports) {
+  var _extends, cclegacy, encounter, dungeons;
   return {
     setters: [function (module) {
+      _extends = module.extends;
+    }, function (module) {
       cclegacy = module.cclegacy;
     }, function (module) {
-      enemy = module.enemy;
+      encounter = module.encounter;
+      dungeons = module.dungeons;
     }],
     execute: function () {
       exports({
         makeMineTrial: makeMineTrial,
+        mechanismPage: mechanismPage,
+        mineTestEncounter: mineTestEncounter,
         mineTrialRandom: mineTrialRandom
       });
       cclegacy._RF.push({}, "5e71aIqxQBM4YY6yZaGfFDg", "MineTrial", undefined);
       var mineTrialTitle = exports('mineTrialTitle', '废弃矿坑 · 矿车轨道');
       var mineTrialSeed = exports('mineTrialSeed', 20261114);
+      var testMechanisms = exports('testMechanisms', [{
+        id: 'rail',
+        title: '矿坑 · 横向轨道',
+        description: '上六排下落；底部两排横向补棋',
+        dungeon: 'mine'
+      }]);
+      function mechanismPage(page, size, count) {
+        if (size === void 0) {
+          size = 9;
+        }
+        if (count === void 0) {
+          count = testMechanisms.length;
+        }
+        var pages = Math.max(1, Math.ceil(count / size));
+        var current = Math.max(0, Math.min(pages - 1, page));
+        return {
+          page: current,
+          pages: pages,
+          start: current * size,
+          end: Math.min(count, (current + 1) * size)
+        };
+      }
+      function mineTestEncounter(round) {
+        if (round === void 0) {
+          round = 0;
+        }
+        // Read the live formal configuration for every encounter; no copied monster catalogue.
+        return _extends({}, encounter('mine', round % 3, 'battle', function () {
+          return (round % dungeons.mine.enemies.length + .25) / dungeons.mine.enemies.length;
+        }), {
+          coinReward: 0
+        });
+      }
       function makeMineTrial() {
-        return [{
-          kind: 'battle',
-          coinReward: 4,
-          enemies: [112, 80],
-          encounters: [enemy('石甲虫', 'beetle', 112, 11), enemy('矿洞蝙蝠', 'bat', 80, 8)]
-        }, {
-          kind: 'rest'
-        }, {
-          kind: 'battle',
-          coinReward: 4,
-          enemies: [150],
-          rescueCells: [23, 30],
-          encounters: [enemy('堵路石甲虫', 'beetle', 150, 13)]
-        }, {
-          kind: 'battle',
-          type: 'boss',
-          coinReward: 8,
-          enemies: [295],
-          encounters: [enemy('晶岩守卫', 'golem', 295, 23, ['boss'])]
-        }];
+        return [mineTestEncounter()];
       }
       function mineTrialRandom(seed) {
         if (seed === void 0) {
@@ -13495,12 +15838,13 @@ System.register("chunks:///_virtual/TemplateBoardFx.ts", ['./rollupPluginModLoBa
           }
           return load;
         }();
-        function TemplateBoardFx(parent, frames) {
+        function TemplateBoardFx(parent, frames, font) {
           this.layer = void 0;
           this.pool = [];
           this.stamp = void 0;
           this.disposed = false;
           this.frames = frames;
+          this.font = font;
           this.layer = new Node('消除特效层');
           this.layer.layer = parent.layer;
           this.layer.addComponent(UITransform);
@@ -13637,7 +15981,11 @@ System.register("chunks:///_virtual/TemplateBoardFx.ts", ['./rollupPluginModLoBa
                     this.layer.addChild(_node);
                     ui = _node.addComponent(UITransform);
                     _text = _node.addComponent(Label);
-                    _text.fontFamily = 'Microsoft YaHei';
+                    _text.fontFamily = 'ZCOOL KuaiLe';
+                    if (this.font) {
+                      _text.useSystemFont = false;
+                      _text.font = this.font;
+                    }
                     _text.fontSize = 32;
                     _text.lineHeight = 40;
                     _text.color = amber.clone();
@@ -13898,6 +16246,71 @@ System.register("chunks:///_virtual/TemplateBoardFx.ts", ['./rollupPluginModLoBa
         }();
         return TemplateBoardFx;
       }());
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/TownRules.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+  var _extends, cclegacy;
+  return {
+    setters: [function (module) {
+      _extends = module.extends;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+    }],
+    execute: function () {
+      exports({
+        claimAltar: claimAltar,
+        exitBlessing: exitBlessing,
+        restoreTown: restoreTown
+      });
+      cclegacy._RF.push({}, "73dcep73F9CPJksffaKbVP4", "TownRules", undefined);
+      var newTownProgress = exports('newTownProgress', function newTownProgress() {
+        return {
+          rescued: false,
+          knightQuest: false,
+          mageQuest: false,
+          altarCharge: 1,
+          blessing: false,
+          blessingInDungeon: false
+        };
+      });
+      function restoreTown(value, legacyRescued) {
+        if (legacyRescued === void 0) {
+          legacyRescued = false;
+        }
+        var source = value && typeof value === 'object' ? value : {};
+        return {
+          rescued: source.rescued === undefined ? legacyRescued : source.rescued === true,
+          knightQuest: source.knightQuest === true,
+          mageQuest: source.mageQuest === true,
+          altarCharge: source.altarCharge === 0 ? 0 : 1,
+          blessing: source.blessing === true,
+          blessingInDungeon: source.blessing === true && source.blessingInDungeon === true
+        };
+      }
+      function claimAltar(town, hp, baseMaxHP) {
+        if (town.altarCharge !== 1 || town.blessing) return;
+        return {
+          town: _extends({}, town, {
+            altarCharge: 0,
+            blessing: true,
+            blessingInDungeon: false
+          }),
+          hp: Math.min(baseMaxHP + 100, hp + 100)
+        };
+      }
+      function exitBlessing(town, hp, baseMaxHP, completed) {
+        return {
+          town: _extends({}, town, {
+            altarCharge: completed ? 1 : town.altarCharge,
+            blessing: town.blessingInDungeon ? false : town.blessing,
+            blessingInDungeon: false
+          }),
+          hp: town.blessingInDungeon ? Math.min(hp, baseMaxHP) : hp
+        };
+      }
       cclegacy._RF.pop();
     }
   };

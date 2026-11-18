@@ -18,6 +18,20 @@ if (-not (Test-Path $indexFile)) {
     throw "找不到构建产物：$indexFile`n先在游戏工程运行 npm.cmd run build:cocos"
 }
 
+# Resolve the only destructive mirror target before robocopy /MIR.
+$resolvedSite = [IO.Path]::GetFullPath($siteDir)
+$expectedSite = [IO.Path]::GetFullPath((Join-Path $repoRoot 'site'))
+if ($resolvedSite -ne $expectedSite -or -not $resolvedSite.StartsWith([IO.Path]::GetFullPath($repoRoot) + [IO.Path]::DirectorySeparatorChar)) { throw 'Unsafe site target' }
+$gameSource = Get-Content (Join-Path $GameRoot 'cocos/assets/scripts/Game.ts') -Raw
+$versionMatch = [regex]::Match($gameSource, "releaseVersion='([^']+)'")
+if (-not $versionMatch.Success) { throw 'Missing game release version' }
+$releaseVersion = $versionMatch.Groups[1].Value
+foreach ($webFile in @('boot.js','sw.js')) {
+    $path = Join-Path $repoRoot ('web/' + $webFile)
+    $text = Get-Content $path -Raw
+    $text = [regex]::Replace($text, '202[0-9]{5}-[a-z0-9-]+', $releaseVersion)
+    [IO.File]::WriteAllText($path,$text,[Text.UTF8Encoding]::new($false))
+}
 Write-Output "源目录: $buildDir"
 Write-Output "目标目录: $siteDir"
 robocopy $buildDir $siteDir /MIR /NFL /NDL /NJH /NJS /NP | Out-Null
@@ -36,11 +50,21 @@ if (Test-Path $webDir) {
 # 构建产物是 PNG 纹理，必须转 WebP 才能压到 16 MB 左右
 $py = Get-Command python -ErrorAction SilentlyContinue
 if (-not $py) { throw "找不到 python，无法执行 WebP 优化（tools\optimize-site.py）" }
+# Always resize classified RPG backgrounds in the delivery copy before encoding.
+& $py.Source (Join-Path $GameRoot 'scripts\image_delivery.py') --game-root $GameRoot --directory $siteDir
+if ($LASTEXITCODE -ne 0) { throw "图片尺寸审查失败，停止发布" }
 Write-Output "正在优化素材（PNG -> WebP）..."
 & $py.Source (Join-Path $PSScriptRoot 'optimize-site.py') --dir $siteDir
 if ($LASTEXITCODE -ne 0) { throw "素材优化失败，退出码 $LASTEXITCODE" }
 
 Write-Output ""
+$html = Get-Content $indexFile -Raw
+$boot = '<script src="/boot.js?v=' + $releaseVersion + '"></script>'
+$html = $html.Replace('</head>', $boot + "`n</head>")
+[IO.File]::WriteAllText((Join-Path $siteDir 'index.html'),$html,[Text.UTF8Encoding]::new($false))
+$bundle = Join-Path $siteDir 'assets/main/index.js'
+$release = @{version=$releaseVersion;build='Cocos Creator 3.8.8 Web Mobile';stage=@(480,270);bundleSha256=(Get-FileHash $bundle -Algorithm SHA256).Hash.ToLower()}
+[IO.File]::WriteAllText((Join-Path $siteDir 'release.json'),($release | ConvertTo-Json),[Text.UTF8Encoding]::new($false))
 Write-Output "下一步提交并发布："
 Write-Output "  git -C `"$repoRoot`" add -A"
 Write-Output "  git -C `"$repoRoot`" commit -m `"更新游戏构建`""

@@ -1,9 +1,9 @@
 {
-  "version": "20261118-render-foreground",
-  "build": "Cocos Creator 3.8.8 Web Mobile",
+  "bundleSha256": "86e06077630de4d7e538f94770c0b2fa50b72222f480557cf30f3ce26ed6ae89",
   "stage": [
     480,
     270
   ],
-  "bundleSha256": "c0ab1af06c40484eba8e9d40042b2162a8355e8d8d1d914ea5a21d4d420dc1d5"
+  "build": "Cocos Creator 3.8.8 Web Mobile",
+  "version": "20261119-enemy-actions-2"
 }

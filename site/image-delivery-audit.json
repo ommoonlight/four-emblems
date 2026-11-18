@@ -1,0 +1,275 @@
+[
+  {
+    "name": "village-tavern-stage",
+    "role": "rpg",
+    "before": [
+      1672,
+      941
+    ],
+    "after": [
+      959,
+      540
+    ],
+    "resized": true
+  },
+  {
+    "name": "travel-tower-plains",
+    "role": "rpg",
+    "before": [
+      470,
+      270
+    ],
+    "after": [
+      470,
+      270
+    ],
+    "resized": false
+  },
+  {
+    "name": "travel-village-plains",
+    "role": "rpg",
+    "before": [
+      470,
+      270
+    ],
+    "after": [
+      470,
+      270
+    ],
+    "resized": false
+  },
+  {
+    "name": "travel-village-edge",
+    "role": "rpg",
+    "before": [
+      470,
+      270
+    ],
+    "after": [
+      470,
+      270
+    ],
+    "resized": false
+  },
+  {
+    "name": "forest-reel",
+    "role": "rpg",
+    "before": [
+      2172,
+      724
+    ],
+    "after": [
+      1620,
+      540
+    ],
+    "resized": true
+  },
+  {
+    "name": "village-navigation",
+    "role": "navigation",
+    "before": [
+      1254,
+      1254
+    ],
+    "after": [
+      1024,
+      1024
+    ],
+    "resized": true
+  },
+  {
+    "name": "village-shop-stage",
+    "role": "rpg",
+    "before": [
+      1671,
+      941
+    ],
+    "after": [
+      959,
+      540
+    ],
+    "resized": true
+  },
+  {
+    "name": "village-chief-stage",
+    "role": "rpg",
+    "before": [
+      1672,
+      941
+    ],
+    "after": [
+      959,
+      540
+    ],
+    "resized": true
+  },
+  {
+    "name": "gear-stage",
+    "role": "rpg",
+    "before": [
+      470,
+      270
+    ],
+    "after": [
+      470,
+      270
+    ],
+    "resized": false
+  },
+  {
+    "name": "travel-forest-plains",
+    "role": "rpg",
+    "before": [
+      470,
+      270
+    ],
+    "after": [
+      470,
+      270
+    ],
+    "resized": false
+  },
+  {
+    "name": "world-travel",
+    "role": "navigation",
+    "before": [
+      940,
+      940
+    ],
+    "after": [
+      940,
+      940
+    ],
+    "resized": false
+  },
+  {
+    "name": "village-smith-stage",
+    "role": "rpg",
+    "before": [
+      1672,
+      941
+    ],
+    "after": [
+      959,
+      540
+    ],
+    "resized": true
+  },
+  {
+    "name": "travel-swamp-plains",
+    "role": "rpg",
+    "before": [
+      470,
+      270
+    ],
+    "after": [
+      470,
+      270
+    ],
+    "resized": false
+  },
+  {
+    "name": "village-stage",
+    "role": "rpg",
+    "before": [
+      1672,
+      941
+    ],
+    "after": [
+      959,
+      540
+    ],
+    "resized": true
+  },
+  {
+    "name": "swamp-reel",
+    "role": "rpg",
+    "before": [
+      2172,
+      724
+    ],
+    "after": [
+      1620,
+      540
+    ],
+    "resized": true
+  },
+  {
+    "name": "travel-mine-plains",
+    "role": "rpg",
+    "before": [
+      470,
+      270
+    ],
+    "after": [
+      470,
+      270
+    ],
+    "resized": false
+  },
+  {
+    "name": "travel-plains",
+    "role": "rpg",
+    "before": [
+      470,
+      270
+    ],
+    "after": [
+      470,
+      270
+    ],
+    "resized": false
+  },
+  {
+    "name": "mine-reel",
+    "role": "rpg",
+    "before": [
+      2172,
+      724
+    ],
+    "after": [
+      1620,
+      540
+    ],
+    "resized": true
+  },
+  {
+    "name": "world-village-cut",
+    "role": "navigation",
+    "before": [
+      349,
+      243
+    ],
+    "after": [
+      349,
+      243
+    ],
+    "resized": false
+  },
+  {
+    "name": "tower-reel",
+    "role": "rpg",
+    "before": [
+      2172,
+      724
+    ],
+    "after": [
+      1620,
+      540
+    ],
+    "resized": true
+  },
+  {
+    "name": "travel-mine-edge",
+    "role": "rpg",
+    "before": [
+      470,
+      270
+    ],
+    "after": [
+      470,
+      270
+    ],
+    "resized": false
+  }
+]
