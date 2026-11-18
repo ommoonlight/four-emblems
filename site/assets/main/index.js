@@ -1,8 +1,2039 @@
-System.register("chunks:///_virtual/BattleMotion.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
-  var _createForOfIteratorHelperLoose, cclegacy;
+System.register("chunks:///_virtual/ActorArt.ts", ['cc'], function (exports) {
+  var cclegacy;
   return {
     setters: [function (module) {
+      cclegacy = module.cclegacy;
+    }],
+    execute: function () {
+      cclegacy._RF.push({}, "f813fjU/QxAiaoTjIvULM+h", "ActorArt", undefined);
+      // Stage art calibration. Anchors use source image normalized top-left coordinates.
+      var portraitBottomPadding = exports('portraitBottomPadding', {
+        'hero-s': 14 / 192,
+        'hero-d': 17 / 192,
+        'hero-h': 11 / 192,
+        'hero-m': 20 / 192,
+        wolf: 41 / 320,
+        boss: 42 / 320,
+        boar: 47 / 320,
+        vine: 30 / 300,
+        bear: 31 / 300,
+        bat: 47 / 300,
+        beetle: 54 / 300,
+        golem: 42 / 300,
+        ghost: 46 / 300,
+        frog: 38 / 300,
+        lich: 32 / 300,
+        dragon: 26 / 300,
+        knight: 8 / 300,
+        wizard: 8 / 300,
+        'npc-chief': 5 / 272,
+        'npc-innkeeper': 5 / 272,
+        'npc-shop': 5 / 272,
+        'npc-smith': 5 / 272,
+        'dungeon-traveler': 4 / 288,
+        'dungeon-chest': 22 / 263,
+        'dungeon-merchant': 3 / 1199
+      });
+      // Lower-silhouette bounds keep the ellipse under the feet even when the
+      // portrait canvas is offset or its upper body is much wider than its stance.
+      var portraitFootprint = exports('portraitFootprint', {
+        'hero-s': [.073, .740],
+        'hero-d': [.109, .849],
+        'hero-h': [.193, .729],
+        'hero-m': [.109, .693],
+        wolf: [.191, .822],
+        boss: [.097, .778],
+        boar: [.191, .900],
+        vine: [.140, .917],
+        bear: [.103, .920],
+        bat: [.337, .627],
+        beetle: [.150, .893],
+        golem: [.167, .790],
+        ghost: [.337, .633],
+        frog: [.070, .897],
+        lich: [.167, .907],
+        dragon: [.060, .943],
+        knight: [.283, .717],
+        wizard: [.430, .853],
+        'npc-chief': [.326, .634],
+        'npc-innkeeper': [.259, .607],
+        'npc-shop': [.214, .536],
+        'npc-smith': [.326, .795],
+        'dungeon-traveler': [.289, .620],
+        'dungeon-chest': [.097, .865],
+        'dungeon-merchant': [.060, .537]
+      });
+      var enemyPortraitSize = exports('enemyPortraitSize', {
+        boss: 142,
+        knight: 188,
+        wizard: 188,
+        dragon: 176,
+        bear: 162,
+        golem: 164,
+        lich: 148
+      });
+      var actorArt = exports('actorArt', {
+        "hero-s": {
+          "baseOpacity": 1,
+          "headY": 0.026,
+          "centerX": 0.5,
+          "centerY": 0.5,
+          "projectileX": 0.65,
+          "projectileY": 0.45,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 0,
+          "shadowScale": 1,
+          "sourceFacing": "right"
+        },
+        "hero-d": {
+          "baseOpacity": 1,
+          "headY": 0.0521,
+          "centerX": 0.5,
+          "centerY": 0.5,
+          "projectileX": 0.65,
+          "projectileY": 0.45,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 0,
+          "shadowScale": 1,
+          "sourceFacing": "right"
+        },
+        "hero-m": {
+          "baseOpacity": 1,
+          "headY": 0.0625,
+          "centerX": 0.5,
+          "centerY": 0.5,
+          "projectileX": 0.65,
+          "projectileY": 0.45,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 0,
+          "shadowScale": 1,
+          "sourceFacing": "right"
+        },
+        "hero-h": {
+          "baseOpacity": 1,
+          "headY": 0.0365,
+          "centerX": 0.5,
+          "centerY": 0.5,
+          "projectileX": 0.65,
+          "projectileY": 0.45,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 0,
+          "shadowScale": 1,
+          "sourceFacing": "right"
+        },
+        "wolf": {
+          "baseOpacity": 1,
+          "headY": 0.0469,
+          "centerX": 0.5,
+          "centerY": 0.5,
+          "projectileX": 0.65,
+          "projectileY": 0.45,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 0,
+          "shadowScale": 1,
+          "sourceFacing": "left"
+        },
+        "boss": {
+          "baseOpacity": 1,
+          "headY": 0.1281,
+          "centerX": 0.5,
+          "centerY": 0.5,
+          "projectileX": 0.65,
+          "projectileY": 0.45,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 0,
+          "shadowScale": 1,
+          "sourceFacing": "left"
+        },
+        "boar": {
+          "baseOpacity": 1,
+          "headY": 0.1594,
+          "centerX": 0.5,
+          "centerY": 0.5,
+          "projectileX": 0.65,
+          "projectileY": 0.45,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 0,
+          "shadowScale": 1,
+          "sourceFacing": "left"
+        },
+        "vine": {
+          "baseOpacity": 1,
+          "headY": 0.07,
+          "centerX": 0.5,
+          "centerY": 0.5,
+          "projectileX": 0.65,
+          "projectileY": 0.45,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 0,
+          "shadowScale": 1,
+          "sourceFacing": "left"
+        },
+        "bear": {
+          "baseOpacity": 1,
+          "headY": 0.0867,
+          "centerX": 0.5,
+          "centerY": 0.5,
+          "projectileX": 0.65,
+          "projectileY": 0.45,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 0,
+          "shadowScale": 1,
+          "sourceFacing": "left"
+        },
+        "bat": {
+          "baseOpacity": 1,
+          "headY": 0.17,
+          "centerX": 0.5,
+          "centerY": 0.5,
+          "projectileX": 0.65,
+          "projectileY": 0.45,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 0,
+          "shadowScale": 1,
+          "sourceFacing": "left"
+        },
+        "beetle": {
+          "baseOpacity": 1,
+          "headY": 0.1833,
+          "centerX": 0.5,
+          "centerY": 0.5,
+          "projectileX": 0.65,
+          "projectileY": 0.45,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 0,
+          "shadowScale": 1,
+          "sourceFacing": "left"
+        },
+        "golem": {
+          "baseOpacity": 1,
+          "headY": 0.0433,
+          "centerX": 0.5,
+          "centerY": 0.5,
+          "projectileX": 0.65,
+          "projectileY": 0.45,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 0,
+          "shadowScale": 1,
+          "sourceFacing": "left"
+        },
+        "ghost": {
+          "baseOpacity": 0.85,
+          "headY": 0.0467,
+          "centerX": 0.5,
+          "centerY": 0.5,
+          "projectileX": 0.65,
+          "projectileY": 0.45,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 0,
+          "shadowScale": 1,
+          "sourceFacing": "left"
+        },
+        "frog": {
+          "baseOpacity": 1,
+          "headY": 0.0433,
+          "centerX": 0.5,
+          "centerY": 0.5,
+          "projectileX": 0.65,
+          "projectileY": 0.45,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 0,
+          "shadowScale": 1,
+          "sourceFacing": "left"
+        },
+        "lich": {
+          "baseOpacity": 1,
+          "headY": 0.0433,
+          "centerX": 0.5,
+          "centerY": 0.5,
+          "projectileX": 0.65,
+          "projectileY": 0.45,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 0,
+          "shadowScale": 1,
+          "sourceFacing": "left"
+        },
+        "dragon": {
+          "baseOpacity": 1,
+          "headY": 0.0533,
+          "centerX": 0.5,
+          "centerY": 0.5,
+          "projectileX": 0.65,
+          "projectileY": 0.45,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 0,
+          "shadowScale": 1,
+          "sourceFacing": "left"
+        },
+        "knight": {
+          "baseOpacity": 1,
+          "headY": 0.36,
+          "centerX": 0.5,
+          "centerY": 0.5,
+          "projectileX": 0.65,
+          "projectileY": 0.45,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 0,
+          "shadowScale": 1,
+          "sourceFacing": "left"
+        },
+        "wizard": {
+          "baseOpacity": 1,
+          "headY": 0.3067,
+          "centerX": 0.5,
+          "centerY": 0.5,
+          "projectileX": 0.65,
+          "projectileY": 0.45,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 0,
+          "shadowScale": 1,
+          "sourceFacing": "left"
+        },
+        "npc-chief": {
+          "baseOpacity": 1,
+          "headY": 0.0404,
+          "centerX": 0.5,
+          "centerY": 0.5,
+          "projectileX": 0.65,
+          "projectileY": 0.45,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 0,
+          "shadowScale": 1,
+          "sourceFacing": "left"
+        },
+        "npc-shop": {
+          "baseOpacity": 1,
+          "headY": 0.0404,
+          "centerX": 0.5,
+          "centerY": 0.5,
+          "projectileX": 0.65,
+          "projectileY": 0.45,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 0,
+          "shadowScale": 1,
+          "sourceFacing": "left"
+        },
+        "npc-innkeeper": {
+          "baseOpacity": 1,
+          "headY": 0.0404,
+          "centerX": 0.5,
+          "centerY": 0.5,
+          "projectileX": 0.65,
+          "projectileY": 0.45,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 0,
+          "shadowScale": 1,
+          "sourceFacing": "left"
+        },
+        "npc-smith": {
+          "baseOpacity": 1,
+          "headY": 0.0404,
+          "centerX": 0.5,
+          "centerY": 0.5,
+          "projectileX": 0.65,
+          "projectileY": 0.45,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 0,
+          "shadowScale": 1,
+          "sourceFacing": "left"
+        },
+        "dungeon-traveler": {
+          "baseOpacity": 1,
+          "headY": 0.2,
+          "centerX": 0.5,
+          "centerY": 0.5,
+          "projectileX": 0.65,
+          "projectileY": 0.45,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 0,
+          "shadowScale": 1,
+          "sourceFacing": "left"
+        },
+        "dungeon-merchant": {
+          "baseOpacity": 1,
+          "headY": 0.07,
+          "centerX": 0.5,
+          "centerY": 0.5,
+          "projectileX": 0.65,
+          "projectileY": 0.45,
+          "shadowOffsetX": 0,
+          "shadowOffsetY": 0,
+          "shadowScale": 1,
+          "sourceFacing": "left"
+        }
+      });
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/battle-core.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './BattleRules.ts', './formal-rules.ts', './Board.ts', './experiment.ts', './damage.ts', './derivation.ts', './board-bridge.ts'], function (exports) {
+  var _extends, _regeneratorRuntime, _createForOfIteratorHelperLoose, _objectWithoutPropertiesLoose, _inheritsLoose, _createClass, _wrapNativeSuper, cclegacy, newOathState, oathDamage, applyBattleCry, endOathRound, formalHit, formalSkill, formalEnemy, matches, legalMove, experimentAction, combatPipeline, derivationState, acceptFact, createBoardBridge;
+  return {
+    setters: [function (module) {
+      _extends = module.extends;
+      _regeneratorRuntime = module.regeneratorRuntime;
       _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
+      _objectWithoutPropertiesLoose = module.objectWithoutPropertiesLoose;
+      _inheritsLoose = module.inheritsLoose;
+      _createClass = module.createClass;
+      _wrapNativeSuper = module.wrapNativeSuper;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+    }, function (module) {
+      newOathState = module.newOathState;
+      oathDamage = module.oathDamage;
+      applyBattleCry = module.applyBattleCry;
+      endOathRound = module.endOathRound;
+    }, function (module) {
+      formalHit = module.formalHit;
+      formalSkill = module.formalSkill;
+      formalEnemy = module.formalEnemy;
+    }, function (module) {
+      matches = module.matches;
+      legalMove = module.legalMove;
+    }, function (module) {
+      experimentAction = module.experimentAction;
+    }, function (module) {
+      combatPipeline = module.combatPipeline;
+    }, function (module) {
+      derivationState = module.derivationState;
+      acceptFact = module.acceptFact;
+    }, function (module) {
+      createBoardBridge = module.createBoardBridge;
+    }],
+    execute: function () {
+      exports({
+        canonical: canonical,
+        createBattleCore: createBattleCore
+      });
+      var _excluded = ["commands"];
+      cclegacy._RF.push({}, "6f6a0evaANAcKoci1iAXtk0", "battle-core", undefined);
+      function canonical(value) {
+        if (Array.isArray(value)) return '[' + value.map(canonical).join(',') + ']';
+        if (value !== null && typeof value === 'object') {
+          var entries = value instanceof Map ? Array.from(value.entries()) : Object.entries(value);
+          return '{' + entries.sort(function (_ref, _ref2) {
+            var a = _ref[0];
+            var b = _ref2[0];
+            return a < b ? -1 : a > b ? 1 : 0;
+          }).map(function (_ref3) {
+            var k = _ref3[0],
+              v = _ref3[1];
+            return JSON.stringify(k) + ':' + canonical(v);
+          }).join(',') + '}';
+        }
+        var encoded = JSON.stringify(value);
+        if (encoded === undefined) throw new Error('Non-serializable value');
+        return encoded;
+      }
+
+      /** Candidate operations, never trusted commands or replacement snapshots. */
+
+      function createBattleCore(fixture, options) {
+        var _options$fingerprint, _options$boardMode, _f$rescue, _f$equipment, _derivation$instances;
+        var _marked = /*#__PURE__*/_regeneratorRuntime().mark(flush),
+          _marked2 = /*#__PURE__*/_regeneratorRuntime().mark(produce),
+          _marked3 = /*#__PURE__*/_regeneratorRuntime().mark(apply),
+          _marked4 = /*#__PURE__*/_regeneratorRuntime().mark(formalTick),
+          _marked5 = /*#__PURE__*/_regeneratorRuntime().mark(drainFormal),
+          _marked6 = /*#__PURE__*/_regeneratorRuntime().mark(advance);
+        if (options === void 0) {
+          options = {};
+        }
+        var hash = (_options$fingerprint = options.fingerprint) != null ? _options$fingerprint : canonical;
+        var f = structuredClone(fixture);
+        var mode = (_options$boardMode = options.boardMode) != null ? _options$boardMode : 'scripted';
+        var boardVersion = 0;
+        var potionReceipts = new Set();
+        var events = [];
+        var cues = [];
+        var presented = 0;
+        var replayBoards = [];
+        var frames = new Map();
+        var recorded = [];
+        var state = {
+          battleId: f.battleId,
+          roomId: f.roomId,
+          roundId: 0,
+          phase: 'PLAYER_INPUT',
+          rng: f.seed >>> 0,
+          partyHP: f.partyHP,
+          enemies: _extends({}, f.enemies),
+          marks: Array.from(new Set((_f$rescue = f.rescue) != null ? _f$rescue : [])),
+          partyQueue: [],
+          personal: new Map(),
+          delayed: [],
+          producers: [],
+          equipmentUses: _extends({}, f.initialEquipmentUses),
+          result: null
+        };
+        if (f.formal) state.formal = _extends({
+          rally: false,
+          stunned: []
+        }, f.formal.revisedSkills ? {
+          oath: newOathState()
+        } : {});
+        var derivation = f.equipment !== undefined || f.board !== undefined || f.experiment !== undefined ? derivationState((_f$equipment = f.equipment) != null ? _f$equipment : []) : undefined;
+        if (derivation) {
+          if (!f.combat) throw new Error('M3 requires combat configuration');
+          state.derivation = derivation;
+        }
+        if (f.board) state.board = {
+          tiles: f.board.initial.slice()
+        };
+        var bridge = state.board && f.board ? createBoardBridge(f.board, state.board, random) : undefined;
+        var seenFacts = new Set();
+        var equipmentById = new Map(derivation == null ? void 0 : derivation.instances.map(function (i) {
+          return [i.spec.id, i];
+        }));
+        var triggerTypes = new Set((_derivation$instances = derivation == null ? void 0 : derivation.instances.map(function (i) {
+          return i.spec.trigger;
+        })) != null ? _derivation$instances : []);
+        var flushing = false;
+        var batch = 0;
+        function emit(category, type, parent, payload, sourceId, targetId) {
+          var _parent$eventId, _parent$rootEventId;
+          if (payload === void 0) {
+            payload = {};
+          }
+          if (sourceId === void 0) {
+            sourceId = null;
+          }
+          if (targetId === void 0) {
+            targetId = null;
+          }
+          var sequence = events.length + 1;
+          var eventId = f.battleId + ':' + sequence;
+          var e = {
+            eventId: eventId,
+            battleId: f.battleId,
+            roundId: state.roundId,
+            sequence: sequence,
+            parentEventId: (_parent$eventId = parent == null ? void 0 : parent.eventId) != null ? _parent$eventId : null,
+            rootEventId: (_parent$rootEventId = parent == null ? void 0 : parent.rootEventId) != null ? _parent$rootEventId : eventId,
+            phase: state.phase,
+            category: category,
+            type: type,
+            sourceId: sourceId,
+            targetId: targetId,
+            payload: payload
+          };
+          events.push(e);
+          if (derivation && triggerTypes.has(type)) acceptFact(derivation, e, seenFacts);
+          return e;
+        }
+        function random() {
+          state.rng = Math.imul(state.rng, 1664525) + 1013904223 >>> 0;
+          return state.rng / Math.pow(2, 32);
+        }
+        var pipeline = f.combat ? combatPipeline(_extends({
+          config: f.combat,
+          state: state,
+          emit: emit,
+          random: random
+        }, derivation ? {
+          schedule: schedule,
+          flush: flush
+        } : {})) : undefined;
+        if (pipeline) state.combat = pipeline.runtime;
+        function enqueue(q) {
+          var actor = q.snapshot.actor;
+          if (!state.personal.has(actor)) {
+            state.personal.set(actor, []);
+            state.partyQueue.push(actor);
+          }
+          state.personal.get(actor).push(q);
+        }
+        function schedule(request, cause, actor) {
+          derivation.requests.push({
+            request: request,
+            cause: cause,
+            actor: actor,
+            equipmentId: null
+          });
+        }
+        function dispatch(command, cause) {
+          var snapshot = Object.freeze(_extends({}, command));
+          var deferred = state.phase === 'ENEMY_RESOLVE';
+          var event = emit('FACT', 'COMMAND_ENQUEUED', cause, {
+            snapshot: snapshot,
+            deferred: deferred
+          }, snapshot.actor);
+          var q = {
+            snapshot: snapshot,
+            event: event
+          };
+          if (deferred) state.delayed.push(q);else enqueue(q);
+        }
+        function pendingState() {
+          var _state$combat, _state$board, _derivation$instances2, _derivation$requests$;
+          return _extends({
+            phase: state.phase,
+            rng: state.rng,
+            partyHP: state.partyHP,
+            enemies: state.enemies,
+            marks: state.marks
+          }, state.formal ? {
+            formal: state.formal
+          } : {}, {
+            combat: (_state$combat = state.combat) != null ? _state$combat : null,
+            board: (_state$board = state.board) != null ? _state$board : null,
+            budgets: (_derivation$instances2 = derivation == null ? void 0 : derivation.instances.map(function (i) {
+              return i.remaining;
+            })) != null ? _derivation$instances2 : [],
+            commands: state.partyQueue.map(function (id) {
+              return [id, state.personal.get(id).map(function (q) {
+                return q.snapshot;
+              })];
+            }),
+            delayed: state.delayed.map(function (q) {
+              return q.snapshot;
+            }),
+            requests: (_derivation$requests$ = derivation == null ? void 0 : derivation.requests.map(function (p) {
+              return [p.actor, p.equipmentId, p.request];
+            })) != null ? _derivation$requests$ : []
+          });
+        }
+        function fail(message, parent, reason, fingerprint) {
+          emit('LIFECYCLE', 'SIMULATION_FAILED', parent, {
+            reason: reason,
+            fingerprint: fingerprint
+          });
+          throw new SimulationError(message, structuredClone(state), events.slice());
+        }
+        function boardHasWork(start) {
+          var visited = new Set();
+          var name = start;
+          while (name !== undefined) {
+            var _step$commands, _step$marks;
+            var step = Object.hasOwn(f.steps, name) ? f.steps[name] : undefined;
+            // Broken definitions are delegated to the producer to emit its failure diagnostic.
+            if (!step || visited.has(name)) return true;
+            if ((_step$commands = step.commands) != null && _step$commands.length || step.match && (!bridge || bridge.canMatch(step.match)) || step.recover || (_step$marks = step.marks) != null && _step$marks.some(function (mark) {
+              return state.marks.includes(mark);
+            })) return true;
+            visited.add(name);
+            name = step.next;
+          }
+          return false;
+        }
+        function flush() {
+          var seen, _instance$remaining, first, fingerprint, _ref4, request, cause, actor, equipmentId, instance, commit;
+          return _regeneratorRuntime().wrap(function flush$(_context) {
+            while (1) switch (_context.prev = _context.next) {
+              case 0:
+                if (!(!derivation || flushing)) {
+                  _context.next = 2;
+                  break;
+                }
+                return _context.abrupt("return");
+              case 2:
+                flushing = true;
+                seen = new Set();
+                _context.prev = 4;
+              case 5:
+                if (!derivation.requests.length) {
+                  _context.next = 41;
+                  break;
+                }
+                first = derivation.requests[0];
+                fingerprint = hash(pendingState());
+                if (seen.has(fingerprint)) fail('Repeated derived logical state', first.cause, 'repeated-derivation', fingerprint);
+                seen.add(fingerprint);
+                _ref4 = derivation.requests.shift(), request = _ref4.request, cause = _ref4.cause, actor = _ref4.actor, equipmentId = _ref4.equipmentId;
+                instance = equipmentId === null ? undefined : equipmentById.get(equipmentId);
+                if (!((instance == null ? void 0 : instance.remaining) === 0)) {
+                  _context.next = 14;
+                  break;
+                }
+                return _context.abrupt("continue", 5);
+              case 14:
+                if (!(request.kind === 'skill' && !Object.hasOwn(f.skills, request.command.skill))) {
+                  _context.next = 16;
+                  break;
+                }
+                throw new Error('Unknown derived skill');
+              case 16:
+                if (!(mode === 'scripted' && request.kind === 'board' && !Object.hasOwn(f.steps, request.step))) {
+                  _context.next = 18;
+                  break;
+                }
+                throw new Error('Unknown derived board step');
+              case 18:
+                if (!(mode === 'scripted' && instance && request.kind === 'board' && !boardHasWork(request.step))) {
+                  _context.next = 20;
+                  break;
+                }
+                return _context.abrupt("continue", 5);
+              case 20:
+                if (!(instance && request.kind === 'damage' && !pipeline.canTarget(request.strike.target))) {
+                  _context.next = 22;
+                  break;
+                }
+                return _context.abrupt("continue", 5);
+              case 22:
+                if (!(instance && request.kind === 'effect' && !pipeline.canInflict(request.effect))) {
+                  _context.next = 24;
+                  break;
+                }
+                return _context.abrupt("continue", 5);
+              case 24:
+                if ((instance == null ? void 0 : instance.remaining) != null) instance.remaining--;
+                commit = emit('COMMAND', 'DERIVED_REQUEST_COMMITTED', cause, {
+                  request: request,
+                  equipmentId: equipmentId,
+                  remaining: (_instance$remaining = instance == null ? void 0 : instance.remaining) != null ? _instance$remaining : null
+                }, actor);
+                _context.t0 = request.kind;
+                _context.next = _context.t0 === 'skill' ? 29 : _context.t0 === 'board' ? 31 : _context.t0 === 'effect' ? 33 : _context.t0 === 'cleanse' ? 35 : _context.t0 === 'damage' ? 37 : 39;
+                break;
+              case 29:
+                dispatch(request.command, commit);
+                return _context.abrupt("break", 39);
+              case 31:
+                return _context.delegateYield(produce(request.step, commit), "t1", 32);
+              case 32:
+                return _context.abrupt("break", 39);
+              case 33:
+                pipeline.inflict(request.effect, commit, actor);
+                return _context.abrupt("break", 39);
+              case 35:
+                pipeline.cleanse(request.owner, request.effect, commit);
+                return _context.abrupt("break", 39);
+              case 37:
+                return _context.delegateYield(pipeline.derivedDamage(request.strike, commit, actor), "t2", 38);
+              case 38:
+                return _context.abrupt("break", 39);
+              case 39:
+                _context.next = 5;
+                break;
+              case 41:
+                _context.prev = 41;
+                flushing = false;
+                return _context.finish(41);
+              case 44:
+              case "end":
+                return _context.stop();
+            }
+          }, _marked, null, [[4,, 41, 44]]);
+        }
+        function register(start, parent) {
+          var request = emit('COMMAND', 'BOARD_MUTATION_REQUESTED', parent, {
+            start: start
+          }, parent.sourceId);
+          state.producers.push(request.eventId);
+          return request;
+        }
+        function produce(start, parent) {
+          var request, ticket, external, visited, seenBoard, name, wave, cause, _loop;
+          return _regeneratorRuntime().wrap(function produce$(_context3) {
+            while (1) switch (_context3.prev = _context3.next) {
+              case 0:
+                request = register(start, parent);
+                ticket = function ticket(step, wave) {
+                  var _options$generation;
+                  return Object.freeze(_extends({
+                    battleId: f.battleId,
+                    roomId: f.roomId,
+                    generation: (_options$generation = options.generation) != null ? _options$generation : 0,
+                    roundId: state.roundId,
+                    phase: state.phase,
+                    producerId: request.eventId,
+                    parentEventId: parent.eventId,
+                    boardVersion: boardVersion,
+                    step: step
+                  }, wave === undefined ? {} : {
+                    wave: wave
+                  }));
+                };
+                if (f.formal) {
+                  _context3.next = 6;
+                  break;
+                }
+                _context3.next = 5;
+                return ticket(start);
+              case 5:
+                external = _context3.sent;
+              case 6:
+                visited = new Set();
+                seenBoard = new Set();
+                name = start;
+                wave = 1;
+                cause = request;
+                _loop = /*#__PURE__*/_regeneratorRuntime().mark(function _loop() {
+                  var _step$marks2, _ref6, _step$match$wave, _step$match;
+                  var _external, key, step, removed, match, _ref5, matchedCommands, boardFacts, _i, _arr, _step$commands2, command, _f$rescue2, _f$strategy, _f$strategy2, rescueCompleted;
+                  return _regeneratorRuntime().wrap(function _loop$(_context2) {
+                    while (1) switch (_context2.prev = _context2.next) {
+                      case 0:
+                        if (!f.formal) {
+                          _context2.next = 7;
+                          break;
+                        }
+                        if (mode === 'external' && state.board) {
+                          key = canonical([state.rng, state.marks, state.board.tiles.map(function (t) {
+                            var _t$tier;
+                            return [t.emblem, (_t$tier = t.tier) != null ? _t$tier : null];
+                          })]);
+                          if (seenBoard.has(key)) fail('Repeated formal board state', cause, 'repeated-board-state', key);
+                          seenBoard.add(key);
+                        }
+                        _context2.next = 4;
+                        return ticket(name, wave);
+                      case 4:
+                        external = _context2.sent;
+                        if (!(((_external = external) == null ? void 0 : _external.size) === 0)) {
+                          _context2.next = 7;
+                          break;
+                        }
+                        return _context2.abrupt("return", 1);
+                      case 7:
+                        if (!(mode === 'external' && !external)) {
+                          _context2.next = 9;
+                          break;
+                        }
+                        throw new Error('External production requires BoardFacts');
+                      case 9:
+                        step = external ? external.get(name) : Object.hasOwn(f.steps, name) ? f.steps[name] : undefined;
+                        if (!(!step || visited.has(name))) {
+                          _context2.next = 13;
+                          break;
+                        }
+                        emit('LIFECYCLE', 'BOARD_PRODUCER_FAILED', cause, {
+                          producer: request.eventId,
+                          step: name,
+                          reason: step ? 'fixture-cycle' : 'missing-step'
+                        });
+                        throw new SimulationError('Invalid scripted board producer: ' + name, structuredClone(state), events.slice());
+                      case 13:
+                        visited.add(name);
+                        removed = ((_step$marks2 = step.marks) != null ? _step$marks2 : []).filter(function (mark) {
+                          return state.marks.includes(mark);
+                        });
+                        state.marks = state.marks.filter(function (mark) {
+                          return !removed.includes(mark);
+                        });
+                        if (!step.recover) {
+                          _context2.next = 21;
+                          break;
+                        }
+                        if (bridge) {
+                          _context2.next = 19;
+                          break;
+                        }
+                        throw new Error('Recovery requires a BoardBridge');
+                      case 19:
+                        if (!bridge.recover(step.recover)) fail('No proposed recovery preserves the charged tiles and produces a legal board', cause, 'unresolved-board-recovery', hash(pendingState()));
+                        cause = emit('FACT', 'BOARD_RECOVERED', cause, {
+                          step: name
+                        });
+                      case 21:
+                        match = step.match ? bridge == null ? void 0 : bridge.match(step.match) : undefined;
+                        if (!(step.match && !match)) {
+                          _context2.next = 24;
+                          break;
+                        }
+                        throw new Error('Match requires a BoardBridge');
+                      case 24:
+                        _ref5 = match != null ? match : {
+                          commands: []
+                        }, matchedCommands = _ref5.commands, boardFacts = _objectWithoutPropertiesLoose(_ref5, _excluded);
+                        cause = emit('FACT', 'MATCH_RESOLVED', cause, _extends({
+                          producer: request.eventId,
+                          step: name,
+                          wave: (_ref6 = (_step$match$wave = (_step$match = step.match) == null ? void 0 : _step$match.wave) != null ? _step$match$wave : step.wave) != null ? _ref6 : null,
+                          marksCleared: removed
+                        }, boardFacts));
+                        if (mode === 'external' && state.board) frames.set(cause.eventId, structuredClone({
+                          board: state.board,
+                          marks: state.marks
+                        }));
+                        if (derivation && step.redeliverFact) acceptFact(derivation, cause, seenFacts);
+                        for (_i = 0, _arr = [].concat((_step$commands2 = step.commands) != null ? _step$commands2 : [], matchedCommands); _i < _arr.length; _i++) {
+                          command = _arr[_i];
+                          dispatch(command, cause);
+                        }
+                        if (!f.formal) {
+                          _context2.next = 38;
+                          break;
+                        }
+                        boardVersion++;
+                        if (step.match) wave++;
+                        return _context2.delegateYield(flush(), "t0", 33);
+                      case 33:
+                        rescueCompleted = !!((_f$rescue2 = f.rescue) != null && _f$rescue2.length) && !state.marks.length && (state.partyQueue.length > 0 || !!activeFormal);
+                        if (!(rescueCompleted && !((_f$strategy = f.strategy) != null && _f$strategy.rescue) && state.partyHP > 0 && Object.values(state.enemies).some(function (hp) {
+                          return hp > 0;
+                        }))) {
+                          _context2.next = 36;
+                          break;
+                        }
+                        throw new SimulationError('Fixture must specify rescue policy with pending commands', structuredClone(state), events.slice());
+                      case 36:
+                        if (!(state.phase !== 'ENEMY_RESOLVE' && !flushing && !draining && !(rescueCompleted && ((_f$strategy2 = f.strategy) == null ? void 0 : _f$strategy2.rescue) === 'stop'))) {
+                          _context2.next = 38;
+                          break;
+                        }
+                        return _context2.delegateYield(formalTick(), "t1", 38);
+                      case 38:
+                        name = step.next;
+                      case 39:
+                      case "end":
+                        return _context2.stop();
+                    }
+                  }, _loop);
+                });
+              case 12:
+                if (!(name !== undefined)) {
+                  _context3.next = 18;
+                  break;
+                }
+                return _context3.delegateYield(_loop(), "t0", 14);
+              case 14:
+                if (!_context3.t0) {
+                  _context3.next = 16;
+                  break;
+                }
+                return _context3.abrupt("break", 18);
+              case 16:
+                _context3.next = 12;
+                break;
+              case 18:
+                if (!f.formal) boardVersion++;
+                state.producers.pop();
+                return _context3.abrupt("return", emit('FACT', 'BOARD_STABILIZED', cause, {
+                  producer: request.eventId
+                }, parent.sourceId));
+              case 21:
+              case "end":
+                return _context3.stop();
+            }
+          }, _marked2);
+        }
+        function hit(parent, target, raw, party) {
+          if (party === void 0) {
+            party = false;
+          }
+          var before = party ? state.partyHP : Object.hasOwn(state.enemies, target) ? state.enemies[target] : 0;
+          var req = emit('COMMAND', 'HIT_REQUESTED', parent, {
+            raw: raw
+          }, parent.sourceId, target);
+          var damage = Math.min(before, raw);
+          var resolved = emit('FACT', 'HIT_RESOLVED', req, {
+            before: before,
+            damage: damage,
+            validTarget: before > 0
+          }, parent.sourceId, target);
+          if (damage > 0) {
+            if (party) state.partyHP -= damage;else state.enemies[target] -= damage;
+            emit('FACT', 'DAMAGE_APPLIED', resolved, {
+              damage: damage,
+              remaining: before - damage
+            }, parent.sourceId, target);
+          }
+        }
+        function apply(delta, parent, typed) {
+          var _parent$sourceId;
+          var _iterator, _step, _delta$hits, entry;
+          return _regeneratorRuntime().wrap(function apply$(_context4) {
+            while (1) switch (_context4.prev = _context4.next) {
+              case 0:
+                if (!(pipeline && (delta.partyDamage !== undefined || delta.hits || delta.randomDamage !== undefined))) {
+                  _context4.next = 2;
+                  break;
+                }
+                throw new Error('M2 requires typed strikes; legacy damage is only available in v1 fixtures');
+              case 2:
+                if (!typed) {
+                  _context4.next = 4;
+                  break;
+                }
+                return _context4.delegateYield(typed.apply(parent), "t0", 4);
+              case 4:
+                if (delta.partyDamage !== undefined) hit(parent, 'PARTY', delta.partyDamage, true);
+                for (_iterator = _createForOfIteratorHelperLoose((_delta$hits = delta.hits) != null ? _delta$hits : []); !(_step = _iterator()).done;) {
+                  entry = _step.value;
+                  hit(parent, entry.enemy, entry.damage);
+                }
+                if (delta.randomDamage !== undefined) {
+                  hit(parent, delta.variationTarget, Math.floor(random() * (delta.randomDamage + 1)));
+                }
+                if (!(delta.producer === undefined)) {
+                  _context4.next = 9;
+                  break;
+                }
+                return _context4.abrupt("return", parent);
+              case 9:
+                if (derivation) {
+                  _context4.next = 12;
+                  break;
+                }
+                return _context4.delegateYield(produce(delta.producer, parent), "t1", 11);
+              case 11:
+                return _context4.abrupt("return", _context4.t1);
+              case 12:
+                schedule({
+                  kind: 'board',
+                  step: delta.producer
+                }, parent, (_parent$sourceId = parent.sourceId) != null ? _parent$sourceId : 'BOARD');
+                return _context4.delegateYield(flush(), "t2", 14);
+              case 14:
+                return _context4.abrupt("return", parent);
+              case 15:
+              case "end":
+                return _context4.stop();
+            }
+          }, _marked3);
+        }
+        function terminate(parent, phaseDrained) {
+          var _f$rescue3, _f$strategy3;
+          var enemiesDefeated = Object.values(state.enemies).every(function (hp) {
+            return hp === 0;
+          });
+          var rescued = !!((_f$rescue3 = f.rescue) != null && _f$rescue3.length) && state.marks.length === 0;
+          var dead = state.partyHP === 0;
+          if (!enemiesDefeated && !rescued && !dead) return false;
+          if (dead && (enemiesDefeated || rescued) && !((_f$strategy3 = f.strategy) != null && _f$strategy3.simultaneous)) {
+            throw new SimulationError('Fixture must specify simultaneous terminal policy', structuredClone(state), events.slice());
+          }
+          if (rescued && !enemiesDefeated && !dead && !phaseDrained && (state.partyQueue.length || state.delayed.length)) {
+            var _f$strategy4;
+            if (!((_f$strategy4 = f.strategy) != null && _f$strategy4.rescue)) throw new SimulationError('Fixture must specify rescue policy with pending commands', structuredClone(state), events.slice());
+            if (f.strategy.rescue === 'drain-phase') return false;
+          }
+          var outcome = dead ? enemiesDefeated || rescued ? f.strategy.simultaneous : 'lose' : 'win';
+          state.result = Object.freeze({
+            battleId: f.battleId,
+            roomId: f.roomId,
+            outcome: outcome,
+            roundId: state.roundId
+          });
+          state.partyQueue.length = 0;
+          state.personal.clear();
+          state.delayed.length = 0;
+          state.phase = 'TERMINATED';
+          emit('FACT', 'BATTLE_TERMINATED', parent, {
+            result: state.result,
+            enemiesDefeated: enemiesDefeated,
+            rescued: rescued,
+            dead: dead
+          });
+          return true;
+        }
+        function beginFormal(q, actorBatch) {
+          var _q$snapshot$tier;
+          var cfg = f.formal,
+            flags = state.formal,
+            hp = cfg.enemies.map(function (e) {
+              return state.enemies[e.id];
+            }),
+            dp = pipeline.runtime;
+          var _formalSkill = formalSkill(cfg, q.snapshot, dp.partyDP >= dp.maxPartyDP, flags.rally, hp, flags.oath),
+            skill = _formalSkill.skill,
+            targets = _formalSkill.targets,
+            attack = _formalSkill.attack;
+          var cast = emit('LIFECYCLE', 'CAST_STARTED', q.event, {
+            skill: q.snapshot.skill,
+            name: skill.name,
+            attack: attack,
+            kind: skill.kind,
+            targets: targets.map(function (i) {
+              return cfg.enemies[i].id;
+            }),
+            tier: (_q$snapshot$tier = q.snapshot.tier) != null ? _q$snapshot$tier : null
+          }, q.snapshot.actor);
+          cues.push(Object.freeze({
+            actor: q.snapshot.actor,
+            castId: cast.eventId,
+            batch: actorBatch
+          }));
+          if (derivation) emit('FACT', 'ON_CAST', cast, {
+            skill: q.snapshot.skill
+          }, q.snapshot.actor);
+          return /*#__PURE__*/_regeneratorRuntime().mark(function resolveCast() {
+            var gained, _cfg$buffs$overflow, amount, _amount, _iterator2, _step2, _cfg$enemies$target$a, _cfg$enemies$target$a2, target, id, damage, outcome, splash, hitTargets, segment, _iterator3, _step3, _ref7, _target, _id, raw, armor, magic, _damage, _outcome;
+            return _regeneratorRuntime().wrap(function resolveCast$(_context5) {
+              while (1) switch (_context5.prev = _context5.next) {
+                case 0:
+                  return _context5.delegateYield(flush(), "t0", 1);
+                case 1:
+                  if (skill.kind === 'rally') {
+                    if (flags.oath && 'multiplier' in skill) {
+                      applyBattleCry(flags.oath, skill.multiplier, skill.boost);
+                      emit('FACT', 'BATTLE_CRY_APPLIED', cast, _extends({}, flags.oath), q.snapshot.actor);
+                    } else flags.rally = true;
+                  }
+                  if (skill.kind === 'heal') {
+                    if (flags.oath && 'cleanse' in skill && skill.cleanse) pipeline.cleanseOldestNegative(cast);
+                    gained = Math.min(dp.maxPartyHP - state.partyHP, skill.amount);
+                    state.partyHP += gained;
+                    emit('FACT', 'HEAL_APPLIED', cast, {
+                      amount: gained,
+                      remainingHP: state.partyHP
+                    }, q.snapshot.actor, 'PARTY');
+                    if (!cfg.tutorial && cfg.gear.includes('healcore')) {
+                      amount = Math.min(dp.maxPartyDP - dp.partyDP, Math.round((skill.amount - gained) * (.35 + .2 * ((_cfg$buffs$overflow = cfg.buffs.overflow) != null ? _cfg$buffs$overflow : 0))));
+                      dp.partyDP += amount;
+                      if (amount) emit('FACT', 'DP_RESTORED', cast, {
+                        amount: amount,
+                        remainingDP: dp.partyDP
+                      }, q.snapshot.actor, 'PARTY');
+                    }
+                  }
+                  if (!(skill.kind === 'guard')) {
+                    _context5.next = 21;
+                    break;
+                  }
+                  _amount = Math.min(dp.maxPartyDP - dp.partyDP, skill.amount);
+                  dp.partyDP += _amount;
+                  emit('FACT', 'DP_RESTORED', cast, {
+                    amount: _amount,
+                    remainingDP: dp.partyDP
+                  }, q.snapshot.actor, 'PARTY');
+                  if (flags.oath && 'resist' in skill && skill.resist) {
+                    flags.oath.guard = true;
+                    emit('FACT', 'PARTY_RESIST_APPLIED', cast, {
+                      amount: .15
+                    }, q.snapshot.actor, 'PARTY');
+                  }
+                  if (!(flags.oath && 'followup' in skill && skill.followup !== undefined)) {
+                    _context5.next = 21;
+                    break;
+                  }
+                  _iterator2 = _createForOfIteratorHelperLoose(targets);
+                case 10:
+                  if ((_step2 = _iterator2()).done) {
+                    _context5.next = 21;
+                    break;
+                  }
+                  target = _step2.value;
+                  id = cfg.enemies[target].id;
+                  if (!(state.enemies[id] <= 0)) {
+                    _context5.next = 15;
+                    break;
+                  }
+                  return _context5.abrupt("continue", 19);
+                case 15:
+                  damage = oathDamage(flags.oath, id, skill.followup, (_cfg$enemies$target$a = (_cfg$enemies$target$a2 = cfg.enemies[target].armor) == null ? void 0 : _cfg$enemies$target$a2.physical) != null ? _cfg$enemies$target$a : 0, false);
+                  outcome = formalHit(cfg, target, state.enemies[id], damage, false);
+                  state.enemies[id] -= outcome.lost;
+                  emit('FACT', 'HIT_RESOLVED', cast, _extends({}, outcome, {
+                    segment: 0,
+                    remainingHP: state.enemies[id],
+                    equipment: 'guardcore'
+                  }), q.snapshot.actor, id);
+                case 19:
+                  _context5.next = 10;
+                  break;
+                case 21:
+                  if (!(skill.kind === 'attack')) {
+                    _context5.next = 49;
+                    break;
+                  }
+                  flags.rally = false;
+                  splash = 'splash' in skill ? skill.splash : undefined;
+                  hitTargets = splash === undefined ? targets : targets.concat(hp.flatMap(function (n, i) {
+                    return n > 0 && !targets.includes(i) ? [i] : [];
+                  }));
+                  if (flags.oath && targets.some(function (i) {
+                    return state.enemies[cfg.enemies[i].id] > 0;
+                  })) flags.oath.rally = 1;
+                  segment = 0;
+                case 27:
+                  if (!(segment < skill.hits)) {
+                    _context5.next = 49;
+                    break;
+                  }
+                  _iterator3 = _createForOfIteratorHelperLoose(hitTargets);
+                case 29:
+                  if ((_step3 = _iterator3()).done) {
+                    _context5.next = 46;
+                    break;
+                  }
+                  _target = _step3.value;
+                  _id = cfg.enemies[_target].id;
+                  if (!(state.enemies[_id] <= 0)) {
+                    _context5.next = 34;
+                    break;
+                  }
+                  return _context5.abrupt("continue", 44);
+                case 34:
+                  raw = targets.includes(_target) ? skill.damage : splash;
+                  armor = cfg.enemies[_target].armor;
+                  magic = q.snapshot.emblem === 'm';
+                  _damage = flags.oath ? oathDamage(flags.oath, _id, raw, (_ref7 = magic ? armor == null ? void 0 : armor.magic : armor == null ? void 0 : armor.physical) != null ? _ref7 : 0, magic) : raw;
+                  _outcome = formalHit(cfg, _target, state.enemies[_id], _damage, skill.stun);
+                  state.enemies[_id] -= _outcome.lost;
+                  if (flags.oath && 'shred' in skill && skill.shred && state.enemies[_id] > 0) {
+                    flags.oath.shred[_id] = state.roundId + 1;
+                    emit('FACT', 'PHYSICAL_SHRED_APPLIED', cast, {
+                      expiresAfterRound: state.roundId + 1
+                    }, q.snapshot.actor, _id);
+                  }
+                  if (flags.oath && 'weaken' in skill && skill.weaken && state.enemies[_id] > 0 && !flags.oath.weaken.includes(_id)) {
+                    flags.oath.weaken.push(_id);
+                    emit('FACT', 'ENEMY_WEAKENED', cast, {
+                      amount: .2
+                    }, q.snapshot.actor, _id);
+                  }
+                  if (_outcome.stunned && !flags.stunned.includes(_id)) flags.stunned.push(_id);
+                  emit('FACT', 'HIT_RESOLVED', cast, _extends({}, _outcome, {
+                    segment: segment,
+                    remainingHP: state.enemies[_id]
+                  }), q.snapshot.actor, _id);
+                case 44:
+                  _context5.next = 29;
+                  break;
+                case 46:
+                  segment++;
+                  _context5.next = 27;
+                  break;
+                case 49:
+                  return _context5.abrupt("return", emit('LIFECYCLE', 'CAST_COMPLETED', cast, {
+                    castId: cast.eventId
+                  }, q.snapshot.actor));
+                case 50:
+                case "end":
+                  return _context5.stop();
+              }
+            }, resolveCast);
+          });
+        }
+        var activeFormal;
+        var formalActor;
+        var formalBatch = 0;
+        function formalTick() {
+          var done, _f$rescue4, _f$strategy5, actor, queue;
+          return _regeneratorRuntime().wrap(function formalTick$(_context6) {
+            while (1) switch (_context6.prev = _context6.next) {
+              case 0:
+                draining = true;
+                _context6.prev = 1;
+                if (!activeFormal) {
+                  _context6.next = 6;
+                  break;
+                }
+                return _context6.delegateYield(activeFormal(), "t0", 4);
+              case 4:
+                done = _context6.t0;
+                activeFormal = undefined;
+              case 6:
+                if (!state.partyQueue.length) {
+                  _context6.next = 22;
+                  break;
+                }
+                actor = state.partyQueue[0];
+                queue = state.personal.get(actor);
+                if (queue.length) {
+                  _context6.next = 14;
+                  break;
+                }
+                state.personal["delete"](actor);
+                state.partyQueue.shift();
+                formalActor = undefined;
+                return _context6.abrupt("continue", 6);
+              case 14:
+                if (!(state.partyHP === 0 || Object.values(state.enemies).every(function (hp) {
+                  return hp === 0;
+                }) || !!((_f$rescue4 = f.rescue) != null && _f$rescue4.length) && !state.marks.length && ((_f$strategy5 = f.strategy) == null ? void 0 : _f$strategy5.rescue) === 'stop')) {
+                  _context6.next = 17;
+                  break;
+                }
+                queue.length = 0;
+                return _context6.abrupt("continue", 6);
+              case 17:
+                if (formalActor !== actor) {
+                  formalActor = actor;
+                  formalBatch = ++batch;
+                }
+                activeFormal = beginFormal(queue.shift(), formalBatch);
+                return _context6.abrupt("break", 22);
+              case 22:
+                return _context6.abrupt("return", done);
+              case 23:
+                _context6.prev = 23;
+                draining = false;
+                return _context6.finish(23);
+              case 26:
+              case "end":
+                return _context6.stop();
+            }
+          }, _marked4, null, [[1,, 23, 26]]);
+        }
+        function drainFormal(root, checkTerminal) {
+          var seen, cause, _yield$formalTick, fingerprint;
+          return _regeneratorRuntime().wrap(function drainFormal$(_context7) {
+            while (1) switch (_context7.prev = _context7.next) {
+              case 0:
+                seen = new Set();
+                cause = root;
+              case 2:
+                if (!(activeFormal || state.partyQueue.length)) {
+                  _context7.next = 16;
+                  break;
+                }
+                fingerprint = hash({
+                  pending: pendingState(),
+                  cast: activeFormal !== undefined
+                });
+                if (seen.has(fingerprint)) fail('Repeated formal actor state', cause, 'repeated-formal-actor', fingerprint);
+                seen.add(fingerprint);
+                return _context7.delegateYield(formalTick(), "t0", 7);
+              case 7:
+                _context7.t1 = _yield$formalTick = _context7.t0;
+                if (!(_context7.t1 != null)) {
+                  _context7.next = 12;
+                  break;
+                }
+                _context7.t2 = _yield$formalTick;
+                _context7.next = 13;
+                break;
+              case 12:
+                _context7.t2 = cause;
+              case 13:
+                cause = _context7.t2;
+                _context7.next = 2;
+                break;
+              case 16:
+                return _context7.abrupt("return", checkTerminal && terminate(cause, true));
+              case 17:
+              case "end":
+                return _context7.stop();
+            }
+          }, _marked5);
+        }
+        var draining = false;
+        function drain(root, checkTerminal) {
+          if (checkTerminal === void 0) {
+            checkTerminal = true;
+          }
+          return /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+            var seen, actor, queue, actorBatch, _state$combat2, _trial$action, fingerprint, q, skill, trial, resolvedSkill, typed, cast, applied, _iterator4, _step4, _trial$requests, _request, done;
+            return _regeneratorRuntime().wrap(function _callee$(_context8) {
+              while (1) switch (_context8.prev = _context8.next) {
+                case 0:
+                  if (!f.formal) {
+                    _context8.next = 3;
+                    break;
+                  }
+                  return _context8.delegateYield(drainFormal(root, checkTerminal), "t0", 2);
+                case 2:
+                  return _context8.abrupt("return", _context8.t0);
+                case 3:
+                  seen = new Set();
+                  draining = true;
+                  _context8.prev = 5;
+                case 6:
+                  if (!state.partyQueue.length) {
+                    _context8.next = 43;
+                    break;
+                  }
+                  actor = state.partyQueue[0];
+                  queue = state.personal.get(actor);
+                  actorBatch = ++batch;
+                case 10:
+                  if (!queue.length) {
+                    _context8.next = 37;
+                    break;
+                  }
+                  fingerprint = derivation ? hash(pendingState()) : hash({
+                    rng: state.rng,
+                    partyHP: state.partyHP,
+                    enemies: state.enemies,
+                    marks: state.marks,
+                    combat: (_state$combat2 = state.combat) != null ? _state$combat2 : null,
+                    equipmentUses: state.equipmentUses,
+                    pending: state.partyQueue.map(function (id) {
+                      return [id, state.personal.get(id).map(function (q) {
+                        return q.snapshot;
+                      })];
+                    })
+                  });
+                  if (!seen.has(fingerprint)) {
+                    _context8.next = 15;
+                    break;
+                  }
+                  emit('LIFECYCLE', 'SIMULATION_FAILED', queue[0].event, {
+                    reason: 'repeated-logical-state',
+                    fingerprint: fingerprint
+                  });
+                  throw new SimulationError('Repeated scripted logical state', structuredClone(state), events.slice());
+                case 15:
+                  seen.add(fingerprint);
+                  q = queue.shift();
+                  skill = Object.hasOwn(f.skills, q.snapshot.skill) ? f.skills[q.snapshot.skill] : undefined;
+                  if (skill) {
+                    _context8.next = 20;
+                    break;
+                  }
+                  throw new SimulationError('Unknown scripted skill: ' + q.snapshot.skill, structuredClone(state), events.slice());
+                case 20:
+                  trial = f.experiment && pipeline ? experimentAction(f.experiment, q.snapshot, skill, pipeline.runtime, state.enemies) : undefined;
+                  resolvedSkill = (_trial$action = trial == null ? void 0 : trial.action) != null ? _trial$action : skill;
+                  typed = pipeline == null ? void 0 : pipeline.cast(actor, resolvedSkill, false, q.snapshot);
+                  cast = emit('LIFECYCLE', 'CAST_STARTED', q.event, _extends({
+                    skill: q.snapshot.skill
+                  }, typed ? {
+                    snapshot: typed.snapshot
+                  } : {}), actor);
+                  cues.push(Object.freeze({
+                    actor: actor,
+                    castId: cast.eventId,
+                    batch: actorBatch
+                  }));
+                  if (derivation) emit('FACT', 'ON_CAST', cast, {
+                    skill: q.snapshot.skill
+                  }, actor);
+                  return _context8.delegateYield(apply(skill, cast, typed), "t1", 27);
+                case 27:
+                  applied = _context8.t1;
+                  for (_iterator4 = _createForOfIteratorHelperLoose((_trial$requests = trial == null ? void 0 : trial.requests) != null ? _trial$requests : []); !(_step4 = _iterator4()).done;) {
+                    _request = _step4.value;
+                    schedule(_request, cast, actor);
+                  }
+                  return _context8.delegateYield(flush(), "t2", 30);
+                case 30:
+                  done = emit('LIFECYCLE', 'CAST_COMPLETED', applied, {
+                    castId: cast.eventId
+                  }, actor); // Empty active reservation alone isn't pending work.
+                  if (!(checkTerminal && terminate(done, !queue.length && state.partyQueue.length === 1))) {
+                    _context8.next = 33;
+                    break;
+                  }
+                  return _context8.abrupt("return", true);
+                case 33:
+                  if (!(!checkTerminal && (state.partyHP === 0 || Object.values(state.enemies).every(function (hp) {
+                    return hp === 0;
+                  })))) {
+                    _context8.next = 35;
+                    break;
+                  }
+                  return _context8.abrupt("return", false);
+                case 35:
+                  _context8.next = 10;
+                  break;
+                case 37:
+                  if (!(!f.formal && state.producers.length)) {
+                    _context8.next = 39;
+                    break;
+                  }
+                  throw new Error('Actor cannot leave with an open producer');
+                case 39:
+                  state.personal["delete"](actor);
+                  state.partyQueue.shift();
+                  _context8.next = 6;
+                  break;
+                case 43:
+                  return _context8.abrupt("return", checkTerminal && terminate(root, true));
+                case 44:
+                  _context8.prev = 44;
+                  draining = false;
+                  return _context8.finish(44);
+                case 47:
+                case "end":
+                  return _context8.stop();
+              }
+            }, _callee, null, [[5,, 44, 47]]);
+          })();
+        }
+        function advance(inputs) {
+          var _loop2, _ret, _iterator5, _step5;
+          return _regeneratorRuntime().wrap(function advance$(_context11) {
+            while (1) switch (_context11.prev = _context11.next) {
+              case 0:
+                _loop2 = /*#__PURE__*/_regeneratorRuntime().mark(function _loop2() {
+                  var _state$formal;
+                  var input, _f$combat, receiptId, amount, _iterator6, _step6, _i$spec$limit, i, root, swap, playerDone, enemy, enemyDone, _iterator7, _step7, _f$enemyActions, entry, typed, cast, applied, dp, flags, attack, _iterator8, _step8, _step8$value, id, skip, chance, counter, _iterator9, _step9, q, end, endDone;
+                  return _regeneratorRuntime().wrap(function _loop2$(_context10) {
+                    while (1) switch (_context10.prev = _context10.next) {
+                      case 0:
+                        input = _step5.value;
+                        if (!state.result) {
+                          _context10.next = 3;
+                          break;
+                        }
+                        return _context10.abrupt("return", 0);
+                      case 3:
+                        if (!('roomEnd' in input)) {
+                          _context10.next = 9;
+                          break;
+                        }
+                        if (!(!pipeline || pipeline.runtime.roomEnded)) {
+                          _context10.next = 6;
+                          break;
+                        }
+                        return _context10.abrupt("return", 1);
+                      case 6:
+                        recorded.push({
+                          roomEnd: true
+                        });
+                        pipeline.roomEnd(emit('LIFECYCLE', 'ROOM_ENDED', null, {}));
+                        return _context10.abrupt("return", 0);
+                      case 9:
+                        if (!('potion' in input)) {
+                          _context10.next = 19;
+                          break;
+                        }
+                        receiptId = input.potion.receiptId;
+                        if (!(!pipeline || ((_f$combat = f.combat) == null ? void 0 : _f$combat.maxPartyHP) === undefined || state.phase !== 'PLAYER_INPUT' || state.partyHP <= 0 || state.partyHP >= pipeline.runtime.maxPartyHP || typeof receiptId !== 'string' || !receiptId.trim() || potionReceipts.has(receiptId))) {
+                          _context10.next = 13;
+                          break;
+                        }
+                        return _context10.abrupt("return", 1);
+                      case 13:
+                        amount = Math.min(45, pipeline.runtime.maxPartyHP - state.partyHP);
+                        recorded.push({
+                          potion: {
+                            receiptId: receiptId
+                          }
+                        });
+                        potionReceipts.add(receiptId);
+                        state.partyHP += amount;
+                        emit('FACT', 'POTION_APPLIED', null, {
+                          receiptId: receiptId,
+                          amount: amount,
+                          remainingHP: state.partyHP
+                        }, 'PARTY', 'PARTY');
+                        return _context10.abrupt("return", 1);
+                      case 19:
+                        recorded.push({
+                          swap: input.swap
+                        });
+                        if (Object.hasOwn(f.swaps, input.swap)) {
+                          _context10.next = 23;
+                          break;
+                        }
+                        emit('FACT', 'SWAP_REJECTED', null, {
+                          swap: input.swap
+                        });
+                        return _context10.abrupt("return", 1);
+                      case 23:
+                        state.phase = 'ROUND_START';
+                        state.roundId++;
+                        state.equipmentUses = {};
+                        if (derivation) {
+                          for (_iterator6 = _createForOfIteratorHelperLoose(derivation.instances); !(_step6 = _iterator6()).done;) {
+                            i = _step6.value;
+                            i.remaining = (_i$spec$limit = i.spec.limit) != null ? _i$spec$limit : null;
+                          }
+                        }
+                        root = emit('LIFECYCLE', 'ROUND_STARTED', null);
+                        swap = emit('FACT', 'SWAP_COMMITTED', root, {
+                          swap: input.swap
+                        });
+                        state.phase = 'PLAYER_RESOLVE';
+                        return _context10.delegateYield(produce(f.swaps[input.swap], swap), "t0", 31);
+                      case 31:
+                        playerDone = _context10.t0;
+                        return _context10.delegateYield(flush(), "t1", 33);
+                      case 33:
+                        if (!f.formal) {
+                          _context10.next = 38;
+                          break;
+                        }
+                        return _context10.delegateYield(drain(playerDone), "t3", 35);
+                      case 35:
+                        _context10.t2 = _context10.t3;
+                        _context10.next = 43;
+                        break;
+                      case 38:
+                        _context10.t4 = terminate(playerDone, false);
+                        if (_context10.t4) {
+                          _context10.next = 42;
+                          break;
+                        }
+                        return _context10.delegateYield(drain(playerDone), "t5", 41);
+                      case 41:
+                        _context10.t4 = _context10.t5;
+                      case 42:
+                        _context10.t2 = _context10.t4;
+                      case 43:
+                        if (!_context10.t2) {
+                          _context10.next = 45;
+                          break;
+                        }
+                        return _context10.abrupt("return", 1);
+                      case 45:
+                        state.phase = 'ENEMY_RESOLVE';
+                        enemy = emit('LIFECYCLE', 'ENEMY_PHASE_STARTED', root, {}, 'ENEMY');
+                        if (!f.enemy) {
+                          _context10.next = 52;
+                          break;
+                        }
+                        return _context10.delegateYield(apply(f.enemy, enemy, pipeline == null ? void 0 : pipeline.cast('ENEMY', f.enemy, true)), "t7", 49);
+                      case 49:
+                        _context10.t6 = _context10.t7;
+                        _context10.next = 53;
+                        break;
+                      case 52:
+                        _context10.t6 = enemy;
+                      case 53:
+                        enemyDone = _context10.t6;
+                        return _context10.delegateYield(flush(), "t8", 55);
+                      case 55:
+                        if (!terminate(enemyDone, false)) {
+                          _context10.next = 57;
+                          break;
+                        }
+                        return _context10.abrupt("return", 1);
+                      case 57:
+                        _iterator7 = _createForOfIteratorHelperLoose((_f$enemyActions = f.enemyActions) != null ? _f$enemyActions : []);
+                      case 58:
+                        if ((_step7 = _iterator7()).done) {
+                          _context10.next = 75;
+                          break;
+                        }
+                        entry = _step7.value;
+                        if (pipeline) {
+                          _context10.next = 62;
+                          break;
+                        }
+                        throw new Error('Enemy actions require combat configuration');
+                      case 62:
+                        if (pipeline.opportunity(entry.actor, enemy)) {
+                          _context10.next = 64;
+                          break;
+                        }
+                        return _context10.abrupt("continue", 73);
+                      case 64:
+                        typed = pipeline.cast(entry.actor, entry.action, true);
+                        cast = emit('LIFECYCLE', 'CAST_STARTED', enemy, {
+                          skill: 'enemy-action',
+                          snapshot: typed.snapshot
+                        }, entry.actor);
+                        if (derivation) emit('FACT', 'ON_CAST', cast, {
+                          skill: 'enemy-action'
+                        }, entry.actor);
+                        return _context10.delegateYield(apply(entry.action, cast, typed), "t9", 68);
+                      case 68:
+                        applied = _context10.t9;
+                        return _context10.delegateYield(flush(), "t10", 70);
+                      case 70:
+                        enemyDone = emit('LIFECYCLE', 'CAST_COMPLETED', applied, {
+                          castId: cast.eventId
+                        }, entry.actor);
+                        if (!terminate(enemyDone, false)) {
+                          _context10.next = 73;
+                          break;
+                        }
+                        return _context10.abrupt("break", 75);
+                      case 73:
+                        _context10.next = 58;
+                        break;
+                      case 75:
+                        if (!f.formal) {
+                          _context10.next = 85;
+                          break;
+                        }
+                        dp = pipeline.runtime, flags = state.formal;
+                        attack = formalEnemy(f.formal, state.enemies, flags.stunned, state.partyHP, dp.partyDP, flags.oath);
+                        for (_iterator8 = _createForOfIteratorHelperLoose(attack.opportunities); !(_step8 = _iterator8()).done;) {
+                          _step8$value = _step8.value, id = _step8$value.id, skip = _step8$value.skip;
+                          chance = emit('LIFECYCLE', 'ACTION_OPPORTUNITY', enemy, {}, id, id);
+                          if (skip) emit('FACT', 'ACTION_SKIPPED', chance, {
+                            reason: 'stun'
+                          }, id, id);
+                        }
+                        flags.stunned.length = 0;
+                        dp.partyDP -= attack.absorbed;
+                        state.partyHP -= attack.lost;
+                        enemyDone = emit('FACT', 'ENEMY_AGGREGATE_RESOLVED', enemy, _extends({}, attack, {
+                          remainingHP: state.partyHP,
+                          remainingDP: dp.partyDP
+                        }), 'ENEMY', 'PARTY');
+                        if (!terminate(enemyDone, false)) {
+                          _context10.next = 85;
+                          break;
+                        }
+                        return _context10.abrupt("return", 1);
+                      case 85:
+                        if (!state.result) {
+                          _context10.next = 87;
+                          break;
+                        }
+                        return _context10.abrupt("return", 1);
+                      case 87:
+                        state.phase = 'PLAYER_COUNTER';
+                        counter = emit('LIFECYCLE', 'COUNTER_PHASE_STARTED', enemyDone);
+                        for (_iterator9 = _createForOfIteratorHelperLoose(state.delayed.splice(0)); !(_step9 = _iterator9()).done;) {
+                          q = _step9.value;
+                          enqueue(q);
+                        }
+                        return _context10.delegateYield(drain(counter), "t11", 91);
+                      case 91:
+                        if (!_context10.t11) {
+                          _context10.next = 93;
+                          break;
+                        }
+                        return _context10.abrupt("return", 1);
+                      case 93:
+                        state.phase = 'ROUND_END';
+                        end = emit('LIFECYCLE', 'ROUND_END_STARTED', root);
+                        if (!f.roundEnd) {
+                          _context10.next = 100;
+                          break;
+                        }
+                        return _context10.delegateYield(apply(f.roundEnd, end, pipeline == null ? void 0 : pipeline.cast('ROUND_END', f.roundEnd, true)), "t13", 97);
+                      case 97:
+                        _context10.t12 = _context10.t13;
+                        _context10.next = 101;
+                        break;
+                      case 100:
+                        _context10.t12 = end;
+                      case 101:
+                        endDone = _context10.t12;
+                        if (!pipeline) {
+                          _context10.next = 104;
+                          break;
+                        }
+                        return _context10.delegateYield(pipeline.roundEnd(endDone, derivation ? /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+                          return _regeneratorRuntime().wrap(function _callee2$(_context9) {
+                            while (1) switch (_context9.prev = _context9.next) {
+                              case 0:
+                                return _context9.delegateYield(flush(), "t0", 1);
+                              case 1:
+                                if (!(state.partyHP > 0 && Object.values(state.enemies).some(function (hp) {
+                                  return hp > 0;
+                                }))) {
+                                  _context9.next = 3;
+                                  break;
+                                }
+                                return _context9.delegateYield(drain(endDone, false), "t1", 3);
+                              case 3:
+                              case "end":
+                                return _context9.stop();
+                            }
+                          }, _callee2);
+                        }) : undefined), "t14", 104);
+                      case 104:
+                        if (!terminate(endDone, true)) {
+                          _context10.next = 106;
+                          break;
+                        }
+                        return _context10.abrupt("return", 1);
+                      case 106:
+                        if ((_state$formal = state.formal) != null && _state$formal.oath) endOathRound(state.formal.oath, state.roundId);
+                        emit('LIFECYCLE', 'ROUND_ENDED', endDone);
+                        state.phase = 'PLAYER_INPUT';
+                      case 109:
+                      case "end":
+                        return _context10.stop();
+                    }
+                  }, _loop2);
+                });
+                _iterator5 = _createForOfIteratorHelperLoose(inputs);
+              case 2:
+                if ((_step5 = _iterator5()).done) {
+                  _context11.next = 11;
+                  break;
+                }
+                return _context11.delegateYield(_loop2(), "t0", 4);
+              case 4:
+                _ret = _context11.t0;
+                if (!(_ret === 0)) {
+                  _context11.next = 7;
+                  break;
+                }
+                return _context11.abrupt("break", 11);
+              case 7:
+                if (!(_ret === 1)) {
+                  _context11.next = 9;
+                  break;
+                }
+                return _context11.abrupt("continue", 9);
+              case 9:
+                _context11.next = 2;
+                break;
+              case 11:
+              case "end":
+                return _context11.stop();
+            }
+          }, _marked6);
+        }
+        var pending;
+        var iterator;
+        var closed = false,
+          disposition = 'active';
+        function resume(facts) {
+          try {
+            var step = iterator.next(facts);
+            pending = step.done ? undefined : step.value;
+            if (step.done) {
+              iterator = undefined;
+              if (state.result) disposition = 'terminal';
+            }
+            return pending;
+          } catch (error) {
+            if (mode === 'external') {
+              var _events$at, _pending$producerId, _pending;
+              var cause = (_events$at = events.at(-1)) != null ? _events$at : null;
+              emit('LIFECYCLE', 'CONTINUATION_FAILED', cause, {
+                reason: String(error),
+                boardVersion: boardVersion,
+                producer: (_pending$producerId = (_pending = pending) == null ? void 0 : _pending.producerId) != null ? _pending$producerId : null
+              });
+            }
+            disposition = 'failed';
+            closed = true;
+            pending = undefined;
+            iterator = undefined;
+            activeFormal = undefined;
+            throw error;
+          }
+        }
+        function validateTicket(ticket) {
+          if (closed || !pending || Object.keys(pending).some(function (key) {
+            var k = key;
+            return pending[k] !== ticket[k];
+          })) throw new Error('Stale or out-of-order board ticket');
+        }
+        function seal(reason) {
+          if (closed || state.result) return false;
+          disposition = 'cancelled';
+          if (!pending) {
+            closed = true;
+            return true;
+          }
+          var parent = events.find(function (e) {
+            return e.eventId === pending.producerId;
+          });
+          emit('LIFECYCLE', 'BOARD_PRODUCER_CANCELLED', parent, {
+            producer: pending.producerId,
+            reason: reason
+          });
+          closed = true;
+          pending = undefined;
+          iterator = undefined;
+          activeFormal = undefined;
+          return true;
+        }
+        return {
+          submit: function submit(input) {
+            if (iterator) throw new Error('Board producer still open');
+            if (closed || state.result) return undefined;
+            if ('roomEnd' in input && pipeline) {
+              closed = true;
+              disposition = 'room-ended';
+            }
+            iterator = advance([input]);
+            return resume();
+          },
+          acceptsBoardTicket: function acceptsBoardTicket(ticket) {
+            try {
+              validateTicket(ticket);
+              return true;
+            } catch (_unused) {
+              return false;
+            }
+          },
+          resolveScriptedBoard: function resolveScriptedBoard(ticket) {
+            validateTicket(ticket);
+            if (mode !== 'scripted') throw new Error('External production requires BoardFacts');
+            return resume();
+          },
+          commitBoardFacts: function commitBoardFacts(ticket, facts) {
+            var _ticket$wave;
+            validateTicket(ticket);
+            if (mode !== 'external') throw new Error('Scripted production cannot accept BoardFacts');
+            if (!bridge || !state.board || !f.board) throw new Error('External production requires a logical board');
+            if (facts.version !== boardVersion) throw new Error('Board version conflict');
+            var candidate = structuredClone(facts.steps);
+            var next = ticket.step;
+            var checked = new Map();
+            var preview = {
+              tiles: structuredClone(state.board.tiles)
+            };
+            var seed = state.rng;
+            var staged = createBoardBridge(f.board, preview, function () {
+              return (seed = Math.imul(seed, 1664525) + 1013904223 >>> 0) / Math.pow(2, 32);
+            });
+            var marks = new Set(state.marks);
+            if (f.formal && candidate.length > 1) throw Error('Formal ticket accepts one wave');
+            var wave = ((_ticket$wave = ticket.wave) != null ? _ticket$wave : 1) - 1;
+            for (var _iterator10 = _createForOfIteratorHelperLoose(candidate), _step10; !(_step10 = _iterator10()).done;) {
+              var _step$marks4;
+              var _step10$value = _step10.value,
+                id = _step10$value.id,
+                step = _step10$value.step;
+              if (id !== next || checked.has(id) || step.commands || step.redeliverFact || !step.match && !step.recover || step.match && step.recover) throw new Error('Invalid board fact sequence or untrusted command');
+              if (step.match) {
+                if (step.match.wave !== ++wave || wave !== 1 && step.match.swap || !staged.canMatch(step.match)) throw new Error('Invalid match wave');
+                var match = staged.match(step.match);
+                var _loop3 = function _loop3() {
+                  var mark = _step11.value;
+                  if (!marks["delete"](mark) || !match.removed.some(function (index) {
+                    return String(index) === mark;
+                  })) throw new Error('Invalid rescue mark');
+                };
+                for (var _iterator11 = _createForOfIteratorHelperLoose((_step$marks3 = step.marks) != null ? _step$marks3 : []), _step11; !(_step11 = _iterator11()).done;) {
+                  var _step$marks3;
+                  _loop3();
+                }
+              } else if ((_step$marks4 = step.marks) != null && _step$marks4.length || !staged.recover(step.recover)) throw new Error('Invalid board recovery');
+              checked.set(id, step);
+              next = step.next;
+            }
+            var unstable = matches(preview.tiles.map(function (tile) {
+              return tile.emblem;
+            })).length > 0;
+            if (f.formal ? !checked.size ? ticket.wave === 1 || unstable || !legalMove(preview.tiles.map(function (t) {
+              return t.emblem;
+            })) : next === undefined && (unstable || !legalMove(preview.tiles.map(function (t) {
+              return t.emblem;
+            }))) : !checked.size || next !== undefined || unstable) throw new Error('Incomplete board facts');
+            validateTicket(ticket);
+            if (facts.version !== boardVersion) throw new Error('Board version conflict');
+            replayBoards.push({
+              ticket: structuredClone(ticket),
+              facts: {
+                version: boardVersion,
+                steps: candidate
+              }
+            });
+            return resume(checked);
+          },
+          failBoard: function failBoard(ticket, reason) {
+            validateTicket(ticket);
+            var parent = events.find(function (e) {
+              return e.eventId === ticket.producerId;
+            });
+            emit('LIFECYCLE', 'BOARD_PRODUCER_FAILED', parent, {
+              producer: ticket.producerId,
+              reason: reason,
+              boardVersion: boardVersion
+            });
+            disposition = 'failed';
+            closed = true;
+            pending = undefined;
+            iterator = undefined;
+            activeFormal = undefined;
+          },
+          get disposition() {
+            return disposition;
+          },
+          cancel: function cancel(reason) {
+            if (reason === void 0) {
+              reason = 'session-cancelled';
+            }
+            return seal(reason);
+          },
+          get boardVersion() {
+            return boardVersion;
+          },
+          acknowledgePresentation: function acknowledgePresentation(eventId) {
+            var event = events[presented];
+            if (!event || event.eventId !== eventId) return false;
+            presented++;
+            frames["delete"](eventId);
+            return true;
+          },
+          boardReplay: function boardReplay() {
+            return structuredClone(replayBoards);
+          },
+          frame: function frame(eventId) {
+            var frame = frames.get(eventId);
+            return frame && structuredClone(frame);
+          },
+          snapshot: function snapshot() {
+            var snapshot = _extends({}, state, {
+              personal: Array.from(state.personal)
+            });
+            return structuredClone({
+              version: f.experiment ? 4 : derivation ? 3 : pipeline ? 2 : 1,
+              fixture: f,
+              inputs: recorded,
+              events: events,
+              cues: cues,
+              state: snapshot,
+              result: state.result
+            });
+          }
+        };
+      }
+      var SimulationError = exports('SimulationError', /*#__PURE__*/function (_Error) {
+        _inheritsLoose(SimulationError, _Error);
+        function SimulationError(message, state, events) {
+          var _this;
+          _this = _Error.call(this, message) || this;
+          _this.state = void 0;
+          _this.events = void 0;
+          _this.state = state;
+          _this.events = events;
+          return _this;
+        }
+        return SimulationError;
+      }( /*#__PURE__*/_wrapNativeSuper(Error)));
+
+      // The presenter receives a stable cast journal. Early receipts are buffered by
+      // ID; exposing the next actor batch requires all receipts of the current batch.
+      var PresentationBarrier = exports('PresentationBarrier', /*#__PURE__*/function () {
+        function PresentationBarrier(cues) {
+          this.waiting = new Set();
+          this.acknowledged = new Set();
+          this.offset = 0;
+          this.cues = void 0;
+          this.cues = cues;
+          this.expose();
+        }
+        var _proto = PresentationBarrier.prototype;
+        _proto.signal = function signal(castId) {
+          if (!this.cues.some(function (cue) {
+            return cue.castId === castId;
+          }) || this.acknowledged.has(castId)) return false;
+          this.acknowledged.add(castId);
+          if (this.waiting["delete"](castId) && !this.waiting.size) this.expose();
+          return true;
+        };
+        _proto.expose = function expose() {
+          while (this.offset < this.cues.length && !this.waiting.size) {
+            var batch = this.cues[this.offset].batch;
+            while (((_this$cues$this$offse = this.cues[this.offset]) == null ? void 0 : _this$cues$this$offse.batch) === batch) {
+              var _this$cues$this$offse;
+              var castId = this.cues[this.offset++].castId;
+              if (!this.acknowledged.has(castId)) this.waiting.add(castId);
+            }
+          }
+        };
+        _createClass(PresentationBarrier, [{
+          key: "complete",
+          get: function get() {
+            return this.offset === this.cues.length && !this.waiting.size;
+          }
+        }, {
+          key: "active",
+          get: function get() {
+            return [].concat(this.waiting);
+          }
+        }]);
+        return PresentationBarrier;
+      }());
+
+      // Caller owns the session ledger. No callbacks mutate economy or room state.
+      var TerminalDelivery = exports('TerminalDelivery', /*#__PURE__*/function () {
+        function TerminalDelivery() {
+          this.delivered = new Set();
+        }
+        var _proto2 = TerminalDelivery.prototype;
+        _proto2.take = function take(result) {
+          if (!result) return null;
+          var key = JSON.stringify([result.battleId, result.roomId]);
+          if (this.delivered.has(key)) return null;
+          this.delivered.add(key);
+          return result;
+        };
+        return TerminalDelivery;
+      }());
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/BattleMotion.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+  var _createClass, cclegacy;
+  return {
+    setters: [function (module) {
+      _createClass = module.createClass;
     }, function (module) {
       cclegacy = module.cclegacy;
     }],
@@ -21,11 +2052,11 @@ System.register("chunks:///_virtual/BattleMotion.ts", ['./rollupPluginModLoBabel
         };
         _proto.play = function play(motion) {
           var _this = this;
-          if (this.cancelled) return Promise.resolve(false);
+          if (this.cancelled || this.pending.has(motion)) return Promise.resolve(false);
           return new Promise(function (resolve) {
             _this.pending.set(motion, resolve);
             motion.call(function () {
-              _this.pending["delete"](motion);
+              if (_this.cancelled || !_this.pending["delete"](motion)) return;
               resolve(true);
             }).start();
             if (_this.paused) motion.pause();
@@ -33,29 +2064,38 @@ System.register("chunks:///_virtual/BattleMotion.ts", ['./rollupPluginModLoBabel
         };
         _proto.pause = function pause() {
           this.paused = true;
-          for (var _iterator = _createForOfIteratorHelperLoose(this.pending.keys()), _step; !(_step = _iterator()).done;) {
-            var motion = _step.value;
-            motion.pause();
-          }
+          this.pending.forEach(function (_, motion) {
+            return motion.pause();
+          });
         };
         _proto.resume = function resume() {
           this.paused = false;
-          for (var _iterator2 = _createForOfIteratorHelperLoose(this.pending.keys()), _step2; !(_step2 = _iterator2()).done;) {
-            var motion = _step2.value;
-            motion.resume();
-          }
+          this.pending.forEach(function (_, motion) {
+            return motion.resume();
+          });
         };
         _proto.cancel = function cancel() {
+          if (this.cancelled) return;
           this.cancelled = true;
-          for (var _iterator3 = _createForOfIteratorHelperLoose(this.pending), _step3; !(_step3 = _iterator3()).done;) {
-            var _step3$value = _step3.value,
-              motion = _step3$value[0],
-              resolve = _step3$value[1];
+          var interrupted = [];
+          this.pending.forEach(function (resolve, motion) {
+            return interrupted.push([motion, resolve]);
+          });
+          this.pending.clear();
+          for (var _i = 0, _interrupted = interrupted; _i < _interrupted.length; _i++) {
+            var _interrupted$_i = _interrupted[_i],
+              motion = _interrupted$_i[0],
+              resolve = _interrupted$_i[1];
             motion.stop();
             resolve(false);
           }
-          this.pending.clear();
         };
+        _createClass(BattleMotion, [{
+          key: "pendingCount",
+          get: function get() {
+            return this.pending.size;
+          }
+        }]);
         return BattleMotion;
       }());
       cclegacy._RF.pop();
@@ -71,7 +2111,13 @@ System.register("chunks:///_virtual/BattleRules.ts", ['cc'], function (exports) 
     }],
     execute: function () {
       exports({
+        applyBattleCry: applyBattleCry,
+        endOathRound: endOathRound,
+        oathDamage: oathDamage,
+        oathEnemyPower: oathEnemyPower,
+        planOathSkill: planOathSkill,
         planSkill: planSkill,
+        rosterEmblems: rosterEmblems,
         selectTargets: selectTargets,
         skillOwner: skillOwner
       });
@@ -176,6 +2222,528 @@ System.register("chunks:///_virtual/BattleRules.ts", ['cc'], function (exports) 
           hits: 1,
           target: 'front',
           stun: false
+        };
+      }
+      var newOathState = exports('newOathState', function newOathState() {
+        return {
+          rally: 1,
+          roundBoost: 1,
+          guard: false,
+          shred: {},
+          weaken: []
+        };
+      });
+      function rosterEmblems(party) {
+        if (!party.includes('h')) return ['s', 'stone', 'cry', 'fist'];
+        if (party.includes('d') && party.includes('m')) return ['s', 'd', 'm', 'h'];
+        if (party.includes('d')) return ['s', 'd', 'h', 'staff'];
+        if (party.includes('m')) return ['s', 'm', 'h', 'staff'];
+        return ['s', 'fist', 'h', 'staff'];
+      }
+      function endOathRound(state, round) {
+        state.roundBoost = 1;
+        state.guard = false;
+        for (var _i = 0, _Object$keys = Object.keys(state.shred); _i < _Object$keys.length; _i++) {
+          var _id = _Object$keys[_i];
+          if (state.shred[_id] <= round) delete state.shred[_id];
+        }
+      }
+      function applyBattleCry(state, multiplier, boost) {
+        state.rally = Math.max(state.rally, multiplier);
+        state.roundBoost = Math.max(state.roundBoost, boost);
+      }
+      function oathEnemyPower(state, id, attack) {
+        if (!state.weaken.includes(id)) return attack;
+        state.weaken = state.weaken.filter(function (target) {
+          return target !== id;
+        });
+        return Math.round(attack * .8);
+      }
+      function oathDamage(state, id, raw, armor, magic) {
+        var layers = Math.max(0, Math.min(4, armor) - (magic ? 0 : Number(id in state.shred)));
+        return Math.round(raw * (1 - .25 * layers));
+      }
+      function planOathSkill(type, length, wave, tier, attack, fullGuard, state, hasCore, buff) {
+        var _s$m$stone$fist$staff;
+        if (buff === void 0) {
+          buff = function buff() {
+            return 0;
+          };
+        }
+        var high = tier === 'advanced',
+          charged = !!tier;
+        var m = (length >= 5 ? 2.1 : length >= 4 ? 1.55 : 1) * (1 + (wave - 1) * (.16 + .12 * buff('chain')));
+        if (type === 'cry') return {
+          kind: 'rally',
+          name: '战吼',
+          multiplier: high ? 1.7 : charged ? 1.55 : 1.4,
+          boost: high ? 1.1 : 1
+        };
+        if (type === 'd') return {
+          kind: 'guard',
+          name: '骑士守护',
+          amount: Math.round((high ? 35 : charged ? 28 : 20) * m * (1 + .35 * buff('def'))),
+          resist: high,
+          followup: fullGuard && hasCore('guardcore') ? Math.round(attack * state.roundBoost) : undefined
+        };
+        if (type === 'h') return {
+          kind: 'heal',
+          name: '牧师治疗',
+          amount: Math.round((high ? 40 : charged ? 32 : 24) * m * (1 + .35 * buff('heal'))),
+          cleanse: high
+        };
+        var team = state.roundBoost;
+        var main = team * state.rally;
+        var ratio = type === 's' ? high ? 1.65 : charged ? 1.35 : 1 : type === 'm' ? high ? 1.6 : charged ? 1.35 : 1 : type === 'stone' ? high ? .65 : charged ? .85 : .55 : type === 'fist' ? high ? 1.6 : charged ? 1.1 : .7 : type === 'staff' ? high ? 1.65 : charged ? 1.35 : 1 : 1;
+        var power = type === 's' ? 1 + .25 * buff('atk') : type === 'm' ? 1 + .25 * buff('mag') : 1;
+        var damage = Math.round(attack * ratio * m * main * power);
+        if (type === 's' && length >= 4 && hasCore('swordcore')) damage += Math.round(attack * (.5 + .45 * buff('sword4')) * team);
+        if (type === 'm' && wave > 1 && hasCore('magiccore')) damage += Math.round(attack * (.3 + .25 * buff('echo')) * team);
+        return {
+          kind: 'attack',
+          name: (_s$m$stone$fist$staff = {
+            s: '剑气',
+            m: '奥术弹',
+            stone: high ? '碎石雨' : '投石',
+            fist: high ? '震击' : '直拳',
+            staff: high ? '圣光杖击' : '神圣杖击'
+          }[type]) != null ? _s$m$stone$fist$staff : '攻击',
+          damage: damage,
+          splash: type === 'm' && high ? Math.round(attack * .45 * m * team * power) : undefined,
+          target: type === 'stone' && high ? 'all' : 'front',
+          hits: type === 'stone' && high ? 2 : 1,
+          stun: type === 'fist' && high,
+          shred: type === 's' && high,
+          weaken: type === 'staff' && high
+        };
+      }
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/BattleSession.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+  var _createClass, _asyncToGenerator, _regeneratorRuntime, _extends, cclegacy;
+  return {
+    setters: [function (module) {
+      _createClass = module.createClass;
+      _asyncToGenerator = module.asyncToGenerator;
+      _regeneratorRuntime = module.regeneratorRuntime;
+      _extends = module.extends;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+    }],
+    execute: function () {
+      cclegacy._RF.push({}, "f8f36XNMDBDiYko+vEu6aXg", "BattleSession", undefined);
+      /** One instance owns one room's scheduling lifetime. Construct a new instance on room change. */
+      var BattleSession = exports('BattleSession', /*#__PURE__*/function () {
+        function BattleSession() {
+          this.generation = 0;
+          this.abort = new AbortController();
+          this.status = 'active';
+          this.nextBatch = 0;
+          this.running = false;
+          this.stopBatch = void 0;
+          this.cancelPresentation = new Set();
+          this.cleanupErrors = [];
+          this.journal = [];
+        }
+        var _proto = BattleSession.prototype;
+        _proto.produce = /*#__PURE__*/function () {
+          var _produce = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(tasks, commit) {
+            var _this = this;
+            var generation, batch, open, emit, stop, stopped, current, fail, results, i, result, returned;
+            return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+              while (1) switch (_context2.prev = _context2.next) {
+                case 0:
+                  if (!(this.status !== 'active')) {
+                    _context2.next = 2;
+                    break;
+                  }
+                  return _context2.abrupt("return", false);
+                case 2:
+                  if (!this.running) {
+                    _context2.next = 4;
+                    break;
+                  }
+                  throw new Error('Declare concurrent producers in one batch');
+                case 4:
+                  this.running = true;
+                  generation = this.generation, batch = this.nextBatch++;
+                  open = new Set(tasks.map(function (_, i) {
+                    return i;
+                  }));
+                  emit = function emit(index, kind, reason) {
+                    _this.journal.push(Object.freeze(_extends({
+                      generation: generation,
+                      batch: batch,
+                      index: index,
+                      kind: kind
+                    }, reason === undefined ? {} : {
+                      reason: reason
+                    })));
+                  };
+                  open.forEach(function (i) {
+                    return emit(i, 'registered');
+                  });
+                  stopped = new Promise(function (resolve) {
+                    stop = function stop() {
+                      return resolve(null);
+                    };
+                  });
+                  this.stopBatch = function () {
+                    open.forEach(function (i) {
+                      return emit(i, 'cancelled');
+                    });
+                    open.clear();
+                    stop();
+                  };
+                  current = function current() {
+                    return _this.generation === generation && _this.status === 'active';
+                  };
+                  fail = function fail(i, error) {
+                    if (!current() || !open["delete"](i)) return;
+                    emit(i, 'failed', String(error));
+                    _this.invalidate('failed');
+                  };
+                  results = tasks.map(function (task, i) {
+                    return Promise.resolve().then( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+                      return _regeneratorRuntime().wrap(function _callee$(_context) {
+                        while (1) switch (_context.prev = _context.next) {
+                          case 0:
+                            if (current()) {
+                              _context.next = 2;
+                              break;
+                            }
+                            return _context.abrupt("return", {
+                              ok: false,
+                              error: 'stale producer'
+                            });
+                          case 2:
+                            _context.prev = 2;
+                            _context.next = 5;
+                            return task(_this.abort.signal);
+                          case 5:
+                            _context.t0 = _context.sent;
+                            return _context.abrupt("return", {
+                              ok: true,
+                              value: _context.t0
+                            });
+                          case 9:
+                            _context.prev = 9;
+                            _context.t1 = _context["catch"](2);
+                            fail(i, _context.t1);
+                            return _context.abrupt("return", {
+                              ok: false,
+                              error: _context.t1
+                            });
+                          case 13:
+                          case "end":
+                            return _context.stop();
+                        }
+                      }, _callee, null, [[2, 9]]);
+                    })));
+                  });
+                  _context2.prev = 14;
+                  i = 0;
+                case 16:
+                  if (!(i < results.length)) {
+                    _context2.next = 40;
+                    break;
+                  }
+                  _context2.next = 19;
+                  return Promise.race([results[i], stopped]);
+                case 19:
+                  result = _context2.sent;
+                  if (!(!result || !current() || !result.ok)) {
+                    _context2.next = 22;
+                    break;
+                  }
+                  return _context2.abrupt("return", false);
+                case 22:
+                  _context2.prev = 22;
+                  returned = commit(result.value, i);
+                  if (!(returned !== null && (typeof returned === 'object' || typeof returned === 'function') && typeof returned.then === 'function')) {
+                    _context2.next = 27;
+                    break;
+                  }
+                  void Promise.resolve(returned)["catch"](function () {});
+                  throw new Error('Producer commit must be synchronous');
+                case 27:
+                  _context2.next = 33;
+                  break;
+                case 29:
+                  _context2.prev = 29;
+                  _context2.t0 = _context2["catch"](22);
+                  if (current()) {
+                    open["delete"](i);
+                    emit(i, 'failed', String(_context2.t0));
+                    this.invalidate('failed');
+                  }
+                  return _context2.abrupt("return", false);
+                case 33:
+                  if (current()) {
+                    _context2.next = 35;
+                    break;
+                  }
+                  return _context2.abrupt("return", false);
+                case 35:
+                  open["delete"](i);
+                  emit(i, 'committed');
+                case 37:
+                  i++;
+                  _context2.next = 16;
+                  break;
+                case 40:
+                  return _context2.abrupt("return", true);
+                case 41:
+                  _context2.prev = 41;
+                  this.stopBatch = undefined;
+                  this.running = false;
+                  return _context2.finish(41);
+                case 45:
+                case "end":
+                  return _context2.stop();
+              }
+            }, _callee2, this, [[14,, 41, 45], [22, 29]]);
+          }));
+          function produce(_x, _x2) {
+            return _produce.apply(this, arguments);
+          }
+          return produce;
+        }() /** Return a stop handle for the actual Tween or timer, including detached work. */;
+        _proto.presentation = function presentation(start) {
+          var _this2 = this;
+          if (this.status !== 'active') return Promise.resolve(false);
+          return new Promise(function (resolve, reject) {
+            var stop,
+              cancelled = false;
+            var stopSafely = function stopSafely() {
+              try {
+                if (typeof stop === 'function') stop();
+              } catch (error) {
+                _this2.cleanupErrors.push(String(error));
+              }
+            };
+            var cancel = function cancel() {
+              if (!_this2.cancelPresentation["delete"](cancel)) return;
+              cancelled = true;
+              stopSafely();
+              resolve(false);
+            };
+            _this2.cancelPresentation.add(cancel);
+            try {
+              stop = start(function () {
+                if (_this2.cancelPresentation["delete"](cancel)) resolve(true);
+              });
+              if (cancelled) stopSafely();
+            } catch (error) {
+              if (_this2.cancelPresentation["delete"](cancel)) reject(error);
+            }
+          });
+        };
+        _proto.cancel = function cancel() {
+          return this.invalidate('cancelled');
+        };
+        _proto.finish = function finish() {
+          if (this.running) return false;
+          return this.invalidate('terminal');
+        };
+        _proto.invalidate = function invalidate(status) {
+          var _this$stopBatch;
+          if (this.status !== 'active') return false;
+          this.generation++;
+          this.status = status;
+          (_this$stopBatch = this.stopBatch) == null || _this$stopBatch.call(this);
+          this.abort.abort(status);
+          this.cancelPresentation.forEach(function (cancel) {
+            return cancel();
+          });
+          return true;
+        };
+        _createClass(BattleSession, [{
+          key: "presentationCleanupErrors",
+          get: function get() {
+            return this.cleanupErrors.slice();
+          }
+        }, {
+          key: "events",
+          get: function get() {
+            return this.journal.slice();
+          }
+        }, {
+          key: "state",
+          get: function get() {
+            return this.status;
+          }
+        }]);
+        return BattleSession;
+      }());
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/board-bridge.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Board.ts'], function (exports) {
+  var _extends, _createForOfIteratorHelperLoose, cclegacy, matches, planWave, planRefill, mineGravity, legalMove, adjacent;
+  return {
+    setters: [function (module) {
+      _extends = module.extends;
+      _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+    }, function (module) {
+      matches = module.matches;
+      planWave = module.planWave;
+      planRefill = module.planRefill;
+      mineGravity = module.mineGravity;
+      legalMove = module.legalMove;
+      adjacent = module.adjacent;
+    }],
+    execute: function () {
+      exports('createBoardBridge', createBoardBridge);
+      cclegacy._RF.push({}, "109eamVxuRHpasaVsJA9tLf", "board-bridge", undefined);
+      function assertTiles(tiles) {
+        if (tiles.length !== 56 || new Set(tiles.map(function (t) {
+          return t == null ? void 0 : t.id;
+        })).size !== 56 || tiles.some(function (t) {
+          return !(t != null && t.id) || !t.emblem || t.tier !== undefined && t.tier !== 'skill' && t.tier !== 'advanced';
+        })) throw new Error('Invalid board tiles');
+      }
+      function createBoardBridge(config, state, random) {
+        assertTiles(state.tiles);
+        var colors = function colors(tiles) {
+          return tiles.map(function (t) {
+            return t.emblem;
+          });
+        };
+        function swapped(step) {
+          var before = state.tiles.slice();
+          if (step.swap) {
+            var _step$swap = step.swap,
+              a = _step$swap[0],
+              b = _step$swap[1];
+            if (!before[a] || !before[b] || !adjacent(a, b)) throw new Error('Invalid scripted swap');
+            var _ref = [before[b], before[a]];
+            before[a] = _ref[0];
+            before[b] = _ref[1];
+          }
+          return before;
+        }
+        return {
+          canMatch: function canMatch(step) {
+            return matches(colors(swapped(step))).length > 0;
+          },
+          match: function match(step) {
+            var _step$preferred;
+            var before = swapped(step);
+            var plan = planWave(matches(colors(before)), function (i) {
+              return before[i].tier;
+            }, (_step$preferred = step.preferred) != null ? _step$preferred : step.swap ? [step.swap[1], step.swap[0]] : []);
+            var removed = Array.from(plan.removed);
+            var commands = plan.components.map(function (group) {
+              var emblem = before[group[0]].emblem;
+              var mapping = Object.hasOwn(config.skills, emblem) ? config.skills[emblem] : undefined;
+              if (!mapping) throw new Error('Missing board skill mapping: ' + emblem);
+              var tier = group.some(function (i) {
+                return before[i].tier === 'advanced';
+              }) ? 'advanced' : group.some(function (i) {
+                return before[i].tier === 'skill';
+              }) ? 'skill' : undefined;
+              return _extends({
+                actor: mapping.actor,
+                skill: tier && mapping[tier] || mapping.ordinary,
+                emblem: emblem,
+                wave: step.wave,
+                length: config.actualLength ? group.length : Math.max(group.length, tier === 'advanced' ? 5 : tier === 'skill' ? 4 : 3)
+              }, tier ? {
+                tier: tier
+              } : {});
+            });
+            var oldIds = new Set(before.map(function (t) {
+              return t.id;
+            }));
+            var charged = before.slice();
+            var generated = Array.from(plan.created).map(function (_ref2) {
+              var index = _ref2[0],
+                tier = _ref2[1];
+              return {
+                index: index,
+                tile: charged[index] = _extends({}, before[index], {
+                  tier: tier
+                })
+              };
+            });
+            var after = charged.slice();
+            if (step.gravity) {
+              var g = step.gravity;
+              if (step.refill || !random || !g.pool.length) throw new Error('Gravity requires a seeded pool and no scripted refill');
+              var refill = planRefill(colors(before), plan.removed, g.pool, random, g.mode === 'mine' ? mineGravity : undefined);
+              for (var _iterator = _createForOfIteratorHelperLoose(refill.moves), _step; !(_step = _iterator()).done;) {
+                var move = _step.value;
+                after[move.to] = charged[move.from];
+              }
+              for (var _iterator2 = _createForOfIteratorHelperLoose(refill.spawns), _step2; !(_step2 = _iterator2()).done;) {
+                var spawn = _step2.value;
+                var id = g.idPrefix + spawn.to;
+                if (oldIds.has(id)) throw new Error('Gravity spawn must use fresh ID');
+                after[spawn.to] = {
+                  id: id,
+                  emblem: refill.board[spawn.to]
+                };
+              }
+            } else {
+              var _step$refill;
+              var _refill = (_step$refill = step.refill) != null ? _step$refill : {};
+              if (Object.keys(_refill).length !== removed.length || removed.some(function (i) {
+                return !Object.hasOwn(_refill, i);
+              })) throw new Error('Scripted refill must cover exactly the removed cells');
+              if (Object.values(_refill).some(function (t) {
+                return t.tier || oldIds.has(t.id);
+              })) throw new Error('Refill must use fresh ordinary tiles');
+              for (var _iterator3 = _createForOfIteratorHelperLoose(removed), _step3; !(_step3 = _iterator3()).done;) {
+                var i = _step3.value;
+                after[i] = _refill[i];
+              }
+            }
+            assertTiles(after);
+            state.tiles = after;
+            return {
+              commands: commands,
+              removed: removed,
+              generated: generated,
+              consumed: Array.from(plan.charged).map(function (i) {
+                return before[i];
+              })
+            };
+          },
+          recover: function recover(candidates) {
+            if (matches(colors(state.tiles)).length || legalMove(colors(state.tiles))) throw new Error('Recovery requires a stable dead board');
+            var _loop = function _loop() {
+                var candidate = _step4.value;
+                assertTiles(candidate);
+                var preserved = state.tiles.every(function (t, i) {
+                  return !t.tier || candidate[i].id === t.id && candidate[i].tier === t.tier && candidate[i].emblem === t.emblem;
+                });
+                var sameCount = candidate.filter(function (t) {
+                  return t.tier;
+                }).length === state.tiles.filter(function (t) {
+                  return t.tier;
+                }).length;
+                if (preserved && sameCount && !matches(colors(candidate)).length && legalMove(colors(candidate))) {
+                  state.tiles = candidate.slice();
+                  return {
+                    v: true
+                  };
+                }
+              },
+              _ret;
+            for (var _iterator4 = _createForOfIteratorHelperLoose(candidates), _step4; !(_step4 = _iterator4()).done;) {
+              _ret = _loop();
+              if (_ret) return _ret.v;
+            }
+            return false;
+          }
         };
       }
       cclegacy._RF.pop();
@@ -828,6 +3396,704 @@ System.register("chunks:///_virtual/Chapter.ts", ['./rollupPluginModLoBabelHelpe
   };
 });
 
+System.register("chunks:///_virtual/cocos-board-adapter.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Board.ts', './BattleSession.ts', './board-bridge.ts'], function (exports) {
+  var _extends, _createForOfIteratorHelperLoose, _asyncToGenerator, _regeneratorRuntime, cclegacy, adjacent, matches, legalMove, BattleSession, createBoardBridge;
+  return {
+    setters: [function (module) {
+      _extends = module.extends;
+      _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
+      _asyncToGenerator = module.asyncToGenerator;
+      _regeneratorRuntime = module.regeneratorRuntime;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+    }, function (module) {
+      adjacent = module.adjacent;
+      matches = module.matches;
+      legalMove = module.legalMove;
+    }, function (module) {
+      BattleSession = module.BattleSession;
+    }, function (module) {
+      createBoardBridge = module.createBoardBridge;
+    }],
+    execute: function () {
+      exports({
+        boardFromCells: boardFromCells,
+        cellsFromBoard: cellsFromBoard,
+        planBoardFacts: planBoardFacts,
+        validExchange: validExchange
+      });
+      cclegacy._RF.push({}, "dab40jfZyhAxJC8jFNhsUGH", "cocos-board-adapter", undefined);
+      function cellsFromBoard(board, marks) {
+        return board.tiles.map(function (tile, index) {
+          return {
+            index: index,
+            tile: _extends({}, tile),
+            rescue: marks.includes(String(index))
+          };
+        });
+      }
+      function boardFromCells(cells) {
+        var ordered = [].concat(cells).sort(function (a, b) {
+          return a.index - b.index;
+        });
+        if (ordered.length !== 56 || ordered.some(function (cell, index) {
+          return cell.index !== index;
+        }) || new Set(ordered.map(function (cell) {
+          return cell.tile.id;
+        })).size !== 56) throw Error('Invalid cell mapping');
+        return {
+          board: {
+            tiles: ordered.map(function (cell) {
+              return _extends({}, cell.tile);
+            })
+          },
+          marks: ordered.filter(function (c) {
+            return c.rescue;
+          }).map(function (c) {
+            return String(c.index);
+          })
+        };
+      }
+      function validExchange(board, _ref) {
+        var a = _ref[0],
+          b = _ref[1];
+        if (!board.tiles[a] || !board.tiles[b] || !adjacent(a, b)) return false;
+        var colors = board.tiles.map(function (tile) {
+          return tile.emblem;
+        });
+        var _ref2 = [colors[b], colors[a]];
+        colors[a] = _ref2[0];
+        colors[b] = _ref2[1];
+        return matches(colors).length > 0;
+      }
+      function planBoardFacts(ticket, snapshot, intent, signal) {
+        var config = snapshot.fixture.board;
+        if (!config || !snapshot.state.board) throw Error('Missing board');
+        if (!intent.pool.length || intent.pool.some(function (color) {
+          return !Object.hasOwn(config.skills, color);
+        })) throw Error('Invalid refill pool');
+        var board = structuredClone(snapshot.state.board);
+        var marks = new Set(snapshot.state.marks);
+        if (ticket.wave !== undefined && ticket.wave > 1 && intent.swap) throw Error('Only first wave may swap');
+        if (intent.swap && !validExchange(board, intent.swap)) throw Error('Exchange does not produce a match');
+        var seed = snapshot.state.rng;
+        var local = createBoardBridge(config, board, function () {
+          return (seed = Math.imul(seed, 1664525) + 1013904223 >>> 0) / Math.pow(2, 32);
+        });
+        var steps = [];
+        var seen = new Set();
+        var append = function append(step) {
+          var id = steps.length ? ticket.step + '/' + (steps.length + 1) : ticket.step;
+          if (steps.length) steps[steps.length - 1].step.next = id;
+          steps.push({
+            id: id,
+            step: step
+          });
+        };
+        var ids = new Set(board.tiles.map(function (tile) {
+          return tile.id;
+        }));
+        var _loop = function _loop() {
+            signal == null || signal.throwIfAborted();
+            var swap = wave === 1 ? intent.swap : undefined;
+            var pattern = JSON.stringify([seed, board.tiles.map(function (t) {
+              return [t.emblem, t.tier];
+            }), Array.from(marks), swap != null ? swap : null]);
+            if (seen.has(pattern)) throw Error('Repeated logical board state while planning');
+            seen.add(pattern);
+            var prefix = 'live:' + ticket.producerId + ':' + wave + ':';
+            while (board.tiles.some(function (_, i) {
+              return ids.has(prefix + i);
+            })) prefix += ':';
+            var match = _extends({
+              wave: wave
+            }, swap ? {
+              swap: [].concat(swap)
+            } : {}, {
+              gravity: {
+                mode: intent.gravity,
+                pool: [].concat(intent.pool),
+                idPrefix: prefix
+              }
+            });
+            if (!local.canMatch(match)) return 0; // break
+            var result = local.match(match);
+            for (var _iterator = _createForOfIteratorHelperLoose(board.tiles), _step; !(_step = _iterator()).done;) {
+              var t = _step.value;
+              ids.add(t.id);
+            }
+            var cleared = result.removed.map(String).filter(function (id) {
+              return marks["delete"](id);
+            });
+            append(_extends({
+              match: match
+            }, cleared.length ? {
+              marks: cleared
+            } : {}));
+            if (ticket.wave !== undefined) {
+              var colors = board.tiles.map(function (t) {
+                return t.emblem;
+              });
+              if (matches(colors).length || !legalMove(colors)) steps[0].step.next = ticket.producerId + '/wave/' + (wave + 1);
+              return {
+                v: {
+                  version: ticket.boardVersion,
+                  steps: steps
+                }
+              };
+            }
+          },
+          _ret;
+        for (var wave = (_ticket$wave = ticket.wave) != null ? _ticket$wave : 1;; wave++) {
+          var _ticket$wave;
+          _ret = _loop();
+          if (_ret === 0) break;
+          if (_ret) return _ret.v;
+        }
+        if (!legalMove(board.tiles.map(function (t) {
+          return t.emblem;
+        }))) {
+          var _intent$recovery;
+          var recovery = structuredClone((_intent$recovery = intent.recovery) != null ? _intent$recovery : []);
+          if (!local.recover(recovery)) throw Error('No approved recovery preserves enhanced tile identity');
+          append({
+            recover: recovery
+          });
+        }
+        if (!steps.length && (ticket.wave === undefined || ticket.wave === 1)) throw Error('Board intent has no legal mutation');
+        return {
+          version: ticket.boardVersion,
+          steps: steps
+        };
+      }
+      var IsolatedBoardSession = exports('IsolatedBoardSession', /*#__PURE__*/function () {
+        function IsolatedBoardSession(core) {
+          this.session = new BattleSession();
+          this.core = void 0;
+          this.core = core;
+        }
+        var _proto = IsolatedBoardSession.prototype;
+        _proto.resolve = /*#__PURE__*/function () {
+          var _resolve = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(ticket, intent, prepare) {
+            var _this = this;
+            var next, snapshot, ok, _this$session$events$, _this$session$events$2, reason;
+            return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+              while (1) switch (_context2.prev = _context2.next) {
+                case 0:
+                  if (prepare === void 0) {
+                    prepare = function prepare() {};
+                  }
+                  if (this.core.acceptsBoardTicket(ticket)) {
+                    _context2.next = 3;
+                    break;
+                  }
+                  return _context2.abrupt("return", {
+                    ok: false,
+                    next: undefined
+                  });
+                case 3:
+                  snapshot = this.core.snapshot();
+                  _context2.next = 6;
+                  return this.session.produce([/*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(signal) {
+                    return _regeneratorRuntime().wrap(function _callee$(_context) {
+                      while (1) switch (_context.prev = _context.next) {
+                        case 0:
+                          _context.next = 2;
+                          return prepare(signal);
+                        case 2:
+                          signal.throwIfAborted();
+                          return _context.abrupt("return", planBoardFacts(ticket, snapshot, intent, signal));
+                        case 4:
+                        case "end":
+                          return _context.stop();
+                      }
+                    }, _callee);
+                  }))], function (facts) {
+                    next = _this.core.commitBoardFacts(ticket, facts);
+                  });
+                case 6:
+                  ok = _context2.sent;
+                  if (!ok && this.session.state === 'failed' && this.core.disposition === 'active') {
+                    reason = (_this$session$events$ = (_this$session$events$2 = this.session.events.findLast(function (e) {
+                      return e.kind === 'failed';
+                    })) == null ? void 0 : _this$session$events$2.reason) != null ? _this$session$events$ : 'Board planning failed'; // The ticket is validated by the core; a foreign receipt cannot seal it.
+                    try {
+                      this.core.failBoard(ticket, reason);
+                    } catch (_unused) {/* stale receipt */}
+                  }
+                  if (ok && this.core.disposition === 'terminal') this.session.finish();
+                  return _context2.abrupt("return", {
+                    ok: ok,
+                    next: next
+                  });
+                case 10:
+                case "end":
+                  return _context2.stop();
+              }
+            }, _callee2, this);
+          }));
+          function resolve(_x, _x2, _x3) {
+            return _resolve.apply(this, arguments);
+          }
+          return resolve;
+        }();
+        _proto.cancel = function cancel(reason) {
+          this.core.cancel(reason);
+          this.session.cancel();
+        };
+        return IsolatedBoardSession;
+      }());
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/CombatSceneLab.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './BattleMotion.ts', './Board.ts', './battle-core.ts', './formal-rules.ts', './cocos-board-adapter.ts'], function (exports) {
+  var _asyncToGenerator, _regeneratorRuntime, _createForOfIteratorHelperLoose, _extends, cclegacy, Node, UITransform, Graphics, Color, Vec3, tween, BattleMotion, newBoard, legalMove, createBattleCore, setupFormalRoom, IsolatedBoardSession, validExchange;
+  return {
+    setters: [function (module) {
+      _asyncToGenerator = module.asyncToGenerator;
+      _regeneratorRuntime = module.regeneratorRuntime;
+      _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
+      _extends = module.extends;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+      Node = module.Node;
+      UITransform = module.UITransform;
+      Graphics = module.Graphics;
+      Color = module.Color;
+      Vec3 = module.Vec3;
+      tween = module.tween;
+    }, function (module) {
+      BattleMotion = module.BattleMotion;
+    }, function (module) {
+      newBoard = module.newBoard;
+      legalMove = module.legalMove;
+    }, function (module) {
+      createBattleCore = module.createBattleCore;
+    }, function (module) {
+      setupFormalRoom = module.setupFormalRoom;
+    }, function (module) {
+      IsolatedBoardSession = module.IsolatedBoardSession;
+      validExchange = module.validExchange;
+    }],
+    execute: function () {
+      exports('openCombatSceneLab', openCombatSceneLab);
+      cclegacy._RF.push({}, "d161bhp9oZO+LbixTh3swzL", "CombatSceneLab", undefined);
+      var pool = ['a', 'b', 'c', 'd'];
+      var colors = ['#de7262', '#589dc9', '#a582da', '#79bd88'];
+      var position = function position(i) {
+        return new Vec3((i % 7 - 3) * 49, (3.5 - Math.floor(i / 7)) * 49, 0);
+      };
+      function openCombatSceneLab(parent, seed, formal) {
+        if (seed === void 0) {
+          seed = 8;
+        }
+        if (formal === void 0) {
+          formal = false;
+        }
+        var root = new Node('M5-A isolated board');
+        root.layer = parent.layer;
+        parent.addChild(root);
+        root.addComponent(UITransform).setContentSize(350, 400);
+        var actor = new Node('职业演出');
+        actor.layer = parent.layer;
+        root.addChild(actor);
+        actor.setPosition(-150, 220, 0);
+        var actorArt = actor.addComponent(Graphics);
+        actorArt.fillColor = Color.fromHEX(new Color(), '#ffdc87');
+        actorArt.circle(0, 0, 15);
+        actorArt.fill();
+        actor.active = formal;
+        var spans = [];
+        var nodes = new Map();
+        var rendered = new Set();
+        var generation = 0,
+          busy = false,
+          motion = new BattleMotion();
+        var core;
+        var session;
+        var journal = [];
+        var presented = 0;
+        function project(board, marks, animate) {
+          var active = new Set(board.tiles.map(function (t) {
+            return t.id;
+          }));
+          nodes.forEach(function (node, id) {
+            if (!active.has(id)) {
+              nodes["delete"](id);
+              node.destroy();
+            }
+          });
+          var waits = [];
+          board.tiles.forEach(function (tile, i) {
+            var _colors$indexOf;
+            var node = nodes.get(tile.id);
+            var goal = position(i);
+            if (!node) {
+              node = new Node(tile.id);
+              node.layer = root.layer;
+              root.addChild(node);
+              node.setPosition(animate ? new Vec3(goal.x, goal.y + 35, 0) : goal);
+              nodes.set(tile.id, node);
+              node.addComponent(UITransform).setContentSize(45, 45);
+              node.addComponent(Graphics);
+            }
+            var g = node.getComponent(Graphics);
+            g.clear();
+            g.fillColor = Color.fromHEX(new Color(), (_colors$indexOf = colors[(formal ? ['s', 'd', 'm', 'h'] : pool).indexOf(tile.emblem)]) != null ? _colors$indexOf : '#aaaabb');
+            g.roundRect(-21, -21, 42, 42, 8);
+            g.fill();
+            if (tile.tier || marks.includes(String(i))) {
+              g.lineWidth = tile.tier === 'advanced' ? 5 : 3;
+              g.strokeColor = Color.fromHEX(new Color(), tile.tier ? '#ffe2a1' : '#ffffff');
+              g.roundRect(-19, -19, 38, 38, 6);
+              g.stroke();
+            }
+            if (animate && !node.position.equals(goal)) waits.push(motion.play(tween(node).to(motion.duration(.09), {
+              position: goal
+            })));else node.setPosition(goal);
+          });
+          return waits;
+        }
+        function start(initial) {
+          var _core, _session;
+          generation++;
+          (_core = core) == null || _core.cancel('lab-room-change');
+          (_session = session) == null || _session.cancel('lab-room-change');
+          motion.cancel();
+          motion = new BattleMotion();
+          rendered.clear();
+          journal = [];
+          presented = 0;
+          busy = false;
+          spans.length = 0;
+          root.setScale(1, 1, 1);
+          actor.setPosition(-150, 220, 0);
+          var fixture = {
+            battleId: 'lab:' + generation,
+            roomId: 'room:' + generation,
+            seed: seed,
+            partyHP: 70,
+            enemies: {
+              dummy: 99999
+            },
+            combat: {
+              enemyOrder: ['dummy']
+            },
+            swaps: {
+              move: 'open'
+            },
+            steps: {},
+            board: {
+              initial: initial,
+              skills: Object.fromEntries(pool.map(function (c) {
+                return [c, {
+                  actor: 'A',
+                  ordinary: 'A1',
+                  skill: 'silver',
+                  advanced: 'gold'
+                }];
+              }))
+            },
+            skills: {
+              A1: {},
+              A2: {},
+              B1: {},
+              silver: {},
+              gold: {}
+            },
+            equipment: [{
+              id: 'B1',
+              actor: 'A',
+              trigger: 'ON_CAST',
+              skill: 'A1',
+              limit: 1,
+              request: {
+                kind: 'skill',
+                command: {
+                  actor: 'B',
+                  skill: 'B1',
+                  wave: 1
+                }
+              }
+            }, {
+              id: 'A2',
+              actor: 'A',
+              trigger: 'ON_CAST',
+              skill: 'A1',
+              limit: 1,
+              request: {
+                kind: 'skill',
+                command: {
+                  actor: 'A',
+                  skill: 'A2',
+                  wave: 1
+                }
+              }
+            }]
+          };
+          core = createBattleCore(formal ? setupFormalRoom({
+            battleId: fixture.battleId,
+            roomId: fixture.roomId,
+            seed: seed,
+            hp: 70,
+            maxHP: 100,
+            dp: 0,
+            maxDP: 40,
+            enemyHP: {
+              dummy: 99999
+            },
+            enemies: [{
+              id: 'dummy',
+              attack: 5,
+              tags: []
+            }],
+            tutorial: false,
+            roles: ['s', 'd', 'm', 'h'],
+            attacks: {
+              s: 27,
+              d: 18,
+              m: 23,
+              h: 12
+            },
+            gear: [],
+            buffs: {},
+            tiles: initial,
+            rescue: [],
+            swaps: {
+              move: 'open'
+            }
+          }) : fixture, {
+            boardMode: 'external',
+            generation: generation
+          });
+          session = new IsolatedBoardSession(core);
+          project({
+            tiles: initial
+          }, [], false);
+        }
+        function present(event) {
+          if (rendered.has(event.eventId) || !journal.some(function (x) {
+            return x.eventId === event.eventId;
+          })) return undefined;
+          rendered.add(event.eventId);
+          var frame = core.frame(event.eventId);
+          if (frame) return project(frame.board, frame.marks, true);
+          if (event.type === 'CAST_STARTED') return [motion.play(tween(root).to(motion.duration(.035), {
+            scale: new Vec3(1.025, 1.025, 1)
+          }).to(motion.duration(.035), {
+            scale: new Vec3(1, 1, 1)
+          }))];
+          return [];
+        }
+        var r = seed;
+        start(newBoard(formal ? ['s', 'd', 'm', 'h'] : pool, function () {
+          return (r = Math.imul(r, 1664525) + 1013904223 >>> 0) / Math.pow(2, 32);
+        }).map(function (emblem, i) {
+          return {
+            id: 'start:' + i,
+            emblem: emblem
+          };
+        }));
+        var api = {
+          swap: function swap(input) {
+            return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+              var board, move, token, ticket, result, events, playLane, _iterator2, _step2, event, _present, _event;
+              return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+                while (1) switch (_context2.prev = _context2.next) {
+                  case 0:
+                    board = core.snapshot().state.board;
+                    move = input != null ? input : legalMove(board.tiles.map(function (t) {
+                      return t.emblem;
+                    }));
+                    if (!(busy || !move || !validExchange(board, move))) {
+                      _context2.next = 4;
+                      break;
+                    }
+                    return _context2.abrupt("return", false);
+                  case 4:
+                    token = generation;
+                    busy = true;
+                    _context2.prev = 6;
+                    ticket = core.submit({
+                      swap: 'move'
+                    });
+                  case 8:
+                    if (!ticket) {
+                      _context2.next = 17;
+                      break;
+                    }
+                    _context2.next = 11;
+                    return session.resolve(ticket, _extends({}, ticket.wave === undefined || ticket.wave === 1 ? {
+                      swap: move
+                    } : {}, {
+                      pool: formal ? ['s', 'd', 'm', 'h'] : pool,
+                      gravity: 'mine'
+                    }));
+                  case 11:
+                    result = _context2.sent;
+                    if (!(token !== generation || !result.ok)) {
+                      _context2.next = 14;
+                      break;
+                    }
+                    return _context2.abrupt("return", false);
+                  case 14:
+                    ticket = result.next;
+                    _context2.next = 8;
+                    break;
+                  case 17:
+                    journal = core.snapshot().events;
+                    if (!formal) {
+                      _context2.next = 28;
+                      break;
+                    }
+                    events = journal.slice(presented);
+                    playLane = /*#__PURE__*/function () {
+                      var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(lane) {
+                        var _iterator, _step, event, frame, _start, waits, _result;
+                        return _regeneratorRuntime().wrap(function _callee$(_context) {
+                          while (1) switch (_context.prev = _context.next) {
+                            case 0:
+                              _iterator = _createForOfIteratorHelperLoose(events);
+                            case 1:
+                              if ((_step = _iterator()).done) {
+                                _context.next = 18;
+                                break;
+                              }
+                              event = _step.value;
+                              if (!(token !== generation)) {
+                                _context.next = 5;
+                                break;
+                              }
+                              return _context.abrupt("return");
+                            case 5:
+                              if (!(event.type !== (lane === 'board' ? 'MATCH_RESOLVED' : 'CAST_STARTED'))) {
+                                _context.next = 7;
+                                break;
+                              }
+                              return _context.abrupt("continue", 16);
+                            case 7:
+                              frame = lane === 'board' ? core.frame(event.eventId) : undefined;
+                              _start = performance.now();
+                              waits = frame ? project(frame.board, frame.marks, true) : [motion.play(tween(actor).to(.065, {
+                                position: new Vec3(-105, 220, 0)
+                              }).to(.065, {
+                                position: new Vec3(-150, 220, 0)
+                              }))];
+                              _context.next = 12;
+                              return Promise.all(waits);
+                            case 12:
+                              _result = _context.sent;
+                              if (!(token !== generation)) {
+                                _context.next = 15;
+                                break;
+                              }
+                              return _context.abrupt("return");
+                            case 15:
+                              spans.push({
+                                lane: lane,
+                                id: event.eventId,
+                                start: _start,
+                                end: performance.now(),
+                                completed: waits.length > 0 && _result.every(Boolean)
+                              });
+                            case 16:
+                              _context.next = 1;
+                              break;
+                            case 18:
+                            case "end":
+                              return _context.stop();
+                          }
+                        }, _callee);
+                      }));
+                      return function playLane(_x) {
+                        return _ref.apply(this, arguments);
+                      };
+                    }();
+                    _context2.next = 23;
+                    return Promise.all([playLane('board'), playLane('actor')]);
+                  case 23:
+                    if (!(token !== generation)) {
+                      _context2.next = 25;
+                      break;
+                    }
+                    return _context2.abrupt("return", false);
+                  case 25:
+                    for (_iterator2 = _createForOfIteratorHelperLoose(events); !(_step2 = _iterator2()).done;) {
+                      event = _step2.value;
+                      rendered.add(event.eventId);
+                      core.acknowledgePresentation(event.eventId);
+                    }
+                    presented = journal.length;
+                    return _context2.abrupt("return", true);
+                  case 28:
+                    if (!(presented < journal.length)) {
+                      _context2.next = 37;
+                      break;
+                    }
+                    _event = journal[presented];
+                    if (!(token !== generation)) {
+                      _context2.next = 32;
+                      break;
+                    }
+                    return _context2.abrupt("return", false);
+                  case 32:
+                    _context2.next = 34;
+                    return Promise.all((_present = present(_event)) != null ? _present : []);
+                  case 34:
+                    presented++;
+                    _context2.next = 28;
+                    break;
+                  case 37:
+                    return _context2.abrupt("return", token === generation);
+                  case 38:
+                    _context2.prev = 38;
+                    if (token === generation) busy = false;
+                    return _context2.finish(38);
+                  case 41:
+                  case "end":
+                    return _context2.stop();
+                }
+              }, _callee2, null, [[6,, 38, 41]]);
+            }))();
+          },
+          carry: function carry() {
+            start(core.snapshot().state.board.tiles);
+          },
+          duplicate: function duplicate() {
+            return journal.length ? present(journal[0]) !== undefined : false;
+          },
+          state: function state() {
+            return {
+              generation: generation,
+              busy: busy,
+              journal: journal,
+              spans: spans.slice(),
+              tiles: core.snapshot().state.board.tiles.map(function (tile) {
+                var _nodes$get, _nodes$get2, _nodes$get3;
+                return _extends({}, tile, {
+                  node: (_nodes$get = nodes.get(tile.id)) == null ? void 0 : _nodes$get.uuid,
+                  x: (_nodes$get2 = nodes.get(tile.id)) == null ? void 0 : _nodes$get2.position.x,
+                  y: (_nodes$get3 = nodes.get(tile.id)) == null ? void 0 : _nodes$get3.position.y
+                });
+              }),
+              nodes: nodes.size
+            };
+          }
+        };
+        root.once(Node.EventType.NODE_DESTROYED, function () {
+          generation++;
+          session.cancel('lab-destroy');
+          motion.cancel();
+        });
+        return api;
+      }
+      cclegacy._RF.pop();
+    }
+  };
+});
+
 System.register("chunks:///_virtual/CombatTags.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _extends, cclegacy;
   return {
@@ -865,17 +4131,17 @@ System.register("chunks:///_virtual/CombatTags.ts", ['./rollupPluginModLoBabelHe
         front: false
       }];
       var meleeSlots = [{
-        x: -48,
+        x: -73,
         front: true
       }, {
-        x: -102,
+        x: -110,
         front: false
       }];
       var rangedSlots = [{
-        x: -133,
+        x: -145,
         front: true
       }, {
-        x: -192,
+        x: -185,
         front: false
       }];
       function partyFormation(party, tagsFor) {
@@ -908,6 +4174,585 @@ System.register("chunks:///_virtual/CombatTags.ts", ['./rollupPluginModLoBabelHe
   };
 });
 
+System.register("chunks:///_virtual/damage.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './effects.ts'], function (exports) {
+  var _extends, _createForOfIteratorHelperLoose, _regeneratorRuntime, cclegacy, effectEngine, enemy, hero, party;
+  return {
+    setters: [function (module) {
+      _extends = module.extends;
+      _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
+      _regeneratorRuntime = module.regeneratorRuntime;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+    }, function (module) {
+      effectEngine = module.effectEngine;
+      enemy = module.enemy;
+      hero = module.hero;
+      party = module.party;
+    }],
+    execute: function () {
+      exports('combatPipeline', combatPipeline);
+      cclegacy._RF.push({}, "a00c5XsJP5H+aWpseApP+XH", "damage", undefined);
+      var clamp = function clamp(n) {
+        return Math.min(4, Math.max(0, Math.trunc(n)));
+      };
+      var armor = function armor(value) {
+        var _value$physical, _value$magic;
+        return {
+          physical: clamp((_value$physical = value == null ? void 0 : value.physical) != null ? _value$physical : 0),
+          magic: clamp((_value$magic = value == null ? void 0 : value.magic) != null ? _value$magic : 0)
+        };
+      };
+      function combatPipeline(host) {
+        var _config$maxPartyHP, _config$enemyOrder, _config$partyDP, _config$partyDP2, _ref, _config$maxPartyDP, _config$partyDP3, _config$partyDP4, _config$definitions;
+        var state = host.state,
+          config = host.config,
+          emit = host.emit;
+        var maxPartyHP = (_config$maxPartyHP = config.maxPartyHP) != null ? _config$maxPartyHP : state.partyHP,
+          maxEnemyHP = _extends({}, state.enemies);
+        if (config.maxPartyHP !== undefined && (!Number.isSafeInteger(maxPartyHP) || maxPartyHP < state.partyHP || maxPartyHP <= 0)) throw new Error('Invalid maximum party HP');
+        // Object order is not encoded by canonical JSON hashes. Make tie order explicit and reproducible.
+        var enemyOrder = (_config$enemyOrder = config.enemyOrder) != null ? _config$enemyOrder : Object.keys(state.enemies).sort();
+        if (enemyOrder.length !== Object.keys(state.enemies).length || new Set(enemyOrder).size !== enemyOrder.length || enemyOrder.some(function (id) {
+          return !Object.hasOwn(state.enemies, id);
+        })) throw new Error('Invalid enemy order');
+        if (!Number.isSafeInteger((_config$partyDP = config.partyDP) != null ? _config$partyDP : 0) || ((_config$partyDP2 = config.partyDP) != null ? _config$partyDP2 : 0) < 0) throw new Error('Invalid party DP');
+        var maxPartyDP = (_ref = (_config$maxPartyDP = config.maxPartyDP) != null ? _config$maxPartyDP : config.partyDP) != null ? _ref : 0;
+        if (!Number.isSafeInteger(maxPartyDP) || maxPartyDP < ((_config$partyDP3 = config.partyDP) != null ? _config$partyDP3 : 0)) throw new Error('Invalid maximum DP');
+        var runtime = {
+          partyDP: (_config$partyDP4 = config.partyDP) != null ? _config$partyDP4 : 0,
+          maxPartyDP: maxPartyDP,
+          maxPartyHP: maxPartyHP,
+          maxEnemyHP: maxEnemyHP,
+          partyArmor: armor(config.partyArmor),
+          attacks: _extends({}, config.attacks),
+          enemyArmor: Object.fromEntries(enemyOrder.map(function (id) {
+            var _config$enemies;
+            return [id, armor((_config$enemies = config.enemies) == null || (_config$enemies = _config$enemies[id]) == null ? void 0 : _config$enemies.armor)];
+          })),
+          enemyTags: Object.fromEntries(enemyOrder.map(function (id) {
+            var _config$enemies$id$ta, _config$enemies2;
+            return [id, [].concat((_config$enemies$id$ta = (_config$enemies2 = config.enemies) == null || (_config$enemies2 = _config$enemies2[id]) == null ? void 0 : _config$enemies2.tags) != null ? _config$enemies$id$ta : [])];
+          })),
+          enemyOrder: enemyOrder,
+          effects: {
+            instances: [],
+            nextId: 1
+          },
+          roomEnded: false
+        };
+        var effectParent = null;
+        var effects = effectEngine(runtime.effects, (_config$definitions = config.definitions) != null ? _config$definitions : {}, function () {
+          return state.roundId;
+        }, function (type, payload, source, target) {
+          emit('FACT', type, effectParent, payload, source, target);
+        }, function (owner) {
+          var _runtime$enemyTags$ow;
+          return owner.kind === 'ENEMY' && ((_runtime$enemyTags$ow = runtime.enemyTags[owner.id]) != null ? _runtime$enemyTags$ow : []).some(function (t) {
+            return t === 'boss' || t === 'stun-immune';
+          });
+        });
+        var hp = function hp(owner) {
+          return owner.kind === 'PARTY' ? state.partyHP : owner.kind === 'ENEMY' && Object.hasOwn(state.enemies, owner.id) ? state.enemies[owner.id] : 0;
+        };
+        var sourceOwner = function sourceOwner(actor, enemyActor) {
+          return enemyActor ? enemy(actor) : hero(actor);
+        };
+        var validOwner = function validOwner(owner) {
+          return owner.kind === 'HERO' || hp(owner) > 0;
+        };
+        var applyEffect = function applyEffect(id, owner, source, potency) {
+          if (validOwner(owner)) effects.apply(id, owner, source, potency);
+        };
+        function requireTarget(target, operation) {
+          if ((target == null ? void 0 : target.kind) === 'PARTY' && target.id === party.id || (target == null ? void 0 : target.kind) === 'ENEMY' && typeof target.id === 'string' && Object.hasOwn(state.enemies, target.id)) return;
+          throw new Error('Invalid ' + operation + ' target: ' + JSON.stringify(target));
+        }
+        function targetOf(target) {
+          if (target !== 'front') return target;
+          var id = runtime.enemyOrder.find(function (id) {
+            return state.enemies[id] > 0;
+          });
+          return id === undefined ? null : enemy(id);
+        }
+        function restoreDP(amount, parent, actor) {
+          var gained = Math.min(runtime.maxPartyDP - runtime.partyDP, amount);
+          runtime.partyDP += gained;
+          if (gained > 0) emit('FACT', 'DP_RESTORED', parent, {
+            amount: gained
+          }, actor, party.id);
+        }
+        function damage(parent, actor, target, type, raw) {
+          if (!Number.isFinite(raw) || raw < 0 || !['PHYSICAL', 'MAGICAL'].includes(type)) throw new Error('Invalid damage request');
+          requireTarget(target, 'damage');
+          var current = hp(target);
+          var active = effects.on(target);
+          var layers = target.kind === 'PARTY' ? runtime.partyArmor : runtime.enemyArmor[target.id];
+          var totals = _extends({}, layers != null ? layers : armor());
+          for (var _iterator = _createForOfIteratorHelperLoose(active), _step; !(_step = _iterator()).done;) {
+            var _mod$physical, _mod$magic;
+            var i = _step.value;
+            var mod = effects.definition(i.definition).armor;
+            if (i.definition === 'physicalShred') continue;
+            totals.physical += ((_mod$physical = mod == null ? void 0 : mod.physical) != null ? _mod$physical : 0) * i.stacks * i.potency;
+            totals.magic += ((_mod$magic = mod == null ? void 0 : mod.magic) != null ? _mod$magic : 0) * i.stacks * i.potency;
+          }
+          var effective = armor(totals);
+          if (active.some(function (i) {
+            return i.definition === 'physicalShred';
+          })) effective.physical = Math.max(0, effective.physical - 1);
+          var snapshot = Object.freeze({
+            hp: current,
+            dp: target.kind === 'PARTY' ? runtime.partyDP : 0,
+            armor: Object.freeze(effective),
+            effects: Object.freeze(active.map(function (i) {
+              return i.id;
+            })),
+            validTarget: current > 0
+          });
+          var request = emit('COMMAND', 'HIT_REQUESTED', parent, {
+            raw: raw,
+            type: type
+          }, actor, target.id);
+          var afterArmor = Math.round(raw * (1 - .25 * effective[type === 'PHYSICAL' ? 'physical' : 'magic']));
+          var dp = snapshot.validTarget ? Math.min(snapshot.dp, afterArmor) : 0;
+          var lost = snapshot.validTarget ? Math.min(current, afterArmor - dp) : 0;
+          var resolved = emit('FACT', 'HIT_RESOLVED', request, {
+            snapshot: snapshot,
+            afterArmor: afterArmor,
+            dpDamage: dp,
+            hpDamage: lost
+          }, actor, target.id);
+          if (dp || lost) {
+            if (target.kind === 'PARTY') {
+              runtime.partyDP -= dp;
+              state.partyHP -= lost;
+            } else state.enemies[target.id] -= lost;
+            emit('FACT', 'DAMAGE_APPLIED', resolved, {
+              damage: dp + lost,
+              dpDamage: dp,
+              hpDamage: lost,
+              remainingHP: current - lost,
+              remainingDP: snapshot.dp - dp
+            }, actor, target.id);
+          }
+          return {
+            resolved: resolved,
+            landed: snapshot.validTarget,
+            damaged: dp + lost > 0
+          };
+        }
+        function operation(op, i, parent, target) {
+          effectParent = parent;
+          var owner = op.to === 'owner' ? i.owner : target;
+          if ('apply' in op) applyEffect(op.apply, owner, i.source);else if ('cleanse' in op) effects.cleanse(owner, op.cleanse);else damage(parent, i.source, owner, op.type, op.damage);
+        }
+        function invoke(trigger, list, parent, actor, target, inflict) {
+          if (inflict === void 0) {
+            inflict = [];
+          }
+          var event = emit('FACT', trigger, parent, {}, actor, target.id);
+          effectParent = event;
+          for (var _iterator2 = _createForOfIteratorHelperLoose(inflict), _step2; !(_step2 = _iterator2()).done;) {
+            var id = _step2.value;
+            if (host.schedule) host.schedule({
+              kind: 'effect',
+              effect: {
+                effect: id,
+                owner: target
+              }
+            }, event, actor);else applyEffect(id, target, actor);
+          }
+          // Capture listeners once for each fact. New effects cannot subscribe to the same fact mid-dispatch.
+          for (var _iterator3 = _createForOfIteratorHelperLoose(list), _step3; !(_step3 = _iterator3()).done;) {
+            var i = _step3.value;
+            if (effects.present(i)) {
+              for (var _iterator4 = _createForOfIteratorHelperLoose((_effects$definition$h = (_effects$definition$h2 = effects.definition(i.definition).hooks) == null ? void 0 : _effects$definition$h2[trigger]) != null ? _effects$definition$h : []), _step4; !(_step4 = _iterator4()).done;) {
+                var _effects$definition$h, _effects$definition$h2;
+                var op = _step4.value;
+                if (host.schedule) {
+                  var owner = op.to === 'owner' ? i.owner : target;
+                  var _request = 'apply' in op ? {
+                    kind: 'effect',
+                    effect: {
+                      effect: op.apply,
+                      owner: owner
+                    }
+                  } : 'cleanse' in op ? {
+                    kind: 'cleanse',
+                    owner: owner,
+                    effect: op.cleanse
+                  } : {
+                    kind: 'damage',
+                    strike: {
+                      target: owner,
+                      type: op.type,
+                      flat: op.damage
+                    }
+                  };
+                  host.schedule(_request, event, i.source);
+                  continue;
+                }
+                if (trigger !== 'ROUND_END' && 'damage' in op) throw new Error('Damage hooks outside ROUND_END require a scheduled mechanic');
+                operation(op, i, event, target);
+              }
+            }
+          }
+        }
+        function settleStrike(s, parent, actor, raw, enemyActor) {
+          if (enemyActor === void 0) {
+            enemyActor = false;
+          }
+          return /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+            var target, listeners, _damage, resolved, landed, damaged;
+            return _regeneratorRuntime().wrap(function _callee$(_context) {
+              while (1) switch (_context.prev = _context.next) {
+                case 0:
+                  target = targetOf(s.target);
+                  if (target) {
+                    _context.next = 3;
+                    break;
+                  }
+                  return _context.abrupt("return");
+                case 3:
+                  listeners = effects.on.apply(effects, [sourceOwner(actor, enemyActor)].concat(enemyActor ? [] : [party], [target]));
+                  _damage = damage(parent, actor, target, s.type, raw), resolved = _damage.resolved, landed = _damage.landed, damaged = _damage.damaged;
+                  if (landed) invoke('ON_HIT', listeners, resolved, actor, target, s.onHit);
+                  if (damaged) invoke('ON_DAMAGE_DEALT', listeners, resolved, actor, target, s.onDamage);
+                  if (!host.flush) {
+                    _context.next = 9;
+                    break;
+                  }
+                  return _context.delegateYield(host.flush(), "t0", 9);
+                case 9:
+                case "end":
+                  return _context.stop();
+              }
+            }, _callee);
+          })();
+        }
+        for (var _iterator5 = _createForOfIteratorHelperLoose((_config$initialEffect = config.initialEffects) != null ? _config$initialEffect : []), _step5; !(_step5 = _iterator5()).done;) {
+          var _config$initialEffect;
+          var initial = _step5.value;
+          applyEffect(initial.effect, initial.owner, 'fixture', initial.potency);
+        }
+        return {
+          runtime: runtime,
+          derivedDamage: /*#__PURE__*/_regeneratorRuntime().mark(function derivedDamage(strike, parent, actor) {
+            var _strike$flat;
+            return _regeneratorRuntime().wrap(function derivedDamage$(_context2) {
+              while (1) switch (_context2.prev = _context2.next) {
+                case 0:
+                  return _context2.delegateYield(settleStrike(strike, parent, actor, (_strike$flat = strike.flat) != null ? _strike$flat : 0), "t0", 1);
+                case 1:
+                case "end":
+                  return _context2.stop();
+              }
+            }, derivedDamage);
+          }),
+          canTarget: function canTarget(target) {
+            var owner = targetOf(target);
+            if (!owner) return false;
+            requireTarget(owner, 'damage');
+            return hp(owner) > 0;
+          },
+          canInflict: function canInflict(entry) {
+            return validOwner(entry.owner) && effects.canApply(entry.effect, entry.owner, entry.potency);
+          },
+          inflict: function inflict(entry, parent, actor) {
+            effectParent = parent;
+            applyEffect(entry.effect, entry.owner, actor, entry.potency);
+          },
+          cleanseOldestNegative: function cleanseOldestNegative(parent) {
+            var oldest = runtime.effects.instances.find(function (i) {
+              return (i.owner.kind === 'PARTY' || i.owner.kind === 'HERO') && effects.definition(i.definition).negative && effects.definition(i.definition).cleansable;
+            });
+            if (oldest) {
+              effectParent = parent;
+              effects.removeOne(oldest);
+            }
+          },
+          cleanse: function cleanse(owner, id, parent) {
+            effectParent = parent;
+            effects.cleanse(owner, id);
+          },
+          cast: function cast(actor, action, enemyActor, command) {
+            var _action$strikes;
+            if (enemyActor === void 0) {
+              enemyActor = false;
+            }
+            var list = effects.on.apply(effects, enemyActor ? [enemy(actor)] : [party, hero(actor)]);
+            for (var _iterator6 = _createForOfIteratorHelperLoose((_action$strikes3 = action.strikes) != null ? _action$strikes3 : []), _step6; !(_step6 = _iterator6()).done;) {
+              var _action$strikes3;
+              var s = _step6.value;
+              if (s.target !== 'front') requireTarget(s.target, 'damage');
+            }
+            for (var _iterator7 = _createForOfIteratorHelperLoose((_action$heal2 = action.heal) != null ? _action$heal2 : []), _step7; !(_step7 = _iterator7()).done;) {
+              var _action$heal2;
+              var h = _step7.value;
+              requireTarget(h.target, 'healing');
+            }
+            if (action.restoreDP !== undefined && (!Number.isSafeInteger(action.restoreDP) || action.restoreDP < 0)) throw new Error('Invalid shield restoration');
+            var legalAttack = ((_action$strikes = action.strikes) != null ? _action$strikes : []).some(function (s) {
+              var target = targetOf(s.target);
+              return target !== null && hp(target) > 0;
+            });
+            var applicable = list.filter(function (i) {
+              var def = effects.definition(i.definition);
+              return (!def.attackOnly || legalAttack) && (!def.onlySkill || def.onlySkill === (command == null ? void 0 : command.skill));
+            });
+            var attack = Object.hasOwn(runtime.attacks, actor) ? runtime.attacks[actor] : 0;
+            var bonus = applicable.reduce(function (sum, i) {
+              var _command$length, _rule$minLength, _rule$minWave;
+              var rule = effects.definition(i.definition).castBonus;
+              return rule && rule.skill === (command == null ? void 0 : command.skill) && ((_command$length = command.length) != null ? _command$length : 0) >= ((_rule$minLength = rule.minLength) != null ? _rule$minLength : 0) && command.wave >= ((_rule$minWave = rule.minWave) != null ? _rule$minWave : 0) ? sum + Math.round(attack * rule.attackRatio * i.potency * i.stacks) : sum;
+            }, 0);
+            var snapshot = Object.freeze({
+              attack: attack,
+              bonus: bonus,
+              multiplier: applicable.reduce(function (m, i) {
+                var _effects$definition$a;
+                return m * Math.pow(1 + (((_effects$definition$a = effects.definition(i.definition).attackScale) != null ? _effects$definition$a : 1) - 1) * i.potency, i.stacks);
+              }, 1),
+              effects: Object.freeze(applicable.map(function (i) {
+                return i.id;
+              }))
+            });
+            return {
+              snapshot: snapshot,
+              apply: /*#__PURE__*/_regeneratorRuntime().mark(function apply(parent) {
+                var _iterator8, _step8, i, _iterator9, _step9, _action$strikes2, _s$flat, _s$ratio, s, _iterator10, _step10, _action$applyEffects, entry, _iterator11, _step11, _action$cleanse, _entry, _iterator12, _step12, _action$heal, _step12$value, _target, amount, conversion, max, gained, conversions, rates, rate, _i$id, _i, dp;
+                return _regeneratorRuntime().wrap(function apply$(_context3) {
+                  while (1) switch (_context3.prev = _context3.next) {
+                    case 0:
+                      effectParent = parent;
+                      for (_iterator8 = _createForOfIteratorHelperLoose(applicable); !(_step8 = _iterator8()).done;) {
+                        i = _step8.value;
+                        if (effects.definition(i.definition).lifecycle === 'CAST_COUNT') effects.consume(i);
+                      }
+                      if (!host.flush) {
+                        _context3.next = 4;
+                        break;
+                      }
+                      return _context3.delegateYield(host.flush(), "t0", 4);
+                    case 4:
+                      _iterator9 = _createForOfIteratorHelperLoose((_action$strikes2 = action.strikes) != null ? _action$strikes2 : []);
+                    case 5:
+                      if ((_step9 = _iterator9()).done) {
+                        _context3.next = 12;
+                        break;
+                      }
+                      s = _step9.value;
+                      if (targetOf(s.target)) {
+                        _context3.next = 9;
+                        break;
+                      }
+                      return _context3.abrupt("continue", 10);
+                    case 9:
+                      return _context3.delegateYield(settleStrike(s, parent, actor, (((_s$flat = s.flat) != null ? _s$flat : 0) + ((_s$ratio = s.ratio) != null ? _s$ratio : 0) * snapshot.attack + (s.randomBonus === undefined ? 0 : Math.floor(host.random() * (s.randomBonus + 1)))) * snapshot.multiplier + (s.skipCastBonus ? 0 : snapshot.bonus), enemyActor), "t1", 10);
+                    case 10:
+                      _context3.next = 5;
+                      break;
+                    case 12:
+                      if (action.restoreDP !== undefined && state.partyHP > 0) restoreDP(action.restoreDP, parent, actor);
+                      effectParent = parent;
+                      for (_iterator10 = _createForOfIteratorHelperLoose((_action$applyEffects = action.applyEffects) != null ? _action$applyEffects : []); !(_step10 = _iterator10()).done;) {
+                        entry = _step10.value;
+                        applyEffect(entry.effect, entry.owner, actor, entry.potency);
+                      }
+                      for (_iterator11 = _createForOfIteratorHelperLoose((_action$cleanse = action.cleanse) != null ? _action$cleanse : []); !(_step11 = _iterator11()).done;) {
+                        _entry = _step11.value;
+                        effects.cleanse(_entry.owner, _entry.effect);
+                      }
+                      _iterator12 = _createForOfIteratorHelperLoose((_action$heal = action.heal) != null ? _action$heal : []);
+                    case 17:
+                      if ((_step12 = _iterator12()).done) {
+                        _context3.next = 36;
+                        break;
+                      }
+                      _step12$value = _step12.value, _target = _step12$value.target, amount = _step12$value.amount, conversion = _step12$value.conversion;
+                      if (!(!Number.isFinite(amount) || amount < 0)) {
+                        _context3.next = 21;
+                        break;
+                      }
+                      throw new Error('Invalid heal');
+                    case 21:
+                      if (!(hp(_target) <= 0)) {
+                        _context3.next = 23;
+                        break;
+                      }
+                      return _context3.abrupt("continue", 34);
+                    case 23:
+                      max = _target.kind === 'PARTY' ? maxPartyHP : maxEnemyHP[_target.id];
+                      gained = Math.min(max - hp(_target), amount);
+                      conversions = _target.kind === 'PARTY' ? applicable.filter(function (i) {
+                        return effects.definition(i.definition).overhealToDP !== undefined;
+                      }) : [];
+                      rates = conversions.map(function (i) {
+                        return effects.definition(i.definition).overhealToDP * i.potency * i.stacks;
+                      });
+                      if (_target.kind === 'PARTY' && conversion !== undefined) rates.push(conversion);
+                      if (!(rates.length > 1 && !config.overhealPolicy)) {
+                        _context3.next = 30;
+                        break;
+                      }
+                      throw new Error('Overheal stacking requires an explicit future policy');
+                    case 30:
+                      rate = config.overhealPolicy === 'MAX' ? Math.max.apply(Math, [0].concat(rates)) : config.overhealPolicy === 'SKILL_FIRST' && conversion !== undefined ? conversion : rates.reduce(function (a, b) {
+                        return a + b;
+                      }, 0);
+                      if (_target.kind === 'PARTY') state.partyHP += gained;else state.enemies[_target.id] += gained;
+                      emit('FACT', 'HEAL_APPLIED', parent, {
+                        amount: gained
+                      }, actor, _target.id);
+                      if (_target.kind === 'PARTY') {
+                        if (rate > 0) {
+                          _i = conversions[0];
+                          dp = Math.min(runtime.maxPartyDP - runtime.partyDP, Math.round((amount - gained) * rate));
+                          runtime.partyDP += dp;
+                          if (dp > 0) emit('FACT', 'DP_RESTORED', parent, {
+                            amount: dp,
+                            instanceId: (_i$id = _i == null ? void 0 : _i.id) != null ? _i$id : null
+                          }, actor, _target.id);
+                        }
+                      }
+                    case 34:
+                      _context3.next = 17;
+                      break;
+                    case 36:
+                    case "end":
+                      return _context3.stop();
+                  }
+                }, apply);
+              })
+            };
+          },
+          opportunity: function opportunity(actor, parent) {
+            var target = enemy(actor);
+            if (hp(target) <= 0) return false;
+            effectParent = emit('LIFECYCLE', 'ACTION_OPPORTUNITY', parent, {}, actor, actor);
+            var list = effects.on(target).filter(function (i) {
+              return effects.definition(i.definition).lifecycle === 'ACTION_OPPORTUNITY';
+            });
+            var skip = list.some(function (i) {
+              return effects.definition(i.definition).skipAction;
+            });
+            for (var _iterator13 = _createForOfIteratorHelperLoose(list), _step13; !(_step13 = _iterator13()).done;) {
+              var i = _step13.value;
+              effects.consume(i);
+            }
+            if (skip) emit('FACT', 'ACTION_SKIPPED', effectParent, {
+              reason: 'stun'
+            }, actor, actor);
+            return !skip;
+          },
+          roundEnd: /*#__PURE__*/_regeneratorRuntime().mark(function roundEnd(parent, beforeExpiry) {
+            var stable, _iterator14, _step14, _effects$definition$h3, i;
+            return _regeneratorRuntime().wrap(function roundEnd$(_context4) {
+              while (1) switch (_context4.prev = _context4.next) {
+                case 0:
+                  stable = runtime.effects.instances.slice();
+                  _iterator14 = _createForOfIteratorHelperLoose(stable);
+                case 2:
+                  if ((_step14 = _iterator14()).done) {
+                    _context4.next = 10;
+                    break;
+                  }
+                  i = _step14.value;
+                  if (!(effects.present(i) && (_effects$definition$h3 = effects.definition(i.definition).hooks) != null && (_effects$definition$h3 = _effects$definition$h3.ROUND_END) != null && _effects$definition$h3.length)) {
+                    _context4.next = 8;
+                    break;
+                  }
+                  invoke('ROUND_END', [i], parent, i.source, i.owner);
+                  if (!host.flush) {
+                    _context4.next = 8;
+                    break;
+                  }
+                  return _context4.delegateYield(host.flush(), "t0", 8);
+                case 8:
+                  _context4.next = 2;
+                  break;
+                case 10:
+                  if (!beforeExpiry) {
+                    _context4.next = 12;
+                    break;
+                  }
+                  return _context4.delegateYield(beforeExpiry(), "t1", 12);
+                case 12:
+                  effectParent = parent;
+                  effects.expire();
+                case 14:
+                case "end":
+                  return _context4.stop();
+              }
+            }, roundEnd);
+          }),
+          roomEnd: function roomEnd(parent) {
+            effectParent = parent;
+            effects.roomEnd();
+            runtime.roomEnded = true;
+          }
+        };
+      }
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/derivation.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+  var _createForOfIteratorHelperLoose, cclegacy;
+  return {
+    setters: [function (module) {
+      _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+    }],
+    execute: function () {
+      exports({
+        acceptFact: acceptFact,
+        derivationState: derivationState
+      });
+      cclegacy._RF.push({}, "273d7A81F5Ks7dri33QE22P", "derivation", undefined);
+      function derivationState(equipment) {
+        var ids = new Set();
+        return {
+          instances: equipment.map(function (spec) {
+            var _spec$limit;
+            if (!spec.id || ids.has(spec.id)) throw new Error('Duplicate equipment effect id: ' + spec.id);
+            ids.add(spec.id);
+            if (spec.limit !== undefined && (!Number.isSafeInteger(spec.limit) || spec.limit < 0)) throw new Error('Invalid equipment budget: ' + spec.id);
+            if ((spec.request.kind === 'skill' || spec.request.kind === 'board') && spec.limit === undefined) throw new Error('Action-generating effect requires an instance budget: ' + spec.id);
+            return {
+              spec: spec,
+              remaining: (_spec$limit = spec.limit) != null ? _spec$limit : null
+            };
+          }),
+          requests: [],
+          seenFacts: []
+        };
+      }
+      function acceptFact(state, fact, seen) {
+        if (fact.category !== 'FACT' || seen.has(fact.eventId)) return false;
+        seen.add(fact.eventId);
+        state.seenFacts.push(fact.eventId);
+        var payload = fact.payload;
+        for (var _iterator = _createForOfIteratorHelperLoose(state.instances), _step; !(_step = _iterator()).done;) {
+          var spec = _step.value.spec;
+          if (spec.trigger !== fact.type || spec.skill !== undefined && spec.skill !== payload.skill || spec.step !== undefined && spec.step !== payload.step) continue;
+          if (fact.type !== 'MATCH_RESOLVED' && spec.actor !== fact.sourceId) continue;
+          state.requests.push({
+            request: spec.request,
+            cause: fact,
+            actor: spec.actor,
+            equipmentId: spec.id
+          });
+        }
+        return true;
+      }
+      cclegacy._RF.pop();
+    }
+  };
+});
+
 System.register("chunks:///_virtual/DungeonDirector.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
   var _createClass, cclegacy;
   return {
@@ -921,8 +4766,15 @@ System.register("chunks:///_virtual/DungeonDirector.ts", ['./rollupPluginModLoBa
       var DungeonDirector = exports('DungeonDirector', /*#__PURE__*/function () {
         function DungeonDirector(route) {
           this.position = 0;
+          this.route = void 0;
           this.route = route;
         }
+        DungeonDirector.restore = function restore(route, cursor) {
+          if (!route.length || !Number.isSafeInteger(cursor) || cursor < 0 || cursor > route.length) throw Error('Invalid persisted dungeon cursor');
+          var director = new DungeonDirector(structuredClone([].concat(route)));
+          director.position = cursor;
+          return director;
+        };
         var _proto = DungeonDirector.prototype;
         _proto.advance = function advance(expected) {
           if (!expected || this.room !== expected) return false;
@@ -959,16 +4811,1099 @@ System.register("chunks:///_virtual/DungeonDirector.ts", ['./rollupPluginModLoBa
   };
 });
 
-System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Inventory.ts', './GameAudio.ts', './DungeonDirector.ts', './Chapter.ts', './CombatTags.ts', './Board.ts', './BattleMotion.ts', './BattleRules.ts', './MineTrial.ts', './TemplateBoardFx.ts'], function (exports) {
-  var _inheritsLoose, _createForOfIteratorHelperLoose, _extends, _asyncToGenerator, _createClass, _regeneratorRuntime, cclegacy, _decorator, Node, UITransform, Graphics, Color, Label, Sprite, SpriteFrame, Rect, Size, sys, Mask, Vec3, tween, UIOpacity, Component, profiler, resources, EffectAsset, Material, Texture2D, Inventory, heroes, equipment, resourceNames, GameAudio, DungeonDirector, locations, dungeonIds, enemy, tutorialRoute, dungeonRewardMultiplier, dungeons, unlocked, locationNames, makeRoute, drawUpgrades, encounter, worldPoints, roomRewards, battleCoinReward, worldRoute, worldTrack, partyFormation, opening, newBoard, cols, legalMove, adjacent, matches, planRefill, mineGravity, planWave, BattleMotion, selectTargets, planSkill, skillOwner, mineTrialTitle, mineTrialRandom, makeMineTrial, TemplateBoardFx;
+System.register("chunks:///_virtual/effects.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+  var _extends, cclegacy;
+  return {
+    setters: [function (module) {
+      _extends = module.extends;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+    }],
+    execute: function () {
+      exports('effectEngine', effectEngine);
+      cclegacy._RF.push({}, "3645aZgAAlOZLbHGwl65Wju", "effects", undefined);
+      var sameOwner = exports('sameOwner', function sameOwner(a, b) {
+        return a.kind === b.kind && a.id === b.id;
+      });
+      var party = exports('party', Object.freeze({
+        kind: 'PARTY',
+        id: 'PARTY'
+      }));
+      var enemy = exports('enemy', function enemy(id) {
+        return {
+          kind: 'ENEMY',
+          id: id
+        };
+      });
+      var hero = exports('hero', function hero(id) {
+        return {
+          kind: 'HERO',
+          id: id
+        };
+      });
+      var builtins = exports('builtins', {
+        physicalShred: {
+          owners: ['PARTY', 'ENEMY'],
+          lifecycle: 'ROUND',
+          count: 2,
+          policy: 'REFRESH',
+          cleansable: true,
+          negative: true,
+          armor: {
+            physical: -1
+          }
+        },
+        rally: {
+          owners: ['PARTY'],
+          lifecycle: 'CAST_COUNT',
+          count: 1,
+          policy: 'REFRESH',
+          attackOnly: true,
+          attackScale: 1.4,
+          cleansable: true
+        },
+        stun: {
+          owners: ['ENEMY'],
+          lifecycle: 'ACTION_OPPORTUNITY',
+          count: 1,
+          policy: 'REFRESH',
+          skipAction: true,
+          cleansable: true
+        }
+      });
+      function effectEngine(state, extra, round, record, immune) {
+        for (var _i = 0, _Object$keys = Object.keys(extra); _i < _Object$keys.length; _i++) {
+          var id = _Object$keys[_i];
+          if (Object.hasOwn(builtins, id)) throw new Error('Reserved effect: ' + id);
+        }
+        var defs = new Map(Object.entries(_extends({}, builtins, extra)));
+        var definition = function definition(id) {
+          var def = defs.get(id);
+          if (!def) throw new Error('Unknown effect: ' + id);
+          return def;
+        };
+        var log = function log(type, i, reason) {
+          return record(type, {
+            instance: structuredClone(i),
+            reason: reason != null ? reason : null
+          }, i.source, i.owner.id);
+        };
+        function apply(id, owner, source, potency) {
+          var _d$count;
+          if (potency === void 0) {
+            potency = 1;
+          }
+          var d = definition(id);
+          if (!d.owners.includes(owner.kind)) throw new Error('Invalid effect owner: ' + id);
+          if (!Number.isFinite(potency) || potency < 0 || Object.hasOwn(builtins, id) && potency !== 1) throw new Error('Invalid effect potency: ' + id);
+          if (d.skipAction && immune(owner)) {
+            record('EFFECT_REJECTED', {
+              definition: id,
+              owner: owner,
+              reason: 'immune'
+            }, source, owner.id);
+            return;
+          }
+          var existing = d.policy === 'INDEPENDENT' ? undefined : state.instances.find(function (i) {
+            return i.definition === id && sameOwner(i.owner, owner);
+          });
+          if (existing && d.policy === 'REPLACE_STRONGER' && existing.potency >= potency) {
+            record('EFFECT_REJECTED', {
+              definition: id,
+              owner: owner,
+              reason: 'not-stronger'
+            }, source, owner.id);
+            return;
+          }
+          var count = (_d$count = d.count) != null ? _d$count : 1;
+          if (!Number.isSafeInteger(count) || count < 1) throw new Error('Invalid effect duration: ' + id);
+          var timed = {
+            source: source,
+            appliedRound: round(),
+            expiresAfterRound: d.lifecycle === 'ROUND' ? round() + count - 1 : null,
+            remaining: d.lifecycle === 'CAST_COUNT' || d.lifecycle === 'ACTION_OPPORTUNITY' ? count : null,
+            potency: potency
+          };
+          if (existing) {
+            var _d$maxStacks;
+            Object.assign(existing, timed);
+            existing.stacks = d.policy === 'ADD_STACK' ? Math.min(existing.stacks + 1, (_d$maxStacks = d.maxStacks) != null ? _d$maxStacks : 1) : 1;
+            log(d.policy === 'ADD_STACK' ? 'EFFECT_STACKED' : d.policy === 'REPLACE_STRONGER' ? 'EFFECT_REPLACED' : 'EFFECT_REFRESHED', existing);
+          } else {
+            var created = _extends({}, timed, {
+              id: state.nextId++,
+              definition: id,
+              owner: _extends({}, owner),
+              stacks: 1
+            });
+            state.instances.push(created);
+            log('EFFECT_APPLIED', created);
+          }
+        }
+        function remove(i, reason) {
+          var index = state.instances.indexOf(i);
+          if (index < 0) return;
+          state.instances.splice(index, 1);
+          log('EFFECT_REMOVED', i, reason);
+        }
+        function consume(i) {
+          if (i.remaining === null || !state.instances.includes(i)) return;
+          i.remaining--;
+          log('EFFECT_CONSUMED', i);
+          if (!i.remaining) remove(i, 'consumed');
+        }
+        return {
+          apply: apply,
+          definition: definition,
+          consume: consume,
+          removeOne: function removeOne(i) {
+            return remove(i, 'cleanse');
+          },
+          canApply: function canApply(id, owner, potency) {
+            if (potency === void 0) {
+              potency = 1;
+            }
+            var d = definition(id);
+            if (!d.owners.includes(owner.kind)) throw new Error('Invalid effect owner: ' + id);
+            return !(d.skipAction && immune(owner)) && !(d.policy === 'REPLACE_STRONGER' && state.instances.some(function (i) {
+              return i.definition === id && sameOwner(i.owner, owner) && i.potency >= potency;
+            }));
+          },
+          on: function on() {
+            for (var _len = arguments.length, owners = new Array(_len), _key = 0; _key < _len; _key++) {
+              owners[_key] = arguments[_key];
+            }
+            return state.instances.filter(function (i) {
+              return owners.some(function (o) {
+                return sameOwner(i.owner, o);
+              });
+            });
+          },
+          present: function present(i) {
+            return state.instances.includes(i);
+          },
+          cleanse: function cleanse(owner, id) {
+            return state.instances.slice().filter(function (i) {
+              return sameOwner(i.owner, owner) && i.definition === id && definition(id).cleansable;
+            }).forEach(function (i) {
+              return remove(i, 'cleanse');
+            });
+          },
+          expire: function expire() {
+            return state.instances.slice().filter(function (i) {
+              return i.expiresAfterRound !== null && i.expiresAfterRound <= round();
+            }).forEach(function (i) {
+              return remove(i, 'expired');
+            });
+          },
+          roomEnd: function roomEnd() {
+            return state.instances.slice().filter(function (i) {
+              return definition(i.definition).lifecycle !== 'PERMANENT';
+            }).forEach(function (i) {
+              return remove(i, 'room-end');
+            });
+          }
+        };
+      }
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/experiment.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './effects.ts'], function (exports) {
+  var _extends, _createForOfIteratorHelperLoose, cclegacy, party, enemy;
+  return {
+    setters: [function (module) {
+      _extends = module.extends;
+      _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+    }, function (module) {
+      party = module.party;
+      enemy = module.enemy;
+    }],
+    execute: function () {
+      exports({
+        experimentAction: experimentAction,
+        matchScale: matchScale
+      });
+      cclegacy._RF.push({}, "81544odmRhKP42aooLQSGmX", "experiment", undefined);
+      var curves = exports('curves', {
+        A: {
+          four: 1.55,
+          five: 2.10,
+          chain: {
+            kind: 'linear',
+            step: .16
+          }
+        },
+        B: {
+          four: 1.40,
+          five: 1.85,
+          chain: {
+            kind: 'saturating',
+            height: .30,
+            decay: .6
+          }
+        },
+        C: {
+          four: 1.55,
+          five: 2.10,
+          chain: {
+            kind: 'saturating',
+            height: .30,
+            decay: .6
+          }
+        },
+        D: {
+          four: 1.40,
+          five: 1.85,
+          chain: {
+            kind: 'linear',
+            step: .16
+          }
+        }
+      });
+      var probeWaves = exports('probeWaves', [1, 2, 3, 5, 8, 13, 24, 40]);
+      function matchScale(profile, length, wave) {
+        if (!Number.isInteger(wave) || wave < 1 || !Number.isInteger(length) || length < 3) throw new Error('Invalid match snapshot');
+        var c = profile.chain;
+        return (length >= 5 ? profile.five : length === 4 ? profile.four : 1) * (c.kind === 'linear' ? 1 + c.step * (wave - 1) : 1 + c.height * (1 - Math.pow(c.decay, wave - 1)));
+      }
+      var experimentalTiers = exports('experimentalTiers', {
+        skill: {
+          sword: {
+            ratio: .35
+          },
+          shield: {
+            dp: 8
+          },
+          mage: {
+            ratio: .45,
+            targets: 'one'
+          },
+          priest: {
+            conversion: .35
+          }
+        },
+        advanced: {
+          sword: {
+            ratio: .65,
+            onHit: ['physicalShred']
+          },
+          shield: {
+            dp: 15,
+            effect: 'trialProtection'
+          },
+          mage: {
+            ratio: .65,
+            targets: 'all'
+          },
+          priest: {
+            conversion: .50,
+            cleanse: ['trialHex']
+          }
+        }
+      });
+      function experimentAction(config, cmd, base, state, enemies) {
+        var _cmd$emblem, _config$tiers, _base$strikes, _rule$requests;
+        if (cmd.length === undefined || !['s', 'd', 'm', 'h'].includes((_cmd$emblem = cmd.emblem) != null ? _cmd$emblem : '')) return {
+          action: base,
+          requests: []
+        };
+        var scale = matchScale(config.curves, cmd.length, cmd.wave);
+        var rule = cmd.tier ? (_config$tiers = config.tiers) == null ? void 0 : _config$tiers[cmd.tier] : undefined;
+        var action = _extends({}, base);
+        var strikes = ((_base$strikes = base.strikes) != null ? _base$strikes : []).map(function (s) {
+          var _s$ratio, _s$flat;
+          return _extends({}, s, {
+            ratio: ((_s$ratio = s.ratio) != null ? _s$ratio : 0) * scale,
+            flat: ((_s$flat = s.flat) != null ? _s$flat : 0) * scale
+          });
+        });
+        var alive = state.enemyOrder.filter(function (id) {
+          return enemies[id] > 0;
+        });
+        if (cmd.emblem === 'd') {
+          if (state.partyDP >= state.maxPartyDP) strikes.push({
+            type: 'PHYSICAL',
+            target: 'front',
+            ratio: scale
+          });else action.restoreDP = Math.round(config.shieldDP * scale);
+          if (rule != null && rule.shield) {
+            var _action$restoreDP, _action$applyEffects;
+            action.restoreDP = ((_action$restoreDP = action.restoreDP) != null ? _action$restoreDP : 0) + rule.shield.dp;
+            if (rule.shield.effect) action.applyEffects = [].concat((_action$applyEffects = action.applyEffects) != null ? _action$applyEffects : [], [{
+              effect: rule.shield.effect,
+              owner: party
+            }]);
+          }
+        }
+        if (cmd.emblem === 's' && rule != null && rule.sword && alive.length) {
+          // Bind the additional segment to the original target. Main hit may kill it; no spillover.
+          strikes.push({
+            type: 'PHYSICAL',
+            target: enemy(alive[0]),
+            ratio: rule.sword.ratio,
+            skipCastBonus: true,
+            onHit: rule.sword.onHit
+          });
+        }
+        if (cmd.emblem === 'm' && rule != null && rule.mage) {
+          for (var _iterator = _createForOfIteratorHelperLoose(alive.slice(1, rule.mage.targets === 'one' ? 2 : undefined)), _step; !(_step = _iterator()).done;) {
+            var id = _step.value;
+            strikes.push({
+              type: 'MAGICAL',
+              target: enemy(id),
+              ratio: rule.mage.ratio,
+              skipCastBonus: true
+            });
+          }
+        }
+        if (cmd.emblem === 'h') {
+          var _action$heal, _rule$priest, _rule$priest2, _action$cleanse;
+          action.heal = [].concat((_action$heal = action.heal) != null ? _action$heal : [], [{
+            target: party,
+            amount: Math.round(config.healHP * scale),
+            conversion: rule == null || (_rule$priest = rule.priest) == null ? void 0 : _rule$priest.conversion
+          }]);
+          if (rule != null && (_rule$priest2 = rule.priest) != null && _rule$priest2.cleanse) action.cleanse = [].concat((_action$cleanse = action.cleanse) != null ? _action$cleanse : [], rule.priest.cleanse.map(function (effect) {
+            return {
+              owner: party,
+              effect: effect
+            };
+          }));
+        }
+        action.strikes = strikes;
+        return {
+          action: action,
+          requests: (_rule$requests = rule == null ? void 0 : rule.requests) != null ? _rule$requests : []
+        };
+      }
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/exploration-save.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+  var _extends, _asyncToGenerator, _regeneratorRuntime, _createForOfIteratorHelperLoose, cclegacy;
+  return {
+    setters: [function (module) {
+      _extends = module.extends;
+      _asyncToGenerator = module.asyncToGenerator;
+      _regeneratorRuntime = module.regeneratorRuntime;
+      _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+    }],
+    execute: function () {
+      exports({
+        browserExclusiveWriter: browserExclusiveWriter,
+        decodeExploration: decodeExploration,
+        explorationStore: explorationStore,
+        planExit: planExit,
+        roomPosition: roomPosition,
+        transition: transition,
+        validBoard: validBoard
+      });
+      cclegacy._RF.push({}, "720b4gNSplBt45jE3d14PrA", "exploration-save", undefined);
+      var materials = ['herb', 'ore', 'essence', 'crystal'];
+      var integer = function integer(n) {
+        return Number.isSafeInteger(n) && Number(n) >= 0;
+      };
+      var id = function id(v) {
+        return typeof v === 'string' && v.trim().length > 0;
+      };
+      var object = function object(v) {
+        return !!v && typeof v === 'object' && !Array.isArray(v);
+      };
+      var only = function only(v, keys) {
+        return Object.keys(v).every(function (k) {
+          return keys.includes(k);
+        });
+      };
+      var exact = function exact(a, b) {
+        return canonical(a) === canonical(b);
+      };
+      function canonical(v) {
+        var _JSON$stringify;
+        if (Array.isArray(v)) return '[' + v.map(canonical).join(',') + ']';
+        if (object(v)) return '{' + Object.keys(v).sort().map(function (k) {
+          return JSON.stringify(k) + ':' + canonical(v[k]);
+        }).join(',') + '}';
+        return (_JSON$stringify = JSON.stringify(v)) != null ? _JSON$stringify : 'undefined';
+      }
+      function validPending(v) {
+        return object(v) && Object.keys(v).every(function (k) {
+          return ['coins', 'xp', 'ordinaryWins', 'loot'].includes(k);
+        }) && integer(v.coins) && integer(v.xp) && integer(v.ordinaryWins) && object(v.loot) && Object.entries(v.loot).every(function (_ref) {
+          var k = _ref[0],
+            n = _ref[1];
+          return materials.includes(k) && integer(n);
+        });
+      }
+      function validBoard(v) {
+        if (!object(v) || !only(v, ['gravity', 'tiles']) || v.gravity !== 'mine/v1' || !Array.isArray(v.tiles) || v.tiles.length !== 56) return false;
+        var tiles = v.tiles;
+        if (new Set(tiles.map(function (t) {
+          return t == null ? void 0 : t.id;
+        })).size !== 56 || tiles.some(function (t) {
+          return !object(t) || !only(t, ['id', 'emblem', 'tier']) || !id(t.id) || typeof t.emblem !== 'string' || !['s', 'd', 'm', 'h', 'fist', 'stone', 'cry', 'staff'].includes(t.emblem) || t.tier !== undefined && t.tier !== 'skill' && t.tier !== 'advanced';
+        })) return false;
+        return !tiles.some(function (tile, i) {
+          return [1, 7].some(function (stride) {
+            return (stride === 1 ? i % 7 <= 4 : i < 42) && tile.emblem === tiles[i + stride].emblem && tile.emblem === tiles[i + 2 * stride].emblem;
+          });
+        });
+      }
+      function validPlayer(v) {
+        return object(v) && Array.isArray(v.party) && v.party[0] === 's' && new Set(v.party).size === v.party.length && v.party.every(function (r) {
+          return ['s', 'd', 'm', 'h'].includes(r);
+        });
+      }
+      function validRoom(v) {
+        if (!object(v)) return false;
+        if (v.kind !== 'battle') return ['merchant', 'event', 'rest', 'chest', 'fork', 'rescue', 'recruit'].includes(String(v.kind));
+        return Array.isArray(v.enemies) && v.enemies.length > 0 && v.enemies.every(function (n) {
+          return integer(n) && n > 0;
+        }) && (v.encounters === undefined || Array.isArray(v.encounters) && v.encounters.length === v.enemies.length && v.encounters.every(function (e, i) {
+          return object(e) && id(e.name) && id(e.art) && e.hp === v.enemies[i] && integer(e.atk) && Array.isArray(e.tags) && e.tags.every(id);
+        })) && (v.rescueCells === undefined || Array.isArray(v.rescueCells) && v.rescueCells.every(function (n) {
+          return integer(n) && n < 56;
+        })) && (v.type === undefined || ['battle', 'elite', 'boss'].includes(String(v.type))) && (v.coinReward === undefined || integer(v.coinReward));
+      }
+      function validCommit(v) {
+        return object(v) && only(v, ['terminal', 'nextRoomId', 'delta', 'board']) && object(v.terminal) && only(v.terminal, ['runId', 'roomId', 'generation', 'terminalEventId']) && id(v.terminal.runId) && id(v.terminal.roomId) && integer(v.terminal.generation) && id(v.terminal.terminalEventId) && (v.nextRoomId === null || id(v.nextRoomId)) && validPending(v.delta) && validBoard(v.board);
+      }
+      function validRun(v) {
+        if (!object(v) || !id(v.runId) || !integer(v.generation) || !Array.isArray(v.route) || !v.route.length || !v.route.every(function (r) {
+          return object(r) && id(r.id) && validRoom(r.room);
+        }) || new Set(v.route.map(function (r) {
+          return r.id;
+        })).size !== v.route.length || !integer(v.cursor) || Number(v.cursor) > v.route.length || !validPending(v.pending) || v.board !== null && !validBoard(v.board) || ![null, 'complete', 'retreat', 'fail'].includes(v.closed) || !Array.isArray(v.receipts)) return false;
+        var run = v;
+        var indexes = new Set();
+        var _loop = function _loop() {
+            var _run$route$id, _run$route;
+            var receipt = _step.value;
+            if (!object(receipt) || receipt.status !== 'committed' || !validCommit(receipt.request)) return {
+              v: false
+            };
+            var _receipt$request = receipt.request,
+              terminal = _receipt$request.terminal,
+              nextRoomId = _receipt$request.nextRoomId;
+            var i = run.route.findIndex(function (r) {
+              return r.id === terminal.roomId;
+            });
+            if (terminal.runId !== run.runId || terminal.generation > run.generation || i < 0 || i >= run.cursor || indexes.has(i) || run.route[i].room.kind !== 'battle' || nextRoomId !== ((_run$route$id = (_run$route = run.route[i + 1]) == null ? void 0 : _run$route.id) != null ? _run$route$id : null)) return {
+              v: false
+            };
+            indexes.add(i);
+          },
+          _ret;
+        for (var _iterator = _createForOfIteratorHelperLoose(run.receipts), _step; !(_step = _iterator()).done;) {
+          _ret = _loop();
+          if (_ret) return _ret.v;
+        }
+        var latest = run.receipts.at(-1);
+        return !latest || exact(run.board, latest.request.board);
+      }
+      function decodeExploration(raw) {
+        if (raw === null) return {
+          kind: 'missing'
+        };
+        try {
+          var value = JSON.parse(raw);
+          if (object(value) && Object.hasOwn(value, 'schemaVersion')) {
+            if (value.schemaVersion === 1 && validPlayer(value.player) && validRun(value.run)) return {
+              kind: 'versioned',
+              save: value
+            };
+          } else if (validPlayer(value)) return {
+            kind: 'legacy',
+            player: value
+          };
+        } catch (_unused) {/* malformed */}
+        return {
+          kind: 'invalid'
+        };
+      }
+      function roomPosition(run) {
+        var _run$route$run$cursor, _run$route$run$cursor2, _run$route$id2, _run$route2;
+        return {
+          current: (_run$route$run$cursor = (_run$route$run$cursor2 = run.route[run.cursor]) == null ? void 0 : _run$route$run$cursor2.id) != null ? _run$route$run$cursor : null,
+          next: (_run$route$id2 = (_run$route2 = run.route[run.cursor + 1]) == null ? void 0 : _run$route2.id) != null ? _run$route$id2 : null
+        };
+      }
+      // Pure projection of the existing Game.finishAdventure arithmetic. No economic writes.
+      function planExit(pending, outcome, firstClear) {
+        if (firstClear === void 0) {
+          firstClear = false;
+        }
+        var rate = outcome === 'complete' ? 1 : outcome === 'retreat' ? .7 : .5;
+        return {
+          gold: Math.floor(pending.coins * rate) + (outcome === 'complete' && firstClear ? 12 : 0),
+          loot: Object.fromEntries(Object.entries(pending.loot).map(function (_ref2) {
+            var k = _ref2[0],
+              n = _ref2[1];
+            return [k, Math.floor(n * rate)];
+          })),
+          xp: outcome === 'complete' ? pending.xp : 0
+        };
+      }
+      function add(a, b) {
+        return {
+          coins: a.coins + b.coins,
+          xp: a.xp + b.xp,
+          ordinaryWins: a.ordinaryWins + b.ordinaryWins,
+          loot: Object.fromEntries(materials.filter(function (k) {
+            return k in a.loot || k in b.loot;
+          }).map(function (k) {
+            var _a$loot$k, _b$loot$k;
+            return [k, ((_a$loot$k = a.loot[k]) != null ? _a$loot$k : 0) + ((_b$loot$k = b.loot[k]) != null ? _b$loot$k : 0)];
+          }))
+        };
+      }
+      function transition(save, action) {
+        var _run$route$run$cursor3;
+        var run = save.run;
+        if (action.kind === 'close') {
+          if (!['complete', 'retreat', 'fail'].includes(action.outcome) || run.runId !== action.runId || run.generation !== action.generation || run.closed || action.outcome === 'complete' && roomPosition(run).current !== null || !integer(run.generation + 1)) return {
+            status: 'rejected'
+          };
+          return {
+            status: 'changed',
+            save: _extends({}, save, {
+              run: _extends({}, run, {
+                closed: action.outcome,
+                generation: run.generation + 1
+              })
+            })
+          };
+        }
+        var r = action.request;
+        if (!validCommit(r)) return {
+          status: 'rejected'
+        };
+        var already = run.receipts.find(function (entry) {
+          return exact(entry.request.terminal, r.terminal);
+        });
+        if (already) return exact(already.request, r) ? {
+          status: 'duplicate',
+          save: save
+        } : {
+          status: 'conflict'
+        };
+        var position = roomPosition(run);
+        if (run.closed || run.runId !== r.terminal.runId || run.generation !== r.terminal.generation || position.current !== r.terminal.roomId || position.next !== r.nextRoomId || ((_run$route$run$cursor3 = run.route[run.cursor]) == null ? void 0 : _run$route$run$cursor3.room.kind) !== 'battle' || !integer(run.generation + 1)) return {
+          status: 'rejected'
+        };
+        var pending = add(run.pending, r.delta);
+        if (!validPending(pending)) return {
+          status: 'rejected'
+        };
+        var request = structuredClone(r);
+        return {
+          status: 'changed',
+          save: _extends({}, save, {
+            run: _extends({}, run, {
+              cursor: run.cursor + 1,
+              generation: run.generation + 1,
+              pending: pending,
+              board: structuredClone(request.board),
+              receipts: [].concat(run.receipts, [{
+                status: 'committed',
+                request: request
+              }])
+            })
+          })
+        };
+      }
+      function browserExclusiveWriter(locks) {
+        return {
+          withLock: function withLock(key, write) {
+            return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+              return _regeneratorRuntime().wrap(function _callee$(_context) {
+                while (1) switch (_context.prev = _context.next) {
+                  case 0:
+                    if (locks) {
+                      _context.next = 2;
+                      break;
+                    }
+                    return _context.abrupt("return", undefined);
+                  case 2:
+                    return _context.abrupt("return", locks.request(key, {
+                      mode: 'exclusive',
+                      ifAvailable: true
+                    }, function (lock) {
+                      return lock ? write() : undefined;
+                    }));
+                  case 3:
+                  case "end":
+                    return _context.stop();
+                }
+              }, _callee);
+            }))();
+          }
+        };
+      }
+      // Deliberately separate from the live Game save key. Every writer must share the same lock.
+      function explorationStore(namespace, storage, writer) {
+        if (!id(namespace)) throw Error('Missing isolated exploration namespace');
+        var key = 'hx:4c1:isolated:' + namespace;
+        var uncertain = false;
+        var read = function read() {
+          return decodeExploration(storage.getItem(key));
+        };
+        return {
+          key: key,
+          read: read,
+          apply: function apply(action) {
+            return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+              var input, result;
+              return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+                while (1) switch (_context2.prev = _context2.next) {
+                  case 0:
+                    input = structuredClone(action);
+                    _context2.prev = 1;
+                    _context2.next = 4;
+                    return writer.withLock(key, function () {
+                      if (uncertain) return {
+                        status: 'uncertain'
+                      };
+                      var before = storage.getItem(key);
+                      var parsed = decodeExploration(before);
+                      if (parsed.kind !== 'versioned') return {
+                        status: 'read-only'
+                      };
+                      var next = transition(parsed.save, input);
+                      if (next.status !== 'changed') return next;
+                      var after = JSON.stringify(next.save);
+                      try {
+                        storage.setItem(key, after);
+                      } catch (_unused2) {
+                        // Ambiguous synchronous failure: compare the whole atomic value, still under the lock.
+                        var actual;
+                        try {
+                          actual = storage.getItem(key);
+                        } catch (_unused3) {/* inaccessible */}
+                        if (actual !== after) {
+                          if (actual === before) return {
+                            status: 'write-failed'
+                          };
+                          uncertain = true;
+                          return {
+                            status: 'uncertain'
+                          };
+                        }
+                      }
+                      return {
+                        status: 'committed',
+                        save: next.save
+                      };
+                    });
+                  case 4:
+                    result = _context2.sent;
+                    return _context2.abrupt("return", result != null ? result : {
+                      status: 'read-only'
+                    });
+                  case 8:
+                    _context2.prev = 8;
+                    _context2.t0 = _context2["catch"](1);
+                    return _context2.abrupt("return", {
+                      status: 'read-only'
+                    });
+                  case 11:
+                  case "end":
+                    return _context2.stop();
+                }
+              }, _callee2, null, [[1, 8]]);
+            }))();
+          }
+        };
+      }
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/formal-rules.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './BattleRules.ts'], function (exports) {
+  var _extends, cclegacy, skillOwner, planOathSkill, selectTargets, planSkill, oathEnemyPower;
+  return {
+    setters: [function (module) {
+      _extends = module.extends;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+    }, function (module) {
+      skillOwner = module.skillOwner;
+      planOathSkill = module.planOathSkill;
+      selectTargets = module.selectTargets;
+      planSkill = module.planSkill;
+      oathEnemyPower = module.oathEnemyPower;
+    }],
+    execute: function () {
+      exports({
+        formalEnemy: formalEnemy,
+        formalHit: formalHit,
+        formalSkill: formalSkill,
+        setupFormalRoom: setupFormalRoom
+      });
+      cclegacy._RF.push({}, "8d2e5Ptk5pGS4mNeK4856vt", "formal-rules", undefined);
+      var emblems = ['s', 'd', 'm', 'h', 'cry', 'stone', 'fist', 'staff'];
+      function setupFormalRoom(room) {
+        var _structuredClone = structuredClone(room),
+          battleId = _structuredClone.battleId,
+          roomId = _structuredClone.roomId,
+          seed = _structuredClone.seed,
+          hp = _structuredClone.hp,
+          maxHP = _structuredClone.maxHP,
+          dp = _structuredClone.dp,
+          maxDP = _structuredClone.maxDP,
+          enemyHP = _structuredClone.enemyHP,
+          tiles = _structuredClone.tiles,
+          rescue = _structuredClone.rescue,
+          swaps = _structuredClone.swaps,
+          strategy = _structuredClone.strategy,
+          tutorial = _structuredClone.tutorial,
+          roles = _structuredClone.roles,
+          attacks = _structuredClone.attacks,
+          gear = _structuredClone.gear,
+          buffs = _structuredClone.buffs,
+          enemies = _structuredClone.enemies,
+          revisedSkills = _structuredClone.revisedSkills;
+        if (!battleId || !roomId || !Number.isSafeInteger(seed) || !Number.isSafeInteger(hp) || hp <= 0 || !roles.length || new Set(roles).size !== roles.length || roles.some(function (r) {
+          return !['s', 'm', 'd', 'h'].includes(r) || !Number.isFinite(attacks[r]) || attacks[r] < 0;
+        }) || enemies.some(function (e) {
+          return !Number.isSafeInteger(e.attack) || e.attack < 0 || !Number.isSafeInteger(enemyHP[e.id]) || enemyHP[e.id] <= 0;
+        })) throw Error('Invalid formal room input');
+        var available = emblems.filter(function (e) {
+          return roles.includes(skillOwner(e));
+        });
+        if (tiles.some(function (tile) {
+          return !available.includes(tile.emblem);
+        })) throw Error('Board emblem has no active role');
+        return {
+          battleId: battleId,
+          roomId: roomId,
+          seed: seed,
+          partyHP: hp,
+          enemies: enemyHP,
+          rescue: rescue,
+          swaps: swaps,
+          steps: {},
+          strategy: strategy,
+          formal: _extends({
+            tutorial: tutorial,
+            roles: roles,
+            attacks: attacks,
+            gear: gear,
+            buffs: buffs,
+            enemies: enemies
+          }, revisedSkills ? {
+            revisedSkills: revisedSkills
+          } : {}),
+          combat: {
+            maxPartyHP: maxHP,
+            partyDP: dp,
+            maxPartyDP: maxDP,
+            attacks: attacks,
+            enemyOrder: enemies.map(function (e) {
+              return e.id;
+            })
+          },
+          skills: Object.fromEntries(available.map(function (e) {
+            return [e, {}];
+          })),
+          board: _extends({
+            initial: tiles
+          }, revisedSkills ? {
+            actualLength: true
+          } : {}, {
+            skills: Object.fromEntries(available.map(function (e) {
+              return [e, {
+                actor: skillOwner(e),
+                ordinary: e
+              }];
+            }))
+          })
+        };
+      }
+      function formalSkill(config, command, fullGuard, rally, hp, oath) {
+        var type = command.emblem;
+        if (!type || !emblems.includes(type) || command.actor !== skillOwner(type) || !config.roles.includes(command.actor) || command.length === undefined) throw Error('Invalid formal command');
+        var attack = config.tutorial ? command.actor === 'h' ? 12 : 26 : config.attacks[command.actor];
+        if (config.revisedSkills && oath) {
+          var _skill = planOathSkill(type, command.length, command.wave, command.tier, attack, fullGuard, oath, function (id) {
+            return config.gear.includes(id);
+          }, function (id) {
+            var _config$buffs$id;
+            return (_config$buffs$id = config.buffs[id]) != null ? _config$buffs$id : 0;
+          });
+          var targets = _skill.kind === 'attack' ? selectTargets(hp, config.enemies.map(function (e) {
+            return e.tags;
+          }), _skill.target) : _skill.kind === 'guard' && _skill.followup !== undefined ? selectTargets(hp, config.enemies.map(function (e) {
+            return e.tags;
+          })) : [];
+          return {
+            attack: attack,
+            skill: _skill,
+            targets: targets
+          };
+        }
+        var scaled = command.tier === 'advanced' && (config.tutorial || ['stone', 'fist', 'staff'].includes(type)) ? attack * 1.35 : attack;
+        var skill = planSkill(type, command.length, command.wave, !!command.tier, config.tutorial, scaled, fullGuard, rally, function (id) {
+          return config.gear.includes(id);
+        }, function (id) {
+          var _config$buffs$id2;
+          return (_config$buffs$id2 = config.buffs[id]) != null ? _config$buffs$id2 : 0;
+        });
+        return {
+          attack: scaled,
+          skill: skill,
+          targets: skill.kind === 'attack' ? selectTargets(hp, config.enemies.map(function (e) {
+            return e.tags;
+          }), skill.target) : []
+        };
+      }
+      function formalHit(config, target, hp, damage, stun) {
+        var immune = config.enemies[target].tags.some(function (tag) {
+          return tag === 'boss' || tag === 'stun-immune';
+        });
+        var lost = Math.min(hp, Math.round(damage * (stun && immune ? 1.25 : 1)));
+        return {
+          lost: lost,
+          stunned: stun && !immune && hp > lost
+        };
+      }
+      function formalEnemy(config, hp, stunned, partyHP, dp, oath) {
+        var opportunities = config.enemies.filter(function (e) {
+          return hp[e.id] > 0;
+        }).map(function (e) {
+          return {
+            id: e.id,
+            skip: stunned.includes(e.id),
+            attack: e.attack
+          };
+        });
+        var sum = opportunities.reduce(function (total, e) {
+          return total + (e.skip ? 0 : oath ? oathEnemyPower(oath, e.id, e.attack) : e.attack);
+        }, 0);
+        var total = oath != null && oath.guard ? Math.round(sum * .85) : sum;
+        if (oath) oath.guard = false;
+        var absorbed = Math.min(dp, total);
+        return {
+          opportunities: opportunities,
+          total: total,
+          absorbed: absorbed,
+          lost: Math.min(partyHP, total - absorbed)
+        };
+      }
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/FormalSaveGate.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+  var _createClass, _asyncToGenerator, _regeneratorRuntime, cclegacy;
+  return {
+    setters: [function (module) {
+      _createClass = module.createClass;
+      _asyncToGenerator = module.asyncToGenerator;
+      _regeneratorRuntime = module.regeneratorRuntime;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+    }],
+    execute: function () {
+      cclegacy._RF.push({}, "572d9WDeLhLKJNI1CD3VPkd", "FormalSaveGate", undefined);
+      function legacy(raw) {
+        if (raw === null) return true;
+        try {
+          var state = JSON.parse(raw);
+          return state !== null && typeof state === 'object' && !Array.isArray(state) && !Object.hasOwn(state, 'schemaVersion') && Array.isArray(state.party) && state.party[0] === 's' && new Set(state.party).size === state.party.length && state.party.every(function (id) {
+            return typeof id === 'string' && ['s', 'd', 'm', 'h'].includes(id);
+          });
+        } catch (_unused) {
+          return false;
+        }
+      }
+      var FormalSaveGate = exports('FormalSaveGate', /*#__PURE__*/function () {
+        function FormalSaveGate(key, storage, recognized) {
+          if (recognized === void 0) {
+            recognized = function recognized() {
+              return false;
+            };
+          }
+          this.release = void 0;
+          this.expected = null;
+          this.closed = false;
+          this.uncertain = false;
+          this.key = void 0;
+          this.storage = void 0;
+          this.recognized = void 0;
+          this.key = key;
+          this.storage = storage;
+          this.recognized = recognized;
+        }
+        var _proto = FormalSaveGate.prototype;
+        _proto.acquire = /*#__PURE__*/function () {
+          var _acquire = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(locks) {
+            var _this = this;
+            return _regeneratorRuntime().wrap(function _callee$(_context) {
+              while (1) switch (_context.prev = _context.next) {
+                case 0:
+                  if (!(!locks || this.closed)) {
+                    _context.next = 2;
+                    break;
+                  }
+                  return _context.abrupt("return", false);
+                case 2:
+                  if (!this.writable) {
+                    _context.next = 4;
+                    break;
+                  }
+                  return _context.abrupt("return", true);
+                case 4:
+                  return _context.abrupt("return", new Promise(function (resolve) {
+                    void locks.request(_this.key, {
+                      mode: 'exclusive',
+                      ifAvailable: true
+                    }, function (lock) {
+                      if (!lock || _this.closed) {
+                        resolve(false);
+                        return;
+                      }
+                      var raw = _this.storage.getItem(_this.key);
+                      if (!legacy(raw) && (raw === null || !_this.recognized(raw))) {
+                        resolve(false);
+                        return;
+                      }
+                      _this.expected = raw;
+                      return new Promise(function (release) {
+                        _this.release = release;
+                        resolve(true);
+                      });
+                    })["catch"](function () {
+                      return resolve(false);
+                    });
+                  })["catch"](function () {
+                    return false;
+                  }));
+                case 5:
+                case "end":
+                  return _context.stop();
+              }
+            }, _callee, this);
+          }));
+          function acquire(_x) {
+            return _acquire.apply(this, arguments);
+          }
+          return acquire;
+        }();
+        _proto.close = function close() {
+          this.closed = true;
+          var release = this.release;
+          this.release = undefined;
+          release == null || release();
+        };
+        _proto.readRaw = function readRaw() {
+          try {
+            var _raw = this.storage.getItem(this.key);
+            if (this.writable && _raw !== this.expected) this.close();
+            return _raw;
+          } catch (_unused2) {
+            return null;
+          }
+        };
+        _proto.read = function read() {
+          var raw = this.readRaw();
+          return legacy(raw) ? raw : null;
+        };
+        _proto.readRecovery = function readRecovery() {
+          var raw = this.readRaw();
+          return raw !== null && this.recognized(raw) ? raw : null;
+        };
+        _proto.write = function write(payload, base) {
+          return this.writeChecked(payload, base, false);
+        };
+        _proto.writeRecovery = function writeRecovery(payload, base) {
+          return this.writeChecked(payload, base, true);
+        };
+        _proto.startRecovery = function startRecovery(payload, base) {
+          return this.writeChecked(payload, base, true, true);
+        };
+        _proto.releaseRecovery = function releaseRecovery(payload, base) {
+          try {
+            var _state$run, _state$mineRecovery;
+            var state = JSON.parse(base);
+            if (!((_state$run = state.run) != null && _state$run.closed) || ((_state$mineRecovery = state.mineRecovery) == null ? void 0 : _state$mineRecovery.source) !== 'formal' || JSON.stringify(state.player) !== payload) return 'blocked';
+          } catch (_unused3) {
+            return 'blocked';
+          }
+          return this.writeChecked(payload, base, false, false, true);
+        };
+        _proto.writeChecked = function writeChecked(payload, base, recovery, opening, releasing) {
+          if (opening === void 0) {
+            opening = false;
+          }
+          if (releasing === void 0) {
+            releasing = false;
+          }
+          if (!this.writable || !(recovery ? this.recognized(payload) : legacy(payload))) return 'blocked';
+          var before;
+          try {
+            before = this.storage.getItem(this.key);
+          } catch (_unused4) {
+            this.close();
+            return 'blocked';
+          }
+          if (before !== this.expected) {
+            this.close();
+            return 'blocked';
+          }
+          if (opening && before === null) return 'blocked';
+          if (!(recovery && !opening || releasing ? before !== null && this.recognized(before) : legacy(before))) return 'blocked';
+          if (base !== undefined && base !== before) return 'blocked';
+          var reconciled = false;
+          try {
+            this.storage.setItem(this.key, payload);
+          } catch (_unused5) {
+            var stored;
+            try {
+              stored = this.storage.getItem(this.key);
+            } catch (_unused6) {/* cannot determine outcome */}
+            if (stored !== payload) {
+              if (stored === before) return 'write-failed';
+              this.uncertain = true;
+              return 'uncertain';
+            }
+            reconciled = true;
+          }
+          this.expected = payload;
+          return reconciled ? 'reconciled' : 'committed';
+        };
+        _createClass(FormalSaveGate, [{
+          key: "writable",
+          get: function get() {
+            return !!this.release && !this.closed && !this.uncertain;
+          }
+        }]);
+        return FormalSaveGate;
+      }());
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './ActorArt.ts', './Inventory.ts', './GameAudio.ts', './DungeonDirector.ts', './Chapter.ts', './CombatTags.ts', './mine-recovery.ts', './FormalSaveGate.ts', './battle-core.ts', './potion-bridge.ts', './formal-rules.ts', './cocos-board-adapter.ts', './Board.ts', './BattleMotion.ts', './CombatSceneLab.ts', './BattleRules.ts', './MineTrial.ts', './TemplateBoardFx.ts', './StageTravel.ts', './StageLayout.ts'], function (exports) {
+  var _inheritsLoose, _createForOfIteratorHelperLoose, _extends, _asyncToGenerator, _regeneratorRuntime, _createClass, cclegacy, _decorator, Node, UITransform, Graphics, Color, Label, Sprite, SpriteFrame, Rect, Size, Mask, view, Vec4, Vec3, tween, UIOpacity, Material, Tween, Component, resources, Texture2D, JsonAsset, EffectAsset, sys, profiler, actorArt, portraitBottomPadding, enemyPortraitSize, portraitFootprint, Inventory, heroes, equipment, resourceNames, GameAudio, DungeonDirector, locations, dungeonIds, enemy, tutorialRoute, dungeonRewardMultiplier, dungeons, unlocked, locationNames, makeRoute, drawUpgrades, encounter, worldPoints, roomRewards, battleCoinReward, worldRoute, worldTrack, partyFormation, readMineRecovery, planMineRest, planMineFormalClose, planMineTestClose, planMineLegacyVictory, planMinePotion, planMineFirstVictory, planMineChest, FormalSaveGate, createBattleCore, createPotionBridge, setupFormalRoom, IsolatedBoardSession, validExchange, legalMove, matches, newBoard, opening, cols, adjacent, planRefill, mineGravity, planWave, BattleMotion, openCombatSceneLab, newOathState, rosterEmblems, oathDamage, selectTargets, planOathSkill, endOathRound, oathEnemyPower, applyBattleCry, skillOwner, mineTrialTitle, mineTrialRandom, makeMineTrial, TemplateBoardFx, StageTravel, stageCover, stageGrid, stageX, stageReelCrop;
   return {
     setters: [function (module) {
       _inheritsLoose = module.inheritsLoose;
       _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
       _extends = module.extends;
       _asyncToGenerator = module.asyncToGenerator;
-      _createClass = module.createClass;
       _regeneratorRuntime = module.regeneratorRuntime;
+      _createClass = module.createClass;
     }, function (module) {
       cclegacy = module.cclegacy;
       _decorator = module._decorator;
@@ -981,17 +5916,26 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
       SpriteFrame = module.SpriteFrame;
       Rect = module.Rect;
       Size = module.Size;
-      sys = module.sys;
       Mask = module.Mask;
+      view = module.view;
+      Vec4 = module.Vec4;
       Vec3 = module.Vec3;
       tween = module.tween;
       UIOpacity = module.UIOpacity;
-      Component = module.Component;
-      profiler = module.profiler;
-      resources = module.resources;
-      EffectAsset = module.EffectAsset;
       Material = module.Material;
+      Tween = module.Tween;
+      Component = module.Component;
+      resources = module.resources;
       Texture2D = module.Texture2D;
+      JsonAsset = module.JsonAsset;
+      EffectAsset = module.EffectAsset;
+      sys = module.sys;
+      profiler = module.profiler;
+    }, function (module) {
+      actorArt = module.actorArt;
+      portraitBottomPadding = module.portraitBottomPadding;
+      enemyPortraitSize = module.enemyPortraitSize;
+      portraitFootprint = module.portraitFootprint;
     }, function (module) {
       Inventory = module.Inventory;
       heroes = module.heroes;
@@ -1021,20 +5965,48 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
     }, function (module) {
       partyFormation = module.partyFormation;
     }, function (module) {
-      opening = module.opening;
-      newBoard = module.newBoard;
-      cols = module.cols;
+      readMineRecovery = module.readMineRecovery;
+      planMineRest = module.planMineRest;
+      planMineFormalClose = module.planMineFormalClose;
+      planMineTestClose = module.planMineTestClose;
+      planMineLegacyVictory = module.planMineLegacyVictory;
+      planMinePotion = module.planMinePotion;
+      planMineFirstVictory = module.planMineFirstVictory;
+      planMineChest = module.planMineChest;
+    }, function (module) {
+      FormalSaveGate = module.FormalSaveGate;
+    }, function (module) {
+      createBattleCore = module.createBattleCore;
+    }, function (module) {
+      createPotionBridge = module.createPotionBridge;
+    }, function (module) {
+      setupFormalRoom = module.setupFormalRoom;
+    }, function (module) {
+      IsolatedBoardSession = module.IsolatedBoardSession;
+      validExchange = module.validExchange;
+    }, function (module) {
       legalMove = module.legalMove;
-      adjacent = module.adjacent;
       matches = module.matches;
+      newBoard = module.newBoard;
+      opening = module.opening;
+      cols = module.cols;
+      adjacent = module.adjacent;
       planRefill = module.planRefill;
       mineGravity = module.mineGravity;
       planWave = module.planWave;
     }, function (module) {
       BattleMotion = module.BattleMotion;
     }, function (module) {
+      openCombatSceneLab = module.openCombatSceneLab;
+    }, function (module) {
+      newOathState = module.newOathState;
+      rosterEmblems = module.rosterEmblems;
+      oathDamage = module.oathDamage;
       selectTargets = module.selectTargets;
-      planSkill = module.planSkill;
+      planOathSkill = module.planOathSkill;
+      endOathRound = module.endOathRound;
+      oathEnemyPower = module.oathEnemyPower;
+      applyBattleCry = module.applyBattleCry;
       skillOwner = module.skillOwner;
     }, function (module) {
       mineTrialTitle = module.mineTrialTitle;
@@ -1042,22 +6014,18 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
       makeMineTrial = module.makeMineTrial;
     }, function (module) {
       TemplateBoardFx = module.TemplateBoardFx;
+    }, function (module) {
+      StageTravel = module.StageTravel;
+    }, function (module) {
+      stageCover = module.stageCover;
+      stageGrid = module.stageGrid;
+      stageX = module.stageX;
+      stageReelCrop = module.stageReelCrop;
     }],
     execute: function () {
       var _dec, _class;
       cclegacy._RF.push({}, "293c0LpkiNDzKcsh+fuvggE", "Game", undefined);
       var ccclass = _decorator.ccclass;
-      var stageGrid = {
-        width: 470,
-        height: 270,
-        centerY: 280,
-        titleY: 395,
-        meterX: 132,
-        hpY: 342,
-        secondaryY: 318,
-        groundY: 179,
-        rearGroundY: 199
-      };
       // The reel's vertical aperture and stop list are in source-image coordinates.
       // Static rooms and moving views sample the same aperture at a uniform scale.
       var dungeonReels = {
@@ -1082,76 +6050,15 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           stops: [0, 1 / 6, 2 / 6, 3 / 6, 4 / 6, 5 / 6, 1]
         }
       };
+      // Cocos draws siblings back to front: road first, then C/B/A, middle verge and foreground.
+      var forestLabLayers = ['ground', 'far', 'mist', 'middle', 'midground', 'front'].map(function (layer) {
+        return 'forest-lab-' + layer;
+      });
       var battleToolbar = {
         x: -162,
         gap: 108,
         y: -394,
         width: 102
-      };
-      var portraitBottomPadding = {
-        'hero-s': 14 / 192,
-        'hero-d': 17 / 192,
-        'hero-h': 11 / 192,
-        'hero-m': 20 / 192,
-        wolf: 41 / 320,
-        boss: 42 / 320,
-        boar: 47 / 320,
-        vine: 30 / 300,
-        bear: 31 / 300,
-        bat: 47 / 300,
-        beetle: 54 / 300,
-        golem: 42 / 300,
-        ghost: 46 / 300,
-        frog: 38 / 300,
-        lich: 32 / 300,
-        dragon: 26 / 300,
-        knight: 8 / 300,
-        wizard: 8 / 300,
-        'npc-chief': 5 / 272,
-        'npc-innkeeper': 5 / 272,
-        'npc-shop': 5 / 272,
-        'npc-smith': 5 / 272,
-        'dungeon-traveler': 4 / 288,
-        'dungeon-chest': 22 / 263,
-        'dungeon-merchant': 3 / 1199
-      };
-      // Lower-silhouette bounds keep the ellipse under the feet even when the
-      // portrait canvas is offset or its upper body is much wider than its stance.
-      var portraitFootprint = {
-        'hero-s': [.073, .740],
-        'hero-d': [.109, .849],
-        'hero-h': [.193, .729],
-        'hero-m': [.109, .693],
-        wolf: [.191, .822],
-        boss: [.097, .778],
-        boar: [.191, .900],
-        vine: [.140, .917],
-        bear: [.103, .920],
-        bat: [.337, .627],
-        beetle: [.150, .893],
-        golem: [.167, .790],
-        ghost: [.337, .633],
-        frog: [.070, .897],
-        lich: [.167, .907],
-        dragon: [.060, .943],
-        knight: [.283, .717],
-        wizard: [.430, .853],
-        'npc-chief': [.326, .634],
-        'npc-innkeeper': [.259, .607],
-        'npc-shop': [.214, .536],
-        'npc-smith': [.326, .795],
-        'dungeon-traveler': [.289, .620],
-        'dungeon-chest': [.097, .865],
-        'dungeon-merchant': [.060, .537]
-      };
-      var enemyPortraitSize = {
-        boss: 142,
-        knight: 188,
-        wizard: 188,
-        dragon: 176,
-        bear: 162,
-        golem: 164,
-        lich: 148
       };
       var uiSlices = {
         'trial-ui-button': {
@@ -1195,8 +6102,19 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           _this.inventory = new Inventory();
           _this.audio = void 0;
           _this.textures = new Map();
+          _this.stageTravel = void 0;
+          _this.forestLayout = void 0;
+          _this.forestForeground = new WeakMap();
+          _this.forestPropFrames = [];
+          _this.forestNodeStats = {
+            created: 0,
+            recycled: 0,
+            peak: 0
+          };
+          _this.forestPropWindows = new WeakMap();
           _this.stageFrames = new Map();
           _this.stageReels = new Map();
+          _this.actorEffect = void 0;
           _this.skillSweep = void 0;
           _this.tintedFrame = void 0;
           _this.hintIdle = 0;
@@ -1215,11 +6133,14 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           _this.guideHand = void 0;
           _this.battleModal = void 0;
           _this.motion = void 0;
+          _this.stage4AGeneration = 0;
+          _this.stage4AStockUncertain = false;
+          _this.stage4A = void 0;
           _this.battlePhase = void 0;
           _this.turn = 1;
           _this.autoRequest = 0;
           _this.battleLogs = [];
-          _this.rally = false;
+          _this.oath = newOathState();
           _this.stunned = new Set();
           _this.foes = [];
           _this.healthBar = void 0;
@@ -1238,6 +6159,13 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           _this.automatic = false;
           _this.battleRoot = void 0;
           _this.saveKey = 'four-emblems-cocos-chapter-one-v1';
+          _this.saveGate = void 0;
+          _this.mineRecovery = void 0;
+          _this.restoredTileIds = new WeakMap();
+          _this.closeSaveGate = function () {
+            var _this$saveGate;
+            return (_this$saveGate = _this.saveGate) == null ? void 0 : _this$saveGate.close();
+          };
           _this.busy = false;
           _this.party = ['s'];
           _this.phase = 'wolves';
@@ -1262,6 +6190,12 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           _this.enemies = [72, 72];
           _this.potion = 1;
           _this.status = void 0;
+          _this.pageMotions = new Set();
+          _this.actorStates = new WeakMap();
+          _this.popupLayer = void 0;
+          _this.popupPool = [];
+          _this.popupOrder = 0;
+          _this.speechOwner = void 0;
           return _this;
         }
         var _proto = FourEmblemsGame.prototype;
@@ -1298,11 +6232,32 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         _proto.start = /*#__PURE__*/function () {
           var _start = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
             var _this2 = this;
-            var fx, sweep, sceneArt, skillArt;
+            var _URLSearchParams$get, seed, fx, sweep, sceneArt, skillArt, atlas;
             return _regeneratorRuntime().wrap(function _callee$(_context) {
               while (1) switch (_context.prev = _context.next) {
                 case 0:
                   profiler.hideStats();
+                  if (!(typeof location !== 'undefined' && new URLSearchParams(location.search).has('m5-stage2'))) {
+                    _context.next = 5;
+                    break;
+                  }
+                  seed = Number((_URLSearchParams$get = new URLSearchParams(location.search).get('seed')) != null ? _URLSearchParams$get : 8);
+                  globalThis.m5SceneLab = openCombatSceneLab(this.node, seed, new URLSearchParams(location.search).has('formal'));
+                  return _context.abrupt("return");
+                case 5:
+                  this.saveGate = new FormalSaveGate(this.saveKey, sys.localStorage, function (raw) {
+                    return _this2.recoveryOptIn() && !!readMineRecovery(raw);
+                  });
+                  if (typeof window !== 'undefined') window.addEventListener('pagehide', this.closeSaveGate);
+                  _context.next = 9;
+                  return this.saveGate.acquire(typeof navigator === 'undefined' ? undefined : navigator.locks);
+                case 9:
+                  if (this.isValid) {
+                    _context.next = 11;
+                    break;
+                  }
+                  return _context.abrupt("return");
+                case 11:
                   this.audio = new GameAudio(this.node);
                   fx = TemplateBoardFx.load().then(function (frames) {
                     _this2.templateFxFrames = frames;
@@ -1329,35 +6284,64 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                       resolve();
                     });
                   });
-                  sceneArt = ['hurt-cracks', 'map-parchment', 'world-travel', 'world-village-cut', 'gear-stage', 'village-chief-stage', 'village-shop-stage', 'village-tavern-stage', 'village-smith-stage', 'npc-chief', 'npc-shop', 'npc-innkeeper', 'npc-smith', 'village-ground', 'dungeon-traveler', 'dungeon-chest', 'dungeon-merchant'].concat(['chief', 'shop', 'tavern', 'smith', 'gate'].map(function (name) {
+                  _context.next = 16;
+                  return new Promise(function (resolve) {
+                    return resources.load('effects/actor-state', EffectAsset, function (error, effect) {
+                      if (!error) _this2.actorEffect = effect;
+                      resolve();
+                    });
+                  });
+                case 16:
+                  sceneArt = ['map-parchment', 'world-travel', 'world-village-cut', 'gear-stage', 'village-chief-stage', 'village-shop-stage', 'village-tavern-stage', 'village-smith-stage', 'npc-chief', 'npc-shop', 'npc-innkeeper', 'npc-smith', 'village-ground', 'dungeon-traveler', 'dungeon-chest', 'dungeon-merchant'].concat(['chief', 'shop', 'tavern', 'smith', 'gate'].map(function (name) {
                     return 'village-building-' + name;
-                  }), ['slot-main', 'slot-off', 'slot-armor', 'slot-accessory', 'gear-arrow', 'travel-plains', 'travel-village-edge', 'travel-mine-edge'], dungeonIds.map(function (id) {
+                  }), ['slot-main', 'slot-off', 'slot-armor', 'slot-accessory', 'gear-arrow', 'travel-plains', 'travel-village-edge', 'travel-mine-edge'], dungeonIds.filter(function (id) {
+                    return id !== 'forest' || _this2.useForestReel;
+                  }).map(function (id) {
                     return id + '-reel';
                   }), ['village', 'mine', 'forest', 'swamp', 'tower'].map(function (name) {
                     return 'travel-' + name + '-plains';
                   }));
-                  skillArt = ['skill-frame', 'advanced-frame'].concat(['hero-s', 'hero-d', 'hero-m', 'hero-h', 'wolf', 'boss', 'boar', 'vine', 'bear', 'bat', 'beetle', 'golem', 'ghost', 'frog', 'lich', 'dragon', 'knight', 'wizard'].map(function (name) {
-                    return 'hit-white-' + name;
-                  }));
-                  _context.next = 8;
-                  return Promise.all([fx, sweep].concat([].concat(sceneArt, skillArt, ['world', 'village', 'village-stage', 'wolf', 'boss', 'boar', 'vine', 'bear', 'bat', 'beetle', 'golem', 'ghost', 'frog', 'lich', 'dragon', 'knight', 'wizard', 's', 'd', 'm', 'h', 'stone', 'fist', 'cry', 'staff', 'hero-s', 'hero-d', 'hero-m', 'hero-h', 'enemy-soul', 'combat-impact', 'trial-ui-banner', 'trial-ui-button', 'trial-ui-button-off', 'trial-ui-clear', 'trial-ui-back']).map(function (name) {
+                  if (!this.useForestReel) sceneArt.push.apply(sceneArt, forestLabLayers.concat(['forest-props']));
+                  if (this.useForestReel) {
+                    _context.next = 21;
+                    break;
+                  }
+                  _context.next = 21;
+                  return new Promise(function (resolve) {
+                    resources.load('art/forest-props-layout', JsonAsset, function (error, asset) {
+                      if (!error) _this2.forestLayout = asset.json;
+                      resolve();
+                    });
+                  });
+                case 21:
+                  skillArt = ['skill-frame', 'advanced-frame'];
+                  _context.next = 24;
+                  return Promise.all([fx, sweep].concat([].concat(sceneArt, skillArt, ['world', 'village', 'village-stage', 'wolf', 'boss', 'boar', 'vine', 'bear', 'bat', 'beetle', 'golem', 'ghost', 'frog', 'lich', 'dragon', 'knight', 'wizard', 's', 'd', 'm', 'h', 'stone', 'fist', 'cry', 'staff', 'hero-s', 'hero-d', 'hero-m', 'hero-h', 'combat-impact', 'trial-ui-banner', 'trial-ui-button', 'trial-ui-button-off', 'trial-ui-clear', 'trial-ui-back']).map(function (name) {
                     return new Promise(function (resolve) {
                       return resources.load('art/' + name + '/texture', Texture2D, function (error, texture) {
                         if (!error) {
-                          var frame = new SpriteFrame();
-                          frame.texture = texture;
-                          _this2.textures.set(name, frame);
+                          var _frame = new SpriteFrame();
+                          _frame.texture = texture;
+                          _this2.textures.set(name, _frame);
                         }
                         resolve();
                       });
                     });
                   })));
-                case 8:
+                case 24:
                   if (this.isValid) {
+                    atlas = this.textures.get('forest-props');
+                    if (atlas && this.forestLayout) this.forestPropFrames = this.forestLayout.frames.map(function (_ref) {
+                      var x = _ref[0],
+                        y = _ref[1],
+                        w = _ref[2],
+                        h = _ref[3];
+                      return _this2.frameCrop(atlas, x, y, w, h);
+                    });
                     this.prepareStageReels();
                     this.menu();
                   }
-                case 9:
+                case 25:
                 case "end":
                   return _context.stop();
               }
@@ -1411,7 +6395,14 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }
           var frame = this.textures.get(name);
           if (!frame) return;
-          return this.paintFrame(name, frame, x, y, w, h, parent);
+          var fit = Math.min(w / frame.originalSize.width, h / frame.originalSize.height);
+          var node = this.paintFrame(name, frame, x, y, frame.originalSize.width * fit, frame.originalSize.height * fit, parent);
+          if (actorArt[name]) {
+            node.setScale(actorArt[name].sourceFacing === 'left' ? -1 : 1, 1, 1);
+            var sprite = node.getComponent(Sprite);
+            if (sprite) this.actorMaterial(sprite);
+          }
+          return node;
         };
         _proto.paintFrame = function paintFrame(name, frame, x, y, w, h, parent) {
           var node = this.box(name, x, y, w, h, undefined, parent);
@@ -1433,8 +6424,6 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         };
         _proto.prepareStageReels = function prepareStageReels() {
           var _this3 = this;
-          var width = stageGrid.width,
-            height = stageGrid.height;
           var _loop = function _loop() {
             var id = _step2.value;
             var source = _this3.textures.get(id + '-reel');
@@ -1446,13 +6435,15 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               top = _dungeonReels$id.top,
               bottom = _dungeonReels$id.bottom,
               stops = _dungeonReels$id.stops;
-            var aperture = Math.min(h * (bottom - top), w * height / width);
-            var window = aperture * width / height;
-            var y = Math.min(h - aperture, h * top);
+            var _stageReelCrop = stageReelCrop(w, h, top, bottom),
+              y = _stageReelCrop.y,
+              aperture = _stageReelCrop.h,
+              window = _stageReelCrop.window,
+              drawnWidth = _stageReelCrop.drawnWidth;
             var cropped = _this3.frameCrop(source, 0, y, w, aperture);
             _this3.stageFrames.set(id + '-reel', cropped);
             _this3.stageReels.set(id, {
-              width: w * height / aperture,
+              width: drawnWidth,
               stops: stops
             });
             stops.forEach(function (stop, i) {
@@ -1464,7 +6455,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }
         };
         _proto.stageBackdrop = function stageBackdrop(name, x, y, parent) {
-          var _frame;
+          var _frame2;
           if (x === void 0) {
             x = 0;
           }
@@ -1476,24 +6467,154 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }
           var width = stageGrid.width,
             height = stageGrid.height;
+          var forestStop = this.forestLabStop(name);
+          if (forestStop !== undefined) {
+            var _view = this.box(name, x, y, width, height, undefined, parent);
+            _view.addComponent(Mask).type = Mask.Type.GRAPHICS_RECT;
+            for (var _iterator3 = _createForOfIteratorHelperLoose(forestLabLayers), _step3; !(_step3 = _iterator3()).done;) {
+              var layer = _step3.value;
+              var image = this.textures.get(layer);
+              var _this$forestLayout$bo = this.forestLayout.bounds[layer.slice('forest-lab-'.length)],
+                drawnWidth = _this$forestLayout$bo[0],
+                left = _this$forestLayout$bo[1],
+                top = _this$forestLayout$bo[2],
+                baseWidth = _this$forestLayout$bo[3],
+                baseHeight = _this$forestLayout$bo[4];
+              var strip = this.box(layer, 0, 0, drawnWidth, height, undefined, _view);
+              // Surface segments are mounted only for the camera window by positionForestLab.
+            }
+
+            this.positionForestLab(_view, forestStop);
+            return _view;
+          }
           var frame = this.stageFrames.get(name);
           if (!frame) {
             var source = this.textures.get(name);
             if (source) {
-              var _source$rect2 = source.rect,
-                w = _source$rect2.width,
-                h = _source$rect2.height;
-              var scale = Math.max(width / w, height / h);
-              var cropW = width / scale,
-                cropH = height / scale;
               // Anchor the bottom so framing can trim scenery but keeps the walking surface.
-              frame = this.frameCrop(source, (w - cropW) / 2, h - cropH, cropW, cropH);
+              var crop = stageCover(source.rect.width, source.rect.height);
+              frame = this.frameCrop(source, crop.x, crop.y, crop.w, crop.h);
               this.stageFrames.set(name, frame);
             }
           }
-          (_frame = frame) != null ? _frame : frame = this.stageFrames.get('stage-forest-0');
+          (_frame2 = frame) != null ? _frame2 : frame = this.stageFrames.get('stage-forest-0');
           if (frame) return this.paintFrame(name, frame, x, y, width, height, parent);
           return this.box(name, x, y, width, height, '#24342b', parent);
+        };
+        _proto.forestLabStop = function forestLabStop(name) {
+          var _this4 = this;
+          var forest = /^stage-forest-(\d+)$/.exec(name);
+          if (!forest || !this.forestLayout || !this.forestPropFrames.length || !forestLabLayers.every(function (layer) {
+            return _this4.textures.has(layer);
+          })) return undefined;
+          return dungeonReels.forest.stops[Number(forest[1])];
+        };
+        _proto.positionForestLab = function positionForestLab(view, progress) {
+          // Ground and foreground share a world strip; shorter strips travel
+          // proportionally less. The exact same camera position is used on arrival.
+          for (var _iterator4 = _createForOfIteratorHelperLoose(view.children.concat((_this$forestForegroun = (_this$forestForegroun2 = this.forestForeground.get(view)) == null ? void 0 : _this$forestForegroun2.layer) != null ? _this$forestForegroun : [])), _step4; !(_step4 = _iterator4()).done;) {
+            var _this$forestForegroun, _this$forestForegroun2;
+            var layer = _step4.value;
+            var overflow = layer.getComponent(UITransform).width - stageGrid.width;
+            layer.setPosition((.5 - progress) * overflow, 0);
+            this.updateForestSurface(layer, progress * overflow);
+            this.updateForestProps(layer, progress * overflow);
+          }
+        };
+        _proto.liftForestForeground = function liftForestForeground(view, parent) {
+          if (!(view != null && view.isValid)) return;
+          var mounted = this.forestForeground.get(view);
+          if (mounted != null && mounted.viewport.isValid) {
+            mounted.viewport.setSiblingIndex(parent.children.length - 1);
+            return;
+          }
+          var layer = view.getChildByName('forest-lab-front');
+          if (!layer) return;
+          var viewport = this.box('400 森林前景', view.position.x, view.position.y, stageGrid.width, stageGrid.height, undefined, parent);
+          viewport.addComponent(Mask).type = Mask.Type.GRAPHICS_RECT;
+          layer.setParent(viewport);
+          this.forestForeground.set(view, {
+            viewport: viewport,
+            layer: layer
+          });
+          view.once(Node.EventType.NODE_DESTROYED, function () {
+            if (viewport.isValid) viewport.destroy();
+          });
+        };
+        _proto.updateForestSurface = function updateForestSurface(layer, left) {
+          var _this$forestLayout;
+          var key = layer.name.slice('forest-lab-'.length);
+          var bounds = (_this$forestLayout = this.forestLayout) == null ? void 0 : _this$forestLayout.bounds[key],
+            frame = this.textures.get(layer.name);
+          if (!bounds || !frame) return;
+          var world = bounds[0],
+            x = bounds[1],
+            top = bounds[2],
+            w = bounds[3],
+            h = bounds[4];
+          if (w < 2 || h < 2) return; // Transparent placeholder layers have props but no surface.
+          var first = Math.max(0, Math.floor((left - x) / w)),
+            last = Math.ceil((left + stageGrid.width - x) / w);
+          for (var _iterator5 = _createForOfIteratorHelperLoose(layer.children.filter(function (n) {
+              return n.name.startsWith('地表底图 ');
+            })), _step5; !(_step5 = _iterator5()).done;) {
+            var _node = _step5.value;
+            var _slot = Number(_node.name.slice(5));
+            if (_slot < first || _slot > last) {
+              _node.removeFromParent();
+              _node.destroy();
+            }
+          }
+          for (var slot = first; slot <= last; slot++) {
+            if (layer.getChildByName('地表底图 ' + slot)) continue;
+            var node = this.paintFrame('地表底图 ' + slot, frame, x + slot * w + w / 2 - world / 2, (stageGrid.height - h) / 2 - top, w, h, layer);
+            node.setSiblingIndex(0);
+          }
+        };
+        _proto.updateForestProps = function updateForestProps(layer, left) {
+          var _this$forestLayout2,
+            _this5 = this;
+          var props = (_this$forestLayout2 = this.forestLayout) == null ? void 0 : _this$forestLayout2.layers[layer.name.slice('forest-lab-'.length)];
+          if (!(props != null && props.length)) return;
+          var active = this.forestPropWindows.get(layer);
+          if (!active) {
+            active = new Map();
+            this.forestPropWindows.set(layer, active);
+          }
+          var layerWidth = layer.getComponent(UITransform).width;
+          props.forEach(function (_ref2, index) {
+            var frame = _ref2[0],
+              x = _ref2[1],
+              y = _ref2[2],
+              w = _ref2[3],
+              h = _ref2[4],
+              flip = _ref2[5];
+            var onscreen = x + w / 2 > left && x - w / 2 < left + stageGrid.width;
+            var node = active.get(index);
+            if (!onscreen) {
+              if (node) {
+                node.removeFromParent();
+                node.destroy();
+                active["delete"](index);
+                _this5.forestNodeStats.recycled++;
+              }
+              return;
+            }
+            if (node || !_this5.forestPropFrames[frame]) return;
+            _this5.forestNodeStats.created++;
+            _this5.forestNodeStats.peak = Math.max(_this5.forestNodeStats.peak, active.size + 1);
+            var prop = _this5.paintFrame('场景切图', _this5.forestPropFrames[frame], x - layerWidth / 2, stageGrid.height / 2 - y + h / 2, w, h, layer);
+            if (flip) prop.setScale(-1, 1, 1);
+            var nextSibling = prop.getSiblingIndex();
+            for (var _iterator6 = _createForOfIteratorHelperLoose(active), _step6; !(_step6 = _iterator6()).done;) {
+              var _step6$value = _step6.value,
+                key = _step6$value[0],
+                other = _step6$value[1];
+              if (key > index) nextSibling = Math.min(nextSibling, other.getSiblingIndex());
+            }
+            prop.setSiblingIndex(nextSibling);
+            active.set(index, prop);
+          });
         };
         _proto.slicedArt = function slicedArt(name, x, y, w, h, parent) {
           if (parent === void 0) {
@@ -1506,7 +6627,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             bottom = _uiSlices$name.bottom,
             scale = _uiSlices$name.scale;
           // Slice in source pixels, then scale the fixed-size corners into stage units.
-          var node = this.art(name, x, y, w / scale, h / scale, parent);
+          var source = this.textures.get(name);
+          var node = source ? this.paintFrame(name, source, x, y, w / scale, h / scale, parent) : undefined;
           if (!node) return;
           var sprite = node.getComponent(Sprite);
           var frame = sprite.spriteFrame;
@@ -1522,23 +6644,48 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var _portraitBottomPaddin;
           return ground + height * (.5 - ((_portraitBottomPaddin = portraitBottomPadding[name]) != null ? _portraitBottomPaddin : 0));
         };
+        _proto.newPageMotion = function newPageMotion() {
+          var motion = new BattleMotion();
+          this.pageMotions.add(motion);
+          return motion;
+        };
+        _proto.cancelPageMotions = function cancelPageMotions() {
+          this.pageMotions.forEach(function (motion) {
+            return motion.cancel();
+          });
+          this.pageMotions.clear();
+        };
+        _proto.onDestroy = function onDestroy() {
+          var _this$motion, _this$stageTravel;
+          this.closeSaveGate();
+          if (typeof window !== 'undefined') window.removeEventListener('pagehide', this.closeSaveGate);
+          this.stopStage4A('destroy');
+          (_this$motion = this.motion) == null || _this$motion.cancel();
+          this.cancelPageMotions();
+          (_this$stageTravel = this.stageTravel) == null || _this$stageTravel.dispose();
+        };
         _proto.reset = function reset(background) {
-          var _this$boardFx, _this$ui, _this$ui2;
+          var _this$stageTravel2, _this$boardFx, _this$ui, _this$ui2;
           if (background === void 0) {
             background = 'travel-forest-plains';
           }
+          this.stopStage4A('reset');
+          this.cancelPageMotions();
+          (_this$stageTravel2 = this.stageTravel) == null || _this$stageTravel2.dispose();
+          this.stageTravel = undefined;
           this.clearIdleHint();
           (_this$boardFx = this.boardFx) == null || _this$boardFx.dispose();
           this.boardFx = undefined;
           this.trialFxViewport = undefined;
           (_this$ui = this.ui) == null || _this$ui.removeFromParent();
           (_this$ui2 = this.ui) == null || _this$ui2.destroy();
-          this.ui = this.box('Game', 0, 0, 480, 854, '#26352e', this.node);
+          var topOffset = (view.getVisibleSize().height - 854) / 2;
+          this.ui = this.box('Game', 0, topOffset, 480, 854, '#26352e', this.node);
           this.box('Interaction panel', 0, -141, 470, 559, '#314339');
           this.stageBackdrop(background);
         };
         _proto.button = function button(text, y, action, x, w, selected) {
-          var _this4 = this;
+          var _this6 = this;
           if (x === void 0) {
             x = 0;
           }
@@ -1554,13 +6701,13 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var title = this.label(text, 0, 3, w - 16, 19, button);
           title.color = Color.fromHEX(new Color(), '#2a382d');
           button.on(Node.EventType.TOUCH_END, function () {
-            _this4.audio.play('click');
+            _this6.audio.play('click');
             action();
           });
           return button;
         };
         _proto.trialButton = function trialButton(text, y, action, x, w, icon, muted) {
-          var _this5 = this;
+          var _this7 = this;
           if (x === void 0) {
             x = 0;
           }
@@ -1575,7 +6722,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           if (icon) this.art(icon, -w / 2 + 26, 1, 20, 20, button);
           var label = this.outline(this.label(text, icon ? 9 : 0, 1, w - (icon ? 46 : 12), 19, button));
           button.on(Node.EventType.TOUCH_END, function () {
-            _this5.audio.playTrial('click');
+            _this7.audio.playTrial('click');
             action();
           });
           return {
@@ -1584,7 +6731,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           };
         };
         _proto.save = function save() {
-          if (!this.taught || this.trial) return;
+          var _this$saveGate2;
+          if (!this.taught || this.trial || this.stage4AStockUncertain) return;
           var party = this.party,
             reported = this.reported,
             location = this.location,
@@ -1594,7 +6742,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             hp = this.hp,
             potion = this.potion,
             inventory = this.inventory;
-          sys.localStorage.setItem(this.saveKey, JSON.stringify({
+          return (_this$saveGate2 = this.saveGate) == null ? void 0 : _this$saveGate2.write(JSON.stringify({
             party: party,
             reported: reported,
             location: location,
@@ -1609,10 +6757,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             villageGuidePending: this.villageGuidePending
           }));
         };
-        _proto.resume = function resume() {
+        _proto.resume = function resume(player) {
           try {
-            var _state$hunt, _state$hunt2, _state$hunt3;
-            var state = JSON.parse(sys.localStorage.getItem(this.saveKey) || 'null');
+            var _this$saveGate3, _state$hunt, _state$hunt2, _state$hunt3;
+            var state = player != null ? player : JSON.parse(((_this$saveGate3 = this.saveGate) == null ? void 0 : _this$saveGate3.read()) || 'null');
             if (!state || !Array.isArray(state.party) || state.party[0] !== 's' || new Set(state.party).size !== state.party.length || state.party.some(function (id) {
               return !['s', 'h', 'd', 'm'].includes(id);
             })) return false;
@@ -1655,12 +6803,348 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             return false;
           }
         };
+        _proto.recoveryOptIn = function recoveryOptIn() {
+          return typeof location !== 'undefined' && new URLSearchParams(location.search).has('m5-stage4a');
+        };
+        _proto.continueSavedGame = function continueSavedGame() {
+          var _this$saveGate4,
+            _state$mineRecovery$p,
+            _state$mineRecovery$p2,
+            _this8 = this;
+          var raw = (_this$saveGate4 = this.saveGate) == null ? void 0 : _this$saveGate4.readRecovery();
+          if (!raw) {
+            if (this.resume()) this.map();
+            return;
+          }
+          var state = readMineRecovery(raw);
+          if (!state || !this.resume(state.player)) return;
+          if (state.run.closed) {
+            if (state.mineRecovery.source === 'formal') this.showFormalMineSettlement(raw, state);else this.showRecoveryClosed();
+            return;
+          }
+          this.phase = 'mine';
+          this.types = this.formalTypes();
+          var board = (_state$mineRecovery$p = (_state$mineRecovery$p2 = state.mineRecovery.potion) == null ? void 0 : _state$mineRecovery$p2.board) != null ? _state$mineRecovery$p : state.run.board;
+          if (board.tiles.some(function (tile) {
+            return !_this8.types.includes(tile.emblem);
+          }) || !legalMove(board.tiles.map(function (t) {
+            return t.emblem;
+          })) || state.player.hp !== this.hp || state.player.dp !== this.dp) {
+            this.page('恢复已阻断', '存档的队伍或棋盘未通过校验。请重新加载后核对。');
+            return;
+          }
+          var director = DungeonDirector.restore(state.run.route.map(function (entry) {
+            return entry.room;
+          }), state.run.cursor);
+          this.mineRecovery = {
+            raw: raw,
+            state: state
+          };
+          this.projectMineRecovery(director, state);
+        };
+        _proto.projectMineRecovery = function projectMineRecovery(director, state) {
+          var _state$mineRecovery$p3, _state$mineRecovery$p4;
+          this.dungeon = director;
+          this.hp = state.player.hp;
+          this.dp = state.player.dp;
+          this.location = state.player.location;
+          var board = (_state$mineRecovery$p3 = (_state$mineRecovery$p4 = state.mineRecovery.potion) == null ? void 0 : _state$mineRecovery$p4.board) != null ? _state$mineRecovery$p3 : state.run.board;
+          var pending = state.run.pending;
+          this.adventure = {
+            id: 'mine',
+            coins: pending.coins,
+            loot: _extends({}, pending.loot),
+            xp: pending.xp,
+            ordinaryWins: pending.ordinaryWins,
+            buffs: {}
+          };
+          this.carriedBoard = {
+            director: director,
+            types: this.types.join(','),
+            board: board.tiles.map(function (tile) {
+              return tile.emblem;
+            }),
+            charged: board.tiles.flatMap(function (tile, i) {
+              return tile.tier ? [[i, tile.tier]] : [];
+            }),
+            ids: board.tiles.map(function (tile) {
+              return tile.id;
+            })
+          };
+          this.showRoom();
+        };
+        _proto.commitMineRest = function commitMineRest(director, room, choice) {
+          var live = this.mineRecovery;
+          if (!live || this.dungeon !== director || director.room !== room || director.depth !== live.state.run.cursor || room.kind !== 'rest') return;
+          var run = live.state.run,
+            roomId = run.route[run.cursor].id;
+          var plan = planMineRest(live.state, {
+            runId: run.runId,
+            roomId: roomId,
+            generation: run.generation,
+            operationId: 'rest:' + roomId,
+            choice: choice
+          }, {
+            hp: this.maxHP,
+            dp: this.maxDP
+          });
+          if (plan.status !== 'changed') return;
+          if (!this.persistMineRecovery(live, plan.save)) return;
+          // Projection only. Storage already contains both updated meters and the next position.
+          this.hp = plan.save.player.hp;
+          this.dp = plan.save.player.dp;
+          if (!director.advance(room) || director.depth !== plan.save.run.cursor) {
+            this.showRecoveryStop('休息已保存，房间显示需重新加载。');
+            return;
+          }
+          try {
+            this.showRoom();
+          } catch (_unused2) {
+            this.showRecoveryStop('休息已保存，场景需重新加载。');
+          }
+        };
+        _proto.persistMineRecovery = function persistMineRecovery(live, next, retry) {
+          var _this$saveGate5,
+            _this9 = this;
+          if (this.mineRecovery !== live) return false;
+          var raw = JSON.stringify(next);
+          var result = (_this$saveGate5 = this.saveGate) == null ? void 0 : _this$saveGate5.writeRecovery(raw, live.raw);
+          if (result !== 'committed' && result !== 'reconciled') {
+            if (result === 'write-failed') {
+              this.popup('保存失败，未执行操作。', 0, 105);
+              if (retry) {
+                var button = this.button('重试保存', -325, function () {
+                  if (_this9.mineRecovery !== live) return;
+                  button.destroy();
+                  retry();
+                });
+              }
+            } else this.showRecoveryStop('存档未能确认，请重新加载。');
+            return false;
+          }
+          this.mineRecovery = {
+            raw: raw,
+            state: next
+          };
+          return true;
+        };
+        _proto.showRecoveryStop = function showRecoveryStop(message) {
+          var _this$motion2;
+          (_this$motion2 = this.motion) == null || _this$motion2.cancel();
+          this.page('探索恢复已停止', message);
+          this.button('重新加载', 20, function () {
+            return location.reload();
+          });
+        };
+        _proto.stopLegacyMineBoard = function stopLegacyMineBoard(reason) {
+          var _this10 = this;
+          var live = this.mineRecovery;
+          if (!live || live.state.mineRecovery.source !== 'formal') return;
+          this.automatic = false;
+          this.autoRequest++;
+          this.motion.cancel();
+          var detail = reason === 'no-legal-move' ? '没有合法换位' : '仍有待结算连锁，已到旧战斗处理边界';
+          this.page('棋盘结算已中断', detail + '。可恢复最近保存的同一房间。');
+          var root = this.ui;
+          this.button('恢复房间检查点', 20, function () {
+            var _this10$saveGate;
+            if (_this10.ui !== root || _this10.mineRecovery !== live) return;
+            if (((_this10$saveGate = _this10.saveGate) == null ? void 0 : _this10$saveGate.readRecovery()) !== live.raw) {
+              _this10.showRecoveryStop('检查点已变更，请重新加载。');
+              return;
+            }
+            _this10.continueSavedGame();
+          });
+        };
+        _proto.closeMineRecovery = function closeMineRecovery(outcome) {
+          var _this11 = this;
+          var live = this.mineRecovery;
+          if (!live || live.state.run.closed) return;
+          if (live.state.mineRecovery.source === 'formal') {
+            var interrupted = outcome === 'retreat' && this.ui === this.battleRoot && this.battlePhase !== 'input';
+            var hp = interrupted ? live.state.player.hp : this.hp;
+            var dp = interrupted ? live.state.player.dp : this.dp;
+            var next = planMineFormalClose(live.state, outcome, {
+              hp: outcome === 'fail' ? this.maxHP : Math.min(this.maxHP, Math.max(1, hp)),
+              dp: outcome === 'fail' ? this.maxDP : dp
+            });
+            if (!next) return;
+            var commit = function commit() {
+              if (!_this11.persistMineRecovery(live, next, commit)) return;
+              try {
+                if (!_this11.resume(next.player)) throw Error('player projection mismatch');
+                _this11.showFormalMineSettlement(_this11.mineRecovery.raw, next);
+              } catch (_unused3) {
+                _this11.showRecoveryStop('结算已保存，场景需重新加载。');
+              }
+            };
+            commit();
+            return;
+          }
+          var run = live.state.run,
+            roomId = run.route[run.cursor].id;
+          var plan = planMineTestClose(live.state, {
+            runId: run.runId,
+            roomId: roomId,
+            generation: run.generation,
+            operationId: 'close:' + roomId,
+            outcome: outcome
+          });
+          if (plan.status === 'changed' && this.persistMineRecovery(live, plan.save)) this.showRecoveryClosed();
+        };
+        _proto.showFormalMineSettlement = function showFormalMineSettlement(raw, state) {
+          var _this$motion3,
+            _this12 = this;
+          (_this$motion3 = this.motion) == null || _this$motion3.cancel();
+          this.automatic = false;
+          this.dungeon = undefined;
+          this.adventure = undefined;
+          this.carriedBoard = undefined;
+          this.mineRecovery = undefined;
+          var outcome = state.run.closed;
+          var reward = state.mineRecovery.settlement.preview;
+          this.page(outcome === 'complete' ? '地牢通关' : outcome === 'fail' ? '探索失败' : '撤离结算', '本次带回：金币 ×' + reward.gold + ' · 经验 ×' + reward.xp, outcome === 'fail' ? 'village-tavern-stage' : 'stage-mine-0');
+          this.button(outcome === 'fail' ? '起身，回到酒馆' : '返回章节地图', 28, function () {
+            var _this12$saveGate;
+            var result = (_this12$saveGate = _this12.saveGate) == null ? void 0 : _this12$saveGate.releaseRecovery(JSON.stringify(state.player), raw);
+            if (result === 'committed' || result === 'reconciled') {
+              if (outcome === 'fail') _this12.tavern(true);else _this12.map();
+            } else if (result === 'write-failed') _this12.popup('保存失败，请重试。', 0, 105);else _this12.showRecoveryStop('存档未能确认，请重新加载。');
+          });
+        };
+        _proto.minePermit = function minePermit(director, room) {
+          var live = this.mineRecovery;
+          if (!live || live.state.mineRecovery.source !== 'formal' || this.dungeon !== director || director.room !== room || director.depth !== live.state.run.cursor || live.state.run.closed) return;
+          var run = live.state.run;
+          return {
+            live: live,
+            permit: {
+              runId: run.runId,
+              roomId: run.route[run.cursor].id,
+              generation: run.generation
+            }
+          };
+        };
+        _proto.stableMineBoard = function stableMineBoard() {
+          var _this13 = this;
+          if (this.tiles.length !== 56 || matches(this.board).length || !this.legalMove()) return;
+          var tiles = this.tiles.map(function (node, index) {
+            var id = _this13.restoredTileIds.get(node);
+            var tier = _this13.chargedTiles.get(node);
+            return _extends({
+              id: id,
+              emblem: _this13.board[index]
+            }, tier ? {
+              tier: tier
+            } : {});
+          });
+          if (tiles.some(function (tile) {
+            return !tile.id;
+          }) || new Set(tiles.map(function (tile) {
+            return tile.id;
+          })).size !== 56) return;
+          return {
+            gravity: 'mine/v1',
+            tiles: tiles.map(function (tile) {
+              return _extends({}, tile, {
+                id: tile.id
+              });
+            })
+          };
+        };
+        _proto.commitLegacyMineVictory = function commitLegacyMineVictory(director, room) {
+          var _room$rescueCells;
+          var current = this.minePermit(director, room);
+          if (!current) return;
+          var board = this.stableMineBoard();
+          if (!board || room.kind !== 'battle' || !(this.enemies.every(function (hp) {
+            return hp <= 0;
+          }) || (_room$rescueCells = room.rescueCells) != null && _room$rescueCells.length && !this.rescueCells.size)) {
+            this.showRecoveryStop('旧战斗终局或稳定棋盘未通过校验。');
+            return;
+          }
+          var next = planMineLegacyVictory(current.live.state, current.permit, board, this.hp, this.dp);
+          if (!next) {
+            this.showRecoveryStop('旧战斗终局回执未通过校验。');
+            return;
+          }
+          var _final = room.type === 'boss' ? planMineFormalClose(next, 'complete', {
+            hp: this.hp,
+            dp: this.dp
+          }) : next;
+          if (!_final) {
+            this.showRecoveryStop('通关结算未通过校验。');
+            return;
+          }
+          this.commitMineRoom(current.live, _final, director, room);
+        };
+        _proto.commitMineRoom = function commitMineRoom(live, next, director, room, coinsAt) {
+          var _this14 = this;
+          if (this.dungeon !== director || director.room !== room || director.depth !== live.state.run.cursor) return;
+          if (!this.persistMineRecovery(live, next, this.ui === this.battleRoot ? function () {
+            return _this14.commitMineRoom(live, next, director, room);
+          } : undefined)) return;
+          var committed = this.mineRecovery,
+            root = this.ui;
+          var show = function show() {
+            try {
+              if (!director.advance(room) || director.depth !== next.run.cursor) throw Error('room projection mismatch');
+              if (next.run.closed) {
+                if (!_this14.resume(next.player)) throw Error('player projection mismatch');
+                _this14.showFormalMineSettlement(_this14.mineRecovery.raw, next);
+              } else _this14.projectMineRecovery(director, next);
+            } catch (_unused4) {
+              _this14.showRecoveryStop('结果已保存，场景需重新加载。');
+            }
+          };
+          if (!coinsAt) {
+            show();
+            return true;
+          }
+          var motion = this.newPageMotion();
+          void _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+            var amount;
+            return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+              while (1) switch (_context2.prev = _context2.next) {
+                case 0:
+                  _context2.prev = 0;
+                  amount = next.run.pending.coins - live.state.run.pending.coins;
+                  _context2.next = 4;
+                  return _this14.animateCoins(motion, amount, _this14.coinText, coinsAt, stageGrid.groundY);
+                case 4:
+                  if (_this14.ui === root && _this14.mineRecovery === committed && !motion.cancelled) show();
+                  _context2.next = 10;
+                  break;
+                case 7:
+                  _context2.prev = 7;
+                  _context2.t0 = _context2["catch"](0);
+                  if (_this14.ui === root && _this14.mineRecovery === committed) _this14.showRecoveryStop('宝箱已保存，场景需重新加载。');
+                case 10:
+                case "end":
+                  return _context2.stop();
+              }
+            }, _callee2, null, [[0, 7]]);
+          }))();
+          return true;
+        };
+        _proto.showRecoveryClosed = function showRecoveryClosed() {
+          var _this$motion4;
+          (_this$motion4 = this.motion) == null || _this$motion4.cancel();
+          this.dungeon = undefined;
+          this.adventure = undefined;
+          this.carriedBoard = undefined;
+          this.mineRecovery = undefined;
+          this.page('验证探索已关闭', '已记录关闭回执。测试收益不会发给角色。');
+        };
         _proto.menu = function menu() {
-          var _this6 = this;
+          var _this15 = this,
+            _this$saveGate6,
+            _this$saveGate7,
+            _this$saveGate8;
           this.reset();
           this.button('冒险手册', -213, function () {
-            return _this6.showRules(0, function () {
-              return _this6.menu();
+            return _this15.showRules(0, function () {
+              return _this15.menu();
             });
           }, 0, 360);
           this.box('Title frame', 0, 65, 420, 135, '#23372f');
@@ -1669,53 +7153,68 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           title.isBold = true;
           this.label('结界逆转，队伍在苔石森林失散。', 0, -11, 440, 19);
           this.art('hero-s', 0, 263, 104, 104);
-          if (sys.localStorage.getItem(this.saveKey)) this.button('继续冒险', -144, function () {
-            if (_this6.resume()) _this6.map();
+          var persistedRecovery = (_this$saveGate6 = this.saveGate) == null ? void 0 : _this$saveGate6.readRecovery();
+          if (persistedRecovery || (_this$saveGate7 = this.saveGate) != null && _this$saveGate7.read()) this.button('继续冒险', -144, function () {
+            return _this15.continueSavedGame();
           });
+          if (!((_this$saveGate8 = this.saveGate) != null && _this$saveGate8.writable)) this.label('存档只读 · 本次进度不会写入', 0, -264, 420, 15);
+          if (persistedRecovery) return;
           this.trialButton('矿坑轨道试玩', -302, function () {
-            return _this6.startMineTrial();
+            return _this15.startMineTrial();
           });
           this.button('在林中醒来', -80, function () {
-            _this6.taught = false;
-            _this6.reported = false;
-            _this6.villageGuidePending = false;
-            _this6.cleared.clear();
-            _this6.hunt = undefined;
-            _this6.adventure = undefined;
-            _this6.inventory = new Inventory();
-            _this6.party = ['s'];
-            _this6.types = ['s', 'stone', 'fist', 'cry'];
-            _this6.location = 0;
-            _this6.gold = 20;
-            _this6.exp = 0;
-            _this6.dp = 0;
-            _this6.phase = 'wolves';
-            _this6.firstSwap = true;
-            _this6.hp = 45;
-            _this6.potion = 1;
-            _this6.enemies = [72, 72];
-            _this6.startTutorial();
+            _this15.taught = false;
+            _this15.reported = false;
+            _this15.villageGuidePending = false;
+            _this15.cleared.clear();
+            _this15.hunt = undefined;
+            _this15.adventure = undefined;
+            _this15.inventory = new Inventory();
+            _this15.party = ['s'];
+            _this15.types = ['s', 'stone', 'fist', 'cry'];
+            _this15.location = 0;
+            _this15.gold = 20;
+            _this15.exp = 0;
+            _this15.dp = 0;
+            _this15.phase = 'wolves';
+            _this15.firstSwap = true;
+            _this15.hp = 45;
+            _this15.potion = 1;
+            _this15.enemies = [72, 72];
+            _this15.startTutorial();
           });
         };
         _proto.beginBattle = function beginBattle(reveal) {
-          var _this$motion,
+          var _this$motion5,
             _this$carriedBoard,
             _this$carriedBoard2,
             _this$dungeon,
+            _this$mineRecovery,
+            _checkpoint$marks,
             _activeRoom$rescueCel,
+            _this$dungeon2,
             _carried$board$slice,
             _this$trial,
             _this$ui$getChildByNa,
-            _this$dungeon2,
-            _this7 = this;
-          (_this$motion = this.motion) == null || _this$motion.cancel();
+            _this$dungeon3,
+            _this16 = this,
+            _carried$ids;
+          this.stopStage4A('new battle');
+          (_this$motion5 = this.motion) == null || _this$motion5.cancel();
           this.motion = new BattleMotion();
           this.lastFallen = undefined;
           this.enemyMax = [].concat(this.enemies);
           var carried = ((_this$carriedBoard = this.carriedBoard) == null ? void 0 : _this$carriedBoard.director) === this.dungeon && ((_this$carriedBoard2 = this.carriedBoard) == null ? void 0 : _this$carriedBoard2.types) === this.types.join(',') ? this.carriedBoard : undefined;
           var activeRoom = (_this$dungeon = this.dungeon) == null ? void 0 : _this$dungeon.room;
-          this.rescueCells = new Set((activeRoom == null ? void 0 : activeRoom.kind) === 'battle' ? (_activeRoom$rescueCel = activeRoom.rescueCells) != null ? _activeRoom$rescueCel : [] : []);
-          this.board = (_carried$board$slice = carried == null ? void 0 : carried.board.slice()) != null ? _carried$board$slice : this.phase === 'wolves' && this.firstSwap ? opening(this.types) : newBoard(this.types, (_this$trial = this.trial) == null ? void 0 : _this$trial.random);
+          var checkpoint = (_this$mineRecovery = this.mineRecovery) == null ? void 0 : _this$mineRecovery.state.mineRecovery.potion;
+          this.rescueCells = new Set((_checkpoint$marks = checkpoint == null ? void 0 : checkpoint.marks) != null ? _checkpoint$marks : (activeRoom == null ? void 0 : activeRoom.kind) === 'battle' ? (_activeRoom$rescueCel = activeRoom.rescueCells) != null ? _activeRoom$rescueCel : [] : []);
+          if (checkpoint) this.enemies = [].concat(checkpoint.enemies);
+          if (this.phase === 'mine' && !this.trial && ((_this$dungeon2 = this.dungeon) == null ? void 0 : _this$dungeon2.depth) === 0 && this.recoveryOptIn()) {
+            var seed = this.stage4ASeed();
+            this.board = newBoard(this.types, function () {
+              return (seed = Math.imul(seed, 1664525) + 1013904223 >>> 0) / Math.pow(2, 32);
+            });
+          } else this.board = (_carried$board$slice = carried == null ? void 0 : carried.board.slice()) != null ? _carried$board$slice : this.phase === 'wolves' && this.firstSwap ? opening(this.types) : newBoard(this.types, (_this$trial = this.trial) == null ? void 0 : _this$trial.random);
           this.selected = -1;
           this.busy = true;
           this.battlePhase = 'entering';
@@ -1723,7 +7222,13 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.turn = 1;
           this.battleLogs = [];
           this.stunned.clear();
-          this.rally = false;
+          this.oath = checkpoint != null && checkpoint.oath ? structuredClone(checkpoint.oath) : _extends({}, newOathState(), {
+            rally: checkpoint != null && checkpoint.rally ? 1.4 : 1
+          });
+          if (checkpoint) {
+            this.turn = checkpoint.round;
+            this.stunned = new Set(checkpoint.stunned);
+          }
           var background = this.dungeonBackdrop();
           this.reset(background);
           var centerY = stageGrid.centerY,
@@ -1740,12 +7245,12 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.guideLayer = undefined;
           this.guideHand = undefined;
           this.battleModal = undefined;
-          var room = (_this$dungeon2 = this.dungeon) == null ? void 0 : _this$dungeon2.room;
+          var room = (_this$dungeon3 = this.dungeon) == null ? void 0 : _this$dungeon3.room;
           var encounters = (room == null ? void 0 : room.kind) === 'battle' ? room.encounters : undefined;
           var defaults = this.phase === 'wolves' ? [enemy('灰狼', 'wolf', 72, 3), enemy('林狼', 'wolf', 72, 3)] : [enemy('裂印巨狼', 'boss', 100, 7)];
           this.foes = this.enemies.map(function (hp, i) {
-            var _ref, _encounters$i;
-            return (_ref = (_encounters$i = encounters == null ? void 0 : encounters[i]) != null ? _encounters$i : defaults[i]) != null ? _ref : enemy('裂印兽', 'boar', hp, 10);
+            var _ref4, _encounters$i;
+            return (_ref4 = (_encounters$i = encounters == null ? void 0 : encounters[i]) != null ? _encounters$i : defaults[i]) != null ? _ref4 : enemy('裂印兽', 'boar', hp, 10);
           });
           var stageTitle = this.trial ? mineTrialTitle : this.phase === 'wolves' || this.phase === 'lessonBoss' ? '苔石森林 · 序章' : {
             forest: '苔石森林',
@@ -1754,43 +7259,53 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             tower: '迷雾高塔'
           }[this.phase];
           this.outline(this.label(stageTitle, 0, stageGrid.titleY, 280, 21));
-          this.healthBar = this.makeMeter(-stageGrid.meterX, stageGrid.hpY, 121, '#7ecb82');
-          this.guardBar = this.makeMeter(-stageGrid.meterX, stageGrid.secondaryY, 121, '#63b5df');
+          this.healthBar = this.makeMeter(-stageGrid.meterX, stageGrid.hpY, 139, '#7ecb82');
+          this.guardBar = this.makeMeter(-stageGrid.meterX, stageGrid.secondaryY, 139, '#63b5df');
           this.guardBar.root.active = this.showsGuard;
+          this.outline(this.label(this.partyName, -stageGrid.meterX, stageGrid.hpY + 23, 139, 14));
           this.coinText = this.makeCoinDisplay();
-          this.status = this.outline(this.label('', 0, 157, 450, 17));
+          this.status = this.outline(this.label('', 0, 169, 450, 17));
           this.setBattleStatus(this.trial ? '敌人入场 · 棋盘底部沿轨道滑动' : '敌人正在入场');
           this.showParty();
-          for (var _iterator3 = _createForOfIteratorHelperLoose(this.heroes.values()), _step3; !(_step3 = _iterator3()).done;) {
-            var hero = _step3.value;
+          for (var _iterator7 = _createForOfIteratorHelperLoose(this.heroes.values()), _step7; !(_step7 = _iterator7()).done;) {
+            var hero = _step7.value;
             hero.setParent(this.stageContent, true);
           }
           this.enemyMeters = [];
           this.enemyNodes = this.enemies.map(function (_, i) {
-            var _enemyPortraitSize$fo, _enemyPortraitSize$fo2, _this7$art;
-            var foe = _this7.foes[i];
-            var hasPair = _this7.enemies.length > 1;
-            var x = hasPair ? 93 + i * 87 : stageGrid.meterX;
-            var ground = hasPair && i === 0 ? stageGrid.rearGroundY : stageGrid.groundY;
+            var _enemyPortraitSize$fo, _enemyPortraitSize$fo2, _actorArt$foe$art, _actorArt$foe$art$hea, _actorArt$foe$art2;
+            var foe = _this16.foes[i];
+            var hasPair = _this16.enemies.length > 1;
+            var isBoss = foe.tags.includes('boss');
+            var x = hasPair ? 93 + i * 87 : isBoss ? stageX(381) : stageGrid.meterX;
+            var ground = hasPair && i === 0 ? stageGrid.rearGroundY : isBoss ? stageGrid.bossGroundY : stageGrid.groundY;
             var size = hasPair ? Math.min((_enemyPortraitSize$fo = enemyPortraitSize[foe.art]) != null ? _enemyPortraitSize$fo : 94, 112) : (_enemyPortraitSize$fo2 = enemyPortraitSize[foe.art]) != null ? _enemyPortraitSize$fo2 : 94;
             // Ghosts visibly hover; grounded enemies use the actual opaque foot silhouette.
             var hover = foe.tags.includes('flying') ? size / 2 : foe.art === 'ghost' ? 7 : 0;
-            var n = _this7.box('Enemy ' + i, x, _this7.portraitY(foe.art, ground + hover, size), size, size, undefined, _this7.stageContent);
-            _this7.groundShadow(n, ground - n.position.y, foe.art, size);
-            (_this7$art = _this7.art(foe.art, 0, 0, size, size, n)) != null ? _this7$art : _this7.label(foe.name, 0, 0, size, 16, n);
-            var meterY = size >= 148 ? 371 : stageGrid.hpY;
-            var stats = _this7.box('敌方状态 ' + i, x, meterY, 84, 48);
-            var meter = _this7.makeMeter(0, 0, hasPair ? 81 : 109, '#c34e61', stats);
-            _this7.enemyMeters.push(_extends({}, meter, {
+            var n = _this16.box('Enemy ' + i, x, _this16.portraitY(foe.art, ground + hover, size), size, size, undefined, _this16.stageContent);
+            _this16.groundShadow(n, ground - n.position.y, foe.art, size);
+            var portrait = _this16.art(foe.art, 0, 0, size, size, n);
+            if (portrait) portrait.setScale(((_actorArt$foe$art = actorArt[foe.art]) == null ? void 0 : _actorArt$foe$art.sourceFacing) === 'left' ? 1 : -1, 1, 1);
+            if (!portrait) _this16.label(foe.name, 0, 0, size, 16, n);
+            if (foe.art === 'ghost' && portrait) {
+              var _this16$actorMaterial;
+              var sprite = portrait.getComponent(Sprite);
+              if (sprite) (_this16$actorMaterial = _this16.actorMaterial(sprite)) == null || _this16$actorMaterial.setProperty('state', new Vec4(0, 1, 1, .85));
+            }
+            var meterY = Math.min(stageGrid.centerY + stageGrid.height / 2 - 76, n.position.y + size * (.5 - ((_actorArt$foe$art$hea = (_actorArt$foe$art2 = actorArt[foe.art]) == null ? void 0 : _actorArt$foe$art2.headY) != null ? _actorArt$foe$art$hea : .1)) + 12);
+            var stats = _this16.box('敌方状态 ' + i, x, meterY, 84, 48);
+            var meter = _this16.makeMeter(0, 0, hasPair ? 85 : 128, '#c34e61', stats);
+            _this16.enemyMeters.push(_extends({}, meter, {
               root: stats
             }));
-            _this7.outline(_this7.label(foe.name, 0, stageGrid.secondaryY - stageGrid.hpY, hasPair ? 84 : 109, 14, stats));
+            _this16.outline(_this16.label(foe.name, 0, 23, hasPair ? 85 : 128, 14, stats));
             return n;
           });
+          this.liftForestForeground(this.stageContent.getChildByName(background), this.stageContent);
           this.box('棋盘外框', 0, -111.5, 435, 498, '#15221e');
           this.cells = this.board.map(function (_, i) {
-            var node = _this7.box('Cell ' + i, (i % 7 - 3) * 61, 102 - Math.floor(i / 7) * 61, 55, 55, (i + Math.floor(i / 7)) % 2 ? '#3b5046' : '#34463e');
-            _this7.bindTileInput(node, function () {
+            var node = _this16.box('Cell ' + i, (i % 7 - 3) * 61, 102 - Math.floor(i / 7) * 61, 55, 55, (i + Math.floor(i / 7)) % 2 ? '#3b5046' : '#34463e');
+            _this16.bindTileInput(node, function () {
               return i;
             });
             return node;
@@ -1803,40 +7318,48 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.lock = this.box('棋盘锁定', 0, -111.5, 428, 495, '#19172963');
           this.lockText = this.outline(this.label('敌人入场', 0, -209, 300, 17, this.lock));
           this.buildTiles();
-          carried == null || carried.charged.forEach(function (_ref2) {
-            var index = _ref2[0],
-              tier = _ref2[1];
-            return _this7.markCharged(index, tier);
+          carried == null || carried.charged.forEach(function (_ref5) {
+            var index = _ref5[0],
+              tier = _ref5[1];
+            return _this16.markCharged(index, tier);
           });
-          for (var _iterator4 = _createForOfIteratorHelperLoose(this.rescueCells), _step4; !(_step4 = _iterator4()).done;) {
-            var _index = _step4.value;
+          carried == null || (_carried$ids = carried.ids) == null || _carried$ids.forEach(function (id, index) {
+            return _this16.restoredTileIds.set(_this16.tiles[index], id);
+          });
+          for (var _iterator8 = _createForOfIteratorHelperLoose(this.rescueCells), _step8; !(_step8 = _iterator8()).done;) {
+            var _index = _step8.value;
             var point = this.cells[_index].position;
             var marker = this.outline(this.label('救', point.x + 18, point.y + 18, 20, 15));
             marker.node.name = '营救标记 ' + _index;
           }
+          this.setupStage4A();
           this.battleTool('药水', 0, function () {
-            return _this7.usePotion();
+            if (_this16.stage4A) {
+              _this16.useStage4APotion();
+              return;
+            }
+            _this16.usePotion();
           });
           this.battleTool('自动战斗', 1, function () {
-            if (_this7.battleModal || _this7.guideMode || _this7.battlePhase === 'entering') return;
-            _this7.selected = -1;
-            _this7.automatic = !_this7.automatic;
-            _this7.drawBoard();
-            _this7.autoStep();
+            if (_this16.battleModal || _this16.guideMode || _this16.battlePhase === 'entering') return;
+            _this16.selected = -1;
+            _this16.automatic = !_this16.automatic;
+            _this16.drawBoard();
+            _this16.autoStep();
           });
           this.battleTool('战斗记录', 2, function () {
-            return _this7.openBattleModal('log');
+            return _this16.openBattleModal('log');
           });
           this.battleTool('撤离', 3, function () {
-            return _this7.openBattleModal('retreat');
+            return _this16.openBattleModal('retreat');
           });
           this.drawBoard();
           void this.enterBattle(this.motion, reveal);
         };
         _proto.battleTool = function battleTool(name, index, action) {
-          var _this8 = this;
+          var _this17 = this;
           var activate = function activate() {
-            if (!_this8.battleModal) action();
+            if (!_this17.battleModal) action();
           };
           var x = battleToolbar.x + index * battleToolbar.gap;
           this.trialButton(name, battleToolbar.y, activate, x, battleToolbar.width);
@@ -1866,10 +7389,11 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.lockText.string = this.battlePhase === 'entering' ? '敌人入场' : this.battlePhase === 'enemy' ? '敌方回合' : this.automatic && this.battlePhase === 'input' ? '自动战斗' : '结算中';
         };
         _proto.enterBattle = /*#__PURE__*/function () {
-          var _enterBattle = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(motion, reveal) {
+          var _enterBattle = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(motion, reveal) {
+            var _this$stage4A;
             var homes, arrived;
-            return _regeneratorRuntime().wrap(function _callee2$(_context2) {
-              while (1) switch (_context2.prev = _context2.next) {
+            return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+              while (1) switch (_context3.prev = _context3.next) {
                 case 0:
                   homes = this.enemyNodes.map(function (n) {
                     return n.position.clone();
@@ -1878,19 +7402,19 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     return n.setPosition(homes[i].x + 205, homes[i].y);
                   });
                   if (!reveal) {
-                    _context2.next = 5;
+                    _context3.next = 5;
                     break;
                   }
-                  _context2.next = 5;
+                  _context3.next = 5;
                   return reveal();
                 case 5:
                   if (!(motion.cancelled || motion !== this.motion)) {
-                    _context2.next = 7;
+                    _context3.next = 7;
                     break;
                   }
-                  return _context2.abrupt("return");
+                  return _context3.abrupt("return");
                 case 7:
-                  _context2.next = 9;
+                  _context3.next = 9;
                   return Promise.all(this.enemyNodes.map(function (n, i) {
                     return motion.play(tween(n).delay(motion.duration(i * .09)).to(motion.duration(.32), {
                       position: homes[i]
@@ -1899,20 +7423,27 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     }));
                   }));
                 case 9:
-                  arrived = _context2.sent;
+                  arrived = _context3.sent;
                   if (!(!arrived.every(Boolean) || motion.cancelled)) {
-                    _context2.next = 12;
+                    _context3.next = 12;
                     break;
                   }
-                  return _context2.abrupt("return");
+                  return _context3.abrupt("return");
                 case 12:
                   this.audio.play('door');
+                  if (!((_this$stage4A = this.stage4A) != null && _this$stage4A.error)) {
+                    _context3.next = 16;
+                    break;
+                  }
+                  this.setBattleStatus('验证战斗已阻断 · 可撤离');
+                  return _context3.abrupt("return");
+                case 16:
                   this.resumeBattleInput('轮到玩家，交换相邻纹章');
-                case 14:
+                case 17:
                 case "end":
-                  return _context2.stop();
+                  return _context3.stop();
               }
-            }, _callee2, this);
+            }, _callee3, this);
           }));
           function enterBattle(_x, _x2) {
             return _enterBattle.apply(this, arguments);
@@ -1929,34 +7460,48 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           if (parent === void 0) {
             parent = this.ui;
           }
-          var height = 21;
-          var node = this.box('计量条', x, y, w, height, '#111e1be8', parent);
-          var fill = this.box('填充', 0, 0, w - 4, height - 4, color, node);
+          var height = 25;
+          var node = this.box('计量条', x, y, w, height, undefined, parent);
+          var frame = node.addComponent(Graphics);
+          frame.fillColor = Color.fromHEX(new Color(), '#573622');
+          frame.roundRect(-w / 2, -height / 2, w, height, height / 2);
+          frame.fill();
+          frame.fillColor = Color.fromHEX(new Color(), '#263029');
+          frame.roundRect(-w / 2 + 3, -height / 2 + 3, w - 6, height - 6, (height - 6) / 2);
+          frame.fill();
+          var fill = this.box('填充', 0, 0, w - 6, height - 6, undefined, node);
+          fill.addComponent(Graphics);
           var label = this.outline(this.label('', 0, 0, w - 8, 14, node));
           label.node.getComponent(UITransform).setContentSize(w - 8, height);
           label.lineHeight = 17;
           label.outlineWidth = 2;
           return {
-            width: w - 4,
+            width: w - 6,
             root: node,
             fill: fill,
-            label: label
+            label: label,
+            color: Color.fromHEX(new Color(), color)
           };
         };
         _proto.setMeter = function setMeter(meter, value, maximum, text) {
           var ratio = Math.min(1, Math.max(0, value / Math.max(1, maximum)));
-          meter.fill.setScale(ratio, 1, 1);
-          meter.fill.setPosition(-meter.width * (1 - ratio) / 2, 0);
-          meter.fill.active = ratio > 0;
+          var ink = meter.fill.getComponent(Graphics);
+          ink.clear();
+          var width = meter.width * ratio;
+          if (width > 0) {
+            ink.fillColor = meter.color;
+            ink.roundRect(-meter.width / 2, -9.5, width, 19, Math.min(9.5, width / 2));
+            ink.fill();
+          }
           meter.label.string = text;
         };
         _proto.updateHUD = function updateHUD() {
-          var _this9 = this;
+          var _this18 = this;
           this.setMeter(this.healthBar, this.hp, this.maxHP, String(Math.max(0, this.hp)));
           if (this.showsGuard) this.setMeter(this.guardBar, this.dp, this.maxDP, String(this.dp));
           this.coinText.string = String(this.walletGold);
           this.enemies.forEach(function (hp, i) {
-            return _this9.setMeter(_this9.enemyMeters[i], hp, _this9.enemyMax[i], String(Math.max(0, hp)));
+            return _this18.setMeter(_this18.enemyMeters[i], hp, _this18.enemyMax[i], String(Math.max(0, hp)));
           });
           this.syncBattleTools();
         };
@@ -1990,25 +7535,49 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           return this.phase === 'wolves' || this.phase === 'lessonBoss';
         };
         _proto.usePotion = function usePotion() {
-          var _this$heroes$get$posi, _this$heroes$get;
+          var _recipient$position$x, _recipient$position$y, _this$heroes$get$posi, _this$heroes$get;
           if (this.busy || this.automatic || this.potion <= 0 || this.guideMode === 'swap' || this.hp >= this.maxHP) return;
           var healed = Math.min(this.maxHP - this.hp, 45);
+          if (this.mineRecovery) {
+            var _live$state$mineRecov, _live$state$mineRecov2;
+            var director = this.dungeon,
+              room = director == null ? void 0 : director.room;
+            var current = director && room && this.minePermit(director, room),
+              board = this.stableMineBoard();
+            if (!current || !board || this.battlePhase !== 'input') return;
+            var live = current.live,
+              permit = current.permit;
+            var next = planMinePotion(live.state, {
+              roomId: permit.roomId,
+              generation: permit.generation,
+              operation: ((_live$state$mineRecov = (_live$state$mineRecov2 = live.state.mineRecovery.potion) == null ? void 0 : _live$state$mineRecov2.operation) != null ? _live$state$mineRecov : 0) + 1,
+              board: board,
+              enemies: [].concat(this.enemies),
+              marks: Array.from(this.rescueCells),
+              round: this.turn,
+              rally: this.oath.rally > 1,
+              oath: structuredClone(this.oath),
+              stunned: Array.from(this.stunned)
+            }, this.hp + healed, this.dp, this.potion);
+            if (!next || !this.persistMineRecovery(live, next)) return;
+          }
           this.hp += healed;
           this.potion--;
           this.clearGuide();
           this.audio.play('potion');
           this.setBattleStatus("\u836F\u6C34\u6062\u590D " + healed + " HP");
-          void this.combatPopup(this.motion, '+' + healed + ' HP', -94, 286, '#a1f6b9');
+          var recipient = Array.from(this.heroes.values())[0];
+          void this.combatPopup(this.motion, '+' + healed + ' HP', (_recipient$position$x = recipient == null ? void 0 : recipient.position.x) != null ? _recipient$position$x : -94, (_recipient$position$y = recipient == null ? void 0 : recipient.position.y) != null ? _recipient$position$y : 286, '#adf4b0', 27);
           void this.supportHalo(this.motion, (_this$heroes$get$posi = (_this$heroes$get = this.heroes.get('s')) == null ? void 0 : _this$heroes$get.position) != null ? _this$heroes$get$posi : new Vec3(-94, 245, 0), '#87eaa5');
           this.updateHUD();
         };
         _proto.bindTileInput = function bindTileInput(node, indexOf) {
-          var _this10 = this;
+          var _this19 = this;
           var start;
           node.on(Node.EventType.TOUCH_START, function (event) {
-            _this10.clearIdleHint();
+            _this19.clearIdleHint();
             var index = indexOf();
-            if (!_this10.canSelect(index)) return;
+            if (!_this19.canSelect(index)) return;
             var _event$getUILocation = event.getUILocation(),
               x = _event$getUILocation.x,
               y = _event$getUILocation.y;
@@ -2021,12 +7590,12 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           });
           var preview = -1;
           var restore = function restore() {
-            if (start && _this10.tiles[start.index]) _this10.tiles[start.index].setPosition(_this10.cells[start.index].position);
-            if (preview >= 0 && _this10.tiles[preview]) _this10.tiles[preview].setPosition(_this10.cells[preview].position);
+            if (start && _this19.tiles[start.index]) _this19.tiles[start.index].setPosition(_this19.cells[start.index].position);
+            if (preview >= 0 && _this19.tiles[preview]) _this19.tiles[preview].setPosition(_this19.cells[preview].position);
             preview = -1;
           };
           var project = function project(event) {
-            if (!start || start.id !== event.getID() || !_this10.canSelect(start.index)) return;
+            if (!start || start.id !== event.getID() || !_this19.canSelect(start.index)) return;
             restore();
             var end = event.getUILocation();
             var dx = end.x - start.x,
@@ -2035,13 +7604,13 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             var delta = horizontal ? dx : dy;
             if (Math.abs(delta) < 7) return;
             var target = start.index + (horizontal ? Math.sign(delta) : -cols * Math.sign(delta));
-            if (!adjacent(start.index, target) || !_this10.cells[target] || !_this10.canSelect(target)) return;
+            if (!adjacent(start.index, target) || !_this19.cells[target] || !_this19.canSelect(target)) return;
             preview = target;
-            var first = _this10.cells[start.index].position;
-            var second = _this10.cells[target].position;
+            var first = _this19.cells[start.index].position;
+            var second = _this19.cells[target].position;
             var fraction = Math.min(1, Math.abs(delta) / 61);
-            _this10.tiles[start.index].setPosition(Vec3.lerp(new Vec3(), first, second, fraction));
-            _this10.tiles[target].setPosition(Vec3.lerp(new Vec3(), second, first, fraction));
+            _this19.tiles[start.index].setPosition(Vec3.lerp(new Vec3(), first, second, fraction));
+            _this19.tiles[target].setPosition(Vec3.lerp(new Vec3(), second, first, fraction));
           };
           node.on(Node.EventType.TOUCH_MOVE, project);
           var finish = function finish(event, mayTap) {
@@ -2053,18 +7622,18 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             var end = event.getUILocation();
             if (Math.max(Math.abs(end.x - x), Math.abs(end.y - y)) >= 20) {
               project(event);
-              if (preview >= 0 && _this10.canSelect(index)) {
+              if (preview >= 0 && _this19.canSelect(index)) {
                 var target = preview;
                 preview = -1;
                 start = undefined;
-                _this10.selected = index;
-                void _this10.tap(target, false, true);
+                _this19.selected = index;
+                void _this19.tap(target, false, true);
                 return;
               }
             }
             restore();
             start = undefined;
-            if (mayTap && Math.max(Math.abs(end.x - x), Math.abs(end.y - y)) < 7) void _this10.tap(index);
+            if (mayTap && Math.max(Math.abs(end.x - x), Math.abs(end.y - y)) < 7) void _this19.tap(index);
           };
           node.on(Node.EventType.TOUCH_END, function (event) {
             return finish(event, true);
@@ -2080,29 +7649,40 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         _proto.tileIcon = function tileIcon(type, parent) {
           var _this$art;
           var shadow = (_this$art = this.art(type, 1, -3, 48, 48, parent)) == null ? void 0 : _this$art.getComponent(Sprite);
-          if (shadow) shadow.color = new Color(6, 12, 14, 145);
+          if (shadow) {
+            var _this$actorMaterial;
+            shadow.color = Color.WHITE;
+            (_this$actorMaterial = this.actorMaterial(shadow)) == null || _this$actorMaterial.setProperty('state', new Vec4(0, 0, 0, .57));
+          }
           this.art(type, 0, 0, 48, 48, parent);
         };
         _proto.tile = function tile(type, index, position) {
-          var _this11 = this;
+          var _this20 = this;
           if (position === void 0) {
             position = this.cells[index].position;
           }
           var node = this.box(type, position.x, position.y, 48, 48, undefined, this.tileLayer);
           this.tileIcon(type, node);
           this.bindTileInput(node, function () {
-            return _this11.tiles.indexOf(node);
+            return _this20.tiles.indexOf(node);
           });
           return node;
         };
         _proto.buildTiles = function buildTiles() {
-          var _this12 = this;
+          var _this21 = this,
+            _this$mineRecovery2;
           this.tiles.forEach(function (n) {
             return n.destroy();
           });
           this.tiles = this.board.map(function (type, index) {
-            return _this12.tile(type, index);
+            return _this21.tile(type, index);
           });
+          if (((_this$mineRecovery2 = this.mineRecovery) == null ? void 0 : _this$mineRecovery2.state.mineRecovery.source) === 'formal') {
+            for (var _iterator9 = _createForOfIteratorHelperLoose(this.tiles), _step9; !(_step9 = _iterator9()).done;) {
+              var node = _step9.value;
+              this.restoredTileIds.set(node, crypto.randomUUID());
+            }
+          }
           this.raiseBoardOverlays();
         };
         _proto.raiseBoardOverlays = function raiseBoardOverlays() {
@@ -2111,9 +7691,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           (_this$trialFxViewport = this.trialFxViewport) == null || _this$trialFxViewport.setSiblingIndex(this.ui.children.length - 1);
         };
         _proto.drawBoard = function drawBoard() {
-          var _this13 = this;
+          var _this22 = this;
           this.tiles.forEach(function (node, i) {
-            return node.setScale(_this13.selected === i ? .85 : 1, _this13.selected === i ? .85 : 1, 1);
+            return node.setScale(_this22.selected === i ? .85 : 1, _this22.selected === i ? .85 : 1, 1);
           });
           this.updateHUD();
         };
@@ -2125,16 +7705,16 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }));
         };
         _proto.drop = /*#__PURE__*/function () {
-          var _drop = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(motion, removed, plan) {
-            var _this14 = this;
-            var previous, next, _iterator5, _step5, _index2, slides, animate, _iterator6, _step6, _step6$value, from, to, path, _iterator7, _step7, _step7$value, _to, _path, direction, distance, entry, position;
-            return _regeneratorRuntime().wrap(function _callee3$(_context3) {
-              while (1) switch (_context3.prev = _context3.next) {
+          var _drop = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4(motion, removed, plan) {
+            var _this23 = this;
+            var previous, next, _iterator10, _step10, _index2, slides, animate, _iterator11, _step11, _step11$value, from, to, path, _iterator12, _step12, _this$mineRecovery3, _step12$value, _to, _path, direction, distance, entry, position;
+            return _regeneratorRuntime().wrap(function _callee4$(_context4) {
+              while (1) switch (_context4.prev = _context4.next) {
                 case 0:
                   previous = this.tiles;
                   next = previous.slice();
-                  for (_iterator5 = _createForOfIteratorHelperLoose(removed); !(_step5 = _iterator5()).done;) {
-                    _index2 = _step5.value;
+                  for (_iterator10 = _createForOfIteratorHelperLoose(removed); !(_step10 = _iterator10()).done;) {
+                    _index2 = _step10.value;
                     previous[_index2].destroy();
                   }
                   slides = [];
@@ -2142,15 +7722,15 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     if (entrySteps === void 0) {
                       entrySteps = 0;
                     }
-                    if (_this14.phase !== 'mine') {
-                      slides.push(_this14.moveTile(motion, tile, path[path.length - 1], .18));
+                    if (_this23.phase !== 'mine') {
+                      slides.push(_this23.moveTile(motion, tile, path[path.length - 1], .18));
                       return;
                     }
                     var slide = tween(tile);
                     for (var k = entrySteps ? 0 : 1; k < path.length; k++) {
                       var steps = k === 0 ? entrySteps : 1;
                       slide.to(motion.duration(.052 * steps), {
-                        position: _this14.cells[path[k]].position.clone()
+                        position: _this23.cells[path[k]].position.clone()
                       });
                     }
                     if (!motion.reduced) slide.to(.045, {
@@ -2160,29 +7740,30 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     });
                     slides.push(motion.play(slide));
                   };
-                  for (_iterator6 = _createForOfIteratorHelperLoose(plan.moves); !(_step6 = _iterator6()).done;) {
-                    _step6$value = _step6.value, from = _step6$value.from, to = _step6$value.to, path = _step6$value.path;
+                  for (_iterator11 = _createForOfIteratorHelperLoose(plan.moves); !(_step11 = _iterator11()).done;) {
+                    _step11$value = _step11.value, from = _step11$value.from, to = _step11$value.to, path = _step11$value.path;
                     next[to] = previous[from];
                     animate(next[to], path);
                   }
-                  for (_iterator7 = _createForOfIteratorHelperLoose(plan.spawns); !(_step7 = _iterator7()).done;) {
-                    _step7$value = _step7.value, _to = _step7$value.to, _path = _step7$value.path, direction = _step7$value.direction, distance = _step7$value.distance;
+                  for (_iterator12 = _createForOfIteratorHelperLoose(plan.spawns); !(_step12 = _iterator12()).done;) {
+                    _step12$value = _step12.value, _to = _step12$value.to, _path = _step12$value.path, direction = _step12$value.direction, distance = _step12$value.distance;
                     entry = this.cells[_path[0]].position;
                     position = new Vec3(entry.x - direction.x * 61 * distance, entry.y + direction.y * 61 * distance, 0);
                     next[_to] = this.tile(plan.board[_to], _to, position);
+                    if (((_this$mineRecovery3 = this.mineRecovery) == null ? void 0 : _this$mineRecovery3.state.mineRecovery.source) === 'formal') this.restoredTileIds.set(next[_to], crypto.randomUUID());
                     animate(next[_to], _path, distance);
                   }
                   this.tiles = next;
                   this.raiseBoardOverlays();
-                  _context3.next = 11;
+                  _context4.next = 11;
                   return Promise.all(slides);
                 case 11:
                   if (this.trial && !motion.cancelled) this.audio.playTrial('drop');
                 case 12:
                 case "end":
-                  return _context3.stop();
+                  return _context4.stop();
               }
-            }, _callee3, this);
+            }, _callee4, this);
           }));
           function drop(_x3, _x4, _x5) {
             return _drop.apply(this, arguments);
@@ -2193,34 +7774,34 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           return legalMove(this.board);
         };
         _proto.autoStep = function autoStep() {
-          var _this15 = this;
+          var _this24 = this;
           var root = this.ui;
           var request = ++this.autoRequest;
           if (!this.automatic || this.busy || root !== this.battleRoot || this.guideMode || this.battleModal) return;
           this.scheduleOnce(function () {
-            if (request !== _this15.autoRequest || !_this15.automatic || _this15.busy || root !== _this15.ui || _this15.battleModal) return;
-            var move = _this15.bestAutoMove();
+            if (request !== _this24.autoRequest || !_this24.automatic || _this24.busy || root !== _this24.ui || _this24.battleModal) return;
+            var move = _this24.bestAutoMove();
             if (move) {
-              _this15.selected = move[0];
-              void _this15.tap(move[1], true);
+              _this24.selected = move[0];
+              void _this24.tap(move[1], true);
             }
           }, .38);
         };
         _proto.bestAutoMove = function bestAutoMove() {
-          var _this16 = this;
+          var _this25 = this;
           var best;
           var bestScore = 0;
           for (var a = 0; a < this.board.length; a++) {
             var _loop2 = function _loop2() {
               var b = _arr2[_i3];
-              if (b >= _this16.board.length || !adjacent(a, b)) return 1; // continue
-              var next = _this16.board.slice();
-              var _ref3 = [next[b], next[a]];
-              next[a] = _ref3[0];
-              next[b] = _ref3[1];
+              if (b >= _this25.board.length || !adjacent(a, b)) return 1; // continue
+              var next = _this25.board.slice();
+              var _ref6 = [next[b], next[a]];
+              next[a] = _ref6[0];
+              next[b] = _ref6[1];
               var score = matches(next).reduce(function (sum, group) {
                 var type = next[group[0]];
-                var weight = type === 'h' && _this16.hp < _this16.maxHP * .6 ? 2 : type === 'd' && _this16.dp < _this16.maxDP * .4 ? 1.7 : type === 'cry' ? .5 : 1;
+                var weight = type === 'h' && _this25.hp < _this25.maxHP * .6 ? 2 : type === 'd' && _this25.dp < _this25.maxDP * .4 ? 1.7 : type === 'cry' ? .5 : 1;
                 return sum + group.length * weight;
               }, 0);
               if (score > bestScore) {
@@ -2234,13 +7815,911 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }
           return best;
         };
+        _proto.stopStage4A = function stopStage4A(reason) {
+          var _live$session, _this$motion6;
+          var live = this.stage4A;
+          if (!live) return;
+          this.stage4A = undefined;
+          this.stage4AGeneration++;
+          (_live$session = live.session) == null || _live$session.cancel(reason);
+          (_this$motion6 = this.motion) == null || _this$motion6.cancel();
+          this.hp = live.entryHP;
+          this.dp = live.entryDP;
+        };
+        _proto.wantsStage4A = function wantsStage4A() {
+          // Frozen after the multi-color cascade audit. All playable rooms use
+          // the shared wave-by-wave battle path until a new rollout is approved.
+          return false;
+        };
+        _proto.stage4ASeed = function stage4ASeed() {
+          var _URLSearchParams$get2;
+          return Number((_URLSearchParams$get2 = new URLSearchParams(location.search).get('seed')) != null ? _URLSearchParams$get2 : Date.now()) >>> 0;
+        };
+        _proto.setupStage4A = function setupStage4A() {
+          var _this$dungeon4,
+            _this26 = this;
+          var room = (_this$dungeon4 = this.dungeon) == null ? void 0 : _this$dungeon4.room;
+          if (!this.wantsStage4A() || (room == null ? void 0 : room.kind) !== 'battle') return;
+          var generation = ++this.stage4AGeneration;
+          var live = {
+            generation: generation,
+            runId: crypto.randomUUID(),
+            nodes: new Map(),
+            journal: [],
+            samples: [],
+            eligible: false,
+            published: [],
+            entryHP: this.hp,
+            entryDP: this.dp,
+            potionSequence: 0
+          };
+          this.stage4A = live; // Lock ownership even if this room cannot start.
+          try {
+            var _room$rescueCells2, _this$adventure2;
+            var gear = Object.values(this.inventory.slots);
+            if ((_room$rescueCells2 = room.rescueCells) != null && _room$rescueCells2.length || gear.includes('healcore')) throw Error('该配置包含尚未决定的救援或生命圣杯规则');
+            var seed = this.stage4ASeed();
+            var tiles = this.board.map(function (emblem, i) {
+              return _extends({
+                id: "room:" + generation + ":" + i,
+                emblem: emblem
+              }, _this26.chargedTiles.get(_this26.tiles[i]) ? {
+                tier: _this26.chargedTiles.get(_this26.tiles[i])
+              } : {});
+            });
+            tiles.forEach(function (tile, i) {
+              return live.nodes.set(tile.id, _this26.tiles[i]);
+            });
+            var ids = this.enemies.map(function (_, i) {
+              return 'enemy:' + i;
+            });
+            var core = createBattleCore(setupFormalRoom({
+              battleId: 'game:' + generation,
+              roomId: 'mine:0',
+              seed: seed,
+              hp: this.hp,
+              maxHP: this.maxHP,
+              dp: this.dp,
+              maxDP: this.maxDP,
+              tutorial: false,
+              revisedSkills: true,
+              roles: [].concat(this.party),
+              attacks: Object.fromEntries(this.party.map(function (role) {
+                return [role, _this26.heroAttack(role)];
+              })),
+              gear: gear,
+              buffs: _extends({}, (_this$adventure2 = this.adventure) == null ? void 0 : _this$adventure2.buffs),
+              enemies: this.foes.map(function (foe, i) {
+                return {
+                  id: ids[i],
+                  attack: foe.atk,
+                  tags: [].concat(foe.tags),
+                  armor: foe.armor
+                };
+              }),
+              enemyHP: Object.fromEntries(ids.map(function (id, i) {
+                return [id, _this26.enemies[i]];
+              })),
+              tiles: tiles,
+              rescue: [],
+              swaps: {
+                move: 'open'
+              }
+            }), {
+              boardMode: 'external',
+              generation: generation
+            });
+            live.core = core;
+            live.session = new IsolatedBoardSession(core);
+            live.potion = createPotionBridge(core, {
+              reserve: function reserve() {
+                var gate = _this26.saveGate;
+                var raw = gate == null ? void 0 : gate.read();
+                if (!(gate != null && gate.writable) || !raw || _this26.potion <= 0) return undefined;
+                var stored;
+                try {
+                  stored = JSON.parse(raw);
+                } catch (_unused6) {
+                  return undefined;
+                }
+                if (!stored || typeof stored !== 'object') return undefined;
+                var stock = stored.potion === true ? 1 : stored.potion;
+                if (stock !== _this26.potion) return undefined;
+                var after = stock - 1;
+                return {
+                  release: function release() {},
+                  confirm: function confirm() {
+                    if (_this26.stage4A !== live || gate.write(JSON.stringify(_extends({}, stored, {
+                      potion: after
+                    })), raw) !== 'committed') throw Error('Potion stock could not be confirmed normally');
+                    _this26.potion = after;
+                  }
+                };
+              }
+            }, function () {
+              return _this26.stage4A === live;
+            });
+          } catch (error) {
+            live.error = String(error);
+          }
+        };
+        _proto.useStage4APotion = function useStage4APotion() {
+          var _this$heroes$get$posi2,
+            _this$heroes$get2,
+            _this27 = this;
+          var live = this.stage4A;
+          if (!(live != null && live.core) || !live.potion || live.error || this.busy || this.automatic || this.battlePhase !== 'input') return;
+          var result = live.potion(live.core.snapshot().fixture.battleId + ':potion:' + ++live.potionSequence);
+          if (result === 'confirm-uncertain') {
+            this.stage4AStockUncertain = true;
+            live.error = '药水库存提交结果不明，请重新加载核对库存';
+            this.busy = true;
+            this.battlePhase = 'resolve';
+            this.setBattleStatus(live.error);
+            this.updateHUD();
+            return;
+          }
+          if (result !== 'applied') return;
+          var snapshot = live.core.snapshot();
+          live.journal = snapshot.events;
+          var event = snapshot.events.at(-1);
+          this.hp = snapshot.state.partyHP;
+          this.audio.play('potion');
+          this.setBattleStatus('药水恢复 ' + event.payload.amount + ' HP');
+          var motion = this.motion;
+          void this.supportHalo(motion, (_this$heroes$get$posi2 = (_this$heroes$get2 = this.heroes.get('s')) == null ? void 0 : _this$heroes$get2.position) != null ? _this$heroes$get$posi2 : new Vec3(-94, 245, 0), '#87eaa5').then(function () {
+            if (_this27.stage4A === live && !motion.cancelled) live.core.acknowledgePresentation(event.eventId);
+          });
+          this.updateHUD();
+        };
+        _proto.stage4ASwap = /*#__PURE__*/function () {
+          var _stage4ASwap = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee13(a, b, preview) {
+            var _this28 = this;
+            var live, core, session, motion, current, _this$boardFx2, swapView, waves, tail, releaseFocus, attackTier, returnAnimation, clearFocus, cursor, parents, view, enqueue, publish, ticket, _reason, _live$journal$at, result, _iterator15, _step15, wave, _iterator17, _step17, _play, _i4, _tail, play, _iterator16, _step16, event, snapshot;
+            return _regeneratorRuntime().wrap(function _callee13$(_context13) {
+              while (1) switch (_context13.prev = _context13.next) {
+                case 0:
+                  live = this.stage4A;
+                  core = live.core, session = live.session;
+                  motion = this.motion;
+                  current = function current() {
+                    return _this28.stage4A === live && !motion.cancelled;
+                  };
+                  this.selected = -1;
+                  if (!(!core || !session || live.error || core.disposition !== 'active')) {
+                    _context13.next = 7;
+                    break;
+                  }
+                  return _context13.abrupt("return");
+                case 7:
+                  this.busy = true;
+                  this.battlePhase = 'resolve';
+                  this.drawBoard();
+                  this.audio.playTrial('swap');
+                  if (validExchange(core.snapshot().state.board, [a, b])) {
+                    _context13.next = 17;
+                    break;
+                  }
+                  this.audio.playTrial('invalid');
+                  _context13.next = 15;
+                  return Promise.all([this.moveTile(motion, this.tiles[a], a, .12), this.moveTile(motion, this.tiles[b], b, .12), (_this$boardFx2 = this.boardFx) == null ? void 0 : _this$boardFx2.reject(motion, [this.cells[a].position, this.cells[b].position])]);
+                case 15:
+                  if (current()) this.resumeBattleInput('没有成组，换位已还原');
+                  return _context13.abrupt("return");
+                case 17:
+                  // Core facts are submitted independently. Presentation replays their causal waves.
+                  swapView = Promise.all([this.moveTile(motion, this.tiles[a], b, preview ? .06 : .12), this.moveTile(motion, this.tiles[b], a, preview ? .06 : .12)]).then(function () {
+                    if (!current()) return;
+                    var _ref7 = [_this28.tiles[b], _this28.tiles[a]];
+                    _this28.tiles[a] = _ref7[0];
+                    _this28.tiles[b] = _ref7[1];
+                    var _ref8 = [_this28.board[b], _this28.board[a]];
+                    _this28.board[a] = _ref8[0];
+                    _this28.board[b] = _ref8[1];
+                  });
+                  waves = new Map();
+                  tail = [];
+                  clearFocus = function clearFocus() {
+                    releaseFocus == null || releaseFocus();
+                    releaseFocus = undefined;
+                  };
+                  cursor = live.journal.length;
+                  parents = new Map();
+                  view = function view(lane, event, play) {
+                    return /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5() {
+                      var start;
+                      return _regeneratorRuntime().wrap(function _callee5$(_context5) {
+                        while (1) switch (_context5.prev = _context5.next) {
+                          case 0:
+                            if (current()) {
+                              _context5.next = 2;
+                              break;
+                            }
+                            return _context5.abrupt("return");
+                          case 2:
+                            start = performance.now();
+                            _context5.next = 5;
+                            return play();
+                          case 5:
+                            if (current()) live.samples.push({
+                              lane: lane,
+                              id: event.eventId,
+                              start: start,
+                              end: performance.now()
+                            });
+                          case 6:
+                          case "end":
+                            return _context5.stop();
+                        }
+                      }, _callee5);
+                    }));
+                  };
+                  enqueue = function enqueue(lane, event, play) {
+                    if (event.phase === 'ENEMY_RESOLVE') {
+                      tail.push(view(lane, event, play));
+                      return;
+                    }
+                    var cause = event.parentEventId;
+                    while (cause && !waves.has(cause)) {
+                      var _parents$get;
+                      cause = (_parents$get = parents.get(cause)) != null ? _parents$get : null;
+                    }
+                    var wave = cause && waves.get(cause);
+                    (wave ? wave.actors : tail).push(view(lane, event, play));
+                  };
+                  publish = function publish() {
+                    var snap = core.snapshot();
+                    live.journal = snap.events;
+                    var _loop3 = function _loop3() {
+                      var _event$sourceId, _event$targetId;
+                      var event = _step13.value;
+                      parents.set(event.eventId, event.parentEventId);
+                      live.published.push({
+                        id: event.eventId,
+                        time: performance.now()
+                      });
+                      var frame = event.type === 'MATCH_RESOLVED' ? core.frame(event.eventId) : undefined;
+                      if (frame) {
+                        var facts = event.payload;
+                        var removed = new Set(facts.removed);
+                        var matched = facts.removed.concat(facts.generated.map(function (g) {
+                          return g.index;
+                        }));
+                        var clear = view('board', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6() {
+                          var _this28$boardFx, _this28$boardFx2;
+                          var oldNodes, _iterator14, _step14, _step14$value, _index3, tile;
+                          return _regeneratorRuntime().wrap(function _callee6$(_context6) {
+                            while (1) switch (_context6.prev = _context6.next) {
+                              case 0:
+                                oldNodes = _this28.tiles.slice();
+                                _iterator14 = _createForOfIteratorHelperLoose(facts.generated);
+                              case 2:
+                                if ((_step14 = _iterator14()).done) {
+                                  _context6.next = 9;
+                                  break;
+                                }
+                                _step14$value = _step14.value, _index3 = _step14$value.index, tile = _step14$value.tile;
+                                if (!(live.nodes.get(tile.id) !== oldNodes[_index3])) {
+                                  _context6.next = 6;
+                                  break;
+                                }
+                                throw Error('强化演出棋子身份不一致');
+                              case 6:
+                                _this28.markCharged(_index3, tile.tier);
+                              case 7:
+                                _context6.next = 2;
+                                break;
+                              case 9:
+                                _this28.audio.playChain(facts.wave - 1);
+                                if (facts.generated.length) _this28.audio.playTrial('create');
+                                _context6.next = 13;
+                                return Promise.all([_this28.flashTiles(motion, matched, removed, false)].concat(facts.generated.map(function (_ref11) {
+                                  var index = _ref11.index;
+                                  return _this28.dropCharge(motion, oldNodes[index]);
+                                }), [(_this28$boardFx = _this28.boardFx) == null ? void 0 : _this28$boardFx.combo(motion, facts.wave, new Vec3(0, 80, 0)), (_this28$boardFx2 = _this28.boardFx) == null ? void 0 : _this28$boardFx2.chargeReady(motion, facts.generated.map(function (_ref12) {
+                                  var index = _ref12.index;
+                                  return {
+                                    position: _this28.cells[index].position
+                                  };
+                                }))]));
+                              case 13:
+                              case "end":
+                                return _context6.stop();
+                            }
+                          }, _callee6);
+                        })));
+                        var refill = view('board', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee7() {
+                          var paths, nextNodes;
+                          return _regeneratorRuntime().wrap(function _callee7$(_context7) {
+                            while (1) switch (_context7.prev = _context7.next) {
+                              case 0:
+                                // The committed frame supplies colors and stable IDs; geometry uses the previous frame.
+                                paths = planRefill(_this28.board, removed, [''], function () {
+                                  return 0;
+                                }, mineGravity);
+                                paths.board = frame.board.tiles.map(function (t) {
+                                  return t.emblem;
+                                });
+                                _this28.board = paths.board;
+                                _this28.audio.playTrial('drop');
+                                _context7.next = 6;
+                                return _this28.drop(motion, removed, paths);
+                              case 6:
+                                if (current()) {
+                                  _context7.next = 8;
+                                  break;
+                                }
+                                return _context7.abrupt("return");
+                              case 8:
+                                nextNodes = new Map();
+                                frame.board.tiles.forEach(function (_ref14, i) {
+                                  var id = _ref14.id;
+                                  var previous = live.nodes.get(id);
+                                  if (previous && previous !== _this28.tiles[i]) throw Error('矿轨演出棋子身份不一致');
+                                  nextNodes.set(id, _this28.tiles[i]);
+                                });
+                                live.nodes = nextNodes;
+                              case 11:
+                              case "end":
+                                return _context7.stop();
+                            }
+                          }, _callee7);
+                        })));
+                        waves.set(event.eventId, {
+                          clear: clear,
+                          refill: refill,
+                          actors: []
+                        });
+                      }
+                      if (event.type === 'CAST_STARTED' && event.sourceId) {
+                        var actor = _this28.heroes.get(event.sourceId);
+                        if (actor) enqueue('actor', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee8() {
+                          var home, cast, targets, target, color, _target$getChildByNam, _target$getChildByNam2, _actor$getChildByName, _actor$getChildByName2, _ground, foot, contact;
+                          return _regeneratorRuntime().wrap(function _callee8$(_context8) {
+                            while (1) switch (_context8.prev = _context8.next) {
+                              case 0:
+                                home = actor.position.clone();
+                                cast = event.payload;
+                                targets = cast.targets.flatMap(function (id) {
+                                  var target = _this28.enemyNodes[Number(id.split(':')[1])];
+                                  return target != null && target.active ? [target] : [];
+                                });
+                                target = targets[0];
+                                clearFocus();
+                                attackTier = cast.tier;
+                                releaseFocus = _this28.focusCombat(motion, [].concat(targets, [actor]));
+                                if (cast.tier || cast.kind !== 'attack') _this28.audio.play('charge');
+                                if (!(cast.tier && !motion.reduced)) {
+                                  _context8.next = 11;
+                                  break;
+                                }
+                                _context8.next = 11;
+                                return _this28.castSkillEffect(motion, home, cast.tier === 'advanced');
+                              case 11:
+                                if (current()) {
+                                  _context8.next = 13;
+                                  break;
+                                }
+                                return _context8.abrupt("return");
+                              case 13:
+                                if (!(cast.kind !== 'attack')) {
+                                  _context8.next = 19;
+                                  break;
+                                }
+                                color = cast.kind === 'heal' ? '#81f4a4' : cast.kind === 'guard' ? '#8bcbff' : '#ffbc60';
+                                _context8.next = 17;
+                                return Promise.all([_this28.supportHalo(motion, home, color)].concat(_this28.burst(motion, home.x, home.y, color, 6)));
+                              case 17:
+                                _context8.next = 31;
+                                break;
+                              case 19:
+                                if (!(target && (cast.skill === 'm' || cast.skill === 'stone'))) {
+                                  _context8.next = 24;
+                                  break;
+                                }
+                                _context8.next = 22;
+                                return _this28.flyProjectile(motion, cast.skill, home, target.position.clone());
+                              case 22:
+                                _context8.next = 31;
+                                break;
+                              case 24:
+                                if (!target) {
+                                  _context8.next = 31;
+                                  break;
+                                }
+                                _ground = target.position.y + ((_target$getChildByNam = (_target$getChildByNam2 = target.getChildByName('脚底投影')) == null ? void 0 : _target$getChildByNam2.position.y) != null ? _target$getChildByNam : -34);
+                                foot = (_actor$getChildByName = (_actor$getChildByName2 = actor.getChildByName('脚底投影')) == null ? void 0 : _actor$getChildByName2.position.y) != null ? _actor$getChildByName : -34;
+                                contact = new Vec3(target.position.x - 36, _ground - foot, 0);
+                                _context8.next = 30;
+                                return motion.play(tween(actor).to(motion.duration(.105), {
+                                  position: contact
+                                }));
+                              case 30:
+                                if (current()) returnAnimation = motion.play(tween(actor).to(motion.duration(.18), {
+                                  position: home
+                                }, {
+                                  easing: 'quadOut'
+                                }));
+                              case 31:
+                              case "end":
+                                return _context8.stop();
+                            }
+                          }, _callee8);
+                        })));
+                      }
+                      if (event.type === 'CAST_COMPLETED') enqueue('actor', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee9() {
+                        return _regeneratorRuntime().wrap(function _callee9$(_context9) {
+                          while (1) switch (_context9.prev = _context9.next) {
+                            case 0:
+                              _context9.next = 2;
+                              return returnAnimation;
+                            case 2:
+                              returnAnimation = undefined;
+                              clearFocus();
+                              attackTier = undefined;
+                            case 5:
+                            case "end":
+                              return _context9.stop();
+                          }
+                        }, _callee9);
+                      })));
+                      if (event.type === 'ACTION_OPPORTUNITY' && (_event$sourceId = event.sourceId) != null && _event$sourceId.startsWith('enemy:') && !snap.events.some(function (e) {
+                        return e.parentEventId === event.eventId && e.type === 'ACTION_SKIPPED';
+                      })) {
+                        var _index4 = Number(event.sourceId.split(':')[1]);
+                        enqueue('actor', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee10() {
+                          var node, home, art, _this28$heroes$values, _this28$heroes$values2;
+                          return _regeneratorRuntime().wrap(function _callee10$(_context10) {
+                            while (1) switch (_context10.prev = _context10.next) {
+                              case 0:
+                                node = _this28.enemyNodes[_index4];
+                                if (node) {
+                                  _context10.next = 3;
+                                  break;
+                                }
+                                return _context10.abrupt("return");
+                              case 3:
+                                home = node.position.clone();
+                                clearFocus();
+                                releaseFocus = _this28.focusCombat(motion, [].concat(Array.from(_this28.heroes.values()), [node]));
+                                art = _this28.foes[_index4].art;
+                                if (!(art === 'wizard' || art === 'vine')) {
+                                  _context10.next = 12;
+                                  break;
+                                }
+                                _context10.next = 10;
+                                return _this28.flyProjectile(motion, art === 'wizard' ? 'm' : 'stone', home, (_this28$heroes$values = (_this28$heroes$values2 = _this28.heroes.values().next().value) == null ? void 0 : _this28$heroes$values2.position) != null ? _this28$heroes$values : new Vec3(-100, 240, 0));
+                              case 10:
+                                _context10.next = 14;
+                                break;
+                              case 12:
+                                _context10.next = 14;
+                                return motion.play(tween(node).to(motion.duration(.14), {
+                                  position: home.clone().add(new Vec3(-27, 0, 0))
+                                }).to(motion.duration(.17), {
+                                  position: home
+                                }));
+                              case 14:
+                              case "end":
+                                return _context10.stop();
+                            }
+                          }, _callee10);
+                        })));
+                      }
+                      if (event.type === 'HEAL_APPLIED' || event.type === 'DP_RESTORED' || event.type === 'ENEMY_AGGREGATE_RESOLVED') {
+                        var meters = event.payload;
+                        enqueue('actor', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee11() {
+                          var _meters$amount, _meters$amount2;
+                          var _meters$remainingHP, _meters$remainingDP, _meters$lost, lost, _meters$absorbed, absorbed;
+                          return _regeneratorRuntime().wrap(function _callee11$(_context11) {
+                            while (1) switch (_context11.prev = _context11.next) {
+                              case 0:
+                                if (event.type === 'HEAL_APPLIED') _this28.hp = Math.min(_this28.maxHP, _this28.hp + ((_meters$amount = meters.amount) != null ? _meters$amount : 0));else if (event.type === 'DP_RESTORED') _this28.dp = Math.min(_this28.maxDP, _this28.dp + ((_meters$amount2 = meters.amount) != null ? _meters$amount2 : 0));else {
+                                  _this28.hp = (_meters$remainingHP = meters.remainingHP) != null ? _meters$remainingHP : _this28.hp;
+                                  _this28.dp = (_meters$remainingDP = meters.remainingDP) != null ? _meters$remainingDP : _this28.dp;
+                                }
+                                _this28.updateHUD();
+                                if (!(event.type === 'ENEMY_AGGREGATE_RESOLVED')) {
+                                  _context11.next = 9;
+                                  break;
+                                }
+                                _meters$lost = meters.lost, lost = _meters$lost === void 0 ? 0 : _meters$lost, _meters$absorbed = meters.absorbed, absorbed = _meters$absorbed === void 0 ? 0 : _meters$absorbed;
+                                if (!(lost || absorbed)) {
+                                  _context11.next = 8;
+                                  break;
+                                }
+                                _this28.audio.play('hurt');
+                                _context11.next = 8;
+                                return Promise.all([_this28.combatPopup(motion, [lost && '−' + lost + ' HP', absorbed && '−' + absorbed + ' DP'].filter(Boolean).join(' · '), -100, 283, '#ffaaa2')].concat(Array.from(_this28.heroes.values(), function (hero) {
+                                  return _this28.hitReaction(motion, hero);
+                                }), [lost && _this28.hp <= _this28.maxHP * .30 ? _this28.lowHealthFlash(motion) : undefined]));
+                              case 8:
+                                clearFocus();
+                              case 9:
+                              case "end":
+                                return _context11.stop();
+                            }
+                          }, _callee11);
+                        })));
+                      }
+                      if (event.type === 'HIT_RESOLVED' && (_event$targetId = event.targetId) != null && _event$targetId.startsWith('enemy:')) {
+                        var _index5 = Number(event.targetId.split(':')[1]);
+                        var hit = event.payload;
+                        enqueue('actor', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee12() {
+                          var node, home, fallen, effects, _node$getChildByName$, _node$getChildByName, _node$getComponent, alpha;
+                          return _regeneratorRuntime().wrap(function _callee12$(_context12) {
+                            while (1) switch (_context12.prev = _context12.next) {
+                              case 0:
+                                _this28.enemies[_index5] = Math.max(0, _this28.enemies[_index5] - hit.lost);
+                                _this28.updateHUD();
+                                node = _this28.enemyNodes[_index5];
+                                if (node) {
+                                  _context12.next = 5;
+                                  break;
+                                }
+                                return _context12.abrupt("return");
+                              case 5:
+                                home = node.position.clone();
+                                fallen = _this28.enemies[_index5] === 0;
+                                _this28.audio.play('hit');
+                                effects = [_this28.hitReaction(motion, node), _this28.combatPopup(motion, '−' + hit.lost, home.x, home.y + 51, attackTier === 'advanced' ? '#ffd66b' : '#ffe7b0', attackTier === 'advanced' ? 38 : attackTier ? 32 : 27), motion.play(tween(node).to(motion.duration(.065), {
+                                  position: home.clone().add(new Vec3(11, 0, 0))
+                                }).to(motion.duration(.10), {
+                                  position: home
+                                }))].concat(_this28.burst(motion, home.x, home.y, _this28.foes[_index5].tags.includes('armor') ? '#ffde86' : event.sourceId === 'm' ? '#d4a6ff' : '#ffb784', 6));
+                                if (fallen) {
+                                  _this28.lastFallen = {
+                                    origin: home,
+                                    ground: home.y + ((_node$getChildByName$ = (_node$getChildByName = node.getChildByName('脚底投影')) == null ? void 0 : _node$getChildByName.position.y) != null ? _node$getChildByName$ : -34)
+                                  };
+                                  alpha = (_node$getComponent = node.getComponent(UIOpacity)) != null ? _node$getComponent : node.addComponent(UIOpacity);
+                                  effects.push(motion.play(tween(alpha).delay(motion.duration(.17)).to(motion.duration(.25), {
+                                    opacity: 0
+                                  })), _this28.soulRise(motion, home));
+                                }
+                                _context12.next = 12;
+                                return Promise.all(effects);
+                              case 12:
+                                if (current() && fallen) {
+                                  node.active = false;
+                                  _this28.enemyMeters[_index5].root.active = false;
+                                }
+                              case 13:
+                              case "end":
+                                return _context12.stop();
+                            }
+                          }, _callee12);
+                        })));
+                      }
+                    };
+                    for (var _iterator13 = _createForOfIteratorHelperLoose(snap.events.slice(cursor)), _step13; !(_step13 = _iterator13()).done;) {
+                      _loop3();
+                    }
+                    cursor = snap.events.length;
+                  };
+                  _context13.prev = 26;
+                  ticket = core.submit({
+                    swap: 'move'
+                  });
+                  publish();
+                case 29:
+                  if (!(ticket && current())) {
+                    _context13.next = 44;
+                    break;
+                  }
+                  _context13.next = 32;
+                  return session.resolve(ticket, _extends({}, ticket.wave === 1 ? {
+                    swap: [a, b]
+                  } : {}, {
+                    pool: this.types,
+                    gravity: 'mine'
+                  }));
+                case 32:
+                  result = _context13.sent;
+                  if (current()) {
+                    _context13.next = 35;
+                    break;
+                  }
+                  return _context13.abrupt("return");
+                case 35:
+                  publish();
+                  if (result.ok) {
+                    _context13.next = 38;
+                    break;
+                  }
+                  throw Error(String((_reason = (_live$journal$at = live.journal.at(-1)) == null || (_live$journal$at = _live$journal$at.payload) == null ? void 0 : _live$journal$at.reason) != null ? _reason : '棋盘请求失败；请查看事件记录'));
+                case 38:
+                  ticket = result.next;
+                  if (!ticket) {
+                    _context13.next = 42;
+                    break;
+                  }
+                  _context13.next = 42;
+                  return new Promise(function (resolve) {
+                    return requestAnimationFrame(function () {
+                      return resolve();
+                    });
+                  });
+                case 42:
+                  _context13.next = 29;
+                  break;
+                case 44:
+                  _context13.next = 46;
+                  return swapView;
+                case 46:
+                  if (current()) {
+                    _context13.next = 48;
+                    break;
+                  }
+                  return _context13.abrupt("return");
+                case 48:
+                  _iterator15 = _createForOfIteratorHelperLoose(waves.values());
+                case 49:
+                  if ((_step15 = _iterator15()).done) {
+                    _context13.next = 66;
+                    break;
+                  }
+                  wave = _step15.value;
+                  _context13.next = 53;
+                  return wave.clear();
+                case 53:
+                  _iterator17 = _createForOfIteratorHelperLoose(wave.actors);
+                case 54:
+                  if ((_step17 = _iterator17()).done) {
+                    _context13.next = 60;
+                    break;
+                  }
+                  _play = _step17.value;
+                  _context13.next = 58;
+                  return _play();
+                case 58:
+                  _context13.next = 54;
+                  break;
+                case 60:
+                  _context13.next = 62;
+                  return wave.refill();
+                case 62:
+                  if (current()) {
+                    _context13.next = 64;
+                    break;
+                  }
+                  return _context13.abrupt("return");
+                case 64:
+                  _context13.next = 49;
+                  break;
+                case 66:
+                  _i4 = 0, _tail = tail;
+                case 67:
+                  if (!(_i4 < _tail.length)) {
+                    _context13.next = 74;
+                    break;
+                  }
+                  play = _tail[_i4];
+                  _context13.next = 71;
+                  return play();
+                case 71:
+                  _i4++;
+                  _context13.next = 67;
+                  break;
+                case 74:
+                  if (current()) {
+                    _context13.next = 76;
+                    break;
+                  }
+                  return _context13.abrupt("return");
+                case 76:
+                  for (_iterator16 = _createForOfIteratorHelperLoose(live.journal); !(_step16 = _iterator16()).done;) {
+                    event = _step16.value;
+                    core.acknowledgePresentation(event.eventId);
+                  }
+                  snapshot = core.snapshot();
+                  this.hp = snapshot.state.partyHP;
+                  this.dp = snapshot.state.combat.partyDP;
+                  this.enemies = Object.values(snapshot.state.enemies);
+                  this.turn = snapshot.state.roundId + 1;
+                  this.updateHUD();
+                  if (snapshot.result) {
+                    live.eligible = snapshot.state.producers.length === 0 && live.journal.some(function (e) {
+                      return e.type === 'BOARD_STABILIZED';
+                    }) && live.journal.filter(function (e) {
+                      return e.type === 'BATTLE_TERMINATED';
+                    }).length === 1;
+                    this.automatic = false;
+                    this.setBattleStatus('首房战斗已结束');
+                    if (snapshot.result.outcome === 'win') this.commitMineFirstVictory(live, this.dungeon, this.dungeon.room);else this.audio.play('defeat');
+                  } else this.resumeBattleInput('轮到玩家，交换相邻纹章');
+                  _context13.next = 96;
+                  break;
+                case 86:
+                  _context13.prev = 86;
+                  _context13.t0 = _context13["catch"](26);
+                  if (!(this.stage4A !== live || motion.cancelled)) {
+                    _context13.next = 90;
+                    break;
+                  }
+                  return _context13.abrupt("return");
+                case 90:
+                  live.error = String(_context13.t0);
+                  session.cancel('stage4a-failed');
+                  motion.cancel();
+                  _context13.next = 95;
+                  return Promise.allSettled([swapView]);
+                case 95:
+                  if (this.stage4A === live) this.setBattleStatus('验证战斗已阻断 · 可撤离');
+                case 96:
+                  _context13.prev = 96;
+                  clearFocus();
+                  return _context13.finish(96);
+                case 99:
+                case "end":
+                  return _context13.stop();
+              }
+            }, _callee13, this, [[26, 86, 96, 99]]);
+          }));
+          function stage4ASwap(_x6, _x7, _x8) {
+            return _stage4ASwap.apply(this, arguments);
+          }
+          return stage4ASwap;
+        }();
+        _proto.commitMineFirstVictory = function commitMineFirstVictory(live, director, room) {
+          var _snapshot$result,
+            _snapshot$state$deriv,
+            _this29 = this,
+            _this$lastFallen;
+          if (this.stage4A !== live || this.stage4AGeneration !== live.generation || this.dungeon !== director || director.room !== room || director.depth !== 0 || !this.wantsStage4A() || !live.eligible || live.error || this.mineRecovery) return;
+          var snapshot = live.core.snapshot();
+          var ends = snapshot.events.filter(function (e) {
+            return e.type === 'BATTLE_TERMINATED';
+          });
+          var settled = snapshot.events.findLast(function (e) {
+            return e.type === 'BOARD_STABILIZED';
+          });
+          var board = snapshot.state.board;
+          var gate = this.saveGate;
+          var raw = gate == null ? void 0 : gate.read();
+          if (((_snapshot$result = snapshot.result) == null ? void 0 : _snapshot$result.outcome) !== 'win' || snapshot.result.roomId !== 'mine:0' || ends.length !== 1 || ends[0].battleId !== snapshot.result.battleId || !settled || settled.sequence >= ends[0].sequence || snapshot.state.producers.length || snapshot.state.partyQueue.length || snapshot.state.delayed.length || snapshot.state.personal.some(function (_ref20) {
+            var queue = _ref20[1];
+            return queue.length;
+          }) || (_snapshot$state$deriv = snapshot.state.derivation) != null && _snapshot$state$deriv.requests.length || snapshot.events.some(function (e) {
+            return live.core.frame(e.eventId);
+          }) || !board || board.tiles.some(function (t) {
+            return !t;
+          }) || !legalMove(board.tiles.map(function (t) {
+            return t.emblem;
+          })) || !(gate != null && gate.writable) || !raw) {
+            this.showRecoveryStop('首房终局或存档未通过校验。');
+            return;
+          }
+          var player = JSON.parse(raw);
+          var run = this.adventure;
+          var stock = typeof player.potion === 'boolean' ? Number(player.potion) : Number.isFinite(player.potion) ? Math.max(0, Math.min(99, Math.floor(player.potion))) : 0;
+          if ((run == null ? void 0 : run.id) !== 'mine' || run.coins || run.xp || run.ordinaryWins || Object.keys(run.loot).length || stock !== this.potion) {
+            this.showRecoveryStop('首房待结算收益或库存无法核对。');
+            return;
+          }
+          var next = planMineFirstVictory({
+            schemaVersion: 1,
+            player: _extends({}, player, {
+              location: locations.indexOf('mine'),
+              hp: snapshot.state.partyHP,
+              dp: snapshot.state.combat.partyDP
+            }),
+            run: {
+              runId: live.runId,
+              generation: live.generation,
+              route: director.rooms.map(function (room, i) {
+                return {
+                  id: 'mine:' + i,
+                  room: room
+                };
+              }),
+              cursor: 0,
+              pending: {
+                coins: 0,
+                xp: 0,
+                ordinaryWins: 0,
+                loot: {}
+              },
+              board: null,
+              receipts: [],
+              closed: null
+            }
+          }, {
+            runId: live.runId,
+            roomId: 'mine:0',
+            generation: live.generation,
+            terminalEventId: ends[0].eventId
+          }, {
+            gravity: 'mine/v1',
+            tiles: board.tiles.map(function (t) {
+              return t;
+            })
+          });
+          if (!next) {
+            this.showRecoveryStop('首房事务快照未通过校验。');
+            return;
+          }
+          var payload = JSON.stringify(next);
+          var result = gate.startRecovery(payload, raw);
+          if (result === 'write-failed') {
+            if (!live.retrySave) live.retrySave = this.button('重试保存首房结果', -325, function () {
+              var _live$retrySave;
+              if (_this29.stage4A !== live) return;
+              (_live$retrySave = live.retrySave) == null || _live$retrySave.destroy();
+              live.retrySave = undefined;
+              _this29.commitMineFirstVictory(live, director, room);
+            });
+            this.setBattleStatus('首房奖励尚未保存');
+            return;
+          }
+          if (result !== 'committed' && result !== 'reconciled') {
+            this.showRecoveryStop('首房结果未能确认，请重新加载。');
+            return;
+          }
+          this.mineRecovery = {
+            raw: payload,
+            state: next
+          };
+          this.battlePhase = 'complete';
+          if (!director.advance(room) || director.depth !== next.run.cursor) {
+            this.showRecoveryStop('首房已保存，房间显示需重新加载。');
+            return;
+          }
+          var root = this.ui,
+            motion = this.motion;
+          var drop = (_this$lastFallen = this.lastFallen) != null ? _this$lastFallen : {
+            origin: new Vec3(132, stageGrid.groundY + 30),
+            ground: stageGrid.groundY
+          };
+          this.audio.play('victory');
+          var reveal = /*#__PURE__*/function () {
+            var _ref21 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee14() {
+              return _regeneratorRuntime().wrap(function _callee14$(_context14) {
+                while (1) switch (_context14.prev = _context14.next) {
+                  case 0:
+                    _context14.prev = 0;
+                    _context14.next = 3;
+                    return _this29.animateCoins(motion, next.run.pending.coins, _this29.coinText, drop.origin, drop.ground);
+                  case 3:
+                    _context14.next = 9;
+                    break;
+                  case 5:
+                    _context14.prev = 5;
+                    _context14.t0 = _context14["catch"](0);
+                    if (_this29.ui === root) _this29.showRecoveryStop('首房已保存，场景需重新加载。');
+                    return _context14.abrupt("return");
+                  case 9:
+                    if (!(_this29.ui !== root || _this29.stage4A !== live || motion.cancelled)) {
+                      _context14.next = 11;
+                      break;
+                    }
+                    return _context14.abrupt("return");
+                  case 11:
+                    _this29.stopStage4A('first room committed');
+                    try {
+                      _this29.projectMineRecovery(director, next);
+                    } catch (_unused8) {
+                      _this29.showRecoveryStop('首房已保存，场景需重新加载。');
+                    }
+                  case 13:
+                  case "end":
+                    return _context14.stop();
+                }
+              }, _callee14, null, [[0, 5]]);
+            }));
+            return function reveal() {
+              return _ref21.apply(this, arguments);
+            };
+          }();
+          void reveal();
+        };
         _proto.tap = /*#__PURE__*/function () {
-          var _tap = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4(i, fromAuto, preview) {
-            var _this17 = this,
-              _room$rescueCells;
-            var motion, a, _ref4, groups, _this$boardFx2, _ref5, _ref6, _loop3, _ret, wave, _this$trial2, director, room, rescued, _this$adventure2, _this$lastFallen, reward, drop, played;
-            return _regeneratorRuntime().wrap(function _callee4$(_context5) {
-              while (1) switch (_context5.prev = _context5.next) {
+          var _tap = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee15(i, fromAuto, preview) {
+            var _this30 = this,
+              _room$rescueCells3;
+            var motion, a, _ref22, groups, _this$boardFx3, _ref23, _ref24, _loop4, _ret, wave, _this$mineRecovery4, _this$trial2, director, room, rescued, _this$adventure3, _this$lastFallen2, reward, drop, played;
+            return _regeneratorRuntime().wrap(function _callee15$(_context16) {
+              while (1) switch (_context16.prev = _context16.next) {
                 case 0:
                   if (fromAuto === void 0) {
                     fromAuto = false;
@@ -2249,239 +8728,269 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     preview = false;
                   }
                   if (!(this.busy || this.battleModal || !fromAuto && !this.canSelect(i))) {
-                    _context5.next = 4;
+                    _context16.next = 4;
                     break;
                   }
-                  return _context5.abrupt("return");
+                  return _context16.abrupt("return");
                 case 4:
                   this.clearIdleHint();
                   motion = this.motion;
                   a = this.selected;
                   this.selected = i === a ? -1 : i;
                   if (!(a < 0 || !adjacent(a, i))) {
-                    _context5.next = 11;
+                    _context16.next = 11;
                     break;
                   }
                   this.drawBoard();
-                  return _context5.abrupt("return");
+                  return _context16.abrupt("return");
                 case 11:
+                  if (!this.stage4A) {
+                    _context16.next = 15;
+                    break;
+                  }
+                  _context16.next = 14;
+                  return this.stage4ASwap(a, i, preview);
+                case 14:
+                  return _context16.abrupt("return");
+                case 15:
                   if (this.boardFx) this.audio.playTrial('swap');else this.audio.play('swap');
                   this.busy = true;
                   this.battlePhase = 'resolve';
                   this.selected = -1;
                   this.clearGuide();
-                  _ref4 = [this.board[i], this.board[a]];
-                  this.board[a] = _ref4[0];
-                  this.board[i] = _ref4[1];
+                  _ref22 = [this.board[i], this.board[a]];
+                  this.board[a] = _ref22[0];
+                  this.board[i] = _ref22[1];
                   groups = matches(this.board);
                   this.drawBoard();
                   if (!(!preview || groups.length)) {
-                    _context5.next = 24;
+                    _context16.next = 28;
                     break;
                   }
-                  _context5.next = 24;
+                  _context16.next = 28;
                   return Promise.all([this.moveTile(motion, this.tiles[a], i, preview ? .06 : .12), this.moveTile(motion, this.tiles[i], a, preview ? .06 : .12)]);
-                case 24:
+                case 28:
                   if (!motion.cancelled) {
-                    _context5.next = 26;
+                    _context16.next = 30;
                     break;
                   }
-                  return _context5.abrupt("return");
-                case 26:
+                  return _context16.abrupt("return");
+                case 30:
                   if (groups.length) {
-                    _context5.next = 35;
+                    _context16.next = 39;
                     break;
                   }
-                  _ref5 = [this.board[i], this.board[a]];
-                  this.board[a] = _ref5[0];
-                  this.board[i] = _ref5[1];
+                  _ref23 = [this.board[i], this.board[a]];
+                  this.board[a] = _ref23[0];
+                  this.board[i] = _ref23[1];
                   if (this.boardFx) this.audio.playTrial('invalid');
-                  _context5.next = 33;
-                  return Promise.all([this.moveTile(motion, this.tiles[a], a, .12), this.moveTile(motion, this.tiles[i], i, .12), (_this$boardFx2 = this.boardFx) == null ? void 0 : _this$boardFx2.reject(motion, [this.cells[a].position, this.cells[i].position])]);
-                case 33:
+                  _context16.next = 37;
+                  return Promise.all([this.moveTile(motion, this.tiles[a], a, .12), this.moveTile(motion, this.tiles[i], i, .12), (_this$boardFx3 = this.boardFx) == null ? void 0 : _this$boardFx3.reject(motion, [this.cells[a].position, this.cells[i].position])]);
+                case 37:
                   if (!motion.cancelled) this.resumeBattleInput('没有成组，换位已还原');
-                  return _context5.abrupt("return");
-                case 35:
-                  _ref6 = [this.tiles[i], this.tiles[a]];
-                  this.tiles[a] = _ref6[0];
-                  this.tiles[i] = _ref6[1];
+                  return _context16.abrupt("return");
+                case 39:
+                  _ref24 = [this.tiles[i], this.tiles[a]];
+                  this.tiles[a] = _ref24[0];
+                  this.tiles[i] = _ref24[1];
                   if (this.trial) this.trial.moves++;
                   if (this.phase === 'wolves') this.firstSwap = false;
-                  _loop3 = /*#__PURE__*/_regeneratorRuntime().mark(function _loop3() {
-                    var _this17$boardFx, _this17$boardFx2, _this17$trial;
-                    var plan, removed, _iterator8, _step8, _step8$value, _index3, tier, _iterator9, _step9, _this17$ui$getChildBy, _index4, _iterator10, _step10, group, active, advanced, length, refill;
-                    return _regeneratorRuntime().wrap(function _loop3$(_context4) {
-                      while (1) switch (_context4.prev = _context4.next) {
+                  _loop4 = /*#__PURE__*/_regeneratorRuntime().mark(function _loop4() {
+                    var _this30$boardFx, _this30$boardFx2, _this30$trial;
+                    var plan, removed, _iterator18, _step18, _step18$value, _index6, tier, _iterator19, _step19, _this30$ui$getChildBy, _index7, _iterator20, _step20, group, active, advanced, refill;
+                    return _regeneratorRuntime().wrap(function _loop4$(_context15) {
+                      while (1) switch (_context15.prev = _context15.next) {
                         case 0:
-                          if (_this17.trial) _this17.trial.longestChain = Math.max(_this17.trial.longestChain, wave + 1);
-                          _this17.setBattleStatus("\u7B2C " + (wave + 1) + " \u6B21\u8FDE\u9501 \xB7 " + groups.length + " \u7EC4\u6D88\u9664");
+                          if (_this30.trial) _this30.trial.longestChain = Math.max(_this30.trial.longestChain, wave + 1);
+                          _this30.setBattleStatus("\u7B2C " + (wave + 1) + " \u6B21\u8FDE\u9501 \xB7 " + groups.length + " \u7EC4\u6D88\u9664");
                           plan = planWave(groups, function (index) {
-                            return _this17.chargedTiles.get(_this17.tiles[index]);
+                            return _this30.chargedTiles.get(_this30.tiles[index]);
                           }, wave === 0 ? [i, a] : []);
                           removed = plan.removed;
-                          if (_this17.boardFx) {
-                            _this17.audio.playChain(wave);
-                            if (plan.anchors.size) _this17.audio.playTrial('create');
-                          } else _this17.audio.play('clear');
-                          for (_iterator8 = _createForOfIteratorHelperLoose(plan.created); !(_step8 = _iterator8()).done;) {
-                            _step8$value = _step8.value, _index3 = _step8$value[0], tier = _step8$value[1];
-                            _this17.markCharged(_index3, tier);
+                          if (_this30.boardFx) {
+                            _this30.audio.playChain(wave);
+                            if (plan.anchors.size) _this30.audio.playTrial('create');
+                          } else _this30.audio.play('clear');
+                          for (_iterator18 = _createForOfIteratorHelperLoose(plan.created); !(_step18 = _iterator18()).done;) {
+                            _step18$value = _step18.value, _index6 = _step18$value[0], tier = _step18$value[1];
+                            _this30.markCharged(_index6, tier);
                           }
-                          for (_iterator9 = _createForOfIteratorHelperLoose(removed); !(_step9 = _iterator9()).done;) {
-                            _index4 = _step9.value;
-                            if (_this17.rescueCells["delete"](_index4)) (_this17$ui$getChildBy = _this17.ui.getChildByName('营救标记 ' + _index4)) == null || _this17$ui$getChildBy.destroy();
+                          for (_iterator19 = _createForOfIteratorHelperLoose(removed); !(_step19 = _iterator19()).done;) {
+                            _index7 = _step19.value;
+                            if (_this30.rescueCells["delete"](_index7)) (_this30$ui$getChildBy = _this30.ui.getChildByName('营救标记 ' + _index7)) == null || _this30$ui$getChildBy.destroy();
                           }
-                          _context4.next = 9;
-                          return Promise.all([_this17.flashTiles(motion, Array.from(plan.matched), removed, false)].concat(Array.from(plan.anchors, function (index) {
-                            return _this17.dropCharge(motion, _this17.tiles[index]);
-                          }), [(_this17$boardFx = _this17.boardFx) == null ? void 0 : _this17$boardFx.combo(motion, wave + 1, new Vec3(0, 80, 0)), (_this17$boardFx2 = _this17.boardFx) == null ? void 0 : _this17$boardFx2.chargeReady(motion, Array.from(plan.anchors, function (index) {
+                          _context15.next = 9;
+                          return Promise.all([_this30.flashTiles(motion, Array.from(plan.matched), removed, false)].concat(Array.from(plan.anchors, function (index) {
+                            return _this30.dropCharge(motion, _this30.tiles[index]);
+                          }), [(_this30$boardFx = _this30.boardFx) == null ? void 0 : _this30$boardFx.combo(motion, wave + 1, new Vec3(0, 80, 0)), (_this30$boardFx2 = _this30.boardFx) == null ? void 0 : _this30$boardFx2.chargeReady(motion, Array.from(plan.anchors, function (index) {
                             return {
-                              position: _this17.cells[index].position
+                              position: _this30.cells[index].position
                             };
                           }))]));
                         case 9:
                           if (!motion.cancelled) {
-                            _context4.next = 11;
+                            _context15.next = 11;
                             break;
                           }
-                          return _context4.abrupt("return", {
+                          return _context15.abrupt("return", {
                             v: void 0
                           });
                         case 11:
                           if (!plan.columns.size) {
-                            _context4.next = 15;
+                            _context15.next = 15;
                             break;
                           }
-                          if (_this17.trial) _this17.audio.playTrial('charge');else _this17.audio.play('charge');
-                          _context4.next = 15;
-                          return _this17.flashTiles(motion, plan.propagated, removed, true, Array.from(plan.columns));
+                          if (_this30.trial) _this30.audio.playTrial('charge');else _this30.audio.play('charge');
+                          _context15.next = 15;
+                          return _this30.flashTiles(motion, plan.propagated, removed, true, Array.from(plan.columns));
                         case 15:
                           if (!motion.cancelled) {
-                            _context4.next = 17;
+                            _context15.next = 17;
                             break;
                           }
-                          return _context4.abrupt("return", {
+                          return _context15.abrupt("return", {
                             v: void 0
                           });
                         case 17:
-                          _iterator10 = _createForOfIteratorHelperLoose(plan.components);
+                          _iterator20 = _createForOfIteratorHelperLoose(plan.components);
                         case 18:
-                          if ((_step10 = _iterator10()).done) {
-                            _context4.next = 29;
+                          if ((_step20 = _iterator20()).done) {
+                            _context15.next = 28;
                             break;
                           }
-                          group = _step10.value;
+                          group = _step20.value;
                           active = group.filter(function (index) {
                             return plan.charged.has(index);
                           });
                           advanced = active.some(function (index) {
-                            return _this17.chargedTiles.get(_this17.tiles[index]) === 'advanced';
+                            return _this30.chargedTiles.get(_this30.tiles[index]) === 'advanced';
                           });
-                          length = Math.max(group.length, advanced ? 5 : active.length ? 4 : 3);
-                          _context4.next = 25;
-                          return _this17.applySkill(motion, _this17.board[group[0]], length, wave + 1, active.length > 0, advanced);
-                        case 25:
+                          _context15.next = 24;
+                          return _this30.applySkill(motion, _this30.board[group[0]], group.length, wave + 1, active.length > 0, advanced);
+                        case 24:
                           if (!motion.cancelled) {
-                            _context4.next = 27;
+                            _context15.next = 26;
                             break;
                           }
-                          return _context4.abrupt("return", {
+                          return _context15.abrupt("return", {
                             v: void 0
                           });
-                        case 27:
-                          _context4.next = 18;
+                        case 26:
+                          _context15.next = 18;
                           break;
-                        case 29:
-                          refill = planRefill(_this17.board, removed, _this17.types, (_this17$trial = _this17.trial) == null ? void 0 : _this17$trial.random, _this17.phase === 'mine' ? mineGravity : undefined);
-                          _this17.board = refill.board;
-                          _context4.next = 33;
-                          return _this17.drop(motion, removed, refill);
-                        case 33:
+                        case 28:
+                          refill = planRefill(_this30.board, removed, _this30.types, (_this30$trial = _this30.trial) == null ? void 0 : _this30$trial.random, _this30.phase === 'mine' ? mineGravity : undefined);
+                          _this30.board = refill.board;
+                          _context15.next = 32;
+                          return _this30.drop(motion, removed, refill);
+                        case 32:
                           if (!motion.cancelled) {
-                            _context4.next = 35;
+                            _context15.next = 34;
                             break;
                           }
-                          return _context4.abrupt("return", {
+                          return _context15.abrupt("return", {
                             v: void 0
                           });
+                        case 34:
+                          groups = matches(_this30.board);
                         case 35:
-                          groups = matches(_this17.board);
-                        case 36:
                         case "end":
-                          return _context4.stop();
+                          return _context15.stop();
                       }
-                    }, _loop3);
+                    }, _loop4);
                   });
                   wave = 0;
-                case 42:
+                case 46:
                   if (!(groups.length && wave < 12)) {
-                    _context5.next = 50;
+                    _context16.next = 54;
                     break;
                   }
-                  return _context5.delegateYield(_loop3(), "t0", 44);
-                case 44:
-                  _ret = _context5.t0;
+                  return _context16.delegateYield(_loop4(), "t0", 48);
+                case 48:
+                  _ret = _context16.t0;
                   if (!_ret) {
-                    _context5.next = 47;
+                    _context16.next = 51;
                     break;
                   }
-                  return _context5.abrupt("return", _ret.v);
-                case 47:
+                  return _context16.abrupt("return", _ret.v);
+                case 51:
                   wave++;
-                  _context5.next = 42;
+                  _context16.next = 46;
                   break;
-                case 50:
-                  if (groups.length || !this.legalMove()) {
-                    if (this.trial) this.audio.playTrial('shuffle');
-                    this.board = newBoard(this.types, (_this$trial2 = this.trial) == null ? void 0 : _this$trial2.random);
-                    this.buildTiles();
+                case 54:
+                  if (!(groups.length || !this.legalMove())) {
+                    _context16.next = 61;
+                    break;
                   }
+                  if (!(((_this$mineRecovery4 = this.mineRecovery) == null ? void 0 : _this$mineRecovery4.state.mineRecovery.source) === 'formal')) {
+                    _context16.next = 58;
+                    break;
+                  }
+                  this.stopLegacyMineBoard(groups.length ? 'legacy-wave-limit' : 'no-legal-move');
+                  return _context16.abrupt("return");
+                case 58:
+                  if (this.trial) this.audio.playTrial('shuffle');
+                  this.board = newBoard(this.types, (_this$trial2 = this.trial) == null ? void 0 : _this$trial2.random);
+                  this.buildTiles();
+                case 61:
                   director = this.dungeon;
                   room = director == null ? void 0 : director.room;
-                  rescued = (room == null ? void 0 : room.kind) === 'battle' && !!((_room$rescueCells = room.rescueCells) != null && _room$rescueCells.length) && !this.rescueCells.size;
+                  rescued = (room == null ? void 0 : room.kind) === 'battle' && !!((_room$rescueCells3 = room.rescueCells) != null && _room$rescueCells3.length) && !this.rescueCells.size;
                   if (!(this.enemies.every(function (hp) {
                     return hp <= 0;
                   }) || rescued)) {
-                    _context5.next = 66;
+                    _context16.next = 79;
                     break;
                   }
+                  if (!this.mineRecovery) {
+                    _context16.next = 68;
+                    break;
+                  }
+                  if (this.mineRecovery.state.mineRecovery.source === 'formal' && director && room) {
+                    this.setBattleStatus(rescued ? '营救成功' : '战斗结束');
+                    this.battlePhase = 'complete';
+                    this.automatic = false;
+                    this.commitLegacyMineVictory(director, room);
+                  } else this.showRecoveryStop('测试快照的后继奖励未启用。');
+                  return _context16.abrupt("return");
+                case 68:
                   if (this.dungeon) this.carriedBoard = {
                     director: this.dungeon,
                     types: this.types.join(','),
                     board: this.board.slice(),
                     charged: this.tiles.flatMap(function (tile, index) {
-                      var tier = _this17.chargedTiles.get(tile);
+                      var tier = _this30.chargedTiles.get(tile);
                       return tier ? [[index, tier]] : [];
                     })
                   };
                   if (rescued) this.setBattleStatus('营救成功');
                   this.battlePhase = 'complete';
                   if (!(director && (room == null ? void 0 : room.kind) === 'battle')) {
-                    _context5.next = 65;
+                    _context16.next = 78;
                     break;
                   }
-                  reward = battleCoinReward(room, (_this$adventure2 = this.adventure) == null ? void 0 : _this$adventure2.id);
-                  drop = (_this$lastFallen = this.lastFallen) != null ? _this$lastFallen : {
+                  reward = battleCoinReward(room, (_this$adventure3 = this.adventure) == null ? void 0 : _this$adventure3.id);
+                  drop = (_this$lastFallen2 = this.lastFallen) != null ? _this$lastFallen2 : {
                     origin: new Vec3(rescued ? 72 : 132, stageGrid.groundY + 30),
                     ground: stageGrid.groundY
                   };
-                  _context5.next = 63;
+                  _context16.next = 76;
                   return this.animateCoins(motion, reward, this.coinText, drop.origin, drop.ground);
-                case 63:
-                  played = _context5.sent;
+                case 76:
+                  played = _context16.sent;
                   if (played) this.victory(director, room, reward);
-                case 65:
-                  return _context5.abrupt("return");
-                case 66:
-                  _context5.next = 68;
+                case 78:
+                  return _context16.abrupt("return");
+                case 79:
+                  _context16.next = 81;
                   return this.enemyTurn(motion);
-                case 68:
+                case 81:
                 case "end":
-                  return _context5.stop();
+                  return _context16.stop();
               }
-            }, _callee4, this);
+            }, _callee15, this);
           }));
-          function tap(_x6, _x7, _x8) {
+          function tap(_x9, _x10, _x11) {
             return _tap.apply(this, arguments);
           }
           return tap;
@@ -2533,16 +9042,16 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }
         };
         _proto.dropCharge = /*#__PURE__*/function () {
-          var _dropCharge = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5(motion, tile) {
-            var children, _iterator11, _step11, _step11$value, child, home;
-            return _regeneratorRuntime().wrap(function _callee5$(_context6) {
-              while (1) switch (_context6.prev = _context6.next) {
+          var _dropCharge = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee16(motion, tile) {
+            var children, _iterator21, _step21, _step21$value, child, home;
+            return _regeneratorRuntime().wrap(function _callee16$(_context17) {
+              while (1) switch (_context17.prev = _context17.next) {
                 case 0:
                   if (!motion.reduced) {
-                    _context6.next = 2;
+                    _context17.next = 2;
                     break;
                   }
-                  return _context6.abrupt("return");
+                  return _context17.abrupt("return");
                 case 2:
                   children = tile.children.map(function (child) {
                     return {
@@ -2550,15 +9059,15 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                       home: child.position.clone()
                     };
                   });
-                  for (_iterator11 = _createForOfIteratorHelperLoose(children); !(_step11 = _iterator11()).done;) {
-                    _step11$value = _step11.value, child = _step11$value.child, home = _step11$value.home;
+                  for (_iterator21 = _createForOfIteratorHelperLoose(children); !(_step21 = _iterator21()).done;) {
+                    _step21$value = _step21.value, child = _step21$value.child, home = _step21$value.home;
                     child.setPosition(home.x, home.y + 13, home.z);
                     child.setScale(.86, 1.10, 1);
                   }
-                  _context6.next = 6;
-                  return Promise.all(children.map(function (_ref7) {
-                    var child = _ref7.child,
-                      home = _ref7.home;
+                  _context17.next = 6;
+                  return Promise.all(children.map(function (_ref25) {
+                    var child = _ref25.child,
+                      home = _ref25.home;
                     return motion.play(tween(child).to(.14, {
                       position: home,
                       scale: new Vec3(1.15, .78, 1)
@@ -2572,21 +9081,21 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   }));
                 case 6:
                 case "end":
-                  return _context6.stop();
+                  return _context17.stop();
               }
-            }, _callee5);
+            }, _callee16);
           }));
-          function dropCharge(_x9, _x10) {
+          function dropCharge(_x12, _x13) {
             return _dropCharge.apply(this, arguments);
           }
           return dropCharge;
         }();
         _proto.flashTiles = /*#__PURE__*/function () {
-          var _flashTiles = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6(motion, indices, removed, propagated, columns) {
-            var _this18 = this;
-            var cleared, moves, palette, points, lanes, effects, _loop4, _iterator12, _step12;
-            return _regeneratorRuntime().wrap(function _callee6$(_context8) {
-              while (1) switch (_context8.prev = _context8.next) {
+          var _flashTiles = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee17(motion, indices, removed, propagated, columns) {
+            var _this31 = this;
+            var cleared, moves, palette, points, lanes, effects, _loop5, _iterator22, _step22;
+            return _regeneratorRuntime().wrap(function _callee17$(_context19) {
+              while (1) switch (_context19.prev = _context19.next) {
                 case 0:
                   if (columns === void 0) {
                     columns = [];
@@ -2596,7 +9105,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   });
                   moves = indices.map(function (index) {
                     var _tile$getComponent;
-                    var tile = _this18.tiles[index];
+                    var tile = _this31.tiles[index];
                     var opacity = (_tile$getComponent = tile.getComponent(UIOpacity)) != null ? _tile$getComponent : tile.addComponent(UIOpacity);
                     return motion.play(tween(opacity).set({
                       opacity: 160
@@ -2605,7 +9114,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     }));
                   });
                   if (!this.boardFx) {
-                    _context8.next = 10;
+                    _context19.next = 10;
                     break;
                   }
                   palette = {
@@ -2618,36 +9127,36 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     staff: '#ffe3a3'
                   };
                   points = cleared.map(function (index) {
-                    var _palette$_this18$boar;
+                    var _palette$_this31$boar;
                     return {
-                      position: _this18.cells[index].position,
-                      color: Color.fromHEX(new Color(), (_palette$_this18$boar = palette[_this18.board[index]]) != null ? _palette$_this18$boar : '#fff0c2')
+                      position: _this31.cells[index].position,
+                      color: Color.fromHEX(new Color(), (_palette$_this31$boar = palette[_this31.board[index]]) != null ? _palette$_this31$boar : '#fff0c2')
                     };
                   });
                   lanes = columns.map(function (col) {
                     return {
-                      from: _this18.cells[col].position,
-                      to: _this18.cells[_this18.cells.length - cols + col].position
+                      from: _this31.cells[col].position,
+                      to: _this31.cells[_this31.cells.length - cols + col].position
                     };
                   });
-                  _context8.next = 9;
+                  _context19.next = 9;
                   return Promise.all([].concat(moves, [this.boardFx.clear(motion, points, propagated ? 'charge' : 'match', lanes)]));
                 case 9:
-                  return _context8.abrupt("return");
+                  return _context19.abrupt("return");
                 case 10:
                   effects = cleared.slice(0, 8).flatMap(function (index) {
-                    var p = _this18.cells[index].position;
-                    return _this18.burst(motion, p.x, p.y, propagated ? '#c196ff' : '#fcd687', 3);
+                    var p = _this31.cells[index].position;
+                    return _this31.burst(motion, p.x, p.y, propagated ? '#c196ff' : '#fcd687', 3);
                   });
-                  _loop4 = /*#__PURE__*/_regeneratorRuntime().mark(function _loop4() {
+                  _loop5 = /*#__PURE__*/_regeneratorRuntime().mark(function _loop5() {
                     var col, first, last, beam, opacity;
-                    return _regeneratorRuntime().wrap(function _loop4$(_context7) {
-                      while (1) switch (_context7.prev = _context7.next) {
+                    return _regeneratorRuntime().wrap(function _loop5$(_context18) {
+                      while (1) switch (_context18.prev = _context18.next) {
                         case 0:
-                          col = _step12.value;
-                          first = _this18.cells[col].position;
-                          last = _this18.cells[_this18.cells.length - cols + col].position;
-                          beam = _this18.box('整列传导', first.x, (first.y + last.y) / 2, 17, first.y - last.y + 45, '#ffcf68');
+                          col = _step22.value;
+                          first = _this31.cells[col].position;
+                          last = _this31.cells[_this31.cells.length - cols + col].position;
+                          beam = _this31.box('整列传导', first.x, (first.y + last.y) / 2, 17, first.y - last.y + 45, '#ffcf68');
                           opacity = beam.addComponent(UIOpacity);
                           opacity.opacity = 210;
                           effects.push(motion.play(tween(opacity).to(motion.duration(.23), {
@@ -2658,39 +9167,39 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                           }));
                         case 7:
                         case "end":
-                          return _context7.stop();
+                          return _context18.stop();
                       }
-                    }, _loop4);
+                    }, _loop5);
                   });
-                  _iterator12 = _createForOfIteratorHelperLoose(columns);
+                  _iterator22 = _createForOfIteratorHelperLoose(columns);
                 case 13:
-                  if ((_step12 = _iterator12()).done) {
-                    _context8.next = 17;
+                  if ((_step22 = _iterator22()).done) {
+                    _context19.next = 17;
                     break;
                   }
-                  return _context8.delegateYield(_loop4(), "t0", 15);
+                  return _context19.delegateYield(_loop5(), "t0", 15);
                 case 15:
-                  _context8.next = 13;
+                  _context19.next = 13;
                   break;
                 case 17:
-                  _context8.next = 19;
+                  _context19.next = 19;
                   return Promise.all([].concat(moves, effects));
                 case 19:
                 case "end":
-                  return _context8.stop();
+                  return _context19.stop();
               }
-            }, _callee6, this);
+            }, _callee17, this);
           }));
-          function flashTiles(_x11, _x12, _x13, _x14, _x15) {
+          function flashTiles(_x14, _x15, _x16, _x17, _x18) {
             return _flashTiles.apply(this, arguments);
           }
           return flashTiles;
         }();
         _proto.castSkillEffect = /*#__PURE__*/function () {
-          var _castSkillEffect = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee7(motion, at, advanced) {
+          var _castSkillEffect = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee18(motion, at, advanced) {
             var ring, shape, flash, ink, light;
-            return _regeneratorRuntime().wrap(function _callee7$(_context9) {
-              while (1) switch (_context9.prev = _context9.next) {
+            return _regeneratorRuntime().wrap(function _callee18$(_context20) {
+              while (1) switch (_context20.prev = _context20.next) {
                 case 0:
                   ring = this.box('技能蓄力光环', at.x, at.y, 138, 138);
                   shape = ring.addComponent(Graphics);
@@ -2698,7 +9207,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   shape.lineWidth = 5;
                   shape.circle(0, 0, 56);
                   shape.stroke();
-                  _context9.next = 8;
+                  _context20.next = 8;
                   return motion.play(tween(ring).to(advanced ? .34 : .19, {
                     scale: new Vec3(.43, .43, 1)
                   }, {
@@ -2707,10 +9216,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                 case 8:
                   ring.destroy();
                   if (!(!advanced || motion.cancelled)) {
-                    _context9.next = 11;
+                    _context20.next = 11;
                     break;
                   }
-                  return _context9.abrupt("return");
+                  return _context20.abrupt("return");
                 case 11:
                   flash = this.box('大招反差环', at.x, at.y, 134, 134);
                   ink = flash.addComponent(Graphics);
@@ -2724,7 +9233,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   ink.stroke();
                   light = flash.addComponent(UIOpacity);
                   light.opacity = 255;
-                  _context9.next = 25;
+                  _context20.next = 25;
                   return motion.play(tween(light).to(.10, {
                     opacity: 15
                   }).delay(.10).to(.06, {
@@ -2734,16 +9243,18 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   flash.destroy();
                 case 26:
                 case "end":
-                  return _context9.stop();
+                  return _context20.stop();
               }
-            }, _callee7, this);
+            }, _callee18, this);
           }));
-          function castSkillEffect(_x16, _x17, _x18) {
+          function castSkillEffect(_x19, _x20, _x21) {
             return _castSkillEffect.apply(this, arguments);
           }
           return castSkillEffect;
         }();
         _proto.focusCombat = function focusCombat(motion, actors) {
+          var _this32 = this,
+            _layer$getChildByName;
           if (motion.reduced) return function () {};
           var layer = this.stageContent;
           var order = layer.children.slice();
@@ -2755,24 +9266,54 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           ink.fillColor = new Color(8, 11, 19, 166);
           ink.rect(-width / 2, -height / 2, width, height);
           ink.fill();
-          for (var _iterator13 = _createForOfIteratorHelperLoose(actors), _step13; !(_step13 = _iterator13()).done;) {
-            var actor = _step13.value;
+          var activeHeroes = actors.filter(function (actor) {
+            return Array.from(_this32.heroes.values()).includes(actor);
+          });
+          var activeEnemies = actors.filter(function (actor) {
+            return _this32.enemyNodes.includes(actor);
+          });
+          var faded = [];
+          var peers = activeHeroes.length || activeEnemies.length ? Array.from(this.heroes.values()).concat(this.enemyNodes) : [];
+          for (var _iterator23 = _createForOfIteratorHelperLoose(peers), _step23; !(_step23 = _iterator23()).done;) {
+            var _peer$getComponent;
+            var peer = _step23.value;
+            if (!(peer != null && peer.isValid) || actors.includes(peer)) continue;
+            var alpha = (_peer$getComponent = peer.getComponent(UIOpacity)) != null ? _peer$getComponent : peer.addComponent(UIOpacity);
+            faded.push({
+              alpha: alpha,
+              value: alpha.opacity
+            });
+            void motion.play(tween(alpha).to(.07, {
+              opacity: alpha.opacity * .5
+            }));
+          }
+          for (var _iterator24 = _createForOfIteratorHelperLoose(actors), _step24; !(_step24 = _iterator24()).done;) {
+            var actor = _step24.value;
             actor.setSiblingIndex(layer.children.length - 1);
           }
+          (_layer$getChildByName = layer.getChildByName('400 森林前景')) == null || _layer$getChildByName.setSiblingIndex(layer.children.length - 1);
           return function () {
-            shade.removeFromParent();
-            shade.destroy();
+            for (var _i5 = 0, _faded = faded; _i5 < _faded.length; _i5++) {
+              var _faded$_i = _faded[_i5],
+                alpha = _faded$_i.alpha,
+                value = _faded$_i.value;
+              if (alpha.isValid) alpha.opacity = value;
+            }
+            if (shade.isValid) {
+              shade.removeFromParent();
+              shade.destroy();
+            }
             if (layer.isValid) order.forEach(function (node, index) {
               if (node.isValid && node.parent === layer) node.setSiblingIndex(index);
             });
           };
         };
         _proto.applySkill = /*#__PURE__*/function () {
-          var _applySkill = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee8(motion, type, length, chain, charged, advanced) {
-            var _this19 = this;
-            var owner, tutorial, attack, specialAttack, skill, actor, _actor$position$x, _actor$position$y, restore, _actor$position, cap, before, gained, unit, position, color, tags, targets, hit, _iterator14, _step14, target, _enemy, home, restoreFocus, _enemy$getChildByName3, _enemy$getChildByName4, _actor$position2, origin, _enemy$getChildByName, _enemy$getChildByName2, _actor$getChildByName, _actor$getChildByName2, _origin, enemyGround, footOffset, arrived, immune, damage, fallen, number, armor, effects, flinch, _enemy$getComponent, alpha;
-            return _regeneratorRuntime().wrap(function _callee8$(_context10) {
-              while (1) switch (_context10.prev = _context10.next) {
+          var _applySkill = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee19(motion, type, length, chain, charged, advanced) {
+            var _this33 = this;
+            var owner, tutorial, attack, skill, actor, _actor$position$x, _actor$position$y, restore, _actor$position, cap, beforeDP, before, gained, unit, position, color, followup, tags, primary, splash, targets, hit, _iterator25, _step25, target, _enemy, home, restoreFocus, _ref26, _enemy$getChildByName3, _enemy$getChildByName4, origin, _enemy$getChildByName, _enemy$getChildByName2, _actor$getChildByName3, _actor$getChildByName4, _origin, enemyGround, footOffset, arrived, immune, raw, stun, layers, afterArmor, damage, fallen, number, armor, effects, flinch, _enemy$getComponent;
+            return _regeneratorRuntime().wrap(function _callee19$(_context21) {
+              while (1) switch (_context21.prev = _context21.next) {
                 case 0:
                   if (advanced === void 0) {
                     advanced = false;
@@ -2780,53 +9321,53 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   if (!this.enemies.every(function (hp) {
                     return hp <= 0;
                   })) {
-                    _context10.next = 3;
+                    _context21.next = 3;
                     break;
                   }
-                  return _context10.abrupt("return");
+                  return _context21.abrupt("return");
                 case 3:
                   owner = skillOwner(type);
                   tutorial = this.isTutorialBattle();
                   attack = tutorial ? owner === 'h' ? 12 : 26 : this.heroAttack(owner);
-                  specialAttack = advanced && (tutorial || ['stone', 'fist', 'staff'].includes(type)) ? attack * 1.35 : attack;
-                  skill = planSkill(type, length, chain, charged, tutorial, specialAttack, this.dp >= this.maxDP, this.rally, function (id) {
-                    return _this19.inventory.hasEquipped(id);
+                  skill = planOathSkill(type, length, chain, advanced ? 'advanced' : charged ? 'skill' : undefined, attack, this.dp >= this.maxDP, this.oath, function (id) {
+                    return _this33.inventory.hasEquipped(id);
                   }, function (id) {
-                    return _this19.buff(id);
+                    return _this33.buff(id);
                   });
                   actor = this.heroes.get(owner);
                   if (!(charged && actor && !motion.reduced)) {
-                    _context10.next = 14;
+                    _context21.next = 13;
                     break;
                   }
-                  _context10.next = 12;
+                  _context21.next = 11;
                   return this.castSkillEffect(motion, actor.position, advanced);
-                case 12:
+                case 11:
                   if (!motion.cancelled) {
-                    _context10.next = 14;
+                    _context21.next = 13;
                     break;
                   }
-                  return _context10.abrupt("return");
-                case 14:
+                  return _context21.abrupt("return");
+                case 13:
                   if (!(skill.kind === 'rally')) {
-                    _context10.next = 21;
+                    _context21.next = 20;
                     break;
                   }
-                  this.rally = true;
+                  applyBattleCry(this.oath, skill.multiplier, skill.boost);
                   this.setBattleStatus('战吼：下一次攻击增伤');
                   this.audio.play('charge');
-                  _context10.next = 20;
+                  _context21.next = 19;
                   return Promise.all(this.burst(motion, (_actor$position$x = actor == null ? void 0 : actor.position.x) != null ? _actor$position$x : -70, (_actor$position$y = actor == null ? void 0 : actor.position.y) != null ? _actor$position$y : 270, '#ffbc60', 6));
+                case 19:
+                  return _context21.abrupt("return");
                 case 20:
-                  return _context10.abrupt("return");
-                case 21:
                   if (!(skill.kind === 'heal' || skill.kind === 'guard')) {
-                    _context10.next = 40;
+                    _context21.next = 40;
                     break;
                   }
                   restore = actor ? this.focusCombat(motion, [actor]) : function () {};
-                  _context10.prev = 23;
+                  _context21.prev = 22;
                   cap = skill.kind === 'heal' ? this.maxHP : this.maxDP;
+                  beforeDP = this.dp;
                   before = skill.kind === 'heal' ? this.hp : this.dp;
                   gained = Math.min(cap - before, skill.amount);
                   if (skill.kind === 'heal') {
@@ -2834,111 +9375,128 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     if (!tutorial && this.inventory.hasEquipped('healcore')) {
                       this.dp = Math.min(this.maxDP, this.dp + Math.round((skill.amount - gained) * (.35 + .2 * this.buff('overflow'))));
                     }
-                  } else this.dp += gained;
+                  } else {
+                    this.dp += gained;
+                    if (skill.resist) this.oath.guard = true;
+                  }
                   unit = skill.kind === 'heal' ? 'HP' : 'DP';
                   this.setBattleStatus(skill.name + " \xB7 +" + gained + " " + unit);
                   this.updateHUD();
                   this.audio.play('charge');
                   position = (_actor$position = actor == null ? void 0 : actor.position) != null ? _actor$position : new Vec3(-70, 270, 0);
+                  if (skill.kind === 'heal' && this.dp > beforeDP) void this.combatPopup(motion, '+' + (this.dp - beforeDP) + ' DP', position.x + 24, position.y + 16, '#90aec4', 27);
                   color = skill.kind === 'heal' ? '#81f4a4' : '#8bcbff';
-                  _context10.next = 36;
-                  return Promise.all([this.supportHalo(motion, position, color)].concat(this.burst(motion, position.x, position.y, color, 6)));
-                case 36:
-                  _context10.prev = 36;
+                  _context21.next = 37;
+                  return Promise.all([this.combatPopup(motion, '+' + gained + ' ' + unit, position.x, position.y, skill.kind === 'heal' ? advanced ? '#27934b' : '#adf4b0' : advanced ? '#385a78' : '#90aec4', advanced ? 38 : 27), this.supportHalo(motion, position, color)].concat(this.burst(motion, position.x, position.y, color, 6)));
+                case 37:
+                  _context21.prev = 37;
                   restore();
-                  return _context10.finish(36);
-                case 39:
-                  return _context10.abrupt("return");
+                  return _context21.finish(37);
                 case 40:
-                  if (!(skill.kind !== 'attack')) {
-                    _context10.next = 42;
+                  followup = skill.kind === 'guard' ? skill.followup : undefined;
+                  if (!(skill.kind !== 'attack' && followup === undefined)) {
+                    _context21.next = 43;
                     break;
                   }
-                  return _context10.abrupt("return");
-                case 42:
-                  this.rally = false;
+                  return _context21.abrupt("return");
+                case 43:
                   tags = this.foes.map(function (foe) {
                     var _foe$tags;
                     return (_foe$tags = foe.tags) != null ? _foe$tags : [];
                   });
-                  targets = selectTargets(this.enemies, tags, skill.target);
+                  primary = selectTargets(this.enemies, tags, skill.kind === 'attack' ? skill.target : 'front');
+                  if (skill.kind === 'attack' && primary.length) this.oath.rally = 1;
+                  splash = skill.kind === 'attack' ? skill.splash : undefined;
+                  targets = splash === undefined ? primary : primary.concat(this.enemies.flatMap(function (hp, i) {
+                    return hp > 0 && !primary.includes(i) ? [i] : [];
+                  }));
                   hit = 0;
-                case 46:
-                  if (!(hit < skill.hits)) {
-                    _context10.next = 104;
+                case 49:
+                  if (!(hit < (skill.kind === 'attack' ? skill.hits : 1))) {
+                    _context21.next = 111;
                     break;
                   }
-                  _iterator14 = _createForOfIteratorHelperLoose(targets);
-                case 48:
-                  if ((_step14 = _iterator14()).done) {
-                    _context10.next = 101;
+                  _iterator25 = _createForOfIteratorHelperLoose(targets);
+                case 51:
+                  if ((_step25 = _iterator25()).done) {
+                    _context21.next = 108;
                     break;
                   }
-                  target = _step14.value;
+                  target = _step25.value;
                   if (!(this.enemies[target] <= 0)) {
-                    _context10.next = 52;
+                    _context21.next = 55;
                     break;
                   }
-                  return _context10.abrupt("continue", 99);
-                case 52:
+                  return _context21.abrupt("continue", 106);
+                case 55:
                   _enemy = this.enemyNodes[target];
                   home = _enemy.position.clone();
                   restoreFocus = this.focusCombat(motion, actor ? [_enemy, actor] : [_enemy]);
-                  _context10.prev = 55;
+                  _context21.prev = 58;
                   if (!(type === 'stone' || type === 'm')) {
-                    _context10.next = 64;
+                    _context21.next = 67;
                     break;
                   }
-                  origin = (_actor$position2 = actor == null ? void 0 : actor.position) != null ? _actor$position2 : new Vec3(-70, 270, 0);
-                  _context10.next = 60;
+                  origin = actor ? this.emissionPoint(actor) : new Vec3(-70, 270, 0);
+                  _context21.next = 63;
                   return this.flyProjectile(motion, type, origin, home);
-                case 60:
-                  if (_context10.sent) {
-                    _context10.next = 62;
+                case 63:
+                  if (_context21.sent) {
+                    _context21.next = 65;
                     break;
                   }
-                  return _context10.abrupt("return");
-                case 62:
-                  _context10.next = 74;
+                  return _context21.abrupt("return");
+                case 65:
+                  _context21.next = 77;
                   break;
-                case 64:
+                case 67:
                   if (!actor) {
-                    _context10.next = 74;
+                    _context21.next = 77;
                     break;
                   }
                   _origin = actor.position.clone();
                   enemyGround = home.y + ((_enemy$getChildByName = (_enemy$getChildByName2 = _enemy.getChildByName('脚底投影')) == null ? void 0 : _enemy$getChildByName2.position.y) != null ? _enemy$getChildByName : -34);
-                  footOffset = (_actor$getChildByName = (_actor$getChildByName2 = actor.getChildByName('脚底投影')) == null ? void 0 : _actor$getChildByName2.position.y) != null ? _actor$getChildByName : -34;
-                  _context10.next = 70;
-                  return motion.play(tween(actor).to(motion.duration(.14), {
+                  footOffset = (_actor$getChildByName3 = (_actor$getChildByName4 = actor.getChildByName('脚底投影')) == null ? void 0 : _actor$getChildByName4.position.y) != null ? _actor$getChildByName3 : -34;
+                  _context21.next = 73;
+                  return motion.play(tween(actor).to(motion.duration(.105), {
                     position: new Vec3(home.x - 36, enemyGround - footOffset, 0)
+                  }, {
+                    easing: 'sineInOut'
                   }));
-                case 70:
-                  arrived = _context10.sent;
+                case 73:
+                  arrived = _context21.sent;
                   if (arrived) {
-                    _context10.next = 73;
+                    _context21.next = 76;
                     break;
                   }
-                  return _context10.abrupt("return");
-                case 73:
+                  return _context21.abrupt("return");
+                case 76:
                   void motion.play(tween(actor).to(motion.duration(.18), {
                     position: _origin
                   }, {
                     easing: 'quadOut'
                   }));
-                case 74:
+                case 77:
                   if (!motion.cancelled) {
-                    _context10.next = 76;
+                    _context21.next = 79;
                     break;
                   }
-                  return _context10.abrupt("return");
-                case 76:
+                  return _context21.abrupt("return");
+                case 79:
                   immune = tags[target].some(function (tag) {
                     return tag === 'boss' || tag === 'stun-immune';
                   });
-                  damage = Math.min(this.enemies[target], Math.round(skill.damage * (skill.stun && immune ? 1.25 : 1)));
+                  raw = skill.kind === 'attack' ? primary.includes(target) ? skill.damage : splash : followup;
+                  stun = skill.kind === 'attack' && skill.stun;
+                  layers = this.foes[target].armor;
+                  afterArmor = oathDamage(this.oath, String(target), raw, (_ref26 = type === 'm' ? layers == null ? void 0 : layers.magic : layers == null ? void 0 : layers.physical) != null ? _ref26 : 0, type === 'm');
+                  damage = Math.min(this.enemies[target], Math.round(afterArmor * (stun && immune ? 1.25 : 1)));
                   this.enemies[target] -= damage;
-                  if (skill.stun && !immune && this.enemies[target] > 0) this.stunned.add(target);
+                  if (this.enemies[target] > 0 && skill.kind === 'attack') {
+                    if (skill.shred) this.oath.shred[String(target)] = this.turn + 1;
+                    if (skill.weaken && !this.oath.weaken.includes(String(target))) this.oath.weaken.push(String(target));
+                    if (stun && !immune) this.stunned.add(target);
+                  }
                   this.setBattleStatus(skill.name + " \xB7 " + this.foes[target].name + " \u2212" + damage);
                   this.updateHUD();
                   this.audio.play('hit');
@@ -2947,7 +9505,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     origin: home,
                     ground: home.y + ((_enemy$getChildByName3 = (_enemy$getChildByName4 = _enemy.getChildByName('脚底投影')) == null ? void 0 : _enemy$getChildByName4.position.y) != null ? _enemy$getChildByName3 : -34)
                   };
-                  number = this.combatPopup(motion, '−' + damage, home.x, home.y + 51, advanced ? '#ffd66b' : '#ffe7b0', advanced ? 38 : charged ? 32 : 27);
+                  number = this.combatPopup(motion, '−' + damage, home.x, home.y, type === 'm' ? advanced ? '#da4cae' : '#8b92f6' : advanced ? '#ffd057' : '#ffffff', advanced ? 38 : 27);
                   armor = tags[target].includes('armor');
                   effects = this.burst(motion, home.x, home.y, armor ? '#ffde86' : type === 'm' ? '#d4a6ff' : '#ffb784', 6);
                   effects.push(this.hitReaction(motion, _enemy));
@@ -2957,172 +9515,280 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     position: home
                   });
                   if (fallen) {
-                    alpha = (_enemy$getComponent = _enemy.getComponent(UIOpacity)) != null ? _enemy$getComponent : _enemy.addComponent(UIOpacity);
-                    effects.push(motion.play(tween(alpha).delay(motion.duration(.17)).to(motion.duration(.25), {
-                      opacity: 0
-                    })));
-                    effects.push(this.soulRise(motion, home));
-                    effects.push(this.combatPopup(motion, '+ EXP 2', home.x, home.y + 70, '#9ae7ad'));
+                    (_enemy$getComponent = _enemy.getComponent(UIOpacity)) != null ? _enemy$getComponent : _enemy.addComponent(UIOpacity);
+                    effects.push(this.fadeActor(motion, _enemy));
                   }
-                  _context10.next = 93;
+                  _context21.next = 100;
                   return Promise.all([number, motion.play(flinch)].concat(effects));
-                case 93:
+                case 100:
                   if (!motion.cancelled) {
-                    _context10.next = 95;
+                    _context21.next = 102;
                     break;
                   }
-                  return _context10.abrupt("return");
-                case 95:
+                  return _context21.abrupt("return");
+                case 102:
                   if (fallen) {
                     _enemy.active = false;
                     this.enemyMeters[target].root.active = false;
                   }
-                case 96:
-                  _context10.prev = 96;
+                case 103:
+                  _context21.prev = 103;
                   restoreFocus();
-                  return _context10.finish(96);
-                case 99:
-                  _context10.next = 48;
+                  return _context21.finish(103);
+                case 106:
+                  _context21.next = 51;
                   break;
-                case 101:
+                case 108:
                   hit++;
-                  _context10.next = 46;
+                  _context21.next = 49;
                   break;
-                case 104:
+                case 111:
                 case "end":
-                  return _context10.stop();
+                  return _context21.stop();
               }
-            }, _callee8, this, [[23,, 36, 39], [55,, 96, 99]]);
+            }, _callee19, this, [[22,, 37, 40], [58,, 103, 106]]);
           }));
-          function applySkill(_x19, _x20, _x21, _x22, _x23, _x24) {
+          function applySkill(_x22, _x23, _x24, _x25, _x26, _x27) {
             return _applySkill.apply(this, arguments);
           }
           return applySkill;
         }();
-        _proto.hitReaction = /*#__PURE__*/function () {
-          var _hitReaction = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee9(motion, actor) {
-            var portrait, impact, alpha, bounds, white, whiteAlpha;
-            return _regeneratorRuntime().wrap(function _callee9$(_context11) {
-              while (1) switch (_context11.prev = _context11.next) {
+        _proto.lowHealthFlash = /*#__PURE__*/function () {
+          var _lowHealthFlash = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee20(motion) {
+            var flash, opacity, board, home;
+            return _regeneratorRuntime().wrap(function _callee20$(_context22) {
+              while (1) switch (_context22.prev = _context22.next) {
                 case 0:
                   if (!(motion.reduced || motion.cancelled)) {
-                    _context11.next = 2;
+                    _context22.next = 2;
                     break;
                   }
-                  return _context11.abrupt("return", true);
+                  return _context22.abrupt("return", true);
+                case 2:
+                  flash = this.box('重伤闪红', 0, -111.5, 428, 495, '#65091e');
+                  opacity = flash.addComponent(UIOpacity);
+                  opacity.opacity = 0;
+                  board = this.tileLayer;
+                  if (board != null && board.isValid) {
+                    home = board.position.clone();
+                    void motion.play(tween(board).by(.04, {
+                      position: new Vec3(-3, 0, 0)
+                    }).by(.06, {
+                      position: new Vec3(6, 0, 0)
+                    }).to(.08, {
+                      position: home
+                    }));
+                  }
+                  _context22.prev = 7;
+                  _context22.next = 10;
+                  return motion.play(tween(opacity).to(.045, {
+                    opacity: 190
+                  }, {
+                    easing: 'quadOut'
+                  }).to(.23, {
+                    opacity: 0
+                  }, {
+                    easing: 'quadIn'
+                  }));
+                case 10:
+                  return _context22.abrupt("return", _context22.sent);
+                case 11:
+                  _context22.prev = 11;
+                  flash.destroy();
+                  return _context22.finish(11);
+                case 14:
+                case "end":
+                  return _context22.stop();
+              }
+            }, _callee20, this, [[7,, 11, 14]]);
+          }));
+          function lowHealthFlash(_x28) {
+            return _lowHealthFlash.apply(this, arguments);
+          }
+          return lowHealthFlash;
+        }();
+        _proto.hitReaction = /*#__PURE__*/function () {
+          var _hitReaction = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee21(motion, actor) {
+            var _this34 = this;
+            var portrait, impact, alpha, sprite, material, state, update;
+            return _regeneratorRuntime().wrap(function _callee21$(_context23) {
+              while (1) switch (_context23.prev = _context23.next) {
+                case 0:
+                  if (!(motion.reduced || motion.cancelled)) {
+                    _context23.next = 2;
+                    break;
+                  }
+                  return _context23.abrupt("return", true);
                 case 2:
                   portrait = actor.children.find(function (node) {
                     return node.getComponent(Sprite);
                   });
                   impact = this.art('combat-impact', actor.position.x, actor.position.y, 96, 80);
                   alpha = impact == null ? void 0 : impact.addComponent(UIOpacity);
-                  bounds = portrait == null ? void 0 : portrait.getComponent(UITransform);
-                  white = bounds && this.art('hit-white-' + portrait.name, portrait.position.x, portrait.position.y, bounds.width, bounds.height, actor);
-                  whiteAlpha = white == null ? void 0 : white.addComponent(UIOpacity);
-                  _context11.prev = 8;
-                  _context11.next = 11;
+                  sprite = portrait == null ? void 0 : portrait.getComponent(Sprite);
+                  material = sprite ? this.actorMaterial(sprite) : undefined;
+                  state = {
+                    flash: 1
+                  };
+                  update = function update() {
+                    if (sprite) _this34.setActorState(sprite, {
+                      flash: state.flash
+                    });
+                  };
+                  update();
+                  _context23.prev = 10;
+                  _context23.next = 13;
                   return Promise.all([motion.play(tween(actor).to(.055, {
                     scale: new Vec3(1.12, .90, 1)
                   }).to(.12, {
                     scale: new Vec3(1, 1, 1)
-                  })), whiteAlpha ? motion.play(tween(whiteAlpha).to(.085, {
-                    opacity: 0
+                  })), material ? motion.play(tween(state).to(.12, {
+                    flash: 0
+                  }, {
+                    onUpdate: update
                   })) : Promise.resolve(true), alpha ? motion.play(tween(alpha).to(.18, {
                     opacity: 0
                   })) : Promise.resolve(true)]).then(function (results) {
                     return results.every(Boolean);
                   });
-                case 11:
-                  return _context11.abrupt("return", _context11.sent);
-                case 12:
-                  _context11.prev = 12;
-                  white == null || white.destroy();
+                case 13:
+                  return _context23.abrupt("return", _context23.sent);
+                case 14:
+                  _context23.prev = 14;
+                  if (material && sprite != null && sprite.isValid) this.setActorState(sprite, {
+                    flash: 0
+                  });
                   impact == null || impact.destroy();
-                  return _context11.finish(12);
-                case 16:
+                  return _context23.finish(14);
+                case 18:
                 case "end":
-                  return _context11.stop();
+                  return _context23.stop();
               }
-            }, _callee9, this, [[8,, 12, 16]]);
+            }, _callee21, this, [[10,, 14, 18]]);
           }));
-          function hitReaction(_x25, _x26) {
+          function hitReaction(_x29, _x30) {
             return _hitReaction.apply(this, arguments);
           }
           return hitReaction;
         }();
-        _proto.soulRise = /*#__PURE__*/function () {
-          var _soulRise = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee10(motion, home) {
-            var soul, alpha, result;
-            return _regeneratorRuntime().wrap(function _callee10$(_context12) {
-              while (1) switch (_context12.prev = _context12.next) {
+        _proto.setActorState = function setActorState(sprite, patch) {
+          var _this$actorStates$get, _actorArt$sprite$node, _actorArt$sprite$node2, _sprite$customMateria;
+          var state = (_this$actorStates$get = this.actorStates.get(sprite)) != null ? _this$actorStates$get : {
+            flash: 0,
+            tone: 1,
+            fade: 1,
+            base: (_actorArt$sprite$node = (_actorArt$sprite$node2 = actorArt[sprite.node.name]) == null ? void 0 : _actorArt$sprite$node2.baseOpacity) != null ? _actorArt$sprite$node : 1
+          };
+          Object.assign(state, patch);
+          this.actorStates.set(sprite, state);
+          (_sprite$customMateria = sprite.customMaterial) == null || _sprite$customMateria.setProperty('state', new Vec4(state.flash, state.tone, state.tone, state.base * state.fade));
+        };
+        _proto.actorMaterial = function actorMaterial(sprite) {
+          var _sprite$customMateria2;
+          if (!this.actorEffect) return undefined;
+          if (((_sprite$customMateria2 = sprite.customMaterial) == null ? void 0 : _sprite$customMateria2.effectAsset) === this.actorEffect) return sprite.customMaterial;
+          var material = new Material();
+          material.initialize({
+            effectAsset: this.actorEffect,
+            defines: {
+              USE_TEXTURE: true
+            }
+          });
+          sprite.customMaterial = material;
+          this.setActorState(sprite, {});
+          sprite.node.once(Node.EventType.NODE_DESTROYED, function () {
+            return material.destroy();
+          });
+          return material;
+        }
+
+        // Kept as a no-op for the frozen historical presenter; live death uses fadeActor.
+        ;
+
+        _proto.soulRise = function soulRise(_motion, _home) {
+          return Promise.resolve(true);
+        };
+        _proto.fadeActor = /*#__PURE__*/function () {
+          var _fadeActor = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee22(motion, actor) {
+            var _actor$children$find,
+              _actorArt$baseOpacity,
+              _actorArt,
+              _sprite$node$name,
+              _this35 = this,
+              _actor$getComponent;
+            var sprite, material, state, update, alpha, home;
+            return _regeneratorRuntime().wrap(function _callee22$(_context24) {
+              while (1) switch (_context24.prev = _context24.next) {
                 case 0:
-                  if (!motion.reduced) {
-                    _context12.next = 2;
-                    break;
-                  }
-                  return _context12.abrupt("return", true);
-                case 2:
-                  soul = this.art('enemy-soul', home.x, home.y + 8, 52, 52);
-                  if (soul) {
-                    _context12.next = 5;
-                    break;
-                  }
-                  return _context12.abrupt("return", true);
-                case 5:
-                  alpha = soul.addComponent(UIOpacity);
-                  alpha.opacity = 0;
-                  _context12.prev = 7;
-                  _context12.next = 10;
-                  return Promise.all([motion.play(tween(soul).to(.52, {
-                    position: new Vec3(home.x, home.y + 76, 0)
+                  sprite = (_actor$children$find = actor.children.find(function (n) {
+                    return n.getComponent(Sprite);
+                  })) == null ? void 0 : _actor$children$find.getComponent(Sprite);
+                  material = sprite && this.actorMaterial(sprite);
+                  state = {
+                    tone: 1,
+                    fade: 1
+                  };
+                  (_actorArt$baseOpacity = (_actorArt = actorArt[(_sprite$node$name = sprite == null ? void 0 : sprite.node.name) != null ? _sprite$node$name : '']) == null ? void 0 : _actorArt.baseOpacity) != null ? _actorArt$baseOpacity : 1;
+                  update = function update() {
+                    if (sprite) _this35.setActorState(sprite, {
+                      tone: state.tone,
+                      fade: state.fade
+                    });
+                  };
+                  alpha = (_actor$getComponent = actor.getComponent(UIOpacity)) != null ? _actor$getComponent : actor.addComponent(UIOpacity);
+                  home = actor.position.clone();
+                  return _context24.abrupt("return", Promise.all([motion.play(tween(state).to(.13, {
+                    tone: .3
                   }, {
-                    easing: 'quadOut'
-                  })), motion.play(tween(alpha).delay(.09).to(.13, {
-                    opacity: 228
-                  }).to(.30, {
+                    onUpdate: update
+                  }).to(.33, {
+                    tone: 0,
+                    fade: 0
+                  }, {
+                    onUpdate: update
+                  })), material ? Promise.resolve(true) : motion.play(tween(alpha).delay(.13).to(.33, {
                     opacity: 0
-                  }))]);
-                case 10:
-                  result = _context12.sent;
-                  return _context12.abrupt("return", result.every(Boolean));
-                case 12:
-                  _context12.prev = 12;
-                  soul.destroy();
-                  return _context12.finish(12);
-                case 15:
+                  })), motion.play(tween(actor).delay(.13).to(.33, {
+                    position: new Vec3(home.x + 18, home.y + 15, 0)
+                  }, {
+                    easing: 'sineIn'
+                  }))]).then(function (results) {
+                    return results.every(Boolean);
+                  }));
+                case 8:
                 case "end":
-                  return _context12.stop();
+                  return _context24.stop();
               }
-            }, _callee10, this, [[7,, 12, 15]]);
+            }, _callee22, this);
           }));
-          function soulRise(_x27, _x28) {
-            return _soulRise.apply(this, arguments);
+          function fadeActor(_x31, _x32) {
+            return _fadeActor.apply(this, arguments);
           }
-          return soulRise;
+          return fadeActor;
         }();
         _proto.enemyTurn = /*#__PURE__*/function () {
-          var _enemyTurn = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee11(motion) {
-            var _this20 = this;
-            var attackers, restoreFocus, base, attack, absorbed, lost, effects, _iterator15, _step15, hero, flash, opacity, stageNodes, _iterator16, _step16, node, home;
-            return _regeneratorRuntime().wrap(function _callee11$(_context13) {
-              while (1) switch (_context13.prev = _context13.next) {
+          var _enemyTurn = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee23(motion) {
+            var _this36 = this;
+            var attackers, restoreFocus, base, attack, absorbed, lost, _struck$position, struck, center, effects, _iterator26, _step26, hero, stageNodes, _iterator27, _step27, node, home;
+            return _regeneratorRuntime().wrap(function _callee23$(_context25) {
+              while (1) switch (_context25.prev = _context25.next) {
                 case 0:
                   this.battlePhase = 'enemy';
                   this.setBattleStatus('敌方行动');
                   this.syncBattleTools();
                   attackers = this.enemyNodes.flatMap(function (node, i) {
-                    return _this20.enemies[i] > 0 && !_this20.stunned.has(i) ? [node] : [];
+                    return _this36.enemies[i] > 0 && !_this36.stunned.has(i) ? [node] : [];
                   });
                   restoreFocus = attackers.length ? this.focusCombat(motion, Array.from(this.heroes.values()).concat(attackers)) : function () {};
-                  _context13.prev = 5;
-                  _context13.next = 8;
+                  _context25.prev = 5;
+                  _context25.next = 8;
                   return Promise.all(attackers.map(function (node) {
                     var origin = node.position.clone();
-                    var art = _this20.foes[_this20.enemyNodes.indexOf(node)].art;
+                    var art = _this36.foes[_this36.enemyNodes.indexOf(node)].art;
                     if (art === 'wizard' || art === 'vine') {
                       var _target$position;
-                      var target = _this20.heroes.values().next().value;
-                      return _this20.flyProjectile(motion, art === 'wizard' ? 'm' : 'stone', origin, (_target$position = target == null ? void 0 : target.position) != null ? _target$position : new Vec3(-100, 240, 0));
+                      var target = _this36.heroes.values().next().value;
+                      return _this36.flyProjectile(motion, art === 'wizard' ? 'm' : 'stone', _this36.emissionPoint(node), (_target$position = target == null ? void 0 : target.position) != null ? _target$position : new Vec3(-100, 240, 0));
                     }
                     return motion.play(tween(node).to(motion.duration(.14), {
                       position: new Vec3(origin.x - 27, origin.y, 0)
@@ -3132,66 +9798,58 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   }));
                 case 8:
                   if (!motion.cancelled) {
-                    _context13.next = 10;
+                    _context25.next = 10;
                     break;
                   }
-                  return _context13.abrupt("return");
+                  return _context25.abrupt("return");
                 case 10:
                   base = this.enemies.reduce(function (sum, hp, i) {
-                    return sum + (hp > 0 && !_this20.stunned.has(i) ? _this20.foes[i].atk : 0);
+                    return sum + (hp > 0 && !_this36.stunned.has(i) ? oathEnemyPower(_this36.oath, String(i), _this36.foes[i].atk) : 0);
                   }, 0);
                   this.stunned.clear();
-                  attack = base;
+                  attack = this.oath.guard ? Math.round(base * .85) : base;
+                  this.oath.guard = false;
                   absorbed = Math.min(this.dp, attack);
                   lost = Math.min(this.hp, attack - absorbed);
                   this.dp -= absorbed;
                   this.hp -= lost;
                   this.updateHUD();
                   if (!attack) {
-                    _context13.next = 41;
+                    _context25.next = 42;
                     break;
                   }
                   this.audio.play('hurt');
                   this.setBattleStatus("\u654C\u65B9\u653B\u51FB \xB7 HP \u2212" + lost + " \xB7 DP \u2212" + absorbed);
-                  effects = [this.combatPopup(motion, [lost && '−' + lost + ' HP', absorbed && '−' + absorbed + ' DP'].filter(Boolean).join(' · '), -100, 283, '#ffaaa2')];
-                  for (_iterator15 = _createForOfIteratorHelperLoose(this.heroes.values()); !(_step15 = _iterator15()).done;) {
-                    hero = _step15.value;
+                  struck = Array.from(this.heroes.values()).find(function (n) {
+                    return n.isValid;
+                  });
+                  center = (_struck$position = struck == null ? void 0 : struck.position) != null ? _struck$position : new Vec3(-100, 283, 0);
+                  effects = [];
+                  if (lost) effects.push(this.combatPopup(motion, '−' + lost, center.x, center.y, '#ffffff', 27));
+                  if (absorbed) effects.push(this.combatPopup(motion, '−' + absorbed + ' DP', center.x + 22, center.y + 18, '#90aec4', 27));
+                  for (_iterator26 = _createForOfIteratorHelperLoose(this.heroes.values()); !(_step26 = _iterator26()).done;) {
+                    hero = _step26.value;
                     effects.push(this.hitReaction(motion, hero));
                   }
                   if (!(lost && this.hp <= this.maxHP * .30 && !motion.reduced)) {
-                    _context13.next = 39;
+                    _context25.next = 40;
                     break;
                   }
-                  flash = this.box('重伤闪红', 0, -111.5, 428, 495, '#c31538');
-                  this.art('hurt-cracks', 0, 0, 428, 495, flash);
-                  opacity = flash.addComponent(UIOpacity);
-                  opacity.opacity = 0;
-                  effects.push(motion.play(tween(opacity).to(.045, {
-                    opacity: 190
-                  }, {
-                    easing: 'quadOut'
-                  }).to(.23, {
-                    opacity: 0
-                  }, {
-                    easing: 'quadIn'
-                  })).then(function (played) {
-                    flash.destroy();
-                    return played;
-                  }));
+                  effects.push(this.lowHealthFlash(motion));
                   stageNodes = Array.from(this.heroes.values()).concat(attackers);
-                  _iterator16 = _createForOfIteratorHelperLoose(stageNodes);
-                case 31:
-                  if ((_step16 = _iterator16()).done) {
-                    _context13.next = 39;
+                  _iterator27 = _createForOfIteratorHelperLoose(stageNodes);
+                case 32:
+                  if ((_step27 = _iterator27()).done) {
+                    _context25.next = 40;
                     break;
                   }
-                  node = _step16.value;
+                  node = _step27.value;
                   if (node) {
-                    _context13.next = 35;
+                    _context25.next = 36;
                     break;
                   }
-                  return _context13.abrupt("continue", 37);
-                case 35:
+                  return _context25.abrupt("continue", 38);
+                case 36:
                   home = node.position.clone();
                   effects.push(motion.play(tween(node).to(.06, {
                     position: new Vec3(home.x - 2, home.y, 0)
@@ -3200,39 +9858,40 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   }).to(.09, {
                     position: home
                   })));
-                case 37:
-                  _context13.next = 31;
+                case 38:
+                  _context25.next = 32;
                   break;
-                case 39:
-                  _context13.next = 41;
+                case 40:
+                  _context25.next = 42;
                   return Promise.all(effects);
-                case 41:
+                case 42:
                   if (!motion.cancelled) {
-                    _context13.next = 43;
+                    _context25.next = 44;
                     break;
                   }
-                  return _context13.abrupt("return");
-                case 43:
-                  _context13.prev = 43;
+                  return _context25.abrupt("return");
+                case 44:
+                  _context25.prev = 44;
                   restoreFocus();
-                  return _context13.finish(43);
-                case 46:
+                  return _context25.finish(44);
+                case 47:
                   if (!(this.hp <= 0)) {
-                    _context13.next = 49;
+                    _context25.next = 50;
                     break;
                   }
                   this.finishAdventure('fail');
-                  return _context13.abrupt("return");
-                case 49:
+                  return _context25.abrupt("return");
+                case 50:
+                  endOathRound(this.oath, this.turn);
                   this.turn++;
                   this.resumeBattleInput('轮到玩家，交换相邻纹章');
-                case 51:
+                case 53:
                 case "end":
-                  return _context13.stop();
+                  return _context25.stop();
               }
-            }, _callee11, this, [[5,, 43, 46]]);
+            }, _callee23, this, [[5,, 44, 47]]);
           }));
-          function enemyTurn(_x29) {
+          function enemyTurn(_x33) {
             return _enemyTurn.apply(this, arguments);
           }
           return enemyTurn;
@@ -3253,7 +9912,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.stopHint = undefined;
         };
         _proto.update = function update(delta) {
-          var _this21 = this;
+          var _this37 = this;
           if (this.ui !== this.battleRoot || this.battlePhase !== 'input' || this.busy || this.automatic || this.guideMode || this.battleModal || this.motion.reduced) {
             if (this.hintIdle || this.stopHint) this.clearIdleHint();
             return;
@@ -3264,7 +9923,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var move = this.legalMove();
           if (!move) return;
           var _move$map = move.map(function (index) {
-              return _this21.tiles[index];
+              return _this37.tiles[index];
             }),
             a = _move$map[0],
             b = _move$map[1];
@@ -3286,20 +9945,20 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             };
           });
           this.stopHint = function () {
-            for (var _iterator17 = _createForOfIteratorHelperLoose(entries), _step17; !(_step17 = _iterator17()).done;) {
-              var _step17$value = _step17.value,
-                node = _step17$value.node,
-                home = _step17$value.home,
-                animation = _step17$value.animation;
+            for (var _iterator28 = _createForOfIteratorHelperLoose(entries), _step28; !(_step28 = _iterator28()).done;) {
+              var _step28$value = _step28.value,
+                node = _step28$value.node,
+                home = _step28$value.home,
+                animation = _step28$value.animation;
               animation.stop();
               if (node.isValid) node.setPosition(home);
             }
           };
           entries[0].animation.call(function () {
-            _this21.stopHint = undefined;
+            _this37.stopHint = undefined;
           });
-          entries.forEach(function (_ref8) {
-            var animation = _ref8.animation;
+          entries.forEach(function (_ref27) {
+            var animation = _ref27.animation;
             return animation.start();
           });
         };
@@ -3312,7 +9971,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.guideMode = undefined;
         };
         _proto.refreshGuide = function refreshGuide() {
-          var _this22 = this;
+          var _this38 = this;
           this.clearGuide();
           if (this.phase !== 'wolves' || this.busy || this.battleModal) return;
           var mode = this.firstSwap ? 'swap' : this.potion > 0 && this.hp <= 30 ? 'potion' : undefined;
@@ -3325,7 +9984,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var layer = this.guideLayer = this.box('教学遮罩', 0, 0, 480, 854);
           var graphics = layer.addComponent(Graphics);
           var holes = mode === 'swap' ? [0, 1, 2, 8].map(function (index) {
-            var p = _this22.cells[index].position;
+            var p = _this38.cells[index].position;
             return {
               x: p.x,
               y: p.y,
@@ -3340,8 +9999,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }, {
             x: -stageGrid.meterX,
             y: stageGrid.hpY,
-            w: 125,
-            h: 24
+            w: 143,
+            h: 28
           }];
           var breaks = Array.from(new Set([-427, 427].concat(holes.flatMap(function (h) {
             return [h.y - h.h / 2, h.y + h.h / 2];
@@ -3349,7 +10008,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             return a - b;
           });
           graphics.fillColor = Color.fromHEX(new Color(), '#101c20ad');
-          var _loop5 = function _loop5() {
+          var _loop6 = function _loop6() {
             var low = breaks[row - 1],
               high = breaks[row],
               mid = (high + low) / 2;
@@ -3359,30 +10018,65 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               return a.x - b.x;
             });
             var left = -240;
-            for (var _iterator19 = _createForOfIteratorHelperLoose(openings), _step19; !(_step19 = _iterator19()).done;) {
-              var hole = _step19.value;
+            for (var _iterator30 = _createForOfIteratorHelperLoose(openings), _step30; !(_step30 = _iterator30()).done;) {
+              var hole = _step30.value;
               graphics.rect(left, low, hole.x - hole.w / 2 - left, high - low);
               left = hole.x + hole.w / 2;
             }
             graphics.rect(left, low, 240 - left, high - low);
           };
           for (var row = 1; row < breaks.length; row++) {
-            _loop5();
+            _loop6();
           }
           graphics.fill();
           graphics.strokeColor = Color.fromHEX(new Color(), '#ffe49d');
           graphics.lineWidth = 3;
-          for (var _iterator18 = _createForOfIteratorHelperLoose(holes), _step18; !(_step18 = _iterator18()).done;) {
-            var h = _step18.value;
+          for (var _iterator29 = _createForOfIteratorHelperLoose(holes), _step29; !(_step29 = _iterator29()).done;) {
+            var h = _step29.value;
             graphics.roundRect(h.x - h.w / 2, h.y - h.h / 2, h.w, h.h, 8);
           }
           graphics.stroke();
           var caption = mode === 'swap' ? '滑动或依次点击高亮的两枚纹章' : '点击药水恢复生命';
           this.box('教学提示底板', 0, 159, 419, 36, '#27362ef0', layer);
           this.outline(this.label(caption, 0, 159, 411, 19, layer));
-          var source = mode === 'swap' ? this.cells[1].position : new Vec3(battleToolbar.x, battleToolbar.y + 23, 0);
+          var source = mode === 'swap' ? this.cells[1].position : new Vec3(battleToolbar.x, battleToolbar.y, 0);
           var dest = mode === 'swap' ? this.cells[8].position : source;
-          var hand = this.box('引导手套', source.x + 15, source.y - 15, 30, 39, undefined, layer);
+          this.guidePointer(layer, source, dest, mode === 'swap');
+        };
+        _proto.guidePointer = function guidePointer(layer, source, dest, swap) {
+          if (swap === void 0) {
+            swap = false;
+          }
+          var ring = this.box('教学聚焦光环', source.x, source.y, 240, 240, undefined, layer);
+          var ink = ring.addComponent(Graphics);
+          ink.strokeColor = new Color(255, 230, 150, 230);
+          ink.lineWidth = 3;
+          ink.circle(0, 0, 110);
+          ink.stroke();
+          var glow = ring.addComponent(UIOpacity);
+          glow.opacity = 0;
+          tween(glow).to(.18, {
+            opacity: 255
+          }).delay(.35).to(.35, {
+            opacity: 0
+          }).start();
+          tween(ring).to(.7, {
+            scale: new Vec3(.26, .26, 1)
+          }, {
+            easing: 'sineInOut'
+          }).start();
+          var downward = source.y < -320;
+          var handAngle = downward ? 180 : swap ? -35 : -20;
+          var radians = handAngle * Math.PI / 180;
+          var tipX = -6 * Math.cos(radians) - 34 * Math.sin(radians),
+            tipY = -6 * Math.sin(radians) + 34 * Math.cos(radians);
+          var place = function place(p, lift) {
+            if (lift === void 0) {
+              lift = 0;
+            }
+            return new Vec3(Math.max(-196, Math.min(196, p.x - tipX)), Math.max(-370, Math.min(370, p.y - tipY + lift)), 0);
+          };
+          var hand = this.box('引导手套', 0, 0, 68, 80, undefined, layer);
           var glove = hand.addComponent(Graphics);
           glove.fillColor = Color.fromHEX(new Color(), '#fff8df');
           glove.strokeColor = Color.fromHEX(new Color(), '#312920');
@@ -3403,18 +10097,49 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           glove.close();
           glove.fill();
           glove.stroke();
-          if (!this.motion.reduced) {
-            this.guideHand = tween(hand).repeatForever(tween(hand).set({
-              position: new Vec3(source.x + 15, source.y - 15, 0),
-              scale: new Vec3(.9, .9, 1)
-            }).to(.56, {
-              position: new Vec3(dest.x + 15, dest.y - 15, 0),
-              scale: new Vec3(1.1, 1.1, 1)
-            }).delay(.42)).start();
-          }
+          hand.setScale(2, 2, 1);
+          hand.angle = handAngle;
+          var opacity = hand.addComponent(UIOpacity);
+          opacity.opacity = 0;
+          var state = {
+            progress: 0
+          };
+          var sequence = tween(state).call(function () {
+            if (!hand.isValid) return;
+            hand.setPosition(place(source, swap ? 0 : 35));
+            opacity.opacity = 0;
+          }).to(.22, {
+            progress: 1
+          }, {
+            onUpdate: function onUpdate(_target, ratio) {
+              if (hand.isValid) opacity.opacity = 255 * ratio;
+            }
+          }).delay(swap ? .35 : .12).to(swap ? .55 : .65, {
+            progress: 0
+          }, {
+            easing: 'sineInOut',
+            onUpdate: function onUpdate(_target, ratio) {
+              if (!hand.isValid) return;
+              var from = place(source, swap ? 0 : 35),
+                to = place(dest);
+              hand.setPosition(from.x + (to.x - from.x) * ratio, from.y + (to.y - from.y) * ratio, 0);
+            }
+          }).delay(.65).to(.24, {
+            progress: 1
+          }, {
+            onUpdate: function onUpdate(_target, ratio) {
+              if (hand.isValid) opacity.opacity = 255 * (1 - ratio);
+            }
+          }).delay(.3);
+          var loop = tween(state).repeatForever(sequence).start();
+          layer.once(Node.EventType.NODE_DESTROYED, function () {
+            loop.stop();
+            Tween.stopAllByTarget(glow);
+            Tween.stopAllByTarget(ring);
+          });
         };
         _proto.openBattleModal = function openBattleModal(mode) {
-          var _this23 = this;
+          var _this39 = this;
           if (this.battleModal || this.battlePhase === 'complete') return;
           this.clearGuide();
           this.motion.pause();
@@ -3424,61 +10149,76 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.outline(this.label(mode === 'log' ? '战斗记录' : '撤离探索', 0, mode === 'log' ? 204 : 80, 390, 25, card));
           if (mode === 'log') {
             this.battleLogs.slice(-9).forEach(function (line, i) {
-              return _this23.label(line, 0, 152 - i * 34, 396, 16, card);
+              return _this39.label(line, 0, 152 - i * 34, 396, 16, card);
             });
           } else this.label('确定撤离当前探索？', 0, 19, 396, 19, card);
           var dismiss = function dismiss() {
+            if (_this39.battleModal !== panel) return;
             panel.destroy();
-            _this23.battleModal = undefined;
-            _this23.motion.resume();
-            _this23.refreshGuide();
-            _this23.autoStep();
+            _this39.battleModal = undefined;
+            _this39.motion.resume();
+            _this39.refreshGuide();
+            _this39.autoStep();
           };
           var choice = function choice(label, x, y, action) {
-            var button = _this23.box(label, x, y, 169, 46, '#567052', card);
-            if (_this23.trial) _this23.slicedArt('trial-ui-button', 0, 0, 169, 46, button);
-            _this23.label(label, 0, 0, 164, 18, button);
+            var button = _this39.box(label, x, y, 169, 46, '#567052', card);
+            if (_this39.trial) _this39.slicedArt('trial-ui-button', 0, 0, 169, 46, button);
+            _this39.label(label, 0, 0, 164, 18, button);
             button.on(Node.EventType.TOUCH_END, function () {
-              if (_this23.trial) _this23.audio.playTrial('click');
+              if (_this39.battleModal !== panel) return;
+              if (_this39.trial) _this39.audio.playTrial('click');
               action();
             });
           };
           if (mode === 'retreat') {
             choice('返回战斗', -97, -71, dismiss);
-            choice('确认撤离', 97, -71, function () {
-              _this23.motion.cancel();
-              _this23.battleModal = undefined;
-              _this23.finishAdventure('retreat');
+            var reload = this.stage4AStockUncertain;
+            choice(reload ? '重新加载' : '确认撤离', 97, -71, function () {
+              if (reload) {
+                location.reload();
+                return;
+              }
+              if (_this39.stage4A) {
+                _this39.stopStage4A('retreat');
+                _this39.battleModal = undefined;
+                _this39.automatic = false;
+                _this39.busy = false;
+                _this39.map();
+                return;
+              }
+              _this39.motion.cancel();
+              _this39.battleModal = undefined;
+              _this39.finishAdventure('retreat');
             });
           } else choice('返回战斗', 0, -192, dismiss);
         };
         _proto.animateCoins = /*#__PURE__*/function () {
-          var _animateCoins = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee14(motion, amount, label, origin, groundY) {
-            var _this24 = this;
-            var root, active, base, setAmount, count, spacing, left, coins, hud, destination, displayed, target, pulse, rolling, rollCounter, _i4, _coins, node;
-            return _regeneratorRuntime().wrap(function _callee14$(_context16) {
-              while (1) switch (_context16.prev = _context16.next) {
+          var _animateCoins = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee26(motion, amount, label, origin, groundY) {
+            var _this40 = this;
+            var root, active, base, setAmount, count, spacing, left, coins, hud, destination, displayed, target, pulse, rolling, rollCounter, _i6, _coins, node;
+            return _regeneratorRuntime().wrap(function _callee26$(_context28) {
+              while (1) switch (_context28.prev = _context28.next) {
                 case 0:
                   root = this.ui;
                   active = function active() {
-                    return !motion.cancelled && _this24.ui === root && label.isValid;
+                    return !motion.cancelled && _this40.ui === root && label.isValid;
                   };
                   if (!(!active() || amount <= 0)) {
-                    _context16.next = 4;
+                    _context28.next = 4;
                     break;
                   }
-                  return _context16.abrupt("return", active());
+                  return _context28.abrupt("return", active());
                 case 4:
                   base = Number(label.string);
                   setAmount = function setAmount(value) {
                     if (active()) label.string = String(value);
                   };
                   if (!motion.reduced) {
-                    _context16.next = 9;
+                    _context28.next = 9;
                     break;
                   }
                   setAmount(base + amount);
-                  return _context16.abrupt("return", true);
+                  return _context28.abrupt("return", true);
                 case 9:
                   count = Math.min(amount, 8);
                   spacing = 14;
@@ -3486,8 +10226,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   coins = Array.from({
                     length: count
                   }, function (_, i) {
-                    var node = _this24.box('飞行金币', origin.x, origin.y, 13, 13);
-                    _this24.drawCoin(node.addComponent(Graphics), 6);
+                    var node = _this40.box('飞行金币', origin.x, origin.y, 13, 13);
+                    _this40.drawCoin(node.addComponent(Graphics), 6);
                     var ground = new Vec3(left + i * spacing, groundY + 6 + i % 2 * 4, 0);
                     return {
                       node: node,
@@ -3500,45 +10240,45 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   target = base;
                   pulse = 0;
                   rollCounter = /*#__PURE__*/function () {
-                    var _ref9 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee12() {
+                    var _ref28 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee24() {
                       var step;
-                      return _regeneratorRuntime().wrap(function _callee12$(_context14) {
-                        while (1) switch (_context14.prev = _context14.next) {
+                      return _regeneratorRuntime().wrap(function _callee24$(_context26) {
+                        while (1) switch (_context26.prev = _context26.next) {
                           case 0:
                             step = Math.max(1, Math.ceil(amount / 20));
                           case 1:
                             if (!(displayed < target && active())) {
-                              _context14.next = 10;
+                              _context26.next = 10;
                               break;
                             }
-                            _context14.next = 4;
+                            _context26.next = 4;
                             return motion.play(tween({}).delay(.038));
                           case 4:
-                            if (_context14.sent) {
-                              _context14.next = 6;
+                            if (_context26.sent) {
+                              _context26.next = 6;
                               break;
                             }
-                            return _context14.abrupt("return");
+                            return _context26.abrupt("return");
                           case 6:
                             displayed = Math.min(target, displayed + step);
                             setAmount(displayed);
-                            _context14.next = 1;
+                            _context26.next = 1;
                             break;
                           case 10:
                           case "end":
-                            return _context14.stop();
+                            return _context26.stop();
                         }
-                      }, _callee12);
+                      }, _callee24);
                     }));
                     return function rollCounter() {
-                      return _ref9.apply(this, arguments);
+                      return _ref28.apply(this, arguments);
                     };
                   }();
-                  _context16.prev = 19;
-                  _context16.next = 22;
-                  return Promise.all(coins.map(function (_ref10, i) {
-                    var node = _ref10.node,
-                      ground = _ref10.ground;
+                  _context28.prev = 19;
+                  _context28.next = 22;
+                  return Promise.all(coins.map(function (_ref29, i) {
+                    var node = _ref29.node,
+                      ground = _ref29.ground;
                     return motion.play(tween(node).to(.14, {
                       position: new Vec3((ground.x + origin.x) / 2, origin.y + 24 + i % 3 * 4, 0)
                     }, {
@@ -3551,138 +10291,178 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   }));
                 case 22:
                   if (active()) {
-                    _context16.next = 24;
+                    _context28.next = 24;
                     break;
                   }
-                  return _context16.abrupt("return", false);
+                  return _context28.abrupt("return", false);
                 case 24:
-                  _context16.next = 26;
-                  return Promise.all(coins.map( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee13(_ref11, i) {
+                  _context28.next = 26;
+                  return Promise.all(coins.map( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee25(_ref30, i) {
                     var _rolling;
                     var node, ground, bend, arrived, current;
-                    return _regeneratorRuntime().wrap(function _callee13$(_context15) {
-                      while (1) switch (_context15.prev = _context15.next) {
+                    return _regeneratorRuntime().wrap(function _callee25$(_context27) {
+                      while (1) switch (_context27.prev = _context27.next) {
                         case 0:
-                          node = _ref11.node, ground = _ref11.ground;
+                          node = _ref30.node, ground = _ref30.ground;
                           bend = (i - (count - 1) / 2) * 12;
-                          _context15.next = 4;
+                          _context27.next = 4;
                           return motion.play(tween({
                             progress: 0
                           }).delay(.15 + i * .064).to(.35, {
                             progress: 1
                           }, {
                             easing: 'quadIn',
-                            onUpdate: function onUpdate(_ref13) {
-                              var progress = _ref13.progress;
+                            onUpdate: function onUpdate(_ref32) {
+                              var progress = _ref32.progress;
                               if (!node.isValid) return;
                               var arc = Math.sin(Math.PI * progress);
                               node.setPosition(ground.x + (destination.x - ground.x) * progress + bend * arc, ground.y + (destination.y - ground.y) * progress + (38 + i % 2 * 9) * arc);
                             }
                           }));
                         case 4:
-                          arrived = _context15.sent;
+                          arrived = _context27.sent;
                           if (!(!arrived || !active())) {
-                            _context15.next = 7;
+                            _context27.next = 7;
                             break;
                           }
-                          return _context15.abrupt("return");
+                          return _context27.abrupt("return");
                         case 7:
                           node.destroy();
-                          _this24.audio.play('coins');
+                          _this40.audio.play('coins');
                           target += Math.floor((i + 1) * amount / count) - Math.floor(i * amount / count);
                           (_rolling = rolling) != null ? _rolling : rolling = rollCounter()["finally"](function () {
                             rolling = undefined;
                           });
                           current = ++pulse;
                           hud.setScale(1.17, 1.17, 1);
-                          _context15.next = 15;
+                          _context27.next = 15;
                           return motion.play(tween({
                             scale: 1.17
                           }).to(.12, {
                             scale: 1
                           }, {
-                            onUpdate: function onUpdate(_ref14) {
-                              var scale = _ref14.scale;
+                            onUpdate: function onUpdate(_ref33) {
+                              var scale = _ref33.scale;
                               if (current === pulse && active()) hud.setScale(scale, scale, 1);
                             }
                           }));
                         case 15:
                         case "end":
-                          return _context15.stop();
+                          return _context27.stop();
                       }
-                    }, _callee13);
+                    }, _callee25);
                   }))));
                 case 26:
-                  _context16.next = 28;
+                  _context28.next = 28;
                   return rolling;
                 case 28:
                   if (active()) {
-                    _context16.next = 30;
+                    _context28.next = 30;
                     break;
                   }
-                  return _context16.abrupt("return", false);
+                  return _context28.abrupt("return", false);
                 case 30:
                   setAmount(base + amount);
-                  return _context16.abrupt("return", true);
+                  return _context28.abrupt("return", true);
                 case 32:
-                  _context16.prev = 32;
-                  for (_i4 = 0, _coins = coins; _i4 < _coins.length; _i4++) {
-                    node = _coins[_i4].node;
+                  _context28.prev = 32;
+                  for (_i6 = 0, _coins = coins; _i6 < _coins.length; _i6++) {
+                    node = _coins[_i6].node;
                     if (node.isValid) node.destroy();
                   }
                   if (hud.isValid) hud.setScale(1, 1, 1);
                   if (!active() && this.ui === root && label.isValid) label.string = String(base);
-                  return _context16.finish(32);
+                  return _context28.finish(32);
                 case 37:
                 case "end":
-                  return _context16.stop();
+                  return _context28.stop();
               }
-            }, _callee14, this, [[19,, 32, 37]]);
+            }, _callee26, this, [[19,, 32, 37]]);
           }));
-          function animateCoins(_x30, _x31, _x32, _x33, _x34) {
+          function animateCoins(_x34, _x35, _x36, _x37, _x38) {
             return _animateCoins.apply(this, arguments);
           }
           return animateCoins;
         }();
         _proto.combatPopup = function combatPopup(motion, value, x, y, color, size) {
+          var _this$popupPool$pop,
+            _this$popupLayer,
+            _n$getComponent,
+            _this41 = this;
           if (size === void 0) {
-            size = 20;
+            size = 27;
           }
-          var label = this.outline(this.label(value, x, y, 155, size));
+          this.popupPool = this.popupPool.filter(function (node) {
+            return node.isValid;
+          });
+          var n = (_this$popupPool$pop = this.popupPool.pop()) != null ? _this$popupPool$pop : this.outline(this.label('', 0, 0, 220, 27)).node;
+          if (!((_this$popupLayer = this.popupLayer) != null && _this$popupLayer.isValid) || this.popupLayer.parent !== this.ui) this.popupLayer = this.box('500 跳字层', 0, 0, 480, 854);
+          this.popupLayer.setSiblingIndex(this.ui.children.length - 1);
+          n.setParent(this.popupLayer);
+          n.active = true;
+          n.name = '战斗跳字 ' + ++this.popupOrder;
+          n.setPosition(x, y, 0);
+          n.setSiblingIndex(this.popupLayer.children.length - 1);
+          var label = n.getComponent(Label);
+          label.string = value;
+          label.fontSize = 27;
+          label.lineHeight = 35;
+          label.isBold = true;
           label.color = Color.fromHEX(new Color(), color);
-          label.isBold = size > 20;
-          var n = label.node;
-          n.setScale(.75, .75, 1);
-          return motion.play(tween(n).to(motion.duration(.075), {
-            position: new Vec3(x, y + 8, 0),
-            scale: new Vec3(1.27, 1.27, 1)
-          }).to(motion.duration(.10), {
+          var alpha = (_n$getComponent = n.getComponent(UIOpacity)) != null ? _n$getComponent : n.addComponent(UIOpacity);
+          alpha.opacity = 255;
+          var critical = size >= 38;
+          n.setScale(.65, .65, 1);
+          var move = motion.play(tween(n).to(motion.duration(.09), {
+            position: new Vec3(x, y + 9, 0),
+            scale: new Vec3(critical ? 1.65 : 1.2, critical ? 1.65 : 1.2, 1)
+          }, {
+            easing: 'quadOut'
+          }).to(motion.duration(.13), {
             scale: new Vec3(1, 1, 1)
-          }).to(motion.duration(.19), {
-            position: new Vec3(x, y + 32, 0)
-          })).then(function (played) {
-            if (n.isValid) n.destroy();
-            return played;
+          }).delay(motion.duration(.32)).to(motion.duration(.25), {
+            position: new Vec3(x, y + 38, 0)
+          }));
+          var fade = motion.play(tween(alpha).delay(motion.duration(.54)).to(motion.duration(.25), {
+            opacity: 0
+          }));
+          return Promise.all([move, fade]).then(function (result) {
+            return result.every(Boolean);
+          })["finally"](function () {
+            if (!n.isValid) return;
+            n.active = false;
+            if (_this41.popupPool.length < 24) _this41.popupPool.push(n);else n.destroy();
           });
         };
+        _proto.emissionPoint = function emissionPoint(actor) {
+          var _portrait$name;
+          var portrait = actor.children.find(function (n) {
+            return n.getComponent(Sprite);
+          });
+          var profile = actorArt[(_portrait$name = portrait == null ? void 0 : portrait.name) != null ? _portrait$name : ''];
+          var bounds = portrait == null ? void 0 : portrait.getComponent(UITransform);
+          if (!profile || !bounds) return actor.position;
+          var side = portrait.scale.x;
+          return new Vec3(actor.position.x + (profile.projectileX - .5) * bounds.width * side, actor.position.y + (.5 - profile.projectileY) * bounds.height, 0);
+        };
         _proto.flyProjectile = /*#__PURE__*/function () {
-          var _flyProjectile = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee15(motion, type, origin, target) {
-            var _this25 = this;
+          var _flyProjectile = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee27(motion, type, origin, target) {
+            var _this42 = this;
             var projectile, trails, arrived;
-            return _regeneratorRuntime().wrap(function _callee15$(_context17) {
-              while (1) switch (_context17.prev = _context17.next) {
+            return _regeneratorRuntime().wrap(function _callee27$(_context29) {
+              while (1) switch (_context29.prev = _context29.next) {
                 case 0:
                   projectile = this.art(type, origin.x, origin.y, 32, 32);
                   if (projectile) {
-                    _context17.next = 3;
+                    _context29.next = 3;
                     break;
                   }
-                  return _context17.abrupt("return", true);
+                  return _context29.abrupt("return", true);
                 case 3:
                   trails = motion.reduced ? [] : Array.from({
                     length: 4
                   }, function (_, i) {
-                    var n = _this25.box('投射物拖尾', origin.x, origin.y, 8 - i, 8 - i, type === 'm' ? '#ba90f0' : '#d1b58a');
+                    var n = _this42.box('投射物拖尾', origin.x, origin.y, 8 - i, 8 - i, type === 'm' ? '#ba90f0' : '#d1b58a');
                     var alpha = n.addComponent(UIOpacity);
                     alpha.opacity = 143 - i * 25;
                     n.setSiblingIndex(projectile.getSiblingIndex());
@@ -3696,26 +10476,26 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                       return played;
                     });
                   });
-                  _context17.next = 6;
+                  _context29.next = 6;
                   return motion.play(tween(projectile).to(motion.duration(.18), {
                     position: target.clone()
                   }, {
                     easing: 'quadIn'
                   }));
                 case 6:
-                  arrived = _context17.sent;
+                  arrived = _context29.sent;
                   if (projectile.isValid) projectile.destroy();
-                  _context17.next = 10;
+                  _context29.next = 10;
                   return Promise.all(trails);
                 case 10:
-                  return _context17.abrupt("return", arrived && !motion.cancelled);
+                  return _context29.abrupt("return", arrived && !motion.cancelled);
                 case 11:
                 case "end":
-                  return _context17.stop();
+                  return _context29.stop();
               }
-            }, _callee15, this);
+            }, _callee27, this);
           }));
-          function flyProjectile(_x37, _x38, _x39, _x40) {
+          function flyProjectile(_x41, _x42, _x43, _x44) {
             return _flyProjectile.apply(this, arguments);
           }
           return flyProjectile;
@@ -3743,16 +10523,16 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           });
         };
         _proto.burst = function burst(motion, x, y, color, count) {
-          var _this26 = this;
+          var _this43 = this;
           if (motion.reduced) return [];
           return Array.from({
             length: count
           }, function (_, i) {
-            var _this26$particlePool$, _node$getComponent;
+            var _this43$particlePool$, _node$getComponent2;
             var angle = i * 2 * Math.PI / count;
-            var root = _this26.ui;
-            var node = (_this26$particlePool$ = _this26.particlePool.pop()) != null ? _this26$particlePool$ : _this26.box('粒子', x, y, 8, 8);
-            var g = (_node$getComponent = node.getComponent(Graphics)) != null ? _node$getComponent : node.addComponent(Graphics);
+            var root = _this43.ui;
+            var node = (_this43$particlePool$ = _this43.particlePool.pop()) != null ? _this43$particlePool$ : _this43.box('粒子', x, y, 8, 8);
+            var g = (_node$getComponent2 = node.getComponent(Graphics)) != null ? _node$getComponent2 : node.addComponent(Graphics);
             g.clear();
             g.fillColor = Color.fromHEX(new Color(), color);
             g.circle(0, 0, 4);
@@ -3765,9 +10545,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               position: new Vec3(x + Math.cos(angle) * 30, y + Math.sin(angle) * 25, 0),
               scale: new Vec3(.2, .2, 1)
             })).then(function (played) {
-              if (node.isValid && _this26.ui === root) {
+              if (node.isValid && _this43.ui === root) {
                 node.active = false;
-                _this26.particlePool.push(node);
+                _this43.particlePool.push(node);
               }
               return played;
             });
@@ -3783,12 +10563,14 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }).start();
         };
         _proto.groundShadow = function groundShadow(parent, y, art, width) {
-          var _portraitFootprint$ar;
-          var _ref15 = (_portraitFootprint$ar = portraitFootprint[art]) != null ? _portraitFootprint$ar : [.14, .86],
-            left = _ref15[0],
-            right = _ref15[1];
-          var x = ((left + right) * .5 - .5) * width;
-          var radius = Math.max(15, (right - left) * width * .47);
+          var _portraitFootprint$ar, _profile$shadowOffset, _profile$shadowOffset2, _profile$shadowScale;
+          var _ref34 = (_portraitFootprint$ar = portraitFootprint[art]) != null ? _portraitFootprint$ar : [.14, .86],
+            left = _ref34[0],
+            right = _ref34[1];
+          var profile = actorArt[art];
+          var x = ((left + right) * .5 - .5) * width + ((_profile$shadowOffset = profile == null ? void 0 : profile.shadowOffsetX) != null ? _profile$shadowOffset : 0);
+          y += (_profile$shadowOffset2 = profile == null ? void 0 : profile.shadowOffsetY) != null ? _profile$shadowOffset2 : 0;
+          var radius = Math.max(15, (right - left) * width * .47) * ((_profile$shadowScale = profile == null ? void 0 : profile.shadowScale) != null ? _profile$shadowScale : 1);
           var height = radius * .24;
           var shade = this.box('脚底投影', x, y, radius * 2, height * 2, undefined, parent);
           var g = shade.addComponent(Graphics);
@@ -3804,21 +10586,28 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }).sort(function (a, b) {
             return Number(a.front) - Number(b.front);
           });
-          for (var _iterator20 = _createForOfIteratorHelperLoose(slots), _step20; !(_step20 = _iterator20()).done;) {
-            var _step20$value = _step20.value,
-              id = _step20$value.id,
-              x = _step20$value.x,
-              front = _step20$value.front;
-            var ground = front ? stageGrid.groundY : stageGrid.rearGroundY;
+          for (var _iterator31 = _createForOfIteratorHelperLoose(slots), _step31; !(_step31 = _iterator31()).done;) {
+            var _step31$value = _step31.value,
+              id = _step31$value.id,
+              _x45 = _step31$value.x,
+              front = _step31$value.front;
+            var _ground2 = front ? stageGrid.groundY : stageGrid.rearGroundY;
             var art = 'hero-' + id;
-            var y = this.portraitY(art, ground, size);
-            var actor = this.box(art, x, y, size, size);
-            this.groundShadow(actor, ground - y, art, size);
+            var y = this.portraitY(art, _ground2, size);
+            var actor = this.box(art, _x45, y, size, size);
+            this.groundShadow(actor, _ground2 - y, art, size);
             this.art(art, 0, 0, size, size, actor);
             this.heroes.set(id, actor);
           }
+          for (var _iterator32 = _createForOfIteratorHelperLoose(this.ui.children.slice()), _step32; !(_step32 = _iterator32()).done;) {
+            var backdrop = _step32.value;
+            if (backdrop.getChildByName('forest-lab-front')) this.liftForestForeground(backdrop, this.ui);
+          }
         };
         _proto.page = function page(title, detail, background, options) {
+          var _exec,
+            _Array$from$find,
+            _this44 = this;
           if (background === void 0) {
             background = 'travel-forest-plains';
           }
@@ -3826,6 +10615,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             options = {};
           }
           this.reset(background);
+          this.speechOwner = (_exec = /^([^：:]+)[：:]/.exec(detail)) == null ? void 0 : _exec[1];
           if (options.party !== false) this.showParty();else this.heroes.clear();
           this.box('Scene title plate', 0, stageGrid.titleY, 336, 40, '#24392fe8');
           var heading = this.label(title, 0, stageGrid.titleY, 320, 25);
@@ -3837,14 +10627,21 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           if (options.meters !== false) {
             var hp = Math.max(0, this.hp),
               maxHP = this.maxHP;
-            var stageStats = this.makeMeter(-stageGrid.meterX, stageGrid.hpY, 121, '#7ecb82');
+            if (options.party !== false) this.outline(this.label(this.partyName, -stageGrid.meterX, stageGrid.hpY + 23, 139, 14));
+            var stageStats = this.makeMeter(-stageGrid.meterX, stageGrid.hpY, 139, '#7ecb82');
             this.setMeter(stageStats, hp, maxHP, String(hp));
             if (this.showsGuard) {
-              var stageGuard = this.makeMeter(-stageGrid.meterX, stageGrid.secondaryY, 121, '#63b5df');
+              var stageGuard = this.makeMeter(-stageGrid.meterX, stageGrid.secondaryY, 139, '#63b5df');
               this.setMeter(stageGuard, this.dp, this.maxDP, String(this.dp));
             }
           }
           if (options.gold !== false) this.coinText = this.makeCoinDisplay();
+          var speaker = (_Array$from$find = Array.from(this.heroes.entries()).find(function (_ref35) {
+            var _heroes$id;
+            var id = _ref35[0];
+            return ((_heroes$id = heroes[id]) == null ? void 0 : _heroes$id.name) === _this44.speechOwner;
+          })) == null ? void 0 : _Array$from$find[1];
+          if (speaker) this.popSpeaker(speaker);
         };
         _proto.startTutorial = function startTutorial() {
           this.adventure = undefined;
@@ -3854,7 +10651,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.showRoom();
         };
         _proto.startMineTrial = function startMineTrial() {
-          var _this27 = this;
+          var _this45 = this;
           if (this.trial) return;
           var snapshot = {
             party: this.party,
@@ -3870,7 +10667,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.trial = {
             random: mineTrialRandom(),
             restore: function restore() {
-              return Object.assign(_this27, snapshot);
+              return Object.assign(_this45, snapshot);
             },
             moves: 0,
             longestChain: 0
@@ -3899,12 +10696,12 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.label('遭遇战 · 营地 · 营救 · 晶岩守卫', 0, -84, 388, 17);
           var root = this.ui;
           this.trialButton('进入矿道', -203, function () {
-            if (_this27.ui !== root) return;
-            _this27.audio.playTrial('open');
-            _this27.showRoom();
+            if (_this45.ui !== root) return;
+            _this45.audio.playTrial('open');
+            _this45.showRoom();
           });
           this.trialButton('返回标题', -269, function () {
-            return _this27.leaveMineTrial();
+            return _this45.leaveMineTrial();
           }, 0, 230, 'trial-ui-back', true);
         };
         _proto.mineTrialCaption = function mineTrialCaption(value, y) {
@@ -3914,22 +10711,22 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           heading.color = Color.fromHEX(new Color(), '#51382b');
         };
         _proto.leaveMineTrial = function leaveMineTrial(retry) {
-          var _this$motion2;
+          var _this$motion7;
           if (retry === void 0) {
             retry = false;
           }
           var trial = this.trial;
           if (!trial) return;
-          (_this$motion2 = this.motion) == null || _this$motion2.cancel();
+          (_this$motion7 = this.motion) == null || _this$motion7.cancel();
           this.audio.stopTrial();
           this.trial = undefined;
           trial.restore();
           if (retry) this.startMineTrial();else this.menu();
         };
         _proto.finishMineTrial = function finishMineTrial(outcome) {
-          var _this$motion3,
-            _this28 = this;
-          (_this$motion3 = this.motion) == null || _this$motion3.cancel();
+          var _this$motion8,
+            _this46 = this;
+          (_this$motion8 = this.motion) == null || _this$motion8.cancel();
           this.audio.stopTrial();
           this.dungeon = undefined;
           this.automatic = false;
@@ -3943,7 +10740,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             var star = this.art('trial-ui-clear', 0, -12, 85, 85);
             var _root = this.ui;
             if (star) {
-              var reveal = new BattleMotion();
+              var reveal = this.newPageMotion();
               this.motion = reveal;
               if (!reveal.reduced) {
                 star.setScale(.35, .35, 1);
@@ -3952,7 +10749,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                 }, {
                   easing: 'backOut'
                 }).call(function () {
-                  if (_this28.ui === _root) _this28.audio.playTrial('reward');
+                  if (_this46.ui === _root) _this46.audio.playTrial('reward');
                 }).to(.11, {
                   scale: new Vec3(1, 1, 1)
                 }));
@@ -3961,14 +10758,15 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             this.label("\u6709\u6548\u6362\u4F4D " + this.trial.moves + " \u6B21\u3000\u6700\u9AD8 " + this.trial.longestChain + " \u8FDE\u9501", 0, -83, 390, 17);
           } else if (outcome === 'fail') this.audio.playTrial('defeat');
           this.trialButton('再试一次', -164, function () {
-            return _this28.leaveMineTrial(true);
+            return _this46.leaveMineTrial(true);
           });
           this.trialButton('返回标题', -230, function () {
-            return _this28.leaveMineTrial();
+            return _this46.leaveMineTrial();
           }, 0, 230, 'trial-ui-back', true);
         };
         _proto.victory = function victory(director, room, reward) {
-          var _this29 = this;
+          var _this47 = this;
+          if (this.mineRecovery) return;
           if (this.dungeon !== director || director.room !== room || this.rewardedRooms.has(room)) return;
           this.rewardedRooms.add(room);
           var run = this.adventure;
@@ -3991,7 +10789,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               this.save();
               this.page('裂印暂时封闭', '带着救出的村民前往溪桥村，向村长交付村徽。', 'stage-forest-4');
               this.button('返回章节地图', 14, function () {
-                return _this29.map();
+                return _this47.map();
               });
               return;
             }
@@ -4001,9 +10799,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           run.xp += room.enemies.length * 2;
           var multiplier = dungeonRewardMultiplier(room.type);
           var loot = dungeons[run.id].loot;
-          for (var _i5 = 0, _arr3 = Object.keys(loot); _i5 < _arr3.length; _i5++) {
+          for (var _i7 = 0, _arr3 = Object.keys(loot); _i7 < _arr3.length; _i7++) {
             var _run$loot$key;
-            var key = _arr3[_i5];
+            var key = _arr3[_i7];
             if (key === 'gold') continue;
             run.loot[key] = ((_run$loot$key = run.loot[key]) != null ? _run$loot$key : 0) + Math.ceil(loot[key] * multiplier);
           }
@@ -4011,7 +10809,11 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.advanceRoom(director, room);
         };
         _proto.finishAdventure = function finishAdventure(outcome) {
-          var _this30 = this;
+          var _this48 = this;
+          if (this.mineRecovery) {
+            if (outcome === 'win') this.showRecoveryStop('正式通关事务未启用。');else this.closeMineRecovery(outcome);
+            return;
+          }
           if (this.trial) {
             this.finishMineTrial(outcome);
             return;
@@ -4024,8 +10826,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           if (run) {
             var rate = outcome === 'win' ? 1 : outcome === 'retreat' ? .7 : .5;
             var earned = {};
-            for (var _i6 = 0, _arr4 = Object.keys(run.loot); _i6 < _arr4.length; _i6++) {
-              var key = _arr4[_i6];
+            for (var _i8 = 0, _arr4 = Object.keys(run.loot); _i8 < _arr4.length; _i8++) {
+              var key = _arr4[_i8];
               earned[key] = Math.floor(run.loot[key] * rate);
             }
             earned.gold = Math.floor(run.coins * rate);
@@ -4063,10 +10865,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                 this.label('高塔的裂印已封闭，接下来要找出运单的收货人。', 0, 62, 434, 16);
               }
               this.button('返回章节地图', 30, function () {
-                return _this30.map();
+                return _this48.map();
               });
               this.button('整理角色与装备', -34, function () {
-                return _this30.roster();
+                return _this48.roster();
               });
               return;
             }
@@ -4079,14 +10881,14 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             this.save();
             this.page('探索失败', '你在溪桥村的酒馆醒来，队伍已恢复生命与 DP。', 'village-tavern-stage');
             this.button('起身，回到酒馆', 14, function () {
-              return _this30.tavern(true);
+              return _this48.tavern(true);
             });
           } else this.menu();
         };
         _proto.map = function map() {
           var _this$art5,
             _root$getChildByName,
-            _this31 = this;
+            _this49 = this;
           this.dungeon = undefined;
           this.adventure = undefined;
           var saved = locations[this.location];
@@ -4103,9 +10905,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var settlementX = (444.5 / 940 - .5) * mapSize;
           var settlementY = (.5 - 722.5 / 940) * mapSize + mapY;
           var villageArt = this.art('world-village-cut', settlementX, settlementY, 349 / 940 * mapSize, 243 / 940 * mapSize);
-          var at = function at(_ref16) {
-            var x = _ref16[0],
-              y = _ref16[1];
+          var at = function at(_ref36) {
+            var x = _ref36[0],
+              y = _ref36[1];
             return new Vec3((x - 50) * mapSize / 100, (50 - y) * mapSize / 100 + mapY, 0);
           };
           var marker = at(worldPoints[current]);
@@ -4114,21 +10916,26 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var traveling = false;
           var root = this.ui;
           var caption = (_root$getChildByName = root.getChildByName('第一章 · 苔石边境')) == null ? void 0 : _root$getChildByName.getComponent(Label);
-          var _loop6 = function _loop6() {
-            var _this31$hunt;
-            var id = _step21.value;
+          var _loop7 = function _loop7() {
+            var _this49$hunt;
+            var id = _step33.value;
             var pt = at(worldPoints[id]);
-            var ready = unlocked(id, _this31.cleared);
-            var node = _this31.box(locationNames[id], pt.x, pt.y - 23, 104, 38);
-            var settlement = id === 'village' ? _this31.box('村庄建筑点击区', settlementX - pt.x, settlementY - (pt.y - 23) - 16, 113, 48, undefined, node) : undefined;
-            if (guide && id === 'village') _this31.mapQuestHighlight(node);
-            var banner = _this31.slicedArt('map-parchment', 0, 0, 104, 37, node);
-            if (banner) banner.getComponent(Sprite).grayscale = !ready;else _this31.box('地图名称备用底框', 0, 0, 104, 37, ready ? '#f8dfb4' : '#c3b9a9', node);
-            var title = _this31.label(locationNames[id], 0, 0, 82, 16, node);
+            var ready = unlocked(id, _this49.cleared);
+            var dx = id === 'forest' ? -10 : 0;
+            var dy = id === 'forest' ? -5 : id === 'village' ? -25 : id === 'swamp' ? -10 : 0;
+            var node = _this49.box(locationNames[id], pt.x + dx, pt.y - 23 + dy, 104, 38);
+            var settlement = id === 'village' ? _this49.box('村庄建筑点击区', settlementX - pt.x - dx, settlementY - (pt.y - 23 + dy) - 16, 113, 48, undefined, node) : undefined;
+            if (guide && id === 'village') {
+              _this49.mapQuestHighlight(node);
+              _this49.mapGuide(node.position);
+            }
+            var banner = _this49.slicedArt('map-parchment', 0, 0, 104, 37, node);
+            if (banner) banner.getComponent(Sprite).grayscale = !ready;else _this49.box('地图名称备用底框', 0, 0, 104, 37, ready ? '#f8dfb4' : '#c3b9a9', node);
+            var title = _this49.label(locationNames[id], 0, 0, 82, 16, node);
             title.isBold = true;
             title.color = Color.fromHEX(new Color(), ready ? '#573724' : '#625b54');
-            if (((_this31$hunt = _this31.hunt) == null ? void 0 : _this31$hunt.state) === 'active' && _this31.hunt.target === id) {
-              var badge = _this31.box('讨伐标记', 41, 17, 21, 21, undefined, node);
+            if (((_this49$hunt = _this49.hunt) == null ? void 0 : _this49$hunt.state) === 'active' && _this49.hunt.target === id) {
+              var badge = _this49.box('讨伐标记', 41, 17, 21, 21, undefined, node);
               var ink = badge.addComponent(Graphics);
               ink.fillColor = Color.fromHEX(new Color(), '#d63c41');
               ink.strokeColor = Color.fromHEX(new Color(), '#622331');
@@ -4136,116 +10943,135 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               ink.circle(0, 0, 9);
               ink.fill();
               ink.stroke();
-              _this31.outline(_this31.label('!', 0, 0, 17, 14, badge));
+              _this49.outline(_this49.label('!', 0, 0, 17, 14, badge));
             }
             var visit = /*#__PURE__*/function () {
-              var _ref17 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee16() {
+              var _ref37 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee28() {
+                var _root$getChildByName2, _root$getChildByName3, _root$getChildByName4;
                 var path, places, travelTime, pathPoints;
-                return _regeneratorRuntime().wrap(function _callee16$(_context18) {
-                  while (1) switch (_context18.prev = _context18.next) {
+                return _regeneratorRuntime().wrap(function _callee28$(_context30) {
+                  while (1) switch (_context30.prev = _context30.next) {
                     case 0:
-                      if (!(traveling || !ready || _this31.ui !== root || guide && id !== 'village')) {
-                        _context18.next = 2;
+                      if (!(traveling || !ready || _this49.ui !== root || guide && id !== 'village')) {
+                        _context30.next = 2;
                         break;
                       }
-                      return _context18.abrupt("return");
+                      return _context30.abrupt("return");
                     case 2:
                       path = worldRoute(current, id, function (point) {
-                        return !locations.includes(point) || unlocked(point, _this31.cleared);
+                        return !locations.includes(point) || unlocked(point, _this49.cleared);
                       });
                       if (path.length) {
-                        _context18.next = 5;
+                        _context30.next = 5;
                         break;
                       }
-                      return _context18.abrupt("return");
+                      return _context30.abrupt("return");
                     case 5:
                       traveling = true;
+                      (_root$getChildByName2 = root.getChildByName('引导手套')) == null || _root$getChildByName2.destroy();
+                      (_root$getChildByName3 = root.getChildByName('教学聚焦光环')) == null || _root$getChildByName3.destroy();
+                      (_root$getChildByName4 = root.getChildByName('村庄教学遮罩')) == null || _root$getChildByName4.destroy();
                       if (caption) caption.string = '前往' + locationNames[id];
                       if (!(path.length > 1)) {
-                        _context18.next = 13;
+                        _context30.next = 16;
                         break;
                       }
-                      places = _this31.mapTravelViews(current, id);
+                      places = _this49.mapTravelViews(current, id);
                       travelTime = Math.max(1.3, (places.length - 1) * .46, path.length * .24);
                       pathPoints = worldTrack(path).map(at);
-                      _context18.next = 13;
-                      return Promise.all([_this31.walkParty(travelTime, places), _this31.moveMapToken(token, pathPoints, tokenY, travelTime)]);
-                    case 13:
-                      if (!(_this31.ui !== root)) {
-                        _context18.next = 15;
+                      _context30.next = 16;
+                      return Promise.all([_this49.walkParty(travelTime, places), _this49.moveMapToken(token, pathPoints, tokenY, travelTime)]);
+                    case 16:
+                      if (!(_this49.ui !== root)) {
+                        _context30.next = 18;
                         break;
                       }
-                      return _context18.abrupt("return");
-                    case 15:
+                      return _context30.abrupt("return");
+                    case 18:
                       if (!(id === 'village')) {
-                        _context18.next = 21;
+                        _context30.next = 24;
                         break;
                       }
-                      _this31.location = locations.indexOf(id);
-                      _this31.villageGuidePending = false;
-                      _this31.save();
-                      _this31.village();
-                      return _context18.abrupt("return");
-                    case 21:
-                      _this31.audio.play('door');
-                      _context18.next = 24;
-                      return _this31.curtain(false);
+                      _this49.location = locations.indexOf(id);
+                      _this49.villageGuidePending = false;
+                      _this49.save();
+                      _this49.village();
+                      return _context30.abrupt("return");
                     case 24:
-                      if (!(_this31.ui !== root)) {
-                        _context18.next = 26;
+                      _this49.audio.play('door');
+                      _context30.next = 27;
+                      return _this49.curtain(false);
+                    case 27:
+                      if (!(_this49.ui !== root)) {
+                        _context30.next = 29;
                         break;
                       }
-                      return _context18.abrupt("return");
-                    case 26:
-                      _this31.location = locations.indexOf(id);
-                      _this31.save();
-                      _this31.enter(id, function () {
-                        return _this31.curtain(true);
-                      });
+                      return _context30.abrupt("return");
                     case 29:
+                      _this49.location = locations.indexOf(id);
+                      _this49.save();
+                      _this49.enter(id, function () {
+                        return _this49.curtain(true);
+                      });
+                    case 32:
                     case "end":
-                      return _context18.stop();
+                      return _context30.stop();
                   }
-                }, _callee16);
+                }, _callee28);
               }));
               return function visit() {
-                return _ref17.apply(this, arguments);
+                return _ref37.apply(this, arguments);
               };
             }();
             node.on(Node.EventType.TOUCH_END, visit);
             settlement == null || settlement.on(Node.EventType.TOUCH_END, visit);
             if (id === 'village') villageArt == null || villageArt.on(Node.EventType.TOUCH_END, visit);
           };
-          for (var _iterator21 = _createForOfIteratorHelperLoose(locations), _step21; !(_step21 = _iterator21()).done;) {
-            _loop6();
+          for (var _iterator33 = _createForOfIteratorHelperLoose(locations), _step33; !(_step33 = _iterator33()).done;) {
+            _loop7();
           }
           token == null || token.setSiblingIndex(this.ui.children.length - 1);
           if (guide) this.label('点击高亮的溪桥村', 0, -364, 240, 16);
           var footerY = guide ? -399 : -386;
           this.button('小队配置', footerY, function () {
-            if (!traveling) _this31.roster();
+            if (!traveling && !guide) _this49.roster();
           }, -145, 135);
           this.button('规则', footerY, function () {
-            if (!traveling) _this31.showRules();
+            if (!traveling && !guide) _this49.showRules();
           }, 0, 112);
           this.button('返回主菜单', footerY, function () {
-            if (!traveling) _this31.menu();
+            if (!traveling && !guide) _this49.menu();
           }, 145, 135);
+        };
+        _proto.mapGuide = function mapGuide(target) {
+          var layer = this.box('村庄教学遮罩', 0, 0, 480, 854);
+          var ink = layer.addComponent(Graphics);
+          ink.fillColor = new Color(9, 17, 22, 145);
+          var left = target.x - 64,
+            right = target.x + 64,
+            bottom = target.y - 28,
+            top = target.y + 28;
+          ink.rect(-240, -427, 480, bottom + 427);
+          ink.rect(-240, top, 480, 427 - top);
+          ink.rect(-240, bottom, left + 240, top - bottom);
+          ink.rect(right, bottom, 240 - right, top - bottom);
+          ink.fill();
+          this.guidePointer(layer, target, target);
         };
         _proto.mapQuestHighlight = function mapQuestHighlight(node) {
           var glow = this.box('任务目标高亮', 0, 0, 120, 50, undefined, node).addComponent(Graphics);
-          for (var _i7 = 0, _arr5 = [[14, 20], [9, 42], [5, 98], [2, 255]]; _i7 < _arr5.length; _i7++) {
-            var _arr5$_i = _arr5[_i7],
-              width = _arr5$_i[0],
+          for (var _i9 = 0, _arr5 = [[14, 20], [9, 42], [5, 98], [2, 255]]; _i9 < _arr5.length; _i9++) {
+            var _arr5$_i = _arr5[_i9],
+              _width = _arr5$_i[0],
               alpha = _arr5$_i[1];
             glow.strokeColor = new Color(255, 207, 79, alpha);
-            glow.lineWidth = width;
+            glow.lineWidth = _width;
             glow.roundRect(-52, -17, 104, 34, 9);
             glow.stroke();
           }
         };
         _proto.moveMapToken = function moveMapToken(token, points, floorOffset, seconds) {
-          var _this32 = this;
+          var _this50 = this;
           if (!token || !points.length) return Promise.resolve();
           return new Promise(function (resolve) {
             var motion = tween(token);
@@ -4262,7 +11088,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               return sum + length;
             }, 0);
             targets.forEach(function (position, i) {
-              return motion.to(_this32.travelDuration(seconds * lengths[i] / Math.max(1, total)), {
+              return motion.to(_this50.travelDuration(seconds * lengths[i] / Math.max(1, total)), {
                 position: position
               });
             });
@@ -4272,25 +11098,25 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           });
         };
         _proto.showRules = function showRules(tab, back) {
-          var _this33 = this;
+          var _this51 = this;
           if (tab === void 0) {
             tab = 0;
           }
           if (back === void 0) {
             back = function back() {
-              return _this33.map();
+              return _this51.map();
             };
           }
           var labels = ['战斗', '探索', '存档'];
           var lines = [['交换相邻纹章。剑和星攻击，盾回复 DP，心恢复 HP。', '四连留下银框技能纹章，再消触发小技能。', '五格以上留下金色高级纹章，再消触发大招。'], ['首战直接开始，战斗结束后队伍自动前进。', '商人、剧情和分支门需要先完成当前选择。'], ['局外装备、资源、进度与成长自动保存。', '刷新会结束当前地牢并恢复出发前的存档。', '通关、主动撤离、失败分别保留全部、70%、50% 战利品。']];
           this.page('冒险规则', '');
           labels.forEach(function (label, i) {
-            return _this33.button(label, 88, function () {
-              return _this33.showRules(i, back);
+            return _this51.button(label, 88, function () {
+              return _this51.showRules(i, back);
             }, (i - 1) * 143, 132);
           });
           lines[tab].forEach(function (line, i) {
-            return _this33.label(line, 0, 10 - i * 55, 444, 19);
+            return _this51.label(line, 0, 10 - i * 55, 444, 19);
           });
           this.button('返回', -370, back, 0, 180);
         };
@@ -4309,29 +11135,31 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           return 'stage-' + id + '-' + (dungeonReels[id].stops.length - 1);
         };
         _proto.dungeonBackdrop = function dungeonBackdrop(depth) {
-          var _this$adventure$id, _this$adventure3, _this$dungeon$rooms$l, _this$dungeon4;
+          var _this$adventure$id, _this$adventure4, _this$dungeon$rooms$l, _this$dungeon6;
           if (depth === void 0) {
-            var _this$dungeon$depth, _this$dungeon3;
-            depth = (_this$dungeon$depth = (_this$dungeon3 = this.dungeon) == null ? void 0 : _this$dungeon3.depth) != null ? _this$dungeon$depth : 0;
+            var _this$dungeon$depth, _this$dungeon5;
+            depth = (_this$dungeon$depth = (_this$dungeon5 = this.dungeon) == null ? void 0 : _this$dungeon5.depth) != null ? _this$dungeon$depth : 0;
           }
-          var id = (_this$adventure$id = (_this$adventure3 = this.adventure) == null ? void 0 : _this$adventure3.id) != null ? _this$adventure$id : 'forest';
-          var count = (_this$dungeon$rooms$l = (_this$dungeon4 = this.dungeon) == null ? void 0 : _this$dungeon4.rooms.length) != null ? _this$dungeon$rooms$l : 1;
+          var id = (_this$adventure$id = (_this$adventure4 = this.adventure) == null ? void 0 : _this$adventure4.id) != null ? _this$adventure$id : 'forest';
+          var count = (_this$dungeon$rooms$l = (_this$dungeon6 = this.dungeon) == null ? void 0 : _this$dungeon6.rooms.length) != null ? _this$dungeon$rooms$l : 1;
           var last = dungeonReels[id].stops.length - 1;
           if (depth >= count - 1 && count > 1) return this.lastDungeonBackdrop(id);
           return 'stage-' + id + '-' + Math.max(0, Math.min(depth, last - 1));
         };
         _proto.mapTravelViews = function mapTravelViews(from, to) {
-          var _this34 = this;
-          return [this.locationBackdrop(from), 'travel-' + from + '-plains', 'travel-plains', 'travel-' + to + '-plains', this.locationBackdrop(to)].filter(function (name, index, frames) {
-            return (_this34.textures.has(name) || _this34.stageFrames.has(name)) && name !== frames[index - 1];
+          var _this52 = this;
+          return [this.locationBackdrop(from), 'travel-plains', this.locationBackdrop(to)].filter(function (name, index, frames) {
+            return (_this52.textures.has(name) || _this52.stageFrames.has(name)) && name !== frames[index - 1];
           });
         };
         _proto.walkParty = function walkParty(seconds, views, direction) {
           var _sequence$,
-            _this35 = this;
+            _sequence$2,
+            _this53 = this;
           if (direction === void 0) {
             direction = 1;
           }
+          var walking = this.newPageMotion();
           seconds = this.travelDuration(seconds);
           var root = this.ui;
           var sequence = views != null ? views : [this.dungeonBackdrop()];
@@ -4346,23 +11174,56 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var width = stageGrid.width,
             height = stageGrid.height,
             centerY = stageGrid.centerY;
-          if (backdrop && fromRoom && toRoom && sceneryFrame && reelInfo) {
-            var layer = backdrop.getSiblingIndex();
-            var frame = this.box('行进风景', 0, centerY, width, height);
-            frame.addComponent(Mask).type = Mask.Type.GRAPHICS_RECT;
-            frame.setSiblingIndex(layer);
-            backdrop.active = false;
-            var offset = function offset(n) {
-              return (.5 - reelInfo.stops[Number(n)]) * (reelInfo.width - width);
+          var labFrom = this.forestLabStop(sequence[0]),
+            labTo = this.forestLabStop((_sequence$2 = sequence[1]) != null ? _sequence$2 : '');
+          if (backdrop && labFrom !== undefined && labTo !== undefined) {
+            backdrop.name = '行进风景';
+            var camera = {
+              progress: labFrom
             };
-            var reel = this.paintFrame(reelName, sceneryFrame, offset(fromRoom[2]), 0, reelInfo.width, height, frame);
-            movements.push(new Promise(function (resolve) {
-              tween(reel).to(seconds, {
-                position: new Vec3(offset(toRoom[2]), 0, 0)
-              }).call(function () {
-                return resolve();
-              }).start();
+            movements.push(walking.play(tween(camera).to(seconds, {
+              progress: labTo
+            }, {
+              onUpdate: function onUpdate() {
+                if (backdrop.isValid && _this53.ui === root) _this53.positionForestLab(backdrop, camera.progress);
+              }
+            })).then(function (played) {
+              if (played && backdrop.isValid && _this53.ui === root) _this53.positionForestLab(backdrop, labTo);
             }));
+          } else if (backdrop && fromRoom && toRoom && sceneryFrame && reelInfo) {
+            var layer = backdrop.getSiblingIndex();
+            var _frame3 = this.box('行进风景', 0, centerY, width, height);
+            _frame3.addComponent(Mask).type = Mask.Type.GRAPHICS_RECT;
+            _frame3.setSiblingIndex(layer);
+            backdrop.removeFromParent();
+            backdrop.destroy();
+            if (reelName !== 'forest-reel') {
+              var rect = sceneryFrame.rect;
+              var pixelScale = rect.width / reelInfo.width;
+              this.stageTravel = new StageTravel(Math.ceil(reelInfo.width / width), width, 1, function (index) {
+                var start = index * width;
+                var span = Math.min(width, reelInfo.width - start);
+                var chunk = _this53.box(reelName + ' ' + index, 0, 0, width, height, undefined, _frame3);
+                var crop = _this53.frameCrop(sceneryFrame, rect.x + start * pixelScale, rect.y, span * pixelScale, rect.height);
+                _this53.paintFrame(reelName, crop, (span - width) / 2, 0, span, height, chunk);
+                chunk.once(Node.EventType.NODE_DESTROYED, function () {
+                  return crop.destroy();
+                });
+                return chunk;
+              });
+              var stop = function stop(n) {
+                return reelInfo.stops[Number(n)] * (reelInfo.width - width);
+              };
+              movements.push(this.stageTravel.play(seconds, stop(fromRoom[2]), stop(toRoom[2])));
+            } else {
+              var offset = function offset(n) {
+                return (.5 - reelInfo.stops[Number(n)]) * (reelInfo.width - width);
+              };
+              var reel = this.paintFrame(reelName, sceneryFrame, offset(fromRoom[2]), 0, reelInfo.width, height, _frame3);
+              movements.push(walking.play(tween(reel).to(seconds, {
+                position: new Vec3(offset(toRoom[2]), 0, 0)
+              })).then(function () {}));
+            }
           } else if (backdrop && sequence.length > 1) {
             var _layer = backdrop.getSiblingIndex();
             var viewport = this.box('行进风景', 0, centerY, width, height, undefined, root);
@@ -4370,56 +11231,72 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             viewport.setSiblingIndex(_layer);
             backdrop.setParent(viewport);
             backdrop.setPosition(0, 0);
-            sequence.slice(1).forEach(function (name, index) {
-              return _this35.stageBackdrop(name, (index + 1) * width * direction, 0, viewport);
-            });
-            var scenery = viewport.children.slice();
-            var scroll = {
-              offset: 0
-            };
-            movements.push(new Promise(function (resolve) {
-              tween(scroll).to(seconds, {
-                offset: width * (scenery.length - 1)
-              }, {
-                onUpdate: function onUpdate() {
-                  if (!viewport.isValid || _this35.ui !== root) return;
-                  scenery.forEach(function (segment, i) {
-                    return segment.setPosition((i * width - scroll.offset) * direction, 0);
-                  });
-                }
-              }).call(function () {
-                return resolve();
-              }).start();
-            }));
+            this.stageTravel = new StageTravel(sequence.length, width, direction, function (index) {
+              return _this53.stageBackdrop(sequence[index], 0, 0, viewport);
+            }, backdrop);
+            movements.push(this.stageTravel.play(seconds));
           }
-          var _loop7 = function _loop7() {
-            var hero = _step22.value;
+          var _loop8 = function _loop8() {
+            var _portraitBottomPaddin2, _portrait$name2;
+            var _step34$value = _step34.value,
+              heroIndex = _step34$value[0],
+              hero = _step34$value[1];
             var home = hero.position.clone();
+            var portrait = hero.children.find(function (n) {
+              return n.getComponent(Sprite);
+            });
+            var bounds = portrait == null ? void 0 : portrait.getComponent(UITransform);
+            var foot = (_portraitBottomPaddin2 = portraitBottomPadding[(_portrait$name2 = portrait == null ? void 0 : portrait.name) != null ? _portrait$name2 : '']) != null ? _portraitBottomPaddin2 : 0;
+            var originalAnchor = bounds == null ? void 0 : bounds.anchorPoint.clone();
+            var originalPosition = portrait == null ? void 0 : portrait.position.clone();
+            if (bounds && portrait) {
+              bounds.setAnchorPoint(.5, foot);
+              portrait.setPosition(0, -bounds.height * (.5 - foot), 0);
+            }
             movements.push(new Promise(function (resolve) {
-              var steps = Math.max(1, Math.round(seconds * 3));
-              var stride = tween(hero);
+              var steps = Math.max(1, Math.round(seconds * 6));
+              var stride = tween(hero).delay(heroIndex * .035);
+              if (portrait) void walking.play(tween(portrait).repeat(steps, tween(portrait).to(seconds / (steps * 2), {
+                angle: heroIndex % 2 ? 4 : -4
+              }).to(seconds / (steps * 2), {
+                angle: 0
+              })));
               for (var i = 0; i < steps; i++) {
                 stride.to(seconds / (steps * 2), {
-                  position: new Vec3(home.x + 4 * (1 - i % 2), home.y + 5, home.z)
+                  position: new Vec3(home.x + 4 * (1 - i % 2), home.y + 5 + heroIndex % 2 * 2, home.z)
                 }).to(seconds / (steps * 2), {
                   position: home
                 });
               }
-              stride.call(function () {
-                return resolve();
-              }).start();
+              void walking.play(stride).then(function () {
+                if (portrait != null && portrait.isValid && bounds && originalAnchor && originalPosition) {
+                  bounds.setAnchorPoint(originalAnchor);
+                  portrait.setPosition(originalPosition);
+                  portrait.angle = 0;
+                }
+                resolve();
+              });
             }));
           };
-          for (var _iterator22 = _createForOfIteratorHelperLoose(this.heroes.values()), _step22; !(_step22 = _iterator22()).done;) {
-            _loop7();
+          for (var _iterator34 = _createForOfIteratorHelperLoose(Array.from(this.heroes.values()).entries()), _step34; !(_step34 = _iterator34()).done;) {
+            _loop8();
           }
           var finishWalking = this.audio.beginWalking();
-          return Promise.all(movements)["finally"](finishWalking);
+          root.once(Node.EventType.NODE_DESTROYED, function () {
+            return walking.cancel();
+          });
+          return Promise.all(movements)["finally"](function () {
+            finishWalking();
+            _this53.pageMotions["delete"](walking);
+          });
         };
         _proto.curtain = function curtain(opening) {
-          var _this36 = this;
+          var _this54 = this;
           var root = this.ui;
-          var overlay = this.box('地图转场', 0, 280, 470, 270);
+          var centerY = stageGrid.centerY,
+            width = stageGrid.width,
+            height = stageGrid.height;
+          var overlay = this.box('地图转场', 0, centerY, width, height);
           var ink = overlay.addComponent(Graphics);
           var state = {
             progress: 0
@@ -4427,16 +11304,14 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var draw = function draw() {
             ink.clear();
             ink.fillColor = Color.BLACK;
-            var cell = 10,
-              width = 470,
-              height = 270;
-            for (var x = 0; x < width; x += cell) {
-              var offset = (opening ? width - x - cell : x) / (width - cell);
+            var cell = 10;
+            for (var _x46 = 0; _x46 < width; _x46 += cell) {
+              var offset = (opening ? width - _x46 - cell : _x46) / (width - cell);
               var growth = Math.max(0, Math.min(1, (state.progress - offset * .66) / .34));
               var size = cell * (opening ? 1 - growth : growth);
               if (!size) continue;
               for (var y = 0; y < height; y += cell) {
-                var left = x + (cell - size) / 2;
+                var left = _x46 + (cell - size) / 2;
                 var bottom = y + (cell - size) / 2;
                 ink.rect(left - width / 2, bottom - height / 2, size, size);
               }
@@ -4445,11 +11320,11 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           };
           draw();
           return new Promise(function (resolve) {
-            tween(state).to(_this36.travelDuration(.46), {
+            tween(state).to(_this54.travelDuration(.46), {
               progress: 1
             }, {
               onUpdate: function onUpdate() {
-                if (overlay.isValid && _this36.ui === root) draw();
+                if (overlay.isValid && _this54.ui === root) draw();
               }
             }).call(function () {
               if (opening && overlay.isValid) overlay.destroy();
@@ -4458,13 +11333,13 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           });
         };
         _proto.roster = function roster(selected, back) {
-          var _this37 = this;
+          var _this55 = this;
           if (selected === void 0) {
             selected = this.party[0];
           }
           if (back === void 0) {
             back = function back() {
-              return _this37.map();
+              return _this55.map();
             };
           }
           var hero = heroes[selected];
@@ -4479,24 +11354,26 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.label('HP ' + stats.hp + '　DP ' + stats.dp + '　攻击 ' + stats.attack + '　EXP ' + rank.progress + '/' + rank.level * 2, 0, 155, 336, 15);
           var root = this.ui;
           var active = function active() {
-            return _this37.ui === root && !root.getChildByName('物品操作');
+            return _this55.ui === root && !root.getChildByName('物品操作');
           };
           var cycle = function cycle(offset) {
-            if (!active() || _this37.party.length < 2) return;
-            var index = _this37.party.indexOf(selected);
-            _this37.roster(_this37.party[(index + offset + _this37.party.length) % _this37.party.length], back);
+            if (!active() || _this55.party.length < 2) return;
+            var index = _this55.party.indexOf(selected);
+            _this55.roster(_this55.party[(index + offset + _this55.party.length) % _this55.party.length], back);
           };
-          var _loop8 = function _loop8() {
-            var side = _arr6[_i8];
-            var arrow = _this37.box(side < 0 ? '上一位角色' : '下一位角色', side * 205, 267, 44, 54);
-            var icon = _this37.art('gear-arrow', 0, 0, 34, 42, arrow);
-            if (icon) icon.setScale(side, 1, 1);else _this37.outline(_this37.label(side < 0 ? '‹' : '›', 0, 0, 40, 31, arrow));
+          var _loop9 = function _loop9() {
+            var side = _arr6[_i10];
+            var arrow = _this55.box(side < 0 ? '上一位角色' : '下一位角色', side * 205, 267, 44, 54);
+            var frame = _this55.textures.get('trial-ui-back');
+            var fit = frame ? Math.min(34 / frame.originalSize.width, 42 / frame.originalSize.height) : 1;
+            var icon = frame ? _this55.art('trial-ui-back', 0, 0, frame.originalSize.width * fit, frame.originalSize.height * fit, arrow) : undefined;
+            if (icon) icon.setScale(-side, 1, 1);else _this55.outline(_this55.label(side < 0 ? '‹' : '›', 0, 0, 40, 31, arrow));
             arrow.on(Node.EventType.TOUCH_END, function () {
               return cycle(side);
             });
           };
-          for (var _i8 = 0, _arr6 = [-1, 1]; _i8 < _arr6.length; _i8++) {
-            _loop8();
+          for (var _i10 = 0, _arr6 = [-1, 1]; _i10 < _arr6.length; _i10++) {
+            _loop9();
           }
           var slots = [{
             id: 'weapon',
@@ -4523,29 +11400,29 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             x: 133,
             y: 242
           }];
-          var _loop9 = function _loop9() {
-            var slot = _slots[_i9];
+          var _loop10 = function _loop10() {
+            var slot = _slots[_i11];
             var item = equipment.find(function (entry) {
-              return entry.id === _this37.inventory.slots[selected + ':' + slot.id];
+              return entry.id === _this55.inventory.slots[selected + ':' + slot.id];
             });
-            var node = _this37.box(slot.name, slot.x, slot.y, 71, 71, item ? '#694e2d' : '#263a35');
-            var backdrop = _this37.art(slot.icon, 0, 0, 50, 50, node);
+            var node = _this55.box(slot.name, slot.x, slot.y, 71, 71, item ? '#694e2d' : '#263a35');
+            var backdrop = _this55.art(slot.icon, 0, 0, 50, 50, node);
             if (backdrop) backdrop.addComponent(UIOpacity).opacity = item ? 88 : 126;
-            if (item) _this37.outline(_this37.label(item.name, 0, -24, 69, 13, node));
+            if (item) _this55.outline(_this55.label(item.name, 0, -24, 69, 13, node));
             node.on(Node.EventType.TOUCH_END, function () {
               if (!active()) return;
               if (item) {
-                _this37.gearActions(item.id, true, selected, back);
+                _this55.gearActions(item.id, true, selected, back);
                 return;
               }
               var compatible = equipment.find(function (entry) {
-                return entry.owner === selected && entry.slot === slot.id && _this37.inventory.bag.includes(entry.id);
+                return entry.owner === selected && entry.slot === slot.id && _this55.inventory.bag.includes(entry.id);
               });
-              if (compatible) _this37.gearActions(compatible.id, false, selected, back);else _this37.popup('没有可装配物品', 0, 108);
+              if (compatible) _this55.gearActions(compatible.id, false, selected, back);else _this55.popup('没有可装配物品', 0, 108);
             });
           };
-          for (var _i9 = 0, _slots = slots; _i9 < _slots.length; _i9++) {
-            _loop9();
+          for (var _i11 = 0, _slots = slots; _i11 < _slots.length; _i11++) {
+            _loop10();
           }
           this.box('背包底板', 0, -106, 430, 447, '#263931');
           this.label('背包', 0, 91, 400, 23).isBold = true;
@@ -4555,7 +11432,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             icon: '',
             item: null
           }] : [], equipment.filter(function (item) {
-            return _this37.inventory.bag.includes(item.id);
+            return _this55.inventory.bag.includes(item.id);
           }).map(function (item) {
             var _slots$find$icon, _slots$find;
             return {
@@ -4567,33 +11444,33 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               item: item
             };
           }));
-          var _loop10 = function _loop10() {
-            var content = bag[_index5];
-            var x = (_index5 % 4 - 1.5) * 102,
-              y = 28 - Math.floor(_index5 / 4) * 108;
-            var cell = _this37.box(content ? '背包 · ' + content.label : '空背包格 ' + _index5, x, y, 94, 100, content ? '#47604c' : '#31473b');
+          var _loop11 = function _loop11() {
+            var content = bag[_index8];
+            var x = (_index8 % 4 - 1.5) * 102,
+              y = 28 - Math.floor(_index8 / 4) * 108;
+            var cell = _this55.box(content ? '背包 · ' + content.label : '空背包格 ' + _index8, x, y, 94, 100, content ? '#47604c' : '#31473b');
             if (!content) return 1; // continue
-            if (content.id === 'potion') _this37.drawPotion(cell);else if (!_this37.art(content.icon, 0, 11, 45, 45, cell)) _this37.label('◇', 0, 11, 45, 25, cell);
-            _this37.label(content.label, 0, -28, 90, 15, cell);
+            if (content.id === 'potion') _this55.drawPotion(cell);else if (!_this55.art(content.icon, 0, 11, 45, 45, cell)) _this55.label('◇', 0, 11, 45, 25, cell);
+            _this55.label(content.label, 0, -28, 90, 15, cell);
             cell.on(Node.EventType.TOUCH_END, function () {
               if (!active()) return;
-              if (content.id !== 'potion') _this37.gearActions(content.id, false, selected, back);else _this37.itemActions('治疗药水', '恢复至多 45 HP。', [['使用药水', function () {
-                if (!_this37.potion || _this37.hp >= _this37.maxHP) return false;
-                _this37.potion--;
-                _this37.hp = Math.min(_this37.maxHP, _this37.hp + 45);
-                _this37.audio.play('potion');
+              if (content.id !== 'potion') _this55.gearActions(content.id, false, selected, back);else _this55.itemActions('治疗药水', '恢复至多 45 HP。', [['使用药水', function () {
+                if (!_this55.potion || _this55.hp >= _this55.maxHP) return false;
+                _this55.potion--;
+                _this55.hp = Math.min(_this55.maxHP, _this55.hp + 45);
+                _this55.audio.play('potion');
                 return true;
               }], ['丢弃 1 瓶', function () {
-                if (!_this37.potion) return false;
-                _this37.potion--;
+                if (!_this55.potion) return false;
+                _this55.potion--;
                 return true;
               }]], function () {
-                return _this37.roster(selected, back);
+                return _this55.roster(selected, back);
               });
             });
           };
-          for (var _index5 = 0; _index5 < 12; _index5++) {
-            if (_loop10()) continue;
+          for (var _index8 = 0; _index8 < 12; _index8++) {
+            if (_loop11()) continue;
           }
           this.button('返回地图', -380, back, 0, 300);
         };
@@ -4616,7 +11493,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         };
         _proto.gearActions = function gearActions(id, equipped, selected, back) {
           var _item$effect,
-            _this38 = this;
+            _this56 = this;
           var item = equipment.find(function (entry) {
             return entry.id === id;
           });
@@ -4624,17 +11501,17 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var description = [item.attack ? '攻击 +' + item.attack : '', item.hp ? 'HP +' + item.hp : '', item.dp ? 'DP +' + item.dp : '', (_item$effect = item.effect) != null ? _item$effect : ''].filter(Boolean).join(' · ');
           var actions = [];
           if (equipped || this.party.includes(item.owner)) actions.push([equipped ? '卸下装备' : '装备给' + heroes[item.owner].name, function () {
-            return _this38.inventory.hasEquipped(id) === equipped && _this38.inventory.toggle(id);
+            return _this56.inventory.hasEquipped(id) === equipped && _this56.inventory.toggle(id);
           }]);
           actions.push(['丢弃装备', function () {
-            return _this38.inventory.discard(id);
+            return _this56.inventory.discard(id);
           }]);
           this.itemActions(item.name, description, actions, function () {
-            return _this38.roster(selected, back);
+            return _this56.roster(selected, back);
           });
         };
         _proto.itemActions = function itemActions(title, detail, actions, redraw) {
-          var _this39 = this;
+          var _this57 = this;
           var root = this.ui;
           var overlay = this.box('物品操作', 0, 0, 480, 854, '#101913c2');
           overlay.on(Node.EventType.TOUCH_START, function () {});
@@ -4642,19 +11519,19 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.box('物品操作卡', 0, -75, 394, 320, '#2b4037', overlay);
           this.label(title, 0, 47, 340, 25, overlay).isBold = true;
           this.label(detail, 0, 4, 345, 16, overlay);
-          actions.forEach(function (_ref18, index) {
-            var label = _ref18[0],
-              perform = _ref18[1];
-            var button = _this39.button(label, -62 - index * 62, function () {
-              if (_this39.ui !== root || !overlay.isValid) return;
+          actions.forEach(function (_ref38, index) {
+            var label = _ref38[0],
+              perform = _ref38[1];
+            var button = _this57.button(label, -62 - index * 62, function () {
+              if (_this57.ui !== root || !overlay.isValid) return;
               if (!perform()) {
-                _this39.popup('现在无法执行', 0, 146);
+                _this57.popup('现在无法执行', 0, 146);
                 return;
               }
-              _this39.hp = Math.min(_this39.hp, _this39.maxHP);
-              _this39.dp = Math.min(_this39.dp, _this39.maxDP);
-              _this39.audio.play('equip');
-              _this39.save();
+              _this57.hp = Math.min(_this57.hp, _this57.maxHP);
+              _this57.dp = Math.min(_this57.dp, _this57.maxDP);
+              _this57.audio.play('equip');
+              _this57.save();
               redraw();
             }, 0, 294);
             button.setParent(overlay);
@@ -4666,7 +11543,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           close.setParent(overlay);
         };
         _proto.village = function village() {
-          var _this40 = this;
+          var _this58 = this;
           this.save();
           var guided = !this.reported;
           var findRoland = this.reported && !this.party.includes('d');
@@ -4682,7 +11559,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             y: 13,
             highlight: guided,
             action: function action() {
-              return _this40.chief();
+              return _this58.chief();
             }
           }, {
             name: '商店',
@@ -4691,7 +11568,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             y: -67,
             highlight: false,
             action: function action() {
-              return _this40.villageShop();
+              return _this58.villageShop();
             }
           }, {
             name: '铁匠铺',
@@ -4700,7 +11577,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             y: -235,
             highlight: false,
             action: function action() {
-              return _this40.smithy();
+              return _this58.smithy();
             }
           }, {
             name: '酒馆',
@@ -4709,7 +11586,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             y: -67,
             highlight: findRoland,
             action: function action() {
-              return _this40.tavern();
+              return _this58.tavern();
             }
           }, {
             name: '村口 · 返回地图',
@@ -4718,22 +11595,22 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             y: -318,
             highlight: false,
             action: function action() {
-              return _this40.map();
+              return _this58.map();
             }
           }];
           var root = this.ui;
-          var _loop11 = function _loop11() {
-            var site = _destinations[_i10];
+          var _loop12 = function _loop12() {
+            var site = _destinations[_i12];
             var gate = site.art === 'gate';
             var width = gate ? 180 : 151;
             var height = gate ? 64 : 112;
-            var node = _this40.box(site.name, site.x, site.y, width, height);
+            var node = _this58.box(site.name, site.x, site.y, width, height);
             if (site.highlight) {
-              var glow = _this40.box('任务金光', 0, 0, width + 10, height + 10, undefined, node).addComponent(Graphics);
-              for (var _iterator23 = _createForOfIteratorHelperLoose([[8, '#fbc84a30'], [4, '#ffd26360'], [0, '#fadd76']]), _step23; !(_step23 = _iterator23()).done;) {
-                var _step23$value = _step23.value,
-                  padding = _step23$value[0],
-                  color = _step23$value[1];
+              var glow = _this58.box('任务金光', 0, 0, width + 10, height + 10, undefined, node).addComponent(Graphics);
+              for (var _iterator35 = _createForOfIteratorHelperLoose([[8, '#fbc84a30'], [4, '#ffd26360'], [0, '#fadd76']]), _step35; !(_step35 = _iterator35()).done;) {
+                var _step35$value = _step35.value,
+                  padding = _step35$value[0],
+                  color = _step35$value[1];
                 glow.strokeColor = Color.fromHEX(new Color(), color);
                 glow.lineWidth = padding ? 4 : 2.6;
                 glow.roundRect(-width / 2 - padding, -height / 2 - padding, width + padding * 2, height + padding * 2, 13);
@@ -4741,30 +11618,30 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               }
             }
             if (hasGround) {
-              var _this40$textures$get;
+              var _this58$textures$get;
               var name = 'village-building-' + site.art;
-              var size = (_this40$textures$get = _this40.textures.get(name)) == null ? void 0 : _this40$textures$get.originalSize;
+              var size = (_this58$textures$get = _this58.textures.get(name)) == null ? void 0 : _this58$textures$get.originalSize;
               if (size) {
                 var spriteWidth = gate ? 84 : 143;
                 var spriteHeight = spriteWidth * size.height / size.width;
                 var baseY = gate ? -17 : -36;
-                _this40.art(name, 0, baseY + spriteHeight / 2, spriteWidth, spriteHeight, node);
+                _this58.art(name, 0, baseY + spriteHeight / 2, spriteWidth, spriteHeight, node);
               }
             }
-            var caption = _this40.label(site.name, 0, -height / 2 + 13, width - 18, 17, node);
+            var caption = _this58.label(site.name, 0, -height / 2 + 13, width - 18, 17, node);
             caption.color = Color.fromHEX(new Color(), '#523420');
             caption.isBold = true;
             caption.enableOutline = true;
             caption.outlineColor = Color.fromHEX(new Color(), '#fff0cf');
             caption.outlineWidth = 3;
             node.on(Node.EventType.TOUCH_END, function () {
-              if (_this40.ui !== root || guided && site.art !== 'chief') return;
-              _this40.audio.play('door');
+              if (_this58.ui !== root || guided && site.art !== 'chief') return;
+              _this58.audio.play('door');
               site.action();
             });
           };
-          for (var _i10 = 0, _destinations = destinations; _i10 < _destinations.length; _i10++) {
-            _loop11();
+          for (var _i12 = 0, _destinations = destinations; _i12 < _destinations.length; _i12++) {
+            _loop12();
           }
         };
         _proto.villageGarden = function villageGarden(x, y) {
@@ -4793,7 +11670,22 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           });
           return this.sceneActor(npc, 140, 117, '城镇人物 ');
         };
+        _proto.popSpeaker = function popSpeaker(actor) {
+          var motion = this.newPageMotion();
+          if (motion.reduced) return;
+          var base = actor.scale.clone();
+          void motion.play(tween(actor).to(.10, {
+            scale: new Vec3(base.x * 1.10, base.y * 1.10, base.z)
+          }, {
+            easing: 'sineOut'
+          }).to(.18, {
+            scale: base
+          }, {
+            easing: 'sineInOut'
+          }));
+        };
         _proto.sceneActor = function sceneActor(art, x, height, prefix, flip) {
+          var _this59 = this;
           if (prefix === void 0) {
             prefix = '剧情人物 ';
           }
@@ -4804,16 +11696,23 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var y = this.portraitY(art, groundY, height);
           var frame = this.textures.get(art);
           if (frame) {
+            var _actorArt$art, _this$ui$getChildByNa2;
             var w = height * frame.originalSize.width / frame.originalSize.height;
             var actor = this.box(prefix + art, x, y, w, height);
             this.groundShadow(actor, groundY - y, art, w);
-            this.art(art, 0, 0, w, height, actor);
+            var portrait = this.art(art, 0, 0, w, height, actor);
+            if (portrait && x > 0 && !art.startsWith('hero-')) portrait.setScale(((_actorArt$art = actorArt[art]) == null ? void 0 : _actorArt$art.sourceFacing) === 'left' ? 1 : -1, 1, 1);
             if (flip) actor.setScale(-1, 1, 1);
+            var partySpeaker = Object.values(heroes).some(function (hero) {
+              return hero.name === _this59.speechOwner;
+            });
+            if (this.speechOwner && !partySpeaker && !prefix.includes('道具')) this.popSpeaker(actor);
+            (_this$ui$getChildByNa2 = this.ui.getChildByName('400 森林前景')) == null || _this$ui$getChildByNa2.setSiblingIndex(this.ui.children.length - 1);
           }
           return new Vec3(x, y, 0);
         };
         _proto.chief = function chief(step) {
-          var _this41 = this;
+          var _this60 = this;
           if (step === void 0) {
             step = 0;
           }
@@ -4821,10 +11720,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           if (this.reported) {
             this.townInterior('村长家', step ? '村长：运单盖着矿镇火印。问问酒馆里的罗兰，再沿旧道往北。' : '村长：村民已回家。归印会运走的东西还没查到。', 'chief', 'npc-chief', false);
             if (!step) this.button('询问归印会的去向', 39, function () {
-              return _this41.chief(1);
+              return _this60.chief(1);
             });
             this.button('返回村庄', -36, function () {
-              return _this41.village();
+              return _this60.village();
             });
             return;
           }
@@ -4833,35 +11732,35 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var root = this.ui;
           var rewardPlaying = false;
           var advance = function advance(text, action) {
-            return _this41.button(text, 38, function () {
-              if (_this41.ui !== root) return;
+            return _this60.button(text, 38, function () {
+              if (_this60.ui !== root) return;
               action();
             });
           };
           if (step < 2) advance(step === 0 ? '说说林中的救援' : '听村长的答复', function () {
-            return _this41.chief(step + 1);
-          });else advance('交付村徽 · 获得 20 金币', /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee17() {
+            return _this60.chief(step + 1);
+          });else advance('交付村徽 · 获得 20 金币', /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee29() {
             var goldBefore, motion, hud, balance, panelOpacity, textOpacity, fade;
-            return _regeneratorRuntime().wrap(function _callee17$(_context19) {
-              while (1) switch (_context19.prev = _context19.next) {
+            return _regeneratorRuntime().wrap(function _callee29$(_context31) {
+              while (1) switch (_context31.prev = _context31.next) {
                 case 0:
-                  if (!_this41.reported) {
-                    _context19.next = 2;
+                  if (!_this60.reported) {
+                    _context31.next = 2;
                     break;
                   }
-                  return _context19.abrupt("return");
+                  return _context31.abrupt("return");
                 case 2:
-                  goldBefore = _this41.gold;
+                  goldBefore = _this60.gold;
                   rewardPlaying = true;
-                  _this41.reported = true;
-                  _this41.addMaterials({
+                  _this60.reported = true;
+                  _this60.addMaterials({
                     gold: 20
                   });
-                  _this41.save();
-                  motion = new BattleMotion();
-                  hud = _this41.box('任务金币', 175, 343, 105, 36, '#244036e9');
-                  _this41.art('trial-ui-clear', -32, 0, 17, 17, hud);
-                  balance = _this41.outline(_this41.label(String(goldBefore), 184, 343, 67, 21));
+                  _this60.save();
+                  motion = _this60.newPageMotion();
+                  hud = _this60.box('任务金币', 175, 343, 105, 36, '#244036e9');
+                  _this60.art('trial-ui-clear', -32, 0, 17, 17, hud);
+                  balance = _this60.outline(_this60.label(String(goldBefore), 184, 343, 67, 21));
                   panelOpacity = hud.addComponent(UIOpacity);
                   textOpacity = balance.node.addComponent(UIOpacity);
                   fade = function fade(value, seconds) {
@@ -4872,114 +11771,114 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     }));
                   };
                   panelOpacity.opacity = textOpacity.opacity = 0;
-                  _context19.next = 17;
+                  _context31.next = 17;
                   return fade(255, .19);
                 case 17:
-                  if (!(_this41.ui !== root)) {
-                    _context19.next = 20;
+                  if (!(_this60.ui !== root)) {
+                    _context31.next = 20;
                     break;
                   }
                   motion.cancel();
-                  return _context19.abrupt("return");
+                  return _context31.abrupt("return");
                 case 20:
-                  _context19.next = 22;
-                  return _this41.animateCoins(motion, 20, balance, position, stageGrid.groundY);
+                  _context31.next = 22;
+                  return _this60.animateCoins(motion, 20, balance, position, stageGrid.groundY);
                 case 22:
-                  if (!(_this41.ui !== root)) {
-                    _context19.next = 25;
+                  if (!(_this60.ui !== root)) {
+                    _context31.next = 25;
                     break;
                   }
                   motion.cancel();
-                  return _context19.abrupt("return");
+                  return _context31.abrupt("return");
                 case 25:
-                  _context19.next = 27;
+                  _context31.next = 27;
                   return fade(0, .26);
                 case 27:
-                  if (_this41.ui === root) _this41.chief(1);
+                  if (_this60.ui === root) _this60.chief(1);
                 case 28:
                 case "end":
-                  return _context19.stop();
+                  return _context31.stop();
               }
-            }, _callee17);
+            }, _callee29);
           })));
           this.button('返回村庄', -36, function () {
-            if (!rewardPlaying) _this41.village();
+            if (!rewardPlaying) _this60.village();
           });
         };
         _proto.villageShop = function villageShop() {
-          var _this42 = this;
+          var _this61 = this;
           this.audio.play('door');
           this.townInterior('村庄商店', '老板：药水 5 金币一瓶。已携带 ' + this.potion + ' 瓶。', 'shop', 'npc-shop');
           this.button('购买治疗药水 · 5 金币', 42, function () {
-            if (_this42.gold < 5) {
-              _this42.popup('金币不足', 0, 91);
+            if (_this61.gold < 5) {
+              _this61.popup('金币不足', 0, 91);
               return;
             }
-            if (_this42.potion >= 99) {
-              _this42.popup('背包药水已满', 0, 91);
+            if (_this61.potion >= 99) {
+              _this61.popup('背包药水已满', 0, 91);
               return;
             }
-            _this42.gold -= 5;
-            _this42.potion++;
-            _this42.save();
-            _this42.villageShop();
+            _this61.gold -= 5;
+            _this61.potion++;
+            _this61.save();
+            _this61.villageShop();
           });
           this.button('返回村庄', -78, function () {
-            return _this42.village();
+            return _this61.village();
           });
         };
         _proto.smithy = function smithy(page) {
-          var _this43 = this;
+          var _this62 = this;
           if (page === void 0) {
             page = 0;
           }
-          var materials = Object.entries(this.inventory.materials).map(function (_ref20) {
-            var key = _ref20[0],
-              value = _ref20[1];
+          var materials = Object.entries(this.inventory.materials).map(function (_ref40) {
+            var key = _ref40[0],
+              value = _ref40[1];
             return resourceNames[key] + ' ' + value;
           }).join(' · ');
           this.townInterior('溪桥村铁匠铺', materials, 'smith', 'npc-smith');
           var recipes = equipment.filter(function (item) {
-            return !_this43.inventory.owned.includes(item.id);
+            return !_this62.inventory.owned.includes(item.id);
           });
           var lastPage = Math.max(0, Math.ceil(recipes.length / 3) - 1);
           page = Math.min(page, lastPage);
           if (!recipes.length) this.label('已掌握的装备均已制作', 0, 42, 420, 19);
           recipes.slice(page * 3, page * 3 + 3).forEach(function (item, index) {
-            var cost = Object.entries(item.cost).map(function (_ref21) {
-              var key = _ref21[0],
-                value = _ref21[1];
+            var cost = Object.entries(item.cost).map(function (_ref41) {
+              var key = _ref41[0],
+                value = _ref41[1];
               return resourceNames[key] + ' ' + value;
             }).join(' · ');
             var y = 47 - index * 88;
-            _this43.button(item.name + ' · ' + cost, y, function () {
-              var paid = _this43.inventory.craft(item.id, _this43.gold);
+            _this62.button(item.name + ' · ' + cost, y, function () {
+              var paid = _this62.inventory.craft(item.id, _this62.gold);
               if (paid === null) {
-                _this43.popup('材料不足', 0, 99);
+                _this62.popup('材料不足', 0, 99);
                 return;
               }
-              _this43.gold -= paid;
-              _this43.audio.play('equip');
-              _this43.save();
-              _this43.smithy(page);
+              _this62.gold -= paid;
+              _this62.audio.play('equip');
+              _this62.save();
+              _this62.smithy(page);
             });
-            if (item.effect) _this43.label(item.effect, 0, y - 37, 375, 15);
+            if (item.effect) _this62.label(item.effect, 0, y - 37, 375, 15);
           });
           if (page > 0) this.button('上一页', -228, function () {
-            return _this43.smithy(page - 1);
+            return _this62.smithy(page - 1);
           }, -94, 160);
           if (page < lastPage) this.button('下一页', -228, function () {
-            return _this43.smithy(page + 1);
+            return _this62.smithy(page + 1);
           }, 94, 160);
           this.button('返回村庄', -354, function () {
-            return _this43.village();
+            return _this62.village();
           });
         };
         _proto.tavern = function tavern(revived) {
           var _this$hunt2,
             _this$hunt3,
             _this$hunt4,
-            _this44 = this;
+            _this63 = this;
           if (revived === void 0) {
             revived = false;
           }
@@ -4992,61 +11891,59 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var detail = revived ? '酒馆老板救回了小队。' : join ? '罗兰带来矿镇运单，法师伊芙正在调查迷雾高塔。' : active ? '当前委托：通关' + locationNames[active.target] + '。' : cooling ? '新委托稍后刷新。' : '休息或接受附近地牢的讨伐委托。';
           this.townInterior('溪桥村酒馆', detail, 'tavern', 'npc-innkeeper');
           if (join) this.button('与盾卫罗兰会合', 42, function () {
-            if (_this44.party.includes('d')) return;
-            var oldHP = _this44.maxHP,
-              oldDP = _this44.maxDP;
-            _this44.party.push('d');
-            _this44.hp += _this44.maxHP - oldHP;
-            _this44.dp += _this44.maxDP - oldDP;
-            _this44.tavern();
+            if (_this63.party.includes('d')) return;
+            var oldHP = _this63.maxHP,
+              oldDP = _this63.maxDP;
+            _this63.party.push('d');
+            _this63.hp += _this63.maxHP - oldHP;
+            _this63.dp += _this63.maxDP - oldDP;
+            _this63.tavern();
           });
           var restCost = 10;
           this.button('休息 · 恢复生命与 DP · 10 金币', -29, function () {
-            if (_this44.hp >= _this44.maxHP && _this44.dp >= _this44.maxDP) {
-              _this44.popup('生命和 DP 已满', 0, 87);
+            if (_this63.hp >= _this63.maxHP && _this63.dp >= _this63.maxDP) {
+              _this63.popup('生命和 DP 已满', 0, 87);
               return;
             }
-            if (_this44.gold < restCost) {
-              _this44.popup('金币不足', 0, 87);
+            if (_this63.gold < restCost) {
+              _this63.popup('金币不足', 0, 87);
               return;
             }
-            _this44.gold -= restCost;
-            _this44.hp = _this44.maxHP;
-            _this44.dp = _this44.maxDP;
-            _this44.tavern();
-            _this44.popup('已恢复', 0, 87);
+            _this63.gold -= restCost;
+            _this63.hp = _this63.maxHP;
+            _this63.dp = _this63.maxDP;
+            _this63.tavern();
+            _this63.popup('已恢复', 0, 87);
           });
           if (this.taught && ready) this.button('交付讨伐 · 获得 12 金币', -100, function () {
-            var _this44$hunt;
-            if (((_this44$hunt = _this44.hunt) == null ? void 0 : _this44$hunt.state) !== 'ready') return;
-            _this44.hunt = {
+            var _this63$hunt;
+            if (((_this63$hunt = _this63.hunt) == null ? void 0 : _this63$hunt.state) !== 'ready') return;
+            _this63.hunt = {
               state: 'cooldown',
               until: Date.now() + 60000
             };
-            _this44.addMaterials({
+            _this63.addMaterials({
               gold: 12
             });
-            _this44.tavern();
+            _this63.tavern();
           });
           if (this.taught && !active && !ready && !cooling) this.button('领取附近地牢讨伐', -100, function () {
-            if (_this44.hunt && !(_this44.hunt.state === 'cooldown' && _this44.hunt.until <= Date.now())) return;
+            if (_this63.hunt && !(_this63.hunt.state === 'cooldown' && _this63.hunt.until <= Date.now())) return;
             var available = dungeonIds.filter(function (id) {
-              return unlocked(id, _this44.cleared);
+              return unlocked(id, _this63.cleared);
             });
-            _this44.hunt = {
+            _this63.hunt = {
               state: 'active',
               target: available[Math.floor(Math.random() * available.length)]
             };
-            _this44.tavern();
+            _this63.tavern();
           });
           this.button(this.taught ? '返回村庄' : '重新开始教学', -171, function () {
-            return _this44.taught ? _this44.village() : _this44.menu();
+            return _this63.taught ? _this63.village() : _this63.menu();
           });
         };
         _proto.formalTypes = function formalTypes() {
-          var mage = this.party.includes('m'),
-            knight = this.party.includes('d');
-          return knight && mage ? ['s', 'd', 'm', 'h'] : knight ? ['s', 'd', 'h', 'staff'] : mage ? ['s', 'm', 'h', 'staff'] : ['s', 'fist', 'h', 'staff'];
+          return rosterEmblems(this.party);
         };
         _proto.enter = function enter(id, reveal) {
           this.phase = id;
@@ -5063,11 +11960,12 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.showRoom(reveal);
         };
         _proto.advanceRoom = function advanceRoom(director, room) {
+          if (this.mineRecovery) return;
           if (this.dungeon !== director || !director.advance(room)) return;
           this.afterRoom(director);
         };
         _proto.afterRoom = function afterRoom(director) {
-          var _this45 = this;
+          var _this64 = this;
           if (this.dungeon !== director) return;
           if (!director.room) {
             this.finishAdventure('win');
@@ -5077,23 +11975,23 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var after = this.dungeonBackdrop(director.depth);
           this.page('沿路前进', '小队正在前往下一房间。', before);
           var root = this.ui;
-          void this.walkParty(before === after ? .45 : 1.05, before === after ? [before] : [before, after]).then(function () {
-            if (_this45.ui === root && _this45.dungeon === director) _this45.showRoom();
+          void this.walkParty(before === after ? .45 : this.forestLabStop(before) !== undefined ? .82 : 1.05, before === after ? [before] : [before, after]).then(function () {
+            if (_this64.ui === root && _this64.dungeon === director) _this64.showRoom();
           });
         };
         _proto.buff = function buff(id) {
-          var _this$adventure$buffs, _this$adventure4;
-          return (_this$adventure$buffs = (_this$adventure4 = this.adventure) == null ? void 0 : _this$adventure4.buffs[id]) != null ? _this$adventure$buffs : 0;
+          var _this$adventure$buffs, _this$adventure5;
+          return (_this$adventure$buffs = (_this$adventure5 = this.adventure) == null ? void 0 : _this$adventure5.buffs[id]) != null ? _this$adventure$buffs : 0;
         };
         _proto.offerUpgrade = function offerUpgrade(director, room, proceed) {
-          var _this46 = this;
+          var _this65 = this;
           var run = this.adventure;
           if (!run) {
             proceed();
             return;
           }
           var options = drawUpgrades(run.buffs, function (id) {
-            return _this46.inventory.hasEquipped(id);
+            return _this65.inventory.hasEquipped(id);
           });
           if (!options.length) {
             proceed();
@@ -5102,24 +12000,28 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.page('选择临时强化', '强化仅在本次地牢探索中生效。', this.dungeonBackdrop());
           var root = this.ui;
           options.forEach(function (option, index) {
-            return _this46.button(option.name + ' · ' + option.description, 43 - index * 72, function () {
-              if (_this46.ui !== root || _this46.dungeon !== director || director.room !== room) return;
-              run.buffs[option.id] = _this46.buff(option.id) + 1;
-              if (option.id === 'vital') _this46.hp = Math.min(_this46.maxHP, _this46.hp + 30);
-              _this46.audio.play('charge');
+            return _this65.button(option.name + ' · ' + option.description, 43 - index * 72, function () {
+              if (_this65.ui !== root || _this65.dungeon !== director || director.room !== room) return;
+              run.buffs[option.id] = _this65.buff(option.id) + 1;
+              if (option.id === 'vital') _this65.hp = Math.min(_this65.maxHP, _this65.hp + 30);
+              _this65.audio.play('charge');
               proceed();
             });
           });
           this.button('撤离', -380, function () {
-            if (_this46.ui === root && _this46.dungeon === director) _this46.finishAdventure('retreat');
+            if (_this65.ui === root && _this65.dungeon === director) _this65.finishAdventure('retreat');
           });
         };
         _proto.showRoom = function showRoom(reveal) {
-          var _this47 = this;
+          var _this66 = this;
           var director = this.dungeon;
           var room = director == null ? void 0 : director.room;
           if (!room) return;
           var run = this.adventure;
+          if (this.mineRecovery && room.kind !== 'battle' && room.kind !== 'rest' && !(room.kind === 'chest' && this.mineRecovery.state.mineRecovery.source === 'formal')) {
+            this.showRecoveryStop('该房间尚未接入探索事务。');
+            return;
+          }
           if (room.kind === 'battle') {
             this.enemies = [].concat(room.enemies);
             if (!run) this.phase = room.type === 'boss' ? 'lessonBoss' : 'wolves';
@@ -5128,17 +12030,17 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               this.sceneActor('hero-m', 144, 102, '剧情人物 ', true);
               var _root2 = this.ui;
               var allowMeeting = function allowMeeting() {
-                if (_this47.ui !== _root2 || _this47.dungeon !== director) return;
-                _this47.button('与法师伊芙会合', 32, function () {
-                  if (_this47.ui !== _root2 || _this47.party.includes('m')) return;
-                  var oldHP = _this47.maxHP,
-                    oldDP = _this47.maxDP;
-                  _this47.party.push('m');
-                  _this47.hp += _this47.maxHP - oldHP;
-                  _this47.dp += _this47.maxDP - oldDP;
-                  _this47.types = _this47.formalTypes();
-                  _this47.save();
-                  _this47.beginBattle();
+                if (_this66.ui !== _root2 || _this66.dungeon !== director) return;
+                _this66.button('与法师伊芙会合', 32, function () {
+                  if (_this66.ui !== _root2 || _this66.party.includes('m')) return;
+                  var oldHP = _this66.maxHP,
+                    oldDP = _this66.maxDP;
+                  _this66.party.push('m');
+                  _this66.hp += _this66.maxHP - oldHP;
+                  _this66.dp += _this66.maxDP - oldDP;
+                  _this66.types = _this66.formalTypes();
+                  _this66.save();
+                  _this66.beginBattle();
                 });
               };
               if (reveal) void reveal().then(allowMeeting);else allowMeeting();
@@ -5146,7 +12048,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             return;
           }
           var advance = function advance() {
-            return _this47.advanceRoom(director, room);
+            return _this66.advanceRoom(director, room);
           };
           if (room.kind === 'rescue' || room.kind === 'recruit') {
             var recruit = room.kind === 'recruit';
@@ -5155,25 +12057,25 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             if (recruit) this.sceneActor('hero-h', 144, 102, '剧情人物 ', true);else this.sceneActor('dungeon-traveler', 144, 99);
             var _root3 = this.ui;
             this.button(recruit ? '邀请米拉入队' : '救下村民，接下报信任务', 30, function () {
-              if (_this47.ui !== _root3 || _this47.dungeon !== director || director.room !== room) return;
-              if (recruit && !_this47.party.includes('h')) {
-                _this47.party.push('h');
-                _this47.types = ['s', 'fist', 'h', 'staff'];
-                _this47.hp = Math.min(_this47.maxHP, _this47.hp + 55);
+              if (_this66.ui !== _root3 || _this66.dungeon !== director || director.room !== room) return;
+              if (recruit && !_this66.party.includes('h')) {
+                _this66.party.push('h');
+                _this66.types = ['s', 'fist', 'h', 'staff'];
+                _this66.hp = Math.min(_this66.maxHP, _this66.hp + 55);
               }
               advance();
             });
             this.button('撤离', -380, function () {
-              return _this47.finishAdventure('retreat');
+              return _this66.finishAdventure('retreat');
             });
             return;
           }
           if (!run) return;
           var payingReward = false;
           var action = function action(label, y, apply) {
-            var root = _this47.ui;
-            _this47.button(label, y, function () {
-              if (payingReward || _this47.ui !== root || _this47.dungeon !== director || director.room !== room) return;
+            var root = _this66.ui;
+            _this66.button(label, y, function () {
+              if (payingReward || _this66.ui !== root || _this66.dungeon !== director || director.room !== room) return;
               apply();
             });
           };
@@ -5184,56 +12086,56 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             });
           };
           var goldDecision = function goldDecision(label, amount, origin, takeMaterials) {
-            return action(label, 42, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee18() {
+            return action(label, 42, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee30() {
               var root, motion, played;
-              return _regeneratorRuntime().wrap(function _callee18$(_context20) {
-                while (1) switch (_context20.prev = _context20.next) {
+              return _regeneratorRuntime().wrap(function _callee30$(_context32) {
+                while (1) switch (_context32.prev = _context32.next) {
                   case 0:
                     payingReward = true;
-                    root = _this47.ui;
-                    motion = new BattleMotion();
-                    _context20.next = 5;
-                    return _this47.animateCoins(motion, amount, _this47.coinText, origin, stageGrid.groundY);
+                    root = _this66.ui;
+                    motion = _this66.newPageMotion();
+                    _context32.next = 5;
+                    return _this66.animateCoins(motion, amount, _this66.coinText, origin, stageGrid.groundY);
                   case 5:
-                    played = _context20.sent;
+                    played = _context32.sent;
                     payingReward = false;
-                    if (!(!played || _this47.ui !== root || _this47.dungeon !== director || director.room !== room || _this47.adventure !== run)) {
-                      _context20.next = 9;
+                    if (!(!played || _this66.ui !== root || _this66.dungeon !== director || director.room !== room || _this66.adventure !== run)) {
+                      _context32.next = 9;
                       break;
                     }
-                    return _context20.abrupt("return");
+                    return _context32.abrupt("return");
                   case 9:
-                    _this47.receiveGold(amount);
+                    _this66.receiveGold(amount);
                     takeMaterials == null || takeMaterials();
                     advance();
                   case 12:
                   case "end":
-                    return _context20.stop();
+                    return _context32.stop();
                 }
-              }, _callee18);
+              }, _callee30);
             })));
           };
           var show = function show(title, detail) {
-            return _this47.page(title, detail, _this47.dungeonBackdrop(director.depth));
+            return _this66.page(title, detail, _this66.dungeonBackdrop(director.depth));
           };
           if (room.kind === 'merchant') {
             show('旅行商人', '金币 ' + this.walletGold + ' · 治疗药水 ×' + this.potion);
             this.sceneActor('dungeon-merchant', 151, 116);
             action('购买治疗药水 · 5 金币', 42, function () {
-              if (_this47.potion >= 99 || !_this47.spendGold(5)) {
-                _this47.popup('无法购买', 0, 91);
+              if (_this66.potion >= 99 || !_this66.spendGold(5)) {
+                _this66.popup('无法购买', 0, 91);
                 return;
               }
-              _this47.potion++;
-              _this47.showRoom();
+              _this66.potion++;
+              _this66.showRoom();
             });
             action('小队休整 · 3 金币，恢复 30 HP', -25, function () {
-              if (_this47.hp >= _this47.maxHP || !_this47.spendGold(3)) {
-                _this47.popup('无法休整', 0, 91);
+              if (_this66.hp >= _this66.maxHP || !_this66.spendGold(3)) {
+                _this66.popup('无法休整', 0, 91);
                 return;
               }
-              _this47.hp = Math.min(_this47.maxHP, _this47.hp + 30);
-              _this47.showRoom();
+              _this66.hp = Math.min(_this66.maxHP, _this66.hp + 30);
+              _this66.showRoom();
             });
             action('离开商人房间', -92, advance);
           } else if (room.kind === 'event') {
@@ -5241,7 +12143,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             var traveler = this.sceneActor('dungeon-traveler', 144, 99);
             goldDecision("\u534F\u52A9\u65C5\u4EBA\uFF0C\u83B7\u5F97 " + roomRewards.travelerGold + " \u91D1\u5E01", roomRewards.travelerGold, traveler);
             decision('谨慎休整，恢复 22 HP', -25, function () {
-              _this47.hp = Math.min(_this47.maxHP, _this47.hp + 22);
+              _this66.hp = Math.min(_this66.maxHP, _this66.hp + 22);
             });
           } else if (room.kind === 'rest') {
             if (this.trial) {
@@ -5250,31 +12152,46 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               var _root4 = this.ui;
               var supply = function supply(restore) {
                 return function () {
-                  if (_this47.ui !== _root4 || _this47.dungeon !== director || director.room !== room) return;
+                  if (_this66.ui !== _root4 || _this66.dungeon !== director || director.room !== room) return;
                   restore();
                   advance();
                 };
               };
               this.trialButton('恢复 45 HP', -26, supply(function () {
-                _this47.hp = Math.min(_this47.maxHP, _this47.hp + 45);
+                _this66.hp = Math.min(_this66.maxHP, _this66.hp + 45);
               }));
               this.trialButton('恢复 35 DP', -92, supply(function () {
-                _this47.dp = Math.min(_this47.maxDP, _this47.dp + 35);
+                _this66.dp = Math.min(_this66.maxDP, _this66.dp + 35);
               }));
+            } else if (this.mineRecovery) {
+              show('休息营地', '队伍发现了安全的休息地点。');
+              action('恢复 45 HP', 42, function () {
+                return _this66.commitMineRest(director, room, 'hp');
+              });
+              action('恢复 35 DP', -25, function () {
+                return _this66.commitMineRest(director, room, 'dp');
+              });
             } else {
               show('休息营地', '队伍发现了安全的休息地点。');
               decision('恢复 45 HP', 42, function () {
-                _this47.hp = Math.min(_this47.maxHP, _this47.hp + 45);
+                _this66.hp = Math.min(_this66.maxHP, _this66.hp + 45);
               });
               decision('恢复 35 DP', -25, function () {
-                _this47.dp = Math.min(_this47.maxDP, _this47.dp + 35);
+                _this66.dp = Math.min(_this66.maxDP, _this66.dp + 35);
               });
             }
           } else if (room.kind === 'chest') {
             show('遗落的宝箱', '一只无人看守的旧箱子。');
             var chest = this.sceneActor('dungeon-chest', 144, 77, '剧情道具 ');
             chest.y += 11;
-            goldDecision("\u53D6\u8D70\u7269\u8D44 \xB7 " + roomRewards.chestGold + " \u91D1\u5E01\uFF0C" + roomRewards.chestOre + " \u94C1\u77FF", roomRewards.chestGold, chest, function () {
+            if (this.mineRecovery) {
+              action("\u53D6\u8D70\u7269\u8D44 \xB7 " + roomRewards.chestGold + " \u91D1\u5E01\uFF0C" + roomRewards.chestOre + " \u94C1\u77FF", 42, function () {
+                var current = _this66.minePermit(director, room);
+                if (!current) return;
+                var next = planMineChest(current.live.state, current.permit);
+                if (next) payingReward = _this66.commitMineRoom(current.live, next, director, room, chest) === true;
+              });
+            } else goldDecision("\u53D6\u8D70\u7269\u8D44 \xB7 " + roomRewards.chestGold + " \u91D1\u5E01\uFF0C" + roomRewards.chestOre + " \u94C1\u77FF", roomRewards.chestGold, chest, function () {
               var _run$loot$ore;
               run.loot.ore = ((_run$loot$ore = run.loot.ore) != null ? _run$loot$ore : 0) + roomRewards.chestOre;
             });
@@ -5284,45 +12201,56 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             var choices = [['血色门 · 普通战斗', encounter(run.id, director.depth + 1, 'battle')], ['铜色门 · 补给或商人', {
               kind: _supply[Math.floor(Math.random() * _supply.length)]
             }], ['黑铁门 · 精英战斗', encounter(run.id, director.depth + 1, 'elite')]];
-            choices.forEach(function (_ref23, index) {
-              var label = _ref23[0],
-                next = _ref23[1];
+            choices.forEach(function (_ref43, index) {
+              var label = _ref43[0],
+                next = _ref43[1];
               return action(label, 42 - index * 67, function () {
-                if (director.choose(room, next)) _this47.afterRoom(director);
+                if (director.choose(room, next)) _this66.afterRoom(director);
               });
             });
           }
           action('撤离', -380, function () {
-            return _this47.finishAdventure('retreat');
+            return _this66.finishAdventure('retreat');
           });
         };
         _createClass(FourEmblemsGame, [{
           key: "maxHP",
           get: function get() {
-            var _this48 = this;
+            var _this67 = this;
             return this.party.reduce(function (sum, id) {
-              return sum + _this48.inventory.stats(id).hp;
+              return sum + _this67.inventory.stats(id).hp;
             }, 0) + 15 * this.buff('vital');
           }
         }, {
           key: "maxDP",
           get: function get() {
-            var _this49 = this;
+            var _this68 = this;
             return this.party.reduce(function (sum, id) {
-              return sum + _this49.inventory.stats(id).dp;
+              return sum + _this68.inventory.stats(id).dp;
             }, 0);
           }
         }, {
           key: "walletGold",
           get: function get() {
-            var _this$adventure$coins2, _this$adventure5;
-            var found = (_this$adventure$coins2 = (_this$adventure5 = this.adventure) == null ? void 0 : _this$adventure5.coins) != null ? _this$adventure$coins2 : 0;
+            var _this$adventure$coins2, _this$adventure6;
+            var found = (_this$adventure$coins2 = (_this$adventure6 = this.adventure) == null ? void 0 : _this$adventure6.coins) != null ? _this$adventure$coins2 : 0;
             return this.trial ? found : this.gold + found;
           }
         }, {
           key: "joined",
           get: function get() {
             return this.party.includes('h');
+          }
+        }, {
+          key: "useForestReel",
+          get: function get() {
+            return typeof location !== 'undefined' && location.hash === '#forest-reel';
+          }
+        }, {
+          key: "partyName",
+          get: function get() {
+            var _heroes$this$party$0$, _heroes$this$party$;
+            return this.party.length > 1 ? '勇者小队' : (_heroes$this$party$0$ = (_heroes$this$party$ = heroes[this.party[0]]) == null ? void 0 : _heroes$this$party$.name) != null ? _heroes$this$party$0$ : '勇者';
           }
         }, {
           key: "showsGuard",
@@ -5604,7 +12532,7 @@ System.register("chunks:///_virtual/Inventory.ts", ['./rollupPluginModLoBabelHel
         name: '反击徽记',
         owner: 'd',
         slot: 'core',
-        effect: '满 DP 反击增伤',
+        effect: '骑士行动开始时 DP 已满，追加一次 1×AP 攻击',
         cost: {
           gold: 25,
           ore: 4
@@ -5819,10 +12747,416 @@ System.register("chunks:///_virtual/Inventory.ts", ['./rollupPluginModLoBabelHel
   };
 });
 
-System.register("chunks:///_virtual/main", ['./BattleMotion.ts', './BattleRules.ts', './Board.ts', './Chapter.ts', './CombatTags.ts', './DungeonDirector.ts', './Game.ts', './GameAudio.ts', './Inventory.ts', './MineTrial.ts', './TemplateBoardFx.ts'], function () {
+System.register("chunks:///_virtual/main", ['./ActorArt.ts', './BattleMotion.ts', './BattleRules.ts', './BattleSession.ts', './Board.ts', './Chapter.ts', './battle-core.ts', './board-bridge.ts', './cocos-board-adapter.ts', './damage.ts', './derivation.ts', './effects.ts', './experiment.ts', './exploration-save.ts', './formal-rules.ts', './mine-recovery.ts', './potion-bridge.ts', './CombatSceneLab.ts', './CombatTags.ts', './DungeonDirector.ts', './FormalSaveGate.ts', './Game.ts', './GameAudio.ts', './Inventory.ts', './MineTrial.ts', './StageLayout.ts', './StageTravel.ts', './TemplateBoardFx.ts'], function () {
   return {
-    setters: [null, null, null, null, null, null, null, null, null, null, null],
+    setters: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
     execute: function () {}
+  };
+});
+
+System.register("chunks:///_virtual/mine-recovery.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Inventory.ts', './exploration-save.ts', './Chapter.ts'], function (exports) {
+  var _extends, _createForOfIteratorHelperLoose, _objectWithoutPropertiesLoose, cclegacy, Inventory, decodeExploration, roomPosition, transition, planExit, validBoard, dungeons, dungeonRewardMultiplier, battleCoinReward, roomRewards;
+  return {
+    setters: [function (module) {
+      _extends = module.extends;
+      _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
+      _objectWithoutPropertiesLoose = module.objectWithoutPropertiesLoose;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+    }, function (module) {
+      Inventory = module.Inventory;
+    }, function (module) {
+      decodeExploration = module.decodeExploration;
+      roomPosition = module.roomPosition;
+      transition = module.transition;
+      planExit = module.planExit;
+      validBoard = module.validBoard;
+    }, function (module) {
+      dungeons = module.dungeons;
+      dungeonRewardMultiplier = module.dungeonRewardMultiplier;
+      battleCoinReward = module.battleCoinReward;
+      roomRewards = module.roomRewards;
+    }],
+    execute: function () {
+      exports({
+        planExplorationTestSettlement: planExplorationTestSettlement,
+        planFormalRoomReward: planFormalRoomReward,
+        planMineChest: planMineChest,
+        planMineFirstVictory: planMineFirstVictory,
+        planMineFormalClose: planMineFormalClose,
+        planMineLegacyVictory: planMineLegacyVictory,
+        planMinePotion: planMinePotion,
+        planMineRest: planMineRest,
+        planMineTestClose: planMineTestClose,
+        readMineRecovery: readMineRecovery
+      });
+      var _excluded = ["potion"],
+        _excluded2 = ["potion"];
+      cclegacy._RF.push({}, "80e92onM01MUp49iuFHNJ0N", "mine-recovery", undefined);
+      var count = function count(v) {
+        return Number.isSafeInteger(v) && Number(v) >= 0;
+      };
+      var equal = function equal(a, b) {
+        return a.runId === b.runId && a.roomId === b.roomId && a.generation === b.generation && a.operationId === b.operationId && ('choice' in a ? 'choice' in b && a.choice === b.choice : 'outcome' in b && a.outcome === b.outcome);
+      };
+      function identity(save, permit) {
+        return save.run.runId === permit.runId && save.run.generation === permit.generation && roomPosition(save.run).current === permit.roomId;
+      }
+      function readMineRecovery(raw) {
+        var _run$receipts$, _exit$permit, _exit$permit2, _exit$permit3, _exit$permit4, _exit$permit5, _exit$permit6, _exit$preview, _exit$preview2, _exit$preview3;
+        var parsed = decodeExploration(raw);
+        if (parsed.kind !== 'versioned') return;
+        var ask = parsed.save;
+        var player = ask.player,
+          run = ask.run,
+          mineRecovery = ask.mineRecovery;
+        var first = (_run$receipts$ = run.receipts[0]) == null ? void 0 : _run$receipts$.request;
+        if ((mineRecovery == null ? void 0 : mineRecovery.version) !== 1 || !run.board || !count(player.hp) || player.hp < 1 || !count(player.dp) || run.route.map(function (r) {
+          return r.room.kind;
+        }).join(',') !== 'battle,rest,battle,chest,battle' || run.route.some(function (r, i) {
+          return r.id !== 'mine:' + i;
+        }) || run.route[4].room.kind !== 'battle' || run.route[4].room.type !== 'boss' || run.cursor < 1 || run.cursor > 5 || !first || first.terminal.roomId !== 'mine:0' || run.generation !== first.terminal.generation + run.cursor + (run.closed ? 1 : 0)) return;
+        var rest = mineRecovery.rest,
+          exit = mineRecovery.exit,
+          source = mineRecovery.source;
+        if (source !== undefined && source !== 'formal') return;
+        if (source === 'formal') return validFormalRecovery(ask) ? ask : undefined;
+        if (run.cursor > 2 || run.receipts.length !== 1 || player.location !== 3) return;
+        if (run.cursor === 1 && rest !== undefined) return;
+        if (run.cursor === 2 && (!rest || rest.runId !== run.runId || rest.roomId !== 'mine:1' || rest.operationId !== 'rest:mine:1' || rest.generation !== run.generation - (run.closed ? 2 : 1) || !['hp', 'dp'].includes(rest.choice))) return;
+        if (!run.closed && exit !== undefined) return;
+        if (run.closed && (!exit || ((_exit$permit = exit.permit) == null ? void 0 : _exit$permit.outcome) !== run.closed || ((_exit$permit2 = exit.permit) == null ? void 0 : _exit$permit2.runId) !== run.runId || ((_exit$permit3 = exit.permit) == null ? void 0 : _exit$permit3.roomId) !== roomPosition(run).current || ((_exit$permit4 = exit.permit) == null ? void 0 : _exit$permit4.operationId) !== 'close:' + ((_exit$permit5 = exit.permit) == null ? void 0 : _exit$permit5.roomId) || ((_exit$permit6 = exit.permit) == null ? void 0 : _exit$permit6.generation) !== run.generation - 1 || !count((_exit$preview = exit.preview) == null ? void 0 : _exit$preview.gold) || !count((_exit$preview2 = exit.preview) == null ? void 0 : _exit$preview2.xp) || !((_exit$preview3 = exit.preview) != null && _exit$preview3.loot) || run.pending.coins !== 0 || run.pending.xp !== 0 || run.pending.ordinaryWins !== 0 || Object.keys(run.pending.loot).length !== 0)) return;
+        return ask;
+      }
+      function planMineRest(save, permit, caps) {
+        var _run$route$run$cursor, _run$route;
+        var old = save.mineRecovery.rest;
+        if ((old == null ? void 0 : old.operationId) === permit.operationId) return {
+          status: equal(old, permit) ? 'duplicate' : 'conflict'
+        };
+        var run = save.run,
+          player = save.player;
+        if (run.closed || !identity(save, permit) || permit.operationId !== 'rest:' + permit.roomId || ((_run$route$run$cursor = run.route[run.cursor]) == null ? void 0 : _run$route$run$cursor.room.kind) !== 'rest' || ((_run$route = run.route[run.cursor + 1]) == null ? void 0 : _run$route.id) !== 'mine:2' || !['hp', 'dp'].includes(permit.choice) || !count(caps.hp) || !count(caps.dp) || player.hp > caps.hp || player.dp > caps.dp) return {
+          status: 'rejected'
+        };
+        var hp = permit.choice === 'hp' ? Math.min(caps.hp, player.hp + 45) : player.hp;
+        var dp = permit.choice === 'dp' ? Math.min(caps.dp, player.dp + 35) : player.dp;
+        var next = _extends({}, save, {
+          player: _extends({}, player, {
+            hp: hp,
+            dp: dp
+          }),
+          run: _extends({}, run, {
+            cursor: run.cursor + 1,
+            generation: run.generation + 1
+          }),
+          mineRecovery: _extends({}, save.mineRecovery, {
+            rest: _extends({}, permit)
+          })
+        });
+        return {
+          status: 'changed',
+          save: next
+        };
+      }
+
+      // Closure tests project existing ratios but never mutate the permanent ledger.
+      function planExplorationTestSettlement(save, runId, generation, outcome, firstClear) {
+        if (firstClear === void 0) {
+          firstClear = false;
+        }
+        var next = transition(save, {
+          kind: 'close',
+          runId: runId,
+          generation: generation,
+          outcome: outcome
+        });
+        if (next.status !== 'changed') return {
+          status: 'rejected'
+        };
+        return {
+          status: 'changed',
+          preview: planExit(save.run.pending, outcome, firstClear),
+          run: _extends({}, next.save.run, {
+            pending: {
+              coins: 0,
+              xp: 0,
+              ordinaryWins: 0,
+              loot: {}
+            }
+          })
+        };
+      }
+      function planMineTestClose(save, permit) {
+        var _save$mineRecovery$ex;
+        var old = (_save$mineRecovery$ex = save.mineRecovery.exit) == null ? void 0 : _save$mineRecovery$ex.permit;
+        if ((old == null ? void 0 : old.operationId) === permit.operationId) return {
+          status: equal(old, permit) ? 'duplicate' : 'conflict'
+        };
+        if (save.mineRecovery.source === 'formal' || save.run.closed || !identity(save, permit) || permit.operationId !== 'close:' + permit.roomId || !['retreat', 'fail'].includes(permit.outcome)) return {
+          status: 'rejected'
+        };
+        var settlement = planExplorationTestSettlement(save, permit.runId, permit.generation, permit.outcome);
+        if (settlement.status !== 'changed') return settlement;
+        var next = _extends({}, save, {
+          run: settlement.run,
+          mineRecovery: _extends({}, save.mineRecovery, {
+            exit: {
+              permit: _extends({}, permit),
+              preview: settlement.preview
+            }
+          })
+        });
+        return {
+          status: 'changed',
+          save: next
+        };
+      }
+      function planFormalRoomReward(dungeon, room) {
+        var base = dungeons[dungeon].loot;
+        var multiplier = dungeonRewardMultiplier(room.type);
+        var loot = {};
+        for (var _iterator = _createForOfIteratorHelperLoose(['herb', 'ore', 'essence', 'crystal']), _step; !(_step = _iterator()).done;) {
+          var key = _step.value;
+          if (base[key] !== undefined) loot[key] = Math.ceil(base[key] * multiplier);
+        }
+        return {
+          coins: battleCoinReward(room, dungeon),
+          loot: loot,
+          xp: room.enemies.length * 2,
+          ordinaryWins: Number(room.type !== 'elite' && room.type !== 'boss')
+        };
+      }
+      function planMineFirstVictory(base, terminal, board) {
+        var _base$run$route$, _room$rescueCells;
+        var room = (_base$run$route$ = base.run.route[0]) == null ? void 0 : _base$run$route$.room;
+        if (base.run.cursor !== 0 || base.run.receipts.length || terminal.roomId !== 'mine:0' || (room == null ? void 0 : room.kind) !== 'battle' || (_room$rescueCells = room.rescueCells) != null && _room$rescueCells.length || room.type === 'boss') return;
+        var commit = transition(base, {
+          kind: 'terminal',
+          request: {
+            terminal: terminal,
+            board: board,
+            nextRoomId: 'mine:1',
+            delta: planFormalRoomReward('mine', room)
+          }
+        });
+        if (commit.status !== 'changed') return;
+        return readMineRecovery(JSON.stringify(_extends({}, commit.save, {
+          mineRecovery: {
+            version: 1,
+            source: 'formal'
+          }
+        })));
+      }
+      var emptyPending = function emptyPending() {
+        return {
+          coins: 0,
+          xp: 0,
+          ordinaryWins: 0,
+          loot: {}
+        };
+      };
+      var samePending = function samePending(a, b) {
+        return a.coins === b.coins && a.xp === b.xp && a.ordinaryWins === b.ordinaryWins && Object.keys(a.loot).length === Object.keys(b.loot).length && Object.entries(a.loot).every(function (_ref) {
+          var k = _ref[0],
+            v = _ref[1];
+          return b.loot[k] === v;
+        });
+      };
+      var chestDelta = {
+        coins: roomRewards.chestGold,
+        xp: 0,
+        ordinaryWins: 0,
+        loot: {
+          ore: roomRewards.chestOre
+        }
+      };
+      function plus(a, b) {
+        var loot = _extends({}, a.loot);
+        for (var _i = 0, _Object$entries = Object.entries(b.loot); _i < _Object$entries.length; _i++) {
+          var _loot$key;
+          var _Object$entries$_i = _Object$entries[_i],
+            k = _Object$entries$_i[0],
+            v = _Object$entries$_i[1];
+          var key = k;
+          loot[key] = ((_loot$key = loot[key]) != null ? _loot$key : 0) + v;
+        }
+        return {
+          coins: a.coins + b.coins,
+          xp: a.xp + b.xp,
+          ordinaryWins: a.ordinaryWins + b.ordinaryWins,
+          loot: loot
+        };
+      }
+      function validCheckpoint(save, p) {
+        var _room$rescueCells3;
+        var run = save.run,
+          current = run.route[run.cursor];
+        var room = current == null ? void 0 : current.room;
+        return (run.cursor === 2 || run.cursor === 4) && (room == null ? void 0 : room.kind) === 'battle' && p.roomId === current.id && p.generation === run.generation && count(p.operation) && p.operation > 0 && validBoard(p.board) && Array.isArray(p.enemies) && p.enemies.length === room.enemies.length && p.enemies.every(function (hp, i) {
+          return count(hp) && hp <= room.enemies[i];
+        }) && p.enemies.some(function (hp) {
+          return hp > 0;
+        }) && Array.isArray(p.marks) && new Set(p.marks).size === p.marks.length && p.marks.every(function (i) {
+          var _room$rescueCells2;
+          return (_room$rescueCells2 = room.rescueCells) == null ? void 0 : _room$rescueCells2.includes(i);
+        }) && (!((_room$rescueCells3 = room.rescueCells) != null && _room$rescueCells3.length) || p.marks.length > 0) && (p.oath === undefined || [1, 1.4, 1.55, 1.7].includes(p.oath.rally) && [1, 1.1].includes(p.oath.roundBoost) && typeof p.oath.guard === 'boolean' && p.oath.shred && Object.entries(p.oath.shred).every(function (_ref2) {
+          var id = _ref2[0],
+            n = _ref2[1];
+          return count(Number(id)) && Number(id) < p.enemies.length && count(n);
+        }) && Array.isArray(p.oath.weaken) && p.oath.weaken.every(function (id) {
+          return typeof id === 'string' && count(Number(id)) && Number(id) < p.enemies.length;
+        })) && count(p.round) && p.round > 0 && typeof p.rally === 'boolean' && Array.isArray(p.stunned) && p.stunned.every(function (i) {
+          return count(i) && i < p.enemies.length;
+        });
+      }
+      function validFormalRecovery(save) {
+        var _run$route$2$room$res, _c$preview, _c$preview2, _c$preview3;
+        var run = save.run,
+          m = save.mineRecovery,
+          player = save.player;
+        var first = run.receipts[0].request.terminal;
+        if (m.exit !== undefined || run.route[2].room.kind !== 'battle' || !((_run$route$2$room$res = run.route[2].room.rescueCells) != null && _run$route$2$room$res.length) || !new RegExp('^game:' + first.generation + ':[1-9][0-9]*$').test(first.terminalEventId)) return false;
+        if (run.cursor >= 2) {
+          var p = m.rest;
+          if (!p || p.runId !== run.runId || p.roomId !== 'mine:1' || p.operationId !== 'rest:mine:1' || p.generation !== first.generation + 1 || !['hp', 'dp'].includes(p.choice)) return false;
+        } else if (m.rest) return false;
+        var pending = emptyPending();
+        var wins = [0, 2, 4].filter(function (i) {
+          return i < run.cursor;
+        });
+        if (run.receipts.length !== wins.length) return false;
+        for (var _iterator2 = _createForOfIteratorHelperLoose(wins.entries()), _step2; !(_step2 = _iterator2()).done;) {
+          var _step2$value = _step2.value,
+            index = _step2$value[0],
+            i = _step2$value[1];
+          var room = run.route[i].room;
+          var receipt = run.receipts[index].request;
+          if (room.kind !== 'battle' || receipt.terminal.roomId !== 'mine:' + i || receipt.terminal.generation !== first.generation + i || i > 0 && receipt.terminal.terminalEventId !== legacyVictoryId(receipt.terminal) || !samePending(receipt.delta, planFormalRoomReward('mine', room))) return false;
+          pending = plus(pending, receipt.delta);
+        }
+        if (run.cursor >= 4) {
+          var _m$chest;
+          if (((_m$chest = m.chest) == null ? void 0 : _m$chest.roomId) !== 'mine:3' || m.chest.generation !== first.generation + 3) return false;
+          pending = plus(pending, chestDelta);
+        } else if (m.chest) return false;
+        if (m.potion && (run.closed || !validCheckpoint(save, m.potion))) return false;
+        if (!run.closed) return run.cursor < 5 && player.location === 3 && !m.settlement && samePending(run.pending, pending);
+        var c = m.settlement;
+        return !!c && c.roomId === roomPosition(run).current && c.generation === run.generation - 1 && c.outcome === run.closed && c.ordinaryWins === pending.ordinaryWins && count((_c$preview = c.preview) == null ? void 0 : _c$preview.gold) && count((_c$preview2 = c.preview) == null ? void 0 : _c$preview2.xp) && !!((_c$preview3 = c.preview) != null && _c$preview3.loot) && (run.closed === 'complete' ? run.cursor === 5 : run.cursor < 5) && player.location === (run.closed === 'fail' ? 1 : 3) && samePending(run.pending, emptyPending());
+      }
+      var legacyVictoryId = exports('legacyVictoryId', function legacyVictoryId(permit) {
+        return 'legacy-victory:' + permit.roomId + ':' + permit.generation;
+      });
+      function planMineLegacyVictory(save, permit, board, hp, dp) {
+        var _save$run$route$save$;
+        var room = (_save$run$route$save$ = save.run.route[save.run.cursor]) == null ? void 0 : _save$run$route$save$.room;
+        if (save.mineRecovery.source !== 'formal' || save.run.closed || (room == null ? void 0 : room.kind) !== 'battle' || ![2, 4].includes(save.run.cursor) || !count(hp) || hp === 0 || !count(dp)) return;
+        var result = transition(save, {
+          kind: 'terminal',
+          request: {
+            terminal: _extends({}, permit, {
+              terminalEventId: legacyVictoryId(permit)
+            }),
+            board: board,
+            delta: planFormalRoomReward('mine', room),
+            nextRoomId: roomPosition(save.run).next
+          }
+        });
+        if (result.status !== 'changed') return;
+        var _save$mineRecovery = save.mineRecovery,
+          potion = _save$mineRecovery.potion,
+          mineRecovery = _objectWithoutPropertiesLoose(_save$mineRecovery, _excluded);
+        return _extends({}, result.save, {
+          player: _extends({}, save.player, {
+            hp: hp,
+            dp: dp
+          }),
+          mineRecovery: mineRecovery
+        });
+      }
+      function planMineChest(save, permit) {
+        var run = save.run;
+        if (save.mineRecovery.source !== 'formal' || run.closed || save.mineRecovery.chest || run.cursor !== 3 || permit.roomId !== 'mine:3' || permit.runId !== run.runId || permit.generation !== run.generation) return;
+        var chest = {
+          roomId: 'mine:3',
+          generation: permit.generation
+        };
+        return _extends({}, save, {
+          run: _extends({}, run, {
+            cursor: 4,
+            generation: run.generation + 1,
+            pending: plus(run.pending, chestDelta)
+          }),
+          mineRecovery: _extends({}, save.mineRecovery, {
+            chest: chest
+          })
+        });
+      }
+      function planMinePotion(save, checkpoint, hp, dp, expectedStock) {
+        var _save$mineRecovery$po, _save$mineRecovery$po2;
+        var stock = typeof save.player.potion === 'boolean' ? Number(save.player.potion) : save.player.potion;
+        if (save.mineRecovery.source !== 'formal' || save.run.closed || !count(stock) || stock === 0 || stock !== expectedStock || !count(hp) || hp === 0 || !count(dp) || !validCheckpoint(save, checkpoint) || checkpoint.operation !== ((_save$mineRecovery$po = (_save$mineRecovery$po2 = save.mineRecovery.potion) == null ? void 0 : _save$mineRecovery$po2.operation) != null ? _save$mineRecovery$po : 0) + 1) return;
+        return _extends({}, save, {
+          player: _extends({}, save.player, {
+            hp: hp,
+            dp: dp,
+            potion: stock - 1
+          }),
+          mineRecovery: _extends({}, save.mineRecovery, {
+            potion: checkpoint
+          })
+        });
+      }
+      function planMineFormalClose(save, outcome, meters) {
+        var run = save.run,
+          player = save.player;
+        if (save.mineRecovery.source !== 'formal' || !count(meters.hp) || meters.hp === 0 || !count(meters.dp)) return;
+        var cleared = Array.isArray(player.cleared) ? player.cleared : [];
+        var firstClear = outcome === 'complete' && !cleared.includes('mine');
+        var result = planExplorationTestSettlement(save, run.runId, run.generation, outcome, firstClear);
+        if (result.status !== 'changed') return;
+        var preview = result.preview;
+        var inventory = new Inventory();
+        inventory.restore(player.inventory);
+        for (var _i2 = 0, _arr = Object.keys(inventory.materials); _i2 < _arr.length; _i2++) {
+          var _preview$loot$k;
+          var k = _arr[_i2];
+          inventory.materials[k] += (_preview$loot$k = preview.loot[k]) != null ? _preview$loot$k : 0;
+        }
+        for (var _i3 = 0, _arr2 = player.party; _i3 < _arr2.length; _i3++) {
+          var id = _arr2[_i3];
+          inventory.experience[id] += preview.xp;
+        }
+        var hunt = player.hunt;
+        var _save$mineRecovery2 = save.mineRecovery,
+          potion = _save$mineRecovery2.potion,
+          metadata = _objectWithoutPropertiesLoose(_save$mineRecovery2, _excluded2);
+        return _extends({}, save, {
+          player: _extends({}, player, meters, {
+            inventory: inventory,
+            gold: (count(player.gold) ? player.gold : 0) + preview.gold,
+            exp: (count(player.exp) ? player.exp : 0) + preview.xp,
+            cleared: firstClear ? [].concat(cleared, ['mine']) : cleared,
+            hunt: outcome === 'complete' && (hunt == null ? void 0 : hunt.state) === 'active' && hunt.target === 'mine' ? _extends({}, hunt, {
+              state: 'ready'
+            }) : hunt,
+            location: outcome === 'fail' ? 1 : 3
+          }),
+          run: result.run,
+          mineRecovery: _extends({}, metadata, {
+            settlement: {
+              roomId: roomPosition(run).current,
+              generation: run.generation,
+              outcome: outcome,
+              preview: preview,
+              ordinaryWins: run.pending.ordinaryWins
+            }
+          })
+        });
+      }
+      cclegacy._RF.pop();
+    }
   };
 });
 
@@ -5874,6 +13208,218 @@ System.register("chunks:///_virtual/MineTrial.ts", ['cc', './Chapter.ts'], funct
           return state / 4294967296;
         };
       }
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/potion-bridge.ts", ['cc'], function (exports) {
+  var cclegacy;
+  return {
+    setters: [function (module) {
+      cclegacy = module.cclegacy;
+    }],
+    execute: function () {
+      exports('createPotionBridge', createPotionBridge);
+      cclegacy._RF.push({}, "bcbbbkWQzRINJd2XrTQ3njN", "potion-bridge", undefined);
+      function createPotionBridge(core, stock, isCurrent) {
+        var seen = new Set();
+        var uncertain = false;
+        return function (receiptId) {
+          if (uncertain || !isCurrent() || !receiptId.trim() || core.disposition !== 'active') return 'rejected';
+          if (seen.has(receiptId)) return 'duplicate';
+          var reservation = stock.reserve(receiptId);
+          if (!reservation) return 'rejected';
+          if (!isCurrent()) {
+            reservation.release();
+            return 'rejected';
+          }
+          var before = core.snapshot().events.length;
+          var submitted = false;
+          try {
+            core.submit({
+              potion: {
+                receiptId: receiptId
+              }
+            });
+          } catch (error) {
+            if (core.disposition === 'failed') throw error;
+          } finally {
+            submitted = core.snapshot().events.slice(before).some(function (e) {
+              return e.type === 'POTION_APPLIED' && e.payload.receiptId === receiptId;
+            });
+            if (!submitted) reservation.release();
+          }
+          if (!submitted) return 'rejected';
+          seen.add(receiptId);
+          try {
+            reservation.confirm();
+          } catch (_unused) {
+            // Confirmation may throw after changing stock. Do not retry or refund blindly.
+            uncertain = true;
+            core.cancel('potion-stock-confirmation-uncertain:' + receiptId);
+            return 'confirm-uncertain';
+          }
+          return 'applied';
+        };
+      }
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/StageLayout.ts", ['cc'], function (exports) {
+  var cclegacy;
+  return {
+    setters: [function (module) {
+      cclegacy = module.cclegacy;
+    }],
+    execute: function () {
+      exports({
+        stageCover: stageCover,
+        stageReelCrop: stageReelCrop
+      });
+      cclegacy._RF.push({}, "b1ef2on9MdCMp74v+COgmRJ", "StageLayout", undefined);
+      // Art coordinates are top-left, y down. The common Game parent is centered and y up.
+      var width = 480;
+      var height = 270;
+      var centerY = 292;
+      var stageX = exports('stageX', function stageX(x) {
+        return x - width / 2;
+      });
+      var stageY = exports('stageY', function stageY(y) {
+        return centerY + height / 2 - y;
+      });
+      var stageGrid = exports('stageGrid', {
+        width: width,
+        height: height,
+        centerY: centerY,
+        titleY: stageY(20),
+        meterX: 132,
+        hpY: stageY(68),
+        secondaryY: stageY(97),
+        groundY: stageY(229),
+        rearGroundY: stageY(201),
+        bossGroundY: stageY(235),
+        groundBand: {
+          top: 175,
+          bottom: 245
+        }
+      });
+      function stageCover(w, h) {
+        var scale = Math.max(width / w, height / h);
+        var cropW = width / scale,
+          cropH = height / scale;
+        return {
+          x: (w - cropW) / 2,
+          y: h - cropH,
+          w: cropW,
+          h: cropH
+        };
+      }
+
+      // Travel and stills sample the same reel with this one vertical aperture.
+      function stageReelCrop(w, h, top, bottom) {
+        var aperture = Math.min(h * (bottom - top), w * height / width);
+        return {
+          y: Math.min(h - aperture, h * top),
+          h: aperture,
+          window: aperture * width / height,
+          drawnWidth: w * height / aperture
+        };
+      }
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/StageTravel.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+  var _createForOfIteratorHelperLoose, cclegacy, tween, Tween;
+  return {
+    setters: [function (module) {
+      _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+      tween = module.tween;
+      Tween = module.Tween;
+    }],
+    execute: function () {
+      cclegacy._RF.push({}, "a6e90FM3YhFRqFXhuxzxd8x", "StageTravel", undefined);
+
+      /** Owns the visible window of a route. Route entries are factories, not nodes. */
+      var StageTravel = exports('StageTravel', /*#__PURE__*/function () {
+        function StageTravel(count, width, direction, mount, initial) {
+          this.visible = new Map();
+          this.camera = {
+            offset: 0
+          };
+          this.finish = void 0;
+          this.count = count;
+          this.width = width;
+          this.direction = direction;
+          this.mount = mount;
+          if (initial) this.visible.set(0, initial);
+        }
+        var _proto = StageTravel.prototype;
+        _proto.update = function update() {
+          var index = this.camera.offset / this.width;
+          var first = Math.floor(index);
+          var last = Math.min(this.count - 1, Math.ceil(index));
+          for (var _iterator = _createForOfIteratorHelperLoose(this.visible), _step; !(_step = _iterator()).done;) {
+            var _step$value = _step.value,
+              _slot = _step$value[0],
+              _node = _step$value[1];
+            if (_slot >= first && _slot <= last) continue;
+            _node.removeFromParent();
+            _node.destroy();
+            this.visible["delete"](_slot);
+          }
+          for (var slot = first; slot <= last; slot++) {
+            var _this$visible$get;
+            var node = (_this$visible$get = this.visible.get(slot)) != null ? _this$visible$get : this.mount(slot);
+            this.visible.set(slot, node);
+            node.setPosition((slot * this.width - this.camera.offset) * this.direction, 0);
+          }
+        };
+        _proto.play = function play(seconds, from, to) {
+          var _this = this;
+          if (from === void 0) {
+            from = 0;
+          }
+          if (to === void 0) {
+            to = (this.count - 1) * this.width;
+          }
+          this.camera.offset = from;
+          this.update();
+          return new Promise(function (resolve) {
+            _this.finish = resolve;
+            tween(_this.camera).to(seconds, {
+              offset: to
+            }, {
+              onUpdate: function onUpdate() {
+                return _this.update();
+              }
+            }).call(function () {
+              _this.update();
+              _this.finish = undefined;
+              resolve();
+            }).start();
+          });
+        };
+        _proto.dispose = function dispose() {
+          var _this$finish;
+          Tween.stopAllByTarget(this.camera);
+          for (var _iterator2 = _createForOfIteratorHelperLoose(this.visible.values()), _step2; !(_step2 = _iterator2()).done;) {
+            var node = _step2.value;
+            node.removeFromParent();
+            node.destroy();
+          }
+          this.visible.clear();
+          (_this$finish = this.finish) == null || _this$finish.call(this);
+          this.finish = undefined;
+        };
+        return StageTravel;
+      }());
       cclegacy._RF.pop();
     }
   };

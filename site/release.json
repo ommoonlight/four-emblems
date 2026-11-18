@@ -1,0 +1,9 @@
+{
+  "version": "20261118-render-foreground",
+  "build": "Cocos Creator 3.8.8 Web Mobile",
+  "stage": [
+    480,
+    270
+  ],
+  "bundleSha256": "c0ab1af06c40484eba8e9d40042b2162a8355e8d8d1d914ea5a21d4d420dc1d5"
+}

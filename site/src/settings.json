@@ -82,7 +82,7 @@
         "designResolution": {
             "width": 480,
             "height": 853.3333,
-            "policy": 2
+            "policy": 4
         },
         "orientation": "auto"
     },

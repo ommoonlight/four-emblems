@@ -11,7 +11,7 @@
  * 3. 入口文件（html/js 清单）走「网络优先」，保证发版后能拿到新版本
  */
 
-const VERSION = 'fe-v3';
+const VERSION = 'fe-20261118-render-foreground';
 const CACHE = `four-emblems-${VERSION}`;
 const IDLE_TIMEOUT = 15000; // 连续 15 秒没有数据才认为卡死
 const RETRIES = 4;
@@ -27,7 +27,7 @@ function isEntry(pathname) {
     pathname.endsWith('/application.js') ||
     pathname.endsWith('/src/settings.json') ||
     pathname.endsWith('/src/import-map.json') ||
-    pathname.endsWith('/style.css')
+    pathname.endsWith('/style.css') || pathname.endsWith('/boot.js') || pathname.endsWith('/config.json') || pathname.endsWith('/bundle.js') || pathname.endsWith('/build-manifest.json') || pathname.endsWith('/release.json')
   );
 }
 
