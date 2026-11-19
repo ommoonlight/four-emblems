@@ -11,8 +11,8 @@
  * 3. 入口文件（html/js 清单）走「网络优先」，保证发版后能拿到新版本
  */
 
-const VERSION = 'fe-20261119-content-queue-1';
-const CACHE = `four-emblems-${VERSION}`;
+const VERSION = 'fe-20261119-content-queue-2';
+const CACHE = `four-emblems-assets-${VERSION.replace(/^fe-/, '')}`;
 const IDLE_TIMEOUT = 15000; // 连续 15 秒没有数据才认为卡死
 const RETRIES = 4;
 
@@ -27,7 +27,7 @@ function isEntry(pathname) {
     pathname.endsWith('/application.js') ||
     pathname.endsWith('/src/settings.json') ||
     pathname.endsWith('/src/import-map.json') ||
-    pathname.endsWith('/style.css') || pathname.endsWith('/boot.js') || pathname.endsWith('/config.json') || pathname.endsWith('/bundle.js') || pathname.endsWith('/build-manifest.json') || pathname.endsWith('/release.json')
+    pathname.endsWith('/style.css') || pathname.endsWith('/boot.js') || pathname.endsWith('/config.json') || pathname.endsWith('/bundle.js') || pathname.endsWith('/build-manifest.json') || pathname.endsWith('/release.json') || pathname.endsWith('/content-delivery.json')
   );
 }
 
@@ -99,7 +99,7 @@ self.addEventListener('activate', (event) => {
   event.waitUntil(
     (async () => {
       const keys = await caches.keys();
-      await Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k)));
+      await Promise.all(keys.filter((k) => k.startsWith('four-emblems-') && k !== CACHE).map((k) => caches.delete(k)));
       await self.clients.claim();
     })()
   );
