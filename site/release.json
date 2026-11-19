@@ -1,9 +1,9 @@
 {
-  "build": "Cocos Creator 3.8.8 Web Mobile",
+  "version": "20261119-test-levels-2",
   "stage": [
     480,
     270
   ],
-  "version": "20261119-content-queue-2",
-  "bundleSha256": "5da213e6a78670056c754708368615b1001e9c4a394f5f87510f23d78d32d68a"
+  "build": "Cocos Creator 3.8.8 Web Mobile",
+  "bundleSha256": "77f0058f390b6c0d9a36f306021017c5fb8e8cf9e7c6f6c10a7c9fa0ef6a763c"
 }
