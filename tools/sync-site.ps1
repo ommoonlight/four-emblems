@@ -56,6 +56,8 @@ if ($LASTEXITCODE -ne 0) { throw "图片尺寸审查失败，停止发布" }
 Write-Output "正在优化素材（PNG -> WebP）..."
 & $py.Source (Join-Path $PSScriptRoot 'optimize-site.py') --dir $siteDir
 if ($LASTEXITCODE -ne 0) { throw "素材优化失败，退出码 $LASTEXITCODE" }
+& $py.Source (Join-Path $GameRoot 'scripts\content-delivery.py') $siteDir
+if ($LASTEXITCODE -ne 0) { throw 'Content delivery manifest failed' }
 
 Write-Output ""
 $html = Get-Content $indexFile -Raw

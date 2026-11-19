@@ -1,9 +1,9 @@
 {
-  "bundleSha256": "8120366428d7bad16057c0c470ce26f60fa7760bffac7830dce7ca5520c96f75",
   "stage": [
     480,
     270
   ],
+  "version": "20261119-content-queue-1",
   "build": "Cocos Creator 3.8.8 Web Mobile",
-  "version": "20261119-travel-sync-3"
+  "bundleSha256": "a0e6b4cca4980998ceca46f8c3d01780df4d0565a3f88820802eb96c70fc7f1d"
 }
