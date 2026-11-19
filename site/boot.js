@@ -21,6 +21,7 @@
   function showDiag(force) {
     try {
       if (document.getElementById('fe-diag')) return;
+      if (window.__fourEmblemsReady) return;
       if (!force && window.cc && window.cc.director && cc.director.getTotalFrames && cc.director.getTotalFrames() > 10) return;
 
       var probe = document.createElement('canvas');
@@ -137,7 +138,8 @@
 
   // cc 起来之后收起进度条
   var watcher = setInterval(function () {
-    if (window.cc && cc.director && cc.director.getTotalFrames && cc.director.getTotalFrames() > 5) {
+    if (window.__fourEmblemsReady || (window.cc && cc.director && cc.director.getTotalFrames && cc.director.getTotalFrames() > 5)) {
+      document.getElementById('fe-diag')?.remove();
       clearInterval(watcher);
       done();
     }
@@ -148,14 +150,14 @@
   setInterval(function () {
     try {
       var f = window.cc && cc.director && cc.director.getTotalFrames ? cc.director.getTotalFrames() : 0;
-      if (f > 10) return;
+      if (window.__fourEmblemsReady || f > 10) return;
       if (window.__feDiagClosed || document.getElementById('fe-diag')) return;
       if (Date.now() - lastProgressAt > 25000) showDiag(true);
     } catch (e) { /* 忽略 */ }
   }, 5000);
 
   // ---------- 2. 带重试与断流检测的 fetch ----------
-  var CACHE_NAME = 'four-emblems-assets-20261119-test-levels-2';
+  var CACHE_NAME = 'four-emblems-assets-20261119-download-recovery-1';
   var IDLE_TIMEOUT = 15000;   // 连续 15 秒没数据才算断流
   var RETRIES = 5;
   var MAX_BODY = 64 * 1024 * 1024;
@@ -170,52 +172,45 @@
   var nativeFetch = window.fetch ? window.fetch.bind(window) : null;
 
   async function readWithIdle(request) {
-    var ctrl = new AbortController();
-    var timer = null;
-    var arm = function () {
-      if (timer) clearTimeout(timer);
-      timer = setTimeout(function () { ctrl.abort(); }, IDLE_TIMEOUT);
-    };
-    var res;
+    var ctrl = new AbortController(), timer = null, reader = null;
+    var abort = function () { ctrl.abort(); if (reader) reader.cancel().catch(function () {}); };
+    var arm = function () { clearTimeout(timer); timer = setTimeout(abort, IDLE_TIMEOUT); };
+    if (request.signal.aborted) throw new DOMException('Aborted', 'AbortError');
+    request.signal.addEventListener('abort', abort, { once: true });
     try {
       arm();
-      res = await nativeFetch(request, { signal: ctrl.signal, cache: 'no-store', credentials: 'same-origin' });
-    } finally {
-      if (timer) clearTimeout(timer);
-    }
-    if (!res.ok || !res.body) return res;
-
-    var reader = res.body.getReader();
-    var chunks = [];
-    var size = 0;
-    try {
+      var res = await nativeFetch(request, { signal: ctrl.signal, cache: 'no-store', credentials: 'same-origin' });
+      if (!res.ok || !res.body) return res;
+      reader = res.body.getReader();
+      var chunks = [], size = 0;
       for (;;) {
         arm();
         var step = await reader.read();
+        if (ctrl.signal.aborted) throw new DOMException('Aborted', 'AbortError');
         if (step.done) break;
-        if (step.value) { chunks.push(step.value); size += step.value.length; }
-        if (size > MAX_BODY) break;
+        if (step.value) { chunks.push(step.value); size += step.value.length; bump(step.value.length); }
+        if (size > MAX_BODY) throw new Error('Response exceeds startup download limit');
       }
+      var body = new Uint8Array(size), off = 0;
+      for (var i = 0; i < chunks.length; i++) { body.set(chunks[i], off); off += chunks[i].length; }
+      var headers = new Headers(res.headers);
+      headers.delete('content-encoding'); headers.delete('content-length');
+      return new Response(body, { status: res.status, statusText: res.statusText, headers: headers });
     } finally {
-      if (timer) clearTimeout(timer);
+      clearTimeout(timer);
+      request.signal.removeEventListener('abort', abort);
+      if (reader) reader.releaseLock();
     }
-
-    var body = new Uint8Array(size);
-    var off = 0;
-    for (var i = 0; i < chunks.length; i++) { body.set(chunks[i], off); off += chunks[i].length; }
-
-    var headers = new Headers(res.headers);
-    headers.delete('content-encoding');
-    headers.delete('content-length');
-    return new Response(body, { status: res.status, statusText: res.statusText, headers: headers });
   }
 
   async function withRetry(request) {
     var lastErr;
     for (var attempt = 0; attempt < RETRIES; attempt++) {
       try {
+        if (request.signal.aborted) throw new DOMException('Aborted', 'AbortError');
         return await readWithIdle(request);
       } catch (err) {
+        if (request.signal.aborted) throw err;
         lastErr = err;
         if (attempt < RETRIES - 1) await sleep(400 * (attempt + 1));
       }
@@ -223,13 +218,13 @@
     throw lastErr || new Error('fetch failed');
   }
 
-  var releaseReset = (window.caches ? caches.keys().then(function(keys){return Promise.all(keys.filter(function(k){return k.indexOf('four-emblems-')===0 && k!=='four-emblems-assets-20261119-test-levels-2';}).map(function(k){return caches.delete(k);}));}).catch(function(){}) : Promise.resolve());
+  var releaseReset = (window.caches ? caches.keys().then(function(keys){return Promise.all(keys.filter(function(k){return k.indexOf('four-emblems-')===0 && k!=='four-emblems-assets-20261119-download-recovery-1';}).map(function(k){return caches.delete(k);}));}).catch(function(){}) : Promise.resolve());
   var cachePromise = (window.caches && caches.open) ? caches.open(CACHE_NAME).catch(function () { return null; }) : Promise.resolve(null);
 
   window.fetch = async function (input, init) {
     var req;
     try {
-      req = (typeof Request !== 'undefined' && input instanceof Request) ? input : new Request(input, init);
+      req = new Request(input, init);
     } catch (e) {
       return nativeFetch ? nativeFetch(input, init) : Promise.reject(e);
     }
@@ -263,7 +258,7 @@
     if (res.ok && cache && res.body !== null && url.pathname !== '/boot.js') {
       var len = res.headers.get('content-length') | 0;
       bump(len);
-      try { cache.put(req, res.clone()); } catch (e) { /* 忽略 */ }
+      try { cache.put(req, res.clone()).catch(function () {}); } catch (e) { /* 忽略 */ }
     } else if (res.ok) {
       bump(res.headers.get('content-length') | 0);
     }

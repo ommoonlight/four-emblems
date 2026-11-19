@@ -483,7 +483,7 @@
       ]
     },
     "mine": {
-      "bytes": 175112,
+      "bytes": 264652,
       "assets": [
         {
           "name": "bat",
@@ -500,8 +500,8 @@
         {
           "name": "golem",
           "path": "assets/resources/native/07/07dcd9be-38b7-4c8e-bf0b-399a275ca36b.webp",
-          "bytes": 30840,
-          "sha256": "4db82d437312f90fc578ab97c67343ec4e4ecbab436f9d19a09b56c0d284ad52"
+          "bytes": 120380,
+          "sha256": "e827cd9272af998f48865ed243d80d99046dce547bd5ea332c84c83173013c46"
         },
         {
           "name": "map-mine",
@@ -583,7 +583,7 @@
       ]
     },
     "tower": {
-      "bytes": 312242,
+      "bytes": 556436,
       "assets": [
         {
           "name": "dragon",
@@ -594,8 +594,8 @@
         {
           "name": "ghost",
           "path": "assets/resources/native/74/74815c62-e9e8-49b0-aad1-006b71ac4881.webp",
-          "bytes": 24484,
-          "sha256": "e0061c5064bd256336c86a38af1da029d23cd258a59eda295a37d58e3c874e13"
+          "bytes": 82010,
+          "sha256": "0b745d5da25110e7483a00bfa754ad9e19b2b3a645eb1f6192fd199dd8b18920"
         },
         {
           "name": "hero-m",
@@ -606,8 +606,8 @@
         {
           "name": "knight",
           "path": "assets/resources/native/15/158e5a22-d775-4e03-bd2d-459880a75821.webp",
-          "bytes": 14274,
-          "sha256": "dfa5f95860448e52f2fb9bc842604fd9e7eeee0b98d63b3b7f81dd7911f3f458"
+          "bytes": 106878,
+          "sha256": "866d7dd0b8e73ebe2d73cb8ebd045ab9ef0d1c6519057c009ccada417d51598c"
         },
         {
           "name": "lich",
@@ -642,8 +642,8 @@
         {
           "name": "wizard",
           "path": "assets/resources/native/9e/9e7dfaa7-423a-402c-a14d-1d6e542400bf.webp",
-          "bytes": 15332,
-          "sha256": "a833c83c112436e99f3effa86b16e5828c3999c5e5e92a22d6d14490303e02b4"
+          "bytes": 109396,
+          "sha256": "f135c270c7567f4f479283635afc4fbf818f132a80cb0973f13ccbdb960ce9ad"
         }
       ]
     }

@@ -1,9 +1,9 @@
 {
-  "version": "20261119-test-levels-2",
+  "version": "20261119-download-recovery-1",
   "stage": [
     480,
     270
   ],
   "build": "Cocos Creator 3.8.8 Web Mobile",
-  "bundleSha256": "77f0058f390b6c0d9a36f306021017c5fb8e8cf9e7c6f6c10a7c9fa0ef6a763c"
+  "bundleSha256": "1a58eaa07bd686827367bb005ad319142e64ed1c812fc5f82c0fee1007468f32"
 }
