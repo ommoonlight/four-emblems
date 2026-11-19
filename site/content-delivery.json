@@ -157,13 +157,13 @@
       ]
     },
     "tutorial": {
-      "bytes": 127548,
+      "bytes": 211898,
       "assets": [
         {
           "name": "boss",
           "path": "assets/resources/native/0e/0ec78096-a38c-4641-8c07-29566d452be2.webp",
-          "bytes": 18862,
-          "sha256": "5217b6d5f40fccf93f36ce72c56a3ad771f449a134cdeb50fa87d7885200a161"
+          "bytes": 103212,
+          "sha256": "72e8c7331b76b3f93598188634bc139ccd2bf1669ae008bc2d86381a0d5c773b"
         },
         {
           "name": "forest-bug",
@@ -530,13 +530,13 @@
       ]
     },
     "swamp": {
-      "bytes": 245876,
+      "bytes": 301728,
       "assets": [
         {
           "name": "frog",
           "path": "assets/resources/native/10/10f23d81-a2a5-49c6-b4b3-900ba2d094a5.webp",
-          "bytes": 24024,
-          "sha256": "0856a89f54e860dc744b117c1cf2707322cfe72070d2a5136de2f54434728025"
+          "bytes": 79876,
+          "sha256": "540ef296b0d776c0f88a46edfd46fb139a6639a3a468c2e8f146340ae3333256"
         },
         {
           "name": "map-swamp",
@@ -583,13 +583,13 @@
       ]
     },
     "tower": {
-      "bytes": 556436,
+      "bytes": 744052,
       "assets": [
         {
           "name": "dragon",
           "path": "assets/resources/native/28/28a213d2-33ab-4335-a4eb-052711c7c571.webp",
-          "bytes": 40026,
-          "sha256": "a78840eb5ef757c87693bd743a1faa370044c74053cd77831e25623f279947f9"
+          "bytes": 133698,
+          "sha256": "5e46041c3bff5fb26b324001b0997f86fa2e93f210e2f836fbe9d4476e82638e"
         },
         {
           "name": "ghost",
@@ -612,8 +612,8 @@
         {
           "name": "lich",
           "path": "assets/resources/native/49/4996f4b8-117e-48cd-8e42-49dd489b5f95.webp",
-          "bytes": 31540,
-          "sha256": "5e0efe1794c705314ce32975d40b99596c2377f1d848b9ad6ff1c71d48554306"
+          "bytes": 125484,
+          "sha256": "c5ce02ea4332889b76ec6b01673b54256c813cdfdbec670285fdeddedf31e3d1"
         },
         {
           "name": "m",

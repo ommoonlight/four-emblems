@@ -16,3 +16,8 @@ test('startup returns a complete body and does not retain an abort listener on i
  const fetch=startup(async()=>new Response(new Uint8Array([1,2,3]),{headers:{'content-length':'3'}}));
  const c=new AbortController();const response=await fetch('https://test.invalid/texture.webp',{signal:c.signal});c.abort();assert.deepEqual([...new Uint8Array(await response.arrayBuffer())],[1,2,3]);assert.equal(response.headers.get('content-length'),null);
 });
+test('queue-owned streaming bypasses startup buffering and preserves the cancellation signal',async()=>{
+ let request;const fetch=startup(async r=>{request=r;return new Response('ok');});const c=new AbortController();
+ const response=await fetch('https://test.invalid/texture.webp',{signal:c.signal,headers:{'X-Four-Emblems-Prefetch':'1'}});
+ assert.equal(request.headers.get('X-Four-Emblems-Prefetch'),'1');c.abort();assert.equal(request.signal.aborted,true);assert.equal(await response.text(),'ok');
+});

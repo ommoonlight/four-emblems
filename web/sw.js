@@ -11,7 +11,7 @@
  * 3. 入口文件（html/js 清单）走「网络优先」，保证发版后能拿到新版本
  */
 
-const VERSION = 'fe-20261119-download-recovery-1';
+const VERSION = 'fe-20261119-download-recovery-2';
 const CACHE = `four-emblems-assets-${VERSION.replace(/^fe-/, '')}`;
 const IDLE_TIMEOUT = 15000; // 连续 15 秒没有数据才认为卡死
 const RETRIES = 4;
@@ -108,6 +108,8 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   const request = event.request;
   if (request.method !== 'GET') return;
+  // The persistent content queue streams and validates this body, then caches it.
+  if (request.headers.get('X-Four-Emblems-Prefetch') === '1') return;
 
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return; // 放过第三方（analytics 等）

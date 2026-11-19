@@ -7325,7 +7325,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           _this.deliveryManifest = void 0;
           _this.contentReady = false;
           _this.contentLoading = void 0;
-          _this.releaseVersion = '20261119-download-recovery-1';
+          _this.releaseVersion = '20261119-download-recovery-2';
           _this.stageTravel = void 0;
           _this.forestLayout = void 0;
           _this.forestForeground = new WeakMap();
@@ -7629,7 +7629,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         }();
         _proto.downloadContentArt = /*#__PURE__*/function () {
           var _downloadContentArt = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(name, signal, progress) {
-            var check, _response, manifest, asset, response, size, reader, cancel, part;
+            var check, _response, manifest, asset, url, cache, cached, response, size, chunks, reader, cancel, part, bytes, body, offset, _iterator2, _step2, chunk, headers;
             return _regeneratorRuntime().wrap(function _callee2$(_context2) {
               while (1) switch (_context2.prev = _context2.next) {
                 case 0:
@@ -7690,21 +7690,60 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                 case 20:
                   check();
                   progress();
-                  _context2.next = 24;
-                  return fetch(asset.path, {
-                    signal: signal
+                  // Dedicated prefetch streams bypass the two buffering retry layers. The queue
+                  // owns timeout/retry; only a fully validated image is put into the shared cache.
+                  url = new URL(asset.path, location.href).href;
+                  if (!(typeof caches !== 'undefined')) {
+                    _context2.next = 29;
+                    break;
+                  }
+                  _context2.next = 26;
+                  return caches.open('four-emblems-assets-' + this.releaseVersion)["catch"](function () {
+                    return undefined;
                   });
-                case 24:
-                  response = _context2.sent;
+                case 26:
+                  _context2.t0 = _context2.sent;
+                  _context2.next = 30;
+                  break;
+                case 29:
+                  _context2.t0 = undefined;
+                case 30:
+                  cache = _context2.t0;
+                  _context2.next = 33;
+                  return cache == null ? void 0 : cache.match(url)["catch"](function () {
+                    return undefined;
+                  });
+                case 33:
+                  cached = _context2.sent;
+                  if (!(cached != null)) {
+                    _context2.next = 38;
+                    break;
+                  }
+                  _context2.t1 = cached;
+                  _context2.next = 41;
+                  break;
+                case 38:
+                  _context2.next = 40;
+                  return fetch(asset.path, {
+                    signal: signal,
+                    headers: {
+                      'X-Four-Emblems-Prefetch': '1'
+                    }
+                  });
+                case 40:
+                  _context2.t1 = _context2.sent;
+                case 41:
+                  response = _context2.t1;
                   if (response.ok) {
-                    _context2.next = 27;
+                    _context2.next = 44;
                     break;
                   }
                   throw Error('Texture download HTTP ' + response.status + ': ' + name);
-                case 27:
+                case 44:
                   size = 0;
+                  chunks = [];
                   if (!response.body) {
-                    _context2.next = 49;
+                    _context2.next = 68;
                     break;
                   }
                   reader = response.body.getReader();
@@ -7714,49 +7753,82 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   signal.addEventListener('abort', cancel, {
                     once: true
                   });
-                  _context2.prev = 32;
-                case 33:
-                  _context2.next = 35;
+                  _context2.prev = 50;
+                case 51:
+                  _context2.next = 53;
                   return reader.read();
-                case 35:
+                case 53:
                   part = _context2.sent;
                   check();
                   if (!part.done) {
-                    _context2.next = 39;
+                    _context2.next = 57;
                     break;
                   }
-                  return _context2.abrupt("break", 43);
-                case 39:
+                  return _context2.abrupt("break", 62);
+                case 57:
                   size += part.value.byteLength;
+                  if (!cached) chunks.push(part.value);
                   progress();
-                case 41:
-                  _context2.next = 33;
+                case 60:
+                  _context2.next = 51;
                   break;
-                case 43:
-                  _context2.prev = 43;
+                case 62:
+                  _context2.prev = 62;
                   signal.removeEventListener('abort', cancel);
                   reader.releaseLock();
-                  return _context2.finish(43);
-                case 47:
-                  _context2.next = 52;
+                  return _context2.finish(62);
+                case 66:
+                  _context2.next = 75;
                   break;
-                case 49:
-                  _context2.next = 51;
+                case 68:
+                  _context2.t2 = Uint8Array;
+                  _context2.next = 71;
                   return response.arrayBuffer();
-                case 51:
-                  size = _context2.sent.byteLength;
-                case 52:
+                case 71:
+                  _context2.t3 = _context2.sent;
+                  bytes = new _context2.t2(_context2.t3);
+                  size = bytes.byteLength;
+                  if (!cached) chunks.push(bytes);
+                case 75:
                   check();
                   if (!(size !== asset.bytes)) {
-                    _context2.next = 55;
+                    _context2.next = 81;
                     break;
                   }
+                  if (!cached) {
+                    _context2.next = 80;
+                    break;
+                  }
+                  _context2.next = 80;
+                  return cache == null ? void 0 : cache["delete"](url);
+                case 80:
                   throw Error('Incomplete texture: ' + name);
-                case 55:
+                case 81:
+                  if (!(cache && !cached)) {
+                    _context2.next = 91;
+                    break;
+                  }
+                  body = new Uint8Array(size);
+                  offset = 0;
+                  for (_iterator2 = _createForOfIteratorHelperLoose(chunks); !(_step2 = _iterator2()).done;) {
+                    chunk = _step2.value;
+                    body.set(chunk, offset);
+                    offset += chunk.byteLength;
+                  }
+                  headers = new Headers(response.headers);
+                  headers["delete"]('content-encoding');
+                  headers["delete"]('content-length');
+                  _context2.next = 90;
+                  return cache.put(url, new Response(body, {
+                    headers: headers
+                  }))["catch"](function () {});
+                case 90:
+                  check();
+                case 91:
                 case "end":
                   return _context2.stop();
               }
-            }, _callee2, this, [[32,, 43, 47]]);
+            }, _callee2, this, [[50,, 62, 66]]);
           }));
           function downloadContentArt(_x, _x2, _x3) {
             return _downloadContentArt.apply(this, arguments);
@@ -7954,7 +8026,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         _proto.prepareStageReels = function prepareStageReels() {
           var _this5 = this;
           var _loop = function _loop() {
-            var id = _step2.value;
+            var id = _step3.value;
             var source = _this5.textures.get(id + '-reel');
             if (!source) return 1; // continue
             var _source$rect = source.rect,
@@ -7979,7 +8051,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               return _this5.stageFrames.set('stage-' + id + '-' + i, _this5.frameCrop(source, stop * (w - window), y, window, aperture));
             });
           };
-          for (var _iterator2 = _createForOfIteratorHelperLoose(dungeonIds), _step2; !(_step2 = _iterator2()).done;) {
+          for (var _iterator3 = _createForOfIteratorHelperLoose(dungeonIds), _step3; !(_step3 = _iterator3()).done;) {
             if (_loop()) continue;
           }
         };
@@ -8015,8 +8087,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                 return material.destroy();
               });
             }
-            for (var _iterator3 = _createForOfIteratorHelperLoose(forestLabLayers), _step3; !(_step3 = _iterator3()).done;) {
-              var layer = _step3.value;
+            for (var _iterator4 = _createForOfIteratorHelperLoose(forestLabLayers), _step4; !(_step4 = _iterator4()).done;) {
+              var layer = _step4.value;
               var image = this.textures.get(layer);
               var _this$forestLayout$bo = this.forestLayout.bounds[layer.slice('forest-lab-'.length)],
                 drawnWidth = _this$forestLayout$bo[0],
@@ -8058,9 +8130,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         _proto.positionForestLab = function positionForestLab(view, progress) {
           // Ground and foreground share a world strip; shorter strips travel
           // proportionally less. The exact same camera position is used on arrival.
-          for (var _iterator4 = _createForOfIteratorHelperLoose(view.children.concat((_this$forestForegroun = (_this$forestForegroun2 = this.forestForeground.get(view)) == null ? void 0 : _this$forestForegroun2.layer) != null ? _this$forestForegroun : [])), _step4; !(_step4 = _iterator4()).done;) {
+          for (var _iterator5 = _createForOfIteratorHelperLoose(view.children.concat((_this$forestForegroun = (_this$forestForegroun2 = this.forestForeground.get(view)) == null ? void 0 : _this$forestForegroun2.layer) != null ? _this$forestForegroun : [])), _step5; !(_step5 = _iterator5()).done;) {
             var _this$forestForegroun, _this$forestForegroun2;
-            var layer = _step4.value;
+            var layer = _step5.value;
             if (!layer.name.startsWith('forest-lab-')) continue;
             var overflow = layer.getComponent(UITransform).width - stageGrid.width;
             layer.setPosition((.5 - progress) * overflow, 0);
@@ -8102,10 +8174,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           if (w < 2 || h < 2) return; // Transparent placeholder layers have props but no surface.
           var first = Math.max(0, Math.floor((left - x) / w)),
             last = Math.ceil((left + stageGrid.width - x) / w);
-          for (var _iterator5 = _createForOfIteratorHelperLoose(layer.children.filter(function (n) {
+          for (var _iterator6 = _createForOfIteratorHelperLoose(layer.children.filter(function (n) {
               return n.name.startsWith('地表底图 ');
-            })), _step5; !(_step5 = _iterator5()).done;) {
-            var _node = _step5.value;
+            })), _step6; !(_step6 = _iterator6()).done;) {
+            var _node = _step6.value;
             var _slot = Number(_node.name.slice(5));
             if (_slot < first || _slot > last) {
               _node.removeFromParent();
@@ -8154,10 +8226,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             if (flip) prop.setScale(-1, 1, 1);
             _this7.applyForestDepth(prop, layer.name, frame);
             var nextSibling = prop.getSiblingIndex();
-            for (var _iterator6 = _createForOfIteratorHelperLoose(active), _step6; !(_step6 = _iterator6()).done;) {
-              var _step6$value = _step6.value,
-                key = _step6$value[0],
-                other = _step6$value[1];
+            for (var _iterator7 = _createForOfIteratorHelperLoose(active), _step7; !(_step7 = _iterator7()).done;) {
+              var _step7$value = _step7.value,
+                key = _step7$value[0],
+                other = _step7$value[1];
               if (key > index) nextSibling = Math.min(nextSibling, other.getSiblingIndex());
             }
             prop.setSiblingIndex(nextSibling);
@@ -8895,8 +8967,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               });
               return;
             }
-            for (var _iterator7 = _createForOfIteratorHelperLoose(starts), _step7; !(_step7 = _iterator7()).done;) {
-              var _index = _step7.value;
+            for (var _iterator8 = _createForOfIteratorHelperLoose(starts), _step8; !(_step8 = _iterator8()).done;) {
+              var _index = _step8.value;
               this.board[_index] = minerEmblem;
               deliverySpawns.add(_index);
             }
@@ -8948,8 +9020,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.status.node.active = false;
           this.setBattleStatus(this.trial ? testMechanism(this.trial.id).description : '敌人正在入场');
           this.showParty();
-          for (var _iterator8 = _createForOfIteratorHelperLoose(this.heroes.values()), _step8; !(_step8 = _iterator8()).done;) {
-            var hero = _step8.value;
+          for (var _iterator9 = _createForOfIteratorHelperLoose(this.heroes.values()), _step9; !(_step9 = _iterator9()).done;) {
+            var hero = _step9.value;
             hero.setParent(this.stageContent, true);
           }
           this.enemyMeters = [];
@@ -9001,8 +9073,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           tileClip.addComponent(Mask).type = Mask.Type.GRAPHICS_RECT;
           this.tileLayer = this.box('棋子层', 0, 111.5, 428, 483, undefined, tileClip);
           if (((_this$trial9 = this.trial) == null ? void 0 : _this$trial9.id) === 'terrain') {
-            for (var _iterator9 = _createForOfIteratorHelperLoose(this.terrain.keys()), _step9; !(_step9 = _iterator9()).done;) {
-              var _index2 = _step9.value;
+            for (var _iterator10 = _createForOfIteratorHelperLoose(this.terrain.keys()), _step10; !(_step10 = _iterator10()).done;) {
+              var _index2 = _step10.value;
               this.drawTerrainCell(_index2);
             }
           }
@@ -9025,16 +9097,16 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           (_carried5 = carried) == null || (_carried5 = _carried5.ids) == null || _carried5.forEach(function (id, index) {
             if (!deliverySpawns.has(index) && playableCell(_this18.board[index])) _this18.restoredTileIds.set(_this18.tiles[index], id);
           });
-          for (var _iterator10 = _createForOfIteratorHelperLoose(this.rescueCells), _step10; !(_step10 = _iterator10()).done;) {
-            var _index4 = _step10.value;
+          for (var _iterator11 = _createForOfIteratorHelperLoose(this.rescueCells), _step11; !(_step11 = _iterator11()).done;) {
+            var _index4 = _step11.value;
             var _point = this.cells[_index4].position;
             var marker = this.outline(this.label('净', _point.x + 18, _point.y + 18, 20, 15));
             marker.node.name = '营救标记 ' + _index4;
           }
           if ((activeRoom == null ? void 0 : activeRoom.kind) === 'battle' && activeRoom.delivery) {
-            for (var _iterator11 = _createForOfIteratorHelperLoose(activeRoom.delivery.exits), _step11; !(_step11 = _iterator11()).done;) {
+            for (var _iterator12 = _createForOfIteratorHelperLoose(activeRoom.delivery.exits), _step12; !(_step12 = _iterator12()).done;) {
               var _this$trial10;
-              var _index3 = _step11.value;
+              var _index3 = _step12.value;
               var point = this.cells[_index3].position;
               var vertical = ((_this$trial10 = this.trial) == null ? void 0 : _this$trial10.id) === 'delivery',
                 _x5 = vertical ? point.x : _index3 % 7 === 0 ? -218 : 218,
@@ -9608,14 +9680,14 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         _proto.drop = /*#__PURE__*/function () {
           var _drop = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee7(motion, removed, plan) {
             var _this27 = this;
-            var previous, next, _iterator12, _step12, _index5, slides, animate, _iterator13, _step13, _step13$value, from, to, path, _iterator14, _step14, _step14$value, _to, _path, direction, distance, entry, localEntry, position, alpha;
+            var previous, next, _iterator13, _step13, _index5, slides, animate, _iterator14, _step14, _step14$value, from, to, path, _iterator15, _step15, _step15$value, _to, _path, direction, distance, entry, localEntry, position, alpha;
             return _regeneratorRuntime().wrap(function _callee7$(_context7) {
               while (1) switch (_context7.prev = _context7.next) {
                 case 0:
                   previous = this.tiles;
                   next = previous.slice();
-                  for (_iterator12 = _createForOfIteratorHelperLoose(removed); !(_step12 = _iterator12()).done;) {
-                    _index5 = _step12.value;
+                  for (_iterator13 = _createForOfIteratorHelperLoose(removed); !(_step13 = _iterator13()).done;) {
+                    _index5 = _step13.value;
                     previous[_index5].destroy();
                   }
                   slides = [];
@@ -9688,13 +9760,13 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     });
                     slides.push(motion.play(slide));
                   };
-                  for (_iterator13 = _createForOfIteratorHelperLoose(plan.moves); !(_step13 = _iterator13()).done;) {
-                    _step13$value = _step13.value, from = _step13$value.from, to = _step13$value.to, path = _step13$value.path;
+                  for (_iterator14 = _createForOfIteratorHelperLoose(plan.moves); !(_step14 = _iterator14()).done;) {
+                    _step14$value = _step14.value, from = _step14$value.from, to = _step14$value.to, path = _step14$value.path;
                     next[to] = previous[from];
                     animate(next[to], path);
                   }
-                  for (_iterator14 = _createForOfIteratorHelperLoose(plan.spawns); !(_step14 = _iterator14()).done;) {
-                    _step14$value = _step14.value, _to = _step14$value.to, _path = _step14$value.path, direction = _step14$value.direction, distance = _step14$value.distance;
+                  for (_iterator15 = _createForOfIteratorHelperLoose(plan.spawns); !(_step15 = _iterator15()).done;) {
+                    _step15$value = _step15.value, _to = _step15$value.to, _path = _step15$value.path, direction = _step15$value.direction, distance = _step15$value.distance;
                     entry = this.cells[_path[0]].position;
                     localEntry = this.blockedBoardCells.size && _path[0] >= cols;
                     position = localEntry ? entry.clone() : new Vec3(entry.x - direction.x * 61 * distance, entry.y + direction.y * 61 * distance, 0);
@@ -9962,7 +10034,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         _proto.stage4ASwap = /*#__PURE__*/function () {
           var _stage4ASwap = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee16(a, b, preview) {
             var _this32 = this;
-            var live, core, session, motion, current, _this$boardFx2, swapView, waves, tail, releaseFocus, attackTier, returnAnimation, clearFocus, cursor, parents, view, enqueue, publish, ticket, _reason, _live$journal$at, result, _iterator17, _step17, wave, _iterator19, _step19, _play, _i6, _tail, play, _iterator18, _step18, event, snapshot;
+            var live, core, session, motion, current, _this$boardFx2, swapView, waves, tail, releaseFocus, attackTier, returnAnimation, clearFocus, cursor, parents, view, enqueue, publish, ticket, _reason, _live$journal$at, result, _iterator18, _step18, wave, _iterator20, _step20, _play, _i6, _tail, play, _iterator19, _step19, event, snapshot;
             return _regeneratorRuntime().wrap(function _callee16$(_context16) {
               while (1) switch (_context16.prev = _context16.next) {
                 case 0:
@@ -10059,7 +10131,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     live.journal = snap.events;
                     var _loop5 = function _loop5() {
                       var _event$sourceId, _event$targetId;
-                      var event = _step15.value;
+                      var event = _step16.value;
                       parents.set(event.eventId, event.parentEventId);
                       live.published.push({
                         id: event.eventId,
@@ -10074,18 +10146,18 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                         }));
                         var clear = view('board', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee9() {
                           var _this32$boardFx, _this32$boardFx2;
-                          var oldNodes, _iterator16, _step16, _step16$value, _index6, tile;
+                          var oldNodes, _iterator17, _step17, _step17$value, _index6, tile;
                           return _regeneratorRuntime().wrap(function _callee9$(_context9) {
                             while (1) switch (_context9.prev = _context9.next) {
                               case 0:
                                 oldNodes = _this32.tiles.slice();
-                                _iterator16 = _createForOfIteratorHelperLoose(facts.generated);
+                                _iterator17 = _createForOfIteratorHelperLoose(facts.generated);
                               case 2:
-                                if ((_step16 = _iterator16()).done) {
+                                if ((_step17 = _iterator17()).done) {
                                   _context9.next = 9;
                                   break;
                                 }
-                                _step16$value = _step16.value, _index6 = _step16$value.index, tile = _step16$value.tile;
+                                _step17$value = _step17.value, _index6 = _step17$value.index, tile = _step17$value.tile;
                                 if (!(live.nodes.get(tile.id) !== oldNodes[_index6])) {
                                   _context9.next = 6;
                                   break;
@@ -10379,7 +10451,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                         })));
                       }
                     };
-                    for (var _iterator15 = _createForOfIteratorHelperLoose(snap.events.slice(cursor)), _step15; !(_step15 = _iterator15()).done;) {
+                    for (var _iterator16 = _createForOfIteratorHelperLoose(snap.events.slice(cursor)), _step16; !(_step16 = _iterator16()).done;) {
                       _loop5();
                     }
                     cursor = snap.events.length;
@@ -10440,23 +10512,23 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   }
                   return _context16.abrupt("return");
                 case 48:
-                  _iterator17 = _createForOfIteratorHelperLoose(waves.values());
+                  _iterator18 = _createForOfIteratorHelperLoose(waves.values());
                 case 49:
-                  if ((_step17 = _iterator17()).done) {
+                  if ((_step18 = _iterator18()).done) {
                     _context16.next = 66;
                     break;
                   }
-                  wave = _step17.value;
+                  wave = _step18.value;
                   _context16.next = 53;
                   return wave.clear();
                 case 53:
-                  _iterator19 = _createForOfIteratorHelperLoose(wave.actors);
+                  _iterator20 = _createForOfIteratorHelperLoose(wave.actors);
                 case 54:
-                  if ((_step19 = _iterator19()).done) {
+                  if ((_step20 = _iterator20()).done) {
                     _context16.next = 60;
                     break;
                   }
-                  _play = _step19.value;
+                  _play = _step20.value;
                   _context16.next = 58;
                   return _play();
                 case 58:
@@ -10495,8 +10567,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   }
                   return _context16.abrupt("return");
                 case 76:
-                  for (_iterator18 = _createForOfIteratorHelperLoose(live.journal); !(_step18 = _iterator18()).done;) {
-                    event = _step18.value;
+                  for (_iterator19 = _createForOfIteratorHelperLoose(live.journal); !(_step19 = _iterator19()).done;) {
+                    event = _step19.value;
                     core.acknowledgePresentation(event.eventId);
                   }
                   snapshot = core.snapshot();
@@ -10788,7 +10860,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   this.waveAudit = [];
                   _loop6 = /*#__PURE__*/_regeneratorRuntime().mark(function _loop6() {
                     var _this34$boardFx, _this34$boardFx2, _this34$trial;
-                    var plan, removed, _iterator20, _step20, _step20$value, _index9, tier, _iterator21, _step21, _this34$ui$getChildBy, _index10, _iterator22, _step22, group, active, advanced, refill;
+                    var plan, removed, _iterator21, _step21, _step21$value, _index9, tier, _iterator22, _step22, _this34$ui$getChildBy, _index10, _iterator23, _step23, group, active, advanced, refill;
                     return _regeneratorRuntime().wrap(function _loop6$(_context18) {
                       while (1) switch (_context18.prev = _context18.next) {
                         case 0:
@@ -10802,12 +10874,12 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                             _this34.audio.playChain(wave);
                             if (plan.anchors.size) _this34.audio.playTrial('create');
                           } else _this34.audio.play('clear');
-                          for (_iterator20 = _createForOfIteratorHelperLoose(plan.created); !(_step20 = _iterator20()).done;) {
-                            _step20$value = _step20.value, _index9 = _step20$value[0], tier = _step20$value[1];
+                          for (_iterator21 = _createForOfIteratorHelperLoose(plan.created); !(_step21 = _iterator21()).done;) {
+                            _step21$value = _step21.value, _index9 = _step21$value[0], tier = _step21$value[1];
                             _this34.markCharged(_index9, tier);
                           }
-                          for (_iterator21 = _createForOfIteratorHelperLoose(removed); !(_step21 = _iterator21()).done;) {
-                            _index10 = _step21.value;
+                          for (_iterator22 = _createForOfIteratorHelperLoose(removed); !(_step22 = _iterator22()).done;) {
+                            _index10 = _step22.value;
                             if (_this34.rescueCells["delete"](_index10)) (_this34$ui$getChildBy = _this34.ui.getChildByName('营救标记 ' + _index10)) == null || _this34$ui$getChildBy.destroy();
                           }
                           _context18.next = 9;
@@ -10872,13 +10944,13 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                             v: void 0
                           });
                         case 28:
-                          _iterator22 = _createForOfIteratorHelperLoose(plan.components);
+                          _iterator23 = _createForOfIteratorHelperLoose(plan.components);
                         case 29:
-                          if ((_step22 = _iterator22()).done) {
+                          if ((_step23 = _iterator23()).done) {
                             _context18.next = 41;
                             break;
                           }
-                          group = _step22.value;
+                          group = _step23.value;
                           active = group.filter(function (index) {
                             return plan.charged.has(index);
                           });
@@ -11163,7 +11235,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         };
         _proto.dropCharge = /*#__PURE__*/function () {
           var _dropCharge = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee19(motion, tile) {
-            var children, _iterator23, _step23, _step23$value, child, home;
+            var children, _iterator24, _step24, _step24$value, child, home;
             return _regeneratorRuntime().wrap(function _callee19$(_context20) {
               while (1) switch (_context20.prev = _context20.next) {
                 case 0:
@@ -11179,8 +11251,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                       home: child.position.clone()
                     };
                   });
-                  for (_iterator23 = _createForOfIteratorHelperLoose(children); !(_step23 = _iterator23()).done;) {
-                    _step23$value = _step23.value, child = _step23$value.child, home = _step23$value.home;
+                  for (_iterator24 = _createForOfIteratorHelperLoose(children); !(_step24 = _iterator24()).done;) {
+                    _step24$value = _step24.value, child = _step24$value.child, home = _step24$value.home;
                     child.setPosition(home.x, home.y + 13, home.z);
                     child.setScale(.86, 1.10, 1);
                   }
@@ -11213,7 +11285,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         _proto.flashTiles = /*#__PURE__*/function () {
           var _flashTiles = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee20(motion, indices, removed, propagated, columns) {
             var _this35 = this;
-            var cleared, moves, palette, points, lanes, effects, _loop7, _iterator24, _step24;
+            var cleared, moves, palette, points, lanes, effects, _loop7, _iterator25, _step25;
             return _regeneratorRuntime().wrap(function _callee20$(_context22) {
               while (1) switch (_context22.prev = _context22.next) {
                 case 0:
@@ -11273,7 +11345,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     return _regeneratorRuntime().wrap(function _loop7$(_context21) {
                       while (1) switch (_context21.prev = _context21.next) {
                         case 0:
-                          col = _step24.value;
+                          col = _step25.value;
                           first = _this35.cells[col].position;
                           last = _this35.cells[_this35.cells.length - cols + col].position;
                           beam = _this35.box('整列传导', first.x, (first.y + last.y) / 2, 17, first.y - last.y + 45, '#ffcf68');
@@ -11291,9 +11363,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                       }
                     }, _loop7);
                   });
-                  _iterator24 = _createForOfIteratorHelperLoose(columns);
+                  _iterator25 = _createForOfIteratorHelperLoose(columns);
                 case 13:
-                  if ((_step24 = _iterator24()).done) {
+                  if ((_step25 = _iterator25()).done) {
                     _context22.next = 17;
                     break;
                   }
@@ -11401,9 +11473,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             void motion.play(animation);
           };
           var peers = activeHeroes.length || activeEnemies.length ? Array.from(this.heroes.values()).concat(this.enemyNodes) : [];
-          for (var _iterator25 = _createForOfIteratorHelperLoose(peers), _step25; !(_step25 = _iterator25()).done;) {
+          for (var _iterator26 = _createForOfIteratorHelperLoose(peers), _step26; !(_step26 = _iterator26()).done;) {
             var _peer$getComponent;
-            var peer = _step25.value;
+            var peer = _step26.value;
             if (!(peer != null && peer.isValid) || actors.includes(peer)) continue;
             var alpha = (_peer$getComponent = peer.getComponent(UIOpacity)) != null ? _peer$getComponent : peer.addComponent(UIOpacity);
             faded.push({
@@ -11417,8 +11489,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             bright.add(this.healthBar.root);
             if (this.showsGuard) bright.add(this.guardBar.root);
           }
-          for (var _iterator26 = _createForOfIteratorHelperLoose(activeEnemies), _step26; !(_step26 = _iterator26()).done;) {
-            var actor = _step26.value;
+          for (var _iterator27 = _createForOfIteratorHelperLoose(activeEnemies), _step27; !(_step27 = _iterator27()).done;) {
+            var actor = _step27.value;
             var _index11 = this.enemyNodes.indexOf(actor);
             if (this.enemyMeters[_index11]) bright.add(this.enemyMeters[_index11].root);
           }
@@ -11426,8 +11498,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var mutedHUD = [];
           var hudColors = [];
           var meters = [this.healthBar, this.guardBar].concat(this.enemyMeters);
-          for (var _iterator27 = _createForOfIteratorHelperLoose(meters), _step27; !(_step27 = _iterator27()).done;) {
-            var meter = _step27.value;
+          for (var _iterator28 = _createForOfIteratorHelperLoose(meters), _step28; !(_step28 = _iterator28()).done;) {
+            var meter = _step28.value;
             if (!(meter != null && meter.root.activeInHierarchy) || bright.has(meter.root)) continue;
             var cover = this.box('非参与状态遮蔽', 0, 0, meter.width + 6, 25, undefined, meter.root);
             var _ink = cover.addComponent(Graphics);
@@ -11448,9 +11520,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               if (component instanceof Label) component.outlineColor = new Color(8, 11, 19, color.a);
             }
           }
-          for (var _iterator28 = _createForOfIteratorHelperLoose(this.ui.children), _step28; !(_step28 = _iterator28()).done;) {
+          for (var _iterator29 = _createForOfIteratorHelperLoose(this.ui.children), _step29; !(_step29 = _iterator29()).done;) {
             var _this$stageContent, _node$getComponent2;
-            var node = _step28.value;
+            var node = _step29.value;
             if (node === ((_this$stageContent = this.stageContent) == null ? void 0 : _this$stageContent.parent) || node === this.popupLayer || bright.has(node) || node.position.y < 175) continue;
             if (Array.from(this.heroes.values()).includes(node)) continue;
             var _alpha = (_node$getComponent2 = node.getComponent(UIOpacity)) != null ? _node$getComponent2 : node.addComponent(UIOpacity);
@@ -11460,8 +11532,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             });
             fade(_alpha, _alpha.opacity * .4);
           }
-          for (var _iterator29 = _createForOfIteratorHelperLoose(actors), _step29; !(_step29 = _iterator29()).done;) {
-            var _actor = _step29.value;
+          for (var _iterator30 = _createForOfIteratorHelperLoose(actors), _step30; !(_step30 = _iterator30()).done;) {
+            var _actor = _step30.value;
             _actor.setSiblingIndex(layer.children.length - 1);
           }
           return function () {
@@ -11503,7 +11575,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         _proto.applySkill = /*#__PURE__*/function () {
           var _applySkill = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee22(motion, type, length, chain, charged, advanced) {
             var _this37 = this;
-            var owner, tutorial, attack, skill, actor, _actor$position$x, _actor$position$y, restore, _actor$position, cap, beforeDP, before, gained, unit, position, color, followup, tags, primary, splash, targets, hit, _iterator30, _step30, target, _enemy, home, restoreFocus, _ref28, _enemy$getChildByName3, _enemy$getChildByName4, origin, _enemy$getChildByName, _enemy$getChildByName2, _actor$getChildByName3, _actor$getChildByName4, _origin, enemyGround, footOffset, arrived, immune, raw, stun, layers, afterArmor, damage, fallen, number, armor, effects, flinch, _enemy$getComponent;
+            var owner, tutorial, attack, skill, actor, _actor$position$x, _actor$position$y, restore, _actor$position, cap, beforeDP, before, gained, unit, position, color, followup, tags, primary, splash, targets, hit, _iterator31, _step31, target, _enemy, home, restoreFocus, _ref28, _enemy$getChildByName3, _enemy$getChildByName4, origin, _enemy$getChildByName, _enemy$getChildByName2, _actor$getChildByName3, _actor$getChildByName4, _origin, enemyGround, footOffset, arrived, immune, raw, stun, layers, afterArmor, damage, fallen, number, armor, effects, flinch, _enemy$getComponent;
             return _regeneratorRuntime().wrap(function _callee22$(_context24) {
               while (1) switch (_context24.prev = _context24.next) {
                 case 0:
@@ -11625,13 +11697,13 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     _context24.next = 119;
                     break;
                   }
-                  _iterator30 = _createForOfIteratorHelperLoose(targets);
+                  _iterator31 = _createForOfIteratorHelperLoose(targets);
                 case 59:
-                  if ((_step30 = _iterator30()).done) {
+                  if ((_step31 = _iterator31()).done) {
                     _context24.next = 116;
                     break;
                   }
-                  target = _step30.value;
+                  target = _step31.value;
                   if (!(this.enemies[target] <= 0)) {
                     _context24.next = 63;
                     break;
@@ -12057,7 +12129,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         }();
         _proto.enemyTurn = /*#__PURE__*/function () {
           var _enemyTurn = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee27(motion) {
-            var _index12, _this$enemyOpportunit, actor, count, _planEnemyAction, move, target, recipients, restore, healed, recipient, hit, _move$hits, _struck$position, home, struck, center, base, damage, absorbed, lost, effects, _iterator31, _step31, hero, amount;
+            var _index12, _this$enemyOpportunit, actor, count, _planEnemyAction, move, target, recipients, restore, healed, recipient, hit, _move$hits, _struck$position, home, struck, center, base, damage, absorbed, lost, effects, _iterator32, _step32, hero, amount;
             return _regeneratorRuntime().wrap(function _callee27$(_context29) {
               while (1) switch (_context29.prev = _context29.next) {
                 case 0:
@@ -12215,8 +12287,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   effects = [];
                   if (lost) effects.push(this.combatPopup(motion, '−' + lost, center.x, center.y, move.magic ? '#8b92f6' : '#ffffff'));
                   if (absorbed) effects.push(this.combatPopup(motion, '−' + absorbed + ' DP', center.x + 22, center.y + 18, '#90aec4'));
-                  for (_iterator31 = _createForOfIteratorHelperLoose(this.heroes.values()); !(_step31 = _iterator31()).done;) {
-                    hero = _step31.value;
+                  for (_iterator32 = _createForOfIteratorHelperLoose(this.heroes.values()); !(_step32 = _iterator32()).done;) {
+                    hero = _step32.value;
                     effects.push(this.hitReaction(motion, hero));
                   }
                   if (!move.projectile) effects.push(motion.play(tween(actor).to(motion.duration(.17), {
@@ -12362,11 +12434,11 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             };
           });
           this.stopHint = function () {
-            for (var _iterator32 = _createForOfIteratorHelperLoose(entries), _step32; !(_step32 = _iterator32()).done;) {
-              var _step32$value = _step32.value,
-                node = _step32$value.node,
-                home = _step32$value.home,
-                animation = _step32$value.animation;
+            for (var _iterator33 = _createForOfIteratorHelperLoose(entries), _step33; !(_step33 = _iterator33()).done;) {
+              var _step33$value = _step33.value,
+                node = _step33$value.node,
+                home = _step33$value.home,
+                animation = _step33$value.animation;
               animation.stop();
               if (node.isValid) node.setPosition(home);
             }
@@ -12435,8 +12507,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               return a.x - b.x;
             });
             var left = -240;
-            for (var _iterator34 = _createForOfIteratorHelperLoose(openings), _step34; !(_step34 = _iterator34()).done;) {
-              var hole = _step34.value;
+            for (var _iterator35 = _createForOfIteratorHelperLoose(openings), _step35; !(_step35 = _iterator35()).done;) {
+              var hole = _step35.value;
               graphics.rect(left, low, hole.x - hole.w / 2 - left, high - low);
               left = hole.x + hole.w / 2;
             }
@@ -12449,8 +12521,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           if (mode !== 'swap') {
             graphics.strokeColor = Color.fromHEX(new Color(), '#ffe49d');
             graphics.lineWidth = 3;
-            for (var _iterator33 = _createForOfIteratorHelperLoose(holes), _step33; !(_step33 = _iterator33()).done;) {
-              var h = _step33.value;
+            for (var _iterator34 = _createForOfIteratorHelperLoose(holes), _step34; !(_step34 = _iterator34()).done;) {
+              var h = _step34.value;
               graphics.roundRect(h.x - h.w / 2, h.y - h.h / 2, h.w, h.h, 8);
             }
             graphics.stroke();
@@ -13096,11 +13168,11 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }).sort(function (a, b) {
             return Number(a.front) - Number(b.front);
           });
-          for (var _iterator35 = _createForOfIteratorHelperLoose(slots), _step35; !(_step35 = _iterator35()).done;) {
-            var _step35$value = _step35.value,
-              id = _step35$value.id,
-              _x57 = _step35$value.x,
-              front = _step35$value.front;
+          for (var _iterator36 = _createForOfIteratorHelperLoose(slots), _step36; !(_step36 = _iterator36()).done;) {
+            var _step36$value = _step36.value,
+              id = _step36$value.id,
+              _x57 = _step36$value.x,
+              front = _step36$value.front;
             var _ground2 = front ? stageGrid.groundY : stageGrid.rearGroundY;
             var art = 'hero-' + id;
             var y = this.portraitY(art, _ground2, size);
@@ -13109,8 +13181,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             this.art(art, 0, 0, size, size, actor);
             this.heroes.set(id, actor);
           }
-          for (var _iterator36 = _createForOfIteratorHelperLoose(this.ui.children.slice()), _step36; !(_step36 = _iterator36()).done;) {
-            var backdrop = _step36.value;
+          for (var _iterator37 = _createForOfIteratorHelperLoose(this.ui.children.slice()), _step37; !(_step37 = _iterator37()).done;) {
+            var backdrop = _step37.value;
             if (backdrop.getChildByName('forest-lab-front')) this.liftForestForeground(backdrop, this.ui);
           }
         };
@@ -13199,8 +13271,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           if (this.mechanismAudit.length > 256) this.mechanismAudit.shift();
         };
         _proto.drawRock = function drawRock(node, layers) {
-          for (var _iterator37 = _createForOfIteratorHelperLoose(node.children.slice()), _step37; !(_step37 = _iterator37()).done;) {
-            var child = _step37.value;
+          for (var _iterator38 = _createForOfIteratorHelperLoose(node.children.slice()), _step38; !(_step38 = _iterator38()).done;) {
+            var child = _step38.value;
             child.removeFromParent();
             child.destroy();
           }
@@ -13278,7 +13350,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               _this$trial16,
               _this50 = this,
               _this$trial17;
-            var root, room, _this$boardFx4, _this$dungeon10, result, played, _iterator38, _step38, _index13, _this$dungeon11, _result, effects, _played, _iterator39, _step39, node;
+            var root, room, _this$boardFx4, _this$dungeon10, result, played, _iterator39, _step39, _index13, _this$dungeon11, _result, effects, _played, _iterator40, _step40, node;
             return _regeneratorRuntime().wrap(function _callee33$(_context35) {
               while (1) switch (_context35.prev = _context35.next) {
                 case 0:
@@ -13320,8 +13392,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   return _context35.abrupt("return", false);
                 case 11:
                   this.rocks = result.next;
-                  for (_iterator38 = _createForOfIteratorHelperLoose(result.hits); !(_step38 = _iterator38()).done;) {
-                    _index13 = _step38.value;
+                  for (_iterator39 = _createForOfIteratorHelperLoose(result.hits); !(_step39 = _iterator39()).done;) {
+                    _index13 = _step39.value;
                     if (this.rocks.has(_index13)) this.drawRock(this.tiles[_index13], this.rocks.get(_index13));else {
                       plan.removed.add(_index13);
                       this.tiles[_index13].active = false;
@@ -13358,8 +13430,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   }));
                 case 22:
                   _played = _context35.sent;
-                  for (_iterator39 = _createForOfIteratorHelperLoose(effects); !(_step39 = _iterator39()).done;) {
-                    node = _step39.value;
+                  for (_iterator40 = _createForOfIteratorHelperLoose(effects); !(_step40 = _iterator40()).done;) {
+                    node = _step40.value;
                     if (node.isValid) {
                       node.removeFromParent();
                       node.destroy();
@@ -13607,7 +13679,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var _releaseMiners = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee36(motion) {
             var _this$dungeon12,
               _this53 = this;
-            var room, _this$dungeon13, _this$trial18, exits, _iterator40, _step40, _index14, played, _iterator41, _step41, _index15, removed, refill;
+            var room, _this$dungeon13, _this$trial18, exits, _iterator41, _step41, _index14, played, _iterator42, _step42, _index15, removed, refill;
             return _regeneratorRuntime().wrap(function _callee36$(_context38) {
               while (1) switch (_context38.prev = _context38.next) {
                 case 0:
@@ -13629,8 +13701,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   }
                   return _context38.abrupt("return");
                 case 7:
-                  for (_iterator40 = _createForOfIteratorHelperLoose(exits); !(_step40 = _iterator40()).done;) {
-                    _index14 = _step40.value;
+                  for (_iterator41 = _createForOfIteratorHelperLoose(exits); !(_step41 = _iterator41()).done;) {
+                    _index14 = _step41.value;
                     this.deliveryEvents.push({
                       type: 'MINER_EXIT_STARTED',
                       index: _index14,
@@ -13668,8 +13740,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   }
                   return _context38.abrupt("return");
                 case 13:
-                  for (_iterator41 = _createForOfIteratorHelperLoose(exits); !(_step41 = _iterator41()).done;) {
-                    _index15 = _step41.value;
+                  for (_iterator42 = _createForOfIteratorHelperLoose(exits); !(_step42 = _iterator42()).done;) {
+                    _index15 = _step42.value;
                     this.rescuedMiners++;
                     this.refreshTestObjective();
                     this.deliveryEvents.push({
@@ -13703,7 +13775,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         _proto.retireRoomTokens = /*#__PURE__*/function () {
           var _retireRoomTokens = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee37(motion, token) {
             var _this54 = this;
-            var indices, next, faded, _iterator42, _step42, _index16, old, tile;
+            var indices, next, faded, _iterator43, _step43, _index16, old, tile;
             return _regeneratorRuntime().wrap(function _callee37$(_context39) {
               while (1) switch (_context39.prev = _context39.next) {
                 case 0:
@@ -13744,8 +13816,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   return _context39.abrupt("return", false);
                 case 12:
                   this.board = next;
-                  for (_iterator42 = _createForOfIteratorHelperLoose(indices); !(_step42 = _iterator42()).done;) {
-                    _index16 = _step42.value;
+                  for (_iterator43 = _createForOfIteratorHelperLoose(indices); !(_step43 = _iterator43()).done;) {
+                    _index16 = _step43.value;
                     old = this.tiles[_index16];
                     old.removeFromParent();
                     old.destroy();
@@ -14162,7 +14234,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var caption = (_root$getChildByName = root.getChildByName('第一章 · 苔石边境')) == null ? void 0 : _root$getChildByName.getComponent(Label);
           var _loop9 = function _loop9() {
             var _this60$hunt;
-            var id = _step43.value;
+            var id = _step44.value;
             var pt = at(_this60.mapLabelPoint(id));
             var ready = unlocked(id, _this60.cleared);
             var dx = 0,
@@ -14273,7 +14345,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             settlement == null || settlement.on(Node.EventType.TOUCH_END, visit);
             if (id === 'village') villageArt == null || villageArt.on(Node.EventType.TOUCH_END, visit);
           };
-          for (var _iterator43 = _createForOfIteratorHelperLoose(locations), _step43; !(_step43 = _iterator43()).done;) {
+          for (var _iterator44 = _createForOfIteratorHelperLoose(locations), _step44; !(_step44 = _iterator44()).done;) {
             _loop9();
           }
           token == null || token.setSiblingIndex(this.ui.children.length - 1);
@@ -14566,9 +14638,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           if (incoming != null && incoming.length) this.encounterTravelAudit = encounter;
           var draw = function draw(progress) {
             drawBackground(progress);
-            for (var _iterator44 = _createForOfIteratorHelperLoose(poses), _step44; !(_step44 = _iterator44()).done;) {
+            for (var _iterator45 = _createForOfIteratorHelperLoose(poses), _step45; !(_step45 = _iterator45()).done;) {
               var _pose$portrait;
-              var pose = _step44.value;
+              var pose = _step45.value;
               if (!pose.hero.isValid) throw Error('Travel actor destroyed');
               var value = travelPose(clock.elapsed, pose.index);
               pose.hero.setPosition(pose.home.x + (progress === 1 ? 0 : value.x), pose.home.y + (progress === 1 ? 0 : value.y), pose.home.z);
@@ -14601,9 +14673,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               root.off(Node.EventType.NODE_DESTROYED, onDestroy);
               audit.status = played ? 'completed' : 'cancelled';
               audit.reason = reason;
-              for (var _iterator45 = _createForOfIteratorHelperLoose(poses), _step45; !(_step45 = _iterator45()).done;) {
+              for (var _iterator46 = _createForOfIteratorHelperLoose(poses), _step46; !(_step46 = _iterator46()).done;) {
                 var _pose$portrait2;
-                var pose = _step45.value;
+                var pose = _step46.value;
                 if (pose.hero.isValid) pose.hero.setPosition(pose.home);
                 if ((_pose$portrait2 = pose.portrait) != null && _pose$portrait2.isValid && pose.bounds && pose.anchor && pose.position) {
                   pose.bounds.setAnchorPoint(pose.anchor);
