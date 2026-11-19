@@ -2246,17 +2246,29 @@ System.register("chunks:///_virtual/BattleMotion.ts", ['./rollupPluginModLoBabel
         function BattleMotion() {
           this.pending = new Map();
           this.paused = false;
+          this.cancelListeners = new Set();
           this.idleWaiters = new Set();
           this.cancelled = false;
           this.reduced = typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
         }
         var _proto = BattleMotion.prototype;
-        _proto.whenIdle = function whenIdle() {
+        _proto.onCancel = function onCancel(listener) {
           var _this = this;
+          if (this.cancelled) {
+            listener();
+            return function () {};
+          }
+          this.cancelListeners.add(listener);
+          return function () {
+            _this.cancelListeners["delete"](listener);
+          };
+        };
+        _proto.whenIdle = function whenIdle() {
+          var _this2 = this;
           if (this.cancelled) return Promise.resolve(false);
           if (!this.pending.size) return Promise.resolve(true);
           return new Promise(function (resolve) {
-            return _this.idleWaiters.add(resolve);
+            return _this2.idleWaiters.add(resolve);
           });
         };
         _proto.releaseIdle = function releaseIdle(ok) {
@@ -2270,16 +2282,16 @@ System.register("chunks:///_virtual/BattleMotion.ts", ['./rollupPluginModLoBabel
           return this.reduced ? Math.min(seconds, .001) : seconds;
         };
         _proto.play = function play(motion) {
-          var _this2 = this;
+          var _this3 = this;
           if (this.cancelled || this.pending.has(motion)) return Promise.resolve(false);
           return new Promise(function (resolve) {
-            _this2.pending.set(motion, resolve);
+            _this3.pending.set(motion, resolve);
             motion.call(function () {
-              if (_this2.cancelled || !_this2.pending["delete"](motion)) return;
+              if (_this3.cancelled || !_this3.pending["delete"](motion)) return;
               resolve(true);
-              _this2.releaseIdle(true);
+              _this3.releaseIdle(true);
             }).start();
-            if (_this2.paused) motion.pause();
+            if (_this3.paused) motion.pause();
           });
         }
 
@@ -2313,9 +2325,19 @@ System.register("chunks:///_virtual/BattleMotion.ts", ['./rollupPluginModLoBabel
             return interrupted.push([motion, resolve]);
           });
           this.pending.clear();
+          var listeners = Array.from(this.cancelListeners);
+          this.cancelListeners.clear();
+          for (var _i = 0, _listeners = listeners; _i < _listeners.length; _i++) {
+            var listener = _listeners[_i];
+            try {
+              listener();
+            } catch (error) {
+              console.warn('Presentation cancellation cleanup failed', error);
+            }
+          }
           this.releaseIdle(false);
-          for (var _i = 0, _interrupted = interrupted; _i < _interrupted.length; _i++) {
-            var _interrupted$_i = _interrupted[_i],
+          for (var _i2 = 0, _interrupted = interrupted; _i2 < _interrupted.length; _i2++) {
+            var _interrupted$_i = _interrupted[_i2],
               motion = _interrupted$_i[0],
               resolve = _interrupted$_i[1];
             motion.stop();
@@ -2323,6 +2345,11 @@ System.register("chunks:///_virtual/BattleMotion.ts", ['./rollupPluginModLoBabel
           }
         };
         _createClass(BattleMotion, [{
+          key: "isPaused",
+          get: function get() {
+            return this.paused;
+          }
+        }, {
           key: "pendingCount",
           get: function get() {
             return this.pending.size;
@@ -6633,8 +6660,8 @@ System.register("chunks:///_virtual/FormalSaveGate.ts", ['./rollupPluginModLoBab
   };
 });
 
-System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './EnemySkills.ts', './BoardMechanics.ts', './ActorArt.ts', './Inventory.ts', './GameAudio.ts', './DungeonDirector.ts', './Chapter.ts', './CombatTags.ts', './mine-recovery.ts', './FormalSaveGate.ts', './battle-core.ts', './potion-bridge.ts', './formal-rules.ts', './cocos-board-adapter.ts', './Board.ts', './BattleMotion.ts', './CombatSceneLab.ts', './BattleRules.ts', './MineTrial.ts', './TemplateBoardFx.ts', './StageTravel.ts', './StageLayout.ts', './BuffView.ts', './TownRules.ts'], function (exports) {
-  var _inheritsLoose, _createForOfIteratorHelperLoose, _construct, _extends, _asyncToGenerator, _regeneratorRuntime, _createClass, cclegacy, _decorator, Node, UITransform, Graphics, Color, Label, Sprite, SpriteFrame, Rect, Size, Mask, Material, Vec4, view, tween, Vec3, UIOpacity, Tween, Component, resources, JsonAsset, EffectAsset, Font, sys, profiler, Texture2D, planEnemyAction, validateDelivery, deliveryStarts, minerEmblem, deliveryAdvanceScore, identityPreservingRecovery, minersAtExits, retireMinerBoard, shockTarget, actorArt, portraitBottomPadding, enemyPortraitSize, portraitFootprint, Inventory, heroes, equipment, resourceNames, GameAudio, DungeonDirector, locations, dungeonIds, enemy, worldPoints, tutorialRoute, dungeonRewardMultiplier, dungeons, unlocked, locationNames, makeRoute, drawUpgrades, encounter, roomRewards, battleCoinReward, worldRoute, worldTrack, partyFormation, readMineRecovery, planMineRest, planMineFormalClose, planMineTestClose, planMineLegacyVictory, planMinePotion, planMineFirstVictory, planMineChest, FormalSaveGate, createBattleCore, createPotionBridge, setupFormalRoom, IsolatedBoardSession, validExchange, legalMove, matches, newBoard, opening, cols, adjacent, planWave, planRefill, mineGravity, BattleMotion, openCombatSceneLab, newOathState, oathArmorLayers, rosterEmblems, oathDamage, selectTargets, planOathSkill, endOathRound, oathEnemyPower, applyBattleCry, skillOwner, mineTrialTitle, mechanismPage, testMechanisms, mineTrialRandom, makeMineTrial, mineTestEncounter, TemplateBoardFx, StageTravel, stageCover, stageGrid, stageX, stageReelCrop, BuffView, restoreTown, exitBlessing, newTownProgress, claimAltar;
+System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './TravelClock.ts', './EnemySkills.ts', './BoardMechanics.ts', './ActorArt.ts', './Inventory.ts', './GameAudio.ts', './DungeonDirector.ts', './Chapter.ts', './CombatTags.ts', './mine-recovery.ts', './FormalSaveGate.ts', './battle-core.ts', './potion-bridge.ts', './formal-rules.ts', './cocos-board-adapter.ts', './Board.ts', './BattleMotion.ts', './CombatSceneLab.ts', './BattleRules.ts', './MineTrial.ts', './TemplateBoardFx.ts', './StageTravel.ts', './StageLayout.ts', './BuffView.ts', './TownRules.ts'], function (exports) {
+  var _inheritsLoose, _createForOfIteratorHelperLoose, _construct, _extends, _asyncToGenerator, _regeneratorRuntime, _createClass, cclegacy, _decorator, Node, UITransform, Graphics, Color, Label, Sprite, SpriteFrame, Rect, Size, Mask, Material, Vec4, view, tween, Vec3, UIOpacity, Tween, Component, resources, JsonAsset, EffectAsset, Font, sys, profiler, Texture2D, TravelClock, travelPose, planEnemyAction, validateDelivery, deliveryStarts, minerEmblem, deliveryAdvanceScore, identityPreservingRecovery, minersAtExits, retireMinerBoard, shockTarget, actorArt, portraitBottomPadding, enemyPortraitSize, portraitFootprint, Inventory, heroes, equipment, resourceNames, GameAudio, DungeonDirector, locations, dungeonIds, enemy, worldPoints, tutorialRoute, dungeonRewardMultiplier, dungeons, unlocked, locationNames, makeRoute, drawUpgrades, encounter, roomRewards, battleCoinReward, worldRoute, worldTrack, partyFormation, readMineRecovery, planMineRest, planMineFormalClose, planMineTestClose, planMineLegacyVictory, planMinePotion, planMineFirstVictory, planMineChest, FormalSaveGate, createBattleCore, createPotionBridge, setupFormalRoom, IsolatedBoardSession, validExchange, legalMove, matches, newBoard, opening, cols, adjacent, planWave, planRefill, mineGravity, BattleMotion, openCombatSceneLab, newOathState, oathArmorLayers, rosterEmblems, oathDamage, selectTargets, planOathSkill, endOathRound, oathEnemyPower, applyBattleCry, skillOwner, mineTrialTitle, mechanismPage, testMechanisms, mineTrialRandom, makeMineTrial, mineTestEncounter, TemplateBoardFx, StageTravel, stageCover, stageGrid, stageX, stageReelCrop, BuffView, restoreTown, exitBlessing, newTownProgress, claimAltar;
   return {
     setters: [function (module) {
       _inheritsLoose = module.inheritsLoose;
@@ -6672,6 +6699,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
       sys = module.sys;
       profiler = module.profiler;
       Texture2D = module.Texture2D;
+    }, function (module) {
+      TravelClock = module.TravelClock;
+      travelPose = module.travelPose;
     }, function (module) {
       planEnemyAction = module.planEnemyAction;
     }, function (module) {
@@ -6869,7 +6899,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           _this.allArt = [];
           _this.contentReady = false;
           _this.contentLoading = void 0;
-          _this.releaseVersion = '20261119-enemy-actions-2';
+          _this.releaseVersion = '20261119-travel-sync-3';
           _this.stageTravel = void 0;
           _this.forestLayout = void 0;
           _this.forestForeground = new WeakMap();
@@ -6968,6 +6998,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           _this.potion = 1;
           _this.status = void 0;
           _this.pageMotions = new Set();
+          _this.activeTravelCancel = void 0;
+          _this.travelSerial = 0;
+          _this.travelAudit = [];
           _this.recoveryPlaying = false;
           _this.actorStates = new WeakMap();
           _this.popupLayer = void 0;
@@ -8193,12 +8226,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.guideHand = undefined;
           this.battleModal = undefined;
           var room = (_this$dungeon5 = this.dungeon) == null ? void 0 : _this$dungeon5.room;
-          var encounters = (room == null ? void 0 : room.kind) === 'battle' ? room.encounters : undefined;
-          var defaults = this.phase === 'wolves' ? [enemy('灰狼', 'wolf', 72, 3), enemy('林狼', 'forest-wolf', 72, 3)] : [enemy('裂印巨狼', 'boss', 100, 7)];
-          this.foes = this.enemies.map(function (hp, i) {
-            var _ref5, _encounters$i;
-            return (_ref5 = (_encounters$i = encounters == null ? void 0 : encounters[i]) != null ? _encounters$i : defaults[i]) != null ? _ref5 : enemy('裂印兽', 'boar', hp, 10);
-          });
+          this.foes = this.resolveBattleFoes(room, this.enemies, this.phase);
           var stageTitle = this.trial ? mineTrialTitle : this.phase === 'wolves' || this.phase === 'lessonBoss' ? '苔石森林 · 序章' : {
             forest: '苔石森林',
             mine: '废弃矿坑',
@@ -8270,9 +8298,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.lock = this.box('棋盘锁定', 0, -111.5, 428, 495, '#19172963');
           this.lockText = this.outline(this.label('敌人入场', 0, -209, 300, 17, this.lock));
           this.buildTiles();
-          carried == null || carried.charged.forEach(function (_ref6) {
-            var index = _ref6[0],
-              tier = _ref6[1];
+          carried == null || carried.charged.forEach(function (_ref5) {
+            var index = _ref5[0],
+              tier = _ref5[1];
             if (!deliverySpawns.has(index)) _this18.markCharged(index, tier);
           });
           carried == null || (_carried$ids = carried.ids) == null || _carried$ids.forEach(function (id, index) {
@@ -8930,9 +8958,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                 var b = _arr2[_i4];
                 if (b >= _this29.board.length || !adjacent(a, b)) return 0; // continue
                 var next = _this29.board.slice();
-                var _ref7 = [next[b], next[a]];
-                next[a] = _ref7[0];
-                next[b] = _ref7[1];
+                var _ref6 = [next[b], next[a]];
+                next[a] = _ref6[0];
+                next[b] = _ref6[1];
                 var groups = matches(next);
                 if (!groups.length) return 0; // continue
                 var score = groups.reduce(function (sum, group) {
@@ -9169,12 +9197,12 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   // Core facts are submitted independently. Presentation replays their causal waves.
                   swapView = Promise.all([this.moveTile(motion, this.tiles[a], b, preview ? .06 : .12), this.moveTile(motion, this.tiles[b], a, preview ? .06 : .12)]).then(function () {
                     if (!current()) return;
-                    var _ref8 = [_this32.tiles[b], _this32.tiles[a]];
-                    _this32.tiles[a] = _ref8[0];
-                    _this32.tiles[b] = _ref8[1];
-                    var _ref9 = [_this32.board[b], _this32.board[a]];
-                    _this32.board[a] = _ref9[0];
-                    _this32.board[b] = _ref9[1];
+                    var _ref7 = [_this32.tiles[b], _this32.tiles[a]];
+                    _this32.tiles[a] = _ref7[0];
+                    _this32.tiles[b] = _ref7[1];
+                    var _ref8 = [_this32.board[b], _this32.board[a]];
+                    _this32.board[a] = _ref8[0];
+                    _this32.board[b] = _ref8[1];
                   });
                   waves = new Map();
                   tail = [];
@@ -9272,11 +9300,11 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                                 _this32.audio.playChain(facts.wave - 1);
                                 if (facts.generated.length) _this32.audio.playTrial('create');
                                 _context7.next = 13;
-                                return Promise.all([_this32.flashTiles(motion, matched, removed, false)].concat(facts.generated.map(function (_ref12) {
-                                  var index = _ref12.index;
+                                return Promise.all([_this32.flashTiles(motion, matched, removed, false)].concat(facts.generated.map(function (_ref11) {
+                                  var index = _ref11.index;
                                   return _this32.dropCharge(motion, oldNodes[index]);
-                                }), [(_this32$boardFx = _this32.boardFx) == null ? void 0 : _this32$boardFx.combo(motion, facts.wave, new Vec3(0, 80, 0)), (_this32$boardFx2 = _this32.boardFx) == null ? void 0 : _this32$boardFx2.chargeReady(motion, facts.generated.map(function (_ref13) {
-                                  var index = _ref13.index;
+                                }), [(_this32$boardFx = _this32.boardFx) == null ? void 0 : _this32$boardFx.combo(motion, facts.wave, new Vec3(0, 80, 0)), (_this32$boardFx2 = _this32.boardFx) == null ? void 0 : _this32$boardFx2.chargeReady(motion, facts.generated.map(function (_ref12) {
+                                  var index = _ref12.index;
                                   return {
                                     position: _this32.cells[index].position
                                   };
@@ -9311,8 +9339,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                                 return _context8.abrupt("return");
                               case 8:
                                 nextNodes = new Map();
-                                frame.board.tiles.forEach(function (_ref15, i) {
-                                  var id = _ref15.id;
+                                frame.board.tiles.forEach(function (_ref14, i) {
+                                  var id = _ref14.id;
                                   var previous = live.nodes.get(id);
                                   if (previous && previous !== _this32.tiles[i]) throw Error('矿轨演出棋子身份不一致');
                                   nextNodes.set(id, _this32.tiles[i]);
@@ -9736,8 +9764,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var board = snapshot.state.board;
           var gate = this.saveGate;
           var raw = gate == null ? void 0 : gate.read();
-          if (((_snapshot$result = snapshot.result) == null ? void 0 : _snapshot$result.outcome) !== 'win' || snapshot.result.roomId !== 'mine:0' || ends.length !== 1 || ends[0].battleId !== snapshot.result.battleId || !settled || settled.sequence >= ends[0].sequence || snapshot.state.producers.length || snapshot.state.partyQueue.length || snapshot.state.delayed.length || snapshot.state.personal.some(function (_ref21) {
-            var queue = _ref21[1];
+          if (((_snapshot$result = snapshot.result) == null ? void 0 : _snapshot$result.outcome) !== 'win' || snapshot.result.roomId !== 'mine:0' || ends.length !== 1 || ends[0].battleId !== snapshot.result.battleId || !settled || settled.sequence >= ends[0].sequence || snapshot.state.producers.length || snapshot.state.partyQueue.length || snapshot.state.delayed.length || snapshot.state.personal.some(function (_ref20) {
+            var queue = _ref20[1];
             return queue.length;
           }) || (_snapshot$state$deriv = snapshot.state.derivation) != null && _snapshot$state$deriv.requests.length || snapshot.events.some(function (e) {
             return live.core.frame(e.eventId);
@@ -9832,7 +9860,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           };
           this.audio.play('victory');
           var reveal = /*#__PURE__*/function () {
-            var _ref22 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee15() {
+            var _ref21 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee15() {
               return _regeneratorRuntime().wrap(function _callee15$(_context15) {
                 while (1) switch (_context15.prev = _context15.next) {
                   case 0:
@@ -9867,7 +9895,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               }, _callee15, null, [[0, 5]]);
             }));
             return function reveal() {
-              return _ref22.apply(this, arguments);
+              return _ref21.apply(this, arguments);
             };
           }();
           void reveal();
@@ -9876,7 +9904,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var _tap = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee16(i, fromAuto, preview) {
             var _this34 = this,
               _room$rescueCells3;
-            var motion, a, _ref23, groups, _this$boardFx3, _ref24, _ref25, _loop5, _ret2, wave, _this$mineRecovery2, _this$dungeon7, _this$trial$random, _this$trial2, order, old, _this$trial3, director, room, rescued, _this$adventure4, _this$lastFallen2, reward, drop, played;
+            var motion, a, _ref22, groups, _this$boardFx3, _ref23, _ref24, _loop5, _ret2, wave, _this$mineRecovery2, _this$dungeon7, _this$trial$random, _this$trial2, order, old, _this$trial3, director, room, rescued, _this$adventure4, _this$lastFallen2, reward, drop, played;
             return _regeneratorRuntime().wrap(function _callee16$(_context17) {
               while (1) switch (_context17.prev = _context17.next) {
                 case 0:
@@ -9917,9 +9945,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   this.battlePhase = 'resolve';
                   this.selected = -1;
                   this.clearGuide();
-                  _ref23 = [this.board[i], this.board[a]];
-                  this.board[a] = _ref23[0];
-                  this.board[i] = _ref23[1];
+                  _ref22 = [this.board[i], this.board[a]];
+                  this.board[a] = _ref22[0];
+                  this.board[i] = _ref22[1];
                   groups = matches(this.board);
                   this.drawBoard();
                   if (!(!preview || groups.length)) {
@@ -9939,9 +9967,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     _context17.next = 39;
                     break;
                   }
-                  _ref24 = [this.board[i], this.board[a]];
-                  this.board[a] = _ref24[0];
-                  this.board[i] = _ref24[1];
+                  _ref23 = [this.board[i], this.board[a]];
+                  this.board[a] = _ref23[0];
+                  this.board[i] = _ref23[1];
                   if (this.boardFx) this.audio.playTrial('invalid');
                   _context17.next = 37;
                   return Promise.all([this.moveTile(motion, this.tiles[a], a, .12), this.moveTile(motion, this.tiles[i], i, .12), (_this$boardFx3 = this.boardFx) == null ? void 0 : _this$boardFx3.reject(motion, [this.cells[a].position, this.cells[i].position])]);
@@ -9949,9 +9977,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   if (!motion.cancelled) this.resumeBattleInput('没有成组，换位已还原');
                   return _context17.abrupt("return");
                 case 39:
-                  _ref25 = [this.tiles[i], this.tiles[a]];
-                  this.tiles[a] = _ref25[0];
-                  this.tiles[i] = _ref25[1];
+                  _ref24 = [this.tiles[i], this.tiles[a]];
+                  this.tiles[a] = _ref24[0];
+                  this.tiles[i] = _ref24[1];
                   if (this.trial) this.trial.moves++;
                   if (this.phase === 'wolves') this.firstSwap = false;
                   this.waveAudit = [];
@@ -10325,9 +10353,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     child.setScale(.86, 1.10, 1);
                   }
                   _context18.next = 6;
-                  return Promise.all(children.map(function (_ref26) {
-                    var child = _ref26.child,
-                      home = _ref26.home;
+                  return Promise.all(children.map(function (_ref25) {
+                    var child = _ref25.child,
+                      home = _ref25.home;
                     return motion.play(tween(child).to(.14, {
                       position: home,
                       scale: new Vec3(1.15, .78, 1)
@@ -10643,7 +10671,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         _proto.applySkill = /*#__PURE__*/function () {
           var _applySkill = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee20(motion, type, length, chain, charged, advanced) {
             var _this37 = this;
-            var owner, tutorial, attack, skill, actor, _actor$position$x, _actor$position$y, restore, _actor$position, cap, beforeDP, before, gained, unit, position, color, followup, tags, primary, splash, targets, hit, _iterator30, _step30, target, _enemy, home, restoreFocus, _ref27, _enemy$getChildByName3, _enemy$getChildByName4, origin, _enemy$getChildByName, _enemy$getChildByName2, _actor$getChildByName3, _actor$getChildByName4, _origin, enemyGround, footOffset, arrived, immune, raw, stun, layers, afterArmor, damage, fallen, number, armor, effects, flinch, _enemy$getComponent;
+            var owner, tutorial, attack, skill, actor, _actor$position$x, _actor$position$y, restore, _actor$position, cap, beforeDP, before, gained, unit, position, color, followup, tags, primary, splash, targets, hit, _iterator30, _step30, target, _enemy, home, restoreFocus, _ref26, _enemy$getChildByName3, _enemy$getChildByName4, origin, _enemy$getChildByName, _enemy$getChildByName2, _actor$getChildByName3, _actor$getChildByName4, _origin, enemyGround, footOffset, arrived, immune, raw, stun, layers, afterArmor, damage, fallen, number, armor, effects, flinch, _enemy$getComponent;
             return _regeneratorRuntime().wrap(function _callee20$(_context22) {
               while (1) switch (_context22.prev = _context22.next) {
                 case 0:
@@ -10838,7 +10866,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   raw = skill.kind === 'attack' ? primary.includes(target) ? skill.damage : splash : followup;
                   stun = skill.kind === 'attack' && skill.stun;
                   layers = this.foes[target].armor;
-                  afterArmor = oathDamage(this.oath, String(target), raw, (_ref27 = type === 'm' ? layers == null ? void 0 : layers.magic : layers == null ? void 0 : layers.physical) != null ? _ref27 : 0, type === 'm');
+                  afterArmor = oathDamage(this.oath, String(target), raw, (_ref26 = type === 'm' ? layers == null ? void 0 : layers.magic : layers == null ? void 0 : layers.physical) != null ? _ref26 : 0, type === 'm');
                   damage = Math.min(this.enemies[target], Math.round(afterArmor * (stun && immune ? 1.25 : 1)));
                   this.enemies[target] -= damage;
                   if (this.enemies[target] > 0 && skill.kind === 'attack') {
@@ -11514,8 +11542,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           entries[0].animation.call(function () {
             _this40.stopHint = undefined;
           });
-          entries.forEach(function (_ref28) {
-            var animation = _ref28.animation;
+          entries.forEach(function (_ref27) {
+            var animation = _ref27.animation;
             return animation.start();
           });
         };
@@ -11819,7 +11847,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   target = base;
                   pulse = 0;
                   rollCounter = /*#__PURE__*/function () {
-                    var _ref29 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee26() {
+                    var _ref28 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee26() {
                       var step;
                       return _regeneratorRuntime().wrap(function _callee26$(_context28) {
                         while (1) switch (_context28.prev = _context28.next) {
@@ -11850,14 +11878,14 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                       }, _callee26);
                     }));
                     return function rollCounter() {
-                      return _ref29.apply(this, arguments);
+                      return _ref28.apply(this, arguments);
                     };
                   }();
                   _context30.prev = 19;
                   _context30.next = 22;
-                  return Promise.all(coins.map(function (_ref30, i) {
-                    var node = _ref30.node,
-                      ground = _ref30.ground;
+                  return Promise.all(coins.map(function (_ref29, i) {
+                    var node = _ref29.node,
+                      ground = _ref29.ground;
                     return motion.play(tween(node).to(.14, {
                       position: new Vec3((ground.x + origin.x) / 2, origin.y + 24 + i % 3 * 4, 0)
                     }, {
@@ -11876,13 +11904,13 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   return _context30.abrupt("return", false);
                 case 24:
                   _context30.next = 26;
-                  return Promise.all(coins.map( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee27(_ref31, i) {
+                  return Promise.all(coins.map( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee27(_ref30, i) {
                     var _rolling;
                     var node, ground, bend, arrived, current;
                     return _regeneratorRuntime().wrap(function _callee27$(_context29) {
                       while (1) switch (_context29.prev = _context29.next) {
                         case 0:
-                          node = _ref31.node, ground = _ref31.ground;
+                          node = _ref30.node, ground = _ref30.ground;
                           bend = (i - (count - 1) / 2) * 12;
                           _context29.next = 4;
                           return motion.play(tween({
@@ -11891,8 +11919,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                             progress: 1
                           }, {
                             easing: 'quadIn',
-                            onUpdate: function onUpdate(_ref33) {
-                              var progress = _ref33.progress;
+                            onUpdate: function onUpdate(_ref32) {
+                              var progress = _ref32.progress;
                               if (!node.isValid) return;
                               var arc = Math.sin(Math.PI * progress);
                               node.setPosition(ground.x + (destination.x - ground.x) * progress + bend * arc, ground.y + (destination.y - ground.y) * progress + (38 + i % 2 * 9) * arc);
@@ -11920,8 +11948,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                           }).to(.12, {
                             scale: 1
                           }, {
-                            onUpdate: function onUpdate(_ref34) {
-                              var scale = _ref34.scale;
+                            onUpdate: function onUpdate(_ref33) {
+                              var scale = _ref33.scale;
                               if (current === pulse && active()) hud.setScale(scale * .5, scale * .5, 1);
                             }
                           }));
@@ -12143,9 +12171,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         };
         _proto.groundShadow = function groundShadow(parent, y, art, width) {
           var _portraitFootprint$ar, _profile$shadowOffset, _profile$shadowOffset2, _profile$shadowScale;
-          var _ref35 = (_portraitFootprint$ar = portraitFootprint[art]) != null ? _portraitFootprint$ar : [.14, .86],
-            left = _ref35[0],
-            right = _ref35[1];
+          var _ref34 = (_portraitFootprint$ar = portraitFootprint[art]) != null ? _portraitFootprint$ar : [.14, .86],
+            left = _ref34[0],
+            right = _ref34[1];
           var profile = actorArt[art];
           var x = ((left + right) * .5 - .5) * width + ((_profile$shadowOffset = profile == null ? void 0 : profile.shadowOffsetX) != null ? _profile$shadowOffset : 0);
           y += (_profile$shadowOffset2 = profile == null ? void 0 : profile.shadowOffsetY) != null ? _profile$shadowOffset2 : 0;
@@ -12156,6 +12184,14 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           g.fillColor = new Color(17, 13, 15, 105);
           g.ellipse(0, 0, radius, height);
           g.fill();
+        };
+        _proto.resolveBattleFoes = function resolveBattleFoes(room, hp, phase) {
+          var encounters = (room == null ? void 0 : room.kind) === 'battle' ? room.encounters : undefined;
+          var defaults = phase === 'wolves' ? [enemy('灰狼', 'wolf', 72, 3), enemy('林狼', 'forest-wolf', 72, 3)] : [enemy('裂印巨狼', 'boss', 100, 7)];
+          return hp.map(function (value, index) {
+            var _ref35, _encounters$index;
+            return (_ref35 = (_encounters$index = encounters == null ? void 0 : encounters[index]) != null ? _encounters$index : defaults[index]) != null ? _ref35 : enemy('裂印兽', 'boar', value, 10);
+          });
         };
         _proto.enemyPlacement = function enemyPlacement(foe, count, index) {
           var _enemyPortraitSize$fo, _enemyPortraitSize$fo2;
@@ -13205,193 +13241,260 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           });
         };
         _proto.walkParty = function walkParty(seconds, views, direction, incoming) {
-          var _sequence$,
+          var _this$activeTravelCan,
+            _root$getChildByName5,
+            _sequence$,
             _sequence$2,
             _this61 = this;
           if (direction === void 0) {
             direction = 1;
           }
+          (_this$activeTravelCan = this.activeTravelCancel) == null || _this$activeTravelCan.call(this);
           var walking = this.newPageMotion();
           seconds = this.travelDuration(seconds);
-          var root = this.ui;
-          var sequence = views != null ? views : [this.dungeonBackdrop()];
-          var backdrop = root.getChildByName(sequence[0]);
-          var movements = [];
-          var fromRoom = /^stage-([a-z]+)-(\d+)$/.exec(sequence[0]);
-          var toRoom = /^stage-([a-z]+)-(\d+)$/.exec((_sequence$ = sequence[1]) != null ? _sequence$ : '');
-          var area = fromRoom == null ? void 0 : fromRoom[1];
-          var reelName = area && area === (toRoom == null ? void 0 : toRoom[1]) ? area + '-reel' : '';
-          var sceneryFrame = this.stageFrames.get(reelName);
-          var reelInfo = area ? this.stageReels.get(area) : undefined;
+          var root = this.ui,
+            sequence = views != null ? views : [this.dungeonBackdrop()];
+          var backdrop = (_root$getChildByName5 = root.getChildByName(sequence[0])) != null ? _root$getChildByName5 : root.getChildByName('行进风景');
+          var audit = {
+            id: ++this.travelSerial,
+            root: root.uuid,
+            status: 'running',
+            frames: 0,
+            seconds: seconds,
+            reason: undefined
+          };
+          this.travelAudit.push(audit);
+          if (this.travelAudit.length > 8) this.travelAudit.shift();
+          var party = Array.from(this.heroes.values());
+          if (!backdrop || party.length !== this.party.length || party.some(function (n) {
+            return !n.isValid || !n.activeInHierarchy || n.parent !== root;
+          })) {
+            audit.status = 'failed';
+            audit.reason = 'missing-travel-view';
+            this.pageMotions["delete"](walking);
+            return Promise.resolve(false);
+          }
           var width = stageGrid.width,
             height = stageGrid.height,
             centerY = stageGrid.centerY;
+          var fromRoom = /^stage-([a-z]+)-(\d+)$/.exec(sequence[0]),
+            toRoom = /^stage-([a-z]+)-(\d+)$/.exec((_sequence$ = sequence[1]) != null ? _sequence$ : '');
+          var area = fromRoom == null ? void 0 : fromRoom[1],
+            reelName = area && area === (toRoom == null ? void 0 : toRoom[1]) ? area + '-reel' : '';
+          var sceneryFrame = this.stageFrames.get(reelName),
+            reelInfo = area ? this.stageReels.get(area) : undefined;
           var labFrom = this.forestLabStop(sequence[0]),
             labTo = this.forestLabStop((_sequence$2 = sequence[1]) != null ? _sequence$2 : '');
-          if (backdrop && labFrom !== undefined && labTo !== undefined) {
+          var drawBackground = function drawBackground(progress) {},
+            distance = width;
+          if (labFrom !== undefined && labTo !== undefined) {
             backdrop.name = '行进风景';
-            var camera = {
-              progress: labFrom
+            distance = Math.abs(labTo - labFrom) * (this.forestLayout.bounds.ground[0] - width);
+            drawBackground = function drawBackground(progress) {
+              return _this61.positionForestLab(backdrop, labFrom + (labTo - labFrom) * progress);
             };
-            movements.push(walking.play(tween(camera).to(seconds, {
-              progress: labTo
-            }, {
-              onUpdate: function onUpdate() {
-                if (backdrop.isValid && _this61.ui === root) _this61.positionForestLab(backdrop, camera.progress);
-              }
-            })).then(function (played) {
-              if (played && backdrop.isValid && _this61.ui === root) _this61.positionForestLab(backdrop, labTo);
-            }));
-          } else if (backdrop && fromRoom && toRoom && sceneryFrame && reelInfo) {
-            var layer = backdrop.getSiblingIndex();
-            var _frame2 = this.box('行进风景', 0, centerY, width, height);
+          } else if (fromRoom && toRoom && sceneryFrame && reelInfo) {
+            var _this$stageTravel3;
+            var layer = backdrop.getSiblingIndex(),
+              _frame2 = this.box('行进风景', 0, centerY, width, height);
             _frame2.addComponent(Mask).type = Mask.Type.GRAPHICS_RECT;
             _frame2.setSiblingIndex(layer);
             backdrop.removeFromParent();
             backdrop.destroy();
-            if (reelName !== 'forest-reel') {
-              var rect = sceneryFrame.rect;
-              var pixelScale = rect.width / reelInfo.width;
-              this.stageTravel = new StageTravel(Math.ceil(reelInfo.width / width), width, 1, function (index) {
-                var start = index * width;
-                var span = Math.min(width, reelInfo.width - start);
-                var chunk = _this61.box(reelName + ' ' + index, 0, 0, width, height, undefined, _frame2);
-                var crop = _this61.frameCrop(sceneryFrame, rect.x + start * pixelScale, rect.y, span * pixelScale, rect.height);
-                _this61.paintFrame(reelName, crop, (span - width) / 2, 0, span, height, chunk);
-                chunk.once(Node.EventType.NODE_DESTROYED, function () {
-                  return crop.destroy();
-                });
-                return chunk;
+            var rect = sceneryFrame.rect,
+              pixelScale = rect.width / reelInfo.width;
+            (_this$stageTravel3 = this.stageTravel) == null || _this$stageTravel3.dispose();
+            var travel = this.stageTravel = new StageTravel(Math.ceil(reelInfo.width / width), width, 1, function (index) {
+              var start = index * width,
+                span = Math.min(width, reelInfo.width - start),
+                chunk = _this61.box(reelName + ' ' + index, 0, 0, width, height, undefined, _frame2);
+              var crop = _this61.frameCrop(sceneryFrame, rect.x + start * pixelScale, rect.y, span * pixelScale, rect.height);
+              _this61.paintFrame(reelName, crop, (span - width) / 2, 0, span, height, chunk);
+              chunk.once(Node.EventType.NODE_DESTROYED, function () {
+                return crop.destroy();
               });
-              var stop = function stop(n) {
-                return reelInfo.stops[Number(n)] * (reelInfo.width - width);
-              };
-              movements.push(this.stageTravel.play(seconds, stop(fromRoom[2]), stop(toRoom[2])));
-            } else {
-              var offset = function offset(n) {
-                return (.5 - reelInfo.stops[Number(n)]) * (reelInfo.width - width);
-              };
-              var reel = this.paintFrame(reelName, sceneryFrame, offset(fromRoom[2]), 0, reelInfo.width, height, _frame2);
-              movements.push(walking.play(tween(reel).to(seconds, {
-                position: new Vec3(offset(toRoom[2]), 0, 0)
-              })).then(function () {}));
-            }
-          } else if (backdrop && sequence.length > 1) {
-            var _layer = backdrop.getSiblingIndex();
-            var viewport = this.box('行进风景', 0, centerY, width, height, undefined, root);
+              return chunk;
+            });
+            var from = reelInfo.stops[Number(fromRoom[2])] * (reelInfo.width - width),
+              to = reelInfo.stops[Number(toRoom[2])] * (reelInfo.width - width);
+            distance = Math.abs(to - from);
+            drawBackground = function drawBackground(progress) {
+              return travel.seek(from + (to - from) * progress);
+            };
+          } else if (sequence.length > 1) {
+            var _this$stageTravel4;
+            var _layer = backdrop.getSiblingIndex(),
+              viewport = this.box('行进风景', 0, centerY, width, height, undefined, root);
             viewport.addComponent(Mask).type = Mask.Type.GRAPHICS_RECT;
             viewport.setSiblingIndex(_layer);
             backdrop.setParent(viewport);
             backdrop.setPosition(0, 0);
-            this.stageTravel = new StageTravel(sequence.length, width, direction, function (index) {
+            (_this$stageTravel4 = this.stageTravel) == null || _this$stageTravel4.dispose();
+            var _travel = this.stageTravel = new StageTravel(sequence.length, width, direction, function (index) {
               return _this61.stageBackdrop(sequence[index], 0, 0, viewport);
             }, backdrop);
-            movements.push(this.stageTravel.play(seconds));
+            distance = (sequence.length - 1) * width;
+            drawBackground = function drawBackground(progress) {
+              return _travel.seek(distance * progress);
+            };
           }
+          var preview;
+          var enemies = [];
           if (incoming != null && incoming.length) {
-            var distance = width;
-            if (labFrom !== undefined && labTo !== undefined) distance = Math.abs(labTo - labFrom) * (this.forestLayout.bounds.ground[0] - width);else if (fromRoom && toRoom && reelInfo) distance = Math.abs(reelInfo.stops[Number(toRoom[2])] - reelInfo.stops[Number(fromRoom[2])]) * (reelInfo.width - width);
-            var preview = this.box('行进遇敌', 0, centerY, width, height, undefined, root);
+            if (incoming.some(function (foe) {
+              return !_this61.textures.has(foe.art);
+            })) {
+              audit.status = 'failed';
+              audit.reason = 'enemy-art-not-ready';
+              this.pageMotions["delete"](walking);
+              return Promise.resolve(false);
+            }
+            preview = this.box('行进遇敌', 0, centerY, width, height, undefined, root);
             preview.addComponent(Mask).type = Mask.Type.GRAPHICS_RECT;
             var front = root.getChildByName('400 森林前景');
             if (front) preview.setSiblingIndex(front.getSiblingIndex());
-            var actors = incoming.map(function (foe, i) {
+            incoming.forEach(function (foe, index) {
               var _actorArt$foe$art3;
-              var _this61$enemyPlacemen = _this61.enemyPlacement(foe, incoming.length, i),
+              var _this61$enemyPlacemen = _this61.enemyPlacement(foe, incoming.length, index),
                 x = _this61$enemyPlacemen.x,
                 y = _this61$enemyPlacemen.y,
                 size = _this61$enemyPlacemen.size,
-                ground = _this61$enemyPlacemen.ground;
-              var node = _this61.box('遇敌预览 ' + i, x + distance, y - centerY, size, size, undefined, preview);
+                ground = _this61$enemyPlacemen.ground,
+                node = _this61.box('遇敌预览 ' + index, x + distance, y - centerY, size, size, undefined, preview);
               _this61.groundShadow(node, ground - y, foe.art, size);
               var portrait = _this61.art(foe.art, 0, 0, size, size, node);
               portrait == null || portrait.setScale(((_actorArt$foe$art3 = actorArt[foe.art]) == null ? void 0 : _actorArt$foe$art3.sourceFacing) === 'left' ? 1 : -1, 1, 1);
-              return {
+              enemies.push({
                 node: node,
                 x: x,
                 y: y - centerY
-              };
+              });
             });
-            var _state = {
-              offset: 0
+          }
+          var poses = party.map(function (hero, index) {
+            var _portrait$angle;
+            var portrait = hero.children.find(function (n) {
+                return n.getComponent(Sprite);
+              }),
+              bounds = portrait == null ? void 0 : portrait.getComponent(UITransform);
+            var anchor = bounds == null ? void 0 : bounds.anchorPoint.clone(),
+              position = portrait == null ? void 0 : portrait.position.clone(),
+              angle = (_portrait$angle = portrait == null ? void 0 : portrait.angle) != null ? _portrait$angle : 0,
+              home = hero.position.clone();
+            if (bounds && portrait) {
+              var _portraitBottomPaddin2;
+              var foot = (_portraitBottomPaddin2 = portraitBottomPadding[portrait.name]) != null ? _portraitBottomPaddin2 : 0;
+              bounds.setAnchorPoint(.5, foot);
+              portrait.setPosition(0, -bounds.height * (.5 - foot), 0);
+            }
+            return {
+              hero: hero,
+              index: index,
+              portrait: portrait,
+              bounds: bounds,
+              anchor: anchor,
+              position: position,
+              angle: angle,
+              home: home
             };
-            var audit = this.encounterTravelAudit = {
+          });
+          var clock = new TravelClock(seconds),
+            encounter = {
               distance: distance,
               seconds: seconds,
               samples: []
             };
-            movements.push(walking.play(tween(_state).to(seconds, {
-              offset: distance
-            }, {
-              onUpdate: function onUpdate() {
-                if (_this61.ui !== root) return;
-                actors.forEach(function (_ref39) {
-                  var node = _ref39.node,
-                    x = _ref39.x,
-                    y = _ref39.y;
-                  if (node.isValid) node.setPosition(x + distance - _state.offset, y);
-                });
-                if (audit.samples.length < 90) audit.samples.push({
-                  time: _state.offset / Math.max(distance, 1) * seconds,
-                  x: actors[0].x + distance - _state.offset
-                });
-              }
-            })).then(function () {}));
-          }
-          var _loop9 = function _loop9() {
-            var _portraitBottomPaddin2, _portrait$name2;
-            var _step41$value = _step41.value,
-              heroIndex = _step41$value[0],
-              hero = _step41$value[1];
-            var home = hero.position.clone();
-            var portrait = hero.children.find(function (n) {
-              return n.getComponent(Sprite);
-            });
-            var bounds = portrait == null ? void 0 : portrait.getComponent(UITransform);
-            var foot = (_portraitBottomPaddin2 = portraitBottomPadding[(_portrait$name2 = portrait == null ? void 0 : portrait.name) != null ? _portrait$name2 : '']) != null ? _portraitBottomPaddin2 : 0;
-            var originalAnchor = bounds == null ? void 0 : bounds.anchorPoint.clone();
-            var originalPosition = portrait == null ? void 0 : portrait.position.clone();
-            if (bounds && portrait) {
-              bounds.setAnchorPoint(.5, foot);
-              portrait.setPosition(0, -bounds.height * (.5 - foot), 0);
+          if (incoming != null && incoming.length) this.encounterTravelAudit = encounter;
+          var draw = function draw(progress) {
+            drawBackground(progress);
+            for (var _iterator41 = _createForOfIteratorHelperLoose(poses), _step41; !(_step41 = _iterator41()).done;) {
+              var _pose$portrait;
+              var pose = _step41.value;
+              if (!pose.hero.isValid) throw Error('Travel actor destroyed');
+              var value = travelPose(clock.elapsed, pose.index);
+              pose.hero.setPosition(pose.home.x + (progress === 1 ? 0 : value.x), pose.home.y + (progress === 1 ? 0 : value.y), pose.home.z);
+              if ((_pose$portrait = pose.portrait) != null && _pose$portrait.isValid) pose.portrait.angle = progress === 1 ? pose.angle : pose.angle + value.angle;
             }
-            movements.push(new Promise(function (resolve) {
-              var steps = Math.max(1, Math.round(seconds * 6));
-              var stride = tween(hero).delay(heroIndex * .035);
-              if (portrait) void walking.play(tween(portrait).repeat(steps, tween(portrait).to(seconds / (steps * 2), {
-                angle: heroIndex % 2 ? 4 : -4
-              }).to(seconds / (steps * 2), {
-                angle: 0
-              })));
-              for (var i = 0; i < steps; i++) {
-                stride.to(seconds / (steps * 2), {
-                  position: new Vec3(home.x + 4 * (1 - i % 2), home.y + 5 + heroIndex % 2 * 2, home.z)
-                }).to(seconds / (steps * 2), {
-                  position: home
-                });
-              }
-              void walking.play(stride).then(function () {
-                if (portrait != null && portrait.isValid && bounds && originalAnchor && originalPosition) {
-                  bounds.setAnchorPoint(originalAnchor);
-                  portrait.setPosition(originalPosition);
-                  portrait.angle = 0;
-                }
-                resolve();
-              });
-            }));
+            for (var _i14 = 0, _enemies = enemies; _i14 < _enemies.length; _i14++) {
+              var _enemies$_i = _enemies[_i14],
+                node = _enemies$_i.node,
+                _x60 = _enemies$_i.x,
+                y = _enemies$_i.y;
+              if (!node.isValid) throw Error('Travel enemy destroyed');
+              node.setPosition(_x60 + distance * (1 - progress), y);
+            }
+            audit.frames++;
+            if (enemies.length && encounter.samples.length < 90) encounter.samples.push({
+              time: clock.elapsed,
+              x: enemies[0].node.position.x
+            });
           };
-          for (var _iterator41 = _createForOfIteratorHelperLoose(Array.from(this.heroes.values()).entries()), _step41; !(_step41 = _iterator41()).done;) {
-            _loop9();
-          }
           var finishWalking = this.audio.beginWalking();
-          root.once(Node.EventType.NODE_DESTROYED, function () {
-            return walking.cancel();
-          });
-          return Promise.all(movements).then(function () {
-            return !walking.cancelled && _this61.ui === root;
-          })["finally"](function () {
-            finishWalking();
-            _this61.pageMotions["delete"](walking);
+          return new Promise(function (resolve) {
+            var settled = false,
+              unsubscribe = function unsubscribe() {};
+            var finish = function finish(played, reason) {
+              var _preview;
+              if (settled) return;
+              settled = true;
+              _this61.unschedule(tick);
+              unsubscribe();
+              root.off(Node.EventType.NODE_DESTROYED, onDestroy);
+              audit.status = played ? 'completed' : 'cancelled';
+              audit.reason = reason;
+              for (var _iterator42 = _createForOfIteratorHelperLoose(poses), _step42; !(_step42 = _iterator42()).done;) {
+                var _pose$portrait2;
+                var pose = _step42.value;
+                if (pose.hero.isValid) pose.hero.setPosition(pose.home);
+                if ((_pose$portrait2 = pose.portrait) != null && _pose$portrait2.isValid && pose.bounds && pose.anchor && pose.position) {
+                  pose.bounds.setAnchorPoint(pose.anchor);
+                  pose.portrait.setPosition(pose.position);
+                  pose.portrait.angle = pose.angle;
+                }
+              }
+              if (!played && (_preview = preview) != null && _preview.isValid) {
+                preview.removeFromParent();
+                preview.destroy();
+              }
+              finishWalking();
+              _this61.pageMotions["delete"](walking);
+              if (_this61.activeTravelCancel === cancel) _this61.activeTravelCancel = undefined;
+              resolve(played);
+            };
+            var cancel = function cancel() {
+                return walking.cancel();
+              },
+              onDestroy = function onDestroy() {
+                return walking.cancel();
+              };
+            var tick = function tick(dt) {
+              if (settled) return;
+              if (_this61.ui !== root || !root.isValid) {
+                finish(false, 'stale-root');
+                return;
+              }
+              if (walking.isPaused || typeof document !== 'undefined' && document.visibilityState === 'hidden') return;
+              try {
+                draw(clock.advance(dt));
+                if (clock.done) finish(true);
+              } catch (error) {
+                audit.reason = String(error);
+                finish(false, 'travel-render-failed');
+                console.warn('Travel presentation failed', error);
+              }
+            };
+            unsubscribe = walking.onCancel(function () {
+              return finish(false, 'cancelled');
+            });
+            root.once(Node.EventType.NODE_DESTROYED, onDestroy);
+            _this61.activeTravelCancel = cancel;
+            try {
+              draw(0);
+              _this61.schedule(tick, 0);
+            } catch (error) {
+              finish(false, 'travel-start-failed');
+              console.warn('Travel presentation failed', error);
+            }
           });
         };
         _proto.curtain = function curtain(opening) {
@@ -13409,13 +13512,13 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             ink.clear();
             ink.fillColor = Color.BLACK;
             var cell = 10;
-            for (var _x60 = 0; _x60 < width; _x60 += cell) {
-              var offset = (opening ? width - _x60 - cell : _x60) / (width - cell);
+            for (var _x61 = 0; _x61 < width; _x61 += cell) {
+              var offset = (opening ? width - _x61 - cell : _x61) / (width - cell);
               var growth = Math.max(0, Math.min(1, (state.progress - offset * .66) / .34));
               var size = cell * (opening ? 1 - growth : growth);
               if (!size) continue;
               for (var y = 0; y < height; y += cell) {
-                var left = _x60 + (cell - size) / 2;
+                var left = _x61 + (cell - size) / 2;
                 var bottom = y + (cell - size) / 2;
                 ink.rect(left - width / 2, bottom - height / 2, size, size);
               }
@@ -13465,8 +13568,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             var index = _this63.party.indexOf(selected);
             _this63.roster(_this63.party[(index + offset + _this63.party.length) % _this63.party.length], back);
           };
-          var _loop10 = function _loop10() {
-            var side = _arr7[_i14];
+          var _loop9 = function _loop9() {
+            var side = _arr7[_i15];
             var arrow = _this63.box(side < 0 ? '上一位角色' : '下一位角色', side * 205, 267, 44, 54);
             var frame = _this63.textures.get('trial-ui-back');
             var fit = frame ? Math.min(34 / frame.originalSize.width, 42 / frame.originalSize.height) : 1;
@@ -13476,8 +13579,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               return cycle(side);
             });
           };
-          for (var _i14 = 0, _arr7 = [-1, 1]; _i14 < _arr7.length; _i14++) {
-            _loop10();
+          for (var _i15 = 0, _arr7 = [-1, 1]; _i15 < _arr7.length; _i15++) {
+            _loop9();
           }
           var slots = [{
             id: 'weapon',
@@ -13504,8 +13607,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             x: 133,
             y: 242
           }];
-          var _loop11 = function _loop11() {
-            var slot = _slots[_i15];
+          var _loop10 = function _loop10() {
+            var slot = _slots[_i16];
             var item = equipment.find(function (entry) {
               return entry.id === _this63.inventory.slots[selected + ':' + slot.id];
             });
@@ -13528,8 +13631,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               if (compatible) _this63.gearActions(compatible.id, false, selected, back);else _this63.popup('没有可装配物品', 0, 108);
             });
           };
-          for (var _i15 = 0, _slots = slots; _i15 < _slots.length; _i15++) {
-            _loop11();
+          for (var _i16 = 0, _slots = slots; _i16 < _slots.length; _i16++) {
+            _loop10();
           }
           this.box('背包底板', 0, -106, 430, 447, '#263931');
           this.label('背包', 0, 91, 400, 23).isBold = true;
@@ -13548,7 +13651,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               item: item
             };
           }));
-          var _loop12 = function _loop12() {
+          var _loop11 = function _loop11() {
             var content = bag[_index15];
             var x = (_index15 % 4 - 1.5) * 102,
               y = 28 - Math.floor(_index15 / 4) * 108;
@@ -13574,7 +13677,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             });
           };
           for (var _index15 = 0; _index15 < 12; _index15++) {
-            if (_loop12()) continue;
+            if (_loop11()) continue;
           }
           this.button('返回地图', -380, back, 0, 300);
         };
@@ -13623,9 +13726,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.box('物品操作卡', 0, -75, 394, 320, '#2b4037', overlay);
           this.label(title, 0, 47, 340, 25, overlay).isBold = true;
           this.label(detail, 0, 4, 345, 16, overlay);
-          actions.forEach(function (_ref40, index) {
-            var label = _ref40[0],
-              perform = _ref40[1];
+          actions.forEach(function (_ref39, index) {
+            var label = _ref39[0],
+              perform = _ref39[1];
             var button = _this65.button(label, -62 - index * 62, function () {
               if (_this65.ui !== root || !overlay.isValid) return;
               if (!perform()) {
@@ -13721,8 +13824,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             }
           }];
           var root = this.ui;
-          var _loop13 = function _loop13() {
-            var site = _destinations[_i16];
+          var _loop12 = function _loop12() {
+            var site = _destinations[_i17];
             var gate = site.art === 'gate';
             var width = gate ? 180 : 151;
             var height = gate ? 64 : 112;
@@ -13740,8 +13843,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               site.action();
             });
           };
-          for (var _i16 = 0, _destinations = destinations; _i16 < _destinations.length; _i16++) {
-            _loop13();
+          for (var _i17 = 0, _destinations = destinations; _i17 < _destinations.length; _i17++) {
+            _loop12();
           }
         };
         _proto.taskMark = function taskMark(parent, x, y, text) {
@@ -14079,9 +14182,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           if (page === void 0) {
             page = 0;
           }
-          var materials = Object.entries(this.inventory.materials).map(function (_ref42) {
-            var key = _ref42[0],
-              value = _ref42[1];
+          var materials = Object.entries(this.inventory.materials).map(function (_ref41) {
+            var key = _ref41[0],
+              value = _ref41[1];
             return resourceNames[key] + ' ' + value;
           }).join(' · ');
           this.townInterior('溪桥村铁匠铺', materials, 'smith', 'npc-smith');
@@ -14112,9 +14215,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           page = Math.min(page, lastPage);
           if (!recipes.length) this.label('已掌握的装备均已制作', 0, 42, 420, 19);
           recipes.slice(page * 3, page * 3 + 3).forEach(function (item, index) {
-            var cost = Object.entries(item.cost).map(function (_ref43) {
-              var key = _ref43[0],
-                value = _ref43[1];
+            var cost = Object.entries(item.cost).map(function (_ref42) {
+              var key = _ref42[0],
+                value = _ref42[1];
               return resourceNames[key] + ' ' + value;
             }).join(' · ');
             var y = 47 - index * 88;
@@ -14248,20 +14351,28 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             this.finishAdventure('win');
             return;
           }
+          var expectedRoom = director.room;
+          if (!this.contentReady && this.deferContent(function () {
+            if (_this73.dungeon === director && director.room === expectedRoom) _this73.afterRoom(director);
+          })) return;
           var before = this.dungeonBackdrop(director.depth - 1);
           var after = this.dungeonBackdrop(director.depth);
           this.page('沿路前进', '小队正在前往下一房间。', before);
           var root = this.ui;
           var nextRoom = director.room;
-          var incoming = nextRoom.kind === 'battle' ? nextRoom.encounters : undefined;
+          var phase = this.adventure ? this.phase : nextRoom.kind === 'battle' && nextRoom.type === 'boss' ? 'lessonBoss' : 'wolves';
+          var incoming = nextRoom.kind === 'battle' ? this.resolveBattleFoes(nextRoom, nextRoom.enemies, phase) : undefined;
           void this.walkParty(this.forestLabStop(before) !== undefined ? 1.05 : before === after ? .45 : 1.05, before === after ? [before] : [before, after], 1, incoming).then(function (played) {
-            if (played && _this73.ui === root && _this73.dungeon === director) {
+            if (_this73.ui !== root || _this73.dungeon !== director || director.room !== nextRoom) return;
+            if (played) {
               if (incoming) _this73.arrivedEncounter = {
                 director: director,
                 room: nextRoom
               };
               _this73.showRoom();
-            }
+            } else _this73.button('重试行进', 0, function () {
+              if (_this73.ui === root && _this73.dungeon === director && director.room === nextRoom) _this73.afterRoom(director);
+            });
           });
         };
         _proto.buff = function buff(id) {
@@ -14490,9 +14601,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             var choices = [['血色门 · 普通战斗', encounter(run.id, director.depth + 1, 'battle')], ['铜色门 · 补给或商人', {
               kind: _supply[Math.floor(Math.random() * _supply.length)]
             }], ['黑铁门 · 精英战斗', encounter(run.id, director.depth + 1, 'elite')]];
-            choices.forEach(function (_ref45, index) {
-              var label = _ref45[0],
-                next = _ref45[1];
+            choices.forEach(function (_ref44, index) {
+              var label = _ref44[0],
+                next = _ref44[1];
               return action(label, 42 - index * 67, function () {
                 if (director.choose(room, next)) _this75.afterRoom(director);
               });
@@ -15057,9 +15168,9 @@ System.register("chunks:///_virtual/Inventory.ts", ['./rollupPluginModLoBabelHel
   };
 });
 
-System.register("chunks:///_virtual/main", ['./ActorArt.ts', './BattleMotion.ts', './BattleRules.ts', './BattleSession.ts', './Board.ts', './BoardMechanics.ts', './BuffView.ts', './Chapter.ts', './battle-core.ts', './board-bridge.ts', './cocos-board-adapter.ts', './damage.ts', './derivation.ts', './effects.ts', './experiment.ts', './exploration-save.ts', './formal-rules.ts', './mine-recovery.ts', './potion-bridge.ts', './CombatSceneLab.ts', './CombatTags.ts', './DungeonDirector.ts', './EnemySkills.ts', './FormalSaveGate.ts', './Game.ts', './GameAudio.ts', './Inventory.ts', './MineTrial.ts', './StageLayout.ts', './StageTravel.ts', './TemplateBoardFx.ts', './TownRules.ts'], function () {
+System.register("chunks:///_virtual/main", ['./ActorArt.ts', './BattleMotion.ts', './BattleRules.ts', './BattleSession.ts', './Board.ts', './BoardMechanics.ts', './BuffView.ts', './Chapter.ts', './battle-core.ts', './board-bridge.ts', './cocos-board-adapter.ts', './damage.ts', './derivation.ts', './effects.ts', './experiment.ts', './exploration-save.ts', './formal-rules.ts', './mine-recovery.ts', './potion-bridge.ts', './CombatSceneLab.ts', './CombatTags.ts', './DungeonDirector.ts', './EnemySkills.ts', './FormalSaveGate.ts', './Game.ts', './GameAudio.ts', './Inventory.ts', './MineTrial.ts', './StageLayout.ts', './StageTravel.ts', './TemplateBoardFx.ts', './TownRules.ts', './TravelClock.ts'], function () {
   return {
-    setters: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+    setters: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
     execute: function () {}
   };
 });
@@ -15724,6 +15835,10 @@ System.register("chunks:///_virtual/StageTravel.ts", ['./rollupPluginModLoBabelH
             node.setPosition((slot * this.width - this.camera.offset) * this.direction, 0);
           }
         };
+        _proto.seek = function seek(offset) {
+          this.camera.offset = Math.max(0, Math.min((this.count - 1) * this.width, offset));
+          this.update();
+        };
         _proto.play = function play(seconds, from, to) {
           var _this = this;
           if (from === void 0) {
@@ -16309,6 +16424,61 @@ System.register("chunks:///_virtual/TownRules.ts", ['./rollupPluginModLoBabelHel
             blessingInDungeon: false
           }),
           hp: town.blessingInDungeon ? Math.min(hp, baseMaxHP) : hp
+        };
+      }
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/TravelClock.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+  var _createClass, cclegacy;
+  return {
+    setters: [function (module) {
+      _createClass = module.createClass;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+    }],
+    execute: function () {
+      exports('travelPose', travelPose);
+      cclegacy._RF.push({}, "032a1sl+FpDn4wYEUqBItvU", "TravelClock", undefined);
+      /** Presentation time only. Long browser frames never skip the whole visible journey. */
+      var TravelClock = exports('TravelClock', /*#__PURE__*/function () {
+        function TravelClock(duration, maxStep) {
+          if (maxStep === void 0) {
+            maxStep = .05;
+          }
+          this.elapsed = 0;
+          this.duration = void 0;
+          this.maxStep = void 0;
+          if (!Number.isFinite(duration) || duration <= 0 || !Number.isFinite(maxStep) || maxStep <= 0) throw Error('Invalid travel clock');
+          this.duration = duration;
+          this.maxStep = maxStep;
+        }
+        var _proto = TravelClock.prototype;
+        _proto.advance = function advance(dt) {
+          if (Number.isFinite(dt) && dt > 0) this.elapsed = Math.min(this.duration, this.elapsed + Math.min(dt, this.maxStep));
+          return this.progress;
+        };
+        _createClass(TravelClock, [{
+          key: "progress",
+          get: function get() {
+            return Math.min(1, this.elapsed / this.duration);
+          }
+        }, {
+          key: "done",
+          get: function get() {
+            return this.elapsed >= this.duration;
+          }
+        }]);
+        return TravelClock;
+      }());
+      function travelPose(elapsed, index) {
+        var phase = elapsed * 6 + index * .19;
+        return {
+          x: Math.sin(phase * Math.PI * 2) * 2,
+          y: Math.pow(Math.sin(phase * Math.PI), 2) * (5 + index % 2 * 2),
+          angle: Math.sin(phase * Math.PI * 2) * 4
         };
       }
       cclegacy._RF.pop();

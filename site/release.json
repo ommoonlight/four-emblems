@@ -1,9 +1,9 @@
 {
-  "bundleSha256": "86e06077630de4d7e538f94770c0b2fa50b72222f480557cf30f3ce26ed6ae89",
+  "bundleSha256": "8120366428d7bad16057c0c470ce26f60fa7760bffac7830dce7ca5520c96f75",
   "stage": [
     480,
     270
   ],
   "build": "Cocos Creator 3.8.8 Web Mobile",
-  "version": "20261119-enemy-actions-2"
+  "version": "20261119-travel-sync-3"
 }
