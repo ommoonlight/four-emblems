@@ -1,9 +1,9 @@
 {
-  "version": "20261119-download-recovery-2",
-  "bundleSha256": "09970aeee433236dade8d5fba146f3f82c0301fb64adacc4ffc335aad89d6b94",
+  "version": "20261120-quests-and-gravity-1",
   "build": "Cocos Creator 3.8.8 Web Mobile",
   "stage": [
     480,
     270
-  ]
+  ],
+  "bundleSha256": "ef0161c4fca754524e44e9a337b115bef3cdb9f43f1e516e939c42d38fe9f6e8"
 }

@@ -62,7 +62,8 @@ if ($LASTEXITCODE -ne 0) { throw 'Content delivery manifest failed' }
 Write-Output ""
 $html = Get-Content $indexFile -Raw
 $boot = '<script src="/boot.js?v=' + $releaseVersion + '"></script>'
-$html = $html.Replace('</head>', $boot + "`n</head>")
+if (-not $html.Contains('<!-- game-brand-end -->')) { throw 'Missing branded startup shell' }
+$html = $html.Replace('<!-- game-brand-end -->', '<!-- game-brand-end -->' + $boot)
 [IO.File]::WriteAllText((Join-Path $siteDir 'index.html'),$html,[Text.UTF8Encoding]::new($false))
 $bundle = Join-Path $siteDir 'assets/main/index.js'
 $release = @{version=$releaseVersion;build='Cocos Creator 3.8.8 Web Mobile';stage=@(480,270);bundleSha256=(Get-FileHash $bundle -Algorithm SHA256).Hash.ToLower()}

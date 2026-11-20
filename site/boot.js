@@ -62,12 +62,12 @@
     var t = e && e.target;
     var src = t && (t.src || t.href) ? ' src=' + String(t.src || t.href).split('/').pop() : '';
     window.__feErrors.push(((e && e.message) || 'resource error') + src);
-    showDiag();
+    // Collect the error for user-requested diagnostics.
   }, true);
   window.addEventListener('unhandledrejection', function (e) {
     var r = e && e.reason;
     window.__feErrors.push('reject: ' + String((r && (r.message || r.name)) || r).slice(0, 200));
-    showDiag();
+    // Collect the error for user-requested diagnostics.
   });
 
   // ---------- 1. 进度条 ----------
@@ -138,7 +138,7 @@
 
   // cc 起来之后收起进度条
   var watcher = setInterval(function () {
-    if (window.__fourEmblemsReady || (window.cc && cc.director && cc.director.getTotalFrames && cc.director.getTotalFrames() > 5)) {
+    if (window.__fourEmblemsReady) {
       document.getElementById('fe-diag')?.remove();
       clearInterval(watcher);
       done();
@@ -149,15 +149,18 @@
   // 单纯慢（还在下载）不弹，只让进度条一直走。
   setInterval(function () {
     try {
-      var f = window.cc && cc.director && cc.director.getTotalFrames ? cc.director.getTotalFrames() : 0;
-      if (window.__fourEmblemsReady || f > 10) return;
-      if (window.__feDiagClosed || document.getElementById('fe-diag')) return;
-      if (Date.now() - lastProgressAt > 25000) showDiag(true);
+      if (window.__fourEmblemsReady || !label || Date.now() - lastProgressAt <= 25000) return;
+      if (!document.getElementById('fe-help')) {
+        var help = document.createElement('button');
+        help.id = 'fe-help'; help.textContent = '加载较慢 · 查看诊断';
+        help.style.pointerEvents = 'auto'; help.onclick = function () { showDiag(true); };
+        label.parentNode.appendChild(help);
+      }
     } catch (e) { /* 忽略 */ }
   }, 5000);
 
   // ---------- 2. 带重试与断流检测的 fetch ----------
-  var CACHE_NAME = 'four-emblems-assets-20261119-download-recovery-2';
+  var CACHE_NAME = 'four-emblems-assets-20261120-quests-and-gravity-1';
   var IDLE_TIMEOUT = 15000;   // 连续 15 秒没数据才算断流
   var RETRIES = 5;
   var MAX_BODY = 64 * 1024 * 1024;
@@ -218,7 +221,7 @@
     throw lastErr || new Error('fetch failed');
   }
 
-  var releaseReset = (window.caches ? caches.keys().then(function(keys){return Promise.all(keys.filter(function(k){return k.indexOf('four-emblems-')===0 && k!=='four-emblems-assets-20261119-download-recovery-2';}).map(function(k){return caches.delete(k);}));}).catch(function(){}) : Promise.resolve());
+  var releaseReset = (window.caches ? caches.keys().then(function(keys){return Promise.all(keys.filter(function(k){return k.indexOf('four-emblems-')===0 && k!=='four-emblems-assets-20261120-quests-and-gravity-1';}).map(function(k){return caches.delete(k);}));}).catch(function(){}) : Promise.resolve());
   var cachePromise = (window.caches && caches.open) ? caches.open(CACHE_NAME).catch(function () { return null; }) : Promise.resolve(null);
 
   window.fetch = async function (input, init) {
