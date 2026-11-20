@@ -10,74 +10,76 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
       cclegacy._RF.push({}, "f813fjU/QxAiaoTjIvULM+h", "ActorArt", undefined);
       // Stage art calibration. Anchors use source image normalized top-left coordinates.
       var portraitBottomPadding = exports('portraitBottomPadding', {
-        'hero-s': 14 / 192,
-        'hero-d': 17 / 192,
-        'hero-h': 11 / 192,
-        'hero-m': 20 / 192,
-        wolf: 41 / 320,
-        boss: 42 / 320,
-        boar: 47 / 320,
-        vine: 30 / 300,
-        bear: 31 / 300,
-        bat: 47 / 300,
-        beetle: 54 / 300,
-        golem: 42 / 300,
+        'hero-s': 0.072917,
+        'hero-d': 0.088542,
+        'hero-h': 0.057292,
+        'hero-m': 0.104167,
+        wolf: 0.018072,
+        boss: 0.160287,
+        boar: 0.146875,
+        vine: 0.100000,
+        bear: 0.100000,
+        bat: 0.160000,
+        beetle: 0.076667,
+        golem: 0.027911,
         ghost: 46 / 300,
-        frog: 38 / 300,
-        lich: 32 / 300,
-        dragon: 26 / 300,
-        knight: 8 / 300,
-        wizard: 8 / 300,
-        'npc-chief': 5 / 272,
-        'npc-innkeeper': 5 / 272,
-        'npc-shop': 5 / 272,
-        'npc-smith': 5 / 272,
-        'dungeon-traveler': 4 / 288,
+        frog: 0.210526,
+        lich: 0.059809,
+        dragon: 0.038278,
+        knight: 0.053429,
+        wizard: 0.058214,
+        'npc-chief': 0.018072,
+        'npc-innkeeper': 0.018382,
+        'npc-shop': 0.018382,
+        'npc-smith': 0.018382,
+        'dungeon-traveler': 0.000000,
         'dungeon-chest': 22 / 263,
-        'dungeon-merchant': 3 / 1199
+        'dungeon-merchant': 0.020000
       });
+      // Calibration ignores export alpha below 64. Lower 10% of the visible silhouette
+      // supplies the footprint so faint padding and raised weapons do not move the ground.
       // Lower-silhouette bounds keep the ellipse under the feet even when the
       // portrait canvas is offset or its upper body is much wider than its stance.
       var portraitFootprint = exports('portraitFootprint', {
-        'hero-s': [.073, .740],
-        'hero-d': [.109, .849],
-        'hero-h': [.193, .729],
-        'hero-m': [.109, .693],
-        wolf: [.191, .822],
-        boss: [.097, .778],
-        boar: [.191, .900],
-        vine: [.140, .917],
-        bear: [.103, .920],
-        bat: [.337, .627],
-        beetle: [.150, .893],
-        golem: [.167, .790],
+        'hero-s': [0.229167, 0.739583],
+        'hero-d': [0.250000, 0.781250],
+        'hero-h': [0.213542, 0.729167],
+        'hero-m': [0.161458, 0.692708],
+        wolf: [0.174699, 0.858434],
+        boss: [0.163477, 0.846890],
+        boar: [0.100000, 0.812500],
+        vine: [0.126667, 0.916667],
+        bear: [0.073333, 0.900000],
+        bat: [0.373333, 0.663333],
+        beetle: [0.113333, 0.876667],
+        golem: [0.170654, 0.767943],
         ghost: [.337, .633],
-        frog: [.070, .897],
-        lich: [.167, .907],
-        dragon: [.060, .943],
-        knight: [.283, .717],
-        wizard: [.430, .853],
-        'npc-chief': [.326, .634],
-        'npc-innkeeper': [.259, .607],
-        'npc-shop': [.214, .536],
-        'npc-smith': [.326, .795],
-        'dungeon-traveler': [.289, .620],
+        frog: [0.145136, 0.854067],
+        lich: [0.111643, 0.669059],
+        dragon: [0.153907, 0.788676],
+        knight: [0.069378, 0.677033],
+        wizard: [0.180223, 0.685805],
+        'npc-chief': [0.051205, 0.692771],
+        'npc-innkeeper': [0.325893, 0.816964],
+        'npc-shop': [0.419643, 0.812500],
+        'npc-smith': [0.205357, 0.674107],
+        'dungeon-traveler': [0.213333, 0.870000],
         'dungeon-chest': [.097, .865],
-        'dungeon-merchant': [.060, .537]
+        'dungeon-merchant': [0.236667, 0.796667]
       });
       var enemyPortraitSize = exports('enemyPortraitSize', {
-        boss: 142,
-        knight: 188,
-        wizard: 188,
-        dragon: 176,
-        bear: 162,
-        golem: 164,
-        lich: 148
+        boss: 132,
+        knight: 110,
+        wizard: 104,
+        dragon: 144,
+        bear: 148,
+        golem: 140,
+        lich: 112
       });
       var actorArt = exports('actorArt', {
         "hero-s": {
           "baseOpacity": 1,
-          "headY": 0.026,
+          "headY": 0.125000,
           "centerX": 0.5,
           "centerY": 0.5,
           "projectileX": 0.65,
@@ -89,7 +91,7 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         },
         "hero-d": {
           "baseOpacity": 1,
-          "headY": 0.0521,
+          "headY": 0.114583,
           "centerX": 0.5,
           "centerY": 0.5,
           "projectileX": 0.65,
@@ -101,7 +103,7 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         },
         "hero-m": {
           "baseOpacity": 1,
-          "headY": 0.0625,
+          "headY": 0.119792,
           "centerX": 0.5,
           "centerY": 0.5,
           "projectileX": 0.65,
@@ -113,7 +115,7 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         },
         "hero-h": {
           "baseOpacity": 1,
-          "headY": 0.0365,
+          "headY": 0.130208,
           "centerX": 0.5,
           "centerY": 0.5,
           "projectileX": 0.65,
@@ -125,7 +127,7 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         },
         "wolf": {
           "baseOpacity": 1,
-          "headY": 0.0469,
+          "headY": 0.301205,
           "centerX": 0.5,
           "centerY": 0.5,
           "projectileX": 0.65,
@@ -137,7 +139,7 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         },
         "boss": {
           "baseOpacity": 1,
-          "headY": 0.1281,
+          "headY": 0.222488,
           "centerX": 0.5,
           "centerY": 0.5,
           "projectileX": 0.65,
@@ -149,7 +151,7 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         },
         "boar": {
           "baseOpacity": 1,
-          "headY": 0.1594,
+          "headY": 0.162500,
           "centerX": 0.5,
           "centerY": 0.5,
           "projectileX": 0.65,
@@ -161,7 +163,7 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         },
         "vine": {
           "baseOpacity": 1,
-          "headY": 0.07,
+          "headY": 0.130000,
           "centerX": 0.5,
           "centerY": 0.5,
           "projectileX": 0.65,
@@ -173,7 +175,7 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         },
         "bear": {
           "baseOpacity": 1,
-          "headY": 0.0867,
+          "headY": 0.096667,
           "centerX": 0.5,
           "centerY": 0.5,
           "projectileX": 0.65,
@@ -185,7 +187,7 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         },
         "bat": {
           "baseOpacity": 1,
-          "headY": 0.17,
+          "headY": 0.230000,
           "centerX": 0.5,
           "centerY": 0.5,
           "projectileX": 0.65,
@@ -197,7 +199,7 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         },
         "beetle": {
           "baseOpacity": 1,
-          "headY": 0.1833,
+          "headY": 0.183333,
           "centerX": 0.5,
           "centerY": 0.5,
           "projectileX": 0.65,
@@ -209,7 +211,7 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         },
         "golem": {
           "baseOpacity": 1,
-          "headY": 0.0433,
+          "headY": 0.031100,
           "centerX": 0.5,
           "centerY": 0.5,
           "projectileX": 0.65,
@@ -233,7 +235,7 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         },
         "frog": {
           "baseOpacity": 1,
-          "headY": 0.0433,
+          "headY": 0.240032,
           "centerX": 0.5,
           "centerY": 0.5,
           "projectileX": 0.65,
@@ -245,7 +247,7 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         },
         "lich": {
           "baseOpacity": 1,
-          "headY": 0.0433,
+          "headY": 0.088517,
           "centerX": 0.5,
           "centerY": 0.5,
           "projectileX": 0.65,
@@ -257,7 +259,7 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         },
         "dragon": {
           "baseOpacity": 1,
-          "headY": 0.0533,
+          "headY": 0.062201,
           "centerX": 0.5,
           "centerY": 0.5,
           "projectileX": 0.65,
@@ -269,7 +271,7 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         },
         "knight": {
           "baseOpacity": 1,
-          "headY": 0.36,
+          "headY": 0.081340,
           "centerX": 0.5,
           "centerY": 0.5,
           "projectileX": 0.65,
@@ -281,7 +283,7 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         },
         "wizard": {
           "baseOpacity": 1,
-          "headY": 0.3067,
+          "headY": 0.114833,
           "centerX": 0.5,
           "centerY": 0.5,
           "projectileX": 0.65,
@@ -293,7 +295,7 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         },
         "npc-chief": {
           "baseOpacity": 1,
-          "headY": 0.0404,
+          "headY": 0.018072,
           "centerX": 0.5,
           "centerY": 0.5,
           "projectileX": 0.65,
@@ -305,7 +307,7 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         },
         "npc-shop": {
           "baseOpacity": 1,
-          "headY": 0.0404,
+          "headY": 0.040441,
           "centerX": 0.5,
           "centerY": 0.5,
           "projectileX": 0.65,
@@ -317,7 +319,7 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         },
         "npc-innkeeper": {
           "baseOpacity": 1,
-          "headY": 0.0404,
+          "headY": 0.040441,
           "centerX": 0.5,
           "centerY": 0.5,
           "projectileX": 0.65,
@@ -329,7 +331,7 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         },
         "npc-smith": {
           "baseOpacity": 1,
-          "headY": 0.0404,
+          "headY": 0.040441,
           "centerX": 0.5,
           "centerY": 0.5,
           "projectileX": 0.65,
@@ -341,7 +343,7 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         },
         "dungeon-traveler": {
           "baseOpacity": 1,
-          "headY": 0.2,
+          "headY": 0.200000,
           "centerX": 0.5,
           "centerY": 0.5,
           "projectileX": 0.65,
@@ -353,7 +355,7 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         },
         "dungeon-merchant": {
           "baseOpacity": 1,
-          "headY": 0.07,
+          "headY": 0.073333,
           "centerX": 0.5,
           "centerY": 0.5,
           "projectileX": 0.65,
@@ -366,11 +368,11 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
       });
 
       // Game-sized supplied character derivatives (right-facing source convention).
-      portraitBottomPadding['npc-chief'] = 0.018072289156626505;
-      portraitFootprint['npc-chief'] = [.18, .82];
+      portraitBottomPadding['npc-chief'] = 0.018072;
+      portraitFootprint['npc-chief'] = [0.051205, 0.692771];
       actorArt['npc-chief'] = {
         baseOpacity: 1,
-        headY: 0.018072289156626505,
+        headY: 0.018072,
         centerX: .5,
         centerY: .5,
         projectileX: .7,
@@ -380,11 +382,11 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         shadowScale: 1,
         sourceFacing: 'right'
       };
-      portraitBottomPadding['npc-villager'] = 0.018072289156626505;
-      portraitFootprint['npc-villager'] = [.18, .82];
+      portraitBottomPadding['npc-villager'] = 0.018072;
+      portraitFootprint['npc-villager'] = [0.322289, 0.707831];
       actorArt['npc-villager'] = {
         baseOpacity: 1,
-        headY: 0.018072289156626505,
+        headY: 0.018072,
         centerX: .5,
         centerY: .5,
         projectileX: .7,
@@ -394,11 +396,11 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         shadowScale: 1,
         sourceFacing: 'right'
       };
-      portraitBottomPadding['npc-villager-down'] = 0.018072289156626505;
-      portraitFootprint['npc-villager-down'] = [.18, .82];
+      portraitBottomPadding['npc-villager-down'] = 0.018072;
+      portraitFootprint['npc-villager-down'] = [0.018072, 0.918675];
       actorArt['npc-villager-down'] = {
         baseOpacity: 1,
-        headY: 0.29819277108433734,
+        headY: 0.298193,
         centerX: .5,
         centerY: .5,
         projectileX: .7,
@@ -408,11 +410,11 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         shadowScale: 1,
         sourceFacing: 'right'
       };
-      portraitBottomPadding['murloc-mage'] = 0.018072289156626505;
-      portraitFootprint['murloc-mage'] = [.18, .82];
+      portraitBottomPadding['murloc-mage'] = 0.018072;
+      portraitFootprint['murloc-mage'] = [0.093373, 0.668675];
       actorArt['murloc-mage'] = {
         baseOpacity: 1,
-        headY: 0.018072289156626505,
+        headY: 0.018072,
         centerX: .5,
         centerY: .5,
         projectileX: .7,
@@ -422,11 +424,11 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         shadowScale: 1,
         sourceFacing: 'right'
       };
-      portraitBottomPadding['murloc-spear'] = 0.018072289156626505;
-      portraitFootprint['murloc-spear'] = [.18, .82];
+      portraitBottomPadding['murloc-spear'] = 0.018072;
+      portraitFootprint['murloc-spear'] = [0.039157, 0.623494];
       actorArt['murloc-spear'] = {
         baseOpacity: 1,
-        headY: 0.02108433734939759,
+        headY: 0.021084,
         centerX: .5,
         centerY: .5,
         projectileX: .7,
@@ -436,11 +438,11 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         shadowScale: 1,
         sourceFacing: 'right'
       };
-      portraitBottomPadding['murloc-axe'] = 0.018072289156626505;
-      portraitFootprint['murloc-axe'] = [.18, .82];
+      portraitBottomPadding['murloc-axe'] = 0.018072;
+      portraitFootprint['murloc-axe'] = [0.048193, 0.611446];
       actorArt['murloc-axe'] = {
         baseOpacity: 1,
-        headY: 0.08132530120481928,
+        headY: 0.081325,
         centerX: .5,
         centerY: .5,
         projectileX: .7,
@@ -450,11 +452,11 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         shadowScale: 1,
         sourceFacing: 'right'
       };
-      portraitBottomPadding['forest-treant'] = 0.018072289156626505;
-      portraitFootprint['forest-treant'] = [.18, .82];
+      portraitBottomPadding['forest-treant'] = 0.018072;
+      portraitFootprint['forest-treant'] = [0.349398, 0.662651];
       actorArt['forest-treant'] = {
         baseOpacity: 1,
-        headY: 0.018072289156626505,
+        headY: 0.018072,
         centerX: .5,
         centerY: .5,
         projectileX: .7,
@@ -464,11 +466,11 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         shadowScale: 1,
         sourceFacing: 'right'
       };
-      portraitBottomPadding['wolf'] = 0.018072289156626505;
-      portraitFootprint['wolf'] = [.18, .82];
+      portraitBottomPadding['wolf'] = 0.018072;
+      portraitFootprint['wolf'] = [0.174699, 0.858434];
       actorArt['wolf'] = {
         baseOpacity: 1,
-        headY: 0.30120481927710846,
+        headY: 0.301205,
         centerX: .5,
         centerY: .5,
         projectileX: .7,
@@ -478,11 +480,11 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         shadowScale: 1,
         sourceFacing: 'right'
       };
-      portraitBottomPadding['forest-leafguard'] = 0.018072289156626505;
-      portraitFootprint['forest-leafguard'] = [.18, .82];
+      portraitBottomPadding['forest-leafguard'] = 0.018072;
+      portraitFootprint['forest-leafguard'] = [0.153614, 0.834337];
       actorArt['forest-leafguard'] = {
         baseOpacity: 1,
-        headY: 0.018072289156626505,
+        headY: 0.018072,
         centerX: .5,
         centerY: .5,
         projectileX: .7,
@@ -492,11 +494,11 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         shadowScale: 1,
         sourceFacing: 'right'
       };
-      portraitBottomPadding['forest-stone'] = 0.018072289156626505;
-      portraitFootprint['forest-stone'] = [.18, .82];
+      portraitBottomPadding['forest-stone'] = 0.018072;
+      portraitFootprint['forest-stone'] = [0.093373, 0.891566];
       actorArt['forest-stone'] = {
         baseOpacity: 1,
-        headY: 0.018072289156626505,
+        headY: 0.018072,
         centerX: .5,
         centerY: .5,
         projectileX: .7,
@@ -506,11 +508,11 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         shadowScale: 1,
         sourceFacing: 'right'
       };
-      portraitBottomPadding['forest-bear'] = 0.018072289156626505;
-      portraitFootprint['forest-bear'] = [.18, .82];
+      portraitBottomPadding['forest-bear'] = 0.018072;
+      portraitFootprint['forest-bear'] = [0.036145, 0.894578];
       actorArt['forest-bear'] = {
         baseOpacity: 1,
-        headY: 0.21686746987951808,
+        headY: 0.216867,
         centerX: .5,
         centerY: .5,
         projectileX: .7,
@@ -520,11 +522,11 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         shadowScale: 1,
         sourceFacing: 'right'
       };
-      portraitBottomPadding['forest-bug'] = 0.018072289156626505;
-      portraitFootprint['forest-bug'] = [.18, .82];
+      portraitBottomPadding['forest-bug'] = 0.018072;
+      portraitFootprint['forest-bug'] = [0.024096, 0.960843];
       actorArt['forest-bug'] = {
         baseOpacity: 1,
-        headY: 0.12951807228915663,
+        headY: 0.129518,
         centerX: .5,
         centerY: .5,
         projectileX: .7,
@@ -534,11 +536,11 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         shadowScale: 1,
         sourceFacing: 'right'
       };
-      portraitBottomPadding['boss'] = 0.018072289156626505;
-      portraitFootprint['boss'] = [.18, .82];
+      portraitBottomPadding['boss'] = 0.160287;
+      portraitFootprint['boss'] = [0.163477, 0.846890];
       actorArt['boss'] = {
         baseOpacity: 1,
-        headY: 0.30120481927710846,
+        headY: 0.222488,
         centerX: .5,
         centerY: .5,
         projectileX: .7,
@@ -549,22 +551,22 @@ System.register("chunks:///_virtual/ActorArt.ts", ['./rollupPluginModLoBabelHelp
         sourceFacing: 'right'
       };
       Object.assign(enemyPortraitSize, {
-        'forest-bear': 160,
-        'forest-treant': 116,
-        'forest-stone': 142,
-        'forest-leafguard': 112,
+        'forest-bear': 144,
+        'forest-treant': 104,
+        'forest-stone': 126,
+        'forest-leafguard': 104,
         'forest-bug': 88,
-        'murloc-mage': 126,
+        'murloc-mage': 108,
         'murloc-spear': 100,
-        'murloc-axe': 116
+        'murloc-axe': 104
       });
       actorArt['forest-wolf'] = _extends({}, actorArt.wolf, {
         sourceFacing: 'right',
-        headY: 0.171875
+        headY: 0.271875
       });
-      portraitBottomPadding['forest-wolf'] = 0.025;
-      portraitFootprint['forest-wolf'] = [.15, .85];
-      enemyPortraitSize['forest-wolf'] = 94;
+      portraitBottomPadding['forest-wolf'] = 0.187500;
+      portraitFootprint['forest-wolf'] = [0.231250, 0.775000];
+      enemyPortraitSize['forest-wolf'] = 112;
       cclegacy._RF.pop();
     }
   };
@@ -7434,7 +7436,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           _this.deliveryManifest = void 0;
           _this.contentReady = false;
           _this.contentLoading = void 0;
-          _this.releaseVersion = '20261120-quests-and-gravity-1';
+          _this.releaseVersion = '20261120-mechanism-matrix-2';
           _this.stageTravel = void 0;
           _this.forestLayout = void 0;
           _this.forestForeground = new WeakMap();
@@ -9462,7 +9464,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               size = _this23$enemyPlacemen.size,
               y = _this23$enemyPlacemen.y;
             var n = _this23.box('Enemy ' + i, x, y, size, size, undefined, _this23.stageContent);
-            _this23.groundShadow(n, ground - n.position.y, foe.art, size);
+            _this23.groundShadow(n, ground - n.position.y, foe.art, size, 'right');
             var portrait = _this23.art(foe.art, 0, 0, size, size, n);
             _this23.faceStage(portrait, 'right');
             if (!portrait) _this23.label(foe.name, 0, 0, size, 16, n);
@@ -13616,13 +13618,17 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             return n.destroy();
           }).start();
         };
-        _proto.groundShadow = function groundShadow(parent, y, art, width) {
+        _proto.groundShadow = function groundShadow(parent, y, art, width, side) {
           var _portraitFootprint$ar, _profile$shadowOffset, _profile$shadowOffset2, _profile$shadowScale;
+          if (side === void 0) {
+            side = 'left';
+          }
           var _ref39 = (_portraitFootprint$ar = portraitFootprint[art]) != null ? _portraitFootprint$ar : [.14, .86],
             left = _ref39[0],
             right = _ref39[1];
           var profile = actorArt[art];
-          var x = ((left + right) * .5 - .5) * width + ((_profile$shadowOffset = profile == null ? void 0 : profile.shadowOffsetX) != null ? _profile$shadowOffset : 0);
+          var facing = side === 'right' ? -1 : 1;
+          var x = (((left + right) * .5 - .5) * width + ((_profile$shadowOffset = profile == null ? void 0 : profile.shadowOffsetX) != null ? _profile$shadowOffset : 0)) * facing;
           y += (_profile$shadowOffset2 = profile == null ? void 0 : profile.shadowOffsetY) != null ? _profile$shadowOffset2 : 0;
           var radius = Math.max(15, (right - left) * width * .47) * ((_profile$shadowScale = profile == null ? void 0 : profile.shadowScale) != null ? _profile$shadowScale : 1);
           var height = radius * .24;
@@ -15428,7 +15434,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                 size = _this74$enemyPlacemen.size,
                 ground = _this74$enemyPlacemen.ground,
                 node = _this74.box('遇敌预览 ' + index, x + distance, y - centerY, size, size, undefined, preview);
-              _this74.groundShadow(node, ground - y, foe.art, size);
+              _this74.groundShadow(node, ground - y, foe.art, size, 'right');
               var portrait = _this74.art(foe.art, 0, 0, size, size, node);
               _this74.faceStage(portrait, 'right');
               enemies.push({
@@ -16072,7 +16078,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             var _this$ui$getChildByNa2;
             var w = height * frame.originalSize.width / frame.originalSize.height;
             var actor = this.box(prefix + art, x, y, w, height);
-            this.groundShadow(actor, groundY - y, art, w);
+            this.groundShadow(actor, groundY - y, art, w, x > 0 ? 'right' : 'left');
             var portrait = this.art(art, 0, 0, w, height, actor);
             if (portrait && !prefix.includes('道具') && art !== 'altar-object') this.faceStage(portrait, x > 0 ? 'right' : 'left');
             var partySpeaker = Object.values(heroes).some(function (hero) {

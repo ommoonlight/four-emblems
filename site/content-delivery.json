@@ -233,7 +233,7 @@
       ]
     },
     "village": {
-      "bytes": 997586,
+      "bytes": 997748,
       "assets": [
         {
           "name": "d",
@@ -328,20 +328,20 @@
         {
           "name": "npc-innkeeper",
           "path": "assets/resources/native/42/42c65619-9672-4bea-b356-3d93ef2609fa.webp",
-          "bytes": 21266,
-          "sha256": "e55ceebd15003101a265a1cab795ab52edad75443104879758bee11f31317a5d"
+          "bytes": 21406,
+          "sha256": "2ccd6be178cd5a1bf8382ff44ba46e1675988e3978a0a33055c4bcf57cb59dbc"
         },
         {
           "name": "npc-shop",
           "path": "assets/resources/native/88/88d2df31-42ce-42ef-a8eb-5a4c56825b15.webp",
-          "bytes": 19098,
-          "sha256": "d6d95d1c74bad042f477eca83f175b8d702d0ceef7ea0261053fdac6273809f9"
+          "bytes": 19244,
+          "sha256": "75a56d8fe13bd9e22dfac292a5a99fe8b448191efb1d18e5684b546411b64026"
         },
         {
           "name": "npc-smith",
           "path": "assets/resources/native/09/0913ddc3-9cb7-41c0-b506-b8bb0e3b3227.webp",
-          "bytes": 16782,
-          "sha256": "2b70eb24078aeffd8e294dc07fa7cec49277204b5ee37241a8a2abf8f44fda78"
+          "bytes": 16658,
+          "sha256": "0a5852bc8991dc69775b03cf183a448a4198778b1d26e228d2768e5808d1d77a"
         },
         {
           "name": "slot-accessory",
@@ -418,19 +418,19 @@
       ]
     },
     "forest": {
-      "bytes": 233488,
+      "bytes": 233240,
       "assets": [
         {
           "name": "bear",
           "path": "assets/resources/native/a1/a105e543-2622-4499-97b9-95162ace5e85.webp",
-          "bytes": 25636,
-          "sha256": "deb0db0dc62eef80ddbca36d6684fe0732fe82f171fe451dcd5a4391469573cb"
+          "bytes": 25404,
+          "sha256": "4999cb5a008ed823060bc211879d064608baf98d9826c7d2bfc510dc22194dfc"
         },
         {
           "name": "boar",
           "path": "assets/resources/native/1a/1a00c315-ebd2-401d-9258-0bffe4de6876.webp",
-          "bytes": 17322,
-          "sha256": "a3ade27a4c0bc0137cf1a323d7b65c83c5f0c92939fcad3e6a11cce15d34115e"
+          "bytes": 17306,
+          "sha256": "31eec66fb656cbe61c457675c1e137343f894355228ef48f6f47a0b30310888f"
         },
         {
           "name": "forest-bear",
@@ -465,13 +465,13 @@
       ]
     },
     "mine": {
-      "bytes": 264652,
+      "bytes": 264682,
       "assets": [
         {
           "name": "bat",
           "path": "assets/resources/native/12/1225824a-6e75-408d-b4cf-059cc262251d.webp",
-          "bytes": 17044,
-          "sha256": "0913787b07cec2d412d79eec1f902933ff3ed0bc9ba0fa5287d62d3235936478"
+          "bytes": 17074,
+          "sha256": "62f30d59fed3c8ba8f4c0eeda32b102a39a62d43dc652e5af5338f7032282c34"
         },
         {
           "name": "beetle",
