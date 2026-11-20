@@ -1,9 +1,9 @@
 {
-  "build": "Cocos Creator 3.8.8 Web Mobile",
-  "version": "20261120-mechanism-matrix-2",
   "stage": [
     480,
     270
   ],
-  "bundleSha256": "defd995c410384a86d339dd41d8fcd0fc696eb5ae4c79f89efd702bb78beefa5"
+  "build": "Cocos Creator 3.8.8 Web Mobile",
+  "bundleSha256": "6c5c2422ea9ad379d2a4364b99311b220b0cc7ff7f288be394e71d6066000abe",
+  "version": "20261120-ui-and-beetle-1"
 }

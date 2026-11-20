@@ -465,7 +465,7 @@
       ]
     },
     "mine": {
-      "bytes": 264682,
+      "bytes": 261050,
       "assets": [
         {
           "name": "bat",
@@ -476,8 +476,8 @@
         {
           "name": "beetle",
           "path": "assets/resources/native/aa/aa1076ef-e14b-4a7f-aac1-39012805b3dc.webp",
-          "bytes": 17028,
-          "sha256": "ae0ded1f6e6fb8876fd032780f8294e61b9a8170282b63d82e8f6711473f4af5"
+          "bytes": 13396,
+          "sha256": "0137dc874cdfcc693e30d27d355ff6dd6ff1c2ef57a8eed6bed66178c97d9ed2"
         },
         {
           "name": "golem",
