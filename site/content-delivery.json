@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "groups": {
     "opening": {
-      "bytes": 347402,
+      "bytes": 409918,
       "assets": [
         {
           "name": "advanced-frame",
@@ -19,8 +19,8 @@
         {
           "name": "cry",
           "path": "assets/resources/native/36/362821ba-6d79-4317-82bd-793e34f32e4b.webp",
-          "bytes": 9476,
-          "sha256": "2a0bf39d6d739ce68fd132e71dab48e4783d7621abec6d7bdff35dec0697dbe9"
+          "bytes": 9500,
+          "sha256": "148ffda91ce32a4729ffd8eb328bd376cd568e6b1900c1c8d4377159eaa6b91a"
         },
         {
           "name": "fist",
@@ -85,14 +85,14 @@
         {
           "name": "hero-s",
           "path": "assets/resources/native/f2/f2bb5f5f-6c9c-4743-8e49-3f13dcde7771.webp",
-          "bytes": 13352,
-          "sha256": "dbd0fba4201692f7c84f6fe6b91d0448a02cab6fca2bb4a3fceed4c2a41fe2d4"
+          "bytes": 17770,
+          "sha256": "dc9715a6d900563794d697f1da9fb42e9447477ae4b54ed3c49c2ec83323cc94"
         },
         {
           "name": "s",
           "path": "assets/resources/native/ed/ed48ebbb-1999-437f-999f-0bffe2665ff1.webp",
-          "bytes": 8668,
-          "sha256": "220a75215e644f174baecc01ecb70046eab0489cd9d43757240bfc35eb2c1b87"
+          "bytes": 3946,
+          "sha256": "54bd5c73ac164cfe44d10b4c20f57c6bc7cff80e6fcbe16cd6711efd2c029bdf"
         },
         {
           "name": "skill-frame",
@@ -135,11 +135,35 @@
           "path": "assets/resources/native/50/50d65d21-f222-49c0-bb3e-fd9a3d672887.webp",
           "bytes": 18862,
           "sha256": "5217b6d5f40fccf93f36ce72c56a3ad771f449a134cdeb50fa87d7885200a161"
+        },
+        {
+          "name": "trial-ui-audio",
+          "path": "assets/resources/native/d9/d9c12dd1-e8c4-58c4-a282-79807610e303.webp",
+          "bytes": 444,
+          "sha256": "9115784e4c0b0964c705d79f5aa27f68de85d3789b00a752a5509aa752b0454a"
+        },
+        {
+          "name": "trial-ui-progress-fill",
+          "path": "assets/resources/native/f9/f9d9fa4c-de57-5b99-b657-26d82d19ce67.webp",
+          "bytes": 770,
+          "sha256": "c655bb0b4a8c5eb4472ee1050912bdc713271a2cfdf44dfa9f98a0476cfa72f2"
+        },
+        {
+          "name": "trial-ui-progress-frame",
+          "path": "assets/resources/native/6d/6d5485e8-474d-59c3-a9a1-125b0eff681d.webp",
+          "bytes": 1096,
+          "sha256": "cc8d92f874344894403f3bafefd4b8adc060ab03336bcb4599b7d163403f9bda"
+        },
+        {
+          "name": "corridor-forest",
+          "path": "assets/resources/native/bf/bf6e1b7b-f6a2-5ac6-a9c3-54471a5e8ceb.webp",
+          "bytes": 60486,
+          "sha256": "21c42faea601c106c3d4c83968e062003e6157d5cc94e3001ac445a18781431d"
         }
       ]
     },
     "tutorial": {
-      "bytes": 211898,
+      "bytes": 213132,
       "assets": [
         {
           "name": "boss",
@@ -162,14 +186,14 @@
         {
           "name": "h",
           "path": "assets/resources/native/f4/f4b8ba76-e5bf-4ad3-9f40-78172cef4ba1.webp",
-          "bytes": 7104,
-          "sha256": "af09a93bb5c07d57f6ca453cc3a19fdd5c91a68c4da77dcd0b93202622c2aa1b"
+          "bytes": 2990,
+          "sha256": "b5ef5c659f8f9d916b6ae219237133b7fed71017411e8f9f03de86d9a9459d77"
         },
         {
           "name": "hero-h",
           "path": "assets/resources/native/5d/5d29ad49-084b-42c8-adbb-c1106bbc6f58.webp",
-          "bytes": 13942,
-          "sha256": "13486a20635e812958bce37faa0902919431cf7f0ad5dcd18915f661acde530c"
+          "bytes": 19290,
+          "sha256": "c72b317699f3ea8a3f6ed4e31602c727ae349d60c8a70beea14374e897de88bd"
         },
         {
           "name": "npc-villager-down",
@@ -192,7 +216,7 @@
       ]
     },
     "map": {
-      "bytes": 237246,
+      "bytes": 115992,
       "assets": [
         {
           "name": "map-parchment",
@@ -201,63 +225,39 @@
           "sha256": "f4466c5a2506eb69c4011b13d0ffd7e96d9d0ca8f3b2d595ac17ec3254c6a716"
         },
         {
-          "name": "travel-forest-plains",
-          "path": "assets/resources/native/77/77eaa316-06d4-4eeb-9cf2-dd5c8411ca02.webp",
-          "bytes": 22034,
-          "sha256": "2d07a5af742ef504395a6fe588caff3d38d7f6f982b4623fb6b6737494cc54a2"
-        },
-        {
-          "name": "travel-plains",
-          "path": "assets/resources/native/d0/d024fb99-b95b-417a-846f-085e47eae873.webp",
-          "bytes": 12494,
-          "sha256": "4931eb176838fff850851a5c7b21c9ecf815be435c496da388861f8c952bb519"
-        },
-        {
-          "name": "travel-village-edge",
-          "path": "assets/resources/native/2d/2d104772-7328-4ef4-9064-a77002bcb106.webp",
-          "bytes": 25660,
-          "sha256": "1b0af582dd86e5a30c2176b372ec5f782c07a3f0dc62d78f50515099909d64da"
-        },
-        {
-          "name": "world-travel",
-          "path": "assets/resources/native/87/8742fc4f-e676-4593-b741-9a4b4eff8d6b.webp",
-          "bytes": 150568,
-          "sha256": "073ab3f885b80d57e0c463a6a5efa051b6de7d840ab61c8be354df74d27b7193"
-        },
-        {
-          "name": "world-village-cut",
-          "path": "assets/resources/native/e9/e9569635-2bdb-4fa9-b6f4-ab57e96cd54e.webp",
-          "bytes": 18972,
-          "sha256": "bfb0f8536b95bc9c19b088508cbd31ca62944bf376468a543c5606047f0467d1"
+          "name": "world-map-background",
+          "path": "assets/resources/native/7c/7cb97616-45e4-5754-9f1c-b88fc36f4021.webp",
+          "bytes": 108474,
+          "sha256": "17513ca58079685bb1efa76252b3895800f0535e90d4c8056b1b1cccd9cea5fa"
         }
       ]
     },
     "village": {
-      "bytes": 997748,
+      "bytes": 810752,
       "assets": [
         {
           "name": "d",
           "path": "assets/resources/native/0a/0a56eeac-e951-43ef-8045-bae5185c3be5.webp",
-          "bytes": 7006,
-          "sha256": "99368c3146eec4b3be65fe0c1b28735b4c4ec3f9bc43899c5180a022b7497a4a"
+          "bytes": 3556,
+          "sha256": "73661a3c5e56ca9e6609a7215c9bb6f8407ae6da309747876556e43bd0978505"
         },
         {
           "name": "dungeon-chest",
           "path": "assets/resources/native/cb/cb4bc05c-f9a5-42a7-8217-ad1020fcd29e.webp",
-          "bytes": 19818,
-          "sha256": "15e5d341fb9e89a9c385332536d610fadbb96a25c7f6dad5771318b64fe4b994"
+          "bytes": 12854,
+          "sha256": "29cdf258858d165d1aa615eb5dbf3b8236678dff5ba33f7d71ab1e5ccf7ae58c"
         },
         {
           "name": "dungeon-merchant",
           "path": "assets/resources/native/8d/8dfe2729-e095-4e55-b533-7860b0f02714.webp",
-          "bytes": 31470,
-          "sha256": "2a1f7ed80fabe550d42eaae3576f7adb5d964165fb665da553c89a0a39d3ddc2"
+          "bytes": 31558,
+          "sha256": "d1618281734f64a1d6b8e0e6330d3f4fec22c470ef732524324e9b52dce4dfd0"
         },
         {
           "name": "dungeon-traveler",
           "path": "assets/resources/native/4a/4af37f32-5da4-4fde-88a9-2b0b8d97a59c.webp",
-          "bytes": 22286,
-          "sha256": "3ed5805a67db83bf4e636709e487e3e5e3c113c386ddc59bc69b2cf649062516"
+          "bytes": 15600,
+          "sha256": "7069789f6f7eeddbe1e3b463dcb4f2a0fa27b9103934851dc427ce55d3f53dc1"
         },
         {
           "name": "gear-arrow",
@@ -316,8 +316,8 @@
         {
           "name": "hero-d",
           "path": "assets/resources/native/25/259c3ac6-c053-4bc5-a5eb-274280e969d8.webp",
-          "bytes": 12096,
-          "sha256": "d8861f79b3a076e8edcf4db687442f955dac16ae958b68aab6196734f6453b79"
+          "bytes": 18778,
+          "sha256": "a28024e2f54ed3655314d9bbf804c14c3997c7502cbbbc894e7b48518f270c02"
         },
         {
           "name": "npc-chief",
@@ -328,20 +328,20 @@
         {
           "name": "npc-innkeeper",
           "path": "assets/resources/native/42/42c65619-9672-4bea-b356-3d93ef2609fa.webp",
-          "bytes": 21406,
-          "sha256": "2ccd6be178cd5a1bf8382ff44ba46e1675988e3978a0a33055c4bcf57cb59dbc"
+          "bytes": 18406,
+          "sha256": "80c9f1157d78fd727fb866c5dcf5cb09ca399430b00bf9b1a74d543de000196a"
         },
         {
           "name": "npc-shop",
           "path": "assets/resources/native/88/88d2df31-42ce-42ef-a8eb-5a4c56825b15.webp",
-          "bytes": 19244,
-          "sha256": "75a56d8fe13bd9e22dfac292a5a99fe8b448191efb1d18e5684b546411b64026"
+          "bytes": 19138,
+          "sha256": "a1fdc55bd661b7c3ada4eed892be5fea36534d314b1977f9ae164055ed5d63e8"
         },
         {
           "name": "npc-smith",
           "path": "assets/resources/native/09/0913ddc3-9cb7-41c0-b506-b8bb0e3b3227.webp",
-          "bytes": 16658,
-          "sha256": "0a5852bc8991dc69775b03cf183a448a4198778b1d26e228d2768e5808d1d77a"
+          "bytes": 16650,
+          "sha256": "8d5e3cb4461b7aec7f67e0d87605e2a571bf1f7d1062470936ffd5e7f9b6b336"
         },
         {
           "name": "slot-accessory",
@@ -374,63 +374,51 @@
           "sha256": "9119421022f9e3ccc4b94804393aa90925a3246ce908eae6a2b27e89f6be08f0"
         },
         {
-          "name": "travel-village-plains",
-          "path": "assets/resources/native/2a/2ac9ae0d-e3ad-4f62-b7bc-003ce580ea57.webp",
-          "bytes": 18596,
-          "sha256": "f960ab9c2a82b094df9dfa1453c198f8f598226c9aa734cdda84601c2455a691"
-        },
-        {
           "name": "village-chief-stage",
           "path": "assets/resources/native/6d/6d17d06a-a20d-447d-8299-77daf955b52f.webp",
-          "bytes": 75708,
-          "sha256": "82fe5ac104e2228680f3107f16322516dcb66bf7e57425905d29264415c30b7f"
+          "bytes": 81072,
+          "sha256": "907f9ff788074695cf642d1d948b5fe8c91cabaf79e4af82d1f29b04a4babac5"
         },
         {
           "name": "village-navigation",
           "path": "assets/resources/native/5a/5a138e5f-63c1-4c87-ae53-d04f77f9eb2e.webp",
-          "bytes": 287960,
-          "sha256": "6a291daacae0a2948a169c76dd5f401cc916dd8fd6506e8039773437fc637cf9"
+          "bytes": 103250,
+          "sha256": "1c654153fe39172642cdbbc3f69d59a23357e19a84fc364d95556bc250fc30be"
         },
         {
           "name": "village-shop-stage",
           "path": "assets/resources/native/5c/5c248df9-9fa5-4801-b30d-1b1c2018da0f.webp",
-          "bytes": 77448,
-          "sha256": "2562c99bd7dc74d355cb620ba99068e4b61989a4bf10dc3c5587e66b7c8409f6"
+          "bytes": 82854,
+          "sha256": "b0ea9cfa54b2bc6db9892e3acb3c01547a2b782137a30d38da254b5629ce810d"
         },
         {
           "name": "village-smith-stage",
           "path": "assets/resources/native/a0/a0a7ad10-ff6e-4982-be49-731220c9577b.webp",
-          "bytes": 80062,
-          "sha256": "0c487586b4ae736316bc11d046dbc38a13f5941ed8f71b1bfd25f3e5f678c7ee"
+          "bytes": 88306,
+          "sha256": "c08d0fa78dd121b60586ec9328d710994f7d304ef61ae53cac09519623e5ded3"
         },
         {
           "name": "village-stage",
           "path": "assets/resources/native/ab/ab28877e-dbb9-48eb-9e82-46a0c7c6fcb2.webp",
-          "bytes": 96588,
-          "sha256": "ab72912c1edfc47f884195842c2f82d35a28d20cff6d3e6e261db4dbfa019ad2"
+          "bytes": 102552,
+          "sha256": "662641d3d2715292ed88f9492df4f9f3eaa443d62eb86f4125edc69db7286908"
         },
         {
           "name": "village-tavern-stage",
           "path": "assets/resources/native/09/09609d55-2cc0-484a-8a7c-fff5c6e67b71.webp",
-          "bytes": 73946,
-          "sha256": "a72ae784559dbd0b8776c072324b3a3136ad1ce63a3fceff2b9c08c627a109fe"
+          "bytes": 78722,
+          "sha256": "fc4412522b13925f47069cd2026c17195f42e70bcf348a4693965b509a38c1a6"
         }
       ]
     },
     "forest": {
-      "bytes": 233240,
+      "bytes": 86592,
       "assets": [
-        {
-          "name": "bear",
-          "path": "assets/resources/native/a1/a105e543-2622-4499-97b9-95162ace5e85.webp",
-          "bytes": 25404,
-          "sha256": "4999cb5a008ed823060bc211879d064608baf98d9826c7d2bfc510dc22194dfc"
-        },
         {
           "name": "boar",
           "path": "assets/resources/native/1a/1a00c315-ebd2-401d-9258-0bffe4de6876.webp",
-          "bytes": 17306,
-          "sha256": "31eec66fb656cbe61c457675c1e137343f894355228ef48f6f47a0b30310888f"
+          "bytes": 17238,
+          "sha256": "7d7de32f2879bc9fd3246eb0a9acfd55035d125a607f510ec7b11ef320d11605"
         },
         {
           "name": "forest-bear",
@@ -445,33 +433,21 @@
           "sha256": "fb05332da3d21f5715f7112ecc49c235906595d7e9f183fc55ed6171bdbf95f3"
         },
         {
-          "name": "forest-reel",
-          "path": "assets/resources/native/43/431f2004-d981-4296-b8a2-6b5a940c505b.webp",
-          "bytes": 116490,
-          "sha256": "5d5534f2baf1ed94baa5a3567fa0db2059b1c2626156a4ce4c943bcfebdd9458"
-        },
-        {
           "name": "forest-stone",
           "path": "assets/resources/native/32/321486c5-7bde-491b-a1f8-75896e32ef7b.webp",
           "bytes": 23244,
           "sha256": "bb4a47cb35a5fd67183047a1a181992cdc1f1d055dbf9fc7410e8f6b2a5dfc86"
-        },
-        {
-          "name": "map-forest",
-          "path": "assets/resources/native/c5/c5bfd9ae-c6f5-4648-acff-975e8844e332.webp",
-          "bytes": 4686,
-          "sha256": "b2eae37d811b5074f25edd226de13be386fff85ab59497394bf0bbe32a5ef2d8"
         }
       ]
     },
     "mine": {
-      "bytes": 261050,
+      "bytes": 196606,
       "assets": [
         {
           "name": "bat",
           "path": "assets/resources/native/12/1225824a-6e75-408d-b4cf-059cc262251d.webp",
-          "bytes": 17074,
-          "sha256": "62f30d59fed3c8ba8f4c0eeda32b102a39a62d43dc652e5af5338f7032282c34"
+          "bytes": 10308,
+          "sha256": "b4140394f3bc72242c6fe1a91bae62277b307bd3be451015f98ea8d5728afdaf"
         },
         {
           "name": "beetle",
@@ -486,45 +462,21 @@
           "sha256": "e827cd9272af998f48865ed243d80d99046dce547bd5ea332c84c83173013c46"
         },
         {
-          "name": "map-mine",
-          "path": "assets/resources/native/79/7910a945-53d9-439c-928d-b2406b75e670.webp",
-          "bytes": 4470,
-          "sha256": "2aaae50ae827356b95d6d07a7ad646a94753026b15a9891207c840ce42b21450"
-        },
-        {
-          "name": "mine-reel",
-          "path": "assets/resources/native/dc/dcab50e8-058d-4d9f-a37d-cde2c454846f.webp",
-          "bytes": 62612,
-          "sha256": "a441eb960833aa520356259fb784ff22e2c4054fd79c94e18436592b21cc27dc"
-        },
-        {
-          "name": "travel-mine-edge",
-          "path": "assets/resources/native/f9/f99bcbed-2cf4-4f26-87c9-4703c39ed655.webp",
-          "bytes": 24630,
-          "sha256": "f556693274ac3716017df7097faab75a6a0c723348f923a2d1f945b8625f2fb0"
-        },
-        {
-          "name": "travel-mine-plains",
-          "path": "assets/resources/native/ce/ceef0ef1-1cdc-4424-9e74-29a4fc80961b.webp",
-          "bytes": 18488,
-          "sha256": "934c7742154453827dd4eccb28fecec20adead8d131a7b459f24d02962cf0e40"
+          "name": "corridor-mine",
+          "path": "assets/resources/native/ce/ce670ed8-e4ed-57c0-8d14-eaed9e48288a.webp",
+          "bytes": 52522,
+          "sha256": "49340bd27b5ebf7847adab3283ee91e0fa324ee761ac4b8a377294dd9cc4e358"
         }
       ]
     },
     "swamp": {
-      "bytes": 301728,
+      "bytes": 276224,
       "assets": [
         {
           "name": "frog",
           "path": "assets/resources/native/10/10f23d81-a2a5-49c6-b4b3-900ba2d094a5.webp",
           "bytes": 79876,
           "sha256": "540ef296b0d776c0f88a46edfd46fb139a6639a3a468c2e8f146340ae3333256"
-        },
-        {
-          "name": "map-swamp",
-          "path": "assets/resources/native/c9/c9809d47-d40a-4310-b937-ef08441806c1.webp",
-          "bytes": 4382,
-          "sha256": "2053605e9351039bdc1275bfd793932ae73e6eabc475e14890de6a5d4b2f1eb5"
         },
         {
           "name": "murloc-axe",
@@ -545,27 +497,21 @@
           "sha256": "3d582d1c45c5a17b1e441d81d6aee78fa6549d53ec3dc9464b1eb9fb74ae3f93"
         },
         {
-          "name": "swamp-reel",
-          "path": "assets/resources/native/cb/cb1be93e-f557-426e-b4c6-6a1cfe00d6bc.webp",
-          "bytes": 85066,
-          "sha256": "3284bebad2f92bc377ea370351b5e1d50ac92f5080b15ef768707a47c01d81f7"
-        },
-        {
-          "name": "travel-swamp-plains",
-          "path": "assets/resources/native/a3/a3242ea6-4478-4853-a998-a4e364c87350.webp",
-          "bytes": 19428,
-          "sha256": "3efecea8010fb6b54510cf3c495042f55dbf480ab69e750b75b253ecd4d24e79"
-        },
-        {
           "name": "vine",
           "path": "assets/resources/native/1c/1cb7102b-36f1-4cab-821d-2a21906a7d08.webp",
-          "bytes": 34098,
-          "sha256": "b6f5d975f7b98c715a929415f769aadf93ef452473057f161cb0a03a05953786"
+          "bytes": 39102,
+          "sha256": "76f851f7f88024b455a997a92c8f46dd31c580c21d95fea9ac7fb6fd50dc906a"
+        },
+        {
+          "name": "corridor-swamp",
+          "path": "assets/resources/native/3e/3ecb816e-9f91-5b56-9858-ac5113b2e7c9.webp",
+          "bytes": 78368,
+          "sha256": "7192059d45f5d0953f8de8ea325daca25e62ed09d4b2890c88ea3bb773bdf885"
         }
       ]
     },
     "tower": {
-      "bytes": 744052,
+      "bytes": 812540,
       "assets": [
         {
           "name": "dragon",
@@ -576,14 +522,14 @@
         {
           "name": "ghost",
           "path": "assets/resources/native/74/74815c62-e9e8-49b0-aad1-006b71ac4881.webp",
-          "bytes": 82010,
-          "sha256": "0b745d5da25110e7483a00bfa754ad9e19b2b3a645eb1f6192fd199dd8b18920"
+          "bytes": 67574,
+          "sha256": "98ffed2ad7205cd5c4c2609cb4e6f369044b7b46c07e0fd9d76bc37849c658dd"
         },
         {
           "name": "hero-m",
           "path": "assets/resources/native/c2/c28bafca-d62d-401c-8312-86e1cf54fb50.webp",
-          "bytes": 12316,
-          "sha256": "491674765cbbc37270baf8ff220dfebddb57a1c7a78939a94d7a0a5be4cbc6c6"
+          "bytes": 19348,
+          "sha256": "39a079d6f5f821b54dbc90eda50f333721fbe9ce2000199794ddd04983625616"
         },
         {
           "name": "knight",
@@ -600,32 +546,430 @@
         {
           "name": "m",
           "path": "assets/resources/native/82/8257d7d7-27d6-4c80-936a-c23506540d93.webp",
-          "bytes": 7208,
-          "sha256": "912f628177ed03f4b362b18ff021bdb500d9e1549a87a6eeb7d60729b941625b"
-        },
-        {
-          "name": "map-tower",
-          "path": "assets/resources/native/48/487e5211-1749-4e2a-bbb8-f902ab8f4ee1.webp",
-          "bytes": 3888,
-          "sha256": "b24bb93268ba94353649dcddc4f72d862496b96983ecc519433b97ddc096ccf6"
-        },
-        {
-          "name": "tower-reel",
-          "path": "assets/resources/native/ee/ee6a061a-5e73-44e4-952e-96d7f66435e7.webp",
-          "bytes": 139772,
-          "sha256": "beb6e60274d0be4ab03a0be890c7fc5584a65638dffa7b4500998d0bbb62ad53"
-        },
-        {
-          "name": "travel-tower-plains",
-          "path": "assets/resources/native/0f/0f29b9ed-8f2d-49ab-9c57-1710d9c70485.webp",
-          "bytes": 23402,
-          "sha256": "5c65dc8b3ee600c3286c0e8fc7e9bd666f8f761b574fdbdd1b8cdf0466961ffe"
+          "bytes": 3388,
+          "sha256": "28ebc9b2fe2f6f7d8b53434758fda75874d553b6770a269d52b87f57b1b3bf80"
         },
         {
           "name": "wizard",
           "path": "assets/resources/native/9e/9e7dfaa7-423a-402c-a14d-1d6e542400bf.webp",
           "bytes": 109396,
           "sha256": "f135c270c7567f4f479283635afc4fbf818f132a80cb0973f13ccbdb960ce9ad"
+        },
+        {
+          "name": "spire-oracle",
+          "path": "assets/resources/native/5d/5d6e1e2c-24ba-5a3e-83c8-3e307685153e.webp",
+          "bytes": 28022,
+          "sha256": "e2b01d05c14fe6959273d26f0c2dbee8bb7f0d717e3ce3a234fb4adc1388b61e"
+        },
+        {
+          "name": "spire-ooze",
+          "path": "assets/resources/native/d8/d8d9cbc2-8e16-5c76-90a7-288067bd0937.webp",
+          "bytes": 14032,
+          "sha256": "751a33ccfb149fdde27dd6be3c9d2b7e37a3b3bf30a633134f7f3952d9b248eb"
+        },
+        {
+          "name": "spire-dragon",
+          "path": "assets/resources/native/65/65a32d8c-e5d2-5c72-83c1-0949dd8447a9.webp",
+          "bytes": 25460,
+          "sha256": "13a74302cc4cf2e6b936cfb45e5d7a0b5ce1d8266f3237133ad87facb63e8ed4"
+        },
+        {
+          "name": "spire-trader",
+          "path": "assets/resources/native/8d/8d32add7-a17c-5357-bb58-fd75b85cf0d9.webp",
+          "bytes": 25860,
+          "sha256": "a44d37b56a0bc6b2f255efc89a8cbbcef53f5c09636593bb1c2a6ad596846678"
+        },
+        {
+          "name": "spire-knight",
+          "path": "assets/resources/native/32/328fa704-0849-5637-af87-5623b6568e46.webp",
+          "bytes": 27880,
+          "sha256": "32990bec71cf74bc2f0801a1e6f3a92c7cf3dcbe76d0841f510240e162051bd5"
+        },
+        {
+          "name": "spire-acolyte",
+          "path": "assets/resources/native/e5/e57a8a80-3c8d-513b-b5c4-b81bb0033a1f.webp",
+          "bytes": 24716,
+          "sha256": "121b29d76cbf30a75d912078ac265fe5bd5f48d276e927d3a66fc89216318c06"
+        },
+        {
+          "name": "spire-knife",
+          "path": "assets/resources/native/13/13c42713-69be-59f1-9bc8-166b7c3d26ad.webp",
+          "bytes": 22938,
+          "sha256": "4f2674e7073f1132babea6a9f43482ffdbfbff58296a2a5fd8d23f6fae4d05ff"
+        },
+        {
+          "name": "spire-bow",
+          "path": "assets/resources/native/b3/b356703b-0f4b-5fd6-b0bd-403e6b2658c1.webp",
+          "bytes": 25170,
+          "sha256": "83060acc0de599cda70ec2a34c5e186d91847c1f20f701165d13e254f29bcf34"
+        },
+        {
+          "name": "spire-shield",
+          "path": "assets/resources/native/ca/ca3dfb94-41e1-5713-bf03-d50e07cccd9e.webp",
+          "bytes": 24040,
+          "sha256": "67ea59a9a431253e7601da63d34714e27585a2b4116dcb50336e45f5c89406f5"
+        },
+        {
+          "name": "corridor-tower",
+          "path": "assets/resources/native/60/607bd360-1772-5823-88d7-2766bd4883ea.webp",
+          "bytes": 28656,
+          "sha256": "54c733670ab8fe3a3596a90c7656fa2ea9575dac26536cad12080340848cd370"
+        }
+      ]
+    },
+    "undead": {
+      "bytes": 393306,
+      "assets": [
+        {
+          "name": "bone-archer",
+          "path": "assets/resources/native/6b/6bd306d0-8683-58fd-a904-e5c1e966059f.webp",
+          "bytes": 29000,
+          "sha256": "2f42feb6352a917d8c4860096c3502c4783b01ca40bd327d5553316f59e579fe"
+        },
+        {
+          "name": "bone-shield",
+          "path": "assets/resources/native/9a/9a1f3407-59a6-556a-bb83-550974971c78.webp",
+          "bytes": 24874,
+          "sha256": "8baf61fc6a473a6e46faf7332bd750228ed653e4a781587bd64660343b5212b8"
+        },
+        {
+          "name": "bone-captain",
+          "path": "assets/resources/native/46/46ef4b59-bfb1-5486-b9ef-9dca2a1bb3a8.webp",
+          "bytes": 25888,
+          "sha256": "a738c271700cf27684772099c2516108d4a6ed6781ffb3b685b46f0e8fc48c3c"
+        },
+        {
+          "name": "grave-walker",
+          "path": "assets/resources/native/1e/1e741d5c-b617-56f2-aaa9-e0ae272e45b3.webp",
+          "bytes": 22740,
+          "sha256": "be0d14518c3e0c48ee8d3fbc9c8e0caa4ab0c2bab16f4174aebea74c507c89d3"
+        },
+        {
+          "name": "grave-ghoul",
+          "path": "assets/resources/native/83/83a81009-1113-53c7-8312-75d3c1b854d2.webp",
+          "bytes": 25282,
+          "sha256": "c7ed0fc6966701d46e85f67b46096ecd29bb0f01792812af28f544cbbdcae419"
+        },
+        {
+          "name": "veil-wraith",
+          "path": "assets/resources/native/41/41707c8d-c0b6-5a74-a51d-f96151527263.webp",
+          "bytes": 25256,
+          "sha256": "bcd4b0c24111f09e78f3046be40e3223c5cbba89483997115344ebd46d287266"
+        },
+        {
+          "name": "grave-shade",
+          "path": "assets/resources/native/c4/c49c5bfe-eaa5-5fc8-a69c-37a82bb10a6c.webp",
+          "bytes": 23856,
+          "sha256": "e2b6377623e02b5179eb45df1c146854b06fbc9625216ba23909f0195c3066d9"
+        },
+        {
+          "name": "grave-rider",
+          "path": "assets/resources/native/9b/9bb1e362-7469-5429-ba09-535110263481.webp",
+          "bytes": 33996,
+          "sha256": "ab552d87d40b375f5f922723aa78d9ec38d297c578a1bcfcb2e1d7a1645bf6b0"
+        },
+        {
+          "name": "grave-lich",
+          "path": "assets/resources/native/24/24e41191-ea8d-5644-bfa6-d5bd54e0c4ab.webp",
+          "bytes": 28340,
+          "sha256": "445afb53b239efa8c4f9a7d9d07c935722bd7c1a3ec0814bf0c7a78f766479fc"
+        },
+        {
+          "name": "undead-reel",
+          "path": "assets/resources/native/d7/d76e5ce9-04c2-5087-8b62-b68c4b14d95c.webp",
+          "bytes": 94764,
+          "sha256": "255dfd801e1b68d500c0a24a95cae283a46eeff455b26120481ae00141a84096"
+        },
+        {
+          "name": "corridor-undead",
+          "path": "assets/resources/native/5b/5baf3b83-4243-5ad2-9f34-470f9231b2e9.webp",
+          "bytes": 59310,
+          "sha256": "d2de81f2075151c187763ffeb778e5f4ed11b356477e9f6ed8b421676319a4ea"
+        }
+      ]
+    },
+    "goblin": {
+      "bytes": 327770,
+      "assets": [
+        {
+          "name": "fort-boar",
+          "path": "assets/resources/native/0b/0b2eb066-474a-53da-8744-755091735655.webp",
+          "bytes": 17350,
+          "sha256": "17920f544b49f8027ffbb071f3f0d9b0543a1c8acc9d5be7ab9a7667c31074e0"
+        },
+        {
+          "name": "fort-tusk",
+          "path": "assets/resources/native/17/171c7ec4-3166-51c3-9cfa-daa151c59cc4.webp",
+          "bytes": 21592,
+          "sha256": "525282a69dc7d0c99d4aec7a302fa05ad41c13c0277d5e590240f08740a2a7f2"
+        },
+        {
+          "name": "fort-club",
+          "path": "assets/resources/native/23/23ed6a9c-8493-5cc9-b842-51e917b21672.webp",
+          "bytes": 23908,
+          "sha256": "4fa300c9e8188aaba99bfe3ea5a1cf128561cd2b3433b601ab27700624fc73ba"
+        },
+        {
+          "name": "fort-brute",
+          "path": "assets/resources/native/e0/e06e1fba-a4dd-590b-980c-bae7e61f8d38.webp",
+          "bytes": 25696,
+          "sha256": "006bfe4ba48b39cd9eed2e6960bee148ae981f1ccb75b8b9424e5ba9e443c9e2"
+        },
+        {
+          "name": "fort-pike",
+          "path": "assets/resources/native/5d/5d4acf3c-c3b3-5fdc-a02c-43101ae73cf4.webp",
+          "bytes": 23638,
+          "sha256": "f2f55be7906ce5a8714a7323f1af5f2376370af5604d375bfaa7a4e4d5321190"
+        },
+        {
+          "name": "fort-bomber",
+          "path": "assets/resources/native/d1/d1802b39-e94d-5429-a63c-d97d881601d8.webp",
+          "bytes": 25710,
+          "sha256": "ba13a49cc34481e76c1ef02298050d8236920cc5f37c34d6b4bbe4a576bac8c5"
+        },
+        {
+          "name": "fort-rider",
+          "path": "assets/resources/native/ca/ca7de773-0df0-5da4-ac9e-ab07e130c19d.webp",
+          "bytes": 26814,
+          "sha256": "4a6fb2f5e02e8d82e1980f3c0da2044736545123f51ee7c4e30125bef9c82920"
+        },
+        {
+          "name": "fort-knife",
+          "path": "assets/resources/native/95/95401ba8-96b7-5cf8-8d3e-abc3916b03d2.webp",
+          "bytes": 25230,
+          "sha256": "902c33ef706839d3dcbb8b238a9d1ac5af31c806d3368683c402dffa4e86f8e9"
+        },
+        {
+          "name": "fort-king",
+          "path": "assets/resources/native/9f/9f24a5a3-af38-583f-b658-6a07422ad346.webp",
+          "bytes": 28168,
+          "sha256": "f4a8d320ae275f3f500e9e22f5e755a77ededcd9d135c14aab0a47836e434804"
+        },
+        {
+          "name": "goblin-reel",
+          "path": "assets/resources/native/db/db70fb4d-8d8e-5094-8c0e-a9a1214ca60f.webp",
+          "bytes": 58546,
+          "sha256": "31c664b7532abd255d5a05756ecc8400e83583afb39cc75479d6b99ea563a5d9"
+        },
+        {
+          "name": "corridor-goblin",
+          "path": "assets/resources/native/ab/abacd813-cfb2-5d40-8fd7-b7ac29839911.webp",
+          "bytes": 51118,
+          "sha256": "b2a5f2d45f8fbe25cd5ddfd449da2865e1eb5ddcd546d5f19ec6edf1c44e4837"
+        }
+      ]
+    },
+    "desert": {
+      "bytes": 379408,
+      "assets": [
+        {
+          "name": "sand-scout",
+          "path": "assets/resources/native/27/27c65712-3f9b-5a55-ade4-fcf1d27df704.webp",
+          "bytes": 28372,
+          "sha256": "2c4be69eddccc92cf89ec6b3585613af041a61ab817eb81f96ed9fe5edd2ef97"
+        },
+        {
+          "name": "sand-bow",
+          "path": "assets/resources/native/6a/6abcaa86-6203-5c07-b0dd-50265bc913fe.webp",
+          "bytes": 32070,
+          "sha256": "5527ee92250a6069ddb01c0bb4d6165705a22b519170be4d4c01baa5b17a030c"
+        },
+        {
+          "name": "sand-seer",
+          "path": "assets/resources/native/64/64642518-ee18-5a7d-b1fd-100aabc311d5.webp",
+          "bytes": 31672,
+          "sha256": "10a9568f31cd336e45c7d5142c1263e5fe42c7a26f74e5b72714823134835652"
+        },
+        {
+          "name": "sand-guard",
+          "path": "assets/resources/native/2e/2e1f7859-a008-5006-a648-491b480de14c.webp",
+          "bytes": 29764,
+          "sha256": "1eb294a8370e466a7387088e8dbd5336a225ca8e379fc6ff04a9945b9c7d4b99"
+        },
+        {
+          "name": "sand-captain",
+          "path": "assets/resources/native/68/689b32ad-fd5b-52c7-af47-ae438287f41c.webp",
+          "bytes": 32016,
+          "sha256": "623990a482a93fdffa7f6580eb0e3c749cec229bd35d4a516a125da9799c2d8e"
+        },
+        {
+          "name": "sand-scorpion",
+          "path": "assets/resources/native/29/292894c0-5319-559e-a894-93d25d93eb45.webp",
+          "bytes": 30864,
+          "sha256": "e08410693f6b7032ba0622e9b570636388470c8550d41d863de0ed192be7aca3"
+        },
+        {
+          "name": "sand-worm",
+          "path": "assets/resources/native/9f/9fc19ec0-543b-5495-b156-518e67fd00b8.webp",
+          "bytes": 29212,
+          "sha256": "e4341831ba1c8ab01c035ac8f95b8ef6ca87c80908fadb7ce769ffeb43a8c011"
+        },
+        {
+          "name": "sand-vulture",
+          "path": "assets/resources/native/72/7224500d-ca74-5147-9ae9-1d4c3da017b0.webp",
+          "bytes": 27604,
+          "sha256": "ac9752c30e5ad8ede022c3316df646e51596d78cb655ba87fff6c526b8d04f77"
+        },
+        {
+          "name": "sand-jackal",
+          "path": "assets/resources/native/fe/fe0a1695-b24f-52bf-9bf1-ce78fa8755bc.webp",
+          "bytes": 21646,
+          "sha256": "d11458887bfcbccb51f28c9051d40301d64bc35624b34977baa7921ec2b62c7b"
+        },
+        {
+          "name": "sand-colossus",
+          "path": "assets/resources/native/7a/7a2e8eb6-ff8f-5858-9aeb-62d6e69a92a1.webp",
+          "bytes": 27808,
+          "sha256": "4dd60991351809d9bf0518150fc74e465f31ef191d6f6560173dda2e365a9c6f"
+        },
+        {
+          "name": "desert-reel",
+          "path": "assets/resources/native/6a/6aece6e8-de6f-5056-8224-c2d16e54fcb3.webp",
+          "bytes": 44956,
+          "sha256": "99b43418ea7ff80dba526c060a845d55c1b1e2e8fe808f680b20fcfd35b30025"
+        },
+        {
+          "name": "corridor-desert",
+          "path": "assets/resources/native/1f/1f1a991c-1f37-5a16-95d4-d1f81cabf041.webp",
+          "bytes": 43424,
+          "sha256": "b4006b565dba657148e48c0545771269087093bd9496033174a77eb1f6388943"
+        }
+      ]
+    },
+    "roster": {
+      "bytes": 278154,
+      "assets": [
+        {
+          "name": "hero-archer",
+          "path": "assets/resources/native/ee/ee24428e-6df4-581d-af47-8a97b803799b.webp",
+          "bytes": 22292,
+          "sha256": "5330e591ef98aaf2064cd016867f4924ca30fc36e226923614fd65187ed69dbd"
+        },
+        {
+          "name": "archer",
+          "path": "assets/resources/native/f6/f6f55ca7-ff3a-52b9-bff4-13148ef55a8d.webp",
+          "bytes": 4426,
+          "sha256": "dc1d971dfe14d6656beba8c647f5fa1752aca3491d463a6b9186b4b09904b2af"
+        },
+        {
+          "name": "hero-ninja",
+          "path": "assets/resources/native/bc/bc8d8966-4e01-5395-a73b-c6872293dbd1.webp",
+          "bytes": 15224,
+          "sha256": "a8e40ba5d9b2dc79d60b7e56da2d231532355a4eed01faee0298f4dbccd4290a"
+        },
+        {
+          "name": "ninja",
+          "path": "assets/resources/native/2c/2ce599ab-cd26-5c6a-925f-747fba49bf91.webp",
+          "bytes": 3612,
+          "sha256": "6bdd0d0968a3cfedf185eca69ff519e7b7adad7bfa16f5a85d6093a0d23ccbe5"
+        },
+        {
+          "name": "hero-monk",
+          "path": "assets/resources/native/b1/b1d73665-2704-53a1-80c9-026e9f3afe86.webp",
+          "bytes": 21110,
+          "sha256": "4cc3ee2e74eb2580daefa6b1d9cccc491885485009c00f0af2f3ba94bf9ad82d"
+        },
+        {
+          "name": "monk",
+          "path": "assets/resources/native/e9/e97fee88-4af0-56de-92b1-e40a7ad7adac.webp",
+          "bytes": 4848,
+          "sha256": "bab6f0f4d177102c63cabb9f3219d80d941f3c4805bb9b2e459f2d03d6fc97d5"
+        },
+        {
+          "name": "hero-bard",
+          "path": "assets/resources/native/a7/a7dd079f-2bf0-523f-8cfe-094ffdf316e7.webp",
+          "bytes": 21120,
+          "sha256": "104a06418eae52327fd12b3fe78595b86625cb2fbf499e56258e56b56d21c3b2"
+        },
+        {
+          "name": "bard",
+          "path": "assets/resources/native/ab/ab00083d-e2a7-596d-bbc0-01eecb640cae.webp",
+          "bytes": 4194,
+          "sha256": "dc5799198c9117caa753a139c7cce761bba71144511e22f76137d558f8cbecfb"
+        },
+        {
+          "name": "hero-lancer",
+          "path": "assets/resources/native/2e/2eab1e43-65bb-546d-82af-20bab397a2c6.webp",
+          "bytes": 17140,
+          "sha256": "bbd6e64718d0ef02b6478cd867eebdc8ecf9b1f86b0821bbc889f4e9bc7194e7"
+        },
+        {
+          "name": "lancer",
+          "path": "assets/resources/native/f4/f43122aa-17a4-5e55-b1d2-fa2d7916b3d7.webp",
+          "bytes": 4648,
+          "sha256": "4158eccc4ef52dd6a180b48a37eae2f352aa26b7d4629fd733e8d8f2b08b49e8"
+        },
+        {
+          "name": "hero-berserker",
+          "path": "assets/resources/native/76/76572c33-f0a9-5002-b792-c7e85e767f76.webp",
+          "bytes": 19866,
+          "sha256": "558ea163491fa1d69706821be467d52e8ef07f8cfff0ce678779b32342c3b9f0"
+        },
+        {
+          "name": "berserker",
+          "path": "assets/resources/native/ee/ee97b1b9-3113-55ef-82ab-b0db9c50dd1b.webp",
+          "bytes": 4796,
+          "sha256": "08aa9151591043b5ae8bc20a108bd4b171e7bd3b4eeee443c68475b90e649900"
+        },
+        {
+          "name": "hero-scholar",
+          "path": "assets/resources/native/c1/c16424b8-072a-58ec-8b67-1d0b6f35f41a.webp",
+          "bytes": 20576,
+          "sha256": "47138f8696c275559cac678dfbb4f24344a892d6867a543661015a57b0d41826"
+        },
+        {
+          "name": "scholar",
+          "path": "assets/resources/native/f1/f10a523c-63d0-5899-a8ea-779d6df638d9.webp",
+          "bytes": 4612,
+          "sha256": "78973a8cbf51a12ce8e8d06fdc959176af4c89c7346b17957800113dede4e011"
+        },
+        {
+          "name": "hero-tide",
+          "path": "assets/resources/native/cc/cc1f540d-44a1-5604-9e9c-a9a6cfffb714.webp",
+          "bytes": 21936,
+          "sha256": "e98a16a01b01988a3759ac34e5e8be947481f90d69b580f6ecbb021a095b8a75"
+        },
+        {
+          "name": "tide",
+          "path": "assets/resources/native/f7/f724efd6-e8c8-518b-8fe7-43cb4ffa64d5.webp",
+          "bytes": 3910,
+          "sha256": "786de1bc73850adef82baf1f2c823ada4d92719d6011442129d01c5abfb5371f"
+        },
+        {
+          "name": "hero-warlock",
+          "path": "assets/resources/native/08/08f30970-1f01-5574-ae1f-cef8e05f25ee.webp",
+          "bytes": 21836,
+          "sha256": "03553aee5c69c4d398806927fdc3584e0fba4ee5684019f1f9e05e4346c962c0"
+        },
+        {
+          "name": "warlock",
+          "path": "assets/resources/native/18/1840354f-09eb-5e5d-85cf-990e1e0fd3ba.webp",
+          "bytes": 4572,
+          "sha256": "c0f48af612c6ec69d05f4f3ae3848793c5236b25f408c30e0b1dccaa0b122414"
+        },
+        {
+          "name": "hero-alchemist",
+          "path": "assets/resources/native/94/94fc6895-5762-540b-ade0-656d248cc9c6.webp",
+          "bytes": 22630,
+          "sha256": "5bca5feb29934c412b810a21a4b30594ed08d60a87ef94924f561141edbd23a0"
+        },
+        {
+          "name": "alchemist",
+          "path": "assets/resources/native/b3/b3b54872-72d8-5029-97d2-126c1e5f44af.webp",
+          "bytes": 3644,
+          "sha256": "68419b68f1f76760951a1d672c86483e0bdff7c2021936c31a1a249e086c6553"
+        },
+        {
+          "name": "hero-valkyrie",
+          "path": "assets/resources/native/43/43e8cbb9-833e-5dc7-ba6f-def834266e69.webp",
+          "bytes": 26866,
+          "sha256": "22d07b77855999d6a5a4f4fd91411548dbfa87637c004a52a174d1beca094265"
+        },
+        {
+          "name": "valkyrie",
+          "path": "assets/resources/native/ab/ab1703d0-600b-5126-b833-639e8401d95f.webp",
+          "bytes": 4296,
+          "sha256": "55108e22dc38f7da36766c60f6d1496ad646a670368c9a545c22833382446b58"
         }
       ]
     }
