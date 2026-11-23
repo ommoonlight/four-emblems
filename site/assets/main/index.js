@@ -4011,21 +4011,21 @@ System.register("chunks:///_virtual/Campaign.ts", ['./rollupPluginModLoBabelHelp
             visitors: visitors,
             reward: (_reward = {
               gold: 14 + sites.length * 2
-            }, _reward[material] = 3 + i, _reward)
+            }, _reward[material] = 1 + i, _reward)
           });
         });
       }
-      chapter('forest', 'herb', [['林缘驿道', 5, '村民丢失的村徽上沾着树脂。沿车辙找运石人。', '驿站车夫交出第一张运单，上面压着古树的叶印。', 'forest-leafguard', '驿道叶盾长'], ['古树猎场', 7, '猎户听见伐木声。赶在古林被砍空前找回界桩。', '米拉从树腹取出界桩。桩下刻着一座废矿的编号。', 'forest-treant', '断枝长老'], ['熊灵山口', 8, '山口的熊灵守着最后一车木料，轮毂里藏着矿图。', '熊灵退入密林。雷恩展开矿图，第一条红线通向东井。', 'forest-bear', '苔林熊灵', ['bat']]]);
+      chapter('forest', 'essence', [['林缘驿道', 5, '村民丢失的村徽上沾着树脂。沿车辙找运石人。', '驿站车夫交出第一张运单，上面压着古树的叶印。', 'forest-leafguard', '驿道叶盾长'], ['古树猎场', 7, '猎户听见伐木声。赶在古林被砍空前找回界桩。', '米拉从树腹取出界桩。桩下刻着一座废矿的编号。', 'forest-treant', '断枝长老'], ['熊灵山口', 8, '山口的熊灵守着最后一车木料，轮毂里藏着矿图。', '熊灵退入密林。雷恩展开矿图，第一条红线通向东井。', 'forest-bear', '苔林熊灵', ['bat']]]);
       // The hunters give their lead after the third group leaves the woodland approach.
       sites.find(function (site) {
         return site.id === 'forest-2';
       }).opening = 'woodland-ambush';
       chapter('mine', 'ore', [['东井支巷', 6, '矿图上的红线在东井中断，查清谁拆走了封门铁。', '矿镐上没有工匠印，只有归印会的紫色火漆。', 'beetle', '铁背钳王'], ['赤铜深井', 8, '运单列着三车赤铜，真正要找的是第四辆空车。', '空车内壁刻着钟模。有人要用结界石铸一口召魂钟。', 'golem', '赤铜督工'], ['沉钟铸室', 9, '破开铸室守卫，夺回运往河港的钟模底稿。', '米拉认出钟模上的水纹。货船已经驶进迷雾沼泽。', 'golem', '沉钟铸像', ['murloc-spear']]]);
-      chapter('swamp', 'essence', [['雾苇浅滩', 8, '循吃水线追踪货船，从矛手营地夺回领航旗。', '湿透的旗底缝着一张潮汐表，港口只在退潮时出现。', 'murloc-spear', '苇滩矛长'], ['盐灯渡口', 9, '给渡船重新点亮信号灯，追上转运钟舌的第二艘船。', '渡口守卫交出黑盐，一遇亡灵便泛出银光。', 'murloc-axe', '断桨斧卫'], ['沉潮神庙', 10, '鱼人祭司守着通往亡者之城的渡契。', '伊芙从雾中传信：钟声已经越过城墙，她在城门等你。', 'murloc-mage', '沉潮祭司', ['grave-shade']]]);
+      chapter('swamp', 'essence', [['雾苇浅滩', 8, '循吃水线追踪货船，从矛手营地夺回领航旗。', '湿透的旗底缝着一张潮汐表，港口只在退潮时出现。', 'murloc-spear', '苇滩矛长'], ['盐灯渡口', 9, '给渡船重新点亮信号灯，追上转运钟舌的第二艘船。', '渡口守卫交出黑盐，一遇亡灵便泛出银光。', 'murloc-axe', '断桨斧卫'], ['沉潮神庙', 10, '鱼人祭司守着通往亡者之城的渡契。', '伊芙辨出渡契上的钟纹，带着小队循声赶往城门。', 'murloc-mage', '沉潮祭司', ['grave-shade']]]);
       chapter('undead', 'essence', [['白骨外城', 9, '与伊芙核对钟声，找出在城外列阵的亡灵来自哪座墓室。', '折断的骨旗上挂着城卫的名牌。钟声召回了生前的守军。', 'bone-captain', '白骨百夫长'], ['无名陵道', 10, '穿过送葬道，替无名守军取回失落的军籍。', '在骑士的盾背，罗兰找到一行字：别让他们烧掉名册。', 'grave-rider', '无名冢骑'], ['长夜钟楼', 11, '从死灵司祭手里夺回名册，让钟楼里的人想起自己的名字。', '钟声停了。最后一名守军指向西边：哥布林正在拆走钟架。', 'grave-lich', '长夜司祭', ['fort-knife']]]);
       chapter('goblin', 'ore', [['獠牙围场', 9, '跟随运钟架的野猪，在围场截下军粮与货签。', '货签是一份交换契约。哥布林用整季军粮换取了沙路通行权。', 'fort-tusk', '赤鬃野猪王'], ['火线工坊', 11, '炸药工把钟架拆成了弩车。摧毁工坊守卫，夺取装运清单。', '清单藏在空火药桶下。要塞之王早已把钟心另行出售。', 'fort-brute', '铁锤工头'], ['王旗下城', 12, '攻入王旗下城，逼迫要塞之王交出沙商的买据。', '国王摊开买据，钟心的终点写着日蚀观测台。', 'fort-king', '金牙要塞王', ['sand-scout']]]);
-      chapter('desert', 'crystal', [['红砂商道', 10, '沿沙商的水囊印记追踪钟心，赶在沙暴前找到宿营地。', '营火仍热，沙商只留下半块指向地下的日晷。', 'sand-captain', '赤纱卫队长'], ['吞日沙海', 12, '拼合日晷，穿过沙虫迁徙带找到埋在沙下的观测台。', '石阶深处传来幼龙的心跳。钟声一直在替高塔喂养它。', 'sand-worm', '吞日蠕虫'], ['落日观测台', 13, '从金砂守像掌中取回日镜，照出通往高塔的暗门。', '日镜照出钟心与暗门之间的丝线；队伍循线踏入高塔。', 'sand-colossus', '日镜巨像', ['spire-ooze']]]);
-      chapter('tower', 'crystal', [['紫焰外门', 12, '寻找卖出钟架的夜市商人，他见过第一位持钟者。', '商人承认曾为归印会开门，把通行纹章留在柜台。', 'spire-shield', '紫焰盾卫长'], ['回声环廊', 13, '顺着钟声走过环廊，找出重复呼唤失踪者姓名的人。', '伊芙辨出那是名册的回声。钟心在仿造亡者的声音。', 'spire-knight', '环廊黑骑士'], ['蚀星藏书室', 14, '翻出初代守钟人的誓词，查清怎样让钟心安静下来。', '最后一页写着：守护者可以选择放手。米拉记下每个名字。', 'spire-oracle', '蚀星大祭司'], ['无月塔冠', 15, '在最后一声钟响之前击退暗影龙，把亡者的名字还给故乡。', '暗影龙折翼，钟心归于沉寂。溪桥村重新点灯，七地的驿路再次通车。', 'spire-dragon', '无月暗影龙']]);
+      chapter('desert', 'ore', [['红砂商道', 10, '沿沙商的水囊印记追踪钟心，赶在沙暴前找到宿营地。', '营火仍热，沙商只留下半块指向地下的日晷。', 'sand-captain', '赤纱卫队长'], ['吞日沙海', 12, '拼合日晷，穿过沙虫迁徙带找到埋在沙下的观测台。', '石阶深处传来幼龙的心跳。钟声一直在替高塔喂养它。', 'sand-worm', '吞日蠕虫'], ['落日观测台', 13, '从金砂守像掌中取回日镜，照出通往高塔的暗门。', '日镜照出钟心与暗门之间的丝线；队伍循线踏入高塔。', 'sand-colossus', '日镜巨像', ['spire-ooze']]]);
+      chapter('tower', 'essence', [['紫焰外门', 12, '寻找卖出钟架的夜市商人，他见过第一位持钟者。', '商人承认曾为归印会开门，把通行纹章留在柜台。', 'spire-shield', '紫焰盾卫长'], ['回声环廊', 13, '顺着钟声走过环廊，找出重复呼唤失踪者姓名的人。', '伊芙辨出那是名册的回声。钟心在仿造亡者的声音。', 'spire-knight', '环廊黑骑士'], ['蚀星藏书室', 14, '翻出初代守钟人的誓词，查清怎样让钟心安静下来。', '最后一页写着：守护者可以选择放手。米拉记下每个名字。', 'spire-oracle', '蚀星大祭司'], ['无月塔冠', 15, '在最后一声钟响之前击退暗影龙，把亡者的名字还给故乡。', '暗影龙折翼，钟心归于沉寂。溪桥村重新点灯，七地的驿路再次通车。', 'spire-dragon', '无月暗影龙']]);
       var campaignSites = exports('campaignSites', sites);
       var sitesIn = exports('sitesIn', function sitesIn(region) {
         return campaignSites.filter(function (site) {
@@ -4114,7 +4114,7 @@ System.register("chunks:///_virtual/Campaign.ts", ['./rollupPluginModLoBabelHelp
             coinReward: i === 2 ? 5 : 3,
             xpReward: i === 2 ? 2 : 0,
             materials: i === 2 ? {
-              herb: 2
+              essence: 1
             } : {},
             onClear: i === 2 ? [{
               kind: 'room',
@@ -4166,7 +4166,7 @@ System.register("chunks:///_virtual/Campaign.ts", ['./rollupPluginModLoBabelHelp
 });
 
 System.register("chunks:///_virtual/CampaignAtlas.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Campaign.ts'], function (exports) {
-  var _createForOfIteratorHelperLoose, cclegacy, Mask, ScrollView, Graphics, Node, Color, Vec2, campaignSites, isOpenSite, campaignOrder, sitesIn, regionNames;
+  var _createForOfIteratorHelperLoose, cclegacy, Mask, ScrollView, Graphics, Node, Color, Vec2, BlockInputEvents, tween, campaignSites, isOpenSite, campaignOrder, sitesIn, regionNames;
   return {
     setters: [function (module) {
       _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
@@ -4178,6 +4178,8 @@ System.register("chunks:///_virtual/CampaignAtlas.ts", ['./rollupPluginModLoBabe
       Node = module.Node;
       Color = module.Color;
       Vec2 = module.Vec2;
+      BlockInputEvents = module.BlockInputEvents;
+      tween = module.tween;
     }, function (module) {
       campaignSites = module.campaignSites;
       isOpenSite = module.isOpenSite;
@@ -4206,7 +4208,8 @@ System.register("chunks:///_virtual/CampaignAtlas.ts", ['./rollupPluginModLoBabe
           y: 132 + index * 148 + (seed >>> 16) % 27 - 13
         };
       }
-      function mountCampaignAtlas(view, cleared, guide, heading) {
+      function mountCampaignAtlas(view, cleared, guide, heading, origin) {
+        var _points$campaignSites;
         var points = campaignSites.map(function (site, i) {
           return routePoint(site.id, i);
         });
@@ -4299,17 +4302,83 @@ System.register("chunks:///_virtual/CampaignAtlas.ts", ['./rollupPluginModLoBabe
             return view.visit(site);
           });
         });
-        var offset = Math.max(0, Math.min(height - viewportHeight, height - points[frontier].y - viewportHeight / 2));
-        scroll.scrollToOffset(new Vec2(0, offset), 0);
+        var firstPending = campaignSites.findIndex(function (site) {
+          return !cleared.has(site.id);
+        });
+        if (firstPending >= 0) frontier = firstPending;
+        var goal = points[frontier],
+          dockY = goal.y + 48;
+        var ship = view.box('浮空艇', goal.x > 0 ? goal.x - 119 : goal.x + 119, dockY, 100, 80, undefined, pins);
+        view.shipArt(ship);
+        view.mark(ship, 'village');
+        ship.on(Node.EventType.TOUCH_END, view.dock);
+        var nav = view.box('导航到飞艇', 0, 0, 185, 46, '#293d34');
+        var caption = text('', 0, 0, 173, 20, nav, '#fff0bf');
+        var offsetFor = function offsetFor(y) {
+          return Math.max(0, Math.min(height - viewportHeight, height - y - viewportHeight / 2));
+        };
+        var centerY = function centerY() {
+          return height - scroll.getScrollOffset().y - viewportHeight / 2;
+        };
+        var lock;
         function updateRegion() {
-          var center = height - scroll.getScrollOffset().y - viewportHeight / 2;
+          var center = centerY(),
+            delta = dockY - center;
           var nearest = points.reduce(function (best, p, i) {
             return Math.abs(p.y - center) < Math.abs(points[best].y - center) ? i : best;
           }, 0);
           heading.string = regionNames[campaignSites[nearest].region];
+          nav.active = Math.abs(delta) > viewportHeight / 2 + 35;
+          nav.setPosition(0, 43 + Math.sign(delta) * (viewportHeight / 2 - 26));
+          caption.string = delta > 0 ? '↑  导航到飞艇' : '↓  导航到飞艇';
         }
+        function _navigate(y) {
+          if (lock) return;
+          scroll.stopAutoScroll();
+          var from = scroll.getScrollOffset().y,
+            to = offsetFor(y);
+          if (Math.abs(from - to) < 1) return;
+          lock = view.box('地图导航中', 0, 0, 480, 854);
+          lock.addComponent(BlockInputEvents);
+          var progress = {
+            t: 0
+          };
+          var animation = tween(progress).to(Math.min(.85, .28 + Math.abs(to - from) / 4000), {
+            t: 1
+          }, {
+            easing: 'quadInOut',
+            onUpdate: function onUpdate() {
+              scroll.scrollToOffset(new Vec2(0, from + (to - from) * progress.t), 0);
+              updateRegion();
+            }
+          }).call(function () {
+            var _lock;
+            (_lock = lock) == null || _lock.destroy();
+            lock = undefined;
+          }).start();
+          lock.once(Node.EventType.NODE_DESTROYED, function () {
+            return animation.stop();
+          });
+        }
+        nav.on(Node.EventType.TOUCH_END, function () {
+          return _navigate(dockY);
+        });
+        var start = (_points$campaignSites = points[campaignSites.findIndex(function (s) {
+          return s.id === origin;
+        })]) != null ? _points$campaignSites : goal;
+        scroll.scrollToOffset(new Vec2(0, offsetFor(start.y)), 0);
         viewport.on(ScrollView.EventType.SCROLLING, updateRegion);
+        content.on(Node.EventType.TRANSFORM_CHANGED, updateRegion);
         updateRegion();
+        return {
+          ship: ship,
+          navigate: function navigate() {
+            return _navigate(goal.y);
+          },
+          busy: function busy() {
+            return !!lock;
+          }
+        };
       }
       cclegacy._RF.pop();
     }
@@ -4401,6 +4470,7 @@ System.register("chunks:///_virtual/CampaignJourney.ts", ['./rollupPluginModLoBa
             run.loot[key] = ((_run$loot$key = run.loot[key]) != null ? _run$loot$key : 0) + n;
           }
         }
+        if (Number.isSafeInteger(saved.coins) && saved.coins >= 0) run.coins = saved.coins;
         return {
           site: site,
           route: route,
@@ -4553,15 +4623,14 @@ System.register("chunks:///_virtual/Chapter.ts", ['./rollupPluginModLoBabelHelpe
       }
       var locations = exports('locations', ['forest', 'village', 'tower', 'mine', 'swamp', 'undead', 'goblin', 'desert']);
       var locationNames = exports('locationNames', _extends({
-        village: '溪桥村'
+        village: '浮空艇'
       }, regionNames));
       var dungeonIds = exports('dungeonIds', campaignOrder);
       var dungeons = exports('dungeons', {
         forest: {
           depth: 4,
           loot: {
-            gold: 7,
-            herb: 2
+            gold: 7
           },
           enemies: [enemy('苔芽小虫', 'forest-bug', 100, 11), enemy('绿叶守护者', 'forest-leafguard', 120, 12), enemy('树人战士', 'forest-treant', 130, 13), enemy('苔岩守卫', 'forest-stone', 140, 13)],
           boss: enemy('苔林熊灵', 'forest-bear', 220, 19, ['boss'])
@@ -4586,22 +4655,18 @@ System.register("chunks:///_virtual/Chapter.ts", ['./rollupPluginModLoBabelHelpe
         },
         undead: regionalDungeon('undead', {
           gold: 12,
-          essence: 2,
-          herb: 1
+          essence: 1
         }),
         goblin: regionalDungeon('goblin', {
           gold: 13,
-          ore: 3,
-          herb: 1
+          ore: 1
         }),
         desert: regionalDungeon('desert', {
           gold: 15,
-          crystal: 2,
           ore: 1
         }),
         tower: regionalDungeon('tower', {
           gold: 17,
-          crystal: 3,
           essence: 1
         })
       });
@@ -4625,20 +4690,31 @@ System.register("chunks:///_virtual/Chapter.ts", ['./rollupPluginModLoBabelHelpe
         return kind === 'boss' ? 2 : kind === 'elite' ? 1.5 : 1;
       });
       function battleCoinReward(room, dungeon) {
-        var _dungeons$dungeon$loo, _room$type;
+        var _dungeons$dungeon$loo, _room$encounters, _room$type;
         if (room.coinReward !== undefined) return room.coinReward;
         if (!dungeon) return 0;
         var reward = (_dungeons$dungeon$loo = dungeons[dungeon].loot.gold) != null ? _dungeons$dungeon$loo : 0;
-        return battlePurse[(_room$type = room.type) != null ? _room$type : 'battle'] + Math.ceil(reward * dungeonRewardMultiplier(room.type));
+        var humanBonus = ((_room$encounters = room.encounters) != null ? _room$encounters : []).filter(function (e) {
+          return e.tags.includes('humanoid') || e.tags.includes('human');
+        }).length * 3;
+        return humanBonus + battlePurse[(_room$type = room.type) != null ? _room$type : 'battle'] + Math.ceil(reward * dungeonRewardMultiplier(room.type));
       }
       function planWaveReward(dungeon, room) {
         var _room$materials, _room$xpReward;
         var base = dungeon ? dungeons[dungeon].loot : {};
         var multiplier = dungeonRewardMultiplier(room.type);
         var loot = {};
-        for (var _iterator = _createForOfIteratorHelperLoose(['herb', 'ore', 'essence', 'crystal']), _step; !(_step = _iterator()).done;) {
-          var key = _step.value;
-          if (base[key] !== undefined) loot[key] = Math.ceil(base[key] * multiplier);
+        if (dungeon) {
+          var _room$encounters2, _base$ore, _base$essence;
+          var foes = (_room$encounters2 = room.encounters) != null ? _room$encounters2 : [];
+          var ore = ((_base$ore = base.ore) != null ? _base$ore : 0) + Number(foes.some(function (e) {
+            return e.tags.includes('elemental');
+          }));
+          var essence = ((_base$essence = base.essence) != null ? _base$essence : 0) + Number(foes.some(function (e) {
+            return e.tags.includes('beast');
+          }));
+          if (ore) loot.ore = Math.ceil(ore * multiplier);
+          if (essence) loot.essence = Math.ceil(essence * multiplier);
         }
         return {
           coins: battleCoinReward(room, dungeon),
@@ -4653,8 +4729,8 @@ System.register("chunks:///_virtual/Chapter.ts", ['./rollupPluginModLoBabelHelpe
           xp: 0,
           ordinaryWins: Number(room.type !== 'elite' && room.type !== 'boss')
         };
-        for (var _iterator2 = _createForOfIteratorHelperLoose(battleWaves(room)), _step2; !(_step2 = _iterator2()).done;) {
-          var wave = _step2.value;
+        for (var _iterator = _createForOfIteratorHelperLoose(battleWaves(room)), _step; !(_step = _iterator()).done;) {
+          var wave = _step.value;
           var grant = planWaveReward(dungeon, wave);
           total.coins += grant.coins;
           total.xp += grant.xp;
@@ -4712,10 +4788,10 @@ System.register("chunks:///_virtual/Chapter.ts", ['./rollupPluginModLoBabelHelpe
           var path = _paths[_i2];
           var last = path[path.length - 1];
           if (last === to) return path;
-          for (var _iterator3 = _createForOfIteratorHelperLoose(worldRoads), _step3; !(_step3 = _iterator3()).done;) {
-            var _step3$value = _step3.value,
-              a = _step3$value[0],
-              b = _step3$value[1];
+          for (var _iterator2 = _createForOfIteratorHelperLoose(worldRoads), _step2; !(_step2 = _iterator2()).done;) {
+            var _step2$value = _step2.value,
+              a = _step2$value[0],
+              b = _step2$value[1];
             var next = a === last ? b : b === last ? a : undefined;
             if (!next || visited.has(next) || !canVisit(next)) continue;
             visited.add(next);
@@ -5563,6 +5639,226 @@ System.register("chunks:///_virtual/CombatTags.ts", ['./rollupPluginModLoBabelHe
   };
 });
 
+System.register("chunks:///_virtual/Consumables.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+  var _createForOfIteratorHelperLoose, cclegacy;
+  return {
+    setters: [function (module) {
+      _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+    }],
+    execute: function () {
+      exports({
+        blastArea: blastArea,
+        chooseOrdinary: chooseOrdinary,
+        readCounts: readCounts,
+        shufflePieces: shufflePieces
+      });
+      cclegacy._RF.push({}, "521288y1a9KKZOuK3A2Ygyq", "Consumables", undefined);
+      var items = exports('items', {
+        potion: {
+          name: '小血瓶',
+          useTag: '战斗用道具',
+          price: 5,
+          stock: 20,
+          heal: 45,
+          detail: '恢复 45 HP'
+        },
+        medium: {
+          name: '中血瓶',
+          useTag: '战斗用道具',
+          price: 10,
+          stock: 12,
+          heal: 100,
+          detail: '恢复 100 HP'
+        },
+        large: {
+          name: '大血瓶',
+          useTag: '战斗用道具',
+          price: 18,
+          stock: 8,
+          heal: 200,
+          detail: '恢复 200 HP'
+        },
+        "super": {
+          name: '超级血瓶',
+          useTag: '战斗用道具',
+          price: 32,
+          stock: 4,
+          heal: Infinity,
+          detail: '恢复全部 HP'
+        },
+        finger: {
+          name: '死亡一指',
+          useTag: '战斗用道具',
+          price: 48,
+          stock: 2,
+          detail: '击倒队列中首个存活敌人'
+        },
+        bomb: {
+          name: '小炸弹',
+          useTag: '战斗用道具',
+          price: 8,
+          stock: 12,
+          detail: '摧毁选中的一枚棋子'
+        },
+        blast: {
+          name: '高爆炸弹',
+          useTag: '战斗用道具',
+          price: 18,
+          stock: 6,
+          detail: '摧毁目标周围 3×3 范围的棋子'
+        },
+        shuffle: {
+          name: '大洗牌',
+          useTag: '战斗用道具',
+          price: 12,
+          stock: 6,
+          detail: '重新排列可移动的玩家棋子'
+        },
+        silver: {
+          name: '白银武装',
+          useTag: '战斗用道具',
+          price: 22,
+          stock: 4,
+          detail: '随机强化最多五枚普通纹章'
+        },
+        gold: {
+          name: '黄金武装',
+          useTag: '战斗用道具',
+          price: 38,
+          stock: 3,
+          detail: '随机将最多五枚普通纹章升为高级强化'
+        },
+        gift: {
+          name: '新手大礼包',
+          useTag: '非战斗用道具',
+          detail: '打开获得七种战斗道具，每种五份'
+        }
+      });
+      var itemIds = exports('itemIds', Object.keys(items));
+      var battleItemIds = exports('battleItemIds', itemIds.filter(function (id) {
+        return items[id].useTag === '战斗用道具';
+      }));
+      var merchantItemIds = exports('merchantItemIds', itemIds.filter(function (id) {
+        return 'price' in items[id] && 'stock' in items[id];
+      }));
+      var giftItems = exports('giftItems', ['potion', 'finger', 'bomb', 'blast', 'shuffle', 'silver', 'gold']);
+      function readCounts(input) {
+        var counts = {};
+        if (input && typeof input === 'object') {
+          for (var _iterator = _createForOfIteratorHelperLoose(itemIds), _step; !(_step = _iterator()).done;) {
+            var id = _step.value;
+            var n = input[id];
+            if (Number.isSafeInteger(n) && n >= 0) counts[id] = n;
+          }
+        }
+        return counts;
+      }
+      var pieceTags = exports('pieceTags', {
+        miner: ['不可摧毁']
+      });
+      function blastArea(target, wide, width, length) {
+        var cells = [];
+        for (var i = 0; i < length; i++) if (Math.abs(i % width - target % width) <= Number(wide) && Math.abs(Math.floor(i / width) - Math.floor(target / width)) <= Number(wide)) cells.push(i);
+        return cells;
+      }
+      function chooseOrdinary(candidates, random) {
+        var pool = candidates.slice(),
+          chosen = [];
+        while (pool.length && chosen.length < 5) chosen.push(pool.splice(Math.floor(random() * pool.length), 1)[0]);
+        return chosen;
+      }
+
+      /** Place existing identities into a stable, different layout. Fixed occupants constrain runs. */
+      function shufflePieces(board, movable, width, random, connected, accept) {
+        var order = board.map(function (_, i) {
+            return i;
+          }),
+          pool = new Map();
+        for (var _iterator2 = _createForOfIteratorHelperLoose(movable), _step2; !(_step2 = _iterator2()).done;) {
+          var _pool$get;
+          var i = _step2.value;
+          var bag = (_pool$get = pool.get(board[i])) != null ? _pool$get : [];
+          bag.push(i);
+          pool.set(board[i], bag);
+        }
+        if (pool.size < 2) return;
+        for (var _iterator3 = _createForOfIteratorHelperLoose(pool.values()), _step3; !(_step3 = _iterator3()).done;) {
+          var _bag = _step3.value;
+          for (var _i3 = _bag.length - 1; _i3 > 0; _i3--) {
+            var j = Math.floor(random() * (_i3 + 1));
+            var _ref3 = [_bag[j], _bag[_i3]];
+            _bag[_i3] = _ref3[0];
+            _bag[j] = _ref3[1];
+          }
+        }
+        var candidate = board.slice();
+        movable.forEach(function (i) {
+          return candidate[i] = '';
+        });
+        function formsRun(i) {
+          for (var _i = 0, _arr = [1, width]; _i < _arr.length; _i++) {
+            var stride = _arr[_i];
+            var count = 1;
+            for (var _i2 = 0, _arr2 = [-1, 1]; _i2 < _arr2.length; _i2++) {
+              var sign = _arr2[_i2];
+              var j = i;
+              for (var n = 0; n < 2; n++) {
+                var k = j + sign * stride;
+                if (k < 0 || k >= board.length || stride === 1 && Math.floor(k / width) !== Math.floor(j / width) || candidate[j] !== candidate[k] || !connected(j, k)) break;
+                count++;
+                j = k;
+              }
+            }
+            if (count >= 3) return true;
+          }
+          return false;
+        }
+        var budget = 24000;
+        var place = function place(depth) {
+          if (--budget < 0) return false;
+          if (depth === movable.length) return candidate.some(function (t, i) {
+            return t !== board[i];
+          }) && accept(candidate, order);
+          var i = movable[depth];
+          var choices = Array.from(pool.entries()).filter(function (_ref) {
+            var bag = _ref[1];
+            return bag.length;
+          }).map(function (_ref2) {
+            var type = _ref2[0],
+              bag = _ref2[1];
+            return {
+              type: type,
+              bag: bag,
+              rank: random() + bag.length * .12
+            };
+          }).sort(function (a, b) {
+            return b.rank - a.rank;
+          });
+          for (var _iterator4 = _createForOfIteratorHelperLoose(choices), _step4; !(_step4 = _iterator4()).done;) {
+            var _step4$value = _step4.value,
+              type = _step4$value.type,
+              bag = _step4$value.bag;
+            candidate[i] = type;
+            if (!formsRun(i)) {
+              var from = bag.pop();
+              order[i] = from;
+              if (place(depth + 1)) return true;
+              bag.push(from);
+            }
+            candidate[i] = '';
+            if (budget <= 0) break;
+          }
+          return false;
+        };
+        return place(0) ? order : undefined;
+      }
+      cclegacy._RF.pop();
+    }
+  };
+});
+
 System.register("chunks:///_virtual/ContentGroups.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
@@ -5573,16 +5869,16 @@ System.register("chunks:///_virtual/ContentGroups.ts", ['cc'], function (exports
       cclegacy._RF.push({}, "06af4B/inVHDYkclq4r6w/r", "ContentGroups", undefined);
       // Generated by scripts/content-manifest.py; ownership in content-groups.json.
       var contentGroups = exports('contentGroups', {
-        "opening": ["advanced-frame", "combat-impact", "cry", "fist", "forest-lab-far", "forest-lab-front", "forest-lab-ground", "forest-lab-middle", "forest-lab-midground", "forest-lab-mist", "forest-props", "forest-wolf", "game-logo", "hero-s", "s", "skill-frame", "stone", "trial-ui-back", "trial-ui-banner", "trial-ui-button-off", "trial-ui-button", "wolf", "trial-ui-audio", "trial-ui-progress-fill", "trial-ui-progress-frame", "corridor-forest"],
+        "opening": ["advanced-frame", "combat-impact", "cry", "fist", "forest-lab-far", "forest-lab-front", "forest-lab-ground", "forest-lab-middle", "forest-lab-midground", "forest-lab-mist", "forest-props", "forest-wolf", "game-logo", "hero-s", "s", "skill-frame", "stone", "trial-ui-back", "trial-ui-banner", "trial-ui-button-off", "trial-ui-button", "wolf", "trial-ui-audio", "trial-ui-progress-fill", "trial-ui-progress-frame", "corridor-forest", "material-gold"],
         "tutorial": ["boss", "forest-bug", "forest-treant", "h", "hero-h", "npc-villager-down", "npc-villager", "staff"],
         "map": ["map-parchment", "world-map-background"],
-        "village": ["d", "dungeon-chest", "dungeon-merchant", "dungeon-traveler", "gear-arrow", "gear-blade", "gear-buckler", "gear-guardcore", "gear-healcore", "gear-magiccore", "gear-shield", "gear-stage", "gear-swordcore", "hero-d", "npc-chief", "npc-innkeeper", "npc-shop", "npc-smith", "slot-accessory", "slot-armor", "slot-main", "slot-off", "tool-base", "village-chief-stage", "village-navigation", "village-shop-stage", "village-smith-stage", "village-stage", "village-tavern-stage"],
+        "village": ["d", "dungeon-chest", "dungeon-merchant", "dungeon-traveler", "gear-arrow", "gear-blade", "gear-buckler", "gear-guardcore", "gear-healcore", "gear-magiccore", "gear-shield", "gear-stage", "gear-swordcore", "hero-d", "npc-chief", "npc-innkeeper", "npc-shop", "npc-smith", "slot-accessory", "slot-armor", "slot-main", "slot-off", "tool-base", "village-chief-stage", "village-navigation", "village-shop-stage", "village-smith-stage", "village-stage", "village-tavern-stage", "gear-bow", "gear-wand", "gear-mantle", "gear-focus", "gear-quiver", "gear-charm", "gear-veil", "gear-nightglass", "gear-ward", "gear-bronze-s", "gear-bronze-d", "gear-bronze-m", "gear-bronze-h", "gear-bronze-bow", "gear-bell-s", "gear-bell-d", "gear-bell-m", "gear-bell-h", "gear-bell-bow", "gear-sun-s", "gear-sun-d", "gear-sun-m", "gear-sun-h", "gear-sun-bow", "material-herb", "material-ore", "material-essence", "material-crystal", "trade-bag"],
         "forest": ["boar", "forest-bear", "forest-leafguard", "forest-stone"],
         "mine": ["bat", "beetle", "golem", "corridor-mine"],
         "swamp": ["frog", "murloc-axe", "murloc-mage", "murloc-spear", "vine", "corridor-swamp"],
         "tower": ["dragon", "ghost", "hero-m", "knight", "lich", "m", "wizard", "spire-oracle", "spire-ooze", "spire-dragon", "spire-trader", "spire-knight", "spire-acolyte", "spire-knife", "spire-bow", "spire-shield", "corridor-tower"],
         "undead": ["bone-archer", "bone-shield", "bone-captain", "grave-walker", "grave-ghoul", "veil-wraith", "grave-shade", "grave-rider", "grave-lich", "undead-reel", "corridor-undead"],
-        "goblin": ["fort-boar", "fort-tusk", "fort-club", "fort-brute", "fort-pike", "fort-bomber", "fort-rider", "fort-knife", "fort-king", "goblin-reel", "corridor-goblin"],
+        "goblin": ["fort-boar", "fort-tusk", "fort-club", "fort-brute", "fort-pike", "fort-bomber", "fort-rider", "fort-knife", "fort-king", "corridor-goblin"],
         "desert": ["sand-scout", "sand-bow", "sand-seer", "sand-guard", "sand-captain", "sand-scorpion", "sand-worm", "sand-vulture", "sand-jackal", "sand-colossus", "desert-reel", "corridor-desert"],
         "roster": ["hero-archer", "archer", "hero-ninja", "ninja", "hero-monk", "monk", "hero-bard", "bard", "hero-lancer", "lancer", "hero-berserker", "berserker", "hero-scholar", "scholar", "hero-tide", "tide", "hero-warlock", "warlock", "hero-alchemist", "alchemist", "hero-valkyrie", "valkyrie"]
       });
@@ -8206,8 +8502,8 @@ System.register("chunks:///_virtual/FormalSaveGate.ts", ['./rollupPluginModLoBab
   };
 });
 
-System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Party.ts', './CampaignAtlas.ts', './CampaignJourney.ts', './Campaign.ts', './UIManager.ts', './QuestJournal.ts', './TestBoardRules.ts', './TestBoardChallenge.ts', './ContentGroups.ts', './TravelClock.ts', './EnemySkills.ts', './BoardMechanics.ts', './ActorArt.ts', './Inventory.ts', './GameAudio.ts', './DungeonDirector.ts', './Chapter.ts', './CombatTags.ts', './mine-recovery.ts', './FormalSaveGate.ts', './battle-core.ts', './potion-bridge.ts', './formal-rules.ts', './cocos-board-adapter.ts', './Board.ts', './BattleMotion.ts', './CombatSceneLab.ts', './BattleRules.ts', './MineTrial.ts', './TemplateBoardFx.ts', './DungeonScenery.ts', './StageLayout.ts', './BuffView.ts', './TownRules.ts'], function (exports) {
-  var _inheritsLoose, _createForOfIteratorHelperLoose, _extends, _asyncToGenerator, _regeneratorRuntime, _objectWithoutPropertiesLoose, _createClass, cclegacy, _decorator, tween, Vec3, Mask, ScrollView, Graphics, Color, Label, Vec2, Node, UITransform, Sprite, SpriteFrame, Rect, Size, view, Vec4, UIOpacity, Material, Tween, Component, resources, EffectAsset, sys, profiler, Texture2D, initialReserves, readRecruits, heroes, availableHeroes, apNames, canReplace, replaceMember, mountCampaignAtlas, restoreJourney, restoreSites, campaignSites, regionNames, sitesIn, nextSite, campaignRoute, isOpenSite, UIManager, QuestJournal, questBook, questInteractions, portalLinks, fractureHoles, jellyStarts, placeRocks, damageRocks, spreadJelly, portalGravity, challengeSwap, challengeEdge, challengeCatalog, TestBoardChallenge, pillarCells, sourceEntry, challengePowers, powerLabel, hitChallengeLocks, challengeGravity, powerCells, growChallengeLocks, contentGroups, TravelClock, travelPose, planEnemyAction, identityPreservingRecovery, validateDelivery, deliveryStarts, minerEmblem, deliveryAdvanceScore, clearTerrain, minersAtExits, retireMinerBoard, shockTarget, actorArt, portraitBottomPadding, enemyPortraitSize, portraitFootprint, Inventory, resourceNames, priceText, equipment, gearText, provisions, gearArt, gearUsers, canEquip, supplyTrades, GameAudio, DungeonDirector, tutorialRoute, locations, dungeonIds, planWaveReward, roomRewards, enemy, dungeons, battleWaves, locationNames, unlocked, makeRoute, drawUpgrades, encounter, partyFormation, readMineRecovery, planMineRest, planMineFormalClose, planMineTestClose, planMineLegacyVictory, planMinePotion, planMineFirstVictory, planMineChest, FormalSaveGate, createBattleCore, createPotionBridge, setupFormalRoom, IsolatedBoardSession, validExchange, matches, planRefill, legalMove, newBoard, opening, rockCell, holeCell, playableCell, cols, legalExchanges, canExchange, planPlayableWave, mineGravity, verticalGravity, previewExchange, BattleMotion, openCombatSceneLab, newOathState, oathArmorLayers, planOathSkill, rosterEmblems, oathDamage, selectTargets, supportStrike, skillOwner, endOathRound, oathEnemyPower, applyBattleCry, testTerrainCells, testMechanism, mechanismPage, testMechanisms, mineTrialRandom, makeMineTrial, mineTestEncounter, TemplateBoardFx, frontName, roomTravel, DungeonScenery, stageCover, interactionGrid, stageGrid, stageX, BuffView, restoreTown, exitBlessing, claimAltar, newTownProgress;
+System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './PlaytestSave.ts', './TradeRules.ts', './TradeView.ts', './HeroSheet.ts', './ItemBar.ts', './Consumables.ts', './Party.ts', './CampaignAtlas.ts', './CampaignJourney.ts', './Campaign.ts', './UIManager.ts', './QuestJournal.ts', './TestBoardRules.ts', './TestBoardChallenge.ts', './ContentGroups.ts', './TravelClock.ts', './EnemySkills.ts', './BoardMechanics.ts', './ActorArt.ts', './Inventory.ts', './GameAudio.ts', './DungeonDirector.ts', './Chapter.ts', './CombatTags.ts', './mine-recovery.ts', './FormalSaveGate.ts', './battle-core.ts', './potion-bridge.ts', './formal-rules.ts', './cocos-board-adapter.ts', './Board.ts', './BattleMotion.ts', './CombatSceneLab.ts', './BattleRules.ts', './MineTrial.ts', './TemplateBoardFx.ts', './DungeonScenery.ts', './StageLayout.ts', './BuffView.ts', './TownRules.ts'], function (exports) {
+  var _inheritsLoose, _createForOfIteratorHelperLoose, _extends, _asyncToGenerator, _regeneratorRuntime, _createClass, cclegacy, _decorator, tween, Vec3, Mask, ScrollView, Graphics, Color, Label, Vec2, Node, UITransform, Sprite, SpriteFrame, Rect, Size, view, Vec4, UIOpacity, Material, Tween, BlockInputEvents, Component, resources, EffectAsset, sys, profiler, Texture2D, playtestRevision, completedPlaytestSave, gearInfo, salePrices, priceLines, costText, shortage, ink, drawInfoLines, lastBagPage, drawTradeBag, drawOffer, drawHeroSheet, ItemBar, readCounts, shufflePieces, items, itemIds, merchantItemIds, giftItems, blastArea, pieceTags, chooseOrdinary, initialReserves, readRecruits, heroes, availableHeroes, canReplace, replaceMember, mountCampaignAtlas, restoreJourney, restoreSites, campaignSites, regionNames, sitesIn, nextSite, campaignRoute, isOpenSite, UIManager, QuestJournal, questBook, questInteractions, portalLinks, fractureHoles, jellyStarts, placeRocks, damageRocks, spreadJelly, portalGravity, challengeSwap, challengeEdge, challengeCatalog, TestBoardChallenge, pillarCells, sourceEntry, challengePowers, powerLabel, hitChallengeLocks, challengeGravity, powerCells, growChallengeLocks, contentGroups, TravelClock, travelPose, planEnemyAction, identityPreservingRecovery, validateDelivery, deliveryStarts, minerEmblem, deliveryAdvanceScore, clearTerrain, minersAtExits, retireMinerBoard, shockTarget, actorArt, portraitBottomPadding, enemyPortraitSize, portraitFootprint, Inventory, priceText, equipment, gearArt, provisions, resourceNames, canEquip, supplyTrades, GameAudio, DungeonDirector, tutorialRoute, locations, dungeonIds, roomRewards, enemy, dungeons, battleWaves, planWaveReward, locationNames, unlocked, makeRoute, drawUpgrades, encounter, partyFormation, readMineRecovery, planMineRest, planMineFormalClose, planMineTestClose, planMineLegacyVictory, planMineV1Reward, planMinePotion, planMineFirstVictory, planMineChest, FormalSaveGate, createBattleCore, createPotionBridge, setupFormalRoom, IsolatedBoardSession, validExchange, matches, planRefill, legalMove, newBoard, opening, rockCell, holeCell, playableCell, cols, legalExchanges, canExchange, planPlayableWave, mineGravity, verticalGravity, previewExchange, BattleMotion, openCombatSceneLab, newOathState, oathArmorLayers, rosterEmblems, oathDamage, selectTargets, supportStrike, skillOwner, planOathSkill, endOathRound, oathEnemyPower, applyBattleCry, testTerrainCells, testMechanism, mechanismPage, testMechanisms, mineTrialRandom, makeMineTrial, mineTestEncounter, TemplateBoardFx, frontName, roomTravel, DungeonScenery, stageCover, interactionGrid, stageGrid, stageX, BuffView, restoreTown, exitBlessing, claimAltar, newTownProgress;
   return {
     setters: [function (module) {
       _inheritsLoose = module.inheritsLoose;
@@ -8215,7 +8511,6 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
       _extends = module.extends;
       _asyncToGenerator = module.asyncToGenerator;
       _regeneratorRuntime = module.regeneratorRuntime;
-      _objectWithoutPropertiesLoose = module.objectWithoutPropertiesLoose;
       _createClass = module.createClass;
     }, function (module) {
       cclegacy = module.cclegacy;
@@ -8239,6 +8534,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
       UIOpacity = module.UIOpacity;
       Material = module.Material;
       Tween = module.Tween;
+      BlockInputEvents = module.BlockInputEvents;
       Component = module.Component;
       resources = module.resources;
       EffectAsset = module.EffectAsset;
@@ -8246,11 +8542,39 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
       profiler = module.profiler;
       Texture2D = module.Texture2D;
     }, function (module) {
+      playtestRevision = module.playtestRevision;
+      completedPlaytestSave = module.completedPlaytestSave;
+    }, function (module) {
+      gearInfo = module.gearInfo;
+      salePrices = module.salePrices;
+      priceLines = module.priceLines;
+      costText = module.costText;
+      shortage = module.shortage;
+    }, function (module) {
+      ink = module.ink;
+      drawInfoLines = module.drawInfoLines;
+      lastBagPage = module.lastBagPage;
+      drawTradeBag = module.drawTradeBag;
+      drawOffer = module.drawOffer;
+    }, function (module) {
+      drawHeroSheet = module.drawHeroSheet;
+    }, function (module) {
+      ItemBar = module.ItemBar;
+    }, function (module) {
+      readCounts = module.readCounts;
+      shufflePieces = module.shufflePieces;
+      items = module.items;
+      itemIds = module.itemIds;
+      merchantItemIds = module.merchantItemIds;
+      giftItems = module.giftItems;
+      blastArea = module.blastArea;
+      pieceTags = module.pieceTags;
+      chooseOrdinary = module.chooseOrdinary;
+    }, function (module) {
       initialReserves = module.initialReserves;
       readRecruits = module.readRecruits;
       heroes = module.heroes;
       availableHeroes = module.availableHeroes;
-      apNames = module.apNames;
       canReplace = module.canReplace;
       replaceMember = module.replaceMember;
     }, function (module) {
@@ -8316,13 +8640,11 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
       portraitFootprint = module.portraitFootprint;
     }, function (module) {
       Inventory = module.Inventory;
-      resourceNames = module.resourceNames;
       priceText = module.priceText;
       equipment = module.equipment;
-      gearText = module.gearText;
-      provisions = module.provisions;
       gearArt = module.gearArt;
-      gearUsers = module.gearUsers;
+      provisions = module.provisions;
+      resourceNames = module.resourceNames;
       canEquip = module.canEquip;
       supplyTrades = module.supplyTrades;
     }, function (module) {
@@ -8333,11 +8655,11 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
       tutorialRoute = module.tutorialRoute;
       locations = module.locations;
       dungeonIds = module.dungeonIds;
-      planWaveReward = module.planWaveReward;
       roomRewards = module.roomRewards;
       enemy = module.enemy;
       dungeons = module.dungeons;
       battleWaves = module.battleWaves;
+      planWaveReward = module.planWaveReward;
       locationNames = module.locationNames;
       unlocked = module.unlocked;
       makeRoute = module.makeRoute;
@@ -8351,6 +8673,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
       planMineFormalClose = module.planMineFormalClose;
       planMineTestClose = module.planMineTestClose;
       planMineLegacyVictory = module.planMineLegacyVictory;
+      planMineV1Reward = module.planMineV1Reward;
       planMinePotion = module.planMinePotion;
       planMineFirstVictory = module.planMineFirstVictory;
       planMineChest = module.planMineChest;
@@ -8388,12 +8711,12 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
     }, function (module) {
       newOathState = module.newOathState;
       oathArmorLayers = module.oathArmorLayers;
-      planOathSkill = module.planOathSkill;
       rosterEmblems = module.rosterEmblems;
       oathDamage = module.oathDamage;
       selectTargets = module.selectTargets;
       supportStrike = module.supportStrike;
       skillOwner = module.skillOwner;
+      planOathSkill = module.planOathSkill;
       endOathRound = module.endOathRound;
       oathEnemyPower = module.oathEnemyPower;
       applyBattleCry = module.applyBattleCry;
@@ -8425,7 +8748,6 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
       newTownProgress = module.newTownProgress;
     }],
     execute: function () {
-      var _excluded = ["gold"];
       var _dec, _class;
       cclegacy._RF.push({}, "293c0LpkiNDzKcsh+fuvggE", "Game", undefined);
       var ccclass = _decorator.ccclass;
@@ -8490,7 +8812,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           _this.deliveryManifest = void 0;
           _this.contentReady = false;
           _this.contentLoading = void 0;
-          _this.releaseVersion = '20261123-party-1';
+          _this.releaseVersion = '20261123-economy-1';
           _this.scenery = new DungeonScenery();
           _this.stageFrames = new Map();
           _this.actorEffect = void 0;
@@ -8552,6 +8874,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           _this.saveKey = 'four-emblems-cocos-chapter-one-v1';
           _this.saveGate = void 0;
           _this.saveId = void 0;
+          _this.profileRevision = void 0;
+          _this.completedPlaytest = false;
           _this.startingGame = false;
           _this.tutorialCheckpoint = void 0;
           _this.mineRecovery = void 0;
@@ -8600,18 +8924,28 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           _this.hp = 45;
           _this.enemies = [72, 72];
           _this.potion = 1;
+          _this.supplies = {
+            gift: 1
+          };
+          _this.shopSold = {};
+          _this.itemBar = void 0;
+          _this.bombAim = void 0;
+          _this.railEffect = void 0;
           _this.status = void 0;
           _this.pageMotions = new Set();
           _this.activeTravelCancel = void 0;
           _this.travelSerial = 0;
           _this.travelAudit = [];
           _this.eventCoinDisplays = new WeakSet();
+          _this.walletLabels = {};
           _this.recoveryPlaying = false;
           _this.actorStates = new WeakMap();
           _this.popupLayer = void 0;
           _this.popupPool = [];
           _this.popupOrder = 0;
           _this.speechOwner = void 0;
+          _this.dialogueBottom = void 0;
+          _this.refreshTrade = void 0;
           return _this;
         }
         var _proto = FourEmblemsGame.prototype;
@@ -8744,7 +9078,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         };
         _proto.restoreJournal = function restoreJournal(data) {
           var _this5 = this;
-          this.journal = new QuestJournal(questBook, data);
+          this.journal = new QuestJournal(questBook, data, !this.completedPlaytest);
           if (data) {
             var _this$hunt;
             if (((_this$hunt = this.hunt) == null ? void 0 : _this$hunt.state) === 'ready') this.journal.signal({
@@ -8951,12 +9285,12 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                 if (row.completed) {
                   var face = control.getChildByName('Button face');
                   if (face) {
-                    var ink = face.getComponent(Graphics);
-                    if (ink) {
-                      ink.clear();
-                      ink.fillColor = new Color(173, 181, 170);
-                      ink.roundRect(-169, -20.5, 338, 41, 8);
-                      ink.fill();
+                    var _ink = face.getComponent(Graphics);
+                    if (_ink) {
+                      _ink.clear();
+                      _ink.fillColor = new Color(173, 181, 170);
+                      _ink.roundRect(-169, -20.5, 338, 41, 8);
+                      _ink.fill();
                     }
                   }
                   _this7.label('✓', 148, 0, 24, 20, control).color = new Color(30, 104, 55);
@@ -8994,11 +9328,17 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             this.inventory.materials[key] += (_gains$key = gains[key]) != null ? _gains$key : 0;
           }
         };
+        _proto.walletBalance = function walletBalance(key) {
+          var _this$adventure$loot$, _this$adventure;
+          if (key === 'gold') return this.walletGold;
+          return (this.trial ? 0 : this.inventory.materials[key]) + ((_this$adventure$loot$ = (_this$adventure = this.adventure) == null ? void 0 : _this$adventure.loot[key]) != null ? _this$adventure$loot$ : 0);
+        };
         _proto.receiveGold = function receiveGold(amount) {
           if (this.adventure) this.adventure.coins += amount;else this.gold += amount;
         };
         _proto.payGold = function payGold(amount, apply, options) {
-          var _this8 = this;
+          var _this8 = this,
+            _this$refreshTrade;
           if (options === void 0) {
             options = {};
           }
@@ -9010,124 +9350,170 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             if (_this8.adventure) _this8.adventure.coins -= found;
             _this8.gold -= amount - found;
           };
+          var before = _extends({}, this.inventory.materials);
           var committed = options.persist ? this.townWrite(commit) : commit() !== false;
           if (!committed) return;
-          options.redraw == null || options.redraw();
-          return amount > 0 ? this.presentGoldSpend(amount) : Promise.resolve(true);
+          if (options.redraw) options.redraw();else (_this$refreshTrade = this.refreshTrade) == null || _this$refreshTrade.call(this);
+          var changes = {
+            gold: -amount,
+            ore: this.inventory.materials.ore - before.ore,
+            essence: this.inventory.materials.essence - before.essence
+          };
+          return this.presentWalletChange(changes);
         };
-        _proto.presentGoldSpend = /*#__PURE__*/function () {
-          var _presentGoldSpend = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(amount) {
-            var root, balance, motion, temporary, wallet, _iterator6, _step6, node, _balance$node$positio, x, y, label, opacity, hold, movement, fade, played, _label$node, _iterator7, _step7, _node;
-            return _regeneratorRuntime().wrap(function _callee$(_context) {
-              while (1) switch (_context.prev = _context.next) {
+        _proto.presentWalletChange = /*#__PURE__*/function () {
+          var _presentWalletChange = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(changes) {
+            var _this9 = this;
+            var entries, root, motion, played;
+            return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+              while (1) switch (_context2.prev = _context2.next) {
                 case 0:
-                  this.audio.play('cash-register');
+                  entries = Object.entries(changes).filter(function (_ref2) {
+                    var n = _ref2[1];
+                    return n !== 0;
+                  });
+                  if (entries.length) {
+                    _context2.next = 3;
+                    break;
+                  }
+                  return _context2.abrupt("return", true);
+                case 3:
+                  this.audio.play(entries.some(function (_ref3) {
+                    var n = _ref3[1];
+                    return n < 0;
+                  }) ? 'cash-register' : 'coins');
                   root = this.ui;
-                  balance = this.currentCoinDisplay();
+                  this.currentCoinDisplay();
                   motion = this.newPageMotion();
                   this.goldSpendMotion = motion;
-                  balance.string = String(this.walletGold);
-                  temporary = this.eventCoinDisplays.has(balance);
-                  wallet = [balance.node, root.getChildByName('金币')].filter(function (node) {
-                    return !!node;
-                  });
-                  if (temporary) {
-                    for (_iterator6 = _createForOfIteratorHelperLoose(wallet); !(_step6 = _iterator6()).done;) {
-                      node = _step6.value;
-                      node.active = true;
-                      node.getComponent(UIOpacity).opacity = 255;
-                    }
-                  }
-                  _balance$node$positio = balance.node.position, x = _balance$node$positio.x, y = _balance$node$positio.y;
-                  label = this.outline(this.label('- ' + amount, x, y - 24, 74, 19, this.ensurePopupLayer()));
-                  label.isBold = true;
-                  label.color = Color.fromHEX(new Color(), '#ffad81');
-                  label.node.name = '金币支出 ' + amount;
-                  opacity = label.node.addComponent(UIOpacity);
-                  _context.prev = 15;
-                  hold = motion.reduced ? .35 : .50;
-                  movement = motion.reduced ? Promise.resolve(true) : motion.play(tween(label.node).to(.22, {
-                    position: new Vec3(x, y - 33, 0)
-                  }, {
-                    easing: 'quadOut'
-                  }));
-                  fade = motion.play(tween(opacity).delay(hold).to(.18, {
-                    opacity: 0
-                  }));
-                  _context.next = 21;
-                  return Promise.all([movement, fade]);
-                case 21:
-                  played = _context.sent;
-                  return _context.abrupt("return", played.every(Boolean) && this.ui === root);
-                case 23:
-                  _context.prev = 23;
-                  if ((_label$node = label.node) != null && _label$node.isValid) label.node.destroy();
-                  if (temporary && this.ui === root) {
-                    for (_iterator7 = _createForOfIteratorHelperLoose(wallet); !(_step7 = _iterator7()).done;) {
-                      _node = _step7.value;
-                      if (_node.isValid) _node.active = false;
-                    }
-                  }
+                  _context2.prev = 8;
+                  _context2.next = 11;
+                  return Promise.all(entries.map( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(_ref4) {
+                    var key, n, balance, icon, temporary, wallet, _iterator6, _step6, node, _balance$node$positio, x, y, label, _label$node, _iterator7, _step7, _node;
+                    return _regeneratorRuntime().wrap(function _callee$(_context) {
+                      while (1) switch (_context.prev = _context.next) {
+                        case 0:
+                          key = _ref4[0], n = _ref4[1];
+                          balance = _this9.walletLabels[key], icon = root.getChildByName(resourceNames[key]);
+                          balance.string = String(_this9.walletBalance(key));
+                          temporary = _this9.eventCoinDisplays.has(balance);
+                          wallet = [balance.node, icon].filter(function (node) {
+                            return !!node;
+                          });
+                          if (temporary) {
+                            for (_iterator6 = _createForOfIteratorHelperLoose(wallet); !(_step6 = _iterator6()).done;) {
+                              node = _step6.value;
+                              node.active = true;
+                              node.getComponent(UIOpacity).opacity = 255;
+                            }
+                          }
+                          _balance$node$positio = balance.node.position, x = _balance$node$positio.x, y = _balance$node$positio.y;
+                          label = _this9.outline(_this9.label((n < 0 ? '- ' : '+ ') + Math.abs(n), x, y - 22, 74, 18, _this9.ensurePopupLayer()));
+                          label.isBold = true;
+                          label.color = Color.fromHEX(new Color(), n < 0 ? '#ffad81' : '#a8ecc3');
+                          label.node.name = resourceNames[key] + (n < 0 ? '支出 ' : '收入 ') + Math.abs(n);
+                          _context.prev = 11;
+                          _context.next = 14;
+                          return motion.play(tween(label.node.addComponent(UIOpacity)).delay(motion.reduced ? .35 : .50).to(.18, {
+                            opacity: 0
+                          }));
+                        case 14:
+                          return _context.abrupt("return", _context.sent);
+                        case 15:
+                          _context.prev = 15;
+                          if ((_label$node = label.node) != null && _label$node.isValid) label.node.destroy();
+                          if (temporary && _this9.ui === root) {
+                            for (_iterator7 = _createForOfIteratorHelperLoose(wallet); !(_step7 = _iterator7()).done;) {
+                              _node = _step7.value;
+                              if (_node.isValid) _node.active = false;
+                            }
+                          }
+                          return _context.finish(15);
+                        case 19:
+                        case "end":
+                          return _context.stop();
+                      }
+                    }, _callee, null, [[11,, 15, 19]]);
+                  }))));
+                case 11:
+                  played = _context2.sent;
+                  return _context2.abrupt("return", played.every(Boolean) && this.ui === root);
+                case 13:
+                  _context2.prev = 13;
                   this.pageMotions["delete"](motion);
                   if (this.goldSpendMotion === motion) this.goldSpendMotion = undefined;
-                  return _context.finish(23);
-                case 29:
+                  return _context2.finish(13);
+                case 17:
                 case "end":
-                  return _context.stop();
+                  return _context2.stop();
               }
-            }, _callee, this, [[15,, 23, 29]]);
+            }, _callee2, this, [[8,, 13, 17]]);
           }));
-          function presentGoldSpend(_x) {
-            return _presentGoldSpend.apply(this, arguments);
+          function presentWalletChange(_x) {
+            return _presentWalletChange.apply(this, arguments);
           }
-          return presentGoldSpend;
+          return presentWalletChange;
         }();
+        _proto.itemCount = function itemCount(id) {
+          var _this$supplies$id;
+          return id === 'potion' ? this.potion : (_this$supplies$id = this.supplies[id]) != null ? _this$supplies$id : 0;
+        };
+        _proto.addItem = function addItem(id, n) {
+          if (id === 'potion') this.potion += n;else this.supplies[id] = this.itemCount(id) + n;
+        };
+        _proto.openGift = function openGift() {
+          this.addItem('gift', -1);
+          for (var _iterator8 = _createForOfIteratorHelperLoose(giftItems), _step8; !(_step8 = _iterator8()).done;) {
+            var id = _step8.value;
+            this.addItem(id, 5);
+          }
+        };
         _proto.start = /*#__PURE__*/function () {
-          var _start = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
-            var _this9 = this;
+          var _start = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4() {
+            var _this10 = this;
             var _URLSearchParams$get, seed, fx, sweep, sceneArt, skillArt, loadAll;
-            return _regeneratorRuntime().wrap(function _callee3$(_context3) {
-              while (1) switch (_context3.prev = _context3.next) {
+            return _regeneratorRuntime().wrap(function _callee4$(_context4) {
+              while (1) switch (_context4.prev = _context4.next) {
                 case 0:
                   profiler.hideStats();
                   if (!(typeof location !== 'undefined' && new URLSearchParams(location.search).has('m5-stage2'))) {
-                    _context3.next = 6;
+                    _context4.next = 6;
                     break;
                   }
                   seed = Number((_URLSearchParams$get = new URLSearchParams(location.search).get('seed')) != null ? _URLSearchParams$get : 8);
                   globalThis.m5SceneLab = openCombatSceneLab(this.node, seed, new URLSearchParams(location.search).has('formal'));
                   globalThis.__fourEmblemsReady = true;
-                  return _context3.abrupt("return");
+                  return _context4.abrupt("return");
                 case 6:
                   this.saveGate = new FormalSaveGate(this.saveKey, sys.localStorage, function (raw) {
-                    return _this9.recoveryOptIn() && !!readMineRecovery(raw);
+                    return _this10.recoveryOptIn() && !!readMineRecovery(raw);
                   });
                   if (typeof window !== 'undefined') window.addEventListener('pagehide', this.closeSaveGate);
-                  _context3.next = 10;
+                  _context4.next = 10;
                   return this.saveGate.acquire(typeof navigator === 'undefined' ? undefined : navigator.locks);
                 case 10:
                   if (this.isValid) {
-                    _context3.next = 12;
+                    _context4.next = 12;
                     break;
                   }
-                  return _context3.abrupt("return");
+                  return _context4.abrupt("return");
                 case 12:
                   this.audio = new GameAudio(this.node);
                   fx = TemplateBoardFx.load().then(function (frames) {
-                    _this9.templateFxFrames = frames;
+                    _this10.templateFxFrames = frames;
                   });
                   sweep = new Promise(function (resolve) {
                     return resources.load('effects/skill-sweep', EffectAsset, function (error, effect) {
                       if (!error) {
-                        _this9.skillSweep = new Material();
-                        _this9.skillSweep.initialize({
+                        _this10.skillSweep = new Material();
+                        _this10.skillSweep.initialize({
                           effectAsset: effect,
                           defines: {
                             USE_TEXTURE: true
                           }
                         });
-                        _this9.tintedFrame = new Material();
-                        _this9.tintedFrame.initialize({
+                        _this10.tintedFrame = new Material();
+                        _this10.tintedFrame.initialize({
                           effectAsset: effect,
                           defines: {
                             USE_TEXTURE: true,
@@ -9138,14 +9524,22 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                       resolve();
                     });
                   });
-                  _context3.next = 17;
+                  _context4.next = 17;
                   return new Promise(function (resolve) {
                     return resources.load('effects/actor-state', EffectAsset, function (error, effect) {
-                      if (!error) _this9.actorEffect = effect;
+                      if (!error) _this10.actorEffect = effect;
                       resolve();
                     });
                   });
                 case 17:
+                  _context4.next = 19;
+                  return new Promise(function (resolve, reject) {
+                    return resources.load('effects/rail', EffectAsset, function (error, asset) {
+                      return error ? reject(error) : resolve(asset);
+                    });
+                  });
+                case 19:
+                  this.railEffect = _context4.sent;
                   sceneArt = ['map-parchment', 'world-map-background', 'gear-stage', 'village-chief-stage', 'village-shop-stage', 'village-tavern-stage', 'village-smith-stage', 'npc-chief', 'npc-shop', 'npc-innkeeper', 'npc-smith', 'dungeon-traveler', 'dungeon-chest', 'dungeon-merchant', 'slot-main', 'slot-off', 'slot-armor', 'slot-accessory', 'tool-base', 'gear-arrow'].concat(dungeonIds.map(function (id) {
                     return 'corridor-' + id;
                   }));
@@ -9158,77 +9552,95 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     gold: false
                   });
                   loadAll = /*#__PURE__*/function () {
-                    var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
-                      var names, i;
-                      return _regeneratorRuntime().wrap(function _callee2$(_context2) {
-                        while (1) switch (_context2.prev = _context2.next) {
+                    var _ref6 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
+                      var _this10$saveGate, names, i, raw, result;
+                      return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+                        while (1) switch (_context3.prev = _context3.next) {
                           case 0:
-                            _context2.prev = 0;
-                            names = Array.from(new Set([].concat(_this9.allArt, Object.values(contentGroups).flat().filter(activeStageAsset), ['buffs/physical-armor', 'buffs/magic-armor', 'buffs/rally', 'buffs/round-boost', 'buffs/guard', 'buffs/altar', 'buffs/shred', 'buffs/stun', 'buffs/weaken', 'buffs/run', 'projectiles/stone', 'projectiles/m', 'locations/church-background', 'locations/church-statue', 'locations/dungeon-altar', 'board/miner', 'board/potion', 'board/miner-exit'])));
-                            _context2.next = 4;
-                            return Promise.all([fx, sweep, _this9.audio.preloadAll()]);
+                            _context3.prev = 0;
+                            names = Array.from(new Set([].concat(_this10.allArt, Object.values(contentGroups).flat().filter(activeStageAsset), ['buffs/physical-armor', 'buffs/magic-armor', 'buffs/rally', 'buffs/round-boost', 'buffs/guard', 'buffs/altar', 'buffs/shred', 'buffs/stun', 'buffs/weaken', 'buffs/run', 'projectiles/stone', 'projectiles/m', 'locations/church-background', 'locations/church-statue', 'locations/dungeon-altar', 'board/miner', 'board/potion', 'board/miner-exit', 'board/rock', 'board/rail', 'board/rail-arrow', 'board/airship'].concat(itemIds.map(function (id) {
+                              return 'board/' + id;
+                            })))));
+                            _context3.next = 4;
+                            return Promise.all([fx, sweep, _this10.audio.preloadAll()]);
                           case 4:
                             i = 0;
                           case 5:
                             if (!(i < names.length)) {
-                              _context2.next = 11;
+                              _context3.next = 11;
                               break;
                             }
-                            _context2.next = 8;
-                            return _this9.loadArt(names.slice(i, i + 6));
+                            _context3.next = 8;
+                            return _this10.loadArt(names.slice(i, i + 6));
                           case 8:
                             i += 6;
-                            _context2.next = 5;
+                            _context3.next = 5;
                             break;
                           case 11:
-                            if (_this9.isValid) {
-                              _context2.next = 13;
+                            if (_this10.isValid) {
+                              _context3.next = 13;
                               break;
                             }
-                            return _context2.abrupt("return");
+                            return _context3.abrupt("return");
                           case 13:
-                            _this9.contentReady = true;
-                            _this9.menu();
-                            globalThis.__fourEmblemsReady = true;
-                            _context2.next = 24;
-                            break;
-                          case 18:
-                            _context2.prev = 18;
-                            _context2.t0 = _context2["catch"](0);
-                            if (_this9.isValid) {
-                              _context2.next = 22;
+                            _this10.contentReady = true;
+                            if (!(_this10.packagedPlaytest && (_this10$saveGate = _this10.saveGate) != null && _this10$saveGate.writable && !_this10.saveGate.readRecovery())) {
+                              _context3.next = 20;
                               break;
                             }
-                            return _context2.abrupt("return");
-                          case 22:
-                            _this9.page('资源准备失败', String(_context2.t0), '', {
+                            raw = _this10.saveGate.read();
+                            if (!(!raw || JSON.parse(raw).playtestRevision !== playtestRevision)) {
+                              _context3.next = 20;
+                              break;
+                            }
+                            result = _this10.saveGate.write(JSON.stringify(completedPlaytestSave(_this10.tileIdentity())));
+                            if (!(result !== 'committed' && result !== 'reconciled')) {
+                              _context3.next = 20;
+                              break;
+                            }
+                            throw Error('通关测试档写入失败，请重新打开试玩包。');
+                          case 20:
+                            _this10.menu();
+                            globalThis.__fourEmblemsReady = true;
+                            _context3.next = 30;
+                            break;
+                          case 24:
+                            _context3.prev = 24;
+                            _context3.t0 = _context3["catch"](0);
+                            if (_this10.isValid) {
+                              _context3.next = 28;
+                              break;
+                            }
+                            return _context3.abrupt("return");
+                          case 28:
+                            _this10.page('资源准备失败', String(_context3.t0), '', {
                               party: false,
                               gold: false
                             });
-                            _this9.button('重试加载', 20, function () {
-                              _this9.page('正在准备游戏', '正在重试缺失资源。', '', {
+                            _this10.button('重试加载', 20, function () {
+                              _this10.page('正在准备游戏', '正在重试缺失资源。', '', {
                                 party: false,
                                 gold: false
                               });
                               void loadAll();
                             });
-                          case 24:
+                          case 30:
                           case "end":
-                            return _context2.stop();
+                            return _context3.stop();
                         }
-                      }, _callee2, null, [[0, 18]]);
+                      }, _callee3, null, [[0, 24]]);
                     }));
                     return function loadAll() {
-                      return _ref2.apply(this, arguments);
+                      return _ref6.apply(this, arguments);
                     };
                   }();
-                  _context3.next = 24;
+                  _context4.next = 27;
                   return loadAll();
-                case 24:
+                case 27:
                 case "end":
-                  return _context3.stop();
+                  return _context4.stop();
               }
-            }, _callee3, this);
+            }, _callee4, this);
           }));
           function start() {
             return _start.apply(this, arguments);
@@ -9236,16 +9648,16 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           return start;
         }();
         _proto.downloadContentArt = /*#__PURE__*/function () {
-          var _downloadContentArt = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee4(name, signal, progress) {
-            var check, _response, manifest, asset, url, cache, cached, response, size, chunks, reader, cancel, part, bytes, body, offset, _iterator8, _step8, chunk, headers;
-            return _regeneratorRuntime().wrap(function _callee4$(_context4) {
-              while (1) switch (_context4.prev = _context4.next) {
+          var _downloadContentArt = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5(name, signal, progress) {
+            var check, _response, manifest, asset, url, cache, cached, response, size, chunks, reader, cancel, part, bytes, body, offset, _iterator9, _step9, chunk, headers;
+            return _regeneratorRuntime().wrap(function _callee5$(_context5) {
+              while (1) switch (_context5.prev = _context5.next) {
                 case 0:
                   check = function check() {
                     if (signal.aborted) throw Error('Download cancelled: ' + name);
                   };
                   check();
-                  _context4.next = 4;
+                  _context5.next = 4;
                   return new Promise(function (resolve, reject) {
                     var cancel = function cancel() {
                       return reject(Error('Preload cancelled: ' + name));
@@ -9263,25 +9675,25 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   check();
                   progress();
                   if (this.deliveryManifest) {
-                    _context4.next = 17;
+                    _context5.next = 17;
                     break;
                   }
-                  _context4.next = 9;
+                  _context5.next = 9;
                   return fetch('content-delivery.json', {
                     signal: signal
                   });
                 case 9:
-                  _response = _context4.sent;
+                  _response = _context5.sent;
                   if (_response.ok) {
-                    _context4.next = 12;
+                    _context5.next = 12;
                     break;
                   }
                   throw Error('Content manifest HTTP ' + _response.status);
                 case 12:
-                  _context4.next = 14;
+                  _context5.next = 14;
                   return _response.json();
                 case 14:
-                  manifest = _context4.sent;
+                  manifest = _context5.sent;
                   check();
                   this.deliveryManifest = manifest;
                 case 17:
@@ -9291,7 +9703,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     return a.name === name;
                   });
                   if (asset) {
-                    _context4.next = 20;
+                    _context5.next = 20;
                     break;
                   }
                   throw Error('Unassigned delivered texture: ' + name);
@@ -9302,36 +9714,36 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   // owns timeout/retry; only a fully validated image is put into the shared cache.
                   url = new URL(asset.path, location.href).href;
                   if (!(typeof caches !== 'undefined')) {
-                    _context4.next = 29;
+                    _context5.next = 29;
                     break;
                   }
-                  _context4.next = 26;
+                  _context5.next = 26;
                   return caches.open('four-emblems-assets-' + this.releaseVersion)["catch"](function () {
                     return undefined;
                   });
                 case 26:
-                  _context4.t0 = _context4.sent;
-                  _context4.next = 30;
+                  _context5.t0 = _context5.sent;
+                  _context5.next = 30;
                   break;
                 case 29:
-                  _context4.t0 = undefined;
+                  _context5.t0 = undefined;
                 case 30:
-                  cache = _context4.t0;
-                  _context4.next = 33;
+                  cache = _context5.t0;
+                  _context5.next = 33;
                   return cache == null ? void 0 : cache.match(url)["catch"](function () {
                     return undefined;
                   });
                 case 33:
-                  cached = _context4.sent;
+                  cached = _context5.sent;
                   if (!(cached != null)) {
-                    _context4.next = 38;
+                    _context5.next = 38;
                     break;
                   }
-                  _context4.t1 = cached;
-                  _context4.next = 41;
+                  _context5.t1 = cached;
+                  _context5.next = 41;
                   break;
                 case 38:
-                  _context4.next = 40;
+                  _context5.next = 40;
                   return fetch(asset.path, {
                     signal: signal,
                     headers: {
@@ -9339,11 +9751,11 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     }
                   });
                 case 40:
-                  _context4.t1 = _context4.sent;
+                  _context5.t1 = _context5.sent;
                 case 41:
-                  response = _context4.t1;
+                  response = _context5.t1;
                   if (response.ok) {
-                    _context4.next = 44;
+                    _context5.next = 44;
                     break;
                   }
                   throw Error('Texture download HTTP ' + response.status + ': ' + name);
@@ -9351,7 +9763,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   size = 0;
                   chunks = [];
                   if (!response.body) {
-                    _context4.next = 68;
+                    _context5.next = 68;
                     break;
                   }
                   reader = response.body.getReader();
@@ -9361,72 +9773,72 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   signal.addEventListener('abort', cancel, {
                     once: true
                   });
-                  _context4.prev = 50;
+                  _context5.prev = 50;
                 case 51:
-                  _context4.next = 53;
+                  _context5.next = 53;
                   return reader.read();
                 case 53:
-                  part = _context4.sent;
+                  part = _context5.sent;
                   check();
                   if (!part.done) {
-                    _context4.next = 57;
+                    _context5.next = 57;
                     break;
                   }
-                  return _context4.abrupt("break", 62);
+                  return _context5.abrupt("break", 62);
                 case 57:
                   size += part.value.byteLength;
                   if (!cached) chunks.push(part.value);
                   progress();
                 case 60:
-                  _context4.next = 51;
+                  _context5.next = 51;
                   break;
                 case 62:
-                  _context4.prev = 62;
+                  _context5.prev = 62;
                   signal.removeEventListener('abort', cancel);
                   reader.releaseLock();
-                  return _context4.finish(62);
+                  return _context5.finish(62);
                 case 66:
-                  _context4.next = 75;
+                  _context5.next = 75;
                   break;
                 case 68:
-                  _context4.t2 = Uint8Array;
-                  _context4.next = 71;
+                  _context5.t2 = Uint8Array;
+                  _context5.next = 71;
                   return response.arrayBuffer();
                 case 71:
-                  _context4.t3 = _context4.sent;
-                  bytes = new _context4.t2(_context4.t3);
+                  _context5.t3 = _context5.sent;
+                  bytes = new _context5.t2(_context5.t3);
                   size = bytes.byteLength;
                   if (!cached) chunks.push(bytes);
                 case 75:
                   check();
                   if (!(size !== asset.bytes)) {
-                    _context4.next = 81;
+                    _context5.next = 81;
                     break;
                   }
                   if (!cached) {
-                    _context4.next = 80;
+                    _context5.next = 80;
                     break;
                   }
-                  _context4.next = 80;
+                  _context5.next = 80;
                   return cache == null ? void 0 : cache["delete"](url);
                 case 80:
                   throw Error('Incomplete texture: ' + name);
                 case 81:
                   if (!(cache && !cached)) {
-                    _context4.next = 91;
+                    _context5.next = 91;
                     break;
                   }
                   body = new Uint8Array(size);
                   offset = 0;
-                  for (_iterator8 = _createForOfIteratorHelperLoose(chunks); !(_step8 = _iterator8()).done;) {
-                    chunk = _step8.value;
+                  for (_iterator9 = _createForOfIteratorHelperLoose(chunks); !(_step9 = _iterator9()).done;) {
+                    chunk = _step9.value;
                     body.set(chunk, offset);
                     offset += chunk.byteLength;
                   }
                   headers = new Headers(response.headers);
                   headers["delete"]('content-encoding');
                   headers["delete"]('content-length');
-                  _context4.next = 90;
+                  _context5.next = 90;
                   return cache.put(url, new Response(body, {
                     headers: headers
                   }))["catch"](function () {});
@@ -9434,26 +9846,26 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   check();
                 case 91:
                 case "end":
-                  return _context4.stop();
+                  return _context5.stop();
               }
-            }, _callee4, this, [[50,, 62, 66]]);
+            }, _callee5, this, [[50,, 62, 66]]);
           }));
-          function downloadContentArt(_x2, _x3, _x4) {
+          function downloadContentArt(_x3, _x4, _x5) {
             return _downloadContentArt.apply(this, arguments);
           }
           return downloadContentArt;
         }();
         _proto.loadArt = /*#__PURE__*/function () {
-          var _loadArt = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee5(names) {
-            var _this10 = this;
-            return _regeneratorRuntime().wrap(function _callee5$(_context5) {
-              while (1) switch (_context5.prev = _context5.next) {
+          var _loadArt = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6(names) {
+            var _this11 = this;
+            return _regeneratorRuntime().wrap(function _callee6$(_context6) {
+              while (1) switch (_context6.prev = _context6.next) {
                 case 0:
-                  _context5.next = 2;
+                  _context6.next = 2;
                   return Promise.all(Array.from(new Set(names)).filter(function (name) {
-                    return !_this10.textures.has(name);
+                    return !_this11.textures.has(name);
                   }).map(function (name) {
-                    var pending = _this10.artLoads.get(name);
+                    var pending = _this11.artLoads.get(name);
                     if (pending) return pending;
                     var task = new Promise(function (resolve, reject) {
                       var settled = false;
@@ -9469,39 +9881,39 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                           reject(Error('资源加载失败: ' + name));
                           return;
                         }
-                        if (!_this10.isValid) {
+                        if (!_this11.isValid) {
                           resolve();
                           return;
                         }
                         var frame = new SpriteFrame();
                         frame.texture = texture;
-                        _this10.textures.set(name, frame);
+                        _this11.textures.set(name, frame);
                         resolve();
                       });
                     })["finally"](function () {
-                      if (_this10.artLoads.get(name) === task) _this10.artLoads["delete"](name);
+                      if (_this11.artLoads.get(name) === task) _this11.artLoads["delete"](name);
                     });
-                    _this10.artLoads.set(name, task);
+                    _this11.artLoads.set(name, task);
                     return task;
                   }));
                 case 2:
                 case "end":
-                  return _context5.stop();
+                  return _context6.stop();
               }
-            }, _callee5);
+            }, _callee6);
           }));
-          function loadArt(_x5) {
+          function loadArt(_x6) {
             return _loadArt.apply(this, arguments);
           }
           return loadArt;
         }();
         _proto.deferContent = function deferContent(action, group, required) {
-          var _this11 = this;
+          var _this12 = this;
           if (group === void 0) {
             group = 'tutorial';
           }
           if (required ? required.every(function (name) {
-            return _this11.textures.has(name);
+            return _this12.textures.has(name);
           }) : this.readyGroups.has(group)) return false;
           if (this.contentLoading) return true;
           var groups = required ? [] : group === 'all' ? Object.keys(contentGroups) : ['opening', group];
@@ -9510,57 +9922,57 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           })));
           var markReady = function markReady() {
             groups.forEach(function (g) {
-              return _this11.readyGroups.add(g);
+              return _this12.readyGroups.add(g);
             });
-            _this11.readyGroups.add(group);
-            _this11.contentReady = _this11.readyGroups.has('tutorial');
+            _this12.readyGroups.add(group);
+            _this12.contentReady = _this12.readyGroups.has('tutorial');
           };
           if (names.every(function (name) {
-            return _this11.textures.has(name);
+            return _this12.textures.has(name);
           })) {
             markReady();
             return false;
           }
           this.page('正在准备下一段旅程', '后台下载持续进行，仅等待当前场景所需资源。', 'stage-forest-0');
           var root = this.ui;
-          this.contentLoading = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee6() {
-            var _this11$downloads;
+          this.contentLoading = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee7() {
+            var _this12$downloads;
             var missing, i;
-            return _regeneratorRuntime().wrap(function _callee6$(_context6) {
-              while (1) switch (_context6.prev = _context6.next) {
+            return _regeneratorRuntime().wrap(function _callee7$(_context7) {
+              while (1) switch (_context7.prev = _context7.next) {
                 case 0:
                   // Foreground load may reuse an in-flight preload; no all-content barrier.
-                  void ((_this11$downloads = _this11.downloads) == null ? void 0 : _this11$downloads.enqueue(names, true)["catch"](function () {}));
+                  void ((_this12$downloads = _this12.downloads) == null ? void 0 : _this12$downloads.enqueue(names, true)["catch"](function () {}));
                   missing = names.filter(function (name) {
-                    return !_this11.textures.has(name);
+                    return !_this12.textures.has(name);
                   });
                   i = 0;
                 case 3:
                   if (!(i < missing.length)) {
-                    _context6.next = 9;
+                    _context7.next = 9;
                     break;
                   }
-                  _context6.next = 6;
-                  return _this11.loadArt(missing.slice(i, i + 4));
+                  _context7.next = 6;
+                  return _this12.loadArt(missing.slice(i, i + 4));
                 case 6:
                   i += 4;
-                  _context6.next = 3;
+                  _context7.next = 3;
                   break;
                 case 9:
                   markReady();
-                  _this11.contentLoading = undefined;
-                  if (_this11.isValid && _this11.ui === root) action();
+                  _this12.contentLoading = undefined;
+                  if (_this12.isValid && _this12.ui === root) action();
                 case 12:
                 case "end":
-                  return _context6.stop();
+                  return _context7.stop();
               }
-            }, _callee6);
+            }, _callee7);
           }))()["catch"](function (error) {
-            _this11.contentLoading = undefined;
-            if (!_this11.isValid || _this11.ui !== root) return;
-            _this11.label(String(error.message), 0, 0, 430, 18);
-            _this11.button('重新加载', -65, function () {
-              return _this11.deferContent(action, group, required);
+            _this12.contentLoading = undefined;
+            if (!_this12.isValid || _this12.ui !== root) return;
+            _this12.label(String(error.message), 0, 0, 430, 18);
+            _this12.button('重新加载', -65, function () {
+              return _this12.deferContent(action, group, required);
             });
           });
           return true;
@@ -9727,11 +10139,15 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         _proto.reset = function reset(background) {
           var _this$buffView2,
             _this$boardFx,
-            _this12 = this,
+            _this13 = this,
             _this$noticeLayer3;
           if (background === void 0) {
             background = 'stage-forest-0';
           }
+          this.refreshTrade = undefined;
+          this.itemBar = undefined;
+          this.bombAim = undefined;
+          this.dialogueBottom = undefined;
           (_this$buffView2 = this.buffView) == null || _this$buffView2.dispose();
           this.buffView = undefined;
           this.stopStage4A('reset');
@@ -9744,7 +10160,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.formalObjective = undefined;
           var topOffset = (view.getVisibleSize().height - 854) / 2;
           this.ui = this.uiManager.replacePage(function () {
-            return _this12.box('Game', 0, topOffset, 480, 854, '#26352e', _this12.node);
+            return _this13.box('Game', 0, topOffset, 480, 854, '#26352e', _this13.node);
           });
           if ((_this$noticeLayer3 = this.noticeLayer) != null && _this$noticeLayer3.isValid) {
             this.noticeLayer.setPosition(0, topOffset);
@@ -9754,7 +10170,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           if (background) this.stageBackdrop(background);
         };
         _proto.button = function button(text, y, action, x, w, selected, parent, enabled) {
-          var _this13 = this;
+          var _this14 = this;
           if (x === void 0) {
             x = 0;
           }
@@ -9770,13 +10186,14 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           if (enabled === void 0) {
             enabled = true;
           }
+          if (parent === this.ui && this.dialogueBottom !== undefined) y += Math.min(0, this.dialogueBottom - 82);
           var button = this.box(text, x, y, w, 48, '#21362e', parent);
           this.box('Button edge', 0, 2, w - 2, 45, enabled ? '#b5905d' : '#66695f', button);
           this.box('Button face', 0, 3, w - 6, 41, enabled ? selected ? '#f1bf69' : '#f1deaf' : '#93968a', button);
           var title = this.label(text, 0, 3, w - 16, 19, button);
           title.color = Color.fromHEX(new Color(), enabled ? '#2a382d' : '#30342d');
           if (enabled) button.on(Node.EventType.TOUCH_END, function () {
-            _this13.audio.play('click');
+            _this14.audio.play('click');
             action();
           });
           return button;
@@ -9819,6 +10236,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               roll: run.routeRoll,
               depth: dir.depth,
               pack: run.packId,
+              coins: run.coins,
               buffs: _extends({}, run.buffs)
             };
             if ((carried == null ? void 0 : carried.director) === dir && carried.types === this.formalTypes().join(',')) {
@@ -9835,7 +10253,11 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             }
           }
           return (_this$saveGate2 = this.saveGate) == null ? void 0 : _this$saveGate2.write(JSON.stringify(_extends({
+            playtestRevision: this.profileRevision,
+            completedPlaytest: this.completedPlaytest,
             journey: journey,
+            supplies: this.supplies,
+            shopSold: this.shopSold,
             party: party,
             recruits: this.recruits,
             reported: reported,
@@ -9899,13 +10321,19 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             this.gold = safe(state.gold, 1e9, 0);
             this.exp = safe(state.exp, 1e9, 0);
             this.hp = Math.max(1, safe(state.hp, this.maxHP, this.maxHP));
+            this.supplies = state.supplies === undefined ? {
+              gift: 1
+            } : readCounts(state.supplies);
+            this.shopSold = readCounts(state.shopSold);
             this.dp = safe(state.dp, this.maxDP, 0);
-            this.potion = typeof state.potion === 'boolean' ? Number(state.potion) : safe(state.potion, 99, 0);
+            this.potion = typeof state.potion === 'boolean' ? Number(state.potion) : safe(state.potion, Number.MAX_SAFE_INTEGER, 0);
             this.saveId = typeof state.saveId === 'string' ? state.saveId : undefined;
             this.tutorialCheckpoint = state.tutorial ? {
               cursor: state.tutorial.cursor,
               xp: state.tutorial.xp
             } : undefined;
+            this.profileRevision = state.playtestRevision;
+            this.completedPlaytest = state.completedPlaytest === true;
             this.restoreJournal(state.quests);
             this.taught = !this.tutorialCheckpoint;
             return true;
@@ -9918,12 +10346,12 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         };
         _proto.continueSavedGame = function continueSavedGame() {
           var _this$saveGate4,
-            _this14 = this,
+            _this15 = this,
             _state$mineRecovery$p,
             _state$mineRecovery$p2;
           var raw = (_this$saveGate4 = this.saveGate) == null ? void 0 : _this$saveGate4.readRecovery();
           if (raw && this.deferContent(function () {
-            return _this14.continueSavedGame();
+            return _this15.continueSavedGame();
           }, 'all')) return;
           if (!raw) {
             if (this.resume()) {
@@ -9968,7 +10396,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.types = this.formalTypes();
           var board = (_state$mineRecovery$p = (_state$mineRecovery$p2 = state.mineRecovery.potion) == null ? void 0 : _state$mineRecovery$p2.board) != null ? _state$mineRecovery$p : state.run.board;
           if (board.tiles.some(function (tile) {
-            return !_this14.types.includes(tile.emblem);
+            return !_this15.types.includes(tile.emblem);
           }) || !legalMove(board.tiles.map(function (t) {
             return t.emblem;
           })) || state.player.hp !== this.hp || state.player.dp !== this.dp) {
@@ -10050,7 +10478,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         };
         _proto.persistMineRecovery = function persistMineRecovery(live, next, retry) {
           var _this$saveGate5,
-            _this15 = this;
+            _this16 = this;
           if (this.mineRecovery !== live) return false;
           var raw = JSON.stringify(next);
           var result = (_this$saveGate5 = this.saveGate) == null ? void 0 : _this$saveGate5.writeRecovery(raw, live.raw);
@@ -10059,7 +10487,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               this.popup('保存失败，未执行操作。', 0, 105);
               if (retry) {
                 var button = this.button('重试保存', -325, function () {
-                  if (_this15.mineRecovery !== live) return;
+                  if (_this16.mineRecovery !== live) return;
                   button.destroy();
                   retry();
                 });
@@ -10082,7 +10510,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           });
         };
         _proto.stopLegacyMineBoard = function stopLegacyMineBoard() {
-          var _this16 = this;
+          var _this17 = this;
           var live = this.mineRecovery;
           if (!live || live.state.mineRecovery.source !== 'formal') return;
           this.automatic = false;
@@ -10091,17 +10519,17 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.page('棋盘结算已中断', '没有合法换位。可恢复最近保存的同一房间。');
           var root = this.ui;
           this.button('恢复房间检查点', 20, function () {
-            var _this16$saveGate;
-            if (_this16.ui !== root || _this16.mineRecovery !== live) return;
-            if (((_this16$saveGate = _this16.saveGate) == null ? void 0 : _this16$saveGate.readRecovery()) !== live.raw) {
-              _this16.showRecoveryStop('检查点已变更，请重新加载。');
+            var _this17$saveGate;
+            if (_this17.ui !== root || _this17.mineRecovery !== live) return;
+            if (((_this17$saveGate = _this17.saveGate) == null ? void 0 : _this17$saveGate.readRecovery()) !== live.raw) {
+              _this17.showRecoveryStop('检查点已变更，请重新加载。');
               return;
             }
-            _this16.continueSavedGame();
+            _this17.continueSavedGame();
           });
         };
         _proto.closeMineRecovery = function closeMineRecovery(outcome) {
-          var _this17 = this;
+          var _this18 = this;
           var live = this.mineRecovery;
           if (!live || live.state.run.closed) return;
           if (live.state.mineRecovery.source === 'formal') {
@@ -10114,12 +10542,12 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             });
             if (!next) return;
             var commit = function commit() {
-              if (!_this17.persistMineRecovery(live, next, commit)) return;
+              if (!_this18.persistMineRecovery(live, next, commit)) return;
               try {
-                if (!_this17.resume(next.player)) throw Error('player projection mismatch');
-                _this17.showFormalMineSettlement(_this17.mineRecovery.raw, next);
+                if (!_this18.resume(next.player)) throw Error('player projection mismatch');
+                _this18.showFormalMineSettlement(_this18.mineRecovery.raw, next);
               } catch (_unused3) {
-                _this17.showRecoveryStop('结算已保存，场景需重新加载。');
+                _this18.showRecoveryStop('结算已保存，场景需重新加载。');
               }
             };
             commit();
@@ -10138,7 +10566,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         };
         _proto.showFormalMineSettlement = function showFormalMineSettlement(raw, state) {
           var _this$motion3,
-            _this18 = this;
+            _this19 = this;
           (_this$motion3 = this.motion) == null || _this$motion3.cancel();
           this.automatic = false;
           this.dungeon = undefined;
@@ -10149,11 +10577,11 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var reward = state.mineRecovery.settlement.preview;
           this.page(outcome === 'complete' ? '地牢通关' : outcome === 'fail' ? '探索失败' : '撤离结算', '本次带回：金币 ×' + reward.gold + ' · 经验 ×' + reward.xp, outcome === 'fail' ? 'village-tavern-stage' : 'stage-mine-0');
           this.button(outcome === 'fail' ? '起身，回到酒馆' : '返回大地图', 28, function () {
-            var _this18$saveGate;
-            var result = (_this18$saveGate = _this18.saveGate) == null ? void 0 : _this18$saveGate.releaseRecovery(JSON.stringify(state.player), raw);
+            var _this19$saveGate;
+            var result = (_this19$saveGate = _this19.saveGate) == null ? void 0 : _this19$saveGate.releaseRecovery(JSON.stringify(state.player), raw);
             if (result === 'committed' || result === 'reconciled') {
-              if (outcome === 'fail') _this18.tavern(true);else _this18.map();
-            } else if (result === 'write-failed') _this18.popup('保存失败，请重试。', 0, 105);else _this18.showRecoveryStop('存档未能确认，请重新加载。');
+              if (outcome === 'fail') _this19.tavern(true);else _this19.map();
+            } else if (result === 'write-failed') _this19.popup('保存失败，请重试。', 0, 105);else _this19.showRecoveryStop('存档未能确认，请重新加载。');
           });
         };
         _proto.minePermit = function minePermit(director, room) {
@@ -10170,14 +10598,14 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           };
         };
         _proto.stableMineBoard = function stableMineBoard() {
-          var _this19 = this;
+          var _this20 = this;
           if (this.tiles.length !== 56 || matches(this.board).length || !this.legalMove()) return;
           var tiles = this.tiles.map(function (node, index) {
-            var id = _this19.restoredTileIds.get(node);
-            var tier = _this19.chargedTiles.get(node);
+            var id = _this20.restoredTileIds.get(node);
+            var tier = _this20.chargedTiles.get(node);
             return _extends({
               id: id,
-              emblem: _this19.board[index]
+              emblem: _this20.board[index]
             }, tier ? {
               tier: tier
             } : {});
@@ -10223,10 +10651,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.commitMineRoom(current.live, _final, director, room);
         };
         _proto.commitMineRoom = function commitMineRoom(live, next, director, room, coinsAt) {
-          var _this20 = this;
+          var _this21 = this;
           if (this.dungeon !== director || director.room !== room || director.depth !== live.state.run.cursor) return;
           if (!this.persistMineRecovery(live, next, this.ui === this.battleRoot ? function () {
-            return _this20.commitMineRoom(live, next, director, room);
+            return _this21.commitMineRoom(live, next, director, room);
           } : undefined)) return;
           var committed = this.mineRecovery,
             root = this.ui;
@@ -10234,60 +10662,60 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             try {
               if (!director.advance(room) || director.depth !== next.run.cursor) throw Error('room projection mismatch');
               if (next.run.closed) {
-                if (!_this20.resume(next.player)) throw Error('player projection mismatch');
-                _this20.showFormalMineSettlement(_this20.mineRecovery.raw, next);
-              } else _this20.projectMineRecovery(director, next, true);
+                if (!_this21.resume(next.player)) throw Error('player projection mismatch');
+                _this21.showFormalMineSettlement(_this21.mineRecovery.raw, next);
+              } else _this21.projectMineRecovery(director, next, true);
             } catch (_unused4) {
-              _this20.showRecoveryStop('结果已保存，场景需重新加载。');
+              _this21.showRecoveryStop('结果已保存，场景需重新加载。');
             }
           };
-          var battle = room.kind === 'battle' ? planWaveReward('mine', room) : undefined;
+          var battle = room.kind === 'battle' ? planMineV1Reward(room) : undefined;
           if (!coinsAt && !battle) {
             show();
             return true;
           }
           var motion = this.newPageMotion();
-          void _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee7() {
-            var _battle$coins, _ref5, _this20$lastFallen, _battle$loot, amount, origin;
-            return _regeneratorRuntime().wrap(function _callee7$(_context7) {
-              while (1) switch (_context7.prev = _context7.next) {
+          void _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee8() {
+            var _battle$coins, _ref9, _this21$lastFallen, _battle$loot, amount, origin;
+            return _regeneratorRuntime().wrap(function _callee8$(_context8) {
+              while (1) switch (_context8.prev = _context8.next) {
                 case 0:
-                  _context7.prev = 0;
+                  _context8.prev = 0;
                   amount = (_battle$coins = battle == null ? void 0 : battle.coins) != null ? _battle$coins : next.run.pending.coins - live.state.run.pending.coins;
-                  origin = (_ref5 = coinsAt != null ? coinsAt : (_this20$lastFallen = _this20.lastFallen) == null ? void 0 : _this20$lastFallen.origin) != null ? _ref5 : new Vec3(132, stageGrid.groundY + 30);
-                  _context7.t0 = !battle;
-                  if (!_context7.t0) {
-                    _context7.next = 8;
+                  origin = (_ref9 = coinsAt != null ? coinsAt : (_this21$lastFallen = _this21.lastFallen) == null ? void 0 : _this21$lastFallen.origin) != null ? _ref9 : new Vec3(132, stageGrid.groundY + 30);
+                  _context8.t0 = !battle;
+                  if (!_context8.t0) {
+                    _context8.next = 8;
                     break;
                   }
-                  _context7.next = 7;
-                  return _this20.revealChest(motion, '惊喜 · 金币与铁矿', "\u83B7\u5F97 " + amount + " \u91D1\u5E01\u3001" + roomRewards.chestOre + " \u94C1\u77FF");
+                  _context8.next = 7;
+                  return _this21.revealChest(motion, '惊喜 · 金币与矿石', "\u83B7\u5F97 " + amount + " \u91D1\u5E01\u3001" + roomRewards.chestOre + " \u77FF\u77F3");
                 case 7:
-                  _context7.t0 = !_context7.sent;
+                  _context8.t0 = !_context8.sent;
                 case 8:
-                  if (!_context7.t0) {
-                    _context7.next = 10;
+                  if (!_context8.t0) {
+                    _context8.next = 10;
                     break;
                   }
-                  return _context7.abrupt("return");
+                  return _context8.abrupt("return");
                 case 10:
-                  _context7.next = 12;
-                  return Promise.all([_this20.animateCoins(motion, amount, _this20.coinText, origin, stageGrid.groundY), _this20.showMaterials(motion, (_battle$loot = battle == null ? void 0 : battle.loot) != null ? _battle$loot : {
+                  _context8.next = 12;
+                  return Promise.all([_this21.animateCoins(motion, amount, _this21.coinText, origin, stageGrid.groundY), _this21.showMaterials(motion, (_battle$loot = battle == null ? void 0 : battle.loot) != null ? _battle$loot : {
                     ore: roomRewards.chestOre
                   }, origin)]);
                 case 12:
-                  if (_this20.ui === root && _this20.mineRecovery === committed && !motion.cancelled) show();
-                  _context7.next = 18;
+                  if (_this21.ui === root && _this21.mineRecovery === committed && !motion.cancelled) show();
+                  _context8.next = 18;
                   break;
                 case 15:
-                  _context7.prev = 15;
-                  _context7.t1 = _context7["catch"](0);
-                  if (_this20.ui === root && _this20.mineRecovery === committed) _this20.showRecoveryStop('房间已保存，场景需重新加载。');
+                  _context8.prev = 15;
+                  _context8.t1 = _context8["catch"](0);
+                  if (_this21.ui === root && _this21.mineRecovery === committed) _this21.showRecoveryStop('房间已保存，场景需重新加载。');
                 case 18:
                 case "end":
-                  return _context7.stop();
+                  return _context8.stop();
               }
-            }, _callee7, null, [[0, 15]]);
+            }, _callee8, null, [[0, 15]]);
           }))();
           return true;
         };
@@ -10301,14 +10729,14 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.page('验证探索已关闭', '已记录关闭回执。测试收益不会发给角色。');
         };
         _proto.menu = function menu() {
-          var _this21 = this,
+          var _this22 = this,
             _this$saveGate6,
             _this$saveGate7,
             _this$saveGate8;
           this.reset();
           this.button('冒险手册', -213, function () {
-            return _this21.showRules(0, function () {
-              return _this21.menu();
+            return _this22.showRules(0, function () {
+              return _this22.menu();
             });
           }, 0, 360);
           this.box('Title frame', 0, 65, 420, 135, '#23372f');
@@ -10319,34 +10747,35 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.label('结界逆转，队伍在苔石森林失散。', 0, -11, 440, 19);
           this.art('hero-s', 0, 263, 104, 104);
           var persistedRecovery = (_this$saveGate6 = this.saveGate) == null ? void 0 : _this$saveGate6.readRecovery();
-          if (persistedRecovery || (_this$saveGate7 = this.saveGate) != null && _this$saveGate7.read()) this.button('继续冒险', -144, function () {
-            return _this21.continueSavedGame();
+          if (persistedRecovery || (_this$saveGate7 = this.saveGate) != null && _this$saveGate7.read()) this.button('继续冒险', this.packagedPlaytest ? -80 : -144, function () {
+            return _this22.continueSavedGame();
           });
           if (!((_this$saveGate8 = this.saveGate) != null && _this$saveGate8.writable)) this.label('存档正由其他页面使用；新游戏将接管并替换旧进度', 0, -258, 450, 14);
           this.trialButton('测试关卡', -302, function () {
-            return _this21.testLevelMenu();
+            return _this22.testLevelMenu();
           });
-          this.button('在林中醒来', -80, function () {
-            void _this21.newGame();
+          this.button('在林中醒来', this.packagedPlaytest ? -144 : -80, function () {
+            void _this22.newGame();
           });
-          this.label('新游戏：立即替换旧进度，只保留一个存档', 0, -39, 440, 15);
+          this.label(this.packagedPlaytest ? '继续当前测试存档 · 在林中醒来会重开序章' : '新游戏：立即替换旧进度，只保留一个存档', 0, -39, 440, 15);
         };
         _proto.newGame = /*#__PURE__*/function () {
-          var _newGame = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee8() {
-            var _this22 = this;
+          var _newGame = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee9() {
+            var _this23 = this;
             var root, fresh, gate, _this$motion5, _this$noticeLayer4, outcome;
-            return _regeneratorRuntime().wrap(function _callee8$(_context8) {
-              while (1) switch (_context8.prev = _context8.next) {
+            return _regeneratorRuntime().wrap(function _callee9$(_context9) {
+              while (1) switch (_context9.prev = _context9.next) {
                 case 0:
                   if (!this.startingGame) {
-                    _context8.next = 2;
+                    _context9.next = 2;
                     break;
                   }
-                  return _context8.abrupt("return");
+                  return _context9.abrupt("return");
                 case 2:
                   this.startingGame = true;
                   root = this.ui;
                   fresh = {
+                    playtestRevision: this.packagedPlaytest ? playtestRevision : undefined,
                     saveId: this.tileIdentity(),
                     party: ['s'],
                     reported: false,
@@ -10368,25 +10797,25 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   };
                   this.closeSaveGate();
                   gate = this.saveGate = new FormalSaveGate(this.saveKey, sys.localStorage, function (raw) {
-                    return _this22.recoveryOptIn() && !!readMineRecovery(raw);
+                    return _this23.recoveryOptIn() && !!readMineRecovery(raw);
                   });
-                  _context8.prev = 7;
-                  _context8.next = 10;
+                  _context9.prev = 7;
+                  _context9.next = 10;
                   return gate.reset(JSON.stringify(fresh), typeof navigator === 'undefined' ? undefined : navigator.locks);
                 case 10:
-                  outcome = _context8.sent;
+                  outcome = _context9.sent;
                   if (!(this.ui !== root || !this.isValid)) {
-                    _context8.next = 13;
+                    _context9.next = 13;
                     break;
                   }
-                  return _context8.abrupt("return");
+                  return _context9.abrupt("return");
                 case 13:
                   if (!(outcome !== 'committed' && outcome !== 'reconciled')) {
-                    _context8.next = 16;
+                    _context9.next = 16;
                     break;
                   }
                   this.popup(outcome === 'uncertain' ? '新存档结果无法核对，请重新加载。' : '新存档未能保存，请重试。', 0, 85);
-                  return _context8.abrupt("return");
+                  return _context9.abrupt("return");
                 case 16:
                   (_this$motion5 = this.motion) == null || _this$motion5.cancel();
                   this.cancelPageMotions();
@@ -10405,14 +10834,14 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   this.resume(fresh);
                   this.startTutorial();
                 case 32:
-                  _context8.prev = 32;
+                  _context9.prev = 32;
                   this.startingGame = false;
-                  return _context8.finish(32);
+                  return _context9.finish(32);
                 case 35:
                 case "end":
-                  return _context8.stop();
+                  return _context9.stop();
               }
-            }, _callee8, this, [[7,, 32, 35]]);
+            }, _callee9, this, [[7,, 32, 35]]);
           }));
           function newGame() {
             return _newGame.apply(this, arguments);
@@ -10434,7 +10863,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             _carried,
             _this$trial4,
             _this$trial5,
-            _this23 = this,
+            _this24 = this,
             _this$trial6,
             _this$trial7,
             _this$trial8,
@@ -10470,8 +10899,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.terrain = new Map(((_this$trial5 = this.trial) == null ? void 0 : _this$trial5.id) === 'terrain' ? testTerrainCells : []);
           this.testObjective = undefined;
           var challenge = challengeCatalog.find(function (entry) {
-            var _this23$trial;
-            return entry.id === ((_this23$trial = _this23.trial) == null ? void 0 : _this23$trial.id);
+            var _this24$trial;
+            return entry.id === ((_this24$trial = _this24.trial) == null ? void 0 : _this24$trial.id);
           });
           this.challenge = challenge ? new TestBoardChallenge(challenge.id) : undefined;
           this.rocks = new Map();
@@ -10481,43 +10910,43 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.mechanismAudit = [];
           if (((_this$trial9 = this.trial) == null ? void 0 : _this$trial9.id) === 'rocks') {
             var _carried$charged$map, _carried2;
-            var placed = placeRocks(new Set((_carried$charged$map = (_carried2 = carried) == null ? void 0 : _carried2.charged.map(function (_ref6) {
-              var index = _ref6[0];
+            var placed = placeRocks(new Set((_carried$charged$map = (_carried2 = carried) == null ? void 0 : _carried2.charged.map(function (_ref10) {
+              var index = _ref10[0];
               return index;
             })) != null ? _carried$charged$map : []));
             if (!placed) {
               this.page('岩块布置暂停', '普通格不足，保留强化，不覆盖现有棋子。');
               this.button('返回测试关卡', -160, function () {
-                return _this23.leaveMineTrial();
+                return _this24.leaveMineTrial();
               });
               return;
             }
             this.rocks = placed;
             placed.forEach(function (_, index) {
-              return _this23.board[index] = rockCell;
+              return _this24.board[index] = rockCell;
             });
           }
           this.holes.forEach(function (index) {
-            return _this23.board[index] = holeCell;
+            return _this24.board[index] = holeCell;
           });
           var deliverySpawns = new Set();
           if ((activeRoom == null ? void 0 : activeRoom.kind) === 'battle' && activeRoom.delivery) {
             var _carried$charged$map2, _carried3, _this$trial10;
             validateDelivery(activeRoom.delivery);
-            var starts = deliveryStarts(activeRoom.delivery, new Set((_carried$charged$map2 = (_carried3 = carried) == null ? void 0 : _carried3.charged.map(function (_ref7) {
-              var index = _ref7[0];
+            var starts = deliveryStarts(activeRoom.delivery, new Set((_carried$charged$map2 = (_carried3 = carried) == null ? void 0 : _carried3.charged.map(function (_ref11) {
+              var index = _ref11[0];
               return index;
             })) != null ? _carried$charged$map2 : []));
             if (!starts) {
               this.page('营救布置暂停', '普通格不足，保留强化棋子，不替换棋盘。');
               this.button('撤离', -150, function () {
-                return _this23.finishAdventure('retreat');
+                return _this24.finishAdventure('retreat');
               });
               return;
             }
             var deploy = ((_this$trial10 = this.trial) == null ? void 0 : _this$trial10.id) === 'source' ? carried ? [] : [sourceEntry] : starts;
-            for (var _iterator9 = _createForOfIteratorHelperLoose(deploy), _step9; !(_step9 = _iterator9()).done;) {
-              var _index = _step9.value;
+            for (var _iterator10 = _createForOfIteratorHelperLoose(deploy), _step10; !(_step10 = _iterator10()).done;) {
+              var _index = _step10.value;
               this.board[_index] = minerEmblem;
               deliverySpawns.add(_index);
             }
@@ -10532,14 +10961,14 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             if (!order) {
               this.page('棋盘布置暂停', '在保留机关和已有强化的条件下，没有找到可行动的盘面。');
               if (this.trial) this.button('返回测试关卡', -160, function () {
-                return _this23.leaveMineTrial();
+                return _this24.leaveMineTrial();
               });else this.button('撤离', -160, function () {
-                return _this23.finishAdventure('retreat');
+                return _this24.finishAdventure('retreat');
               });
               return;
             }
             this.board = order.map(function (i) {
-              return _this23.board[i];
+              return _this24.board[i];
             });
             if (carried) {
               var tiers = new Map(carried.charged),
@@ -10588,8 +11017,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.battleModal = undefined;
           this.foes = this.resolveBattleFoes(activeRoom, this.enemies, this.phase);
           var stageTitle = this.trial ? testMechanism(this.trial.id).title : this.phase === 'wolves' || this.phase === 'lessonBoss' ? '苔石森林 · 序章' : (_campaignSites$find$n = (_campaignSites$find = campaignSites.find(function (site) {
-            var _this23$adventure;
-            return site.id === ((_this23$adventure = _this23.adventure) == null ? void 0 : _this23$adventure.siteId);
+            var _this24$adventure;
+            return site.id === ((_this24$adventure = _this24.adventure) == null ? void 0 : _this24$adventure.siteId);
           })) == null ? void 0 : _campaignSites$find.name) != null ? _campaignSites$find$n : regionNames[this.phase];
           this.stageHeading(stageTitle);
           if (this.adventure && !this.trial) {
@@ -10604,8 +11033,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.status.node.active = false;
           this.setBattleStatus(this.trial ? testMechanism(this.trial.id).description : '敌人正在入场');
           this.showParty();
-          for (var _iterator10 = _createForOfIteratorHelperLoose(this.heroes.values()), _step10; !(_step10 = _iterator10()).done;) {
-            var hero = _step10.value;
+          for (var _iterator11 = _createForOfIteratorHelperLoose(this.heroes.values()), _step11; !(_step11 = _iterator11()).done;) {
+            var hero = _step11.value;
             hero.setParent(this.stageContent, true);
           }
           this.enemyMeters = [];
@@ -10616,41 +11045,42 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.enemyActionAudit = [];
           this.enemyNodes = this.enemies.map(function (hp, i) {
             var _actorArt$foe$art$hea, _actorArt$foe$art;
-            var foe = _this23.foes[i];
-            var hasPair = _this23.enemies.length > 1;
+            var foe = _this24.foes[i];
+            var hasPair = _this24.enemies.length > 1;
             var isBoss = foe.tags.includes('boss');
-            var _this23$enemyPlacemen = _this23.enemyPlacement(foe, _this23.enemies.length, i),
-              x = _this23$enemyPlacemen.x,
-              ground = _this23$enemyPlacemen.ground,
-              size = _this23$enemyPlacemen.size,
-              y = _this23$enemyPlacemen.y;
-            var n = _this23.box('Enemy ' + i, x, y, size, size, undefined, _this23.stageContent);
-            _this23.groundShadow(n, ground - n.position.y, foe.art, size, 'right');
-            var portrait = _this23.art(foe.art, 0, 0, size, size, n);
-            _this23.faceStage(portrait, 'right');
-            if (!portrait) _this23.label(foe.name, 0, 0, size, 16, n);
+            var _this24$enemyPlacemen = _this24.enemyPlacement(foe, _this24.enemies.length, i),
+              x = _this24$enemyPlacemen.x,
+              ground = _this24$enemyPlacemen.ground,
+              size = _this24$enemyPlacemen.size,
+              y = _this24$enemyPlacemen.y;
+            var n = _this24.box('Enemy ' + i, x, y, size, size, undefined, _this24.stageContent);
+            _this24.groundShadow(n, ground - n.position.y, foe.art, size, 'right');
+            var portrait = _this24.art(foe.art, 0, 0, size, size, n);
+            _this24.faceStage(portrait, 'right');
+            if (!portrait) _this24.label(foe.name, 0, 0, size, 16, n);
             if (foe.art === 'ghost' && portrait) {
-              var _this23$actorMaterial;
+              var _this24$actorMaterial;
               var sprite = portrait.getComponent(Sprite);
-              if (sprite) (_this23$actorMaterial = _this23.actorMaterial(sprite)) == null || _this23$actorMaterial.setProperty('state', new Vec4(0, 1, 1, .85));
+              if (sprite) (_this24$actorMaterial = _this24.actorMaterial(sprite)) == null || _this24$actorMaterial.setProperty('state', new Vec4(0, 1, 1, .85));
             }
             var meterY = Math.min(stageGrid.centerY + stageGrid.height / 2 - 76, n.position.y + size * (.5 - ((_actorArt$foe$art$hea = (_actorArt$foe$art = actorArt[foe.art]) == null ? void 0 : _actorArt$foe$art.headY) != null ? _actorArt$foe$art$hea : .1)) + 12);
-            var stats = _this23.box('敌方状态 ' + i, x, meterY, 84, 48);
-            var meter = _this23.makeMeter(0, 0, hasPair ? 85 : 128, '#c34e61', stats);
-            _this23.enemyMeters.push(_extends({}, meter, {
+            var stats = _this24.box('敌方状态 ' + i, x, meterY, 84, 48);
+            var meter = _this24.makeMeter(0, 0, hasPair ? 85 : 128, '#c34e61', stats);
+            _this24.enemyMeters.push(_extends({}, meter, {
               root: stats
             }));
-            _this23.outline(_this23.label(foe.name, 0, 23, hasPair ? 85 : 128, 14, stats));
+            _this24.outline(_this24.label(foe.name, 0, 23, hasPair ? 85 : 128, 14, stats));
             n.active = stats.active = hp > 0;
             return n;
           });
           this.scenery.raiseForeground(this.stageContent.getChildByName(background), this.stageContent);
           this.box('棋盘外框', 0, interactionGrid.boardY, interactionGrid.boardWidth, interactionGrid.boardHeight, '#15221e');
+          var railCells = new Set(this.usesRailGravity ? this.railRoutes.flat() : []);
           this.cells = this.board.map(function (_, i) {
-            var _this23$trial2;
-            var node = _this23.box('Cell ' + i, (i % 7 - 3) * interactionGrid.tilePitch, interactionGrid.boardFirstY - Math.floor(i / 7) * interactionGrid.tilePitch, interactionGrid.tileSize, interactionGrid.tileSize, (i + Math.floor(i / 7)) % 2 ? '#3b5046' : '#34463e');
-            if (_this23.holes.has(i) && ((_this23$trial2 = _this23.trial) == null ? void 0 : _this23$trial2.id) !== 'pillar') node.active = false;
-            _this23.bindTileInput(node, function () {
+            var _this24$trial2;
+            var node = _this24.box('Cell ' + i, (i % 7 - 3) * interactionGrid.tilePitch, interactionGrid.boardFirstY - Math.floor(i / 7) * interactionGrid.tilePitch, interactionGrid.tileSize, interactionGrid.tileSize, railCells.has(i) ? undefined : (i + Math.floor(i / 7)) % 2 ? '#3b5046' : '#34463e');
+            if (_this24.holes.has(i) && ((_this24$trial2 = _this24.trial) == null ? void 0 : _this24$trial2.id) !== 'pillar') node.active = false;
+            _this24.bindTileInput(node, function () {
               return i;
             });
             return node;
@@ -10659,8 +11089,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           tileClip.addComponent(Mask).type = Mask.Type.GRAPHICS_RECT;
           this.tileLayer = this.box('棋子层', 0, -interactionGrid.boardY, 428, 483, undefined, tileClip);
           if (((_this$trial11 = this.trial) == null ? void 0 : _this$trial11.id) === 'terrain') {
-            for (var _iterator11 = _createForOfIteratorHelperLoose(this.terrain.keys()), _step11; !(_step11 = _iterator11()).done;) {
-              var _index2 = _step11.value;
+            for (var _iterator12 = _createForOfIteratorHelperLoose(this.terrain.keys()), _step12; !(_step12 = _iterator12()).done;) {
+              var _index2 = _step12.value;
               this.drawTerrainCell(_index2);
             }
           }
@@ -10675,39 +11105,39 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.lock = this.box('棋盘锁定', 0, interactionGrid.boardY, interactionGrid.boardWidth, interactionGrid.boardHeight, '#19172963');
           this.lockText = this.outline(this.label('敌人入场', 0, -209, 300, 17, this.lock));
           this.buildTiles();
-          (_carried4 = carried) == null || _carried4.charged.forEach(function (_ref8) {
-            var index = _ref8[0],
-              tier = _ref8[1];
-            if (!deliverySpawns.has(index)) _this23.markCharged(index, tier);
+          (_carried4 = carried) == null || _carried4.charged.forEach(function (_ref12) {
+            var index = _ref12[0],
+              tier = _ref12[1];
+            if (!deliverySpawns.has(index)) _this24.markCharged(index, tier);
           });
           (_carried5 = carried) == null || (_carried5 = _carried5.ids) == null || _carried5.forEach(function (id, index) {
-            if (!deliverySpawns.has(index) && playableCell(_this23.board[index])) _this23.restoredTileIds.set(_this23.tiles[index], id);
+            if (!deliverySpawns.has(index) && playableCell(_this24.board[index])) _this24.restoredTileIds.set(_this24.tiles[index], id);
           });
           if (this.challenge) {
             var _carried$charged$map3, _carried6;
-            var protectedCells = new Set((_carried$charged$map3 = (_carried6 = carried) == null ? void 0 : _carried6.charged.map(function (_ref9) {
-              var index = _ref9[0];
+            var protectedCells = new Set((_carried$charged$map3 = (_carried6 = carried) == null ? void 0 : _carried6.charged.map(function (_ref13) {
+              var index = _ref13[0];
               return index;
             })) != null ? _carried$charged$map3 : []);
-            for (var _iterator12 = _createForOfIteratorHelperLoose(challengePowers(this.challenge.id, this.board, protectedCells)), _step12; !(_step12 = _iterator12()).done;) {
-              var _step12$value = _step12.value,
-                _index3 = _step12$value.index,
-                power = _step12$value.power;
+            for (var _iterator13 = _createForOfIteratorHelperLoose(challengePowers(this.challenge.id, this.board, protectedCells)), _step13; !(_step13 = _iterator13()).done;) {
+              var _step13$value = _step13.value,
+                _index3 = _step13$value.index,
+                power = _step13$value.power;
               this.challenge.powers.set(this.restoredTileIds.get(this.tiles[_index3]), power);
             }
             this.drawChallengePowers();
             this.refreshTestObjective();
           }
-          for (var _iterator13 = _createForOfIteratorHelperLoose(this.rescueCells), _step13; !(_step13 = _iterator13()).done;) {
-            var _index5 = _step13.value;
+          for (var _iterator14 = _createForOfIteratorHelperLoose(this.rescueCells), _step14; !(_step14 = _iterator14()).done;) {
+            var _index5 = _step14.value;
             var _point = this.cells[_index5].position;
             var marker = this.outline(this.label('净', _point.x + 18, _point.y + 18, 20, 15));
             marker.node.name = '营救标记 ' + _index5;
           }
           if ((activeRoom == null ? void 0 : activeRoom.kind) === 'battle' && activeRoom.delivery) {
-            for (var _iterator14 = _createForOfIteratorHelperLoose(activeRoom.delivery.exits), _step14; !(_step14 = _iterator14()).done;) {
+            for (var _iterator15 = _createForOfIteratorHelperLoose(activeRoom.delivery.exits), _step15; !(_step15 = _iterator15()).done;) {
               var _this$trial12, _this$trial13;
-              var _index4 = _step14.value;
+              var _index4 = _step15.value;
               var point = this.cells[_index4].position;
               var vertical = ((_this$trial12 = this.trial) == null ? void 0 : _this$trial12.id) === 'delivery' || ((_this$trial13 = this.trial) == null ? void 0 : _this$trial13.id) === 'source',
                 x = vertical ? point.x : _index4 % 7 === 0 ? -218 : 218,
@@ -10718,49 +11148,50 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             }
           }
           this.setupStage4A();
-          // The touch area has no face or plate; only the transparent bottle and count are drawn.
-          var potion = this.box('药水', interactionGrid.potionX, interactionGrid.potionY, interactionGrid.potionSize, interactionGrid.potionSize);
-          this.art('board/potion', 0, 2, interactionGrid.potionIcon, interactionGrid.potionIcon, potion);
-          this.outline(this.label('', 26, -26, 42, 23, potion));
-          potion.on(Node.EventType.TOUCH_END, function () {
-            if (_this23.battleModal) return;
-            if (_this23.stage4A) {
-              _this23.useStage4APotion();
-              return;
+          this.itemBar = new ItemBar(this.box('战斗道具栏', 0, interactionGrid.potionY, 480, 75), {
+            box: this.box.bind(this),
+            art: this.art.bind(this),
+            count: function count(x, y, parent) {
+              return _this24.outline(_this24.label('', x, y, 40, 21, parent));
+            },
+            available: function available() {
+              return _this24.battlePhase === 'input' && !_this24.busy && !_this24.automatic && !_this24.battleModal && !_this24.bombAim;
+            },
+            use: function use(id) {
+              return _this24.useItem(id);
             }
-            _this23.usePotion();
           });
           this.battleTool('自动战斗', 0, function () {
-            if (_this23.battleModal || _this23.guideMode || _this23.battlePhase === 'entering') return;
-            _this23.selected = -1;
-            _this23.automatic = !_this23.automatic;
-            _this23.drawBoard();
-            _this23.autoStep();
+            if (_this24.battleModal || _this24.guideMode || _this24.battlePhase === 'entering') return;
+            _this24.selected = -1;
+            _this24.automatic = !_this24.automatic;
+            _this24.drawBoard();
+            _this24.autoStep();
           });
           this.battleTool('任务', 1, function () {
-            return _this23.openBattleReference('任务');
+            return _this24.openBattleReference('任务');
           });
           this.battleTool('规则', 2, function () {
-            return _this23.openBattleReference('规则');
+            return _this24.openBattleReference('规则');
           });
           this.battleTool('撤离', 3, function () {
-            return _this23.openBattleModal('retreat');
+            return _this24.openBattleModal('retreat');
           });
           var owner = this.ui,
             battle = (_this$dungeon3 = this.dungeon) == null ? void 0 : _this$dungeon3.room;
           if ((battle == null ? void 0 : battle.kind) === 'battle') this.battleTool('直接胜利', 4, function () {
-            var _this23$dungeon;
-            if (_this23.ui !== owner || ((_this23$dungeon = _this23.dungeon) == null ? void 0 : _this23$dungeon.room) !== battle || _this23.battlePhase === 'complete') return;
-            _this23.fastRoom = battle;
-            if (_this23.battlePhase === 'input') void _this23.finishDirectly(battle);
+            var _this24$dungeon;
+            if (_this24.ui !== owner || ((_this24$dungeon = _this24.dungeon) == null ? void 0 : _this24$dungeon.room) !== battle || _this24.battlePhase === 'complete') return;
+            _this24.fastRoom = battle;
+            if (_this24.battlePhase === 'input') void _this24.finishDirectly(battle);
           });
           this.drawBoard();
           void this.enterBattle(this.motion, reveal, alreadyArrived);
         };
         _proto.battleTool = function battleTool(name, index, action) {
-          var _this24 = this;
+          var _this25 = this;
           var activate = function activate() {
-            if (!_this24.battleModal) action();
+            if (!_this25.battleModal) action();
           };
           var x = battleToolbar.x + index * battleToolbar.gap;
           var _this$trialButton = this.trialButton(name, battleToolbar.y, activate, x, battleToolbar.width),
@@ -10768,12 +11199,36 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           label.fontSize = 34;
         };
         _proto.drawTrialBoard = function drawTrialBoard() {
-          var rail = this.box('矿车轨道', 0, 0, 428, 475);
-          for (var _i4 = 0, _arr = [6, 7]; _i4 < _arr.length; _i4++) {
-            var row = _arr[_i4];
-            var y = this.cells[row * cols].position.y;
-            this.box('轨道底板', 0, y, 421, 55, row === 6 ? '#3b535c' : '#504b62', rail);
-          }
+          var _this26 = this;
+          var width = interactionGrid.boardWidth,
+            pitch = interactionGrid.tilePitch;
+          var rail = this.box('矿车轨道', 0, 0, width, interactionGrid.boardHeight);
+          this.railRoutes.forEach(function (route, i) {
+            var direction = Math.sign(route[1] - route[0]),
+              y = _this26.cells[route[0]].position.y;
+            var _loop3 = function _loop3() {
+              var arrows = _arr[_i4];
+              var frame = _this26.textures.get(arrows ? 'board/rail-arrow' : 'board/rail');
+              frame.packable = false;
+              var node = _this26.paintFrame(arrows ? '轨道方向提示' : '轨道底板', frame, 0, y - (arrows ? 10 : 0), width, arrows ? 32 : pitch, rail);
+              var material = new Material();
+              material.initialize({
+                effectAsset: _this26.railEffect,
+                defines: {
+                  USE_TEXTURE: true,
+                  ARROW_PASS: arrows
+                }
+              });
+              material.setProperty('railParams', new Vec4(width / pitch, direction, i * 2.3, 6.4));
+              node.getComponent(Sprite).customMaterial = material;
+              node.once(Node.EventType.NODE_DESTROYED, function () {
+                return material.destroy();
+              });
+            };
+            for (var _i4 = 0, _arr = [false, true]; _i4 < _arr.length; _i4++) {
+              _loop3();
+            }
+          });
           rail.setSiblingIndex(this.tileLayer.parent.getSiblingIndex());
         };
         _proto.drawBoardEffects = function drawBoardEffects() {
@@ -10783,7 +11238,11 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.boardFx = new TemplateBoardFx(effects, this.templateFxFrames, this.gameFont);
         };
         _proto.syncBattleTools = function syncBattleTools() {
-          var _this$dungeon6, _active$reinforcement, _this$waveIndices$get;
+          var _this$dungeon6,
+            _active$reinforcement,
+            _this$waveIndices$get,
+            _this$itemBar,
+            _this27 = this;
           if (this.formalObjective) {
             var _this$dungeon$depth, _this$dungeon4, _this$dungeon$rooms$l, _this$dungeon5;
             var room = this.activeWave;
@@ -10792,19 +11251,20 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var active = (_this$dungeon6 = this.dungeon) == null ? void 0 : _this$dungeon6.room;
           if (this.formalObjective && (active == null ? void 0 : active.kind) === 'battle' && (_active$reinforcement = active.reinforcements) != null && _active$reinforcement.length) this.formalObjective.string += " \xB7 \u7B2C " + (((_this$waveIndices$get = this.waveIndices.get(active)) != null ? _this$waveIndices$get : 0) + 1) + "/" + (1 + active.reinforcements.length) + " \u8F6E";
           var auto = this.ui.getChildByName('自动战斗');
-          var potion = this.ui.getChildByName('药水');
+          (_this$itemBar = this.itemBar) == null || _this$itemBar.sync(function (id) {
+            return _this27.itemCount(id);
+          });
           if (auto) auto.getComponentInChildren(Label).string = this.automatic ? '暂停自动' : '自动战斗';
-          if (potion) potion.getComponentInChildren(Label).string = String(this.potion);
           var locked = this.battlePhase !== 'input' || this.automatic;
           this.lock.active = locked;
           this.lockText.string = this.battlePhase === 'entering' ? '敌人入场' : this.battlePhase === 'enemy' ? '敌方回合' : this.automatic && this.battlePhase === 'input' ? '自动战斗' : '结算中';
         };
         _proto.enterBattle = /*#__PURE__*/function () {
-          var _enterBattle = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee9(motion, reveal, alreadyArrived) {
+          var _enterBattle = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee10(motion, reveal, alreadyArrived) {
             var _this$stage4A;
             var arriving, homes, arrived;
-            return _regeneratorRuntime().wrap(function _callee9$(_context9) {
-              while (1) switch (_context9.prev = _context9.next) {
+            return _regeneratorRuntime().wrap(function _callee10$(_context10) {
+              while (1) switch (_context10.prev = _context10.next) {
                 case 0:
                   if (alreadyArrived === void 0) {
                     alreadyArrived = false;
@@ -10819,27 +11279,27 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     return n.setPosition(homes[i].x + 205, homes[i].y);
                   });
                   if (!reveal) {
-                    _context9.next = 7;
+                    _context10.next = 7;
                     break;
                   }
-                  _context9.next = 7;
+                  _context10.next = 7;
                   return reveal();
                 case 7:
                   if (!(motion.cancelled || motion !== this.motion)) {
-                    _context9.next = 9;
+                    _context10.next = 9;
                     break;
                   }
-                  return _context9.abrupt("return");
+                  return _context10.abrupt("return");
                 case 9:
                   if (!alreadyArrived) {
-                    _context9.next = 13;
+                    _context10.next = 13;
                     break;
                   }
-                  _context9.t0 = [true];
-                  _context9.next = 16;
+                  _context10.t0 = [true];
+                  _context10.next = 16;
                   break;
                 case 13:
-                  _context9.next = 15;
+                  _context10.next = 15;
                   return Promise.all(arriving.map(function (n, i) {
                     return motion.play(tween(n).delay(motion.duration(i * .09)).to(motion.duration(.32), {
                       position: homes[i]
@@ -10848,31 +11308,31 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     }));
                   }));
                 case 15:
-                  _context9.t0 = _context9.sent;
+                  _context10.t0 = _context10.sent;
                 case 16:
-                  arrived = _context9.t0;
+                  arrived = _context10.t0;
                   if (!(!arrived.every(Boolean) || motion.cancelled)) {
-                    _context9.next = 19;
+                    _context10.next = 19;
                     break;
                   }
-                  return _context9.abrupt("return");
+                  return _context10.abrupt("return");
                 case 19:
                   this.audio.play('door');
                   if (!((_this$stage4A = this.stage4A) != null && _this$stage4A.error)) {
-                    _context9.next = 23;
+                    _context10.next = 23;
                     break;
                   }
                   this.setBattleStatus('验证战斗已阻断 · 可撤离');
-                  return _context9.abrupt("return");
+                  return _context10.abrupt("return");
                 case 23:
                   this.resumeBattleInput('轮到玩家，交换相邻纹章');
                 case 24:
                 case "end":
-                  return _context9.stop();
+                  return _context10.stop();
               }
-            }, _callee9, this);
+            }, _callee10, this);
           }));
-          function enterBattle(_x6, _x7, _x8) {
+          function enterBattle(_x7, _x8, _x9) {
             return _enterBattle.apply(this, arguments);
           }
           return enterBattle;
@@ -10961,23 +11421,23 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           meter.label.string = text;
         };
         _proto.updateHUD = function updateHUD() {
-          var _this25 = this;
+          var _this28 = this;
           this.setMeter(this.healthBar, this.hp, this.maxHP, String(Math.max(0, this.hp)));
           if (this.showsGuard) this.setMeter(this.guardBar, this.dp, this.maxDP, String(this.dp));
           this.coinText.string = String(this.walletGold);
           this.enemies.forEach(function (hp, i) {
-            return _this25.setMeter(_this25.enemyMeters[i], hp, _this25.enemyMax[i], String(Math.max(0, hp)));
+            return _this28.setMeter(_this28.enemyMeters[i], hp, _this28.enemyMax[i], String(Math.max(0, hp)));
           });
           this.syncBuffViews();
           this.syncBattleTools();
         };
         _proto.syncBuffViews = function syncBuffViews() {
           var _this$buffView3,
-            _this26 = this;
+            _this29 = this;
           (_this$buffView3 = this.buffView) != null ? _this$buffView3 : this.buffView = new BuffView(function (parent, badge) {
-            var node = _this26.box('Buff ' + badge.id, 0, 0, 22, 22, '#25322fea', parent);
-            _this26.art('buffs/' + (badge.id.startsWith('run-') ? 'run' : badge.id), 0, 0, 18, 18, node);
-            var label = _this26.outline(_this26.label(badge.count, 6, -5, 24, 11, node));
+            var node = _this29.box('Buff ' + badge.id, 0, 0, 22, 22, '#25322fea', parent);
+            _this29.art('buffs/' + (badge.id.startsWith('run-') ? 'run' : badge.id), 0, 0, 18, 18, node);
+            var label = _this29.outline(_this29.label(badge.count, 6, -5, 24, 11, node));
             label.node.name = '计数';
             label.isBold = true;
             return node;
@@ -11011,8 +11471,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             count: '1',
             name: '祭坛祝福 · HP上限+100'
           });
-          for (var _i5 = 0, _Object$entries2 = Object.entries((_this$adventure$buffs = (_this$adventure = this.adventure) == null ? void 0 : _this$adventure.buffs) != null ? _this$adventure$buffs : {}); _i5 < _Object$entries2.length; _i5++) {
-            var _this$adventure$buffs, _this$adventure, _heal$def$mag$id;
+          for (var _i5 = 0, _Object$entries2 = Object.entries((_this$adventure$buffs = (_this$adventure2 = this.adventure) == null ? void 0 : _this$adventure2.buffs) != null ? _this$adventure$buffs : {}); _i5 < _Object$entries2.length; _i5++) {
+            var _this$adventure$buffs, _this$adventure2, _heal$def$mag$id;
             var _Object$entries2$_i = _Object$entries2[_i5],
               id = _Object$entries2$_i[0],
               count = _Object$entries2$_i[1];
@@ -11030,44 +11490,44 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.buffView.sync(this.healthBar.root, team, this.showsGuard ? -58 : -25);
           this.enemyMeters.forEach(function (meter, i) {
             var list = [];
-            if (_this26.enemies[i] > 0) {
-              var _this26$foes$i;
-              var armor = (_this26$foes$i = _this26.foes[i]) == null ? void 0 : _this26$foes$i.armor;
+            if (_this29.enemies[i] > 0) {
+              var _this29$foes$i;
+              var armor = (_this29$foes$i = _this29.foes[i]) == null ? void 0 : _this29$foes$i.armor;
               if (armor) {
                 var _armor$physical, _armor$magic;
                 list.push({
                   id: 'physical-armor',
                   icon: 'd',
-                  count: String(oathArmorLayers(_this26.oath, String(i), (_armor$physical = armor == null ? void 0 : armor.physical) != null ? _armor$physical : 0, false)),
+                  count: String(oathArmorLayers(_this29.oath, String(i), (_armor$physical = armor == null ? void 0 : armor.physical) != null ? _armor$physical : 0, false)),
                   name: '物理护甲层数'
                 });
                 list.push({
                   id: 'magic-armor',
                   icon: 'staff',
-                  count: String(oathArmorLayers(_this26.oath, String(i), (_armor$magic = armor == null ? void 0 : armor.magic) != null ? _armor$magic : 0, true)),
+                  count: String(oathArmorLayers(_this29.oath, String(i), (_armor$magic = armor == null ? void 0 : armor.magic) != null ? _armor$magic : 0, true)),
                   name: '魔法护甲层数'
                 });
               }
-              if (String(i) in _this26.oath.shred) list.push({
+              if (String(i) in _this29.oath.shred) list.push({
                 id: 'shred',
                 icon: 's',
-                count: String(Math.max(1, _this26.oath.shred[String(i)] - _this26.turn + 1)),
+                count: String(Math.max(1, _this29.oath.shred[String(i)] - _this29.turn + 1)),
                 name: '物理破甲'
               });
-              if (_this26.stunned.has(i)) list.push({
+              if (_this29.stunned.has(i)) list.push({
                 id: 'stun',
                 icon: 'fist',
                 count: '1',
                 name: '眩晕'
               });
-              if (_this26.oath.weaken.includes(String(i))) list.push({
+              if (_this29.oath.weaken.includes(String(i))) list.push({
                 id: 'weaken',
                 icon: 'staff',
                 count: '1',
                 name: '衰弱'
               });
             }
-            _this26.buffView.sync(meter.root, list);
+            _this29.buffView.sync(meter.root, list);
           });
         };
         _proto.currentCoinDisplay = function currentCoinDisplay() {
@@ -11079,32 +11539,36 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           if (eventOnly === void 0) {
             eventOnly = Boolean(this.dungeon);
           }
-          var display = this.outline(this.label(String(this.walletGold), -176, stageGrid.titleY, 65, 20));
-          display.node.name = '金币 ' + display.string;
-          display.color = Color.fromHEX(new Color(), '#ffe594');
-          var coin = this.box('金币', -220, stageGrid.titleY, 20, 20).addComponent(Graphics);
-          this.drawCoin(coin, 8);
-          if (eventOnly) {
-            this.eventCoinDisplays.add(display);
-            display.node.addComponent(UIOpacity).opacity = 0;
-            coin.node.addComponent(UIOpacity).opacity = 0;
-            display.node.active = false;
-            coin.node.active = false;
+          for (var _iterator16 = _createForOfIteratorHelperLoose(['gold', 'ore', 'essence']), _step16; !(_step16 = _iterator16()).done;) {
+            var key = _step16.value;
+            var x = {
+              gold: -220,
+              ore: -83,
+              essence: 18
+            }[key];
+            var y = stageGrid.titleY - (key === 'gold' ? 0 : 31);
+            var name = resourceNames[key],
+              balance = this.walletBalance(key);
+            var display = this.outline(this.label(String(balance), x + 43, y, 64, key === 'gold' ? 20 : 17));
+            display.node.name = name + ' ' + balance;
+            display.color = Color.fromHEX(new Color(), {
+              gold: '#ffe594',
+              ore: '#b7d9ec',
+              essence: '#e1b6ff'
+            }[key]);
+            var icon = this.box(name, x, y, 22, 22);
+            this.art('material-' + key, 0, 0, 22, 22, icon);
+            this.walletLabels[key] = display;
+            if (eventOnly) {
+              this.eventCoinDisplays.add(display);
+              for (var _i6 = 0, _arr2 = [display.node, icon]; _i6 < _arr2.length; _i6++) {
+                var node = _arr2[_i6];
+                node.addComponent(UIOpacity).opacity = 0;
+                node.active = false;
+              }
+            }
           }
-          return display;
-        };
-        _proto.drawCoin = function drawCoin(coin, radius) {
-          coin.fillColor = Color.fromHEX(new Color(), '#f4c751');
-          coin.strokeColor = Color.fromHEX(new Color(), '#50311c');
-          coin.lineWidth = radius >= 8 ? 3 : 2;
-          coin.circle(0, 0, radius);
-          coin.fill();
-          coin.stroke();
-          coin.strokeColor = Color.fromHEX(new Color(), '#fff0a0');
-          coin.lineWidth = 1;
-          coin.moveTo(0, -radius * .5);
-          coin.lineTo(0, radius * .5);
-          coin.stroke();
+          return this.walletLabels.gold;
         };
         _proto.setBattleStatus = function setBattleStatus(message) {
           this.refreshTestObjective();
@@ -11115,19 +11579,548 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         _proto.isTutorialBattle = function isTutorialBattle() {
           return this.phase === 'wolves' || this.phase === 'lessonBoss';
         };
-        _proto.usePotion = function usePotion() {
+        _proto.movablePieces = function movablePieces(board) {
+          var _this30 = this;
+          if (board === void 0) {
+            board = this.board;
+          }
+          return board.flatMap(function (type, i) {
+            var _this30$challenge;
+            return _this30.types.includes(type) && !((_this30$challenge = _this30.challenge) != null && _this30$challenge.locks.has(i)) ? [i] : [];
+          });
+        };
+        _proto.shuffledOrder = function shuffledOrder(board) {
+          var _this$trial$random3,
+            _this$trial14,
+            _this31 = this;
+          if (board === void 0) {
+            board = this.board;
+          }
+          var state = this.challenge;
+          return shufflePieces(board, this.movablePieces(board), cols, (_this$trial$random3 = (_this$trial14 = this.trial) == null ? void 0 : _this$trial14.random) != null ? _this$trial$random3 : Math.random, function (a, b) {
+            return !state || challengeEdge(state.id, a, b) && (state.id === 'wire' || !state.locks.has(a) && !state.locks.has(b));
+          }, function (next, order) {
+            return !_this31.challengeMatches(next).length && !!_this31.legalMove(next, order);
+          });
+        };
+        _proto.rearrange = /*#__PURE__*/function () {
+          var _rearrange = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee11(motion, order) {
+            var _this32 = this;
+            var pieces;
+            return _regeneratorRuntime().wrap(function _callee11$(_context11) {
+              while (1) switch (_context11.prev = _context11.next) {
+                case 0:
+                  pieces = order.map(function (from, to) {
+                    return {
+                      node: _this32.tiles[from],
+                      start: _this32.cells[from].position.clone(),
+                      end: _this32.cells[to].position.clone(),
+                      from: from,
+                      to: to
+                    };
+                  });
+                  this.board = order.map(function (i) {
+                    return _this32.board[i];
+                  });
+                  this.tiles = pieces.map(function (piece) {
+                    return piece.node;
+                  });
+                  _context11.next = 5;
+                  return Promise.all(pieces.filter(function (piece) {
+                    return piece.from !== piece.to;
+                  }).map(function (_ref14) {
+                    var node = _ref14.node,
+                      start = _ref14.start,
+                      end = _ref14.end,
+                      from = _ref14.from;
+                    node.setPosition(start);
+                    return motion.play(tween(node).delay(motion.duration(from % cols * .018)).to(motion.duration(.48), {
+                      position: end
+                    }, {
+                      easing: 'sineInOut'
+                    }));
+                  }));
+                case 5:
+                case "end":
+                  return _context11.stop();
+              }
+            }, _callee11, this);
+          }));
+          function rearrange(_x10, _x11) {
+            return _rearrange.apply(this, arguments);
+          }
+          return rearrange;
+        }();
+        _proto.itemAccent = /*#__PURE__*/function () {
+          var _itemAccent = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee12(id, motion, position, parent) {
+            var icon, alpha, result;
+            return _regeneratorRuntime().wrap(function _callee12$(_context12) {
+              while (1) switch (_context12.prev = _context12.next) {
+                case 0:
+                  if (parent === void 0) {
+                    parent = this.ui;
+                  }
+                  icon = this.art('board/' + id, position.x, position.y + 20, 58, 58, parent);
+                  if (icon) {
+                    _context12.next = 4;
+                    break;
+                  }
+                  return _context12.abrupt("return", true);
+                case 4:
+                  icon.setScale(.65, .65, 1);
+                  alpha = icon.addComponent(UIOpacity);
+                  _context12.prev = 6;
+                  _context12.next = 9;
+                  return Promise.all([motion.play(tween(icon).to(motion.duration(.14), {
+                    scale: new Vec3(1.15, 1.15, 1)
+                  }, {
+                    easing: 'quadOut'
+                  }).to(motion.duration(.19), {
+                    position: new Vec3(position.x, position.y + 36),
+                    scale: new Vec3(.95, .95, 1)
+                  })), motion.play(tween(alpha).delay(motion.duration(.20)).to(motion.duration(.13), {
+                    opacity: 0
+                  }))]);
+                case 9:
+                  result = _context12.sent;
+                  return _context12.abrupt("return", result.every(Boolean));
+                case 11:
+                  _context12.prev = 11;
+                  if (icon.isValid) icon.destroy();
+                  return _context12.finish(11);
+                case 14:
+                case "end":
+                  return _context12.stop();
+              }
+            }, _callee12, this, [[6,, 11, 14]]);
+          }));
+          function itemAccent(_x12, _x13, _x14, _x15) {
+            return _itemAccent.apply(this, arguments);
+          }
+          return itemAccent;
+        }();
+        _proto.useItem = function useItem(id) {
+          if (items[id].useTag !== '战斗用道具') return;
+          if (this.busy || this.automatic || this.battlePhase !== 'input' || this.battleModal || this.bombAim || !this.itemCount(id)) return;
+          if (this.guideMode && !(this.guideMode === 'potion' && id === 'potion')) return;
+          if ('heal' in items[id]) {
+            if (this.stage4A) this.useStage4APotion();else this.usePotion(id);
+            return;
+          }
+          if (id === 'bomb' || id === 'blast') {
+            this.audio.play('click');
+            this.aimBomb(id);
+            return;
+          }
+          void this.castItem(id);
+        };
+        _proto.aimBomb = function aimBomb(id) {
+          var _this33 = this;
+          var layer = this.bombAim = this.box('炸弹瞄准', 0, 0, 480, 854),
+            g = layer.addComponent(Graphics);
+          var w = interactionGrid.boardWidth / 2,
+            h = interactionGrid.boardHeight / 2,
+            cy = interactionGrid.boardY;
+          g.fillColor = new Color(9, 12, 18, 176);
+          g.rect(-240, cy + h, 480, 427 - cy - h);
+          g.rect(-240, -427, 480, 427 + cy - h);
+          g.rect(-240, cy - h, 240 - w, 2 * h);
+          g.rect(w, cy - h, 240 - w, 2 * h);
+          g.fill();
+          this.outline(this.label(items[id].name + ' · 点选棋子，点暗处取消', 0, 137, 430, 18, layer));
+          this.clearIdleHint();
+          this.selected = -1;
+          this.drawBoard();
+          var locate = function locate(event) {
+            var p = event.getUILocation(),
+              local = layer.getComponent(UITransform).convertToNodeSpaceAR(new Vec3(p.x, p.y));
+            if (Math.abs(local.x) > w || Math.abs(local.y - cy) > h) return -2;
+            return _this33.tiles.findIndex(function (tile, i) {
+              return tile.active && playableCell(_this33.board[i]) && Math.abs(tile.position.x - local.x) <= 24 && Math.abs(tile.position.y - local.y) <= 24;
+            });
+          };
+          var finger = -1,
+            down = -1;
+          layer.on(Node.EventType.TOUCH_START, function (event) {
+            if (finger < 0) {
+              finger = event.getID();
+              down = locate(event);
+            }
+          });
+          layer.on(Node.EventType.TOUCH_CANCEL, function (event) {
+            if (finger === event.getID()) finger = -1;
+          });
+          layer.on(Node.EventType.TOUCH_END, function (event) {
+            if (finger !== event.getID() || _this33.bombAim !== layer) return;
+            finger = -1;
+            var hit = locate(event);
+            if (hit !== down || hit === -1) return;
+            _this33.bombAim = undefined;
+            layer.removeFromParent();
+            layer.destroy();
+            if (hit >= 0) void _this33.castItem(id, hit);
+          });
+        };
+        _proto.castItem = /*#__PURE__*/function () {
+          var _castItem = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee13(id, target) {
+            var _this34 = this,
+              _this$trial$random4,
+              _this$trial15;
+            var motion, root, director, room, live, order, refill, ordinary, upgrade, firstEnemy, bomb, area, removed, _this$trial$random5, _this$trial16, falling, _iterator17, _step17, i, rng, tries, _iterator18, _step18, spawn, shield, cancel, _this$boardFx2, point, icon, _iterator19, _step19, _this$challenge4, _this$restoredTileIds, _i7, _actor$getChildByName, _actor$getChildByName2, actor, _point2, _iterator20, _step20, _i8;
+            return _regeneratorRuntime().wrap(function _callee13$(_context13) {
+              while (1) switch (_context13.prev = _context13.next) {
+                case 0:
+                  if (target === void 0) {
+                    target = -1;
+                  }
+                  if (!(items[id].useTag !== '战斗用道具')) {
+                    _context13.next = 3;
+                    break;
+                  }
+                  return _context13.abrupt("return");
+                case 3:
+                  motion = this.motion, root = this.ui, director = this.dungeon, room = director == null ? void 0 : director.room;
+                  live = function live() {
+                    return !motion.cancelled && _this34.motion === motion && _this34.ui === root && (director == null ? void 0 : director.room) === room;
+                  };
+                  if (!(!live() || this.busy || !this.itemCount(id) || !director || (room == null ? void 0 : room.kind) !== 'battle')) {
+                    _context13.next = 7;
+                    break;
+                  }
+                  return _context13.abrupt("return");
+                case 7:
+                  ordinary = this.board.flatMap(function (type, i) {
+                    var _this34$challenge, _this34$restoredTileI;
+                    return _this34.types.includes(type) && !_this34.chargedTiles.has(_this34.tiles[i]) && !((_this34$challenge = _this34.challenge) != null && _this34$challenge.powers.has((_this34$restoredTileI = _this34.restoredTileIds.get(_this34.tiles[i])) != null ? _this34$restoredTileI : '')) ? [i] : [];
+                  });
+                  upgrade = id === 'silver' || id === 'gold' ? chooseOrdinary(ordinary, (_this$trial$random4 = (_this$trial15 = this.trial) == null ? void 0 : _this$trial15.random) != null ? _this$trial$random4 : Math.random) : [];
+                  if (!((id === 'silver' || id === 'gold') && !upgrade.length)) {
+                    _context13.next = 12;
+                    break;
+                  }
+                  this.popup('没有普通棋子可强化', 0, 104);
+                  return _context13.abrupt("return");
+                case 12:
+                  if (!(id === 'shuffle' && !(order = this.shuffledOrder()))) {
+                    _context13.next = 15;
+                    break;
+                  }
+                  this.popup('没有可用的新布局，道具已保留', 0, 104);
+                  return _context13.abrupt("return");
+                case 15:
+                  firstEnemy = this.enemies.findIndex(function (hp) {
+                    return hp > 0;
+                  });
+                  if (!(id === 'finger' && firstEnemy < 0)) {
+                    _context13.next = 18;
+                    break;
+                  }
+                  return _context13.abrupt("return");
+                case 18:
+                  bomb = id === 'bomb' || id === 'blast';
+                  area = bomb ? blastArea(target, id === 'blast', cols, this.board.length) : [];
+                  removed = new Set(area.filter(function (i) {
+                    var _pieceTags$_this34$bo;
+                    return playableCell(_this34.board[i]) && !((_pieceTags$_this34$bo = pieceTags[_this34.board[i]]) != null && _pieceTags$_this34$bo.includes('不可摧毁'));
+                  }));
+                  if (!removed.size) {
+                    _context13.next = 43;
+                    break;
+                  }
+                  // A movement lock belongs to its cell. Replace its destroyed occupant locally.
+                  falling = new Set(Array.from(removed).filter(function (i) {
+                    var _this34$challenge2;
+                    return !((_this34$challenge2 = _this34.challenge) != null && _this34$challenge2.locks.has(i));
+                  }));
+                  _context13.prev = 23;
+                  refill = this.planBattleRefill(this.board, falling);
+                  _context13.next = 32;
+                  break;
+                case 27:
+                  _context13.prev = 27;
+                  _context13.t0 = _context13["catch"](23);
+                  if (!(!(_context13.t0 instanceof Error) || !_context13.t0.message.startsWith('Obstacle layout has no gravity supply'))) {
+                    _context13.next = 31;
+                    break;
+                  }
+                  throw _context13.t0;
+                case 31:
+                  // A completely sealed pocket has no inlet. Materialize new identities at its destroyed cells.
+                  refill = {
+                    board: this.board.slice(),
+                    moves: [],
+                    spawns: Array.from(falling, function (to) {
+                      return {
+                        to: to,
+                        path: [to],
+                        direction: {
+                          x: 0,
+                          y: 0
+                        },
+                        distance: 0
+                      };
+                    })
+                  };
+                case 32:
+                  for (_iterator17 = _createForOfIteratorHelperLoose(removed); !(_step17 = _iterator17()).done;) {
+                    i = _step17.value;
+                    if (!falling.has(i)) refill.spawns.push({
+                      to: i,
+                      path: [i],
+                      direction: {
+                        x: 0,
+                        y: 0
+                      },
+                      distance: 0
+                    });
+                  }
+                  rng = (_this$trial$random5 = (_this$trial16 = this.trial) == null ? void 0 : _this$trial16.random) != null ? _this$trial$random5 : Math.random;
+                  tries = 0;
+                case 35:
+                  if (!(tries < 64)) {
+                    _context13.next = 42;
+                    break;
+                  }
+                  for (_iterator18 = _createForOfIteratorHelperLoose(refill.spawns); !(_step18 = _iterator18()).done;) {
+                    spawn = _step18.value;
+                    refill.board[spawn.to] = this.types[Math.floor(rng() * this.types.length)];
+                  }
+                  if (!(!this.challengeMatches(refill.board).length && this.legalMove(refill.board))) {
+                    _context13.next = 39;
+                    break;
+                  }
+                  return _context13.abrupt("break", 42);
+                case 39:
+                  tries++;
+                  _context13.next = 35;
+                  break;
+                case 42:
+                  if (this.challengeMatches(refill.board).length || !this.legalMove(refill.board)) {
+                    order = this.shuffledOrder(refill.board);
+                    if (!order) {
+                      // The pre-cast position was playable. Replacing only destroyed identities is a guaranteed fallback.
+                      refill = {
+                        board: this.board.slice(),
+                        moves: [],
+                        spawns: Array.from(removed, function (i) {
+                          return {
+                            to: i,
+                            path: [i],
+                            direction: {
+                              x: 0,
+                              y: 0
+                            },
+                            distance: 0
+                          };
+                        })
+                      };
+                    }
+                  }
+                case 43:
+                  this.busy = true;
+                  this.battlePhase = 'resolve';
+                  this.clearIdleHint();
+                  this.selected = -1;
+                  this.addItem(id, -1);
+                  this.syncBattleTools();
+                  this.lock.active = false;
+                  shield = this.box('道具演出输入锁', 0, 0, 480, 854);
+                  shield.addComponent(BlockInputEvents);
+                  cancel = function cancel() {
+                    return motion.cancel();
+                  };
+                  root.once(Node.EventType.NODE_DESTROYED, cancel);
+                  _context13.prev = 54;
+                  if (!bomb) {
+                    _context13.next = 82;
+                    break;
+                  }
+                  point = this.cells[target].position, icon = this.art('board/' + id, point.x, point.y + 56, 42, 42);
+                  _context13.next = 59;
+                  return motion.play(tween(icon).to(motion.duration(.20), {
+                    position: point.clone()
+                  }, {
+                    easing: 'quadIn'
+                  }));
+                case 59:
+                  _context13.t1 = !_context13.sent;
+                  if (_context13.t1) {
+                    _context13.next = 62;
+                    break;
+                  }
+                  _context13.t1 = !live();
+                case 62:
+                  if (!_context13.t1) {
+                    _context13.next = 64;
+                    break;
+                  }
+                  return _context13.abrupt("return");
+                case 64:
+                  icon.destroy();
+                  this.audio.play('hit');
+                  _context13.next = 68;
+                  return (_this$boardFx2 = this.boardFx) == null ? void 0 : _this$boardFx2.clear(motion, area.map(function (i) {
+                    return {
+                      position: _this34.cells[i].position,
+                      color: new Color(255, 172, 75)
+                    };
+                  }), 'charge');
+                case 68:
+                  if (live()) {
+                    _context13.next = 70;
+                    break;
+                  }
+                  return _context13.abrupt("return");
+                case 70:
+                  if (!refill) {
+                    _context13.next = 77;
+                    break;
+                  }
+                  for (_iterator19 = _createForOfIteratorHelperLoose(removed); !(_step19 = _iterator19()).done;) {
+                    _i7 = _step19.value;
+                    (_this$challenge4 = this.challenge) == null || _this$challenge4.powers["delete"]((_this$restoredTileIds = this.restoredTileIds.get(this.tiles[_i7])) != null ? _this$restoredTileIds : '');
+                  }
+                  this.board = refill.board;
+                  _context13.next = 75;
+                  return this.drop(motion, removed, refill);
+                case 75:
+                  if (live()) {
+                    _context13.next = 77;
+                    break;
+                  }
+                  return _context13.abrupt("return");
+                case 77:
+                  if (!order) {
+                    _context13.next = 80;
+                    break;
+                  }
+                  _context13.next = 80;
+                  return this.rearrange(motion, order);
+                case 80:
+                  _context13.next = 123;
+                  break;
+                case 82:
+                  if (!(id === 'shuffle')) {
+                    _context13.next = 88;
+                    break;
+                  }
+                  this.audio.playTrial('shuffle');
+                  _context13.next = 86;
+                  return this.rearrange(motion, order);
+                case 86:
+                  _context13.next = 123;
+                  break;
+                case 88:
+                  if (!(id === 'finger')) {
+                    _context13.next = 111;
+                    break;
+                  }
+                  actor = this.enemyNodes[firstEnemy], _point2 = actor.position.clone();
+                  this.audio.play('charge');
+                  _context13.next = 93;
+                  return this.itemAccent(id, motion, _point2);
+                case 93:
+                  _context13.t2 = !_context13.sent;
+                  if (_context13.t2) {
+                    _context13.next = 96;
+                    break;
+                  }
+                  _context13.t2 = !live();
+                case 96:
+                  if (!_context13.t2) {
+                    _context13.next = 98;
+                    break;
+                  }
+                  return _context13.abrupt("return");
+                case 98:
+                  this.audio.play('hit');
+                  this.enemies[firstEnemy] = 0;
+                  this.questEvent('kill', this.foes[firstEnemy].art);
+                  this.lastFallen = {
+                    origin: _point2,
+                    ground: _point2.y + ((_actor$getChildByName = (_actor$getChildByName2 = actor.getChildByName('脚底投影')) == null ? void 0 : _actor$getChildByName2.position.y) != null ? _actor$getChildByName : -34)
+                  };
+                  this.updateHUD();
+                  _context13.next = 105;
+                  return this.fadeActor(motion, actor);
+                case 105:
+                  if (!(live() && this.enemies.every(function (hp) {
+                    return hp <= 0;
+                  }))) {
+                    _context13.next = 109;
+                    break;
+                  }
+                  _context13.next = 108;
+                  return this.finishWave(motion, director, room, false);
+                case 108:
+                  return _context13.abrupt("return");
+                case 109:
+                  _context13.next = 123;
+                  break;
+                case 111:
+                  if (!upgrade.length) {
+                    _context13.next = 123;
+                    break;
+                  }
+                  _iterator20 = _createForOfIteratorHelperLoose(upgrade);
+                case 113:
+                  if ((_step20 = _iterator20()).done) {
+                    _context13.next = 123;
+                    break;
+                  }
+                  _i8 = _step20.value;
+                  if (live()) {
+                    _context13.next = 117;
+                    break;
+                  }
+                  return _context13.abrupt("return");
+                case 117:
+                  this.markCharged(_i8, id === 'gold' ? 'advanced' : 'skill');
+                  this.audio.playTrial('create');
+                  _context13.next = 121;
+                  return Promise.all([this.dropCharge(motion, this.tiles[_i8]), this.supportHalo(motion, this.cells[_i8].position, id === 'gold' ? '#ffce64' : '#c1e3f9')]);
+                case 121:
+                  _context13.next = 113;
+                  break;
+                case 123:
+                  _context13.prev = 123;
+                  root.off(Node.EventType.NODE_DESTROYED, cancel);
+                  if (shield.isValid) {
+                    shield.removeFromParent();
+                    shield.destroy();
+                  }
+                  return _context13.finish(123);
+                case 127:
+                  if (live()) this.resumeBattleInput(items[id].name + '使用完成');
+                case 128:
+                case "end":
+                  return _context13.stop();
+              }
+            }, _callee13, this, [[23, 27], [54,, 123, 127]]);
+          }));
+          function castItem(_x16, _x17) {
+            return _castItem.apply(this, arguments);
+          }
+          return castItem;
+        }();
+        _proto.usePotion = function usePotion(id) {
           var _recipient$position$x,
             _recipient$position$y,
             _this$heroes$get$posi,
             _this$heroes$get,
-            _this27 = this;
-          if (this.busy || this.automatic || this.potion <= 0 || this.guideMode === 'swap' || this.hp >= this.maxHP) return;
-          var healed = Math.min(this.maxHP - this.hp, 45);
-          if (this.mineRecovery) {
+            _this35 = this;
+          if (id === void 0) {
+            id = 'potion';
+          }
+          if (this.busy || this.automatic || this.itemCount(id) <= 0 || this.guideMode === 'swap' || this.hp >= this.maxHP) return;
+          var spec = items[id];
+          if (!('heal' in spec)) return;
+          var healed = Math.min(this.maxHP - this.hp, spec.heal);
+          if (this.mineRecovery && id === 'potion') {
             var _live$state$mineRecov, _live$state$mineRecov2;
-            var director = this.dungeon,
-              room = director == null ? void 0 : director.room;
-            var current = director && room && this.minePermit(director, room),
+            var _director = this.dungeon,
+              _room = _director == null ? void 0 : _director.room;
+            var current = _director && _room && this.minePermit(_director, _room),
               board = this.stableMineBoard();
             if (!current || !board || this.battlePhase !== 'input') return;
             var live = current.live,
@@ -11147,7 +12140,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             if (!next || !this.persistMineRecovery(live, next)) return;
           }
           this.hp += healed;
-          this.potion--;
+          this.addItem(id, -1);
           this.clearGuide();
           this.audio.play('potion');
           this.setBattleStatus("\u836F\u6C34\u6062\u590D " + healed + " HP");
@@ -11159,17 +12152,17 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.syncBattleTools();
           void Promise.all([this.combatPopup(motion, '+' + healed + ' HP', (_recipient$position$x = recipient == null ? void 0 : recipient.position.x) != null ? _recipient$position$x : -94, (_recipient$position$y = recipient == null ? void 0 : recipient.position.y) != null ? _recipient$position$y : 286, '#adf4b0', 27), this.supportHalo(motion, (_this$heroes$get$posi = (_this$heroes$get = this.heroes.get(this.party[0])) == null ? void 0 : _this$heroes$get.position) != null ? _this$heroes$get$posi : new Vec3(-94, 245, 0), '#87eaa5')])["finally"](function () {
             restore();
-            if (!motion.cancelled && _this27.motion === motion) _this27.resumeBattleInput('药水恢复完成');
+            if (!motion.cancelled && _this35.motion === motion) _this35.resumeBattleInput('药水恢复完成');
           });
           this.updateHUD();
         };
         _proto.bindTileInput = function bindTileInput(node, indexOf) {
-          var _this28 = this;
+          var _this36 = this;
           var start;
           node.on(Node.EventType.TOUCH_START, function (event) {
-            _this28.clearIdleHint();
+            _this36.clearIdleHint();
             var index = indexOf();
-            if (!_this28.canSelect(index)) return;
+            if (!_this36.canSelect(index)) return;
             var _event$getUILocation = event.getUILocation(),
               x = _event$getUILocation.x,
               y = _event$getUILocation.y;
@@ -11182,12 +12175,12 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           });
           var preview = -1;
           var restore = function restore() {
-            if (start && _this28.tiles[start.index]) _this28.tiles[start.index].setPosition(_this28.cells[start.index].position);
-            if (preview >= 0 && _this28.tiles[preview]) _this28.tiles[preview].setPosition(_this28.cells[preview].position);
+            if (start && _this36.tiles[start.index]) _this36.tiles[start.index].setPosition(_this36.cells[start.index].position);
+            if (preview >= 0 && _this36.tiles[preview]) _this36.tiles[preview].setPosition(_this36.cells[preview].position);
             preview = -1;
           };
           var project = function project(event) {
-            if (!start || start.id !== event.getID() || !_this28.canSelect(start.index)) return;
+            if (!start || start.id !== event.getID() || !_this36.canSelect(start.index)) return;
             restore();
             var end = event.getUILocation();
             var dx = end.x - start.x,
@@ -11196,13 +12189,13 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             var delta = horizontal ? dx : dy;
             if (Math.abs(delta) < 7) return;
             var target = start.index + (horizontal ? Math.sign(delta) : -cols * Math.sign(delta));
-            if (!canExchange(_this28.board, start.index, target, _this28.exchangeRules().canSwap) || !_this28.canSelect(target)) return;
+            if (!canExchange(_this36.board, start.index, target, _this36.exchangeRules().canSwap) || !_this36.canSelect(target)) return;
             preview = target;
-            var first = _this28.cells[start.index].position;
-            var second = _this28.cells[target].position;
+            var first = _this36.cells[start.index].position;
+            var second = _this36.cells[target].position;
             var fraction = Math.min(1, Math.abs(delta) / interactionGrid.tilePitch);
-            _this28.tiles[start.index].setPosition(Vec3.lerp(new Vec3(), first, second, fraction));
-            _this28.tiles[target].setPosition(Vec3.lerp(new Vec3(), second, first, fraction));
+            _this36.tiles[start.index].setPosition(Vec3.lerp(new Vec3(), first, second, fraction));
+            _this36.tiles[target].setPosition(Vec3.lerp(new Vec3(), second, first, fraction));
           };
           node.on(Node.EventType.TOUCH_MOVE, project);
           var finish = function finish(event, mayTap) {
@@ -11214,18 +12207,18 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             var end = event.getUILocation();
             if (Math.max(Math.abs(end.x - x), Math.abs(end.y - y)) >= 20) {
               project(event);
-              if (preview >= 0 && _this28.canSelect(index)) {
+              if (preview >= 0 && _this36.canSelect(index)) {
                 var target = preview;
                 preview = -1;
                 start = undefined;
-                _this28.selected = index;
-                void _this28.tap(target, false, true);
+                _this36.selected = index;
+                void _this36.tap(target, false, true);
                 return;
               }
             }
             restore();
             start = undefined;
-            if (mayTap && Math.max(Math.abs(end.x - x), Math.abs(end.y - y)) < 7) void _this28.tap(index);
+            if (mayTap && Math.max(Math.abs(end.x - x), Math.abs(end.y - y)) < 7) void _this36.tap(index);
           };
           node.on(Node.EventType.TOUCH_END, function (event) {
             return finish(event, true);
@@ -11236,8 +12229,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           });
         };
         _proto.canSelect = function canSelect(index) {
-          var _this$challenge4;
-          return index >= 0 && index < this.board.length && playableCell(this.board[index]) && !((_this$challenge4 = this.challenge) != null && _this$challenge4.locks.has(index)) && !this.busy && !this.automatic && !this.battleModal && this.guideMode !== 'potion' && (!(this.phase === 'wolves' && this.firstSwap) || index === 1 || index === 8);
+          var _this$challenge5;
+          return index >= 0 && index < this.board.length && playableCell(this.board[index]) && !((_this$challenge5 = this.challenge) != null && _this$challenge5.locks.has(index)) && !this.busy && !this.automatic && !this.battleModal && this.guideMode !== 'potion' && (!(this.phase === 'wolves' && this.firstSwap) || index === 1 || index === 8);
         };
         _proto.tileIcon = function tileIcon(type, parent) {
           var _this$art;
@@ -11264,48 +12257,49 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         };
         _proto.tile = function tile(type, index, position) {
           var _this$rocks$get2,
-            _this29 = this;
+            _this37 = this;
           if (position === void 0) {
             position = this.cells[index].position;
           }
           var node = this.box(type, position.x, position.y, 48, 48, undefined, this.tileLayer);
           if (type === rockCell) this.drawRock(node, (_this$rocks$get2 = this.rocks.get(index)) != null ? _this$rocks$get2 : 1);else this.tileIcon(type, node);
           this.bindTileInput(node, function () {
-            return _this29.tiles.indexOf(node);
+            return _this37.tiles.indexOf(node);
           });
           return node;
         };
         _proto.buildTiles = function buildTiles() {
-          var _this30 = this;
+          var _this38 = this;
           this.tiles.forEach(function (n) {
             return n.destroy();
           });
           this.tiles = this.board.map(function (type, index) {
-            return _this30.tile(type, index);
+            return _this38.tile(type, index);
           });
           this.tiles.forEach(function (node, index) {
-            return _this30.restoredTileIds.set(node, playableCell(_this30.board[index]) ? _this30.tileIdentity() : "cell:" + index + ":" + _this30.board[index]);
+            return _this38.restoredTileIds.set(node, playableCell(_this38.board[index]) ? _this38.tileIdentity() : "cell:" + index + ":" + _this38.board[index]);
           });
           this.raiseBoardOverlays();
         };
         _proto.raiseBoardOverlays = function raiseBoardOverlays() {
-          var _this$trialFxViewport, _this$guideLayer, _this$ui$getChildByNa3, _this$battleModal;
+          var _this$trialFxViewport, _this$guideLayer, _this$ui$getChildByNa3, _this$battleModal, _this$ui$getChildByNa4;
           this.lock.setSiblingIndex(this.ui.children.length - 1);
           (_this$trialFxViewport = this.trialFxViewport) == null || _this$trialFxViewport.setSiblingIndex(this.ui.children.length - 1);
           // Refill can reorder board layers after the HUD has been created.
-          for (var _i6 = 0, _arr2 = ['药水', '自动战斗', '任务', '规则', '撤离', '直接胜利']; _i6 < _arr2.length; _i6++) {
+          for (var _i9 = 0, _arr3 = ['战斗道具栏', '自动战斗', '任务', '规则', '撤离', '直接胜利']; _i9 < _arr3.length; _i9++) {
             var _this$ui$getChildByNa2;
-            var name = _arr2[_i6];
+            var name = _arr3[_i9];
             (_this$ui$getChildByNa2 = this.ui.getChildByName(name)) == null || _this$ui$getChildByNa2.setSiblingIndex(this.ui.children.length - 1);
           }
           (_this$guideLayer = this.guideLayer) == null || _this$guideLayer.setSiblingIndex(this.ui.children.length - 1);
           (_this$ui$getChildByNa3 = this.ui.getChildByName('直接胜利')) == null || _this$ui$getChildByNa3.setSiblingIndex(this.ui.children.length - 1);
           (_this$battleModal = this.battleModal) == null || _this$battleModal.setSiblingIndex(this.ui.children.length - 1);
+          (_this$ui$getChildByNa4 = this.ui.getChildByName('道具演出输入锁')) == null || _this$ui$getChildByNa4.setSiblingIndex(this.ui.children.length - 1);
         };
         _proto.drawBoard = function drawBoard() {
-          var _this31 = this;
+          var _this39 = this;
           this.tiles.forEach(function (node, i) {
-            return node.setScale(_this31.selected === i ? .85 : 1, _this31.selected === i ? .85 : 1, 1);
+            return node.setScale(_this39.selected === i ? .85 : 1, _this39.selected === i ? .85 : 1, 1);
           });
           this.updateHUD();
         };
@@ -11317,28 +12311,28 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }));
         };
         _proto.drop = /*#__PURE__*/function () {
-          var _drop = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee10(motion, removed, plan) {
-            var _this32 = this;
-            var previous, next, _iterator15, _step15, _index6, slides, animate, _iterator16, _step16, _step16$value, from, to, path, _iterator17, _step17, _this$challenge5, _step17$value, _to, _path, direction, distance, entry, localEntry, position, alpha;
-            return _regeneratorRuntime().wrap(function _callee10$(_context10) {
-              while (1) switch (_context10.prev = _context10.next) {
+          var _drop = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee14(motion, removed, plan) {
+            var _this40 = this;
+            var previous, next, _iterator21, _step21, _index6, slides, animate, _iterator22, _step22, _step22$value, from, to, path, _iterator23, _step23, _this$challenge6, _step23$value, _to, _path, direction, distance, entry, localEntry, position, alpha;
+            return _regeneratorRuntime().wrap(function _callee14$(_context14) {
+              while (1) switch (_context14.prev = _context14.next) {
                 case 0:
                   previous = this.tiles;
                   next = previous.slice();
-                  for (_iterator15 = _createForOfIteratorHelperLoose(removed); !(_step15 = _iterator15()).done;) {
-                    _index6 = _step15.value;
+                  for (_iterator21 = _createForOfIteratorHelperLoose(removed); !(_step21 = _iterator21()).done;) {
+                    _index6 = _step21.value;
                     previous[_index6].destroy();
                   }
                   slides = [];
                   animate = function animate(tile, path, entrySteps) {
-                    var _this32$trial;
+                    var _this40$trial;
                     if (entrySteps === void 0) {
                       entrySteps = 0;
                     }
-                    if (((_this32$trial = _this32.trial) == null ? void 0 : _this32$trial.id) === 'portal') {
+                    if (((_this40$trial = _this40.trial) == null ? void 0 : _this40$trial.id) === 'portal') {
                       var _slide = tween(tile),
-                        root = _this32.ui;
-                      var _loop3 = function _loop3() {
+                        _root = _this40.ui;
+                      var _loop4 = function _loop4() {
                         var from = path[k - 1],
                           to = path[k],
                           jump = from !== undefined && portalLinks.some(function (pair) {
@@ -11346,52 +12340,52 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                           });
                         if (jump) {
                           _slide.call(function () {
-                            if (motion.cancelled || _this32.ui !== root) return;
-                            _this32.logMechanism({
+                            if (motion.cancelled || _this40.ui !== _root) return;
+                            _this40.logMechanism({
                               kind: 'PORTAL_STARTED',
-                              id: _this32.restoredTileIds.get(tile),
+                              id: _this40.restoredTileIds.get(tile),
                               from: from,
                               to: to
                             });
-                            _this32.audio.playTrial('charge');
+                            _this40.audio.playTrial('charge');
                           }).to(motion.duration(.09), {
                             scale: new Vec3(.08, .08, 1)
                           }).call(function () {
-                            if (!motion.cancelled && _this32.ui === root) tile.setPosition(_this32.cells[to].position);
+                            if (!motion.cancelled && _this40.ui === _root) tile.setPosition(_this40.cells[to].position);
                           }).to(motion.duration(.09), {
                             scale: new Vec3(1, 1, 1)
                           }).call(function () {
-                            if (motion.cancelled || _this32.ui !== root) return;
-                            _this32.portalTransits++;
-                            _this32.logMechanism({
+                            if (motion.cancelled || _this40.ui !== _root) return;
+                            _this40.portalTransits++;
+                            _this40.logMechanism({
                               kind: 'PORTAL_COMPLETED',
-                              id: _this32.restoredTileIds.get(tile),
+                              id: _this40.restoredTileIds.get(tile),
                               from: from,
                               to: to
                             });
-                            _this32.refreshTestObjective();
+                            _this40.refreshTestObjective();
                           });
                         } else _slide.to(motion.duration(.045 * (k === 0 ? entrySteps : 1)), {
-                          position: _this32.cells[to].position.clone()
+                          position: _this40.cells[to].position.clone()
                         });
                       };
                       for (var k = entrySteps ? 0 : 1; k < path.length; k++) {
-                        _loop3();
+                        _loop4();
                       }
                       slides.push(motion.play(_slide));
                       return;
                     }
-                    if (_this32.phase !== 'mine' && path.every(function (cell) {
+                    if (_this40.phase !== 'mine' && path.every(function (cell) {
                       return cell % cols === path[0] % cols;
                     })) {
-                      slides.push(_this32.moveTile(motion, tile, path[path.length - 1], .18));
+                      slides.push(_this40.moveTile(motion, tile, path[path.length - 1], .18));
                       return;
                     }
                     var slide = tween(tile);
                     for (var _k = entrySteps ? 0 : 1; _k < path.length; _k++) {
                       var steps = _k === 0 ? entrySteps : 1;
                       slide.to(motion.duration(.052 * steps), {
-                        position: _this32.cells[path[_k]].position.clone()
+                        position: _this40.cells[path[_k]].position.clone()
                       });
                     }
                     if (!motion.reduced) slide.to(.045, {
@@ -11401,18 +12395,18 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     });
                     slides.push(motion.play(slide));
                   };
-                  for (_iterator16 = _createForOfIteratorHelperLoose(plan.moves); !(_step16 = _iterator16()).done;) {
-                    _step16$value = _step16.value, from = _step16$value.from, to = _step16$value.to, path = _step16$value.path;
+                  for (_iterator22 = _createForOfIteratorHelperLoose(plan.moves); !(_step22 = _iterator22()).done;) {
+                    _step22$value = _step22.value, from = _step22$value.from, to = _step22$value.to, path = _step22$value.path;
                     next[to] = previous[from];
                     animate(next[to], path);
                   }
-                  for (_iterator17 = _createForOfIteratorHelperLoose(plan.spawns); !(_step17 = _iterator17()).done;) {
-                    _step17$value = _step17.value, _to = _step17$value.to, _path = _step17$value.path, direction = _step17$value.direction, distance = _step17$value.distance;
+                  for (_iterator23 = _createForOfIteratorHelperLoose(plan.spawns); !(_step23 = _iterator23()).done;) {
+                    _step23$value = _step23.value, _to = _step23$value.to, _path = _step23$value.path, direction = _step23$value.direction, distance = _step23$value.distance;
                     entry = this.cells[_path[0]].position;
-                    localEntry = _path[0] === sourceEntry && ((_this$challenge5 = this.challenge) == null ? void 0 : _this$challenge5.id) === 'source';
+                    localEntry = _path[0] === sourceEntry && ((_this$challenge6 = this.challenge) == null ? void 0 : _this$challenge6.id) === 'source';
                     position = localEntry ? entry.clone() : new Vec3(entry.x - direction.x * interactionGrid.tilePitch * distance, entry.y + direction.y * interactionGrid.tilePitch * distance, 0);
                     next[_to] = this.tile(plan.board[_to], _to, position);
-                    if (localEntry) {
+                    if (localEntry || distance === 0) {
                       alpha = next[_to].addComponent(UIOpacity);
                       alpha.opacity = 0;
                       slides.push(motion.play(tween(alpha).to(motion.duration(.14), {
@@ -11424,7 +12418,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   }
                   this.tiles = next;
                   this.raiseBoardOverlays();
-                  _context10.next = 11;
+                  _context14.next = 11;
                   return Promise.all(slides);
                 case 11:
                   if (this.trial && !motion.cancelled) {
@@ -11433,11 +12427,11 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   }
                 case 12:
                 case "end":
-                  return _context10.stop();
+                  return _context14.stop();
               }
-            }, _callee10, this);
+            }, _callee14, this);
           }));
-          function drop(_x9, _x10, _x11) {
+          function drop(_x18, _x19, _x20) {
             return _drop.apply(this, arguments);
           }
           return drop;
@@ -11450,75 +12444,75 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           return legalMove(board, rules.canSwap, rules.findMatches, rules.activates);
         };
         _proto.autoStep = function autoStep() {
-          var _this33 = this;
+          var _this41 = this;
           var root = this.ui;
           var request = ++this.autoRequest;
           if (!this.automatic || this.busy || root !== this.battleRoot || this.guideMode || this.battleModal) return;
           this.scheduleOnce(function () {
-            if (request !== _this33.autoRequest || !_this33.automatic || _this33.busy || root !== _this33.ui || _this33.battleModal) return;
-            var move = _this33.bestAutoMove();
+            if (request !== _this41.autoRequest || !_this41.automatic || _this41.busy || root !== _this41.ui || _this41.battleModal) return;
+            var move = _this41.bestAutoMove();
             if (move) {
-              _this33.selected = move[0];
-              void _this33.tap(move[1], true);
+              _this41.selected = move[0];
+              void _this41.tap(move[1], true);
             }
           }, .38);
         };
         _proto.bestAutoMove = function bestAutoMove() {
-          var _this34 = this;
+          var _this42 = this;
           var best;
           var bestScore = 0;
-          var _loop4 = function _loop4() {
-              var _this34$trial, _this34$trial2, _this34$trial3;
-              var _step18$value = _step18.value,
-                a = _step18$value.a,
-                b = _step18$value.b,
-                next = _step18$value.next,
-                groups = _step18$value.groups,
-                activates = _step18$value.activates;
+          var _loop5 = function _loop5() {
+              var _this42$trial, _this42$trial2, _this42$trial3;
+              var _step24$value = _step24.value,
+                a = _step24$value.a,
+                b = _step24$value.b,
+                next = _step24$value.next,
+                groups = _step24$value.groups,
+                activates = _step24$value.activates;
               if (activates) return {
                 v: [a, b]
               };
               var score = groups.reduce(function (sum, group) {
                 var _heroes$type, _heroes$type2;
                 var type = next[group[0]];
-                var weight = ((_heroes$type = heroes[type]) == null ? void 0 : _heroes$type.action) === 'h' && _this34.hp < _this34.maxHP * .6 ? 2 : ((_heroes$type2 = heroes[type]) == null ? void 0 : _heroes$type2.action) === 'd' && _this34.dp < _this34.maxDP * .4 ? 1.7 : type === 'cry' ? .5 : 1;
+                var weight = ((_heroes$type = heroes[type]) == null ? void 0 : _heroes$type.action) === 'h' && _this42.hp < _this42.maxHP * .6 ? 2 : ((_heroes$type2 = heroes[type]) == null ? void 0 : _heroes$type2.action) === 'd' && _this42.dp < _this42.maxDP * .4 ? 1.7 : type === 'cry' ? .5 : 1;
                 return sum + group.length * weight;
               }, 0);
-              if (((_this34$trial = _this34.trial) == null ? void 0 : _this34$trial.id) === 'rocks') score += damageRocks(_this34.rocks, groups.flat()).hits.length * 30;
-              if (((_this34$trial2 = _this34.trial) == null ? void 0 : _this34$trial2.id) === 'jelly') score += spreadJelly(_this34.jelly, groups).added.length * 30;
-              if (((_this34$trial3 = _this34.trial) == null ? void 0 : _this34$trial3.id) === 'terrain') score += Array.from(new Set(groups.flat())).filter(function (index) {
-                return _this34.terrain.has(index);
+              if (((_this42$trial = _this42.trial) == null ? void 0 : _this42$trial.id) === 'rocks') score += damageRocks(_this42.rocks, groups.flat()).hits.length * 30;
+              if (((_this42$trial2 = _this42.trial) == null ? void 0 : _this42$trial2.id) === 'jelly') score += spreadJelly(_this42.jelly, groups).added.length * 30;
+              if (((_this42$trial3 = _this42.trial) == null ? void 0 : _this42$trial3.id) === 'terrain') score += Array.from(new Set(groups.flat())).filter(function (index) {
+                return _this42.terrain.has(index);
               }).length * 30;
-              if (_this34.challenge) {
+              if (_this42.challenge) {
                 var cells = new Set(groups.flat());
-                score += hitChallengeLocks(_this34.challenge.id, _this34.challenge.locks, cells).hits.length * 35;
-                var desired = _this34.challenge.stage ? 'm' : 's';
-                if (_this34.challenge.id === 'collect' || _this34.challenge.id === 'relay') score += groups.filter(function (group) {
+                score += hitChallengeLocks(_this42.challenge.id, _this42.challenge.locks, cells).hits.length * 35;
+                var desired = _this42.challenge.stage ? 'm' : 's';
+                if (_this42.challenge.id === 'collect' || _this42.challenge.id === 'relay') score += groups.filter(function (group) {
                   return next[group[0]] === desired;
                 }).length * 24;
-                for (var _iterator19 = _createForOfIteratorHelperLoose(cells), _step19; !(_step19 = _iterator19()).done;) {
-                  var _this34$restoredTileI;
-                  var _index7 = _step19.value;
+                for (var _iterator25 = _createForOfIteratorHelperLoose(cells), _step25; !(_step25 = _iterator25()).done;) {
+                  var _this42$restoredTileI;
+                  var _index7 = _step25.value;
                   var from = _index7 === a ? b : _index7 === b ? a : _index7;
-                  if (_this34.challenge.powers.has((_this34$restoredTileI = _this34.restoredTileIds.get(_this34.tiles[from])) != null ? _this34$restoredTileI : '')) score += 40;
+                  if (_this42.challenge.powers.has((_this42$restoredTileI = _this42.restoredTileIds.get(_this42.tiles[from])) != null ? _this42$restoredTileI : '')) score += 40;
                 }
               }
-              var room = _this34.activeWave;
+              var room = _this42.activeWave;
               if ((room == null ? void 0 : room.kind) === 'battle' && room.delivery) {
-                var _this34$challenge;
+                var _this42$challenge;
                 var plan = planPlayableWave(groups, function (index) {
-                  return _this34.chargedTiles.get(_this34.tiles[index === a ? b : index === b ? a : index]);
+                  return _this42.chargedTiles.get(_this42.tiles[index === a ? b : index === b ? a : index]);
                 }, [b, a]);
                 var gaps = new Set(plan.removed);
                 plan.created.forEach(function (_, cell) {
                   return gaps["delete"](cell);
                 });
-                var gravity = _this34.planBattleRefill(next, gaps, _this34.types, function () {
+                var gravity = _this42.planBattleRefill(next, gaps, _this42.types, function () {
                   return 0;
                 });
-                score += deliveryAdvanceScore(_this34.board, gravity.board, room.delivery, _this34.boardRoutes);
-                if (((_this34$challenge = _this34.challenge) == null ? void 0 : _this34$challenge.id) === 'source') {
-                  var route = _this34.boardRoutes.find(function (path) {
+                score += deliveryAdvanceScore(_this42.board, gravity.board, room.delivery, _this42.boardRoutes);
+                if (((_this42$challenge = _this42.challenge) == null ? void 0 : _this42$challenge.id) === 'source') {
+                  var route = _this42.boardRoutes.find(function (path) {
                     return path[0] === sourceEntry;
                   });
                   score += groups.flat().filter(function (index) {
@@ -11535,8 +12529,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               }
             },
             _ret3;
-          for (var _iterator18 = _createForOfIteratorHelperLoose(legalExchanges(this.board, this.exchangeRules())), _step18; !(_step18 = _iterator18()).done;) {
-            _ret3 = _loop4();
+          for (var _iterator24 = _createForOfIteratorHelperLoose(legalExchanges(this.board, this.exchangeRules())), _step24; !(_step24 = _iterator24()).done;) {
+            _ret3 = _loop5();
             if (_ret3) return _ret3.v;
           }
           return best;
@@ -11563,7 +12557,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         };
         _proto.setupStage4A = function setupStage4A() {
           var _this$dungeon7,
-            _this35 = this;
+            _this43 = this;
           var room = (_this$dungeon7 = this.dungeon) == null ? void 0 : _this$dungeon7.room;
           if (!this.wantsStage4A() || (room == null ? void 0 : room.kind) !== 'battle') return;
           var generation = ++this.stage4AGeneration;
@@ -11581,7 +12575,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           };
           this.stage4A = live; // Lock ownership even if this room cannot start.
           try {
-            var _room$rescueCells2, _this$adventure2;
+            var _room$rescueCells2, _this$adventure3;
             var gear = Object.values(this.inventory.slots);
             if ((_room$rescueCells2 = room.rescueCells) != null && _room$rescueCells2.length || gear.includes('healcore')) throw Error('该配置包含尚未决定的救援或生命圣杯规则');
             var seed = this.stage4ASeed();
@@ -11589,12 +12583,12 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               return _extends({
                 id: "room:" + generation + ":" + i,
                 emblem: emblem
-              }, _this35.chargedTiles.get(_this35.tiles[i]) ? {
-                tier: _this35.chargedTiles.get(_this35.tiles[i])
+              }, _this43.chargedTiles.get(_this43.tiles[i]) ? {
+                tier: _this43.chargedTiles.get(_this43.tiles[i])
               } : {});
             });
             tiles.forEach(function (tile, i) {
-              return live.nodes.set(tile.id, _this35.tiles[i]);
+              return live.nodes.set(tile.id, _this43.tiles[i]);
             });
             var ids = this.enemies.map(function (_, i) {
               return 'enemy:' + i;
@@ -11611,10 +12605,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               revisedSkills: true,
               roles: [].concat(this.party),
               attacks: Object.fromEntries(this.party.map(function (role) {
-                return [role, _this35.heroAttack(role)];
+                return [role, _this43.heroAttack(role)];
               })),
               gear: gear,
-              buffs: _extends({}, (_this$adventure2 = this.adventure) == null ? void 0 : _this$adventure2.buffs),
+              buffs: _extends({}, (_this$adventure3 = this.adventure) == null ? void 0 : _this$adventure3.buffs),
               enemies: this.foes.map(function (foe, i) {
                 return {
                   id: ids[i],
@@ -11624,7 +12618,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                 };
               }),
               enemyHP: Object.fromEntries(ids.map(function (id, i) {
-                return [id, _this35.enemies[i]];
+                return [id, _this43.enemies[i]];
               })),
               tiles: tiles,
               rescue: [],
@@ -11639,9 +12633,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             live.session = new IsolatedBoardSession(core);
             live.potion = createPotionBridge(core, {
               reserve: function reserve() {
-                var gate = _this35.saveGate;
+                var gate = _this43.saveGate;
                 var raw = gate == null ? void 0 : gate.read();
-                if (!(gate != null && gate.writable) || !raw || _this35.potion <= 0) return undefined;
+                if (!(gate != null && gate.writable) || !raw || _this43.potion <= 0) return undefined;
                 var stored;
                 try {
                   stored = JSON.parse(raw);
@@ -11650,20 +12644,20 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                 }
                 if (!stored || typeof stored !== 'object') return undefined;
                 var stock = stored.potion === true ? 1 : stored.potion;
-                if (stock !== _this35.potion) return undefined;
+                if (stock !== _this43.potion) return undefined;
                 var after = stock - 1;
                 return {
                   release: function release() {},
                   confirm: function confirm() {
-                    if (_this35.stage4A !== live || gate.write(JSON.stringify(_extends({}, stored, {
+                    if (_this43.stage4A !== live || gate.write(JSON.stringify(_extends({}, stored, {
                       potion: after
                     })), raw) !== 'committed') throw Error('Potion stock could not be confirmed normally');
-                    _this35.potion = after;
+                    _this43.potion = after;
                   }
                 };
               }
             }, function () {
-              return _this35.stage4A === live;
+              return _this43.stage4A === live;
             });
           } catch (error) {
             live.error = String(error);
@@ -11672,7 +12666,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         _proto.useStage4APotion = function useStage4APotion() {
           var _this$heroes$get$posi2,
             _this$heroes$get2,
-            _this36 = this;
+            _this44 = this;
           var live = this.stage4A;
           if (!(live != null && live.core) || !live.potion || live.error || this.busy || this.automatic || this.battlePhase !== 'input') return;
           var result = live.potion(live.core.snapshot().fixture.battleId + ':potion:' + ++live.potionSequence);
@@ -11694,54 +12688,54 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.setBattleStatus('药水恢复 ' + event.payload.amount + ' HP');
           var motion = this.motion;
           void this.supportHalo(motion, (_this$heroes$get$posi2 = (_this$heroes$get2 = this.heroes.get(this.party[0])) == null ? void 0 : _this$heroes$get2.position) != null ? _this$heroes$get$posi2 : new Vec3(-94, 245, 0), '#87eaa5').then(function () {
-            if (_this36.stage4A === live && !motion.cancelled) live.core.acknowledgePresentation(event.eventId);
+            if (_this44.stage4A === live && !motion.cancelled) live.core.acknowledgePresentation(event.eventId);
           });
           this.updateHUD();
         };
         _proto.stage4ASwap = /*#__PURE__*/function () {
-          var _stage4ASwap = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee19(a, b, preview) {
-            var _this37 = this;
-            var live, core, session, motion, current, _this$boardFx2, swapView, waves, tail, releaseFocus, attackTier, returnAnimation, clearFocus, cursor, parents, view, enqueue, publish, ticket, _reason, _live$journal$at, result, _iterator22, _step22, wave, _iterator24, _step24, _play, _i7, _tail, play, _iterator23, _step23, event, snapshot;
-            return _regeneratorRuntime().wrap(function _callee19$(_context19) {
-              while (1) switch (_context19.prev = _context19.next) {
+          var _stage4ASwap = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee23(a, b, preview) {
+            var _this45 = this;
+            var live, core, session, motion, current, _this$boardFx3, swapView, waves, tail, releaseFocus, attackTier, returnAnimation, clearFocus, cursor, parents, view, enqueue, publish, ticket, _reason, _live$journal$at, result, _iterator28, _step28, wave, _iterator30, _step30, _play, _i10, _tail, play, _iterator29, _step29, event, snapshot;
+            return _regeneratorRuntime().wrap(function _callee23$(_context23) {
+              while (1) switch (_context23.prev = _context23.next) {
                 case 0:
                   live = this.stage4A;
                   core = live.core, session = live.session;
                   motion = this.motion;
                   current = function current() {
-                    return _this37.stage4A === live && !motion.cancelled;
+                    return _this45.stage4A === live && !motion.cancelled;
                   };
                   this.selected = -1;
                   if (!(!core || !session || live.error || core.disposition !== 'active')) {
-                    _context19.next = 7;
+                    _context23.next = 7;
                     break;
                   }
-                  return _context19.abrupt("return");
+                  return _context23.abrupt("return");
                 case 7:
                   this.busy = true;
                   this.battlePhase = 'resolve';
                   this.drawBoard();
                   this.audio.playTrial('swap');
                   if (validExchange(core.snapshot().state.board, [a, b])) {
-                    _context19.next = 17;
+                    _context23.next = 17;
                     break;
                   }
                   this.audio.playTrial('invalid');
-                  _context19.next = 15;
-                  return Promise.all([this.moveTile(motion, this.tiles[a], a, .12), this.moveTile(motion, this.tiles[b], b, .12), (_this$boardFx2 = this.boardFx) == null ? void 0 : _this$boardFx2.reject(motion, [this.cells[a].position, this.cells[b].position])]);
+                  _context23.next = 15;
+                  return Promise.all([this.moveTile(motion, this.tiles[a], a, .12), this.moveTile(motion, this.tiles[b], b, .12), (_this$boardFx3 = this.boardFx) == null ? void 0 : _this$boardFx3.reject(motion, [this.cells[a].position, this.cells[b].position])]);
                 case 15:
                   if (current()) this.resumeBattleInput('没有成组，换位已还原');
-                  return _context19.abrupt("return");
+                  return _context23.abrupt("return");
                 case 17:
                   // Core facts are submitted independently. Presentation replays their causal waves.
                   swapView = Promise.all([this.moveTile(motion, this.tiles[a], b, preview ? .06 : .12), this.moveTile(motion, this.tiles[b], a, preview ? .06 : .12)]).then(function () {
                     if (!current()) return;
-                    var _ref10 = [_this37.tiles[b], _this37.tiles[a]];
-                    _this37.tiles[a] = _ref10[0];
-                    _this37.tiles[b] = _ref10[1];
-                    var _ref11 = [_this37.board[b], _this37.board[a]];
-                    _this37.board[a] = _ref11[0];
-                    _this37.board[b] = _ref11[1];
+                    var _ref15 = [_this45.tiles[b], _this45.tiles[a]];
+                    _this45.tiles[a] = _ref15[0];
+                    _this45.tiles[b] = _ref15[1];
+                    var _ref16 = [_this45.board[b], _this45.board[a]];
+                    _this45.board[a] = _ref16[0];
+                    _this45.board[b] = _ref16[1];
                   });
                   waves = new Map();
                   tail = [];
@@ -11752,19 +12746,19 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   cursor = live.journal.length;
                   parents = new Map();
                   view = function view(lane, event, play) {
-                    return /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee11() {
+                    return /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee15() {
                       var start;
-                      return _regeneratorRuntime().wrap(function _callee11$(_context11) {
-                        while (1) switch (_context11.prev = _context11.next) {
+                      return _regeneratorRuntime().wrap(function _callee15$(_context15) {
+                        while (1) switch (_context15.prev = _context15.next) {
                           case 0:
                             if (current()) {
-                              _context11.next = 2;
+                              _context15.next = 2;
                               break;
                             }
-                            return _context11.abrupt("return");
+                            return _context15.abrupt("return");
                           case 2:
                             start = performance.now();
-                            _context11.next = 5;
+                            _context15.next = 5;
                             return play();
                           case 5:
                             if (current()) live.samples.push({
@@ -11775,9 +12769,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                             });
                           case 6:
                           case "end":
-                            return _context11.stop();
+                            return _context15.stop();
                         }
-                      }, _callee11);
+                      }, _callee15);
                     }));
                   };
                   enqueue = function enqueue(lane, event, play) {
@@ -11796,9 +12790,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   publish = function publish() {
                     var snap = core.snapshot();
                     live.journal = snap.events;
-                    var _loop5 = function _loop5() {
+                    var _loop6 = function _loop6() {
                       var _event$sourceId, _event$targetId;
-                      var event = _step20.value;
+                      var event = _step26.value;
                       parents.set(event.eventId, event.parentEventId);
                       live.published.push({
                         id: event.eventId,
@@ -11811,85 +12805,85 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                         var matched = facts.removed.concat(facts.generated.map(function (g) {
                           return g.index;
                         }));
-                        var clear = view('board', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee12() {
-                          var _this37$boardFx, _this37$boardFx2;
-                          var oldNodes, _iterator21, _step21, _step21$value, _index8, tile;
-                          return _regeneratorRuntime().wrap(function _callee12$(_context12) {
-                            while (1) switch (_context12.prev = _context12.next) {
+                        var clear = view('board', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee16() {
+                          var _this45$boardFx, _this45$boardFx2;
+                          var oldNodes, _iterator27, _step27, _step27$value, _index8, tile;
+                          return _regeneratorRuntime().wrap(function _callee16$(_context16) {
+                            while (1) switch (_context16.prev = _context16.next) {
                               case 0:
-                                oldNodes = _this37.tiles.slice();
-                                _iterator21 = _createForOfIteratorHelperLoose(facts.generated);
+                                oldNodes = _this45.tiles.slice();
+                                _iterator27 = _createForOfIteratorHelperLoose(facts.generated);
                               case 2:
-                                if ((_step21 = _iterator21()).done) {
-                                  _context12.next = 9;
+                                if ((_step27 = _iterator27()).done) {
+                                  _context16.next = 9;
                                   break;
                                 }
-                                _step21$value = _step21.value, _index8 = _step21$value.index, tile = _step21$value.tile;
+                                _step27$value = _step27.value, _index8 = _step27$value.index, tile = _step27$value.tile;
                                 if (!(live.nodes.get(tile.id) !== oldNodes[_index8])) {
-                                  _context12.next = 6;
+                                  _context16.next = 6;
                                   break;
                                 }
                                 throw Error('强化演出棋子身份不一致');
                               case 6:
-                                _this37.markCharged(_index8, tile.tier);
+                                _this45.markCharged(_index8, tile.tier);
                               case 7:
-                                _context12.next = 2;
+                                _context16.next = 2;
                                 break;
                               case 9:
-                                _this37.audio.playChain(facts.wave - 1);
-                                if (facts.generated.length) _this37.audio.playTrial('create');
-                                _context12.next = 13;
-                                return Promise.all([_this37.flashTiles(motion, matched, removed, false)].concat(facts.generated.map(function (_ref14) {
-                                  var index = _ref14.index;
-                                  return _this37.dropCharge(motion, oldNodes[index]);
-                                }), [(_this37$boardFx = _this37.boardFx) == null ? void 0 : _this37$boardFx.combo(motion, facts.wave, new Vec3(0, 80, 0)), (_this37$boardFx2 = _this37.boardFx) == null ? void 0 : _this37$boardFx2.chargeReady(motion, facts.generated.map(function (_ref15) {
-                                  var index = _ref15.index;
+                                _this45.audio.playChain(facts.wave - 1);
+                                if (facts.generated.length) _this45.audio.playTrial('create');
+                                _context16.next = 13;
+                                return Promise.all([_this45.flashTiles(motion, matched, removed, false)].concat(facts.generated.map(function (_ref19) {
+                                  var index = _ref19.index;
+                                  return _this45.dropCharge(motion, oldNodes[index]);
+                                }), [(_this45$boardFx = _this45.boardFx) == null ? void 0 : _this45$boardFx.combo(motion, facts.wave, new Vec3(0, 80, 0)), (_this45$boardFx2 = _this45.boardFx) == null ? void 0 : _this45$boardFx2.chargeReady(motion, facts.generated.map(function (_ref20) {
+                                  var index = _ref20.index;
                                   return {
-                                    position: _this37.cells[index].position
+                                    position: _this45.cells[index].position
                                   };
                                 }))]));
                               case 13:
                               case "end":
-                                return _context12.stop();
+                                return _context16.stop();
                             }
-                          }, _callee12);
+                          }, _callee16);
                         })));
-                        var refill = view('board', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee13() {
+                        var refill = view('board', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee17() {
                           var paths, nextNodes;
-                          return _regeneratorRuntime().wrap(function _callee13$(_context13) {
-                            while (1) switch (_context13.prev = _context13.next) {
+                          return _regeneratorRuntime().wrap(function _callee17$(_context17) {
+                            while (1) switch (_context17.prev = _context17.next) {
                               case 0:
                                 // The committed frame supplies colors and stable IDs; geometry uses the previous frame.
-                                paths = planRefill(_this37.board, removed, [''], function () {
+                                paths = planRefill(_this45.board, removed, [''], function () {
                                   return 0;
                                 }, mineGravity);
                                 paths.board = frame.board.tiles.map(function (t) {
                                   return t.emblem;
                                 });
-                                _this37.board = paths.board;
-                                _this37.audio.playTrial('drop');
-                                _context13.next = 6;
-                                return _this37.drop(motion, removed, paths);
+                                _this45.board = paths.board;
+                                _this45.audio.playTrial('drop');
+                                _context17.next = 6;
+                                return _this45.drop(motion, removed, paths);
                               case 6:
                                 if (current()) {
-                                  _context13.next = 8;
+                                  _context17.next = 8;
                                   break;
                                 }
-                                return _context13.abrupt("return");
+                                return _context17.abrupt("return");
                               case 8:
                                 nextNodes = new Map();
-                                frame.board.tiles.forEach(function (_ref17, i) {
-                                  var id = _ref17.id;
+                                frame.board.tiles.forEach(function (_ref22, i) {
+                                  var id = _ref22.id;
                                   var previous = live.nodes.get(id);
-                                  if (previous && previous !== _this37.tiles[i]) throw Error('矿轨演出棋子身份不一致');
-                                  nextNodes.set(id, _this37.tiles[i]);
+                                  if (previous && previous !== _this45.tiles[i]) throw Error('矿轨演出棋子身份不一致');
+                                  nextNodes.set(id, _this45.tiles[i]);
                                 });
                                 live.nodes = nextNodes;
                               case 11:
                               case "end":
-                                return _context13.stop();
+                                return _context17.stop();
                             }
-                          }, _callee13);
+                          }, _callee17);
                         })));
                         waves.set(event.eventId, {
                           clear: clear,
@@ -11898,66 +12892,66 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                         });
                       }
                       if (event.type === 'CAST_STARTED' && event.sourceId) {
-                        var actor = _this37.heroes.get(event.sourceId);
-                        if (actor) enqueue('actor', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee14() {
-                          var home, cast, targets, target, color, _target$getChildByNam, _target$getChildByNam2, _actor$getChildByName, _actor$getChildByName2, ground, foot, contact;
-                          return _regeneratorRuntime().wrap(function _callee14$(_context14) {
-                            while (1) switch (_context14.prev = _context14.next) {
+                        var actor = _this45.heroes.get(event.sourceId);
+                        if (actor) enqueue('actor', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee18() {
+                          var home, cast, targets, target, color, _target$getChildByNam, _target$getChildByNam2, _actor$getChildByName3, _actor$getChildByName4, ground, foot, contact;
+                          return _regeneratorRuntime().wrap(function _callee18$(_context18) {
+                            while (1) switch (_context18.prev = _context18.next) {
                               case 0:
                                 home = actor.position.clone();
                                 cast = event.payload;
-                                if (cast.name) void _this37.skillCallout(motion, cast.name, home, cast.tier === 'advanced');
+                                if (cast.name) void _this45.skillCallout(motion, cast.name, home, cast.tier === 'advanced');
                                 targets = cast.targets.flatMap(function (id) {
-                                  var target = _this37.enemyNodes[Number(id.split(':')[1])];
+                                  var target = _this45.enemyNodes[Number(id.split(':')[1])];
                                   return target != null && target.active ? [target] : [];
                                 });
                                 target = targets[0];
                                 clearFocus();
                                 attackTier = cast.tier;
-                                releaseFocus = _this37.focusCombat(motion, [].concat(targets, [actor]));
-                                if (cast.tier || cast.kind !== 'attack') _this37.audio.play('charge');
+                                releaseFocus = _this45.focusCombat(motion, [].concat(targets, [actor]));
+                                if (cast.tier || cast.kind !== 'attack') _this45.audio.play('charge');
                                 if (!(cast.tier && !motion.reduced)) {
-                                  _context14.next = 12;
+                                  _context18.next = 12;
                                   break;
                                 }
-                                _context14.next = 12;
-                                return _this37.castSkillEffect(motion, home, cast.tier === 'advanced');
+                                _context18.next = 12;
+                                return _this45.castSkillEffect(motion, home, cast.tier === 'advanced');
                               case 12:
                                 if (current()) {
-                                  _context14.next = 14;
+                                  _context18.next = 14;
                                   break;
                                 }
-                                return _context14.abrupt("return");
+                                return _context18.abrupt("return");
                               case 14:
                                 if (!(cast.kind !== 'attack')) {
-                                  _context14.next = 20;
+                                  _context18.next = 20;
                                   break;
                                 }
                                 color = cast.kind === 'heal' ? '#81f4a4' : cast.kind === 'guard' ? '#8bcbff' : '#ffbc60';
-                                _context14.next = 18;
-                                return Promise.all([_this37.supportHalo(motion, home, color)].concat(_this37.burst(motion, home.x, home.y, color, 6)));
+                                _context18.next = 18;
+                                return Promise.all([_this45.supportHalo(motion, home, color)].concat(_this45.burst(motion, home.x, home.y, color, 6)));
                               case 18:
-                                _context14.next = 32;
+                                _context18.next = 32;
                                 break;
                               case 20:
                                 if (!(target && (cast.skill === 'm' || cast.skill === 'stone'))) {
-                                  _context14.next = 25;
+                                  _context18.next = 25;
                                   break;
                                 }
-                                _context14.next = 23;
-                                return _this37.flyProjectile(motion, cast.skill, home, target.position.clone());
+                                _context18.next = 23;
+                                return _this45.flyProjectile(motion, cast.skill, home, target.position.clone());
                               case 23:
-                                _context14.next = 32;
+                                _context18.next = 32;
                                 break;
                               case 25:
                                 if (!target) {
-                                  _context14.next = 32;
+                                  _context18.next = 32;
                                   break;
                                 }
                                 ground = target.position.y + ((_target$getChildByNam = (_target$getChildByNam2 = target.getChildByName('脚底投影')) == null ? void 0 : _target$getChildByNam2.position.y) != null ? _target$getChildByNam : -34);
-                                foot = (_actor$getChildByName = (_actor$getChildByName2 = actor.getChildByName('脚底投影')) == null ? void 0 : _actor$getChildByName2.position.y) != null ? _actor$getChildByName : -34;
+                                foot = (_actor$getChildByName3 = (_actor$getChildByName4 = actor.getChildByName('脚底投影')) == null ? void 0 : _actor$getChildByName4.position.y) != null ? _actor$getChildByName3 : -34;
                                 contact = new Vec3(target.position.x - 36, ground - foot, 0);
-                                _context14.next = 31;
+                                _context18.next = 31;
                                 return motion.play(tween(actor).to(motion.duration(.105), {
                                   position: contact
                                 }));
@@ -11969,16 +12963,16 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                                 }));
                               case 32:
                               case "end":
-                                return _context14.stop();
+                                return _context18.stop();
                             }
-                          }, _callee14);
+                          }, _callee18);
                         })));
                       }
-                      if (event.type === 'CAST_COMPLETED') enqueue('actor', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee15() {
-                        return _regeneratorRuntime().wrap(function _callee15$(_context15) {
-                          while (1) switch (_context15.prev = _context15.next) {
+                      if (event.type === 'CAST_COMPLETED') enqueue('actor', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee19() {
+                        return _regeneratorRuntime().wrap(function _callee19$(_context19) {
+                          while (1) switch (_context19.prev = _context19.next) {
                             case 0:
-                              _context15.next = 2;
+                              _context19.next = 2;
                               return returnAnimation;
                             case 2:
                               returnAnimation = undefined;
@@ -11986,41 +12980,41 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                               attackTier = undefined;
                             case 5:
                             case "end":
-                              return _context15.stop();
+                              return _context19.stop();
                           }
-                        }, _callee15);
+                        }, _callee19);
                       })));
                       if (event.type === 'ACTION_OPPORTUNITY' && (_event$sourceId = event.sourceId) != null && _event$sourceId.startsWith('enemy:') && !snap.events.some(function (e) {
                         return e.parentEventId === event.eventId && e.type === 'ACTION_SKIPPED';
                       })) {
                         var _index9 = Number(event.sourceId.split(':')[1]);
-                        enqueue('actor', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee16() {
-                          var node, home, art, _this37$heroes$values, _this37$heroes$values2;
-                          return _regeneratorRuntime().wrap(function _callee16$(_context16) {
-                            while (1) switch (_context16.prev = _context16.next) {
+                        enqueue('actor', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee20() {
+                          var node, home, art, _this45$heroes$values, _this45$heroes$values2;
+                          return _regeneratorRuntime().wrap(function _callee20$(_context20) {
+                            while (1) switch (_context20.prev = _context20.next) {
                               case 0:
-                                node = _this37.enemyNodes[_index9];
+                                node = _this45.enemyNodes[_index9];
                                 if (node) {
-                                  _context16.next = 3;
+                                  _context20.next = 3;
                                   break;
                                 }
-                                return _context16.abrupt("return");
+                                return _context20.abrupt("return");
                               case 3:
                                 home = node.position.clone();
                                 clearFocus();
-                                releaseFocus = _this37.focusCombat(motion, [].concat(Array.from(_this37.heroes.values()), [node]));
-                                art = _this37.foes[_index9].art;
+                                releaseFocus = _this45.focusCombat(motion, [].concat(Array.from(_this45.heroes.values()), [node]));
+                                art = _this45.foes[_index9].art;
                                 if (!(art === 'wizard' || art === 'vine')) {
-                                  _context16.next = 12;
+                                  _context20.next = 12;
                                   break;
                                 }
-                                _context16.next = 10;
-                                return _this37.flyProjectile(motion, art === 'wizard' ? 'm' : 'stone', home, (_this37$heroes$values = (_this37$heroes$values2 = _this37.heroes.values().next().value) == null ? void 0 : _this37$heroes$values2.position) != null ? _this37$heroes$values : new Vec3(-100, 240, 0));
+                                _context20.next = 10;
+                                return _this45.flyProjectile(motion, art === 'wizard' ? 'm' : 'stone', home, (_this45$heroes$values = (_this45$heroes$values2 = _this45.heroes.values().next().value) == null ? void 0 : _this45$heroes$values2.position) != null ? _this45$heroes$values : new Vec3(-100, 240, 0));
                               case 10:
-                                _context16.next = 14;
+                                _context20.next = 14;
                                 break;
                               case 12:
-                                _context16.next = 14;
+                                _context20.next = 14;
                                 return motion.play(tween(node).to(motion.duration(.14), {
                                   position: home.clone().add(new Vec3(-27, 0, 0))
                                 }).to(motion.duration(.17), {
@@ -12028,105 +13022,105 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                                 }));
                               case 14:
                               case "end":
-                                return _context16.stop();
+                                return _context20.stop();
                             }
-                          }, _callee16);
+                          }, _callee20);
                         })));
                       }
                       if (event.type === 'HEAL_APPLIED' || event.type === 'DP_RESTORED' || event.type === 'ENEMY_AGGREGATE_RESOLVED') {
                         var meters = event.payload;
-                        enqueue('actor', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee17() {
+                        enqueue('actor', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee21() {
                           var _meters$amount, _meters$amount2;
                           var _meters$remainingHP, _meters$remainingDP, _meters$lost, lost, _meters$absorbed, absorbed;
-                          return _regeneratorRuntime().wrap(function _callee17$(_context17) {
-                            while (1) switch (_context17.prev = _context17.next) {
+                          return _regeneratorRuntime().wrap(function _callee21$(_context21) {
+                            while (1) switch (_context21.prev = _context21.next) {
                               case 0:
-                                if (event.type === 'HEAL_APPLIED') _this37.hp = Math.min(_this37.maxHP, _this37.hp + ((_meters$amount = meters.amount) != null ? _meters$amount : 0));else if (event.type === 'DP_RESTORED') _this37.dp = Math.min(_this37.maxDP, _this37.dp + ((_meters$amount2 = meters.amount) != null ? _meters$amount2 : 0));else {
-                                  _this37.hp = (_meters$remainingHP = meters.remainingHP) != null ? _meters$remainingHP : _this37.hp;
-                                  _this37.dp = (_meters$remainingDP = meters.remainingDP) != null ? _meters$remainingDP : _this37.dp;
+                                if (event.type === 'HEAL_APPLIED') _this45.hp = Math.min(_this45.maxHP, _this45.hp + ((_meters$amount = meters.amount) != null ? _meters$amount : 0));else if (event.type === 'DP_RESTORED') _this45.dp = Math.min(_this45.maxDP, _this45.dp + ((_meters$amount2 = meters.amount) != null ? _meters$amount2 : 0));else {
+                                  _this45.hp = (_meters$remainingHP = meters.remainingHP) != null ? _meters$remainingHP : _this45.hp;
+                                  _this45.dp = (_meters$remainingDP = meters.remainingDP) != null ? _meters$remainingDP : _this45.dp;
                                 }
-                                _this37.updateHUD();
+                                _this45.updateHUD();
                                 if (!(event.type === 'ENEMY_AGGREGATE_RESOLVED')) {
-                                  _context17.next = 9;
+                                  _context21.next = 9;
                                   break;
                                 }
                                 _meters$lost = meters.lost, lost = _meters$lost === void 0 ? 0 : _meters$lost, _meters$absorbed = meters.absorbed, absorbed = _meters$absorbed === void 0 ? 0 : _meters$absorbed;
                                 if (!(lost || absorbed)) {
-                                  _context17.next = 8;
+                                  _context21.next = 8;
                                   break;
                                 }
-                                _this37.audio.play('hurt');
-                                _context17.next = 8;
-                                return Promise.all([_this37.combatPopup(motion, [lost && '−' + lost + ' HP', absorbed && '−' + absorbed + ' DP'].filter(Boolean).join(' · '), -100, 283, '#ffaaa2')].concat(Array.from(_this37.heroes.values(), function (hero) {
-                                  return _this37.hitReaction(motion, hero);
-                                }), [lost && _this37.hp <= _this37.maxHP * .30 ? _this37.lowHealthFlash(motion) : undefined]));
+                                _this45.audio.play('hurt');
+                                _context21.next = 8;
+                                return Promise.all([_this45.combatPopup(motion, [lost && '−' + lost + ' HP', absorbed && '−' + absorbed + ' DP'].filter(Boolean).join(' · '), -100, 283, '#ffaaa2')].concat(Array.from(_this45.heroes.values(), function (hero) {
+                                  return _this45.hitReaction(motion, hero);
+                                }), [lost && _this45.hp <= _this45.maxHP * .30 ? _this45.lowHealthFlash(motion) : undefined]));
                               case 8:
                                 clearFocus();
                               case 9:
                               case "end":
-                                return _context17.stop();
+                                return _context21.stop();
                             }
-                          }, _callee17);
+                          }, _callee21);
                         })));
                       }
                       if (event.type === 'HIT_RESOLVED' && (_event$targetId = event.targetId) != null && _event$targetId.startsWith('enemy:')) {
                         var _index10 = Number(event.targetId.split(':')[1]);
                         var hit = event.payload;
-                        enqueue('actor', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee18() {
+                        enqueue('actor', event, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee22() {
                           var node, home, fallen, effects, _node$getChildByName$, _node$getChildByName2;
-                          return _regeneratorRuntime().wrap(function _callee18$(_context18) {
-                            while (1) switch (_context18.prev = _context18.next) {
+                          return _regeneratorRuntime().wrap(function _callee22$(_context22) {
+                            while (1) switch (_context22.prev = _context22.next) {
                               case 0:
-                                _this37.enemies[_index10] = Math.max(0, _this37.enemies[_index10] - hit.lost);
-                                _this37.updateHUD();
-                                node = _this37.enemyNodes[_index10];
+                                _this45.enemies[_index10] = Math.max(0, _this45.enemies[_index10] - hit.lost);
+                                _this45.updateHUD();
+                                node = _this45.enemyNodes[_index10];
                                 if (node) {
-                                  _context18.next = 5;
+                                  _context22.next = 5;
                                   break;
                                 }
-                                return _context18.abrupt("return");
+                                return _context22.abrupt("return");
                               case 5:
                                 home = node.position.clone();
-                                fallen = _this37.enemies[_index10] === 0;
-                                _this37.audio.play('hit');
-                                effects = [_this37.hitReaction(motion, node), _this37.combatPopup(motion, '−' + hit.lost, home.x, home.y + 51, attackTier === 'advanced' ? '#ffd66b' : '#ffe7b0', attackTier === 'advanced' ? 38 : attackTier ? 32 : 27), motion.play(tween(node).to(motion.duration(.065), {
+                                fallen = _this45.enemies[_index10] === 0;
+                                _this45.audio.play('hit');
+                                effects = [_this45.hitReaction(motion, node), _this45.combatPopup(motion, '−' + hit.lost, home.x, home.y + 51, attackTier === 'advanced' ? '#ffd66b' : '#ffe7b0', attackTier === 'advanced' ? 38 : attackTier ? 32 : 27), motion.play(tween(node).to(motion.duration(.065), {
                                   position: home.clone().add(new Vec3(11, 0, 0))
                                 }).to(motion.duration(.10), {
                                   position: home
-                                }))].concat(_this37.burst(motion, home.x, home.y, _this37.foes[_index10].tags.includes('armor') ? '#ffde86' : event.sourceId === 'm' ? '#d4a6ff' : '#ffb784', 6));
+                                }))].concat(_this45.burst(motion, home.x, home.y, _this45.foes[_index10].tags.includes('armor') ? '#ffde86' : event.sourceId === 'm' ? '#d4a6ff' : '#ffb784', 6));
                                 if (fallen) {
-                                  _this37.lastFallen = {
+                                  _this45.lastFallen = {
                                     origin: home,
                                     ground: home.y + ((_node$getChildByName$ = (_node$getChildByName2 = node.getChildByName('脚底投影')) == null ? void 0 : _node$getChildByName2.position.y) != null ? _node$getChildByName$ : -34)
                                   };
-                                  effects.push(_this37.fadeActor(motion, node), _this37.soulRise(motion, home));
+                                  effects.push(_this45.fadeActor(motion, node), _this45.soulRise(motion, home));
                                 }
-                                _context18.next = 12;
+                                _context22.next = 12;
                                 return Promise.all(effects);
                               case 12:
                               case "end":
-                                return _context18.stop();
+                                return _context22.stop();
                             }
-                          }, _callee18);
+                          }, _callee22);
                         })));
                       }
                     };
-                    for (var _iterator20 = _createForOfIteratorHelperLoose(snap.events.slice(cursor)), _step20; !(_step20 = _iterator20()).done;) {
-                      _loop5();
+                    for (var _iterator26 = _createForOfIteratorHelperLoose(snap.events.slice(cursor)), _step26; !(_step26 = _iterator26()).done;) {
+                      _loop6();
                     }
                     cursor = snap.events.length;
                   };
-                  _context19.prev = 26;
+                  _context23.prev = 26;
                   ticket = core.submit({
                     swap: 'move'
                   });
                   publish();
                 case 29:
                   if (!(ticket && current())) {
-                    _context19.next = 44;
+                    _context23.next = 44;
                     break;
                   }
-                  _context19.next = 32;
+                  _context23.next = 32;
                   return session.resolve(ticket, _extends({}, ticket.wave === 1 ? {
                     swap: [a, b]
                   } : {}, {
@@ -12134,101 +13128,101 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     gravity: 'mine'
                   }));
                 case 32:
-                  result = _context19.sent;
+                  result = _context23.sent;
                   if (current()) {
-                    _context19.next = 35;
+                    _context23.next = 35;
                     break;
                   }
-                  return _context19.abrupt("return");
+                  return _context23.abrupt("return");
                 case 35:
                   publish();
                   if (result.ok) {
-                    _context19.next = 38;
+                    _context23.next = 38;
                     break;
                   }
                   throw Error(String((_reason = (_live$journal$at = live.journal.at(-1)) == null || (_live$journal$at = _live$journal$at.payload) == null ? void 0 : _live$journal$at.reason) != null ? _reason : '棋盘请求失败；请查看事件记录'));
                 case 38:
                   ticket = result.next;
                   if (!ticket) {
-                    _context19.next = 42;
+                    _context23.next = 42;
                     break;
                   }
-                  _context19.next = 42;
+                  _context23.next = 42;
                   return new Promise(function (resolve) {
                     return requestAnimationFrame(function () {
                       return resolve();
                     });
                   });
                 case 42:
-                  _context19.next = 29;
+                  _context23.next = 29;
                   break;
                 case 44:
-                  _context19.next = 46;
+                  _context23.next = 46;
                   return swapView;
                 case 46:
                   if (current()) {
-                    _context19.next = 48;
+                    _context23.next = 48;
                     break;
                   }
-                  return _context19.abrupt("return");
+                  return _context23.abrupt("return");
                 case 48:
-                  _iterator22 = _createForOfIteratorHelperLoose(waves.values());
+                  _iterator28 = _createForOfIteratorHelperLoose(waves.values());
                 case 49:
-                  if ((_step22 = _iterator22()).done) {
-                    _context19.next = 66;
+                  if ((_step28 = _iterator28()).done) {
+                    _context23.next = 66;
                     break;
                   }
-                  wave = _step22.value;
-                  _context19.next = 53;
+                  wave = _step28.value;
+                  _context23.next = 53;
                   return wave.clear();
                 case 53:
-                  _iterator24 = _createForOfIteratorHelperLoose(wave.actors);
+                  _iterator30 = _createForOfIteratorHelperLoose(wave.actors);
                 case 54:
-                  if ((_step24 = _iterator24()).done) {
-                    _context19.next = 60;
+                  if ((_step30 = _iterator30()).done) {
+                    _context23.next = 60;
                     break;
                   }
-                  _play = _step24.value;
-                  _context19.next = 58;
+                  _play = _step30.value;
+                  _context23.next = 58;
                   return _play();
                 case 58:
-                  _context19.next = 54;
+                  _context23.next = 54;
                   break;
                 case 60:
-                  _context19.next = 62;
+                  _context23.next = 62;
                   return wave.refill();
                 case 62:
                   if (current()) {
-                    _context19.next = 64;
+                    _context23.next = 64;
                     break;
                   }
-                  return _context19.abrupt("return");
+                  return _context23.abrupt("return");
                 case 64:
-                  _context19.next = 49;
+                  _context23.next = 49;
                   break;
                 case 66:
-                  _i7 = 0, _tail = tail;
+                  _i10 = 0, _tail = tail;
                 case 67:
-                  if (!(_i7 < _tail.length)) {
-                    _context19.next = 74;
+                  if (!(_i10 < _tail.length)) {
+                    _context23.next = 74;
                     break;
                   }
-                  play = _tail[_i7];
-                  _context19.next = 71;
+                  play = _tail[_i10];
+                  _context23.next = 71;
                   return play();
                 case 71:
-                  _i7++;
-                  _context19.next = 67;
+                  _i10++;
+                  _context23.next = 67;
                   break;
                 case 74:
                   if (current()) {
-                    _context19.next = 76;
+                    _context23.next = 76;
                     break;
                   }
-                  return _context19.abrupt("return");
+                  return _context23.abrupt("return");
                 case 76:
-                  for (_iterator23 = _createForOfIteratorHelperLoose(live.journal); !(_step23 = _iterator23()).done;) {
-                    event = _step23.value;
+                  for (_iterator29 = _createForOfIteratorHelperLoose(live.journal); !(_step29 = _iterator29()).done;) {
+                    event = _step29.value;
                     core.acknowledgePresentation(event.eventId);
                   }
                   snapshot = core.snapshot();
@@ -12247,35 +13241,35 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     this.setBattleStatus('首房战斗已结束');
                     if (snapshot.result.outcome === 'win') this.commitMineFirstVictory(live, this.dungeon, this.dungeon.room);else this.audio.play('defeat');
                   } else this.resumeBattleInput('轮到玩家，交换相邻纹章');
-                  _context19.next = 96;
+                  _context23.next = 96;
                   break;
                 case 86:
-                  _context19.prev = 86;
-                  _context19.t0 = _context19["catch"](26);
+                  _context23.prev = 86;
+                  _context23.t0 = _context23["catch"](26);
                   if (!(this.stage4A !== live || motion.cancelled)) {
-                    _context19.next = 90;
+                    _context23.next = 90;
                     break;
                   }
-                  return _context19.abrupt("return");
+                  return _context23.abrupt("return");
                 case 90:
-                  live.error = String(_context19.t0);
+                  live.error = String(_context23.t0);
                   session.cancel('stage4a-failed');
                   motion.cancel();
-                  _context19.next = 95;
+                  _context23.next = 95;
                   return Promise.allSettled([swapView]);
                 case 95:
                   if (this.stage4A === live) this.setBattleStatus('验证战斗已阻断 · 可撤离');
                 case 96:
-                  _context19.prev = 96;
+                  _context23.prev = 96;
                   clearFocus();
-                  return _context19.finish(96);
+                  return _context23.finish(96);
                 case 99:
                 case "end":
-                  return _context19.stop();
+                  return _context23.stop();
               }
-            }, _callee19, this, [[26, 86, 96, 99]]);
+            }, _callee23, this, [[26, 86, 96, 99]]);
           }));
-          function stage4ASwap(_x12, _x13, _x14) {
+          function stage4ASwap(_x21, _x22, _x23) {
             return _stage4ASwap.apply(this, arguments);
           }
           return stage4ASwap;
@@ -12283,7 +13277,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         _proto.commitMineFirstVictory = function commitMineFirstVictory(live, director, room) {
           var _snapshot$result,
             _snapshot$state$deriv,
-            _this38 = this,
+            _this46 = this,
             _this$lastFallen;
           if (this.stage4A !== live || this.stage4AGeneration !== live.generation || this.dungeon !== director || director.room !== room || director.depth !== 0 || !this.wantsStage4A() || !live.eligible || live.error || this.mineRecovery) return;
           var snapshot = live.core.snapshot();
@@ -12296,8 +13290,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var board = snapshot.state.board;
           var gate = this.saveGate;
           var raw = gate == null ? void 0 : gate.read();
-          if (((_snapshot$result = snapshot.result) == null ? void 0 : _snapshot$result.outcome) !== 'win' || snapshot.result.roomId !== 'mine:0' || ends.length !== 1 || ends[0].battleId !== snapshot.result.battleId || !settled || settled.sequence >= ends[0].sequence || snapshot.state.producers.length || snapshot.state.partyQueue.length || snapshot.state.delayed.length || snapshot.state.personal.some(function (_ref23) {
-            var queue = _ref23[1];
+          if (((_snapshot$result = snapshot.result) == null ? void 0 : _snapshot$result.outcome) !== 'win' || snapshot.result.roomId !== 'mine:0' || ends.length !== 1 || ends[0].battleId !== snapshot.result.battleId || !settled || settled.sequence >= ends[0].sequence || snapshot.state.producers.length || snapshot.state.partyQueue.length || snapshot.state.delayed.length || snapshot.state.personal.some(function (_ref28) {
+            var queue = _ref28[1];
             return queue.length;
           }) || (_snapshot$state$deriv = snapshot.state.derivation) != null && _snapshot$state$deriv.requests.length || snapshot.events.some(function (e) {
             return live.core.frame(e.eventId);
@@ -12363,10 +13357,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           if (result === 'write-failed') {
             if (!live.retrySave) live.retrySave = this.button('重试保存首房结果', -325, function () {
               var _live$retrySave;
-              if (_this38.stage4A !== live) return;
+              if (_this46.stage4A !== live) return;
               (_live$retrySave = live.retrySave) == null || _live$retrySave.destroy();
               live.retrySave = undefined;
-              _this38.commitMineFirstVictory(live, director, room);
+              _this46.commitMineFirstVictory(live, director, room);
             });
             this.setBattleStatus('首房奖励尚未保存');
             return;
@@ -12392,56 +13386,56 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           };
           this.audio.play('victory');
           var reveal = /*#__PURE__*/function () {
-            var _ref24 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee20() {
-              return _regeneratorRuntime().wrap(function _callee20$(_context20) {
-                while (1) switch (_context20.prev = _context20.next) {
+            var _ref29 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee24() {
+              return _regeneratorRuntime().wrap(function _callee24$(_context24) {
+                while (1) switch (_context24.prev = _context24.next) {
                   case 0:
-                    _context20.prev = 0;
-                    _context20.next = 3;
-                    return _this38.animateCoins(motion, next.run.pending.coins, _this38.coinText, drop.origin, drop.ground);
+                    _context24.prev = 0;
+                    _context24.next = 3;
+                    return _this46.animateCoins(motion, next.run.pending.coins, _this46.coinText, drop.origin, drop.ground);
                   case 3:
-                    _context20.next = 9;
+                    _context24.next = 9;
                     break;
                   case 5:
-                    _context20.prev = 5;
-                    _context20.t0 = _context20["catch"](0);
-                    if (_this38.ui === root) _this38.showRecoveryStop('首房已保存，场景需重新加载。');
-                    return _context20.abrupt("return");
+                    _context24.prev = 5;
+                    _context24.t0 = _context24["catch"](0);
+                    if (_this46.ui === root) _this46.showRecoveryStop('首房已保存，场景需重新加载。');
+                    return _context24.abrupt("return");
                   case 9:
-                    if (!(_this38.ui !== root || _this38.stage4A !== live || motion.cancelled)) {
-                      _context20.next = 11;
+                    if (!(_this46.ui !== root || _this46.stage4A !== live || motion.cancelled)) {
+                      _context24.next = 11;
                       break;
                     }
-                    return _context20.abrupt("return");
+                    return _context24.abrupt("return");
                   case 11:
-                    _this38.stopStage4A('first room committed');
+                    _this46.stopStage4A('first room committed');
                     try {
-                      _this38.projectMineRecovery(director, next, true);
+                      _this46.projectMineRecovery(director, next, true);
                     } catch (_unused8) {
-                      _this38.showRecoveryStop('首房已保存，场景需重新加载。');
+                      _this46.showRecoveryStop('首房已保存，场景需重新加载。');
                     }
                   case 13:
                   case "end":
-                    return _context20.stop();
+                    return _context24.stop();
                 }
-              }, _callee20, null, [[0, 5]]);
+              }, _callee24, null, [[0, 5]]);
             }));
             return function reveal() {
-              return _ref24.apply(this, arguments);
+              return _ref29.apply(this, arguments);
             };
           }();
           void reveal();
         };
         _proto.tap = /*#__PURE__*/function () {
-          var _tap = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee21(i, fromAuto, preview) {
-            var _this39 = this,
+          var _tap = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee25(i, fromAuto, preview) {
+            var _this47 = this,
               _waveSpec$rescueCells,
-              _this$trial14,
-              _this$trial15,
-              _this$trial16;
-            var motion, a, exchange, fusion, originalBoard, groups, _this$boardFx3, _ref25, wave, challengeTurnFinished, _loop6, _ret4, director, room, waveSpec, rescued;
-            return _regeneratorRuntime().wrap(function _callee21$(_context22) {
-              while (1) switch (_context22.prev = _context22.next) {
+              _this$trial17,
+              _this$trial18,
+              _this$trial19;
+            var motion, a, exchange, fusion, originalBoard, groups, _this$boardFx4, _ref30, wave, challengeTurnFinished, _loop7, _ret4, director, room, waveSpec, rescued;
+            return _regeneratorRuntime().wrap(function _callee25$(_context26) {
+              while (1) switch (_context26.prev = _context26.next) {
                 case 0:
                   if (fromAuto === void 0) {
                     fromAuto = false;
@@ -12450,10 +13444,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     preview = false;
                   }
                   if (!(i < 0 || i >= this.board.length || !playableCell(this.board[i]) || this.busy || this.battleModal || !fromAuto && !this.canSelect(i))) {
-                    _context22.next = 4;
+                    _context26.next = 4;
                     break;
                   }
-                  return _context22.abrupt("return");
+                  return _context26.abrupt("return");
                 case 4:
                   this.clearIdleHint();
                   motion = this.motion;
@@ -12461,20 +13455,20 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   this.selected = i === a ? -1 : i;
                   exchange = previewExchange(this.board, a, i, this.exchangeRules());
                   if (exchange) {
-                    _context22.next = 12;
+                    _context26.next = 12;
                     break;
                   }
                   this.drawBoard();
-                  return _context22.abrupt("return");
+                  return _context26.abrupt("return");
                 case 12:
                   if (!this.stage4A) {
-                    _context22.next = 16;
+                    _context26.next = 16;
                     break;
                   }
-                  _context22.next = 15;
+                  _context26.next = 15;
                   return this.stage4ASwap(a, i, preview);
                 case 15:
-                  return _context22.abrupt("return");
+                  return _context26.abrupt("return");
                 case 16:
                   if (this.boardFx) this.audio.playTrial('swap');else this.audio.play('swap');
                   this.busy = true;
@@ -12487,33 +13481,33 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   groups = exchange.groups;
                   this.drawBoard();
                   if (!(!preview || groups.length || fusion)) {
-                    _context22.next = 29;
+                    _context26.next = 29;
                     break;
                   }
-                  _context22.next = 29;
+                  _context26.next = 29;
                   return Promise.all([this.moveTile(motion, this.tiles[a], i, preview ? .06 : .12), this.moveTile(motion, this.tiles[i], a, preview ? .06 : .12)]);
                 case 29:
                   if (!motion.cancelled) {
-                    _context22.next = 31;
+                    _context26.next = 31;
                     break;
                   }
-                  return _context22.abrupt("return");
+                  return _context26.abrupt("return");
                 case 31:
                   if (exchange.valid) {
-                    _context22.next = 38;
+                    _context26.next = 38;
                     break;
                   }
                   this.board = originalBoard;
                   if (this.boardFx) this.audio.playTrial('invalid');
-                  _context22.next = 36;
-                  return Promise.all([this.moveTile(motion, this.tiles[a], a, .12), this.moveTile(motion, this.tiles[i], i, .12), (_this$boardFx3 = this.boardFx) == null ? void 0 : _this$boardFx3.reject(motion, [this.cells[a].position, this.cells[i].position])]);
+                  _context26.next = 36;
+                  return Promise.all([this.moveTile(motion, this.tiles[a], a, .12), this.moveTile(motion, this.tiles[i], i, .12), (_this$boardFx4 = this.boardFx) == null ? void 0 : _this$boardFx4.reject(motion, [this.cells[a].position, this.cells[i].position])]);
                 case 36:
                   if (!motion.cancelled) this.resumeBattleInput('没有成组，换位已还原');
-                  return _context22.abrupt("return");
+                  return _context26.abrupt("return");
                 case 38:
-                  _ref25 = [this.tiles[i], this.tiles[a]];
-                  this.tiles[a] = _ref25[0];
-                  this.tiles[i] = _ref25[1];
+                  _ref30 = [this.tiles[i], this.tiles[a]];
+                  this.tiles[a] = _ref30[0];
+                  this.tiles[i] = _ref30[1];
                   if (this.trial) this.trial.moves++;
                   if (this.challenge) {
                     this.challenge.moves++;
@@ -12522,149 +13516,149 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   if (this.phase === 'wolves') this.firstSwap = false;
                   this.waveAudit = [];
                   wave = 0, challengeTurnFinished = false;
-                  _loop6 = /*#__PURE__*/_regeneratorRuntime().mark(function _loop6() {
-                    var _this39$mineRecovery;
+                  _loop7 = /*#__PURE__*/_regeneratorRuntime().mark(function _loop7() {
+                    var _this47$mineRecovery;
                     var challenge, result, order, previous;
-                    return _regeneratorRuntime().wrap(function _loop6$(_context21) {
-                      while (1) switch (_context21.prev = _context21.next) {
+                    return _regeneratorRuntime().wrap(function _loop7$(_context25) {
+                      while (1) switch (_context25.prev = _context25.next) {
                         case 0:
                           if (!(groups.length || fusion && wave === 0)) {
-                            _context21.next = 9;
+                            _context25.next = 9;
                             break;
                           }
-                          _context21.next = 3;
-                          return _this39.resolveBoardWave(motion, groups, wave, wave === 0 ? [i, a] : [], fusion && wave === 0 ? [a, i] : []);
+                          _context25.next = 3;
+                          return _this47.resolveBoardWave(motion, groups, wave, wave === 0 ? [i, a] : [], fusion && wave === 0 ? [a, i] : []);
                         case 3:
-                          if (_context21.sent) {
-                            _context21.next = 5;
+                          if (_context25.sent) {
+                            _context25.next = 5;
                             break;
                           }
-                          return _context21.abrupt("return", {
+                          return _context25.abrupt("return", {
                             v: void 0
                           });
                         case 5:
-                          groups = _this39.challengeMatches(_this39.board);
+                          groups = _this47.challengeMatches(_this47.board);
                           wave++;
-                          _context21.next = 0;
+                          _context25.next = 0;
                           break;
                         case 9:
-                          if (!_this39.challenge) {
-                            _context21.next = 23;
+                          if (!_this47.challenge) {
+                            _context25.next = 23;
                             break;
                           }
                           if (challengeTurnFinished) {
-                            _context21.next = 16;
+                            _context25.next = 16;
                             break;
                           }
                           challengeTurnFinished = true;
-                          _context21.next = 14;
-                          return _this39.finishChallengeTurn(motion);
+                          _context25.next = 14;
+                          return _this47.finishChallengeTurn(motion);
                         case 14:
                           if (!motion.cancelled) {
-                            _context21.next = 16;
+                            _context25.next = 16;
                             break;
                           }
-                          return _context21.abrupt("return", {
+                          return _context25.abrupt("return", {
                             v: void 0
                           });
                         case 16:
-                          challenge = _this39.challenge;
-                          if (!(challenge.success || challenge.exhausted || challenge.id === 'no-shuffle' && !_this39.legalMove())) {
-                            _context21.next = 23;
+                          challenge = _this47.challenge;
+                          if (!(challenge.success || challenge.exhausted || challenge.id === 'no-shuffle' && !_this47.legalMove())) {
+                            _context25.next = 23;
                             break;
                           }
                           result = challenge.success ? 'OBJECTIVE_COMPLETED' : challenge.exhausted ? 'BUDGET_EXHAUSTED' : 'NO_REGENERATION';
-                          _this39.logMechanism({
+                          _this47.logMechanism({
                             kind: result
                           });
-                          _context21.next = 22;
-                          return _this39.repeatTestEncounter(motion);
+                          _context25.next = 22;
+                          return _this47.repeatTestEncounter(motion);
                         case 22:
-                          return _context21.abrupt("return", {
+                          return _context25.abrupt("return", {
                             v: void 0
                           });
                         case 23:
-                          if (!_this39.legalMove()) {
-                            _context21.next = 25;
+                          if (!_this47.legalMove()) {
+                            _context25.next = 25;
                             break;
                           }
-                          return _context21.abrupt("return", 0);
+                          return _context25.abrupt("return", 0);
                         case 25:
-                          if (!(((_this39$mineRecovery = _this39.mineRecovery) == null ? void 0 : _this39$mineRecovery.state.mineRecovery.source) === 'formal')) {
-                            _context21.next = 28;
+                          if (!(((_this47$mineRecovery = _this47.mineRecovery) == null ? void 0 : _this47$mineRecovery.state.mineRecovery.source) === 'formal')) {
+                            _context25.next = 28;
                             break;
                           }
-                          _this39.stopLegacyMineBoard();
-                          return _context21.abrupt("return", {
+                          _this47.stopLegacyMineBoard();
+                          return _context25.abrupt("return", {
                             v: void 0
                           });
                         case 28:
-                          if (_this39.trial) _this39.audio.playTrial('shuffle');
-                          order = _this39.recoveryOrder();
+                          if (_this47.trial) _this47.audio.playTrial('shuffle');
+                          order = _this47.recoveryOrder();
                           if (order) {
-                            _context21.next = 33;
+                            _context25.next = 33;
                             break;
                           }
-                          _this39.setBattleStatus('无解恢复未找到保留身份的候选，已暂停');
-                          return _context21.abrupt("return", {
+                          _this47.setBattleStatus('无解恢复未找到保留身份的候选，已暂停');
+                          return _context25.abrupt("return", {
                             v: void 0
                           });
                         case 33:
-                          previous = _this39.tiles;
-                          _this39.board = order.map(function (i) {
-                            return _this39.board[i];
+                          previous = _this47.tiles;
+                          _this47.board = order.map(function (i) {
+                            return _this47.board[i];
                           });
-                          _this39.tiles = order.map(function (i) {
+                          _this47.tiles = order.map(function (i) {
                             return previous[i];
                           });
-                          _context21.next = 38;
-                          return Promise.all(_this39.tiles.map(function (tile, i) {
-                            return _this39.moveTile(motion, tile, i, .22);
+                          _context25.next = 38;
+                          return Promise.all(_this47.tiles.map(function (tile, i) {
+                            return _this47.moveTile(motion, tile, i, .22);
                           }));
                         case 38:
                           if (!motion.cancelled) {
-                            _context21.next = 40;
+                            _context25.next = 40;
                             break;
                           }
-                          return _context21.abrupt("return", {
+                          return _context25.abrupt("return", {
                             v: void 0
                           });
                         case 40:
-                          _context21.next = 42;
-                          return _this39.releaseMiners(motion);
+                          _context25.next = 42;
+                          return _this47.releaseMiners(motion);
                         case 42:
                           if (!motion.cancelled) {
-                            _context21.next = 44;
+                            _context25.next = 44;
                             break;
                           }
-                          return _context21.abrupt("return", {
+                          return _context25.abrupt("return", {
                             v: void 0
                           });
                         case 44:
-                          groups = _this39.challengeMatches(_this39.board);
+                          groups = _this47.challengeMatches(_this47.board);
                         case 45:
                         case "end":
-                          return _context21.stop();
+                          return _context25.stop();
                       }
-                    }, _loop6);
+                    }, _loop7);
                   });
                 case 47:
-                  return _context22.delegateYield(_loop6(), "t0", 48);
+                  return _context26.delegateYield(_loop7(), "t0", 48);
                 case 48:
-                  _ret4 = _context22.t0;
+                  _ret4 = _context26.t0;
                   if (!(_ret4 === 0)) {
-                    _context22.next = 51;
+                    _context26.next = 51;
                     break;
                   }
-                  return _context22.abrupt("break", 55);
+                  return _context26.abrupt("break", 55);
                 case 51:
                   if (!_ret4) {
-                    _context22.next = 53;
+                    _context26.next = 53;
                     break;
                   }
-                  return _context22.abrupt("return", _ret4.v);
+                  return _context26.abrupt("return", _ret4.v);
                 case 53:
-                  _context22.next = 47;
+                  _context26.next = 47;
                   break;
                 case 55:
                   director = this.dungeon;
@@ -12673,45 +13667,45 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   rescued = !!waveSpec && (!!((_waveSpec$rescueCells = waveSpec.rescueCells) != null && _waveSpec$rescueCells.length) && !this.rescueCells.size || !!waveSpec.delivery && this.rescuedMiners >= waveSpec.delivery.required);
                   if (!(this.enemies.every(function (hp) {
                     return hp <= 0;
-                  }) || rescued || ((_this$trial14 = this.trial) == null ? void 0 : _this$trial14.id) === 'terrain' && !this.terrain.size || ((_this$trial15 = this.trial) == null ? void 0 : _this$trial15.id) === 'rocks' && !this.rocks.size || ((_this$trial16 = this.trial) == null ? void 0 : _this$trial16.id) === 'jelly' && this.jelly.size === this.board.length)) {
-                    _context22.next = 64;
+                  }) || rescued || ((_this$trial17 = this.trial) == null ? void 0 : _this$trial17.id) === 'terrain' && !this.terrain.size || ((_this$trial18 = this.trial) == null ? void 0 : _this$trial18.id) === 'rocks' && !this.rocks.size || ((_this$trial19 = this.trial) == null ? void 0 : _this$trial19.id) === 'jelly' && this.jelly.size === this.board.length)) {
+                    _context26.next = 64;
                     break;
                   }
                   if (!(director && (room == null ? void 0 : room.kind) === 'battle')) {
-                    _context22.next = 63;
+                    _context26.next = 63;
                     break;
                   }
-                  _context22.next = 63;
+                  _context26.next = 63;
                   return this.finishWave(motion, director, room, rescued);
                 case 63:
-                  return _context22.abrupt("return");
+                  return _context26.abrupt("return");
                 case 64:
-                  _context22.next = 66;
+                  _context26.next = 66;
                   return this.enemyTurn(motion);
                 case 66:
                 case "end":
-                  return _context22.stop();
+                  return _context26.stop();
               }
-            }, _callee21, this);
+            }, _callee25, this);
           }));
-          function tap(_x15, _x16, _x17) {
+          function tap(_x24, _x25, _x26) {
             return _tap.apply(this, arguments);
           }
           return tap;
         }();
         _proto.finishDirectly = /*#__PURE__*/function () {
-          var _finishDirectly = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee22(room) {
-            var _this40 = this;
+          var _finishDirectly = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee26(room) {
+            var _this48 = this;
             var director, motion, deaths;
-            return _regeneratorRuntime().wrap(function _callee22$(_context23) {
-              while (1) switch (_context23.prev = _context23.next) {
+            return _regeneratorRuntime().wrap(function _callee26$(_context27) {
+              while (1) switch (_context27.prev = _context27.next) {
                 case 0:
                   director = this.dungeon, motion = this.motion;
                   if (!((director == null ? void 0 : director.room) !== room || this.busy || this.battlePhase !== 'input')) {
-                    _context23.next = 3;
+                    _context27.next = 3;
                     break;
                   }
-                  return _context23.abrupt("return");
+                  return _context27.abrupt("return");
                 case 3:
                   this.busy = true;
                   this.battlePhase = 'complete';
@@ -12722,110 +13716,110 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   if (this.phase === 'wolves') this.firstSwap = false;
                   deaths = [];
                   this.enemies.forEach(function (hp, index) {
-                    var _actor$getChildByName3, _actor$getChildByName4;
+                    var _actor$getChildByName5, _actor$getChildByName6;
                     if (hp <= 0) return;
-                    _this40.enemies[index] = 0;
-                    _this40.questEvent('kill', _this40.foes[index].art);
-                    var actor = _this40.enemyNodes[index],
+                    _this48.enemies[index] = 0;
+                    _this48.questEvent('kill', _this48.foes[index].art);
+                    var actor = _this48.enemyNodes[index],
                       home = actor.position.clone();
-                    _this40.lastFallen = {
+                    _this48.lastFallen = {
                       origin: home,
-                      ground: home.y + ((_actor$getChildByName3 = (_actor$getChildByName4 = actor.getChildByName('脚底投影')) == null ? void 0 : _actor$getChildByName4.position.y) != null ? _actor$getChildByName3 : -34)
+                      ground: home.y + ((_actor$getChildByName5 = (_actor$getChildByName6 = actor.getChildByName('脚底投影')) == null ? void 0 : _actor$getChildByName6.position.y) != null ? _actor$getChildByName5 : -34)
                     };
-                    deaths.push(_this40.fadeActor(motion, actor));
+                    deaths.push(_this48.fadeActor(motion, actor));
                   });
                   this.updateHUD();
-                  _context23.next = 15;
+                  _context27.next = 15;
                   return Promise.all(deaths);
                 case 15:
-                  _context23.t1 = !_context23.sent.every(Boolean);
-                  if (_context23.t1) {
-                    _context23.next = 18;
+                  _context27.t1 = !_context27.sent.every(Boolean);
+                  if (_context27.t1) {
+                    _context27.next = 18;
                     break;
                   }
-                  _context23.t1 = this.dungeon !== director;
+                  _context27.t1 = this.dungeon !== director;
                 case 18:
-                  _context23.t0 = _context23.t1;
-                  if (_context23.t0) {
-                    _context23.next = 21;
+                  _context27.t0 = _context27.t1;
+                  if (_context27.t0) {
+                    _context27.next = 21;
                     break;
                   }
-                  _context23.t0 = director.room !== room;
+                  _context27.t0 = director.room !== room;
                 case 21:
-                  if (!_context23.t0) {
-                    _context23.next = 23;
+                  if (!_context27.t0) {
+                    _context27.next = 23;
                     break;
                   }
-                  return _context23.abrupt("return");
+                  return _context27.abrupt("return");
                 case 23:
-                  _context23.next = 25;
+                  _context27.next = 25;
                   return this.finishWave(motion, director, room, false);
                 case 25:
                 case "end":
-                  return _context23.stop();
+                  return _context27.stop();
               }
-            }, _callee22, this);
+            }, _callee26, this);
           }));
-          function finishDirectly(_x18) {
+          function finishDirectly(_x27) {
             return _finishDirectly.apply(this, arguments);
           }
           return finishDirectly;
         }();
         _proto.finishWave = /*#__PURE__*/function () {
-          var _finishWave = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee23(motion, director, room, rescued) {
-            var _this$lastFallen2, _this$adventure3;
+          var _finishWave = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee27(motion, director, room, rescued) {
+            var _this$lastFallen2, _this$adventure4;
             var wave, drop, grant, _yield$Promise$all, played;
-            return _regeneratorRuntime().wrap(function _callee23$(_context24) {
-              while (1) switch (_context24.prev = _context24.next) {
+            return _regeneratorRuntime().wrap(function _callee27$(_context28) {
+              while (1) switch (_context28.prev = _context28.next) {
                 case 0:
                   if (!this.trial) {
-                    _context24.next = 4;
+                    _context28.next = 4;
                     break;
                   }
-                  _context24.next = 3;
+                  _context28.next = 3;
                   return this.repeatTestEncounter(motion);
                 case 3:
-                  return _context24.abrupt("return");
+                  return _context28.abrupt("return");
                 case 4:
                   wave = this.activeWave;
-                  _context24.t0 = !wave;
-                  if (_context24.t0) {
-                    _context24.next = 10;
+                  _context28.t0 = !wave;
+                  if (_context28.t0) {
+                    _context28.next = 10;
                     break;
                   }
-                  _context24.next = 9;
+                  _context28.next = 9;
                   return this.waitForBattleEnd(motion, director, room);
                 case 9:
-                  _context24.t0 = !_context24.sent;
+                  _context28.t0 = !_context28.sent;
                 case 10:
-                  if (!_context24.t0) {
-                    _context24.next = 12;
+                  if (!_context28.t0) {
+                    _context28.next = 12;
                     break;
                   }
-                  return _context24.abrupt("return");
+                  return _context28.abrupt("return");
                 case 12:
-                  _context24.t1 = wave.delivery;
-                  if (!_context24.t1) {
-                    _context24.next = 17;
+                  _context28.t1 = wave.delivery;
+                  if (!_context28.t1) {
+                    _context28.next = 17;
                     break;
                   }
-                  _context24.next = 16;
+                  _context28.next = 16;
                   return this.retireRoomMiners(motion);
                 case 16:
-                  _context24.t1 = !_context24.sent;
+                  _context28.t1 = !_context28.sent;
                 case 17:
-                  if (!_context24.t1) {
-                    _context24.next = 19;
+                  if (!_context28.t1) {
+                    _context28.next = 19;
                     break;
                   }
-                  return _context24.abrupt("return");
+                  return _context28.abrupt("return");
                 case 19:
                   if (!this.mineRecovery) {
-                    _context24.next = 22;
+                    _context28.next = 22;
                     break;
                   }
                   if (this.mineRecovery.state.mineRecovery.source === 'formal') this.commitLegacyMineVictory(director, room);else this.showRecoveryStop('测试快照的后继奖励未启用。');
-                  return _context24.abrupt("return");
+                  return _context28.abrupt("return");
                 case 22:
                   this.carryBattleBoard(director);
                   if (rescued) this.setBattleStatus('营救成功');
@@ -12833,111 +13827,111 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     origin: new Vec3(rescued ? 72 : 132, stageGrid.groundY + 30),
                     ground: stageGrid.groundY
                   };
-                  grant = planWaveReward((_this$adventure3 = this.adventure) == null ? void 0 : _this$adventure3.id, wave);
-                  _context24.next = 28;
+                  grant = planWaveReward((_this$adventure4 = this.adventure) == null ? void 0 : _this$adventure4.id, wave);
+                  _context28.next = 28;
                   return Promise.all([this.animateCoins(motion, grant.coins, this.coinText, drop.origin, drop.ground), this.showMaterials(motion, grant.loot, drop.origin)]);
                 case 28:
-                  _yield$Promise$all = _context24.sent;
+                  _yield$Promise$all = _context28.sent;
                   played = _yield$Promise$all[0];
                   if (played && !motion.cancelled && this.motion === motion && this.ui === this.battleRoot && this.activeWave === wave) this.victory(director, room, grant.coins);
                 case 31:
                 case "end":
-                  return _context24.stop();
+                  return _context28.stop();
               }
-            }, _callee23, this);
+            }, _callee27, this);
           }));
-          function finishWave(_x19, _x20, _x21, _x22) {
+          function finishWave(_x28, _x29, _x30, _x31) {
             return _finishWave.apply(this, arguments);
           }
           return finishWave;
         }();
         _proto.resolveBoardWave = /*#__PURE__*/function () {
-          var _resolveBoardWave = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee24(motion, groups, wave, preferred, fusion) {
-            var _this41 = this,
-              _this$boardFx4,
-              _this$trial17,
-              _this$boardFx5;
-            var plan, removed, _iterator25, _step25, _this$ui$getChildByNa4, _index11, commands, _iterator26, _step26, _step26$value, _index12, tier, original, reward, _iterator27, _step27, _step27$value, group, active, advancedCount, advanced, refill;
-            return _regeneratorRuntime().wrap(function _callee24$(_context25) {
-              while (1) switch (_context25.prev = _context25.next) {
+          var _resolveBoardWave = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee28(motion, groups, wave, preferred, fusion) {
+            var _this49 = this,
+              _this$boardFx5,
+              _this$trial20,
+              _this$boardFx6;
+            var plan, removed, _iterator31, _step31, _this$ui$getChildByNa5, _index11, commands, _iterator32, _step32, _step32$value, _index12, tier, original, reward, _iterator33, _step33, _step33$value, group, active, advancedCount, advanced, refill;
+            return _regeneratorRuntime().wrap(function _callee28$(_context29) {
+              while (1) switch (_context29.prev = _context29.next) {
                 case 0:
                   if (this.trial) this.trial.longestChain = Math.max(this.trial.longestChain, wave + 1);
                   this.setBattleStatus("\u7B2C " + (wave + 1) + " \u6B21\u8FDE\u9501 \xB7 " + groups.length + " \u7EC4\u6D88\u9664");
                   plan = planPlayableWave(groups, function (index) {
-                    return _this41.chargedTiles.get(_this41.tiles[index]);
+                    return _this49.chargedTiles.get(_this49.tiles[index]);
                   }, preferred);
                   removed = plan.removed;
                   if (this.boardFx) {
                     this.audio.playChain(wave);
                     if (plan.anchors.size) this.audio.playTrial('create');
                   } else this.audio.play('clear');
-                  for (_iterator25 = _createForOfIteratorHelperLoose(removed); !(_step25 = _iterator25()).done;) {
-                    _index11 = _step25.value;
-                    if (this.rescueCells["delete"](_index11)) (_this$ui$getChildByNa4 = this.ui.getChildByName('营救标记 ' + _index11)) == null || _this$ui$getChildByNa4.destroy();
+                  for (_iterator31 = _createForOfIteratorHelperLoose(removed); !(_step31 = _iterator31()).done;) {
+                    _index11 = _step31.value;
+                    if (this.rescueCells["delete"](_index11)) (_this$ui$getChildByNa5 = this.ui.getChildByName('营救标记 ' + _index11)) == null || _this$ui$getChildByNa5.destroy();
                   }
-                  _context25.next = 8;
-                  return Promise.all([this.flashTiles(motion, Array.from(plan.matched), removed, false), (_this$boardFx4 = this.boardFx) == null ? void 0 : _this$boardFx4.combo(motion, wave + 1, new Vec3(0, 80, 0))]);
+                  _context29.next = 8;
+                  return Promise.all([this.flashTiles(motion, Array.from(plan.matched), removed, false), (_this$boardFx5 = this.boardFx) == null ? void 0 : _this$boardFx5.combo(motion, wave + 1, new Vec3(0, 80, 0))]);
                 case 8:
                   if (!motion.cancelled) {
-                    _context25.next = 10;
+                    _context29.next = 10;
                     break;
                   }
-                  return _context25.abrupt("return", false);
+                  return _context29.abrupt("return", false);
                 case 10:
-                  _context25.t0 = ((_this$trial17 = this.trial) == null ? void 0 : _this$trial17.id) === 'terrain';
-                  if (!_context25.t0) {
-                    _context25.next = 15;
+                  _context29.t0 = ((_this$trial20 = this.trial) == null ? void 0 : _this$trial20.id) === 'terrain';
+                  if (!_context29.t0) {
+                    _context29.next = 15;
                     break;
                   }
-                  _context25.next = 14;
+                  _context29.next = 14;
                   return this.clearTestTerrain(motion, plan.matched, wave + 1);
                 case 14:
-                  _context25.t0 = !_context25.sent;
+                  _context29.t0 = !_context29.sent;
                 case 15:
-                  if (!_context25.t0) {
-                    _context25.next = 17;
+                  if (!_context29.t0) {
+                    _context29.next = 17;
                     break;
                   }
-                  return _context25.abrupt("return", false);
+                  return _context29.abrupt("return", false);
                 case 17:
-                  _context25.next = 19;
+                  _context29.next = 19;
                   return this.applyBoardMechanismWave(motion, plan);
                 case 19:
-                  if (_context25.sent) {
-                    _context25.next = 21;
+                  if (_context29.sent) {
+                    _context29.next = 21;
                     break;
                   }
-                  return _context25.abrupt("return", false);
+                  return _context29.abrupt("return", false);
                 case 21:
-                  _context25.t1 = this.challenge;
-                  if (!_context25.t1) {
-                    _context25.next = 26;
+                  _context29.t1 = this.challenge;
+                  if (!_context29.t1) {
+                    _context29.next = 26;
                     break;
                   }
-                  _context25.next = 25;
+                  _context29.next = 25;
                   return this.applyTestChallengeWave(motion, plan, wave + 1, fusion);
                 case 25:
-                  _context25.t1 = !_context25.sent;
+                  _context29.t1 = !_context29.sent;
                 case 26:
-                  if (!_context25.t1) {
-                    _context25.next = 28;
+                  if (!_context29.t1) {
+                    _context29.next = 28;
                     break;
                   }
-                  return _context25.abrupt("return", false);
+                  return _context29.abrupt("return", false);
                 case 28:
                   if (!plan.columns.size) {
-                    _context25.next = 32;
+                    _context29.next = 32;
                     break;
                   }
                   if (this.trial) this.audio.playTrial('charge');else this.audio.play('charge');
-                  _context25.next = 32;
+                  _context29.next = 32;
                   return this.flashTiles(motion, plan.propagated, removed, true, Array.from(plan.columns));
                 case 32:
                   if (!motion.cancelled) {
-                    _context25.next = 34;
+                    _context29.next = 34;
                     break;
                   }
-                  return _context25.abrupt("return", false);
+                  return _context29.abrupt("return", false);
                 case 34:
                   commands = plan.components.map(function (group) {
                     var active = group.filter(function (index) {
@@ -12947,12 +13941,12 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                       group: group,
                       active: active,
                       advancedCount: active.filter(function (index) {
-                        return _this41.chargedTiles.get(_this41.tiles[index]) === 'advanced';
+                        return _this49.chargedTiles.get(_this49.tiles[index]) === 'advanced';
                       }).length
                     };
                   });
-                  for (_iterator26 = _createForOfIteratorHelperLoose(plan.created); !(_step26 = _iterator26()).done;) {
-                    _step26$value = _step26.value, _index12 = _step26$value[0], tier = _step26$value[1];
+                  for (_iterator32 = _createForOfIteratorHelperLoose(plan.created); !(_step32 = _iterator32()).done;) {
+                    _step32$value = _step32.value, _index12 = _step32$value[0], tier = _step32$value[1];
                     original = this.tiles[_index12];
                     this.restoredTileIds["delete"](original);
                     this.chargedTiles["delete"](original);
@@ -12963,28 +13957,28 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     this.markCharged(_index12, tier);
                     removed["delete"](_index12);
                   }
-                  _context25.next = 38;
+                  _context29.next = 38;
                   return Promise.all([].concat(Array.from(plan.anchors, function (index) {
-                    return _this41.dropCharge(motion, _this41.tiles[index]);
-                  }), [(_this$boardFx5 = this.boardFx) == null ? void 0 : _this$boardFx5.chargeReady(motion, Array.from(plan.anchors, function (index) {
+                    return _this49.dropCharge(motion, _this49.tiles[index]);
+                  }), [(_this$boardFx6 = this.boardFx) == null ? void 0 : _this$boardFx6.chargeReady(motion, Array.from(plan.anchors, function (index) {
                     return {
-                      position: _this41.cells[index].position
+                      position: _this49.cells[index].position
                     };
                   }))]));
                 case 38:
                   if (!motion.cancelled) {
-                    _context25.next = 40;
+                    _context29.next = 40;
                     break;
                   }
-                  return _context25.abrupt("return", false);
+                  return _context29.abrupt("return", false);
                 case 40:
-                  _iterator27 = _createForOfIteratorHelperLoose(commands);
+                  _iterator33 = _createForOfIteratorHelperLoose(commands);
                 case 41:
-                  if ((_step27 = _iterator27()).done) {
-                    _context25.next = 52;
+                  if ((_step33 = _iterator33()).done) {
+                    _context29.next = 52;
                     break;
                   }
-                  _step27$value = _step27.value, group = _step27$value.group, active = _step27$value.active, advancedCount = _step27$value.advancedCount;
+                  _step33$value = _step33.value, group = _step33$value.group, active = _step33$value.active, advancedCount = _step33$value.advancedCount;
                   advanced = advancedCount > 0;
                   this.waveAudit.push({
                     wave: wave + 1,
@@ -12996,7 +13990,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     normalCount: active.length - advancedCount,
                     advancedCount: advancedCount
                   });
-                  _context25.next = 47;
+                  _context29.next = 47;
                   return this.applySkill(motion, this.board[group[0]], group.length, wave + 1, active.length > 0, advanced, active.length, [group.length - active.length, active.length - advancedCount, advancedCount]);
                 case 47:
                   if (!motion.cancelled) this.waveAudit.push({
@@ -13005,12 +13999,12 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     type: this.board[group[0]]
                   });
                   if (!motion.cancelled) {
-                    _context25.next = 50;
+                    _context29.next = 50;
                     break;
                   }
-                  return _context25.abrupt("return", false);
+                  return _context29.abrupt("return", false);
                 case 50:
-                  _context25.next = 41;
+                  _context29.next = 41;
                   break;
                 case 52:
                   this.waveAudit.push({
@@ -13020,32 +14014,32 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   refill = this.planBattleRefill(this.board, removed);
                   this.queueTestSource(refill);
                   this.board = refill.board;
-                  _context25.next = 58;
+                  _context29.next = 58;
                   return this.drop(motion, removed, refill);
                 case 58:
                   if (!motion.cancelled) {
-                    _context25.next = 60;
+                    _context29.next = 60;
                     break;
                   }
-                  return _context25.abrupt("return", false);
+                  return _context29.abrupt("return", false);
                 case 60:
-                  _context25.next = 62;
+                  _context29.next = 62;
                   return this.releaseMiners(motion);
                 case 62:
                   if (!motion.cancelled) {
-                    _context25.next = 64;
+                    _context29.next = 64;
                     break;
                   }
-                  return _context25.abrupt("return", false);
+                  return _context29.abrupt("return", false);
                 case 64:
-                  return _context25.abrupt("return", true);
+                  return _context29.abrupt("return", true);
                 case 65:
                 case "end":
-                  return _context25.stop();
+                  return _context29.stop();
               }
-            }, _callee24, this);
+            }, _callee28, this);
           }));
-          function resolveBoardWave(_x23, _x24, _x25, _x26, _x27) {
+          function resolveBoardWave(_x32, _x33, _x34, _x35, _x36) {
             return _resolveBoardWave.apply(this, arguments);
           }
           return resolveBoardWave;
@@ -13076,7 +14070,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             var rim = (_this$art2 = this.art(tier + '-frame', 0, 0, 56, 56, tile)) == null ? void 0 : _this$art2.getComponent(Sprite);
             if (rim && tier === 'skill') rim.color = new Color(141, 157, 169);
             if (rim && tier === 'advanced' && this.tintedFrame) {
-              var _ref26, _themes$type, _heroes$type4;
+              var _ref31, _themes$type, _heroes$type4;
               rim.customMaterial = this.tintedFrame;
               var themes = {
                 s: '#c86a56',
@@ -13084,7 +14078,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                 m: '#aa69ec',
                 h: '#e45da5'
               };
-              rim.color = Color.fromHEX(new Color(), (_ref26 = (_themes$type = themes[type]) != null ? _themes$type : themes[(_heroes$type4 = heroes[type]) == null ? void 0 : _heroes$type4.action]) != null ? _ref26 : palette[type]);
+              rim.color = Color.fromHEX(new Color(), (_ref31 = (_themes$type = themes[type]) != null ? _themes$type : themes[(_heroes$type4 = heroes[type]) == null ? void 0 : _heroes$type4.action]) != null ? _ref31 : palette[type]);
             }
             this.tileIcon(type, tile);
             if (tier === 'advanced' && this.skillSweep && !this.motion.reduced) {
@@ -13097,16 +14091,16 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }
         };
         _proto.dropCharge = /*#__PURE__*/function () {
-          var _dropCharge = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee25(motion, tile) {
-            var children, _iterator28, _step28, _step28$value, child, home;
-            return _regeneratorRuntime().wrap(function _callee25$(_context26) {
-              while (1) switch (_context26.prev = _context26.next) {
+          var _dropCharge = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee29(motion, tile) {
+            var children, _iterator34, _step34, _step34$value, child, home;
+            return _regeneratorRuntime().wrap(function _callee29$(_context30) {
+              while (1) switch (_context30.prev = _context30.next) {
                 case 0:
                   if (!motion.reduced) {
-                    _context26.next = 2;
+                    _context30.next = 2;
                     break;
                   }
-                  return _context26.abrupt("return");
+                  return _context30.abrupt("return");
                 case 2:
                   children = tile.children.map(function (child) {
                     return {
@@ -13114,15 +14108,15 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                       home: child.position.clone()
                     };
                   });
-                  for (_iterator28 = _createForOfIteratorHelperLoose(children); !(_step28 = _iterator28()).done;) {
-                    _step28$value = _step28.value, child = _step28$value.child, home = _step28$value.home;
+                  for (_iterator34 = _createForOfIteratorHelperLoose(children); !(_step34 = _iterator34()).done;) {
+                    _step34$value = _step34.value, child = _step34$value.child, home = _step34$value.home;
                     child.setPosition(home.x, home.y + 13, home.z);
                     child.setScale(.86, 1.10, 1);
                   }
-                  _context26.next = 6;
-                  return Promise.all(children.map(function (_ref27) {
-                    var child = _ref27.child,
-                      home = _ref27.home;
+                  _context30.next = 6;
+                  return Promise.all(children.map(function (_ref32) {
+                    var child = _ref32.child,
+                      home = _ref32.home;
                     return motion.play(tween(child).to(.14, {
                       position: home,
                       scale: new Vec3(1.15, .78, 1)
@@ -13136,21 +14130,21 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   }));
                 case 6:
                 case "end":
-                  return _context26.stop();
+                  return _context30.stop();
               }
-            }, _callee25);
+            }, _callee29);
           }));
-          function dropCharge(_x28, _x29) {
+          function dropCharge(_x37, _x38) {
             return _dropCharge.apply(this, arguments);
           }
           return dropCharge;
         }();
         _proto.flashTiles = /*#__PURE__*/function () {
-          var _flashTiles = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee26(motion, indices, removed, propagated, columns) {
-            var _this42 = this;
-            var cleared, moves, palette, points, lanes, effects, _loop7, _iterator29, _step29;
-            return _regeneratorRuntime().wrap(function _callee26$(_context28) {
-              while (1) switch (_context28.prev = _context28.next) {
+          var _flashTiles = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee30(motion, indices, removed, propagated, columns) {
+            var _this50 = this;
+            var cleared, moves, palette, points, lanes, effects, _loop8, _iterator35, _step35;
+            return _regeneratorRuntime().wrap(function _callee30$(_context32) {
+              while (1) switch (_context32.prev = _context32.next) {
                 case 0:
                   if (columns === void 0) {
                     columns = [];
@@ -13160,7 +14154,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   });
                   moves = indices.map(function (index) {
                     var _tile$getComponent;
-                    var tile = _this42.tiles[index];
+                    var tile = _this50.tiles[index];
                     var opacity = (_tile$getComponent = tile.getComponent(UIOpacity)) != null ? _tile$getComponent : tile.addComponent(UIOpacity);
                     return motion.play(tween(opacity).set({
                       opacity: 160
@@ -13169,7 +14163,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     }));
                   });
                   if (!this.boardFx) {
-                    _context28.next = 10;
+                    _context32.next = 10;
                     break;
                   }
                   palette = {
@@ -13182,36 +14176,36 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     staff: '#ffe3a3'
                   };
                   points = cleared.map(function (index) {
-                    var _palette$_this42$boar;
+                    var _palette$_this50$boar;
                     return {
-                      position: _this42.cells[index].position,
-                      color: Color.fromHEX(new Color(), (_palette$_this42$boar = palette[_this42.board[index]]) != null ? _palette$_this42$boar : '#fff0c2')
+                      position: _this50.cells[index].position,
+                      color: Color.fromHEX(new Color(), (_palette$_this50$boar = palette[_this50.board[index]]) != null ? _palette$_this50$boar : '#fff0c2')
                     };
                   });
                   lanes = columns.map(function (col) {
                     return {
-                      from: _this42.cells[col].position,
-                      to: _this42.cells[_this42.cells.length - cols + col].position
+                      from: _this50.cells[col].position,
+                      to: _this50.cells[_this50.cells.length - cols + col].position
                     };
                   });
-                  _context28.next = 9;
+                  _context32.next = 9;
                   return Promise.all([].concat(moves, [this.boardFx.clear(motion, points, propagated ? 'charge' : 'match', lanes)]));
                 case 9:
-                  return _context28.abrupt("return");
+                  return _context32.abrupt("return");
                 case 10:
                   effects = cleared.slice(0, 8).flatMap(function (index) {
-                    var p = _this42.cells[index].position;
-                    return _this42.burst(motion, p.x, p.y, propagated ? '#c196ff' : '#fcd687', 3);
+                    var p = _this50.cells[index].position;
+                    return _this50.burst(motion, p.x, p.y, propagated ? '#c196ff' : '#fcd687', 3);
                   });
-                  _loop7 = /*#__PURE__*/_regeneratorRuntime().mark(function _loop7() {
+                  _loop8 = /*#__PURE__*/_regeneratorRuntime().mark(function _loop8() {
                     var col, first, last, beam, opacity;
-                    return _regeneratorRuntime().wrap(function _loop7$(_context27) {
-                      while (1) switch (_context27.prev = _context27.next) {
+                    return _regeneratorRuntime().wrap(function _loop8$(_context31) {
+                      while (1) switch (_context31.prev = _context31.next) {
                         case 0:
-                          col = _step29.value;
-                          first = _this42.cells[col].position;
-                          last = _this42.cells[_this42.cells.length - cols + col].position;
-                          beam = _this42.box('整列传导', first.x, (first.y + last.y) / 2, 17, first.y - last.y + 45, '#ffcf68');
+                          col = _step35.value;
+                          first = _this50.cells[col].position;
+                          last = _this50.cells[_this50.cells.length - cols + col].position;
+                          beam = _this50.box('整列传导', first.x, (first.y + last.y) / 2, 17, first.y - last.y + 45, '#ffcf68');
                           opacity = beam.addComponent(UIOpacity);
                           opacity.opacity = 210;
                           effects.push(motion.play(tween(opacity).to(motion.duration(.23), {
@@ -13222,39 +14216,39 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                           }));
                         case 7:
                         case "end":
-                          return _context27.stop();
+                          return _context31.stop();
                       }
-                    }, _loop7);
+                    }, _loop8);
                   });
-                  _iterator29 = _createForOfIteratorHelperLoose(columns);
+                  _iterator35 = _createForOfIteratorHelperLoose(columns);
                 case 13:
-                  if ((_step29 = _iterator29()).done) {
-                    _context28.next = 17;
+                  if ((_step35 = _iterator35()).done) {
+                    _context32.next = 17;
                     break;
                   }
-                  return _context28.delegateYield(_loop7(), "t0", 15);
+                  return _context32.delegateYield(_loop8(), "t0", 15);
                 case 15:
-                  _context28.next = 13;
+                  _context32.next = 13;
                   break;
                 case 17:
-                  _context28.next = 19;
+                  _context32.next = 19;
                   return Promise.all([].concat(moves, effects));
                 case 19:
                 case "end":
-                  return _context28.stop();
+                  return _context32.stop();
               }
-            }, _callee26, this);
+            }, _callee30, this);
           }));
-          function flashTiles(_x30, _x31, _x32, _x33, _x34) {
+          function flashTiles(_x39, _x40, _x41, _x42, _x43) {
             return _flashTiles.apply(this, arguments);
           }
           return flashTiles;
         }();
         _proto.castSkillEffect = /*#__PURE__*/function () {
-          var _castSkillEffect = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee27(motion, at, advanced) {
+          var _castSkillEffect = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee31(motion, at, advanced) {
             var ring, shape, flash, ink, light;
-            return _regeneratorRuntime().wrap(function _callee27$(_context29) {
-              while (1) switch (_context29.prev = _context29.next) {
+            return _regeneratorRuntime().wrap(function _callee31$(_context33) {
+              while (1) switch (_context33.prev = _context33.next) {
                 case 0:
                   ring = this.box('技能蓄力光环', at.x, at.y, 138, 138);
                   shape = ring.addComponent(Graphics);
@@ -13262,7 +14256,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   shape.lineWidth = 5;
                   shape.circle(0, 0, 56);
                   shape.stroke();
-                  _context29.next = 8;
+                  _context33.next = 8;
                   return motion.play(tween(ring).to(advanced ? .34 : .19, {
                     scale: new Vec3(.43, .43, 1)
                   }, {
@@ -13271,10 +14265,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                 case 8:
                   ring.destroy();
                   if (!(!advanced || motion.cancelled)) {
-                    _context29.next = 11;
+                    _context33.next = 11;
                     break;
                   }
-                  return _context29.abrupt("return");
+                  return _context33.abrupt("return");
                 case 11:
                   flash = this.box('大招反差环', at.x, at.y, 134, 134);
                   ink = flash.addComponent(Graphics);
@@ -13288,7 +14282,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   ink.stroke();
                   light = flash.addComponent(UIOpacity);
                   light.opacity = 255;
-                  _context29.next = 25;
+                  _context33.next = 25;
                   return motion.play(tween(light).to(.10, {
                     opacity: 15
                   }).delay(.10).to(.06, {
@@ -13298,17 +14292,17 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   flash.destroy();
                 case 26:
                 case "end":
-                  return _context29.stop();
+                  return _context33.stop();
               }
-            }, _callee27, this);
+            }, _callee31, this);
           }));
-          function castSkillEffect(_x35, _x36, _x37) {
+          function castSkillEffect(_x44, _x45, _x46) {
             return _castSkillEffect.apply(this, arguments);
           }
           return castSkillEffect;
         }();
         _proto.focusCombat = function focusCombat(motion, actors) {
-          var _this43 = this;
+          var _this51 = this;
           if (motion.reduced) return function () {};
           var layer = this.stageContent;
           var order = layer.children.slice();
@@ -13321,10 +14315,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           ink.rect(-width / 2, -height / 2, width, height);
           ink.fill();
           var activeHeroes = actors.filter(function (actor) {
-            return Array.from(_this43.heroes.values()).includes(actor);
+            return Array.from(_this51.heroes.values()).includes(actor);
           });
           var activeEnemies = actors.filter(function (actor) {
-            return _this43.enemyNodes.includes(actor);
+            return _this51.enemyNodes.includes(actor);
           });
           var faded = [];
           var fades = [];
@@ -13336,9 +14330,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             void motion.play(animation);
           };
           var peers = activeHeroes.length || activeEnemies.length ? Array.from(this.heroes.values()).concat(this.enemyNodes) : [];
-          for (var _iterator30 = _createForOfIteratorHelperLoose(peers), _step30; !(_step30 = _iterator30()).done;) {
+          for (var _iterator36 = _createForOfIteratorHelperLoose(peers), _step36; !(_step36 = _iterator36()).done;) {
             var _peer$getComponent;
-            var peer = _step30.value;
+            var peer = _step36.value;
             if (!(peer != null && peer.isValid) || actors.includes(peer)) continue;
             var alpha = (_peer$getComponent = peer.getComponent(UIOpacity)) != null ? _peer$getComponent : peer.addComponent(UIOpacity);
             faded.push({
@@ -13352,8 +14346,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             bright.add(this.healthBar.root);
             if (this.showsGuard) bright.add(this.guardBar.root);
           }
-          for (var _iterator31 = _createForOfIteratorHelperLoose(activeEnemies), _step31; !(_step31 = _iterator31()).done;) {
-            var actor = _step31.value;
+          for (var _iterator37 = _createForOfIteratorHelperLoose(activeEnemies), _step37; !(_step37 = _iterator37()).done;) {
+            var actor = _step37.value;
             var _index13 = this.enemyNodes.indexOf(actor);
             if (this.enemyMeters[_index13]) bright.add(this.enemyMeters[_index13].root);
           }
@@ -13361,17 +14355,17 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var mutedHUD = [];
           var hudColors = [];
           var meters = [this.healthBar, this.guardBar].concat(this.enemyMeters);
-          for (var _iterator32 = _createForOfIteratorHelperLoose(meters), _step32; !(_step32 = _iterator32()).done;) {
-            var meter = _step32.value;
+          for (var _iterator38 = _createForOfIteratorHelperLoose(meters), _step38; !(_step38 = _iterator38()).done;) {
+            var meter = _step38.value;
             if (!(meter != null && meter.root.activeInHierarchy) || bright.has(meter.root)) continue;
             var cover = this.box('非参与状态遮蔽', 0, 0, meter.width + 6, 25, undefined, meter.root);
-            var _ink = cover.addComponent(Graphics);
-            _ink.fillColor = new Color(8, 11, 19, 205);
-            _ink.roundRect(-(meter.width + 6) / 2, -12.5, meter.width + 6, 25, 12.5);
-            _ink.fill();
+            var _ink2 = cover.addComponent(Graphics);
+            _ink2.fillColor = new Color(8, 11, 19, 205);
+            _ink2.roundRect(-(meter.width + 6) / 2, -12.5, meter.width + 6, 25, 12.5);
+            _ink2.fill();
             mutedHUD.push(cover);
-            for (var _i11 = 0, _arr3 = [].concat(meter.root.getComponentsInChildren(Label), meter.root.getComponentsInChildren(Sprite)); _i11 < _arr3.length; _i11++) {
-              var component = _arr3[_i11];
+            for (var _i14 = 0, _arr4 = [].concat(meter.root.getComponentsInChildren(Label), meter.root.getComponentsInChildren(Sprite)); _i14 < _arr4.length; _i14++) {
+              var component = _arr4[_i14];
               var color = component.color.clone(),
                 outline = component instanceof Label ? component.outlineColor.clone() : undefined;
               hudColors.push({
@@ -13383,9 +14377,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               if (component instanceof Label) component.outlineColor = new Color(8, 11, 19, color.a);
             }
           }
-          for (var _iterator33 = _createForOfIteratorHelperLoose(this.ui.children), _step33; !(_step33 = _iterator33()).done;) {
+          for (var _iterator39 = _createForOfIteratorHelperLoose(this.ui.children), _step39; !(_step39 = _iterator39()).done;) {
             var _this$stageContent, _node$getComponent;
-            var node = _step33.value;
+            var node = _step39.value;
             if (node === ((_this$stageContent = this.stageContent) == null ? void 0 : _this$stageContent.parent) || node === this.popupLayer || bright.has(node) || node.position.y < 175) continue;
             if (Array.from(this.heroes.values()).includes(node)) continue;
             var _alpha = (_node$getComponent = node.getComponent(UIOpacity)) != null ? _node$getComponent : node.addComponent(UIOpacity);
@@ -13395,13 +14389,13 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             });
             fade(_alpha, _alpha.opacity * .4);
           }
-          for (var _iterator34 = _createForOfIteratorHelperLoose(actors), _step34; !(_step34 = _iterator34()).done;) {
-            var _actor = _step34.value;
+          for (var _iterator40 = _createForOfIteratorHelperLoose(actors), _step40; !(_step40 = _iterator40()).done;) {
+            var _actor = _step40.value;
             _actor.setSiblingIndex(layer.children.length - 1);
           }
           return function () {
-            for (var _i8 = 0, _hudColors = hudColors; _i8 < _hudColors.length; _i8++) {
-              var _hudColors$_i = _hudColors[_i8],
+            for (var _i11 = 0, _hudColors = hudColors; _i11 < _hudColors.length; _i11++) {
+              var _hudColors$_i = _hudColors[_i11],
                 component = _hudColors$_i.component,
                 color = _hudColors$_i.color,
                 outline = _hudColors$_i.outline;
@@ -13410,8 +14404,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                 if (outline && component instanceof Label) component.outlineColor = outline;
               }
             }
-            for (var _i9 = 0, _mutedHUD = mutedHUD; _i9 < _mutedHUD.length; _i9++) {
-              var cover = _mutedHUD[_i9];
+            for (var _i12 = 0, _mutedHUD = mutedHUD; _i12 < _mutedHUD.length; _i12++) {
+              var cover = _mutedHUD[_i12];
               if (cover.isValid) {
                 cover.removeFromParent();
                 cover.destroy();
@@ -13420,8 +14414,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             fades.forEach(function (animation) {
               return motion.stop(animation);
             });
-            for (var _i10 = 0, _faded = faded; _i10 < _faded.length; _i10++) {
-              var _faded$_i = _faded[_i10],
+            for (var _i13 = 0, _faded = faded; _i13 < _faded.length; _i13++) {
+              var _faded$_i = _faded[_i13],
                 alpha = _faded$_i.alpha,
                 value = _faded$_i.value;
               if (alpha.isValid) alpha.opacity = value;
@@ -13436,12 +14430,12 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           };
         };
         _proto.applySkill = /*#__PURE__*/function () {
-          var _applySkill = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee28(motion, type, length, chain, charged, advanced, reinforcementCount, tileCounts) {
+          var _applySkill = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee32(motion, type, length, chain, charged, advanced, reinforcementCount, tileCounts) {
             var _heroes$type5,
-              _this44 = this;
-            var owner, magic, tutorial, attack, skill, actor, _actor$position$x, _actor$position$y, restore, _actor$position, cap, beforeDP, before, gained, unit, position, color, followup, tags, primary, splash, targets, hit, _iterator35, _step35, target, _enemy, home, restoreFocus, _heroes$type6, _ref28, _enemy$getChildByName3, _enemy$getChildByName4, origin, _enemy$getChildByName, _enemy$getChildByName2, _actor$getChildByName5, _actor$getChildByName6, _origin, enemyGround, footOffset, arrived, immune, raw, stun, layers, afterArmor, damage, fallen, number, armor, effects, flinch;
-            return _regeneratorRuntime().wrap(function _callee28$(_context30) {
-              while (1) switch (_context30.prev = _context30.next) {
+              _this52 = this;
+            var owner, magic, tutorial, attack, skill, actor, _actor$position$x, _actor$position$y, restore, _actor$position, cap, beforeDP, before, gained, unit, position, color, followup, tags, primary, splash, targets, hit, _iterator41, _step41, target, _enemy, home, restoreFocus, _heroes$type6, _ref33, _enemy$getChildByName3, _enemy$getChildByName4, origin, _enemy$getChildByName, _enemy$getChildByName2, _actor$getChildByName7, _actor$getChildByName8, _origin, enemyGround, footOffset, arrived, immune, raw, stun, layers, afterArmor, damage, fallen, number, armor, effects, flinch;
+            return _regeneratorRuntime().wrap(function _callee32$(_context34) {
+              while (1) switch (_context34.prev = _context34.next) {
                 case 0:
                   if (advanced === void 0) {
                     advanced = false;
@@ -13452,69 +14446,69 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   if (!this.enemies.every(function (hp) {
                     return hp <= 0;
                   })) {
-                    _context30.next = 4;
+                    _context34.next = 4;
                     break;
                   }
-                  return _context30.abrupt("return");
+                  return _context34.abrupt("return");
                 case 4:
                   owner = skillOwner(type);
                   magic = ((_heroes$type5 = heroes[type]) == null ? void 0 : _heroes$type5.discipline) === 'magic';
                   tutorial = this.isTutorialBattle();
                   attack = tutorial ? owner === 'h' ? 12 : 26 : this.heroAttack(owner);
                   skill = planOathSkill(type, length, chain, advanced ? 'advanced' : charged ? 'skill' : undefined, attack, this.dp >= this.maxDP, this.oath, function (id) {
-                    return _this44.inventory.wears(owner, id);
+                    return _this52.inventory.wears(owner, id);
                   }, function (id) {
-                    return _this44.buff(id);
+                    return _this52.buff(id);
                   }, tutorial ? 0 : reinforcementCount, tileCounts);
                   actor = this.heroes.get(owner);
-                  _context30.t0 = actor;
-                  if (!_context30.t0) {
-                    _context30.next = 15;
+                  _context34.t0 = actor;
+                  if (!_context34.t0) {
+                    _context34.next = 15;
                     break;
                   }
-                  _context30.next = 14;
+                  _context34.next = 14;
                   return this.skillWindup(motion, actor, skill.name, advanced);
                 case 14:
-                  _context30.t0 = !_context30.sent;
+                  _context34.t0 = !_context34.sent;
                 case 15:
-                  if (!_context30.t0) {
-                    _context30.next = 17;
+                  if (!_context34.t0) {
+                    _context34.next = 17;
                     break;
                   }
-                  return _context30.abrupt("return");
+                  return _context34.abrupt("return");
                 case 17:
                   if (!(charged && actor && !motion.reduced)) {
-                    _context30.next = 22;
+                    _context34.next = 22;
                     break;
                   }
-                  _context30.next = 20;
+                  _context34.next = 20;
                   return this.castSkillEffect(motion, actor.position, advanced);
                 case 20:
                   if (!motion.cancelled) {
-                    _context30.next = 22;
+                    _context34.next = 22;
                     break;
                   }
-                  return _context30.abrupt("return");
+                  return _context34.abrupt("return");
                 case 22:
                   if (!(skill.kind === 'rally')) {
-                    _context30.next = 30;
+                    _context34.next = 30;
                     break;
                   }
                   applyBattleCry(this.oath, skill.multiplier, skill.boost);
                   this.syncBuffViews();
                   this.setBattleStatus('战吼：下一次攻击增伤');
                   this.audio.play('charge');
-                  _context30.next = 29;
+                  _context34.next = 29;
                   return Promise.all(this.burst(motion, (_actor$position$x = actor == null ? void 0 : actor.position.x) != null ? _actor$position$x : -70, (_actor$position$y = actor == null ? void 0 : actor.position.y) != null ? _actor$position$y : 270, '#ffbc60', 6));
                 case 29:
-                  return _context30.abrupt("return");
+                  return _context34.abrupt("return");
                 case 30:
                   if (!(skill.kind === 'heal' || skill.kind === 'guard')) {
-                    _context30.next = 50;
+                    _context34.next = 50;
                     break;
                   }
                   restore = actor ? this.focusCombat(motion, [actor]) : function () {};
-                  _context30.prev = 32;
+                  _context34.prev = 32;
                   cap = skill.kind === 'heal' ? this.maxHP : this.maxDP;
                   beforeDP = this.dp;
                   before = skill.kind === 'heal' ? this.hp : this.dp;
@@ -13535,19 +14529,19 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   position = (_actor$position = actor == null ? void 0 : actor.position) != null ? _actor$position : new Vec3(-70, 270, 0);
                   if (skill.kind === 'heal' && this.dp > beforeDP) void this.combatPopup(motion, '+' + (this.dp - beforeDP) + ' DP', position.x + 24, position.y + 16, '#90aec4', 27);
                   color = skill.kind === 'heal' ? '#81f4a4' : '#8bcbff';
-                  _context30.next = 47;
+                  _context34.next = 47;
                   return Promise.all([this.combatPopup(motion, '+' + gained + ' ' + unit, position.x, position.y, skill.kind === 'heal' ? advanced ? '#27934b' : '#adf4b0' : advanced ? '#385a78' : '#90aec4', advanced ? 38 : 27), this.supportHalo(motion, position, color)].concat(this.burst(motion, position.x, position.y, color, 6)));
                 case 47:
-                  _context30.prev = 47;
+                  _context34.prev = 47;
                   restore();
-                  return _context30.finish(47);
+                  return _context34.finish(47);
                 case 50:
                   followup = supportStrike(this.party, attack, skill);
                   if (!(skill.kind !== 'attack' && followup === undefined)) {
-                    _context30.next = 53;
+                    _context34.next = 53;
                     break;
                   }
-                  return _context30.abrupt("return");
+                  return _context34.abrupt("return");
                 case 53:
                   tags = this.foes.map(function (foe) {
                     var _foe$tags;
@@ -13562,63 +14556,63 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   hit = 0;
                 case 59:
                   if (!(hit < (skill.kind === 'attack' ? skill.hits : 1))) {
-                    _context30.next = 122;
+                    _context34.next = 122;
                     break;
                   }
-                  _iterator35 = _createForOfIteratorHelperLoose(targets);
+                  _iterator41 = _createForOfIteratorHelperLoose(targets);
                 case 61:
-                  if ((_step35 = _iterator35()).done) {
-                    _context30.next = 119;
+                  if ((_step41 = _iterator41()).done) {
+                    _context34.next = 119;
                     break;
                   }
-                  target = _step35.value;
+                  target = _step41.value;
                   if (!(this.enemies[target] <= 0)) {
-                    _context30.next = 65;
+                    _context34.next = 65;
                     break;
                   }
-                  return _context30.abrupt("continue", 117);
+                  return _context34.abrupt("continue", 117);
                 case 65:
                   _enemy = this.enemyNodes[target];
                   home = _enemy.position.clone();
                   restoreFocus = this.focusCombat(motion, actor ? [_enemy, actor] : [_enemy]);
-                  _context30.prev = 68;
+                  _context34.prev = 68;
                   if (!(type === 'stone' || magic || ((_heroes$type6 = heroes[type]) == null ? void 0 : _heroes$type6.discipline) === 'ranged')) {
-                    _context30.next = 77;
+                    _context34.next = 77;
                     break;
                   }
                   origin = actor ? this.emissionPoint(actor) : new Vec3(-70, 270, 0);
-                  _context30.next = 73;
+                  _context34.next = 73;
                   return this.flyProjectile(motion, type, origin, home);
                 case 73:
-                  if (_context30.sent) {
-                    _context30.next = 75;
+                  if (_context34.sent) {
+                    _context34.next = 75;
                     break;
                   }
-                  return _context30.abrupt("return");
+                  return _context34.abrupt("return");
                 case 75:
-                  _context30.next = 87;
+                  _context34.next = 87;
                   break;
                 case 77:
                   if (!actor) {
-                    _context30.next = 87;
+                    _context34.next = 87;
                     break;
                   }
                   _origin = actor.position.clone();
                   enemyGround = home.y + ((_enemy$getChildByName = (_enemy$getChildByName2 = _enemy.getChildByName('脚底投影')) == null ? void 0 : _enemy$getChildByName2.position.y) != null ? _enemy$getChildByName : -34);
-                  footOffset = (_actor$getChildByName5 = (_actor$getChildByName6 = actor.getChildByName('脚底投影')) == null ? void 0 : _actor$getChildByName6.position.y) != null ? _actor$getChildByName5 : -34;
-                  _context30.next = 83;
+                  footOffset = (_actor$getChildByName7 = (_actor$getChildByName8 = actor.getChildByName('脚底投影')) == null ? void 0 : _actor$getChildByName8.position.y) != null ? _actor$getChildByName7 : -34;
+                  _context34.next = 83;
                   return motion.play(tween(actor).to(motion.duration(.105), {
                     position: new Vec3(home.x - 36, enemyGround - footOffset, 0)
                   }, {
                     easing: 'sineInOut'
                   }));
                 case 83:
-                  arrived = _context30.sent;
+                  arrived = _context34.sent;
                   if (arrived) {
-                    _context30.next = 86;
+                    _context34.next = 86;
                     break;
                   }
-                  return _context30.abrupt("return");
+                  return _context34.abrupt("return");
                 case 86:
                   void motion.play(tween(actor).to(motion.duration(.18), {
                     position: _origin
@@ -13627,10 +14621,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   }));
                 case 87:
                   if (!motion.cancelled) {
-                    _context30.next = 89;
+                    _context34.next = 89;
                     break;
                   }
-                  return _context30.abrupt("return");
+                  return _context34.abrupt("return");
                 case 89:
                   immune = tags[target].some(function (tag) {
                     return tag === 'boss' || tag === 'stun-immune';
@@ -13638,7 +14632,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   raw = skill.kind === 'attack' ? primary.includes(target) ? skill.damage : splash : followup;
                   stun = skill.kind === 'attack' && skill.stun;
                   layers = this.foes[target].armor;
-                  afterArmor = oathDamage(this.oath, String(target), raw, (_ref28 = magic ? layers == null ? void 0 : layers.magic : layers == null ? void 0 : layers.physical) != null ? _ref28 : 0, magic);
+                  afterArmor = oathDamage(this.oath, String(target), raw, (_ref33 = magic ? layers == null ? void 0 : layers.magic : layers == null ? void 0 : layers.physical) != null ? _ref33 : 0, magic);
                   damage = Math.min(this.enemies[target], Math.round(afterArmor * (stun && immune ? 1.25 : 1)));
                   this.waveAudit.push({
                     wave: chain,
@@ -13674,47 +14668,47 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     position: home
                   });
                   if (fallen) effects.push(this.fadeActor(motion, _enemy));
-                  _context30.next = 112;
+                  _context34.next = 112;
                   return Promise.all([number, motion.play(flinch)].concat(effects));
                 case 112:
                   if (!motion.cancelled) {
-                    _context30.next = 114;
+                    _context34.next = 114;
                     break;
                   }
-                  return _context30.abrupt("return");
+                  return _context34.abrupt("return");
                 case 114:
-                  _context30.prev = 114;
+                  _context34.prev = 114;
                   restoreFocus();
-                  return _context30.finish(114);
+                  return _context34.finish(114);
                 case 117:
-                  _context30.next = 61;
+                  _context34.next = 61;
                   break;
                 case 119:
                   hit++;
-                  _context30.next = 59;
+                  _context34.next = 59;
                   break;
                 case 122:
                 case "end":
-                  return _context30.stop();
+                  return _context34.stop();
               }
-            }, _callee28, this, [[32,, 47, 50], [68,, 114, 117]]);
+            }, _callee32, this, [[32,, 47, 50], [68,, 114, 117]]);
           }));
-          function applySkill(_x38, _x39, _x40, _x41, _x42, _x43, _x44, _x45) {
+          function applySkill(_x47, _x48, _x49, _x50, _x51, _x52, _x53, _x54) {
             return _applySkill.apply(this, arguments);
           }
           return applySkill;
         }();
         _proto.presentRecovery = /*#__PURE__*/function () {
-          var _presentRecovery = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee29(kind, commit) {
+          var _presentRecovery = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee33(kind, commit) {
             var root, motion, before, cap, meter, alpha, _this$coinText2, _actor$position$x2, _actor$position$y2, after, actor;
-            return _regeneratorRuntime().wrap(function _callee29$(_context31) {
-              while (1) switch (_context31.prev = _context31.next) {
+            return _regeneratorRuntime().wrap(function _callee33$(_context35) {
+              while (1) switch (_context35.prev = _context35.next) {
                 case 0:
                   if (!this.recoveryPlaying) {
-                    _context31.next = 2;
+                    _context35.next = 2;
                     break;
                   }
-                  return _context31.abrupt("return");
+                  return _context35.abrupt("return");
                 case 2:
                   this.recoveryPlaying = true;
                   root = this.ui, motion = this.newPageMotion();
@@ -13723,60 +14717,60 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   this.setMeter(meter, before, cap, String(before));
                   alpha = meter.root.addComponent(UIOpacity);
                   alpha.opacity = 0;
-                  _context31.prev = 9;
-                  _context31.next = 12;
+                  _context35.prev = 9;
+                  _context35.next = 12;
                   return motion.play(tween(alpha).to(.35, {
                     opacity: 255
                   }));
                 case 12:
-                  _context31.t0 = !_context31.sent;
-                  if (_context31.t0) {
-                    _context31.next = 15;
+                  _context35.t0 = !_context35.sent;
+                  if (_context35.t0) {
+                    _context35.next = 15;
                     break;
                   }
-                  _context31.t0 = this.ui !== root;
+                  _context35.t0 = this.ui !== root;
                 case 15:
-                  if (!_context31.t0) {
-                    _context31.next = 17;
+                  if (!_context35.t0) {
+                    _context35.next = 17;
                     break;
                   }
-                  return _context31.abrupt("return");
+                  return _context35.abrupt("return");
                 case 17:
                   if (commit()) {
-                    _context31.next = 19;
+                    _context35.next = 19;
                     break;
                   }
-                  return _context31.abrupt("return");
+                  return _context35.abrupt("return");
                 case 19:
                   if ((_this$coinText2 = this.coinText) != null && _this$coinText2.isValid) this.coinText.string = String(this.walletGold);
                   after = kind === 'hp' ? this.hp : this.dp;
                   this.setMeter(meter, after, kind === 'hp' ? this.maxHP : this.maxDP, String(after));
                   this.audio.play('charge');
                   actor = Array.from(this.heroes.values())[0];
-                  _context31.next = 26;
+                  _context35.next = 26;
                   return this.combatPopup(motion, '+' + (after - before) + ' ' + kind.toUpperCase(), (_actor$position$x2 = actor == null ? void 0 : actor.position.x) != null ? _actor$position$x2 : -90, (_actor$position$y2 = actor == null ? void 0 : actor.position.y) != null ? _actor$position$y2 : 245, kind === 'hp' ? '#adf4b0' : '#90aec4');
                 case 26:
                   if (motion.cancelled) {
-                    _context31.next = 29;
+                    _context35.next = 29;
                     break;
                   }
-                  _context31.next = 29;
+                  _context35.next = 29;
                   return motion.play(tween(alpha).delay(.65).to(.4, {
                     opacity: 0
                   }));
                 case 29:
-                  _context31.prev = 29;
+                  _context35.prev = 29;
                   if (meter.root.isValid) meter.root.destroy();
                   this.pageMotions["delete"](motion);
                   this.recoveryPlaying = false;
-                  return _context31.finish(29);
+                  return _context35.finish(29);
                 case 34:
                 case "end":
-                  return _context31.stop();
+                  return _context35.stop();
               }
-            }, _callee29, this, [[9,, 29, 34]]);
+            }, _callee33, this, [[9,, 29, 34]]);
           }));
-          function presentRecovery(_x46, _x47) {
+          function presentRecovery(_x55, _x56) {
             return _presentRecovery.apply(this, arguments);
           }
           return presentRecovery;
@@ -13805,27 +14799,27 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           });
         };
         _proto.lowHealthFlash = /*#__PURE__*/function () {
-          var _lowHealthFlash = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee30(motion) {
+          var _lowHealthFlash = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee34(motion) {
             var board, home;
-            return _regeneratorRuntime().wrap(function _callee30$(_context32) {
-              while (1) switch (_context32.prev = _context32.next) {
+            return _regeneratorRuntime().wrap(function _callee34$(_context36) {
+              while (1) switch (_context36.prev = _context36.next) {
                 case 0:
                   this.audio.play('hurt');
                   if (!(motion.reduced || motion.cancelled)) {
-                    _context32.next = 3;
+                    _context36.next = 3;
                     break;
                   }
-                  return _context32.abrupt("return", true);
+                  return _context36.abrupt("return", true);
                 case 3:
                   board = this.tileLayer;
                   if (board != null && board.isValid) {
-                    _context32.next = 6;
+                    _context36.next = 6;
                     break;
                   }
-                  return _context32.abrupt("return", false);
+                  return _context36.abrupt("return", false);
                 case 6:
                   home = board.position.clone();
-                  return _context32.abrupt("return", motion.play(tween(board).by(.04, {
+                  return _context36.abrupt("return", motion.play(tween(board).by(.04, {
                     position: new Vec3(-3, 0, 0)
                   }).by(.06, {
                     position: new Vec3(6, 0, 0)
@@ -13834,27 +14828,27 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   })));
                 case 8:
                 case "end":
-                  return _context32.stop();
+                  return _context36.stop();
               }
-            }, _callee30, this);
+            }, _callee34, this);
           }));
-          function lowHealthFlash(_x48) {
+          function lowHealthFlash(_x57) {
             return _lowHealthFlash.apply(this, arguments);
           }
           return lowHealthFlash;
         }();
         _proto.hitReaction = /*#__PURE__*/function () {
-          var _hitReaction = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee31(motion, actor) {
-            var _this45 = this;
+          var _hitReaction = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee35(motion, actor) {
+            var _this53 = this;
             var portrait, impact, alpha, sprite, material, state, update;
-            return _regeneratorRuntime().wrap(function _callee31$(_context33) {
-              while (1) switch (_context33.prev = _context33.next) {
+            return _regeneratorRuntime().wrap(function _callee35$(_context37) {
+              while (1) switch (_context37.prev = _context37.next) {
                 case 0:
                   if (!(motion.reduced || motion.cancelled)) {
-                    _context33.next = 2;
+                    _context37.next = 2;
                     break;
                   }
-                  return _context33.abrupt("return", true);
+                  return _context37.abrupt("return", true);
                 case 2:
                   portrait = actor.children.find(function (node) {
                     return node.getComponent(Sprite);
@@ -13867,13 +14861,13 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     flash: 1
                   };
                   update = function update() {
-                    if (sprite) _this45.setActorState(sprite, {
+                    if (sprite) _this53.setActorState(sprite, {
                       flash: state.flash
                     });
                   };
                   update();
-                  _context33.prev = 10;
-                  _context33.next = 13;
+                  _context37.prev = 10;
+                  _context37.next = 13;
                   return Promise.all([motion.play(tween(actor).to(.055, {
                     scale: new Vec3(1.12, .90, 1)
                   }).to(.12, {
@@ -13888,21 +14882,21 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     return results.every(Boolean);
                   });
                 case 13:
-                  return _context33.abrupt("return", _context33.sent);
+                  return _context37.abrupt("return", _context37.sent);
                 case 14:
-                  _context33.prev = 14;
+                  _context37.prev = 14;
                   if (material && sprite != null && sprite.isValid) this.setActorState(sprite, {
                     flash: 0
                   });
                   impact == null || impact.destroy();
-                  return _context33.finish(14);
+                  return _context37.finish(14);
                 case 18:
                 case "end":
-                  return _context33.stop();
+                  return _context37.stop();
               }
-            }, _callee31, this, [[10,, 14, 18]]);
+            }, _callee35, this, [[10,, 14, 18]]);
           }));
-          function hitReaction(_x49, _x50) {
+          function hitReaction(_x58, _x59) {
             return _hitReaction.apply(this, arguments);
           }
           return hitReaction;
@@ -13945,17 +14939,17 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           return Promise.resolve(true);
         };
         _proto.fadeActor = /*#__PURE__*/function () {
-          var _fadeActor = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee32(motion, actor) {
+          var _fadeActor = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee36(motion, actor) {
             var _this$enemyMeters$thi,
               _actor$children$find,
               _meter$getComponent,
               _silhouette$getCompon,
               _statsAlpha$opacity,
               _alpha$opacity,
-              _this46 = this;
+              _this54 = this;
             var meter, sprite, material, statsAlpha, silhouette, alpha, initialStats, initialActor, state, played;
-            return _regeneratorRuntime().wrap(function _callee32$(_context34) {
-              while (1) switch (_context34.prev = _context34.next) {
+            return _regeneratorRuntime().wrap(function _callee36$(_context38) {
+              while (1) switch (_context38.prev = _context38.next) {
                 case 0:
                   meter = (_this$enemyMeters$thi = this.enemyMeters[this.enemyNodes.indexOf(actor)]) == null ? void 0 : _this$enemyMeters$thi.root;
                   sprite = (_actor$children$find = actor.children.find(function (n) {
@@ -13970,13 +14964,13 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     fade: 1,
                     tone: 1
                   };
-                  _context34.next = 10;
+                  _context38.next = 10;
                   return motion.play(tween(state).to(motion.duration(.46), {
                     fade: 0,
                     tone: 0
                   }, {
                     onUpdate: function onUpdate() {
-                      if (material) _this46.setActorState(sprite, {
+                      if (material) _this54.setActorState(sprite, {
                         tone: state.tone,
                         fade: state.fade
                       });
@@ -13985,28 +14979,28 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     }
                   }));
                 case 10:
-                  played = _context34.sent;
+                  played = _context38.sent;
                   if (played) {
                     actor.active = false;
                     if (meter) meter.active = false;
                   }
-                  return _context34.abrupt("return", played);
+                  return _context38.abrupt("return", played);
                 case 13:
                 case "end":
-                  return _context34.stop();
+                  return _context38.stop();
               }
-            }, _callee32, this);
+            }, _callee36, this);
           }));
-          function fadeActor(_x51, _x52) {
+          function fadeActor(_x60, _x61) {
             return _fadeActor.apply(this, arguments);
           }
           return fadeActor;
         }();
         _proto.enemyTurn = /*#__PURE__*/function () {
-          var _enemyTurn = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee33(motion) {
-            var _index14, _this$enemyOpportunit, actor, count, _planEnemyAction, move, target, recipients, restore, healed, recipient, hit, _move$hits, _struck$position, home, struck, center, base, damage, absorbed, lost, effects, _iterator36, _step36, hero, amount;
-            return _regeneratorRuntime().wrap(function _callee33$(_context35) {
-              while (1) switch (_context35.prev = _context35.next) {
+          var _enemyTurn = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee37(motion) {
+            var _index14, _this$enemyOpportunit, actor, count, _planEnemyAction, move, target, recipients, restore, healed, recipient, hit, _move$hits, _struck$position, home, struck, center, base, damage, absorbed, lost, effects, _iterator42, _step42, hero, amount;
+            return _regeneratorRuntime().wrap(function _callee37$(_context39) {
+              while (1) switch (_context39.prev = _context39.next) {
                 case 0:
                   this.battlePhase = 'enemy';
                   this.setBattleStatus('敌方行动');
@@ -14014,37 +15008,37 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   _index14 = 0;
                 case 4:
                   if (!(_index14 < this.foes.length)) {
-                    _context35.next = 102;
+                    _context39.next = 102;
                     break;
                   }
                   if (!(motion.cancelled || this.hp <= 0)) {
-                    _context35.next = 7;
+                    _context39.next = 7;
                     break;
                   }
-                  return _context35.abrupt("return");
+                  return _context39.abrupt("return");
                 case 7:
                   if (!(this.enemies[_index14] <= 0)) {
-                    _context35.next = 9;
+                    _context39.next = 9;
                     break;
                   }
-                  return _context35.abrupt("continue", 99);
+                  return _context39.abrupt("continue", 99);
                 case 9:
                   if (!this.stunned["delete"](_index14)) {
-                    _context35.next = 12;
+                    _context39.next = 12;
                     break;
                   }
                   this.enemyActionAudit.push({
                     kind: 'SKIPPED_STUN',
                     enemy: _index14
                   });
-                  return _context35.abrupt("continue", 99);
+                  return _context39.abrupt("continue", 99);
                 case 12:
                   actor = this.enemyNodes[_index14];
                   if (actor != null && actor.isValid) {
-                    _context35.next = 15;
+                    _context39.next = 15;
                     break;
                   }
-                  return _context35.abrupt("continue", 99);
+                  return _context39.abrupt("continue", 99);
                 case 15:
                   count = this.enemyOpportunities[_index14] = ((_this$enemyOpportunit = this.enemyOpportunities[_index14]) != null ? _this$enemyOpportunit : 0) + 1;
                   _planEnemyAction = planEnemyAction(this.foes[_index14], _index14, count, this.enemies, this.enemyMax, this.isTutorialBattle()), move = _planEnemyAction.move, target = _planEnemyAction.target;
@@ -14055,15 +15049,15 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   });
                   recipients = move.kind === 'heal' ? [this.enemyNodes[target]] : Array.from(this.heroes.values());
                   restore = this.focusCombat(motion, [actor].concat(recipients.filter(Boolean)));
-                  _context35.prev = 20;
-                  _context35.next = 23;
+                  _context39.prev = 20;
+                  _context39.next = 23;
                   return this.skillWindup(motion, actor, move.name);
                 case 23:
-                  if (_context35.sent) {
-                    _context35.next = 25;
+                  if (_context39.sent) {
+                    _context39.next = 25;
                     break;
                   }
-                  return _context35.abrupt("return");
+                  return _context39.abrupt("return");
                 case 25:
                   this.enemyActionAudit.push({
                     kind: 'CAST_STARTED',
@@ -14071,7 +15065,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     skill: move.id
                   });
                   if (!(move.kind === 'heal')) {
-                    _context35.next = 36;
+                    _context39.next = 36;
                     break;
                   }
                   healed = Math.min(this.enemyMax[target] - this.enemies[target], Math.round(this.enemyMax[target] * move.ratio));
@@ -14079,68 +15073,68 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   this.updateHUD();
                   this.audio.play('charge');
                   recipient = this.enemyNodes[target];
-                  _context35.next = 34;
+                  _context39.next = 34;
                   return Promise.all([this.supportHalo(motion, recipient.position, '#adf4b0'), this.combatPopup(motion, '+' + healed + ' HP', recipient.position.x, recipient.position.y, '#adf4b0')]);
                 case 34:
-                  _context35.next = 85;
+                  _context39.next = 85;
                   break;
                 case 36:
                   hit = 0;
                 case 37:
                   if (!(hit < ((_move$hits = move.hits) != null ? _move$hits : 1))) {
-                    _context35.next = 85;
+                    _context39.next = 85;
                     break;
                   }
                   if (!motion.cancelled) {
-                    _context35.next = 40;
+                    _context39.next = 40;
                     break;
                   }
-                  return _context35.abrupt("return");
+                  return _context39.abrupt("return");
                 case 40:
                   if (!(this.hp <= 0)) {
-                    _context35.next = 42;
+                    _context39.next = 42;
                     break;
                   }
-                  return _context35.abrupt("break", 85);
+                  return _context39.abrupt("break", 85);
                 case 42:
                   home = actor.position.clone(), struck = Array.from(this.heroes.values()).find(function (n) {
                     return n.isValid;
                   });
                   center = (_struck$position = struck == null ? void 0 : struck.position) != null ? _struck$position : new Vec3(-100, 270, 0);
                   if (!move.projectile) {
-                    _context35.next = 51;
+                    _context39.next = 51;
                     break;
                   }
-                  _context35.next = 47;
+                  _context39.next = 47;
                   return this.flyProjectile(motion, move.magic ? 'm' : 'stone', this.emissionPoint(actor), center);
                 case 47:
-                  if (_context35.sent) {
-                    _context35.next = 49;
+                  if (_context39.sent) {
+                    _context39.next = 49;
                     break;
                   }
-                  return _context35.abrupt("return");
+                  return _context39.abrupt("return");
                 case 49:
-                  _context35.next = 55;
+                  _context39.next = 55;
                   break;
                 case 51:
-                  _context35.next = 53;
+                  _context39.next = 53;
                   return motion.play(tween(actor).to(motion.duration(.12), {
                     position: new Vec3(center.x + 35, home.y, 0)
                   }, {
                     easing: 'sineInOut'
                   }));
                 case 53:
-                  if (_context35.sent) {
-                    _context35.next = 55;
+                  if (_context39.sent) {
+                    _context39.next = 55;
                     break;
                   }
-                  return _context35.abrupt("return");
+                  return _context39.abrupt("return");
                 case 55:
                   if (!motion.cancelled) {
-                    _context35.next = 57;
+                    _context39.next = 57;
                     break;
                   }
-                  return _context35.abrupt("return");
+                  return _context39.abrupt("return");
                 case 57:
                   base = Math.round(oathEnemyPower(this.oath, String(_index14), this.foes[_index14].atk) * move.ratio);
                   damage = this.oath.guard ? Math.round(base * .85) : base;
@@ -14162,8 +15156,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   effects = [];
                   if (lost) effects.push(this.combatPopup(motion, '−' + lost, center.x, center.y, move.magic ? '#8b92f6' : '#ffffff'));
                   if (absorbed) effects.push(this.combatPopup(motion, '−' + absorbed + ' DP', center.x + 22, center.y + 18, '#90aec4'));
-                  for (_iterator36 = _createForOfIteratorHelperLoose(this.heroes.values()); !(_step36 = _iterator36()).done;) {
-                    hero = _step36.value;
+                  for (_iterator42 = _createForOfIteratorHelperLoose(this.heroes.values()); !(_step42 = _iterator42()).done;) {
+                    hero = _step42.value;
                     effects.push(this.hitReaction(motion, hero));
                   }
                   if (!move.projectile) effects.push(motion.play(tween(actor).to(motion.duration(.17), {
@@ -14172,47 +15166,47 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     easing: 'sineOut'
                   })));
                   if (lost && this.hp <= this.maxHP * .3) effects.push(this.lowHealthFlash(motion));
-                  _context35.next = 74;
+                  _context39.next = 74;
                   return Promise.all(effects);
                 case 74:
                   if (!motion.cancelled) {
-                    _context35.next = 76;
+                    _context39.next = 76;
                     break;
                   }
-                  return _context35.abrupt("return");
+                  return _context39.abrupt("return");
                 case 76:
                   if (!(move.drain && lost)) {
-                    _context35.next = 82;
+                    _context39.next = 82;
                     break;
                   }
                   amount = Math.min(this.enemyMax[_index14] - this.enemies[_index14], Math.round(lost * move.drain));
                   this.enemies[_index14] += amount;
                   this.updateHUD();
-                  _context35.next = 82;
+                  _context39.next = 82;
                   return this.combatPopup(motion, '+' + amount + ' HP', actor.position.x, actor.position.y, '#adf4b0');
                 case 82:
                   hit++;
-                  _context35.next = 37;
+                  _context39.next = 37;
                   break;
                 case 85:
                   if (!motion.cancelled) {
-                    _context35.next = 87;
+                    _context39.next = 87;
                     break;
                   }
-                  return _context35.abrupt("return");
+                  return _context39.abrupt("return");
                 case 87:
                   if (!(move.shock && this.hp > 0)) {
-                    _context35.next = 92;
+                    _context39.next = 92;
                     break;
                   }
-                  _context35.next = 90;
+                  _context39.next = 90;
                   return this.shockDowngrade(motion, _index14);
                 case 90:
                   if (!motion.cancelled) {
-                    _context35.next = 92;
+                    _context39.next = 92;
                     break;
                   }
-                  return _context35.abrupt("return");
+                  return _context39.abrupt("return");
                 case 92:
                   this.enemyActionAudit.push({
                     kind: 'ACTION_COMPLETED',
@@ -14222,37 +15216,37 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     dp: this.dp
                   });
                 case 93:
-                  _context35.prev = 93;
+                  _context39.prev = 93;
                   restore();
-                  return _context35.finish(93);
+                  return _context39.finish(93);
                 case 96:
                   if (!(this.hp <= 0)) {
-                    _context35.next = 99;
+                    _context39.next = 99;
                     break;
                   }
                   this.finishAdventure('fail');
-                  return _context35.abrupt("return");
+                  return _context39.abrupt("return");
                 case 99:
                   _index14++;
-                  _context35.next = 4;
+                  _context39.next = 4;
                   break;
                 case 102:
                   if (!motion.cancelled) {
-                    _context35.next = 104;
+                    _context39.next = 104;
                     break;
                   }
-                  return _context35.abrupt("return");
+                  return _context39.abrupt("return");
                 case 104:
                   endOathRound(this.oath, this.turn);
                   this.turn++;
                   this.resumeBattleInput('轮到玩家，交换相邻纹章');
                 case 107:
                 case "end":
-                  return _context35.stop();
+                  return _context39.stop();
               }
-            }, _callee33, this, [[20,, 93, 96]]);
+            }, _callee37, this, [[20,, 93, 96]]);
           }));
-          function enemyTurn(_x53) {
+          function enemyTurn(_x62) {
             return _enemyTurn.apply(this, arguments);
           }
           return enemyTurn;
@@ -14280,9 +15274,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.stopHint = undefined;
         };
         _proto.update = function update(delta) {
-          var _this47 = this;
+          var _this55 = this;
           var challenge = this.challenge;
-          if ((challenge == null ? void 0 : challenge.id) === 'timed' && this.trial && this.ui === this.battleRoot && this.battlePhase === 'input' && !this.busy && !this.battleModal) {
+          if ((challenge == null ? void 0 : challenge.id) === 'timed' && this.trial && this.ui === this.battleRoot && this.battlePhase === 'input' && !this.busy && !this.battleModal && !this.bombAim) {
             var seconds = Math.ceil(challenge.time);
             challenge.time = Math.max(0, challenge.time - delta);
             if (Math.ceil(challenge.time) !== seconds) this.refreshTestObjective();
@@ -14294,7 +15288,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               return;
             }
           }
-          if (this.ui !== this.battleRoot || this.battlePhase !== 'input' || this.busy || this.automatic || this.guideMode || this.battleModal || this.motion.reduced) {
+          if (this.ui !== this.battleRoot || this.battlePhase !== 'input' || this.busy || this.automatic || this.guideMode || this.battleModal || this.bombAim || this.motion.reduced) {
             if (this.hintIdle || this.stopHint) this.clearIdleHint();
             return;
           }
@@ -14304,7 +15298,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var move = this.legalMove();
           if (!move) return;
           var _move$map = move.map(function (index) {
-              return _this47.tiles[index];
+              return _this55.tiles[index];
             }),
             a = _move$map[0],
             b = _move$map[1];
@@ -14326,20 +15320,20 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             };
           });
           this.stopHint = function () {
-            for (var _iterator37 = _createForOfIteratorHelperLoose(entries), _step37; !(_step37 = _iterator37()).done;) {
-              var _step37$value = _step37.value,
-                node = _step37$value.node,
-                home = _step37$value.home,
-                animation = _step37$value.animation;
+            for (var _iterator43 = _createForOfIteratorHelperLoose(entries), _step43; !(_step43 = _iterator43()).done;) {
+              var _step43$value = _step43.value,
+                node = _step43$value.node,
+                home = _step43$value.home,
+                animation = _step43$value.animation;
               animation.stop();
               if (node.isValid) node.setPosition(home);
             }
           };
           entries[0].animation.call(function () {
-            _this47.stopHint = undefined;
+            _this55.stopHint = undefined;
           });
-          entries.forEach(function (_ref29) {
-            var animation = _ref29.animation;
+          entries.forEach(function (_ref34) {
+            var animation = _ref34.animation;
             return animation.start();
           });
         };
@@ -14350,8 +15344,12 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.guideMode = undefined;
         };
         _proto.refreshGuide = function refreshGuide() {
-          var _this48 = this,
-            _this$ui$getChildByNa5;
+          var _this56 = this,
+            _this$itemBar$center,
+            _this$itemBar2,
+            _this$itemBar$center2,
+            _this$itemBar3,
+            _this$ui$getChildByNa6;
           this.clearGuide();
           if (this.phase !== 'wolves' || this.busy || this.battleModal) return;
           var mode = this.firstSwap ? 'swap' : this.potion > 0 && this.hp <= 30 ? 'potion' : undefined;
@@ -14364,7 +15362,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var layer = this.guideLayer = this.box('教学遮罩', 0, 0, 480, 854);
           var graphics = layer.addComponent(Graphics);
           var holes = mode === 'swap' ? [0, 1, 2, 8].map(function (index) {
-            var p = _this48.cells[index].position;
+            var p = _this56.cells[index].position;
             return {
               x: p.x,
               y: p.y,
@@ -14372,7 +15370,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               h: 58
             };
           }) : [{
-            x: interactionGrid.potionX,
+            x: (_this$itemBar$center = (_this$itemBar2 = this.itemBar) == null ? void 0 : _this$itemBar2.center('potion')) != null ? _this$itemBar$center : 192,
             y: interactionGrid.potionY,
             w: interactionGrid.potionSize + 4,
             h: interactionGrid.potionSize + 4
@@ -14388,7 +15386,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             return a - b;
           });
           graphics.fillColor = Color.fromHEX(new Color(), '#101c20ad');
-          var _loop8 = function _loop8() {
+          var _loop9 = function _loop9() {
             var low = breaks[row - 1],
               high = breaks[row],
               mid = (high + low) / 2;
@@ -14398,35 +15396,35 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               return a.x - b.x;
             });
             var left = -240;
-            for (var _iterator39 = _createForOfIteratorHelperLoose(openings), _step39; !(_step39 = _iterator39()).done;) {
-              var hole = _step39.value;
+            for (var _iterator45 = _createForOfIteratorHelperLoose(openings), _step45; !(_step45 = _iterator45()).done;) {
+              var hole = _step45.value;
               graphics.rect(left, low, hole.x - hole.w / 2 - left, high - low);
               left = hole.x + hole.w / 2;
             }
             graphics.rect(left, low, 240 - left, high - low);
           };
           for (var row = 1; row < breaks.length; row++) {
-            _loop8();
+            _loop9();
           }
           graphics.fill();
           if (mode !== 'swap') {
             graphics.strokeColor = Color.fromHEX(new Color(), '#ffe49d');
             graphics.lineWidth = 3;
-            for (var _iterator38 = _createForOfIteratorHelperLoose(holes), _step38; !(_step38 = _iterator38()).done;) {
-              var h = _step38.value;
+            for (var _iterator44 = _createForOfIteratorHelperLoose(holes), _step44; !(_step44 = _iterator44()).done;) {
+              var h = _step44.value;
               graphics.roundRect(h.x - h.w / 2, h.y - h.h / 2, h.w, h.h, 8);
             }
             graphics.stroke();
           }
-          var caption = mode === 'swap' ? '滑动或依次点击高亮的两枚纹章' : '点击药水恢复生命';
+          var caption = mode === 'swap' ? '滑动或依次点击高亮的两枚纹章' : '点击小血瓶恢复生命';
           var captionX = -47,
             captionWidth = 322;
           this.box('教学提示底板', captionX, 159, captionWidth, 36, '#27362ef0', layer);
           this.outline(this.label(caption, captionX, 159, captionWidth - 12, 19, layer));
-          var source = mode === 'swap' ? this.cells[1].position : new Vec3(interactionGrid.potionX, interactionGrid.potionY, 0);
+          var source = mode === 'swap' ? this.cells[1].position : new Vec3((_this$itemBar$center2 = (_this$itemBar3 = this.itemBar) == null ? void 0 : _this$itemBar3.center('potion')) != null ? _this$itemBar$center2 : 192, interactionGrid.potionY, 0);
           var dest = mode === 'swap' ? this.cells[8].position : source;
           this.guidePointer(layer, source, dest, mode === 'swap');
-          (_this$ui$getChildByNa5 = this.ui.getChildByName('直接胜利')) == null || _this$ui$getChildByNa5.setSiblingIndex(this.ui.children.length - 1);
+          (_this$ui$getChildByNa6 = this.ui.getChildByName('直接胜利')) == null || _this$ui$getChildByNa6.setSiblingIndex(this.ui.children.length - 1);
         };
         _proto.guidePointer = function guidePointer(layer, source, dest, swap) {
           if (swap === void 0) {
@@ -14571,58 +15569,58 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           });
         };
         _proto.openBattleReference = function openBattleReference(section) {
-          var _this49 = this;
+          var _this57 = this;
           if (this.battleModal || this.busy || this.guideMode) return;
           this.motion.pause();
           var panel = this.battleModal = this.uiManager.open('modal', function () {
-            return _this49.box('战斗弹窗', 0, 0, 480, 854, '#131a22b8');
+            return _this57.box('战斗弹窗', 0, 0, 480, 854, '#131a22b8');
           });
           var card = this.box('弹窗卡片', 0, 0, 430, 320, '#253a34', panel);
           this.outline(this.label(section, 0, 125, 390, 25, card));
           var lines = section === '任务' ? questBook.filter(function (q) {
-            var _this49$journal$entri;
-            return (_this49$journal$entri = _this49.journal.entries[q.id]) == null ? void 0 : _this49$journal$entri.active;
+            var _this57$journal$entri;
+            return (_this57$journal$entri = _this57.journal.entries[q.id]) == null ? void 0 : _this57$journal$entri.active;
           }).map(function (q) {
-            return q.title + ' · ' + (_this49.journal.ready(q, _this49.inventory.materials) ? '待交付' : '进行中');
+            return q.title + ' · ' + (_this57.journal.ready(q, _this57.inventory.materials) ? '待交付' : '进行中');
           }) : ['交换相邻纹章，连接至少三枚同类。', '四消和五消可生成强化纹章。', '每波先执行技能，再补棋。'];
           (lines.length ? lines : ['暂无进行中的任务']).slice(0, 5).forEach(function (text, i) {
-            return _this49.label(text, 0, 72 - i * 33, 400, 17, card);
+            return _this57.label(text, 0, 72 - i * 33, 400, 17, card);
           });
           this.button('返回战斗', -123, function () {
-            if (!_this49.uiManager.close('modal', panel)) return;
-            _this49.battleModal = undefined;
-            _this49.motion.resume();
-            _this49.autoStep();
+            if (!_this57.uiManager.close('modal', panel)) return;
+            _this57.battleModal = undefined;
+            _this57.motion.resume();
+            _this57.autoStep();
           }, 0, 180, false, card);
         };
         _proto.openBattleModal = function openBattleModal(mode) {
-          var _this50 = this;
+          var _this58 = this;
           if (this.battleModal || this.battlePhase === 'complete') return;
           this.clearGuide();
           this.motion.pause();
           if (this.trial) this.audio.playTrial('open');
           var panel = this.battleModal = this.uiManager.open('modal', function () {
-            return _this50.box('战斗弹窗', 0, 0, 480, 854, '#131a22b8');
+            return _this58.box('战斗弹窗', 0, 0, 480, 854, '#131a22b8');
           });
           var card = this.box('弹窗卡片', 0, 0, 432, mode === 'log' ? 480 : 234, '#253a34', panel);
           this.outline(this.label(mode === 'log' ? '战斗记录' : '撤离探索', 0, mode === 'log' ? 204 : 80, 390, 25, card));
           if (mode === 'log') {
             this.battleLogs.slice(-9).forEach(function (line, i) {
-              return _this50.label(line, 0, 152 - i * 34, 396, 16, card);
+              return _this58.label(line, 0, 152 - i * 34, 396, 16, card);
             });
           } else this.label('确定撤离当前探索？', 0, 19, 396, 19, card);
           var dismiss = function dismiss() {
-            if (_this50.battleModal !== panel) return;
-            _this50.uiManager.close('modal', panel);
-            _this50.battleModal = undefined;
-            _this50.motion.resume();
-            _this50.refreshGuide();
-            _this50.autoStep();
+            if (_this58.battleModal !== panel) return;
+            _this58.uiManager.close('modal', panel);
+            _this58.battleModal = undefined;
+            _this58.motion.resume();
+            _this58.refreshGuide();
+            _this58.autoStep();
           };
           var choice = function choice(label, x, y, action) {
-            _this50.button(label, y, function () {
-              if (_this50.battleModal !== panel) return;
-              if (_this50.trial) _this50.audio.playTrial('click');
+            _this58.button(label, y, function () {
+              if (_this58.battleModal !== panel) return;
+              if (_this58.trial) _this58.audio.playTrial('click');
               action();
             }, x, 169, false, card);
           };
@@ -14634,45 +15632,45 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                 location.reload();
                 return;
               }
-              if (_this50.stage4A) {
-                _this50.stopStage4A('retreat');
-                _this50.battleModal = undefined;
-                _this50.automatic = false;
-                _this50.busy = false;
-                _this50.map();
+              if (_this58.stage4A) {
+                _this58.stopStage4A('retreat');
+                _this58.battleModal = undefined;
+                _this58.automatic = false;
+                _this58.busy = false;
+                _this58.map();
                 return;
               }
-              _this50.motion.cancel();
-              _this50.battleModal = undefined;
-              _this50.finishAdventure('retreat');
+              _this58.motion.cancel();
+              _this58.battleModal = undefined;
+              _this58.finishAdventure('retreat');
             });
           } else choice('返回战斗', 0, -192, dismiss);
         };
         _proto.presentTownGold = /*#__PURE__*/function () {
-          var _presentTownGold = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee34(before, origin) {
+          var _presentTownGold = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee38(before, origin) {
             var motion, balance;
-            return _regeneratorRuntime().wrap(function _callee34$(_context36) {
-              while (1) switch (_context36.prev = _context36.next) {
+            return _regeneratorRuntime().wrap(function _callee38$(_context40) {
+              while (1) switch (_context40.prev = _context40.next) {
                 case 0:
                   motion = this.newPageMotion();
                   balance = this.currentCoinDisplay();
                   balance.string = String(before);
-                  _context36.prev = 3;
-                  _context36.next = 6;
+                  _context40.prev = 3;
+                  _context40.next = 6;
                   return this.animateCoins(motion, this.gold - before, balance, origin, stageGrid.groundY);
                 case 6:
-                  return _context36.abrupt("return", _context36.sent);
+                  return _context40.abrupt("return", _context40.sent);
                 case 7:
-                  _context36.prev = 7;
+                  _context40.prev = 7;
                   this.pageMotions["delete"](motion);
-                  return _context36.finish(7);
+                  return _context40.finish(7);
                 case 10:
                 case "end":
-                  return _context36.stop();
+                  return _context40.stop();
               }
-            }, _callee34, this, [[3,, 7, 10]]);
+            }, _callee38, this, [[3,, 7, 10]]);
           }));
-          function presentTownGold(_x54, _x55) {
+          function presentTownGold(_x63, _x64) {
             return _presentTownGold.apply(this, arguments);
           }
           return presentTownGold;
@@ -14682,35 +15680,38 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
 
         _proto.animateCoins = /*#__PURE__*/
         function () {
-          var _animateCoins = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee37(motion, amount, label, origin, groundY) {
-            var _this51 = this;
-            var root, active, base, setAmount, temporary, icon, opacity, fade, count, spacing, left, coins, burst, sparkle, i, angle, burstAlpha, hud, destination, displayed, target, pulse, rolling, rollCounter, _i12, _coins, node, _iterator40, _step40, alpha;
-            return _regeneratorRuntime().wrap(function _callee37$(_context39) {
-              while (1) switch (_context39.prev = _context39.next) {
+          var _animateCoins = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee41(motion, amount, label, origin, groundY, key) {
+            var _this59 = this;
+            var root, active, base, setAmount, temporary, icon, opacity, fade, count, spacing, left, coins, burst, sparkle, i, angle, burstAlpha, hud, destination, displayed, target, pulse, rolling, rollCounter, _i15, _coins, node, _iterator46, _step46, alpha;
+            return _regeneratorRuntime().wrap(function _callee41$(_context43) {
+              while (1) switch (_context43.prev = _context43.next) {
                 case 0:
+                  if (key === void 0) {
+                    key = 'gold';
+                  }
                   root = this.ui;
                   active = function active() {
-                    return !motion.cancelled && _this51.ui === root && label.isValid;
+                    return !motion.cancelled && _this59.ui === root && label.isValid;
                   };
                   if (!(!active() || amount <= 0)) {
-                    _context39.next = 4;
+                    _context43.next = 5;
                     break;
                   }
-                  return _context39.abrupt("return", active());
-                case 4:
+                  return _context43.abrupt("return", active());
+                case 5:
                   base = Number(label.string);
                   setAmount = function setAmount(value) {
                     if (active()) label.string = String(value);
                   };
                   if (!motion.reduced) {
-                    _context39.next = 9;
+                    _context43.next = 10;
                     break;
                   }
                   setAmount(base + amount);
-                  return _context39.abrupt("return", true);
-                case 9:
+                  return _context43.abrupt("return", true);
+                case 10:
                   temporary = this.eventCoinDisplays.has(label);
-                  icon = root.getChildByName('金币');
+                  icon = root.getChildByName(resourceNames[key]);
                   if (temporary) {
                     label.node.active = true;
                     if (icon) icon.active = true;
@@ -14734,15 +15735,15 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   coins = Array.from({
                     length: count
                   }, function (_, i) {
-                    var node = _this51.box('飞行金币', origin.x, origin.y, 13, 13);
-                    _this51.drawCoin(node.addComponent(Graphics), 6);
+                    var node = _this59.box('飞行' + resourceNames[key], origin.x, origin.y, 16, 16);
+                    _this59.art('material-' + key, 0, 0, 16, 16, node);
                     var ground = new Vec3(left + i * spacing, groundY + 6 + i % 2 * 4, 0);
                     return {
                       node: node,
                       ground: ground
                     };
                   });
-                  burst = this.box('金币爆出', origin.x, origin.y, 48, 48);
+                  burst = this.box(resourceNames[key] + '爆出', origin.x, origin.y, 48, 48);
                   sparkle = burst.addComponent(Graphics);
                   sparkle.strokeColor = Color.fromHEX(new Color(), '#ffe594');
                   sparkle.lineWidth = 2;
@@ -14759,49 +15760,49 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   target = base;
                   pulse = 0;
                   rollCounter = /*#__PURE__*/function () {
-                    var _ref30 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee35() {
+                    var _ref35 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee39() {
                       var step;
-                      return _regeneratorRuntime().wrap(function _callee35$(_context37) {
-                        while (1) switch (_context37.prev = _context37.next) {
+                      return _regeneratorRuntime().wrap(function _callee39$(_context41) {
+                        while (1) switch (_context41.prev = _context41.next) {
                           case 0:
                             step = Math.max(1, Math.ceil(amount / 20));
                           case 1:
                             if (!(displayed < target && active())) {
-                              _context37.next = 10;
+                              _context41.next = 10;
                               break;
                             }
-                            _context37.next = 4;
+                            _context41.next = 4;
                             return motion.play(tween({}).delay(.038));
                           case 4:
-                            if (_context37.sent) {
-                              _context37.next = 6;
+                            if (_context41.sent) {
+                              _context41.next = 6;
                               break;
                             }
-                            return _context37.abrupt("return");
+                            return _context41.abrupt("return");
                           case 6:
                             displayed = Math.min(target, displayed + step);
                             setAmount(displayed);
-                            _context37.next = 1;
+                            _context41.next = 1;
                             break;
                           case 10:
                           case "end":
-                            return _context37.stop();
+                            return _context41.stop();
                         }
-                      }, _callee35);
+                      }, _callee39);
                     }));
                     return function rollCounter() {
-                      return _ref30.apply(this, arguments);
+                      return _ref35.apply(this, arguments);
                     };
                   }();
-                  _context39.prev = 31;
-                  _context39.next = 34;
+                  _context43.prev = 32;
+                  _context43.next = 35;
                   return Promise.all([motion.play(tween(burst).to(.25, {
                     scale: new Vec3(1.5, 1.5, 1)
                   })), motion.play(tween(burstAlpha).to(.25, {
                     opacity: 0
-                  }))].concat(temporary ? [fade(255, .18)] : [], coins.map(function (_ref31, i) {
-                    var node = _ref31.node,
-                      ground = _ref31.ground;
+                  }))].concat(temporary ? [fade(255, .18)] : [], coins.map(function (_ref36, i) {
+                    var node = _ref36.node,
+                      ground = _ref36.ground;
                     return motion.play(tween(node).to(.14, {
                       position: new Vec3((ground.x + origin.x) / 2, origin.y + 24 + i % 3 * 4, 0)
                     }, {
@@ -14812,93 +15813,93 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                       easing: 'quadIn'
                     }));
                   })));
-                case 34:
+                case 35:
                   if (active()) {
-                    _context39.next = 36;
+                    _context43.next = 37;
                     break;
                   }
-                  return _context39.abrupt("return", false);
-                case 36:
-                  _context39.next = 38;
-                  return Promise.all(coins.map( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee36(_ref32, i) {
+                  return _context43.abrupt("return", false);
+                case 37:
+                  _context43.next = 39;
+                  return Promise.all(coins.map( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee40(_ref37, i) {
                     var _rolling;
                     var node, ground, bend, arrived, current;
-                    return _regeneratorRuntime().wrap(function _callee36$(_context38) {
-                      while (1) switch (_context38.prev = _context38.next) {
+                    return _regeneratorRuntime().wrap(function _callee40$(_context42) {
+                      while (1) switch (_context42.prev = _context42.next) {
                         case 0:
-                          node = _ref32.node, ground = _ref32.ground;
+                          node = _ref37.node, ground = _ref37.ground;
                           bend = (i - (count - 1) / 2) * 12;
-                          _context38.next = 4;
+                          _context42.next = 4;
                           return motion.play(tween({
                             progress: 0
                           }).delay(.15 + i * .064).to(.35, {
                             progress: 1
                           }, {
                             easing: 'quadIn',
-                            onUpdate: function onUpdate(_ref34) {
-                              var progress = _ref34.progress;
+                            onUpdate: function onUpdate(_ref39) {
+                              var progress = _ref39.progress;
                               if (!node.isValid) return;
                               var arc = Math.sin(Math.PI * progress);
                               node.setPosition(ground.x + (destination.x - ground.x) * progress + bend * arc, ground.y + (destination.y - ground.y) * progress + (38 + i % 2 * 9) * arc);
                             }
                           }));
                         case 4:
-                          arrived = _context38.sent;
+                          arrived = _context42.sent;
                           if (!(!arrived || !active())) {
-                            _context38.next = 7;
+                            _context42.next = 7;
                             break;
                           }
-                          return _context38.abrupt("return");
+                          return _context42.abrupt("return");
                         case 7:
                           node.destroy();
-                          _this51.audio.play('coins');
+                          if (key === 'gold') _this59.audio.play('coins');
                           target += Math.floor((i + 1) * amount / count) - Math.floor(i * amount / count);
                           (_rolling = rolling) != null ? _rolling : rolling = rollCounter()["finally"](function () {
                             rolling = undefined;
                           });
                           current = ++pulse;
                           hud.setScale(.585, .585, 1);
-                          _context38.next = 15;
+                          _context42.next = 15;
                           return motion.play(tween({
                             scale: 1.17
                           }).to(.12, {
                             scale: 1
                           }, {
-                            onUpdate: function onUpdate(_ref35) {
-                              var scale = _ref35.scale;
+                            onUpdate: function onUpdate(_ref40) {
+                              var scale = _ref40.scale;
                               if (current === pulse && active()) hud.setScale(scale * .5, scale * .5, 1);
                             }
                           }));
                         case 15:
                         case "end":
-                          return _context38.stop();
+                          return _context42.stop();
                       }
-                    }, _callee36);
+                    }, _callee40);
                   }))));
-                case 38:
-                  _context39.next = 40;
+                case 39:
+                  _context43.next = 41;
                   return rolling;
-                case 40:
+                case 41:
                   if (active()) {
-                    _context39.next = 42;
+                    _context43.next = 43;
                     break;
                   }
-                  return _context39.abrupt("return", false);
-                case 42:
+                  return _context43.abrupt("return", false);
+                case 43:
                   setAmount(base + amount);
                   if (!temporary) {
-                    _context39.next = 46;
+                    _context43.next = 47;
                     break;
                   }
-                  _context39.next = 46;
+                  _context43.next = 47;
                   return fade(0, .26);
-                case 46:
-                  return _context39.abrupt("return", active());
                 case 47:
-                  _context39.prev = 47;
+                  return _context43.abrupt("return", active());
+                case 48:
+                  _context43.prev = 48;
                   if (burst.isValid) burst.destroy();
-                  for (_i12 = 0, _coins = coins; _i12 < _coins.length; _i12++) {
-                    node = _coins[_i12].node;
+                  for (_i15 = 0, _coins = coins; _i15 < _coins.length; _i15++) {
+                    node = _coins[_i15].node;
                     if (node.isValid) node.destroy();
                   }
                   if (hud.isValid) {
@@ -14906,21 +15907,21 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     if (temporary) hud.active = false;
                   }
                   if (temporary) {
-                    for (_iterator40 = _createForOfIteratorHelperLoose(opacity); !(_step40 = _iterator40()).done;) {
-                      alpha = _step40.value;
+                    for (_iterator46 = _createForOfIteratorHelperLoose(opacity); !(_step46 = _iterator46()).done;) {
+                      alpha = _step46.value;
                       if (alpha.isValid) alpha.opacity = 0;
                     }
                     if (icon != null && icon.isValid) icon.active = false;
                   }
                   if (!active() && this.ui === root && label.isValid) label.string = String(base);
-                  return _context39.finish(47);
-                case 54:
+                  return _context43.finish(48);
+                case 55:
                 case "end":
-                  return _context39.stop();
+                  return _context43.stop();
               }
-            }, _callee37, this, [[31,, 47, 54]]);
+            }, _callee41, this, [[32,, 48, 55]]);
           }));
-          function animateCoins(_x56, _x57, _x58, _x59, _x60) {
+          function animateCoins(_x65, _x66, _x67, _x68, _x69, _x70) {
             return _animateCoins.apply(this, arguments);
           }
           return animateCoins;
@@ -14929,7 +15930,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var _this$popupPool$pop,
             _this$popupLayer2,
             _n$getComponent,
-            _this52 = this;
+            _this60 = this;
           if (size === void 0) {
             size = 27;
           }
@@ -14972,7 +15973,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           })["finally"](function () {
             if (!n.isValid) return;
             n.active = false;
-            if (_this52.popupPool.length < 24) _this52.popupPool.push(n);else n.destroy();
+            if (_this60.popupPool.length < 24) _this60.popupPool.push(n);else n.destroy();
           });
         };
         _proto.emissionPoint = function emissionPoint(actor) {
@@ -14987,25 +15988,25 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           return new Vec3(actor.position.x + (profile.projectileX - .5) * bounds.width * side, actor.position.y + (.5 - profile.projectileY) * bounds.height, 0);
         };
         _proto.flyProjectile = /*#__PURE__*/function () {
-          var _flyProjectile = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee38(motion, type, origin, target) {
+          var _flyProjectile = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee42(motion, type, origin, target) {
             var _heroes$type7,
-              _this53 = this;
+              _this61 = this;
             var projectile, trails, arrived;
-            return _regeneratorRuntime().wrap(function _callee38$(_context40) {
-              while (1) switch (_context40.prev = _context40.next) {
+            return _regeneratorRuntime().wrap(function _callee42$(_context44) {
+              while (1) switch (_context44.prev = _context44.next) {
                 case 0:
                   projectile = this.art(type === 'archer' ? 'archer' : 'projectiles/' + (((_heroes$type7 = heroes[type]) == null ? void 0 : _heroes$type7.discipline) === 'magic' ? 'm' : 'stone'), origin.x, origin.y, 32, 32);
                   if (projectile) {
-                    _context40.next = 3;
+                    _context44.next = 3;
                     break;
                   }
-                  return _context40.abrupt("return", true);
+                  return _context44.abrupt("return", true);
                 case 3:
                   trails = motion.reduced ? [] : Array.from({
                     length: 4
                   }, function (_, i) {
                     var _heroes$type8;
-                    var n = _this53.box('投射物拖尾', origin.x, origin.y, 8 - i, 8 - i, ((_heroes$type8 = heroes[type]) == null ? void 0 : _heroes$type8.action) === 'm' ? '#ba90f0' : '#d1b58a');
+                    var n = _this61.box('投射物拖尾', origin.x, origin.y, 8 - i, 8 - i, ((_heroes$type8 = heroes[type]) == null ? void 0 : _heroes$type8.action) === 'm' ? '#ba90f0' : '#d1b58a');
                     var alpha = n.addComponent(UIOpacity);
                     alpha.opacity = 143 - i * 25;
                     n.setSiblingIndex(projectile.getSiblingIndex());
@@ -15019,26 +16020,26 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                       return played;
                     });
                   });
-                  _context40.next = 6;
+                  _context44.next = 6;
                   return motion.play(tween(projectile).to(motion.duration(.18), {
                     position: target.clone()
                   }, {
                     easing: 'quadIn'
                   }));
                 case 6:
-                  arrived = _context40.sent;
+                  arrived = _context44.sent;
                   if (projectile.isValid) projectile.destroy();
-                  _context40.next = 10;
+                  _context44.next = 10;
                   return Promise.all(trails);
                 case 10:
-                  return _context40.abrupt("return", arrived && !motion.cancelled);
+                  return _context44.abrupt("return", arrived && !motion.cancelled);
                 case 11:
                 case "end":
-                  return _context40.stop();
+                  return _context44.stop();
               }
-            }, _callee38, this);
+            }, _callee42, this);
           }));
-          function flyProjectile(_x63, _x64, _x65, _x66) {
+          function flyProjectile(_x73, _x74, _x75, _x76) {
             return _flyProjectile.apply(this, arguments);
           }
           return flyProjectile;
@@ -15066,15 +16067,15 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           });
         };
         _proto.burst = function burst(motion, x, y, color, count) {
-          var _this54 = this;
+          var _this62 = this;
           if (motion.reduced) return [];
           return Array.from({
             length: count
           }, function (_, i) {
-            var _this54$particlePool$, _node$getComponent2;
+            var _this62$particlePool$, _node$getComponent2;
             var angle = i * 2 * Math.PI / count;
-            var root = _this54.ui;
-            var node = (_this54$particlePool$ = _this54.particlePool.pop()) != null ? _this54$particlePool$ : _this54.box('粒子', x, y, 8, 8);
+            var root = _this62.ui;
+            var node = (_this62$particlePool$ = _this62.particlePool.pop()) != null ? _this62$particlePool$ : _this62.box('粒子', x, y, 8, 8);
             var g = (_node$getComponent2 = node.getComponent(Graphics)) != null ? _node$getComponent2 : node.addComponent(Graphics);
             g.clear();
             g.fillColor = Color.fromHEX(new Color(), color);
@@ -15088,9 +16089,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               position: new Vec3(x + Math.cos(angle) * 30, y + Math.sin(angle) * 25, 0),
               scale: new Vec3(.2, .2, 1)
             })).then(function (played) {
-              if (node.isValid && _this54.ui === root) {
+              if (node.isValid && _this62.ui === root) {
                 node.active = false;
-                _this54.particlePool.push(node);
+                _this62.particlePool.push(node);
               }
               return played;
             });
@@ -15110,9 +16111,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           if (side === void 0) {
             side = 'left';
           }
-          var _ref36 = (_portraitFootprint$ar = portraitFootprint[art]) != null ? _portraitFootprint$ar : [.14, .86],
-            left = _ref36[0],
-            right = _ref36[1];
+          var _ref41 = (_portraitFootprint$ar = portraitFootprint[art]) != null ? _portraitFootprint$ar : [.14, .86],
+            left = _ref41[0],
+            right = _ref41[1];
           var profile = actorArt[art];
           var facing = side === 'right' ? -1 : 1;
           var x = (((left + right) * .5 - .5) * width + ((_profile$shadowOffset = profile == null ? void 0 : profile.shadowOffsetX) != null ? _profile$shadowOffset : 0)) * facing;
@@ -15125,12 +16126,19 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           g.ellipse(0, 0, radius, height);
           g.fill();
         };
+        _proto.fieldAttack = function fieldAttack(base) {
+          return Math.round(base * 1.75);
+        };
         _proto.resolveBattleFoes = function resolveBattleFoes(room, hp, phase) {
+          var _this63 = this;
           var encounters = (room == null ? void 0 : room.kind) === 'battle' ? room.encounters : undefined;
           var defaults = phase === 'wolves' ? [enemy('灰狼', 'wolf', 72, 3), enemy('林狼', 'forest-wolf', 72, 3)] : [enemy('裂印巨狼', 'boss', 100, 7)];
           return hp.map(function (value, index) {
-            var _ref37, _encounters$index;
-            return (_ref37 = (_encounters$index = encounters == null ? void 0 : encounters[index]) != null ? _encounters$index : defaults[index]) != null ? _ref37 : enemy('裂印兽', 'boar', value, 10);
+            var _ref42, _encounters$index;
+            var foe = (_ref42 = (_encounters$index = encounters == null ? void 0 : encounters[index]) != null ? _encounters$index : defaults[index]) != null ? _ref42 : enemy('裂印兽', 'boar', value, 10);
+            return phase === 'wolves' || phase === 'lessonBoss' ? foe : _extends({}, foe, {
+              atk: _this63.fieldAttack(foe.atk)
+            });
           });
         };
         _proto.enemyPlacement = function enemyPlacement(foe, count, index) {
@@ -15157,33 +16165,33 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }, 0) / Math.max(1, slots.length);
         };
         _proto.skillWindup = /*#__PURE__*/function () {
-          var _skillWindup = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee39(motion, actor, name, advanced) {
+          var _skillWindup = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee43(motion, actor, name, advanced) {
             var scale, ok;
-            return _regeneratorRuntime().wrap(function _callee39$(_context41) {
-              while (1) switch (_context41.prev = _context41.next) {
+            return _regeneratorRuntime().wrap(function _callee43$(_context45) {
+              while (1) switch (_context45.prev = _context45.next) {
                 case 0:
                   if (advanced === void 0) {
                     advanced = false;
                   }
                   void this.skillCallout(motion, name, actor.position, advanced);
                   scale = actor.scale.clone();
-                  _context41.next = 5;
+                  _context45.next = 5;
                   return motion.play(tween(actor).to(motion.duration(.1), {
                     scale: new Vec3(scale.x * 1.035, scale.y * .965, scale.z)
                   }, {
                     easing: 'sineIn'
                   }));
                 case 5:
-                  ok = _context41.sent;
+                  ok = _context45.sent;
                   if (actor.isValid) actor.setScale(scale);
-                  return _context41.abrupt("return", ok && !motion.cancelled);
+                  return _context45.abrupt("return", ok && !motion.cancelled);
                 case 8:
                 case "end":
-                  return _context41.stop();
+                  return _context45.stop();
               }
-            }, _callee39, this);
+            }, _callee43, this);
           }));
-          function skillWindup(_x67, _x68, _x69, _x70) {
+          function skillWindup(_x77, _x78, _x79, _x80) {
             return _skillWindup.apply(this, arguments);
           }
           return skillWindup;
@@ -15196,11 +16204,11 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }).sort(function (a, b) {
             return Number(a.front) - Number(b.front);
           });
-          for (var _iterator41 = _createForOfIteratorHelperLoose(slots), _step41; !(_step41 = _iterator41()).done;) {
-            var _step41$value = _step41.value,
-              id = _step41$value.id,
-              x = _step41$value.x,
-              front = _step41$value.front;
+          for (var _iterator47 = _createForOfIteratorHelperLoose(slots), _step47; !(_step47 = _iterator47()).done;) {
+            var _step47$value = _step47.value,
+              id = _step47$value.id,
+              x = _step47$value.x,
+              front = _step47$value.front;
             var ground = front ? stageGrid.groundY : stageGrid.rearGroundY;
             var art = 'hero-' + id;
             var y = this.portraitY(art, ground, size);
@@ -15209,8 +16217,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             this.art(art, 0, 0, size, size, actor);
             this.heroes.set(id, actor);
           }
-          for (var _iterator42 = _createForOfIteratorHelperLoose(this.ui.children.slice()), _step42; !(_step42 = _iterator42()).done;) {
-            var backdrop = _step42.value;
+          for (var _iterator48 = _createForOfIteratorHelperLoose(this.ui.children.slice()), _step48; !(_step48 = _iterator48()).done;) {
+            var backdrop = _step48.value;
             this.scenery.raiseForeground(backdrop, this.ui);
           }
         };
@@ -15221,7 +16229,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         _proto.page = function page(title, detail, background, options) {
           var _exec,
             _Array$from$find,
-            _this55 = this;
+            _this64 = this;
           if (background === void 0) {
             background = 'stage-forest-0';
           }
@@ -15232,7 +16240,17 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.speechOwner = (_exec = /^([^：:]+)[：:]/.exec(detail)) == null ? void 0 : _exec[1];
           if (options.party !== false) this.showParty();else this.heroes.clear();
           this.stageHeading(title);
-          if (detail) {
+          if (detail && this.speechOwner) {
+            var top = 136,
+              lines = Math.max(1, Math.ceil(detail.length / 21)),
+              height = 30 + lines * 24;
+            this.dialogueBottom = top - height;
+            var panel = this.box('对话文本框', 0, top - height / 2, 432, height, '#172923', this.ui);
+            this.box('对话内框', 0, 0, 426, height - 6, '#33483c', panel);
+            var label = this.label(detail, 0, 0, 396, 18, panel);
+            label.horizontalAlign = Label.HorizontalAlign.LEFT;
+            label.node.getComponent(UITransform).setContentSize(792, (height - 14) * 2);
+          } else if (detail) {
             this.box('Scene information', 0, 122, 456, 27, '#263c32');
             this.label(detail, 0, 122, 442, 17);
           }
@@ -15246,16 +16264,16 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               this.setMeter(stageGuard, this.dp, this.maxDP, String(this.dp));
             }
           }
-          if (options.gold !== false) this.coinText = this.makeCoinDisplay();
+          if (options.gold !== false) this.coinText = this.makeCoinDisplay(options.alwaysShowGold ? false : undefined);
           if (this.town.blessing) {
             var node = this.box('全局祝福', -150, this.showsGuard ? 299 : 330, 24, 24, '#314e3a');
             this.art('h', 0, 0, 20, 20, node);
             this.outline(this.label('1', 7, -7, 18, 11, node));
           }
-          var speaker = (_Array$from$find = Array.from(this.heroes.entries()).find(function (_ref38) {
+          var speaker = (_Array$from$find = Array.from(this.heroes.entries()).find(function (_ref43) {
             var _heroes$id;
-            var id = _ref38[0];
-            return ((_heroes$id = heroes[id]) == null ? void 0 : _heroes$id.name) === _this55.speechOwner;
+            var id = _ref43[0];
+            return ((_heroes$id = heroes[id]) == null ? void 0 : _heroes$id.name) === _this64.speechOwner;
           })) == null ? void 0 : _Array$from$find[1];
           if (speaker) this.popSpeaker(speaker);
         };
@@ -15275,7 +16293,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.showRoom();
         };
         _proto.testLevelMenu = function testLevelMenu(page) {
-          var _this56 = this,
+          var _this65 = this,
             _this$ui$getComponent;
           if (page === void 0) {
             page = 0;
@@ -15283,19 +16301,19 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var paging = mechanismPage(page);
           this.page('测试关卡', '固定四人 · 无装备与增益 · 棋盘保留 · 无限战斗');
           testMechanisms.slice(paging.start, paging.end).forEach(function (entry, i) {
-            _this56.button(entry.title, 70 - Math.floor(i / 3) * 100, function () {
-              return _this56.startMineTrial(entry.id);
+            _this65.button(entry.title, 70 - Math.floor(i / 3) * 100, function () {
+              return _this65.startMineTrial(entry.id);
             }, (i % 3 - 1) * 150, 142);
           });
           this.label(paging.page + 1 + " / " + paging.pages, 0, -235, 160, 18);
           if (paging.page > 0) this.button('上一页', -235, function () {
-            return _this56.testLevelMenu(page - 1);
+            return _this65.testLevelMenu(page - 1);
           }, -145, 120);
           if (paging.page + 1 < paging.pages) this.button('下一页', -235, function () {
-            return _this56.testLevelMenu(page + 1);
+            return _this65.testLevelMenu(page + 1);
           }, 145, 120);
           this.button('返回主菜单', -302, function () {
-            return _this56.menu();
+            return _this65.menu();
           });
           var motion = this.newPageMotion(),
             opacity = (_this$ui$getComponent = this.ui.getComponent(UIOpacity)) != null ? _this$ui$getComponent : this.ui.addComponent(UIOpacity);
@@ -15309,61 +16327,42 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           if (this.mechanismAudit.length > 256) this.mechanismAudit.shift();
         };
         _proto.drawRock = function drawRock(node, layers) {
-          for (var _iterator43 = _createForOfIteratorHelperLoose(node.children.slice()), _step43; !(_step43 = _iterator43()).done;) {
-            var child = _step43.value;
+          for (var _iterator49 = _createForOfIteratorHelperLoose(node.children.slice()), _step49; !(_step49 = _iterator49()).done;) {
+            var child = _step49.value;
             child.removeFromParent();
             child.destroy();
           }
-          var gnode = this.box('碎岩', 0, 0, 48, 48, undefined, node),
-            g = gnode.addComponent(Graphics);
-          g.fillColor = Color.fromHEX(new Color(), layers > 1 ? '#827287' : '#777780');
-          g.moveTo(-23, -15);
-          g.lineTo(-19, 17);
-          g.lineTo(3, 24);
-          g.lineTo(23, 12);
-          g.lineTo(20, -20);
-          g.lineTo(-7, -24);
-          g.close();
-          g.fill();
-          g.strokeColor = Color.fromHEX(new Color(), '#292a36');
-          g.lineWidth = 3;
-          g.stroke();
-          g.moveTo(-14, 12);
-          g.lineTo(1, 2);
-          g.lineTo(-4, -10);
-          g.moveTo(1, 2);
-          g.lineTo(15, -3);
-          g.stroke();
+          this.art('board/rock', 0, 0, 52, 52, node);
           var counter = this.outline(this.label(String(layers), 16, -15, 17, 13, node));
           counter.isBold = true;
         };
         _proto.drawMechanismMarkers = function drawMechanismMarkers() {
-          var _this57 = this;
+          var _this66 = this;
           if (!this.trial) return;
           var blocked = this.blockedBoardCells,
             entries = new Set(blocked.size || this.challenge ? this.boardRoutes.map(function (path) {
               return path[0];
             }).filter(function (i) {
-              var _this57$challenge;
-              return !blocked.has(i) && !((_this57$challenge = _this57.challenge) != null && _this57$challenge.locks.has(i));
+              var _this66$challenge;
+              return !blocked.has(i) && !((_this66$challenge = _this66.challenge) != null && _this66$challenge.locks.has(i));
             }) : []);
           this.cells.forEach(function (cell, index) {
-            var _this57$trial;
+            var _this66$trial;
             var old = cell.getChildByName('机制格 ' + index);
             if (old) {
               old.removeFromParent();
               old.destroy();
             }
-            var state = _this57.challenge;
+            var state = _this66.challenge;
             var locked = state == null ? void 0 : state.locks.has(index);
-            if (_this57.holes.has(index) && (state == null ? void 0 : state.id) !== 'pillar') return;
-            var portal = ((_this57$trial = _this57.trial) == null ? void 0 : _this57$trial.id) === 'portal' ? portalLinks.findIndex(function (pair) {
+            if (_this66.holes.has(index) && (state == null ? void 0 : state.id) !== 'pillar') return;
+            var portal = ((_this66$trial = _this66.trial) == null ? void 0 : _this66$trial.id) === 'portal' ? portalLinks.findIndex(function (pair) {
               return pair.includes(index);
             }) : -1;
-            if (!_this57.jelly.has(index) && portal < 0 && !entries.has(index) && !locked && !state) return;
-            var mark = _this57.box('机制格 ' + index, 0, 0, 55, 55, undefined, cell),
+            if (!_this66.jelly.has(index) && portal < 0 && !entries.has(index) && !locked && !state) return;
+            var mark = _this66.box('机制格 ' + index, 0, 0, 55, 55, undefined, cell),
               g = mark.addComponent(Graphics);
-            if (_this57.jelly.has(index)) {
+            if (_this66.jelly.has(index)) {
               g.fillColor = Color.fromHEX(new Color(), '#35c589bb');
               g.roundRect(-26, -26, 52, 52, 9);
               g.fill();
@@ -15378,7 +16377,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               g.lineWidth = 3;
               g.circle(0, 0, 25);
               g.stroke();
-              _this57.outline(_this57.label("" + (portal ? 'B' : 'A') + (entry ? '入' : '出'), 0, -21, 42, 10, mark));
+              _this66.outline(_this66.label("" + (portal ? 'B' : 'A') + (entry ? '入' : '出'), 0, -21, 42, 10, mark));
             }
             if (entries.has(index)) {
               g.fillColor = Color.fromHEX(new Color(), '#8ae5e7');
@@ -15386,7 +16385,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               g.fill();
             }
             if (!state) return;
-            if (locked || _this57.holes.has(index)) {
+            if (locked || _this66.holes.has(index)) {
               var color = state.id === 'growth' ? '#71bc81' : state.id === 'wire' ? '#eac36a' : '#d79ef4';
               g.fillColor = Color.fromHEX(new Color(), state.id === 'pillar' ? '#55496a' : '#402b59');
               g.strokeColor = Color.fromHEX(new Color(), color);
@@ -15394,13 +16393,13 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               g.roundRect(-27, -27, 54, 54, 7);
               g.fill();
               g.stroke();
-              _this57.outline(_this57.label(state.id === 'pillar' ? '柱' : String(state.locks.get(index) || '✓'), 21, 20, 16, 13, mark));
+              _this66.outline(_this66.label(state.id === 'pillar' ? '柱' : String(state.locks.get(index) || '✓'), 21, 20, 16, 13, mark));
             }
-            if (state.id === 'seam') for (var _i13 = 0, _arr4 = [[index + 1, 30, 0], [index + 7, 0, -30]]; _i13 < _arr4.length; _i13++) {
-              var _arr4$_i = _arr4[_i13],
-                other = _arr4$_i[0],
-                x = _arr4$_i[1],
-                y = _arr4$_i[2];
+            if (state.id === 'seam') for (var _i16 = 0, _arr5 = [[index + 1, 30, 0], [index + 7, 0, -30]]; _i16 < _arr5.length; _i16++) {
+              var _arr5$_i = _arr5[_i16],
+                other = _arr5$_i[0],
+                x = _arr5$_i[1],
+                y = _arr5$_i[2];
               if (!challengeEdge(state.id, index, other)) {
                 g.fillColor = new Color(237, 171, 101);
                 if (x) g.rect(28, -27, 4, 54);else g.rect(-27, y - 2, 54, 4);
@@ -15414,30 +16413,30 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               g.stroke();
             }
             if (state.id === 'updraft' && entries.has(index)) {
-              _this57.outline(_this57.label(index >= 49 ? '↑' : '↓', -19, 19, 15, 15, mark));
+              _this66.outline(_this66.label(index >= 49 ? '↑' : '↓', -19, 19, 15, 15, mark));
             }
-            if (state.id === 'source' && index === sourceEntry) _this57.outline(_this57.label('矿工入口', 0, 25, 52, 10, mark));
+            if (state.id === 'source' && index === sourceEntry) _this66.outline(_this66.label('矿工入口', 0, 25, 52, 10, mark));
           });
         };
         _proto.applyBoardMechanismWave = /*#__PURE__*/function () {
-          var _applyBoardMechanismWave = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee40(motion, plan) {
+          var _applyBoardMechanismWave = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee44(motion, plan) {
             var _this$dungeon9,
-              _this$trial18,
-              _this58 = this,
-              _this$trial19;
-            var root, room, _this$boardFx6, _this$dungeon10, result, played, _iterator44, _step44, _index15, _this$dungeon11, _result, effects, _played, _iterator45, _step45, node;
-            return _regeneratorRuntime().wrap(function _callee40$(_context42) {
-              while (1) switch (_context42.prev = _context42.next) {
+              _this$trial21,
+              _this67 = this,
+              _this$trial22;
+            var root, room, _this$boardFx7, _this$dungeon10, result, played, _iterator50, _step50, _index15, _this$dungeon11, _result, effects, _played, _iterator51, _step51, node;
+            return _regeneratorRuntime().wrap(function _callee44$(_context46) {
+              while (1) switch (_context46.prev = _context46.next) {
                 case 0:
                   root = this.ui, room = (_this$dungeon9 = this.dungeon) == null ? void 0 : _this$dungeon9.room;
-                  if (!(((_this$trial18 = this.trial) == null ? void 0 : _this$trial18.id) === 'rocks')) {
-                    _context42.next = 18;
+                  if (!(((_this$trial21 = this.trial) == null ? void 0 : _this$trial21.id) === 'rocks')) {
+                    _context46.next = 18;
                     break;
                   }
                   result = damageRocks(this.rocks, plan.matched);
-                  _context42.next = 5;
+                  _context46.next = 5;
                   return Promise.all(result.hits.map(function (index) {
-                    var tile = _this58.tiles[index];
+                    var tile = _this67.tiles[index];
                     return motion.play(tween(tile).to(motion.duration(.07), {
                       scale: new Vec3(.82, .82, 1)
                     }).to(motion.duration(.12), {
@@ -15445,15 +16444,15 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     }));
                   }));
                 case 5:
-                  played = _context42.sent;
+                  played = _context46.sent;
                   if (!(!motion.cancelled && result.cleared.length)) {
-                    _context42.next = 9;
+                    _context46.next = 9;
                     break;
                   }
-                  _context42.next = 9;
-                  return (_this$boardFx6 = this.boardFx) == null ? void 0 : _this$boardFx6.clear(motion, result.cleared.map(function (index) {
+                  _context46.next = 9;
+                  return (_this$boardFx7 = this.boardFx) == null ? void 0 : _this$boardFx7.clear(motion, result.cleared.map(function (index) {
                     return {
-                      position: _this58.cells[index].position,
+                      position: _this67.cells[index].position,
                       color: new Color(180, 170, 150)
                     };
                   }));
@@ -15461,14 +16460,14 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   if (!(motion.cancelled || played.some(function (ok) {
                     return !ok;
                   }) || this.ui !== root || ((_this$dungeon10 = this.dungeon) == null ? void 0 : _this$dungeon10.room) !== room)) {
-                    _context42.next = 11;
+                    _context46.next = 11;
                     break;
                   }
-                  return _context42.abrupt("return", false);
+                  return _context46.abrupt("return", false);
                 case 11:
                   this.rocks = result.next;
-                  for (_iterator44 = _createForOfIteratorHelperLoose(result.hits); !(_step44 = _iterator44()).done;) {
-                    _index15 = _step44.value;
+                  for (_iterator50 = _createForOfIteratorHelperLoose(result.hits); !(_step50 = _iterator50()).done;) {
+                    _index15 = _step50.value;
                     if (this.rocks.has(_index15)) this.drawRock(this.tiles[_index15], this.rocks.get(_index15));else {
                       plan.removed.add(_index15);
                       this.tiles[_index15].active = false;
@@ -15483,19 +16482,19 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   }
                   this.drawMechanismMarkers();
                   this.refreshTestObjective();
-                  _context42.next = 30;
+                  _context46.next = 30;
                   break;
                 case 18:
-                  if (!(((_this$trial19 = this.trial) == null ? void 0 : _this$trial19.id) === 'jelly')) {
-                    _context42.next = 30;
+                  if (!(((_this$trial22 = this.trial) == null ? void 0 : _this$trial22.id) === 'jelly')) {
+                    _context46.next = 30;
                     break;
                   }
                   _result = spreadJelly(this.jelly, plan.components), effects = _result.added.map(function (index) {
-                    var node = _this58.box('黏液扩散', 0, 0, 54, 54, '#64e5a4b0', _this58.cells[index]);
+                    var node = _this67.box('黏液扩散', 0, 0, 54, 54, '#64e5a4b0', _this67.cells[index]);
                     node.setScale(.35, .35, 1);
                     return node;
                   });
-                  _context42.next = 22;
+                  _context46.next = 22;
                   return Promise.all(effects.map(function (node) {
                     return motion.play(tween(node).to(motion.duration(.18), {
                       scale: new Vec3(1, 1, 1)
@@ -15504,9 +16503,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     }));
                   }));
                 case 22:
-                  _played = _context42.sent;
-                  for (_iterator45 = _createForOfIteratorHelperLoose(effects); !(_step45 = _iterator45()).done;) {
-                    node = _step45.value;
+                  _played = _context46.sent;
+                  for (_iterator51 = _createForOfIteratorHelperLoose(effects); !(_step51 = _iterator51()).done;) {
+                    node = _step51.value;
                     if (node.isValid) {
                       node.removeFromParent();
                       node.destroy();
@@ -15515,10 +16514,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   if (!(motion.cancelled || _played.some(function (ok) {
                     return !ok;
                   }) || this.ui !== root || ((_this$dungeon11 = this.dungeon) == null ? void 0 : _this$dungeon11.room) !== room)) {
-                    _context42.next = 26;
+                    _context46.next = 26;
                     break;
                   }
-                  return _context42.abrupt("return", false);
+                  return _context46.abrupt("return", false);
                 case 26:
                   this.jelly = _result.next;
                   if (_result.added.length) this.logMechanism({
@@ -15528,42 +16527,42 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   this.drawMechanismMarkers();
                   this.refreshTestObjective();
                 case 30:
-                  return _context42.abrupt("return", !motion.cancelled);
+                  return _context46.abrupt("return", !motion.cancelled);
                 case 31:
                 case "end":
-                  return _context42.stop();
+                  return _context46.stop();
               }
-            }, _callee40, this);
+            }, _callee44, this);
           }));
-          function applyBoardMechanismWave(_x71, _x72) {
+          function applyBoardMechanismWave(_x81, _x82) {
             return _applyBoardMechanismWave.apply(this, arguments);
           }
           return applyBoardMechanismWave;
         }();
         _proto.drawChallengePowers = function drawChallengePowers() {
-          var _this59 = this;
+          var _this68 = this;
           var state = this.challenge;
           if (!state || !state.powers.size) return;
           this.tiles.forEach(function (node) {
-            var id = _this59.restoredTileIds.get(node);
+            var id = _this68.restoredTileIds.get(node);
             var power = id && state.powers.get(id);
             if (!power) return;
             var badge = node.getChildByName('试炼标记');
             if (!badge) {
-              badge = _this59.box('试炼标记', 17, 19, 20, 18, power === 'bomb' ? '#962d4c' : '#373489', node);
-              _this59.outline(_this59.label('', 0, 0, 22, 12, badge));
+              badge = _this68.box('试炼标记', 17, 19, 20, 18, power === 'bomb' ? '#962d4c' : '#373489', node);
+              _this68.outline(_this68.label('', 0, 0, 22, 12, badge));
             }
             badge.getComponentInChildren(Label).string = power === 'bomb' ? String(Math.max(0, 8 - state.moves)) : powerLabel[power];
           });
         };
         _proto.applyTestChallengeWave = /*#__PURE__*/function () {
-          var _applyTestChallengeWave = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee41(motion, plan, wave, fusion) {
+          var _applyTestChallengeWave = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee45(motion, plan, wave, fusion) {
             var _this$dungeon12,
-              _this60 = this,
+              _this69 = this,
               _this$dungeon13;
-            var state, room, locks, activations, targets, used, extra, progress, _loop9, _iterator46, _step46, _iterator47, _step47, _index16, _this$boardFx7, _iterator48, _step48, _index17, _iterator49, _step49, _index18, id, _iterator50, _step50, _id, _iterator51, _step51, _index19, badge, _iterator52, _step52, cell;
-            return _regeneratorRuntime().wrap(function _callee41$(_context44) {
-              while (1) switch (_context44.prev = _context44.next) {
+            var state, room, locks, activations, targets, used, extra, progress, _loop10, _iterator52, _step52, _iterator53, _step53, _index16, _this$boardFx8, _iterator54, _step54, _index17, _iterator55, _step55, _index18, id, _iterator56, _step56, _id, _iterator57, _step57, _index19, badge, _iterator58, _step58, cell;
+            return _regeneratorRuntime().wrap(function _callee45$(_context48) {
+              while (1) switch (_context48.prev = _context48.next) {
                 case 0:
                   state = this.challenge;
                   room = (_this$dungeon12 = this.dungeon) == null ? void 0 : _this$dungeon12.room;
@@ -15573,75 +16572,75 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   used = new Set();
                   extra = new Set(fusion);
                   progress = 0;
-                  _loop9 = /*#__PURE__*/_regeneratorRuntime().mark(function _loop9() {
+                  _loop10 = /*#__PURE__*/_regeneratorRuntime().mark(function _loop10() {
                     var index, id, power, cells;
-                    return _regeneratorRuntime().wrap(function _loop9$(_context43) {
-                      while (1) switch (_context43.prev = _context43.next) {
+                    return _regeneratorRuntime().wrap(function _loop10$(_context47) {
+                      while (1) switch (_context47.prev = _context47.next) {
                         case 0:
-                          index = _step46.value;
-                          id = _this60.restoredTileIds.get(_this60.tiles[index]);
+                          index = _step52.value;
+                          id = _this69.restoredTileIds.get(_this69.tiles[index]);
                           power = id && state.powers.get(id);
                           if (!(!id || !power)) {
-                            _context43.next = 5;
+                            _context47.next = 5;
                             break;
                           }
-                          return _context43.abrupt("return", 1);
+                          return _context47.abrupt("return", 1);
                         case 5:
                           used.add(id);
-                          cells = powerCells(power, index, _this60.board, targets);
+                          cells = powerCells(power, index, _this69.board, targets);
                           cells.forEach(function (cell) {
-                            if (_this60.board[cell] === minerEmblem || locks.next.has(cell) || plan.anchors.has(cell)) return;
-                            var targetId = _this60.restoredTileIds.get(_this60.tiles[cell]);
-                            if (!plan.matched.has(cell) && !fusion.includes(cell) && (_this60.chargedTiles.has(_this60.tiles[cell]) || targetId && state.powers.has(targetId))) return;
+                            if (_this69.board[cell] === minerEmblem || locks.next.has(cell) || plan.anchors.has(cell)) return;
+                            var targetId = _this69.restoredTileIds.get(_this69.tiles[cell]);
+                            if (!plan.matched.has(cell) && !fusion.includes(cell) && (_this69.chargedTiles.has(_this69.tiles[cell]) || targetId && state.powers.has(targetId))) return;
                             extra.add(cell);
                             if (power === 'seeker') targets["delete"](cell);
                           });
                           if (power !== 'bomb') progress++;
                         case 9:
                         case "end":
-                          return _context43.stop();
+                          return _context47.stop();
                       }
-                    }, _loop9);
+                    }, _loop10);
                   });
-                  _iterator46 = _createForOfIteratorHelperLoose(activations);
+                  _iterator52 = _createForOfIteratorHelperLoose(activations);
                 case 10:
-                  if ((_step46 = _iterator46()).done) {
-                    _context44.next = 16;
+                  if ((_step52 = _iterator52()).done) {
+                    _context48.next = 16;
                     break;
                   }
-                  return _context44.delegateYield(_loop9(), "t0", 12);
+                  return _context48.delegateYield(_loop10(), "t0", 12);
                 case 12:
-                  if (!_context44.t0) {
-                    _context44.next = 14;
+                  if (!_context48.t0) {
+                    _context48.next = 14;
                     break;
                   }
-                  return _context44.abrupt("continue", 14);
+                  return _context48.abrupt("continue", 14);
                 case 14:
-                  _context44.next = 10;
+                  _context48.next = 10;
                   break;
                 case 16:
-                  for (_iterator47 = _createForOfIteratorHelperLoose(plan.removed); !(_step47 = _iterator47()).done;) {
-                    _index16 = _step47.value;
+                  for (_iterator53 = _createForOfIteratorHelperLoose(plan.removed); !(_step53 = _iterator53()).done;) {
+                    _index16 = _step53.value;
                     extra["delete"](_index16);
                   }
                   if (!(locks.hits.length || extra.size)) {
-                    _context44.next = 21;
+                    _context48.next = 21;
                     break;
                   }
                   this.audio.playTrial('charge');
-                  _context44.next = 21;
-                  return (_this$boardFx7 = this.boardFx) == null ? void 0 : _this$boardFx7.clear(motion, Array.from(new Set(locks.hits.concat(Array.from(extra)))).map(function (index) {
+                  _context48.next = 21;
+                  return (_this$boardFx8 = this.boardFx) == null ? void 0 : _this$boardFx8.clear(motion, Array.from(new Set(locks.hits.concat(Array.from(extra)))).map(function (index) {
                     return {
-                      position: _this60.cells[index].position,
+                      position: _this69.cells[index].position,
                       color: new Color(213, 170, 241)
                     };
                   }));
                 case 21:
                   if (!(motion.cancelled || this.challenge !== state || ((_this$dungeon13 = this.dungeon) == null ? void 0 : _this$dungeon13.room) !== room)) {
-                    _context44.next = 23;
+                    _context48.next = 23;
                     break;
                   }
-                  return _context44.abrupt("return", false);
+                  return _context48.abrupt("return", false);
                 case 23:
                   state.count(wave, this.board, plan.matched);
                   state.locks = locks.next;
@@ -15653,22 +16652,22 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     });
                     this.drawMechanismMarkers();
                   }
-                  for (_iterator48 = _createForOfIteratorHelperLoose(extra); !(_step48 = _iterator48()).done;) {
-                    _index17 = _step48.value;
+                  for (_iterator54 = _createForOfIteratorHelperLoose(extra); !(_step54 = _iterator54()).done;) {
+                    _index17 = _step54.value;
                     plan.removed.add(_index17);
                     this.tiles[_index17].active = false;
                   }
-                  for (_iterator49 = _createForOfIteratorHelperLoose(plan.removed); !(_step49 = _iterator49()).done;) {
-                    _index18 = _step49.value;
+                  for (_iterator55 = _createForOfIteratorHelperLoose(plan.removed); !(_step55 = _iterator55()).done;) {
+                    _index18 = _step55.value;
                     id = this.restoredTileIds.get(this.tiles[_index18]);
                     if (id) used.add(id);
                   }
-                  for (_iterator50 = _createForOfIteratorHelperLoose(used); !(_step50 = _iterator50()).done;) {
-                    _id = _step50.value;
+                  for (_iterator56 = _createForOfIteratorHelperLoose(used); !(_step56 = _iterator56()).done;) {
+                    _id = _step56.value;
                     state.powers["delete"](_id);
                   }
-                  for (_iterator51 = _createForOfIteratorHelperLoose(activations); !(_step51 = _iterator51()).done;) {
-                    _index19 = _step51.value;
+                  for (_iterator57 = _createForOfIteratorHelperLoose(activations); !(_step57 = _iterator57()).done;) {
+                    _index19 = _step57.value;
                     badge = this.tiles[_index19].getChildByName('试炼标记');
                     if (badge) {
                       badge.removeFromParent();
@@ -15680,8 +16679,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                       if (fusion.length) state.progress++;
                     } else if (state.id !== 'collect' && state.id !== 'relay') state.progress += progress;
                     if (state.id === 'seeker') {
-                      for (_iterator52 = _createForOfIteratorHelperLoose(state.targets); !(_step52 = _iterator52()).done;) {
-                        cell = _step52.value;
+                      for (_iterator58 = _createForOfIteratorHelperLoose(state.targets); !(_step58 = _iterator58()).done;) {
+                        cell = _step58.value;
                         if (!targets.has(cell)) state.targets["delete"](cell);
                       }
                       this.drawMechanismMarkers();
@@ -15692,49 +16691,49 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     });
                   }
                   this.refreshTestObjective();
-                  return _context44.abrupt("return", true);
+                  return _context48.abrupt("return", true);
                 case 34:
                 case "end":
-                  return _context44.stop();
+                  return _context48.stop();
               }
-            }, _callee41, this);
+            }, _callee45, this);
           }));
-          function applyTestChallengeWave(_x73, _x74, _x75, _x76) {
+          function applyTestChallengeWave(_x83, _x84, _x85, _x86) {
             return _applyTestChallengeWave.apply(this, arguments);
           }
           return applyTestChallengeWave;
         }();
         _proto.finishChallengeTurn = /*#__PURE__*/function () {
-          var _finishChallengeTurn = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee42(motion) {
-            var _this61 = this;
-            var state, protectedCells, _index20, _this$boardFx8;
-            return _regeneratorRuntime().wrap(function _callee42$(_context45) {
-              while (1) switch (_context45.prev = _context45.next) {
+          var _finishChallengeTurn = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee46(motion) {
+            var _this70 = this;
+            var state, protectedCells, _index20, _this$boardFx9;
+            return _regeneratorRuntime().wrap(function _callee46$(_context49) {
+              while (1) switch (_context49.prev = _context49.next) {
                 case 0:
                   state = this.challenge;
                   if (!(state.id === 'growth' && !state.hitThisTurn && !state.success)) {
-                    _context45.next = 12;
+                    _context49.next = 12;
                     break;
                   }
                   protectedCells = new Set(this.tiles.flatMap(function (node, index) {
-                    return _this61.chargedTiles.has(node) ? [index] : [];
+                    return _this70.chargedTiles.has(node) ? [index] : [];
                   }));
                   _index20 = growChallengeLocks(state.locks, this.board, protectedCells);
                   if (!(_index20 !== undefined && _index20 >= 0)) {
-                    _context45.next = 12;
+                    _context49.next = 12;
                     break;
                   }
-                  _context45.next = 7;
-                  return (_this$boardFx8 = this.boardFx) == null ? void 0 : _this$boardFx8.clear(motion, [{
+                  _context49.next = 7;
+                  return (_this$boardFx9 = this.boardFx) == null ? void 0 : _this$boardFx9.clear(motion, [{
                     position: this.cells[_index20].position,
                     color: new Color(105, 208, 130)
                   }]);
                 case 7:
                   if (!(motion.cancelled || this.challenge !== state)) {
-                    _context45.next = 9;
+                    _context49.next = 9;
                     break;
                   }
-                  return _context45.abrupt("return");
+                  return _context49.abrupt("return");
                 case 9:
                   state.locks.set(_index20, 1);
                   this.drawMechanismMarkers();
@@ -15747,11 +16746,11 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   this.refreshTestObjective();
                 case 14:
                 case "end":
-                  return _context45.stop();
+                  return _context49.stop();
               }
-            }, _callee42, this);
+            }, _callee46, this);
           }));
-          function finishChallengeTurn(_x77) {
+          function finishChallengeTurn(_x87) {
             return _finishChallengeTurn.apply(this, arguments);
           }
           return finishChallengeTurn;
@@ -15769,17 +16768,17 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }, 0) + " \u5C42" : id === 'rocks' ? "\u788E\u5CA9\u5269\u4F59 " + this.rocks.size + " \u5757 \xB7 \u76F8\u90BB\u6D88\u9664\u7834\u574F\u5CA9\u5C42" : id === 'jelly' ? "\u9ECF\u6DB2\u8986\u76D6 " + this.jelly.size + "/56 \xB7 \u63A5\u89E6\u9ECF\u6DB2\u7684\u5339\u914D\u7EC4\u5411\u5916\u6269\u6563" : id === 'portal' ? "\u4F20\u9001\u5DF2\u5B8C\u6210 " + this.portalTransits + " \u6B21 \xB7 \u6210\u5BF9\u4F9B\u7ED9\uFF0C\u4E0D\u8FDC\u7A0B\u4EA4\u6362" : '空洞不通行 · 由相邻棋路补位';
         };
         _proto.clearTestTerrain = /*#__PURE__*/function () {
-          var _clearTestTerrain = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee43(motion, matched, wave) {
-            var _this62 = this;
+          var _clearTestTerrain = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee47(motion, matched, wave) {
+            var _this71 = this;
             var result;
-            return _regeneratorRuntime().wrap(function _callee43$(_context46) {
-              while (1) switch (_context46.prev = _context46.next) {
+            return _regeneratorRuntime().wrap(function _callee47$(_context50) {
+              while (1) switch (_context50.prev = _context50.next) {
                 case 0:
                   result = clearTerrain(this.terrain, matched);
-                  _context46.next = 3;
+                  _context50.next = 3;
                   return Promise.all(result.hits.map(function (index) {
-                    var _this62$cells$index, _node$getComponent3;
-                    var node = (_this62$cells$index = _this62.cells[index]) == null ? void 0 : _this62$cells$index.getChildByName('地表印记 ' + index);
+                    var _this71$cells$index, _node$getComponent3;
+                    var node = (_this71$cells$index = _this71.cells[index]) == null ? void 0 : _this71$cells$index.getChildByName('地表印记 ' + index);
                     if (!node) return Promise.resolve(true);
                     var alpha = (_node$getComponent3 = node.getComponent(UIOpacity)) != null ? _node$getComponent3 : node.addComponent(UIOpacity);
                     return motion.play(tween(alpha).to(motion.duration(.10), {
@@ -15790,14 +16789,14 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   }));
                 case 3:
                   if (!motion.cancelled) {
-                    _context46.next = 5;
+                    _context50.next = 5;
                     break;
                   }
-                  return _context46.abrupt("return", false);
+                  return _context50.abrupt("return", false);
                 case 5:
                   this.terrain = result.next;
                   result.hits.forEach(function (index) {
-                    return _this62.drawTerrainCell(index);
+                    return _this71.drawTerrainCell(index);
                   });
                   this.refreshTestObjective();
                   if (result.hits.length) this.waveAudit.push({
@@ -15805,14 +16804,14 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     kind: 'TERRAIN_HIT',
                     group: result.hits
                   });
-                  return _context46.abrupt("return", true);
+                  return _context50.abrupt("return", true);
                 case 10:
                 case "end":
-                  return _context46.stop();
+                  return _context50.stop();
               }
-            }, _callee43, this);
+            }, _callee47, this);
           }));
-          function clearTestTerrain(_x78, _x79, _x80) {
+          function clearTestTerrain(_x88, _x89, _x90) {
             return _clearTestTerrain.apply(this, arguments);
           }
           return clearTestTerrain;
@@ -15840,169 +16839,168 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           text.isBold = true;
         };
         _proto.carryBattleBoard = function carryBattleBoard(director) {
-          var _this63 = this;
+          var _this72 = this;
           this.carriedBoard = {
             director: director,
             types: this.types.join(','),
             board: this.board.slice(),
             charged: this.tiles.flatMap(function (tile, index) {
-              var tier = _this63.chargedTiles.get(tile);
+              var tier = _this72.chargedTiles.get(tile);
               return tier ? [[index, tier]] : [];
             }),
             ids: this.tiles.map(function (tile) {
-              var id = _this63.restoredTileIds.get(tile);
+              var id = _this72.restoredTileIds.get(tile);
               if (!id) {
-                id = _this63.tileIdentity();
-                _this63.restoredTileIds.set(tile, id);
+                id = _this72.tileIdentity();
+                _this72.restoredTileIds.set(tile, id);
               }
               return id;
             })
           };
         };
         _proto.waitForBattleEnd = /*#__PURE__*/function () {
-          var _waitForBattleEnd = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee44(motion, director, room) {
+          var _waitForBattleEnd = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee48(motion, director, room) {
             var root;
-            return _regeneratorRuntime().wrap(function _callee44$(_context47) {
-              while (1) switch (_context47.prev = _context47.next) {
+            return _regeneratorRuntime().wrap(function _callee48$(_context51) {
+              while (1) switch (_context51.prev = _context51.next) {
                 case 0:
                   this.busy = true;
                   this.automatic = false;
                   this.battlePhase = 'complete';
                   root = this.ui;
-                  _context47.next = 6;
+                  _context51.next = 6;
                   return motion.whenIdle();
                 case 6:
-                  _context47.t5 = _context47.sent;
-                  if (!_context47.t5) {
-                    _context47.next = 9;
+                  _context51.t5 = _context51.sent;
+                  if (!_context51.t5) {
+                    _context51.next = 9;
                     break;
                   }
-                  _context47.t5 = !motion.cancelled;
+                  _context51.t5 = !motion.cancelled;
                 case 9:
-                  _context47.t4 = _context47.t5;
-                  if (!_context47.t4) {
-                    _context47.next = 12;
+                  _context51.t4 = _context51.t5;
+                  if (!_context51.t4) {
+                    _context51.next = 12;
                     break;
                   }
-                  _context47.t4 = this.motion === motion;
+                  _context51.t4 = this.motion === motion;
                 case 12:
-                  _context47.t3 = _context47.t4;
-                  if (!_context47.t3) {
-                    _context47.next = 15;
+                  _context51.t3 = _context51.t4;
+                  if (!_context51.t3) {
+                    _context51.next = 15;
                     break;
                   }
-                  _context47.t3 = this.ui === root;
+                  _context51.t3 = this.ui === root;
                 case 15:
-                  _context47.t2 = _context47.t3;
-                  if (!_context47.t2) {
-                    _context47.next = 18;
+                  _context51.t2 = _context51.t3;
+                  if (!_context51.t2) {
+                    _context51.next = 18;
                     break;
                   }
-                  _context47.t2 = root === this.battleRoot;
+                  _context51.t2 = root === this.battleRoot;
                 case 18:
-                  _context47.t1 = _context47.t2;
-                  if (!_context47.t1) {
-                    _context47.next = 21;
+                  _context51.t1 = _context51.t2;
+                  if (!_context51.t1) {
+                    _context51.next = 21;
                     break;
                   }
-                  _context47.t1 = this.dungeon === director;
+                  _context51.t1 = this.dungeon === director;
                 case 21:
-                  _context47.t0 = _context47.t1;
-                  if (!_context47.t0) {
-                    _context47.next = 24;
+                  _context51.t0 = _context51.t1;
+                  if (!_context51.t0) {
+                    _context51.next = 24;
                     break;
                   }
-                  _context47.t0 = director.room === room;
+                  _context51.t0 = director.room === room;
                 case 24:
-                  return _context47.abrupt("return", _context47.t0);
+                  return _context51.abrupt("return", _context51.t0);
                 case 25:
                 case "end":
-                  return _context47.stop();
+                  return _context51.stop();
               }
-            }, _callee44, this);
+            }, _callee48, this);
           }));
-          function waitForBattleEnd(_x81, _x82, _x83) {
+          function waitForBattleEnd(_x91, _x92, _x93) {
             return _waitForBattleEnd.apply(this, arguments);
           }
           return waitForBattleEnd;
         }();
         _proto.repeatTestEncounter = /*#__PURE__*/function () {
-          var _repeatTestEncounter = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee45(motion) {
+          var _repeatTestEncounter = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee49(motion) {
             var trial, director, room;
-            return _regeneratorRuntime().wrap(function _callee45$(_context48) {
-              while (1) switch (_context48.prev = _context48.next) {
+            return _regeneratorRuntime().wrap(function _callee49$(_context52) {
+              while (1) switch (_context52.prev = _context52.next) {
                 case 0:
                   trial = this.trial, director = this.dungeon, room = director == null ? void 0 : director.room;
                   if (!(!trial || !director || !room)) {
-                    _context48.next = 3;
+                    _context52.next = 3;
                     break;
                   }
-                  return _context48.abrupt("return");
+                  return _context52.abrupt("return");
                 case 3:
-                  _context48.next = 5;
+                  _context52.next = 5;
                   return this.waitForBattleEnd(motion, director, room);
                 case 5:
-                  _context48.t0 = !_context48.sent;
-                  if (_context48.t0) {
-                    _context48.next = 8;
+                  _context52.t0 = !_context52.sent;
+                  if (_context52.t0) {
+                    _context52.next = 8;
                     break;
                   }
-                  _context48.t0 = this.trial !== trial;
+                  _context52.t0 = this.trial !== trial;
                 case 8:
-                  if (!_context48.t0) {
-                    _context48.next = 10;
+                  if (!_context52.t0) {
+                    _context52.next = 10;
                     break;
                   }
-                  return _context48.abrupt("return");
+                  return _context52.abrupt("return");
                 case 10:
-                  _context48.t1 = room.kind === 'battle' && room.delivery;
-                  if (!_context48.t1) {
-                    _context48.next = 15;
+                  _context52.t1 = room.kind === 'battle' && room.delivery;
+                  if (!_context52.t1) {
+                    _context52.next = 15;
                     break;
                   }
-                  _context48.next = 14;
+                  _context52.next = 14;
                   return this.retireRoomMiners(motion);
                 case 14:
-                  _context48.t1 = !_context48.sent;
+                  _context52.t1 = !_context52.sent;
                 case 15:
-                  if (!_context48.t1) {
-                    _context48.next = 17;
+                  if (!_context52.t1) {
+                    _context52.next = 17;
                     break;
                   }
-                  return _context48.abrupt("return");
+                  return _context52.abrupt("return");
                 case 17:
-                  _context48.t2 = trial.id === 'rocks';
-                  if (!_context48.t2) {
-                    _context48.next = 22;
+                  _context52.t2 = trial.id === 'rocks';
+                  if (!_context52.t2) {
+                    _context52.next = 22;
                     break;
                   }
-                  _context48.next = 21;
+                  _context52.next = 21;
                   return this.retireRoomTokens(motion, rockCell);
                 case 21:
-                  _context48.t2 = !_context48.sent;
+                  _context52.t2 = !_context52.sent;
                 case 22:
-                  if (!_context48.t2) {
-                    _context48.next = 24;
+                  if (!_context52.t2) {
+                    _context52.next = 24;
                     break;
                   }
-                  return _context48.abrupt("return");
+                  return _context52.abrupt("return");
                 case 24:
                   if (!(this.trial !== trial || this.dungeon !== director || director.room !== room || motion.cancelled)) {
-                    _context48.next = 26;
+                    _context52.next = 26;
                     break;
                   }
-                  return _context48.abrupt("return");
+                  return _context52.abrupt("return");
                 case 26:
                   this.carryBattleBoard(director);
                   if (director.repeatTestBattle(room, mineTestEncounter(++trial.rounds, trial.id))) {
-                    _context48.next = 29;
+                    _context52.next = 29;
                     break;
                   }
-                  return _context48.abrupt("return");
+                  return _context52.abrupt("return");
                 case 29:
                   this.hp = this.maxHP;
                   this.dp = this.maxDP;
-                  this.potion = 2;
                   this.adventure = {
                     id: testMechanism(trial.id).dungeon,
                     coins: 0,
@@ -16012,57 +17010,57 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     buffs: {}
                   };
                   this.showRoom();
-                case 34:
+                case 33:
                 case "end":
-                  return _context48.stop();
+                  return _context52.stop();
               }
-            }, _callee45, this);
+            }, _callee49, this);
           }));
-          function repeatTestEncounter(_x84) {
+          function repeatTestEncounter(_x94) {
             return _repeatTestEncounter.apply(this, arguments);
           }
           return repeatTestEncounter;
         }();
         _proto.releaseMiners = /*#__PURE__*/function () {
-          var _releaseMiners = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee46(motion) {
-            var _this64 = this;
-            var room, exits, _iterator53, _step53, _index21, played, _iterator54, _step54, _index22, removed, refill;
-            return _regeneratorRuntime().wrap(function _callee46$(_context49) {
-              while (1) switch (_context49.prev = _context49.next) {
+          var _releaseMiners = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee50(motion) {
+            var _this73 = this;
+            var room, exits, _iterator59, _step59, _index21, played, _iterator60, _step60, _index22, removed, refill;
+            return _regeneratorRuntime().wrap(function _callee50$(_context53) {
+              while (1) switch (_context53.prev = _context53.next) {
                 case 0:
                   room = this.activeWave;
                   if (room != null && room.delivery) {
-                    _context49.next = 3;
+                    _context53.next = 3;
                     break;
                   }
-                  return _context49.abrupt("return");
+                  return _context53.abrupt("return");
                 case 3:
                   if (motion.cancelled) {
-                    _context49.next = 22;
+                    _context53.next = 22;
                     break;
                   }
                   exits = minersAtExits(this.board, room.delivery);
                   if (exits.length) {
-                    _context49.next = 7;
+                    _context53.next = 7;
                     break;
                   }
-                  return _context49.abrupt("return");
+                  return _context53.abrupt("return");
                 case 7:
-                  for (_iterator53 = _createForOfIteratorHelperLoose(exits); !(_step53 = _iterator53()).done;) {
-                    _index21 = _step53.value;
+                  for (_iterator59 = _createForOfIteratorHelperLoose(exits); !(_step59 = _iterator59()).done;) {
+                    _index21 = _step59.value;
                     this.deliveryEvents.push({
                       type: 'MINER_EXIT_STARTED',
                       index: _index21,
                       id: this.restoredTileIds.get(this.tiles[_index21])
                     });
                   }
-                  _context49.next = 10;
+                  _context53.next = 10;
                   return Promise.all(exits.map(function (index) {
-                    var _tile$getComponent2, _this64$trial, _this64$trial2;
-                    var tile = _this64.tiles[index],
+                    var _tile$getComponent2, _this73$trial, _this73$trial2;
+                    var tile = _this73.tiles[index],
                       opacity = (_tile$getComponent2 = tile.getComponent(UIOpacity)) != null ? _tile$getComponent2 : tile.addComponent(UIOpacity);
                     var target = tile.position.clone();
-                    if (((_this64$trial = _this64.trial) == null ? void 0 : _this64$trial.id) === 'delivery' || ((_this64$trial2 = _this64.trial) == null ? void 0 : _this64$trial2.id) === 'source') target.y -= 27;else {
+                    if (((_this73$trial = _this73.trial) == null ? void 0 : _this73$trial.id) === 'delivery' || ((_this73$trial2 = _this73.trial) == null ? void 0 : _this73$trial2.id) === 'source') target.y -= 27;else {
                       target.x += index % 7 === 0 ? -30 : 30;
                       target.y -= 8;
                     }
@@ -16078,17 +17076,17 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     });
                   }));
                 case 10:
-                  played = _context49.sent;
+                  played = _context53.sent;
                   if (!(motion.cancelled || played.some(function (ok) {
                     return !ok;
                   }) || this.activeWave !== room)) {
-                    _context49.next = 13;
+                    _context53.next = 13;
                     break;
                   }
-                  return _context49.abrupt("return");
+                  return _context53.abrupt("return");
                 case 13:
-                  for (_iterator54 = _createForOfIteratorHelperLoose(exits); !(_step54 = _iterator54()).done;) {
-                    _index22 = _step54.value;
+                  for (_iterator60 = _createForOfIteratorHelperLoose(exits); !(_step60 = _iterator60()).done;) {
+                    _index22 = _step60.value;
                     this.rescuedMiners++;
                     this.refreshTestObjective();
                     this.syncBattleTools();
@@ -16103,25 +17101,25 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   removed = new Set(exits), refill = this.planBattleRefill(this.board, removed);
                   this.queueTestSource(refill);
                   this.board = refill.board;
-                  _context49.next = 20;
+                  _context53.next = 20;
                   return this.drop(motion, removed, refill);
                 case 20:
-                  _context49.next = 3;
+                  _context53.next = 3;
                   break;
                 case 22:
                 case "end":
-                  return _context49.stop();
+                  return _context53.stop();
               }
-            }, _callee46, this);
+            }, _callee50, this);
           }));
-          function releaseMiners(_x85) {
+          function releaseMiners(_x95) {
             return _releaseMiners.apply(this, arguments);
           }
           return releaseMiners;
         }();
         _proto.queueTestSource = function queueTestSource(refill) {
-          var _this$trial20;
-          if (((_this$trial20 = this.trial) == null ? void 0 : _this$trial20.id) !== 'source' || this.rescuedMiners >= 3 || refill.board.includes(minerEmblem)) return;
+          var _this$trial23;
+          if (((_this$trial23 = this.trial) == null ? void 0 : _this$trial23.id) !== 'source' || this.rescuedMiners >= 3 || refill.board.includes(minerEmblem)) return;
           if (!refill.spawns.some(function (spawn) {
             return spawn.to === sourceEntry;
           })) return;
@@ -16135,51 +17133,51 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           return this.retireRoomTokens(motion, minerEmblem);
         };
         _proto.retireRoomTokens = /*#__PURE__*/function () {
-          var _retireRoomTokens = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee47(motion, token) {
-            var _this65 = this;
-            var indices, next, faded, _iterator55, _step55, _index23, old, tile;
-            return _regeneratorRuntime().wrap(function _callee47$(_context50) {
-              while (1) switch (_context50.prev = _context50.next) {
+          var _retireRoomTokens = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee51(motion, token) {
+            var _this74 = this;
+            var indices, next, faded, _iterator61, _step61, _index23, old, tile;
+            return _regeneratorRuntime().wrap(function _callee51$(_context54) {
+              while (1) switch (_context54.prev = _context54.next) {
                 case 0:
                   indices = this.board.flatMap(function (type, i) {
                     return type === token ? [i] : [];
                   });
                   if (indices.length) {
-                    _context50.next = 3;
+                    _context54.next = 3;
                     break;
                   }
-                  return _context50.abrupt("return", true);
+                  return _context54.abrupt("return", true);
                 case 3:
                   next = retireMinerBoard(this.board, this.types, token);
                   if (next) {
-                    _context50.next = 7;
+                    _context54.next = 7;
                     break;
                   }
                   this.setBattleStatus('营救棋子离房清理无合法候选，暂停诊断');
-                  return _context50.abrupt("return", false);
+                  return _context54.abrupt("return", false);
                 case 7:
-                  _context50.next = 9;
+                  _context54.next = 9;
                   return Promise.all(indices.map(function (index) {
                     var _tile$getComponent3;
-                    var tile = _this65.tiles[index],
+                    var tile = _this74.tiles[index],
                       opacity = (_tile$getComponent3 = tile.getComponent(UIOpacity)) != null ? _tile$getComponent3 : tile.addComponent(UIOpacity);
                     return motion.play(tween(opacity).to(motion.duration(.22), {
                       opacity: 0
                     }));
                   }));
                 case 9:
-                  faded = _context50.sent;
+                  faded = _context54.sent;
                   if (!(motion.cancelled || faded.some(function (ok) {
                     return !ok;
                   }))) {
-                    _context50.next = 12;
+                    _context54.next = 12;
                     break;
                   }
-                  return _context50.abrupt("return", false);
+                  return _context54.abrupt("return", false);
                 case 12:
                   this.board = next;
-                  for (_iterator55 = _createForOfIteratorHelperLoose(indices); !(_step55 = _iterator55()).done;) {
-                    _index23 = _step55.value;
+                  for (_iterator61 = _createForOfIteratorHelperLoose(indices); !(_step61 = _iterator61()).done;) {
+                    _index23 = _step61.value;
                     old = this.tiles[_index23];
                     old.removeFromParent();
                     old.destroy();
@@ -16188,47 +17186,47 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                     this.restoredTileIds.set(tile, this.tileIdentity());
                     tile.setScale(.65, .65, 1);
                   }
-                  _context50.next = 16;
+                  _context54.next = 16;
                   return Promise.all(indices.map(function (index) {
-                    return motion.play(tween(_this65.tiles[index]).to(motion.duration(.20), {
+                    return motion.play(tween(_this74.tiles[index]).to(motion.duration(.20), {
                       scale: new Vec3(1, 1, 1)
                     }, {
                       easing: 'backOut'
                     }));
                   }));
                 case 16:
-                  return _context50.abrupt("return", !motion.cancelled);
+                  return _context54.abrupt("return", !motion.cancelled);
                 case 17:
                 case "end":
-                  return _context50.stop();
+                  return _context54.stop();
               }
-            }, _callee47, this);
+            }, _callee51, this);
           }));
-          function retireRoomTokens(_x86, _x87) {
+          function retireRoomTokens(_x96, _x97) {
             return _retireRoomTokens.apply(this, arguments);
           }
           return retireRoomTokens;
         }();
         _proto.shockDowngrade = /*#__PURE__*/function () {
-          var _shockDowngrade = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee48(motion, enemyIndex) {
-            var _this66 = this,
-              _this$trial$random3,
-              _this$trial21,
+          var _shockDowngrade = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee52(motion, enemyIndex) {
+            var _this75 = this,
+              _this$trial$random6,
+              _this$trial24,
               _this$templateFxFrame,
               _this$templateFxFrame2,
               _puff$getComponent;
             var index, tile, decorations, smoke, smokeSprite, puff, opacity, work, frame;
-            return _regeneratorRuntime().wrap(function _callee48$(_context51) {
-              while (1) switch (_context51.prev = _context51.next) {
+            return _regeneratorRuntime().wrap(function _callee52$(_context55) {
+              while (1) switch (_context55.prev = _context55.next) {
                 case 0:
                   index = shockTarget(this.tiles.map(function (tile) {
-                    return _this66.chargedTiles.get(tile);
-                  }), (_this$trial$random3 = (_this$trial21 = this.trial) == null ? void 0 : _this$trial21.random) != null ? _this$trial$random3 : Math.random);
+                    return _this75.chargedTiles.get(tile);
+                  }), (_this$trial$random6 = (_this$trial24 = this.trial) == null ? void 0 : _this$trial24.random) != null ? _this$trial$random6 : Math.random);
                   if (!(index === undefined)) {
-                    _context51.next = 3;
+                    _context55.next = 3;
                     break;
                   }
-                  return _context51.abrupt("return");
+                  return _context55.abrupt("return");
                 case 3:
                   tile = this.tiles[index];
                   this.chargedTiles["delete"](tile);
@@ -16262,24 +17260,24 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   frame = {
                     value: 0
                   };
-                  _context51.next = 18;
+                  _context55.next = 18;
                   return Promise.all([].concat(work, [motion.play(tween(opacity).to(motion.duration(.36), {
                     opacity: 0
                   })), motion.play(tween(frame).to(motion.duration(.36), {
                     value: 12
                   }, {
                     onUpdate: function onUpdate() {
-                      var _this66$templateFxFra, _this66$templateFxFra2;
+                      var _this75$templateFxFra, _this75$templateFxFra2;
                       var key = 'burst-' + String(5 + Math.min(12, Math.floor(frame.value))).padStart(2, '0');
-                      smokeSprite.spriteFrame = (_this66$templateFxFra = (_this66$templateFxFra2 = _this66.templateFxFrames) == null ? void 0 : _this66$templateFxFra2.get(key)) != null ? _this66$templateFxFra : null;
+                      smokeSprite.spriteFrame = (_this75$templateFxFra = (_this75$templateFxFra2 = _this75.templateFxFrames) == null ? void 0 : _this75$templateFxFra2.get(key)) != null ? _this75$templateFxFra : null;
                     }
                   }))]));
                 case 18:
                   if (!(motion.cancelled || !tile.isValid)) {
-                    _context51.next = 20;
+                    _context55.next = 20;
                     break;
                   }
-                  return _context51.abrupt("return");
+                  return _context55.abrupt("return");
                 case 20:
                   decorations.forEach(function (node) {
                     node.removeFromParent();
@@ -16289,17 +17287,17 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   puff.destroy();
                 case 23:
                 case "end":
-                  return _context51.stop();
+                  return _context55.stop();
               }
-            }, _callee48, this);
+            }, _callee52, this);
           }));
-          function shockDowngrade(_x88, _x89) {
+          function shockDowngrade(_x98, _x99) {
             return _shockDowngrade.apply(this, arguments);
           }
           return shockDowngrade;
         }();
         _proto.startMineTrial = function startMineTrial(id) {
-          var _this67 = this;
+          var _this76 = this;
           if (id === void 0) {
             id = 'rail';
           }
@@ -16312,9 +17310,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           required.push('corridor-' + config.dungeon);
           if (id === 'delivery' || id === 'source') required.push('npc-villager');
           if (this.deferContent(function () {
-            return _this67.startMineTrial(id);
+            return _this76.startMineTrial(id);
           }, 'trial:' + id, required)) return;
           var snapshot = {
+            supplies: this.supplies,
             party: this.party,
             types: this.types,
             phase: this.phase,
@@ -16328,11 +17327,14 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             carriedBoard: this.carriedBoard,
             mineRecovery: this.mineRecovery
           };
+          this.supplies = {
+            gift: 1
+          };
           this.trial = {
             id: id,
             random: mineTrialRandom(testMechanism(id).seed),
             restore: function restore() {
-              return Object.assign(_this67, snapshot);
+              return Object.assign(_this76, snapshot);
             },
             moves: 0,
             longestChain: 0,
@@ -16361,6 +17363,13 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.hp = this.maxHP;
           this.dp = this.maxDP;
           this.potion = 2;
+          this.showTrialPreparation(id);
+        };
+        _proto.showTrialPreparation = function showTrialPreparation(id) {
+          var _this$trial25,
+            _this77 = this;
+          if (((_this$trial25 = this.trial) == null ? void 0 : _this$trial25.id) !== id) return;
+          var config = testMechanism(id);
           this.page(config.title, config.objective, this.dungeonBackdrop(0));
           this.box('轨道试玩说明', 0, -45, 416, 232, '#20372f');
           this.mineTrialCaption(config.title, 48);
@@ -16369,12 +17378,19 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.label('无限遭遇 · 胜败自动恢复 · 不产生收益', 0, -84, 388, 17);
           var root = this.ui;
           this.trialButton(id === 'rail' ? '进入矿道' : '开始测试', -203, function () {
-            if (_this67.ui !== root) return;
-            _this67.audio.playTrial('open');
-            _this67.showRoom();
+            if (_this77.ui !== root) return;
+            _this77.audio.playTrial('open');
+            _this77.showRoom();
           });
-          this.trialButton('返回标题', -269, function () {
-            return _this67.leaveMineTrial();
+          this.trialButton('小队配置', -269, function () {
+            _this77.bagMaterials = false;
+            _this77.bagPage = 0;
+            _this77.roster(_this77.party[0], function () {
+              return _this77.showTrialPreparation(id);
+            });
+          });
+          this.trialButton('返回标题', -335, function () {
+            return _this77.leaveMineTrial();
           }, 0, 230, 'trial-ui-back', true);
         };
         _proto.mineTrialCaption = function mineTrialCaption(value, y) {
@@ -16399,7 +17415,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         };
         _proto.finishMineTrial = function finishMineTrial(outcome) {
           var _this$motion9,
-            _this68 = this;
+            _this78 = this;
           (_this$motion9 = this.motion) == null || _this$motion9.cancel();
           this.audio.stopTrial();
           this.dungeon = undefined;
@@ -16412,7 +17428,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           if (outcome === 'win') {
             this.audio.playTrial('victory');
             var star = this.art('game-logo', 0, -12, 85, 85);
-            var _root = this.ui;
+            var _root2 = this.ui;
             if (star) {
               var reveal = this.newPageMotion();
               this.motion = reveal;
@@ -16423,7 +17439,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                 }, {
                   easing: 'backOut'
                 }).call(function () {
-                  if (_this68.ui === _root) _this68.audio.playTrial('reward');
+                  if (_this78.ui === _root2) _this78.audio.playTrial('reward');
                 }).to(.11, {
                   scale: new Vec3(1, 1, 1)
                 }));
@@ -16432,23 +17448,23 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             this.label("\u6709\u6548\u6362\u4F4D " + this.trial.moves + " \u6B21\u3000\u6700\u9AD8 " + this.trial.longestChain + " \u8FDE\u9501", 0, -83, 390, 17);
           } else if (outcome === 'fail') this.audio.playTrial('defeat');
           this.trialButton('再试一次', -164, function () {
-            return _this68.leaveMineTrial(true);
+            return _this78.leaveMineTrial(true);
           });
           this.trialButton('返回标题', -230, function () {
-            return _this68.leaveMineTrial();
+            return _this78.leaveMineTrial();
           }, 0, 230, 'trial-ui-back', true);
         };
         _proto.showMaterials = function showMaterials(motion, amounts, origin) {
-          var _this69 = this;
-          return Promise.all(Object.entries(amounts).map(function (_ref39, i) {
-            var key = _ref39[0],
-              count = _ref39[1];
-            return _this69.combatPopup(motion, resourceNames[key] + ' × ' + count, origin.x, origin.y + 24 + i * 28, '#abdcc2');
+          var _this79 = this;
+          return Promise.all(['ore', 'essence'].filter(function (key) {
+            return amounts[key] > 0;
+          }).map(function (key) {
+            return _this79.animateCoins(motion, amounts[key], _this79.walletLabels[key], origin, stageGrid.groundY, key);
           }));
         };
         _proto.victory = function victory(director, room, reward) {
           var _this$waveIndices$get2,
-            _this70 = this;
+            _this80 = this;
           if (this.mineRecovery) return;
           if (this.dungeon !== director || director.room !== room || this.rewardedRooms.has(room)) return;
           var index = (_this$waveIndices$get2 = this.waveIndices.get(room)) != null ? _this$waveIndices$get2 : 0,
@@ -16459,9 +17475,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.receiveGold(reward);
           if (run) {
             run.xp += grant.xp;
-            for (var _i14 = 0, _Object$entries3 = Object.entries(grant.loot); _i14 < _Object$entries3.length; _i14++) {
+            for (var _i17 = 0, _Object$entries3 = Object.entries(grant.loot); _i17 < _Object$entries3.length; _i17++) {
               var _run$loot$key;
-              var _Object$entries3$_i = _Object$entries3[_i14],
+              var _Object$entries3$_i = _Object$entries3[_i17],
                 key = _Object$entries3$_i[0],
                 count = _Object$entries3$_i[1];
               run.loot[key] = ((_run$loot$key = run.loot[key]) != null ? _run$loot$key : 0) + count;
@@ -16470,9 +17486,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             this.tutorialXP += grant.xp;
             this.addMaterials(grant.loot);
           }
-          for (var _iterator56 = _createForOfIteratorHelperLoose((_wave$onClear = wave.onClear) != null ? _wave$onClear : []), _step56; !(_step56 = _iterator56()).done;) {
+          for (var _iterator62 = _createForOfIteratorHelperLoose((_wave$onClear = wave.onClear) != null ? _wave$onClear : []), _step62; !(_step62 = _iterator62()).done;) {
             var _wave$onClear;
-            var event = _step56.value;
+            var event = _step62.value;
             this.questEvent(event.kind, event.key);
           }
           if (index + 1 < waves.length) {
@@ -16497,7 +17513,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               this.save();
               this.page('裂印暂时封闭', '带着救出的村民前往溪桥村，向村长交付村徽。', backdrop);
               this.button('返回大地图', 14, function () {
-                return _this70.map();
+                return _this80.map();
               });
               return;
             }
@@ -16506,12 +17522,12 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }
           run.ordinaryWins += Number(room.type !== 'elite' && room.type !== 'boss');
           var proceed = function proceed() {
-            return _this70.advanceRoom(director, room);
+            return _this80.advanceRoom(director, room);
           };
           if (room.chooseUpgrade) this.offerUpgrade(director, room, proceed);else proceed();
         };
         _proto.finishAdventure = function finishAdventure(outcome, exitBackdrop) {
-          var _this71 = this;
+          var _this81 = this;
           if (exitBackdrop === void 0) {
             exitBackdrop = this.dungeonBackdrop();
           }
@@ -16541,8 +17557,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           if (run) {
             var rate = outcome === 'win' ? 1 : outcome === 'retreat' ? .7 : .5;
             var earned = {};
-            for (var _i15 = 0, _arr5 = Object.keys(run.loot); _i15 < _arr5.length; _i15++) {
-              var key = _arr5[_i15];
+            for (var _i18 = 0, _arr6 = Object.keys(run.loot); _i18 < _arr6.length; _i18++) {
+              var key = _arr6[_i18];
               earned[key] = Math.floor(run.loot[key] * rate);
             }
             earned.gold = Math.floor(run.coins * rate);
@@ -16551,39 +17567,40 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             });
             var first = !!site && outcome === 'win' && !this.clearedSites.has(site.id);
             var committed = this.townWrite(function () {
-              var exit = exitBlessing(_this71.town, _this71.hp, _this71.baseMaxHP, outcome === 'win');
-              _this71.town = exit.town;
-              _this71.hp = exit.hp;
+              var exit = exitBlessing(_this81.town, _this81.hp, _this81.baseMaxHP, outcome === 'win');
+              _this81.town = exit.town;
+              _this81.hp = exit.hp;
               if (outcome === 'win') {
-                var _this71$hunt;
+                var _this81$hunt;
                 if (first) {
-                  _this71.clearedSites.add(site.id);
-                  _this71.questEvent('clear', site.id);
-                  _this71.turnIn('report-' + site.id);
+                  _this81.clearedSites.add(site.id);
+                  _this81.shopSold = {};
+                  _this81.questEvent('clear', site.id);
+                  _this81.turnIn('report-' + site.id);
                 }
-                if (!site || site === sitesIn(run.id).at(-1)) _this71.cleared.add(run.id);
-                _this71.questEvent('clear', run.id);
-                if (((_this71$hunt = _this71.hunt) == null ? void 0 : _this71$hunt.state) === 'active' && _this71.hunt.target === run.id) _this71.hunt = _extends({}, _this71.hunt, {
+                if (!site || site === sitesIn(run.id).at(-1)) _this81.cleared.add(run.id);
+                _this81.questEvent('clear', run.id);
+                if (((_this81$hunt = _this81.hunt) == null ? void 0 : _this81$hunt.state) === 'active' && _this81.hunt.target === run.id) _this81.hunt = _extends({}, _this81.hunt, {
                   state: 'ready'
                 });
-                _this71.gainXP(run.xp);
+                _this81.gainXP(run.xp);
               }
-              _this71.addMaterials(earned);
+              _this81.addMaterials(earned);
               if (outcome === 'fail') {
-                _this71.location = locations.indexOf('village');
-                _this71.hp = _this71.maxHP;
-                _this71.dp = 0;
-              } else _this71.hp = Math.min(_this71.maxHP, Math.max(1, _this71.hp));
+                _this81.location = locations.indexOf('village');
+                _this81.hp = _this81.maxHP;
+                _this81.dp = 0;
+              } else _this81.hp = Math.min(_this81.maxHP, Math.max(1, _this81.hp));
             });
             if (!committed) {
               var _this$saveGate9;
               if ((_this$saveGate9 = this.saveGate) != null && _this$saveGate9.writable) {
                 this.page('结算待保存', '本次收益仍在，重试后可以离开。', exitBackdrop);
-                var _root2 = this.ui;
+                var _root3 = this.ui;
                 this.navButton('重试保存', 0, function () {
-                  if (_this71.ui === _root2) {
-                    _this71.adventure = run;
-                    _this71.finishAdventure(outcome, exitBackdrop);
+                  if (_this81.ui === _root3) {
+                    _this81.adventure = run;
+                    _this81.finishAdventure(outcome, exitBackdrop);
                   }
                 });
               } else this.showRecoveryStop('存档状态已变化，请重新加载核对结算。');
@@ -16592,18 +17609,17 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             if (outcome !== 'fail') {
               var _site$name;
               if (outcome === 'retreat') {
+                var _earned$ore, _run$loot$ore, _earned$essence, _run$loot$essence;
                 this.map();
                 var withheld = run.coins - earned.gold;
-                if (withheld > 0) void this.presentGoldSpend(withheld);
+                if (run) void this.presentWalletChange({
+                  gold: -withheld,
+                  ore: ((_earned$ore = earned.ore) != null ? _earned$ore : 0) - ((_run$loot$ore = run.loot.ore) != null ? _run$loot$ore : 0),
+                  essence: ((_earned$essence = earned.essence) != null ? _earned$essence : 0) - ((_run$loot$essence = run.loot.essence) != null ? _run$loot$essence : 0)
+                });
                 return;
               }
-              var names = {
-                gold: '金币',
-                herb: '草药',
-                ore: '铁矿',
-                essence: '灵质',
-                crystal: '晶体'
-              };
+              var names = resourceNames;
               var summary = Object.keys(earned).filter(function (key) {
                 return earned[key] > 0;
               }).map(function (key) {
@@ -16614,19 +17630,20 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               if (site) this.label(site.ending, 0, 50, 430, 22);
               if (first) this.label('首次交付 · ' + priceText(site.reward), 0, -18, 436, 20);
               this.label("\u961F\u5458\u5404\u83B7\u5F97 " + run.xp + " \u7ECF\u9A8C", 0, -73, 410, 19);
-              if (next) this.navButton('继续主线 · ' + next.name, -156, function () {
-                return _this71.routeFromCamp(next);
-              });else if (!guide) this.label('七地驿路全线重开', 0, -156, 410, 24);
+              if (next) this.navButton('导航到当前攻略节点', -156, function () {
+                return _this81.map(site == null ? void 0 : site.id);
+              });else this.label('七地驿路全线重开', 0, -156, 410, 24);
               this.navButton('返回大地图', -242, function () {
-                return _this71.map();
+                return _this81.map();
               });
               this.navButton('整理角色与装备', -328, function () {
-                return _this71.roster();
+                return _this81.roster();
               });
               return;
             }
           }
           if (outcome === 'fail') {
+            var _run$loot$ore2, _run$loot$essence2;
             this.audio.play('defeat');
             if (!run) {
               this.hp = this.maxHP;
@@ -16636,85 +17653,89 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             }
             this.page('探索失败', '你在溪桥村的酒馆醒来，生命已恢复。护甲需要在铁匠铺修补。', 'village-tavern-stage');
             this.button('起身，回到酒馆', 14, function () {
-              return _this71.tavern(true);
+              return _this81.tavern(true);
             });
             var _withheld = run ? run.coins - Math.floor(run.coins * .5) : 0;
-            if (_withheld > 0) void this.presentGoldSpend(_withheld);
+            if (run) void this.presentWalletChange({
+              gold: -_withheld,
+              ore: -Math.ceil(((_run$loot$ore2 = run.loot.ore) != null ? _run$loot$ore2 : 0) / 2),
+              essence: -Math.ceil(((_run$loot$essence2 = run.loot.essence) != null ? _run$loot$essence2 : 0) / 2)
+            });
           } else this.menu();
         };
-        _proto.map = function map() {
-          var _this72 = this;
+        _proto.map = function map(origin) {
+          var _this82 = this;
           if (this.deferContent(function () {
-            return _this72.map();
+            return _this82.map(origin);
           }, 'atlas', ['world-map-background'])) return;
           this.dungeon = undefined;
           this.adventure = undefined;
           this.save();
           var guide = this.villageGuidePending && !this.reported;
-          var hints = this.questHintTargets(),
-            next = nextSite(this.clearedSites);
+          var hints = this.questHintTargets();
           this.reset('');
           this.heroes.clear();
           var root = this.ui;
           this.label('七地驿路', -153, 390, 160, 29).isBold = true;
           var regionHeading = this.label('', 38, 390, 162, 22);
           this.label(this.clearedSites.size + " / " + campaignSites.length, 172, 390, 100, 20);
-          mountCampaignAtlas({
+          var atlas = mountCampaignAtlas({
+            dock: function dock() {
+              if (_this82.ui !== root) return;
+              _this82.location = locations.indexOf('village');
+              _this82.villageGuidePending = false;
+              _this82.save();
+              _this82.village();
+            },
+            shipArt: function shipArt(parent) {
+              _this82.art('board/airship', 0, 4, 93, 79, parent);
+            },
             box: this.box.bind(this),
             label: this.label.bind(this),
             landscape: function landscape(region, i, parent, y, height) {
               var key = '地图地貌 ' + region;
-              var frame = _this72.stageFrames.get(key);
+              var frame = _this82.stageFrames.get(key);
               if (!frame) {
-                frame = _this72.frameCrop(_this72.textures.get('world-map-background'), i % 2 * 480, Math.floor(i / 2) * 480, 480, 480);
-                _this72.stageFrames.set(key, frame);
+                frame = _this82.frameCrop(_this82.textures.get('world-map-background'), i % 2 * 480, Math.floor(i / 2) * 480, 480, 480);
+                _this82.stageFrames.set(key, frame);
               }
-              _this72.paintFrame(key, frame, 0, y, 480, height, parent);
+              _this82.paintFrame(key, frame, 0, y, 480, height, parent);
             },
             visit: function visit(site) {
-              if (_this72.ui === root) {
-                _this72.audio.play('door');
-                _this72.routeFromCamp(site);
+              if (_this82.ui === root) {
+                _this82.audio.play('door');
+                _this82.routeFromCamp(site);
               }
             },
             mark: function mark(pin, region) {
-              return _this72.markQuestTarget(pin, region, 72, -4, hints);
+              return _this82.markQuestTarget(pin, region, 72, -4, hints);
             },
             service: function service(region) {
-              if (_this72.ui === root) {
-                _this72.location = locations.indexOf(region);
-                _this72.save();
-                region === 'forest' ? _this72.roadside() : _this72.shadowMarket();
+              if (_this82.ui === root) {
+                _this82.location = locations.indexOf(region);
+                _this82.save();
+                region === 'forest' ? _this82.roadside() : _this82.shadowMarket();
               }
             }
-          }, this.clearedSites, guide, regionHeading);
+          }, this.clearedSites, guide, regionHeading, origin);
           if (this.town.blessing) {
             var icon = this.box('全局祝福', -60, 390, 22, 22, '#314e3a');
             this.art('h', 0, 0, 20, 20, icon);
           }
-          var village = this.navButton('回村', -313, function () {
-            _this72.location = locations.indexOf('village');
-            _this72.villageGuidePending = false;
-            _this72.save();
-            _this72.village();
-          }, -143, 164);
-          this.markQuestTarget(village, 'village', 72, 25, hints);
-          if (!guide && next) this.navButton('继续主线 · ' + next.name, -313, function () {
-            return _this72.routeFromCamp(next);
-          }, 87, 280, true);else if (!guide) this.label('七地驿路全线重开', 87, -313, 280, 21);
+          this.navButton('导航到当前攻略节点', -313, atlas.navigate, 0, 325, true);
           this.worldFooter(function () {
-            return _this72.map();
+            return _this82.map();
           }, function () {
-            return !guide;
+            return !guide && !atlas.busy();
           });
+          if (origin) atlas.navigate();
           if (guide) {
-            this.mapQuestHighlight(village);
-            this.mapGuide(village.position);
-            this.label('点击回村交付村徽', 82, -313, 280, 21);
+            this.mapQuestHighlight(atlas.ship);
+            this.label('点击浮空艇交付村徽', 0, -350, 320, 17);
           }
         };
         _proto.navButton = function navButton(title, y, action, x, width, selected, enabled) {
-          var _this73 = this;
+          var _this83 = this;
           if (x === void 0) {
             x = 0;
           }
@@ -16731,8 +17752,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var label = this.label(title, 0, 0, width - 14, 24, node);
           label.color = Color.fromHEX(new Color(), enabled ? '#23392f' : '#eff0dc');
           if (enabled) node.on(Node.EventType.TOUCH_END, function () {
-            if (node.isValid && node.parent === _this73.ui) {
-              _this73.audio.play('click');
+            if (node.isValid && node.parent === _this83.ui) {
+              _this83.audio.play('click');
               action();
             }
           });
@@ -16744,10 +17765,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.siteBrief(site);
         };
         _proto.siteBrief = function siteBrief(site) {
-          var _this74 = this,
+          var _this84 = this,
             _enemyPortraitSize$bo;
           if (this.deferContent(function () {
-            return _this74.siteBrief(site);
+            return _this84.siteBrief(site);
           }, 'brief:' + site.id, [site.boss])) return;
           var region = site.region,
             done = this.clearedSites.has(site.id);
@@ -16757,45 +17778,45 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.page(site.name, regionNames[region] + (" \xB7 " + site.rooms + " \u95F4\u6218\u6597\u623F \xB7 \u9996\u9886 " + site.bossName), this.locationBackdrop(region));
           this.sceneActor(boss.art, 139, (_enemyPortraitSize$bo = enemyPortraitSize[boss.art]) != null ? _enemyPortraitSize$bo : 108, '首领预览 ');
           this.box('首领情报', 130, 345, 206, 33, '#273329e6');
-          this.label("\u751F\u547D " + boss.hp + "\u3000\u653B\u51FB " + boss.atk, 130, 345, 202, 18);
+          this.label("\u751F\u547D " + boss.hp + "\u3000\u653B\u51FB " + this.fieldAttack(boss.atk), 130, 345, 202, 18);
           var special = planEnemyAction(boss, 0, 3, [boss.hp], [boss.hp]).move;
           this.box('首领招式', 130, 175, 205, 28, '#273329e6');
           this.label('招式 · ' + special.name, 130, 175, 198, 17);
           this.label(site.brief, 0, 57, 423, 23);
           this.label((done ? '已领取首通报酬' : '首次交付') + ' · ' + priceText(site.reward), 0, -16, 436, 20);
-          this.label("HP " + this.hp + "/" + this.maxHP + "\u3000DP " + this.dp + "/" + this.maxDP + "\u3000\u836F\u6C34 " + this.potion + " \xB7 \u9010\u623F\u5B58\u6863", 0, -75, 436, 20);
+          this.label("HP " + this.hp + "/" + this.maxHP + "\u3000DP " + this.dp + "/" + this.maxDP + "\u3000\u5C0F\u8840\u74F6 " + this.potion + " \xB7 \u9010\u623F\u5B58\u6863", 0, -75, 436, 20);
           this.navButton(done ? '再次出发' : '出发 · ' + site.name, -151, function () {
-            return _this74.enter(region, undefined, site.id);
+            return _this84.enter(region, undefined, site.id);
           }, 0, 424, true);
           this.navButton('整理小队', -233, function () {
-            return _this74.roster(_this74.party[0], function () {
-              return _this74.siteBrief(site);
+            return _this84.roster(_this84.party[0], function () {
+              return _this84.siteBrief(site);
             });
           }, -109, 204);
-          this.navButton('回村补给', -233, function () {
-            _this74.location = locations.indexOf('village');
-            _this74.save();
-            _this74.village();
+          this.navButton('返回浮空艇补给', -233, function () {
+            _this84.location = locations.indexOf('village');
+            _this84.save();
+            _this84.village();
           }, 109, 204);
           this.navButton('返回大地图', -313, function () {
-            return _this74.map();
+            return _this84.map();
           });
           this.navButton(this.town.provisions ? '行装已备' : '筹备行装', -390, function () {
-            return _this74.provisionShop(function () {
-              return _this74.siteBrief(site);
+            return _this84.provisionShop(function () {
+              return _this84.siteBrief(site);
             });
           });
           if (!this.recruits.includes('d') && region === 'forest') this.label('村长的「新队友」可在酒馆招募盾卫', 0, -108, 435, 17);
         };
         _proto.roadside = function roadside() {
-          var _this75 = this;
+          var _this85 = this;
           if (this.deferContent(function () {
-            return _this75.roadside();
+            return _this85.roadside();
           }, 'roadside', ['locations/dungeon-altar', 'dungeon-traveler', 'dungeon-merchant'])) return;
           this.page('林边驿站', '驿道旁有一座旧祭坛，路过的旅人会在这里歇脚。', this.locationBackdrop('forest'));
           var visit = function visit(kind) {
-            _this75.phase = 'forest';
-            _this75.adventure = {
+            _this85.phase = 'forest';
+            _this85.adventure = {
               id: 'forest',
               stopover: true,
               coins: 0,
@@ -16804,148 +17825,88 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               ordinaryWins: 0,
               buffs: {}
             };
-            _this75.dungeon = new DungeonDirector([{
+            _this85.dungeon = new DungeonDirector([{
               kind: kind
             }]);
-            _this75.showRoom();
+            _this85.showRoom();
           };
           this.navButton(this.town.travelerSponsored ? '拜访旅行商人' : '探望落难的旅人', 35, function () {
-            return visit(_this75.town.travelerSponsored ? 'merchant' : 'event');
+            return visit(_this85.town.travelerSponsored ? 'merchant' : 'event');
           });
           this.navButton('探访老旧祭坛', -63, function () {
             return visit('rest');
           }, 0, 424, false, this.town.lastRoadAltar !== this.clearedSites.size);
           this.navButton('返回大地图', -228, function () {
-            return _this75.map();
+            return _this85.map();
           });
         };
         _proto.shadowMarket = function shadowMarket() {
-          var _this76 = this;
+          var _this86 = this;
           if (this.deferContent(function () {
-            return _this76.shadowMarket();
-          }, 'shadow-market', ['spire-trader', 'corridor-tower'])) return;
-          this.page('暗影夜市', '夜商只收金币与材料。购入后可在小队中装配。', this.locationBackdrop('tower'));
+            return _this86.shadowMarket();
+          }, 'shadow-market', ['spire-trader', 'corridor-tower', 'trade-bag'].concat(equipment.map(gearArt)))) return;
+          this.page('暗影夜市', '', this.locationBackdrop('tower'));
           this.sceneActor('spire-trader', 145, 110, '夜市商人 ');
-          equipment.filter(function (item) {
-            return item.shadow;
-          }).forEach(function (item, i) {
-            var owned = _this76.inventory.owned.includes(item.id),
-              y = 45 - i * 110;
-            _this76.navButton(item.name + ' · ' + (owned ? '已购' : item.cost.gold + ' 金币'), y, function () {
-              if (!_this76.inventory.canCraft(item.id, _this76.walletGold, _this76.cleared, true)) {
-                _this76.popup('金币或材料不足', 0, 94);
-                return;
-              }
-              void _this76.payGold(item.cost.gold, function () {
-                return _this76.inventory.craft(item.id, _this76.walletGold, _this76.cleared, true) === null ? false : undefined;
-              }, {
-                persist: true,
-                redraw: function redraw() {
-                  return _this76.shadowMarket();
-                }
-              });
-            }, 0, 414, false, !owned);
-            var _item$cost = item.cost,
-              gold = _item$cost.gold,
-              materials = _objectWithoutPropertiesLoose(_item$cost, _excluded);
-            _this76.label(gearText(item) + ' · ' + priceText(materials), 0, y - 51, 440, 17);
-          });
-          this.navButton('返回大地图', -337, function () {
-            return _this76.map();
-          });
+          this.tradeCounter('夜商货囊', function () {
+            return _this86.gearOffers(true);
+          }, [{
+            name: '结束交易',
+            use: function use() {
+              return _this86.map();
+            }
+          }]);
         };
         _proto.provisionShop = function provisionShop(back) {
-          var _this77 = this,
-            _locations$this$locat;
-          var packed = provisions.find(function (pack) {
-            return pack.id === _this77.town.provisions;
-          });
-          this.page('远行行装', packed ? '已备 ' + packed.name + ' · 下次出发自动使用' : '每次可携带一份，出发后效果持续到该地点结算。', this.locationBackdrop((_locations$this$locat = locations[this.location]) != null ? _locations$this$locat : 'village'));
-          provisions.forEach(function (pack, i) {
-            var y = 56 - i * 110;
-            _this77.navButton(pack.name + ' · ' + priceText(pack.cost), y, function () {
-              if (!_this77.inventory.canAfford(pack.cost, _this77.gold)) {
-                _this77.popup('筹备所需金币或材料不足', 0, 95);
-                return;
-              }
-              void _this77.payGold(pack.cost.gold, function () {
-                if (_this77.town.provisions) return false;
-                _this77.inventory.consumeMaterials(pack.cost);
-                _this77.town.provisions = pack.id;
-              }, {
-                persist: true,
-                redraw: function redraw() {
-                  return _this77.provisionShop(back);
-                }
+          var _this87 = this;
+          this.townInterior('远行行装', '每次可携带一份，出发后自动使用。', 'shop', 'npc-shop');
+          this.tradeCounter('远行行装', function () {
+            return provisions.map(function (pack, i) {
+              return _this87.purchaseOffer(pack.name, ['board/potion', 'gear-blade', 'material-essence'][i], [['属性', '单次远行行装'], ['效果', pack.detail]], pack.cost, function () {
+                var _provisions$find;
+                return _this87.town.provisions ? '已备 ' + ((_provisions$find = provisions.find(function (entry) {
+                  return entry.id === _this87.town.provisions;
+                })) == null ? void 0 : _provisions$find.name) : undefined;
+              }, function () {
+                _this87.inventory.consumeMaterials(pack.cost);
+                _this87.town.provisions = pack.id;
+                return true;
               });
-            }, 0, 430, false, !packed);
-            _this77.label(pack.detail, 0, y - 53, 430, 19);
-          });
-          this.navButton('返回', -336, back);
+            });
+          }, [{
+            name: '返回',
+            use: back
+          }]);
         };
-        _proto.temperShop = function temperShop(page) {
-          var _this78 = this;
-          if (page === void 0) {
-            page = 0;
-          }
-          this.townInterior('装备淬炼', '每级增加攻击 2、生命 5、护甲 2，装备后生效。', 'smith', 'npc-smith');
-          var owned = equipment.filter(function (item) {
-            return _this78.inventory.owned.includes(item.id);
-          });
-          owned.slice(page * 3, page * 3 + 3).forEach(function (item, i) {
-            var _this78$inventory$tem;
-            var y = 55 - i * 102,
-              cost = _this78.inventory.temperCost(item.id),
-              level = (_this78$inventory$tem = _this78.inventory.tempering[item.id]) != null ? _this78$inventory$tem : 0;
-            _this78.button(item.name + ("\u3000+" + level + " / 4"), y, function () {
-              var _cost$gold;
-              if (!cost || _this78.gold < ((_cost$gold = cost.gold) != null ? _cost$gold : 0)) {
-                _this78.popup('金币不足', 0, 94);
-                return;
-              }
-              var paid = _this78.payGold(cost.gold, function () {
-                return _this78.inventory.temper(item.id, _this78.walletGold) ? undefined : false;
-              }, {
-                persist: true,
-                redraw: function redraw() {
-                  return _this78.temperShop(page);
-                }
-              });
-              if (!paid) _this78.popup('材料不足', 0, 94);
-            }, 0, 390, false, _this78.ui, !!cost);
-            _this78.label(cost ? priceText(cost) : '淬炼已满', 0, y - 43, 440, 18);
-          });
-          if (page > 0) this.button('上一页', -247, function () {
-            return _this78.temperShop(page - 1);
-          }, -105, 185);
-          if ((page + 1) * 3 < owned.length) this.button('下一页', -247, function () {
-            return _this78.temperShop(page + 1);
-          }, 105, 185);
-          this.navButton('返回铁匠铺', -338, function () {
-            return _this78.smithy();
-          });
-        };
-        _proto.mapGuide = function mapGuide(target) {
-          var layer = this.box('村庄教学遮罩', 0, 0, 480, 854);
-          var ink = layer.addComponent(Graphics);
-          ink.fillColor = new Color(9, 17, 22, 145);
-          var left = target.x - 84,
-            right = target.x + 84,
-            bottom = target.y - 38,
-            top = target.y + 38;
-          ink.rect(-240, -427, 480, bottom + 427);
-          ink.rect(-240, top, 480, 427 - top);
-          ink.rect(-240, bottom, left + 240, top - bottom);
-          ink.rect(right, bottom, 240 - right, top - bottom);
-          ink.fill();
-          this.guidePointer(layer, target, target);
+        _proto.temperShop = function temperShop() {
+          var _this88 = this;
+          this.townInterior('装备淬炼', '每级增加 2 AP、5 HP、2 DP，最多四级。', 'smith', 'npc-smith');
+          this.tradeCounter('可淬炼装备', function () {
+            return equipment.filter(function (item) {
+              return _this88.inventory.owned.includes(item.id);
+            }).map(function (item) {
+              var _this88$inventory$tem, _item$cost$gold;
+              var level = (_this88$inventory$tem = _this88.inventory.tempering[item.id]) != null ? _this88$inventory$tem : 0,
+                cost = _this88.inventory.temperCost(item.id);
+              return _this88.purchaseOffer(item.name, gearArt(item), [].concat(gearInfo(item, level), [['淬炼', '每级 +2 AP、+5 HP、+2 DP']]), cost != null ? cost : {}, function () {
+                var _this88$inventory$tem2;
+                return cost && _this88.inventory.owned.includes(item.id) && ((_this88$inventory$tem2 = _this88.inventory.tempering[item.id]) != null ? _this88$inventory$tem2 : 0) === level ? undefined : '已达上限或装备已变化';
+              }, function () {
+                return _this88.inventory.temper(item.id, _this88.walletGold);
+              }, '淬炼', salePrices.fromGold((_item$cost$gold = item.cost.gold) != null ? _item$cost$gold : 0), item.cost);
+            });
+          }, [{
+            name: '返回铁匠铺',
+            use: function use() {
+              return _this88.smithy();
+            }
+          }]);
         };
         _proto.mapQuestHighlight = function mapQuestHighlight(node) {
           var glow = this.box('任务目标高亮', 0, 0, 120, 50, undefined, node).addComponent(Graphics);
-          for (var _i16 = 0, _arr6 = [[14, 20], [9, 42], [5, 98], [2, 255]]; _i16 < _arr6.length; _i16++) {
-            var _arr6$_i = _arr6[_i16],
-              width = _arr6$_i[0],
-              alpha = _arr6$_i[1];
+          for (var _i19 = 0, _arr7 = [[14, 20], [9, 42], [5, 98], [2, 255]]; _i19 < _arr7.length; _i19++) {
+            var _arr7$_i = _arr7[_i19],
+              width = _arr7$_i[0],
+              alpha = _arr7$_i[1];
             glow.strokeColor = new Color(255, 207, 79, alpha);
             glow.lineWidth = width;
             glow.roundRect(-82, -37, 164, 74, 9);
@@ -16953,25 +17914,25 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }
         };
         _proto.showRules = function showRules(tab, back) {
-          var _this79 = this;
+          var _this89 = this;
           if (tab === void 0) {
             tab = 0;
           }
           if (back === void 0) {
             back = function back() {
-              return _this79.map();
+              return _this89.map();
             };
           }
           var labels = ['战斗', '探索', '存档'];
           var lines = [['每种职业纹章由其上场角色行动，技能随 AP 成长。', '四连留下银框技能纹章，再消触发小技能。', '五格以上留下金色高级纹章，再消触发大招。'], ['首战直接开始，战斗结束后队伍自动前进。', '商人、剧情和分支门需要先完成当前选择。'], ['局外装备、资源、进度与成长自动保存。', '刷新会结束当前地牢并恢复出发前的存档。', '通关、主动撤离、失败分别保留全部、70%、50% 战利品。']];
           this.page('冒险规则', '');
           labels.forEach(function (label, i) {
-            return _this79.button(label, 88, function () {
-              return _this79.showRules(i, back);
+            return _this89.button(label, 88, function () {
+              return _this89.showRules(i, back);
             }, (i - 1) * 143, 132);
           });
           lines[tab].forEach(function (line, i) {
-            return _this79.label(line, 0, 10 - i * 55, 444, 19);
+            return _this89.label(line, 0, 10 - i * 55, 444, 19);
           });
           this.button('返回', -370, back, 0, 180);
         };
@@ -16980,18 +17941,18 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           return 'stage-' + location + '-0';
         };
         _proto.dungeonBackdrop = function dungeonBackdrop(depth) {
-          var _this$dungeon$rooms$l2, _this$dungeon15, _this$adventure$id, _this$adventure4;
+          var _this$dungeon$rooms$l2, _this$dungeon15, _this$adventure$id, _this$adventure5;
           if (depth === void 0) {
             var _this$dungeon$depth2, _this$dungeon14;
             depth = (_this$dungeon$depth2 = (_this$dungeon14 = this.dungeon) == null ? void 0 : _this$dungeon14.depth) != null ? _this$dungeon$depth2 : 0;
           }
           var last = ((_this$dungeon$rooms$l2 = (_this$dungeon15 = this.dungeon) == null ? void 0 : _this$dungeon15.rooms.length) != null ? _this$dungeon$rooms$l2 : 1) - 1;
-          return 'stage-' + ((_this$adventure$id = (_this$adventure4 = this.adventure) == null ? void 0 : _this$adventure4.id) != null ? _this$adventure$id : 'forest') + '-' + Math.max(0, Math.min(last, depth));
+          return 'stage-' + ((_this$adventure$id = (_this$adventure5 = this.adventure) == null ? void 0 : _this$adventure5.id) != null ? _this$adventure$id : 'forest') + '-' + Math.max(0, Math.min(last, depth));
         };
         _proto.walkParty = function walkParty(seconds, views, direction, incoming) {
           var _this$activeTravelCan,
             _root$getChildByName,
-            _this80 = this;
+            _this90 = this;
           if (direction === void 0) {
             direction = 1;
           }
@@ -17033,13 +17994,13 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }
           backdrop.name = '行进风景';
           var drawBackground = function drawBackground(progress) {
-            return _this80.scenery.seek(backdrop, start + direction * distance * progress);
+            return _this90.scenery.seek(backdrop, start + direction * distance * progress);
           };
           var preview;
           var enemies = [];
           if (incoming != null && incoming.length) {
             if (incoming.some(function (foe) {
-              return !_this80.textures.has(foe.art);
+              return !_this90.textures.has(foe.art);
             })) {
               audit.status = 'failed';
               audit.reason = 'enemy-art-not-ready';
@@ -17051,15 +18012,15 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             var front = root.getChildByName(frontName);
             if (front) preview.setSiblingIndex(front.getSiblingIndex());
             incoming.forEach(function (foe, index) {
-              var _this80$enemyPlacemen = _this80.enemyPlacement(foe, incoming.length, index),
-                x = _this80$enemyPlacemen.x,
-                y = _this80$enemyPlacemen.y,
-                size = _this80$enemyPlacemen.size,
-                ground = _this80$enemyPlacemen.ground,
-                node = _this80.box('遇敌预览 ' + index, x + distance, y - centerY, size, size, undefined, preview);
-              _this80.groundShadow(node, ground - y, foe.art, size, 'right');
-              var portrait = _this80.art(foe.art, 0, 0, size, size, node);
-              _this80.faceStage(portrait, 'right');
+              var _this90$enemyPlacemen = _this90.enemyPlacement(foe, incoming.length, index),
+                x = _this90$enemyPlacemen.x,
+                y = _this90$enemyPlacemen.y,
+                size = _this90$enemyPlacemen.size,
+                ground = _this90$enemyPlacemen.ground,
+                node = _this90.box('遇敌预览 ' + index, x + distance, y - centerY, size, size, undefined, preview);
+              _this90.groundShadow(node, ground - y, foe.art, size, 'right');
+              var portrait = _this90.art(foe.art, 0, 0, size, size, node);
+              _this90.faceStage(portrait, 'right');
               enemies.push({
                 node: node,
                 x: x,
@@ -17103,16 +18064,16 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           if (incoming != null && incoming.length) this.encounterTravelAudit = encounter;
           var draw = function draw(progress) {
             drawBackground(progress);
-            for (var _iterator57 = _createForOfIteratorHelperLoose(poses), _step57; !(_step57 = _iterator57()).done;) {
+            for (var _iterator63 = _createForOfIteratorHelperLoose(poses), _step63; !(_step63 = _iterator63()).done;) {
               var _pose$portrait;
-              var pose = _step57.value;
+              var pose = _step63.value;
               if (!pose.hero.isValid) throw Error('Travel actor destroyed');
               var value = travelPose(clock.elapsed, pose.index, walking.reduced ? .45 : 1);
               pose.hero.setPosition(pose.home.x + (progress === 1 ? 0 : value.x), pose.home.y + (progress === 1 ? 0 : value.y), pose.home.z);
               if ((_pose$portrait = pose.portrait) != null && _pose$portrait.isValid) pose.portrait.angle = progress === 1 ? pose.angle : pose.angle + value.angle;
             }
-            for (var _i17 = 0, _enemies = enemies; _i17 < _enemies.length; _i17++) {
-              var _enemies$_i = _enemies[_i17],
+            for (var _i20 = 0, _enemies = enemies; _i20 < _enemies.length; _i20++) {
+              var _enemies$_i = _enemies[_i20],
                 node = _enemies$_i.node,
                 x = _enemies$_i.x,
                 y = _enemies$_i.y;
@@ -17133,14 +18094,14 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               var _preview;
               if (settled) return;
               settled = true;
-              _this80.unschedule(tick);
+              _this90.unschedule(tick);
               unsubscribe();
               root.off(Node.EventType.NODE_DESTROYED, onDestroy);
               audit.status = played ? 'completed' : 'cancelled';
               audit.reason = reason;
-              for (var _iterator58 = _createForOfIteratorHelperLoose(poses), _step58; !(_step58 = _iterator58()).done;) {
+              for (var _iterator64 = _createForOfIteratorHelperLoose(poses), _step64; !(_step64 = _iterator64()).done;) {
                 var _pose$portrait2;
-                var pose = _step58.value;
+                var pose = _step64.value;
                 if (pose.hero.isValid) pose.hero.setPosition(pose.home);
                 if ((_pose$portrait2 = pose.portrait) != null && _pose$portrait2.isValid && pose.bounds && pose.anchor && pose.position) {
                   pose.bounds.setAnchorPoint(pose.anchor);
@@ -17153,8 +18114,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                 preview.destroy();
               }
               finishWalking();
-              _this80.pageMotions["delete"](walking);
-              if (_this80.activeTravelCancel === cancel) _this80.activeTravelCancel = undefined;
+              _this90.pageMotions["delete"](walking);
+              if (_this90.activeTravelCancel === cancel) _this90.activeTravelCancel = undefined;
               resolve(played);
             };
             var cancel = function cancel() {
@@ -17165,7 +18126,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               };
             var tick = function tick(dt) {
               if (settled) return;
-              if (_this80.ui !== root || !root.isValid) {
+              if (_this90.ui !== root || !root.isValid) {
                 finish(false, 'stale-root');
                 return;
               }
@@ -17183,10 +18144,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               return finish(false, 'cancelled');
             });
             root.once(Node.EventType.NODE_DESTROYED, onDestroy);
-            _this80.activeTravelCancel = cancel;
+            _this90.activeTravelCancel = cancel;
             try {
               draw(0);
-              _this80.schedule(tick, 0);
+              _this90.schedule(tick, 0);
             } catch (error) {
               finish(false, 'travel-start-failed');
               console.warn('Travel presentation failed', error);
@@ -17194,13 +18155,13 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           });
         };
         _proto.roster = function roster(selected, back) {
-          var _this81 = this;
+          var _this91 = this;
           if (selected === void 0) {
             selected = this.party[0];
           }
           if (back === void 0) {
             back = function back() {
-              return _this81.map();
+              return _this91.map();
             };
           }
           var icons = ['gear-stage', 'tool-base', 'slot-main', 'slot-off', 'slot-armor', 'slot-accessory'].concat(equipment.map(function (item) {
@@ -17209,7 +18170,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             return 'hero-' + role;
           }));
           if (this.deferContent(function () {
-            return _this81.roster(selected, back);
+            return _this91.roster(selected, back);
           }, 'roster:' + this.party.join(''), icons)) return;
           var hero = heroes[selected];
           var stats = this.inventory.stats(selected);
@@ -17217,42 +18178,54 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.reset(this.textures.has('gear-stage') ? 'gear-stage' : 'village-stage');
           this.stageHeading('小队配置');
           var art = 'hero-' + selected;
-          this.art(art, 0, this.portraitY(art, 200, 146), 146, 146);
-          this.box('角色信息底板', 0, 159, 402, 78, '#20352dec');
-          this.outline(this.label(hero.name + ' · ' + hero.role + '    Lv. ' + rank.level, 0, 179, 330, 19));
-          this.label('HP ' + stats.hp + '　DP ' + stats.dp + '　' + apNames[hero.discipline] + ' ' + stats.attack + '　EXP ' + rank.progress + '/' + rank.level * 2, 0, 155, 336, 15);
           var root = this.ui;
-          var skill = planOathSkill(selected, 3, 1, undefined, stats.attack, false, newOathState(), function (id) {
-            return _this81.inventory.wears(selected, id);
-          }, function () {
-            return 0;
-          }, 0, [3, 0, 0]);
-          var preview = skill.kind === 'attack' ? skill.damage + ' 伤害' : skill.kind === 'heal' ? skill.amount + ' HP' : skill.kind === 'guard' ? skill.amount + ' DP' : '';
-          this.label(hero.skill + ' · 普通三消 ' + preview, 0, 132, 374, 15);
           var active = function active() {
-            return _this81.ui === root && !root.getChildByName('物品操作');
+            return _this91.ui === root && !root.getChildByName('物品操作') && !root.getChildByName('背包弹窗');
           };
+          var choose = function choose() {
+            if (active()) _this91.heroOptions(selected, !_this91.trial && canReplace(_this91.recruits) ? function () {
+              return _this91.formationPage(Math.max(0, _this91.party.indexOf(selected)), back);
+            } : undefined, '角色替换');
+          };
+          var portrait = this.box('选择角色 ' + hero.role, 0, this.portraitY(art, 200, 146), 146, 146);
+          this.art(art, 0, 0, 146, 146, portrait);
+          portrait.on(Node.EventType.TOUCH_END, choose);
+          this.outline(this.label(hero.name + ' · ' + hero.role + '    Lv. ' + rank.level, 0, 182, 340, 21));
+          var nameHit = this.box('角色操作', 0, 182, 300, 34);
+          nameHit.on(Node.EventType.TOUCH_END, choose);
+          var base = this.inventory.baseStats(selected);
+          for (var _iterator65 = _createForOfIteratorHelperLoose([['attack', 'AP'], ['hp', 'HP'], ['dp', 'DP']].entries()), _step65; !(_step65 = _iterator65()).done;) {
+            var _step65$value = _step65.value,
+              i = _step65$value[0],
+              _step65$value$ = _step65$value[1],
+              key = _step65$value$[0],
+              unit = _step65$value$[1];
+            var x = (i - 1) * 124,
+              extra = stats[key] - base[key];
+            this.outline(this.label(base[key] + ' ' + unit, x, 153, 117, 19));
+            if (extra) ink(this.outline(this.label('+' + extra + unit, x, 129, 113, 16)), '#a4efaf', true);
+          }
           var cycle = function cycle(offset) {
             if (!active()) return;
-            var members = [].concat(_this81.party, availableHeroes(_this81.recruits).filter(function (id) {
-              return !_this81.party.includes(id);
+            var members = [].concat(_this91.party, availableHeroes(_this91.recruits).filter(function (id) {
+              return !_this91.party.includes(id);
             }));
             var index = members.indexOf(selected);
-            _this81.roster(members[(index + offset + members.length) % members.length], back);
+            _this91.roster(members[(index + offset + members.length) % members.length], back);
           };
-          var _loop10 = function _loop10() {
-            var side = _arr7[_i18];
-            var arrow = _this81.box(side < 0 ? '上一位角色' : '下一位角色', side * 205, 267, 44, 54);
-            var frame = _this81.textures.get('trial-ui-back');
+          var _loop11 = function _loop11() {
+            var side = _arr8[_i21];
+            var arrow = _this91.box(side < 0 ? '上一位角色' : '下一位角色', side * 205, 267, 44, 54);
+            var frame = _this91.textures.get('trial-ui-back');
             var fit = frame ? Math.min(34 / frame.originalSize.width, 42 / frame.originalSize.height) : 1;
-            var icon = frame ? _this81.art('trial-ui-back', 0, 0, frame.originalSize.width * fit, frame.originalSize.height * fit, arrow) : undefined;
-            if (icon) icon.setScale(-side, 1, 1);else _this81.outline(_this81.label(side < 0 ? '‹' : '›', 0, 0, 40, 31, arrow));
+            var icon = frame ? _this91.art('trial-ui-back', 0, 0, frame.originalSize.width * fit, frame.originalSize.height * fit, arrow) : undefined;
+            if (icon) icon.setScale(-side, 1, 1);else _this91.outline(_this91.label(side < 0 ? '‹' : '›', 0, 0, 40, 31, arrow));
             arrow.on(Node.EventType.TOUCH_END, function () {
               return cycle(side);
             });
           };
-          for (var _i18 = 0, _arr7 = [-1, 1]; _i18 < _arr7.length; _i18++) {
-            _loop10();
+          for (var _i21 = 0, _arr8 = [-1, 1]; _i21 < _arr8.length; _i21++) {
+            _loop11();
           }
           var slots = [{
             id: 'weapon',
@@ -17279,68 +18252,72 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             x: 133,
             y: 242
           }];
-          var _loop11 = function _loop11() {
-            var slot = _slots[_i19];
+          var _loop12 = function _loop12() {
+            var slot = _slots[_i22];
             var item = equipment.find(function (entry) {
-              return entry.id === _this81.inventory.slots[selected + ':' + slot.id];
+              return entry.id === _this91.inventory.slots[selected + ':' + slot.id];
             });
-            var node = _this81.box(slot.name, slot.x, slot.y, 71, 71);
-            var backdrop = _this81.art(item ? 'tool-base' : slot.icon, 0, 0, item ? 71 : 50, item ? 71 : 50, node);
+            var node = _this91.box(slot.name, slot.x, slot.y, 71, 71);
+            var backdrop = _this91.art(item ? 'tool-base' : slot.icon, 0, 0, item ? 71 : 50, item ? 71 : 50, node);
             if (backdrop && !item) backdrop.addComponent(UIOpacity).opacity = 126;
             if (item) {
-              _this81.art(gearArt(item), 0, 4, 49, 49, node);
-              _this81.outline(_this81.label(item.name, 0, -24, 69, 13, node));
+              _this91.art(gearArt(item), 0, 4, 49, 49, node);
+              _this91.outline(_this91.label(item.name, 0, -24, 69, 13, node));
             }
             node.on(Node.EventType.TOUCH_END, function () {
               if (!active()) return;
               if (item) {
-                _this81.gearActions(item.id, true, selected, back);
+                _this91.gearActions(item.id, true, selected, back);
                 return;
               }
               var compatible = equipment.find(function (entry) {
-                return canEquip(selected, entry) && entry.slot === slot.id && _this81.inventory.bag.includes(entry.id);
+                return canEquip(selected, entry) && entry.slot === slot.id && _this91.inventory.bag.includes(entry.id);
               });
-              if (compatible) _this81.gearActions(compatible.id, false, selected, back);else _this81.popup('没有可装配物品', 0, 108);
+              if (compatible) _this91.gearActions(compatible.id, false, selected, back);else _this91.popup('没有可装配物品', 0, 108);
             });
           };
-          for (var _i19 = 0, _slots = slots; _i19 < _slots.length; _i19++) {
-            _loop11();
+          for (var _i22 = 0, _slots = slots; _i22 < _slots.length; _i22++) {
+            _loop12();
           }
           this.box('背包底板', 0, -106, 430, 447, '#263931');
           this.button('背包', 88, function () {
-            _this81.bagMaterials = false;
-            _this81.roster(selected, back);
+            _this91.bagMaterials = false;
+            _this91.roster(selected, back);
           }, -145, 132, !this.bagMaterials);
-          this.button('材料', 88, function () {
-            _this81.bagMaterials = true;
-            _this81.roster(selected, back);
+          this.button('物资', 88, function () {
+            _this91.bagMaterials = true;
+            _this91.roster(selected, back);
           }, 0, 132, this.bagMaterials);
           this.button('角色替换', 88, function () {
             if (!active()) return;
-            _this81.formationPage(0, back);
-          }, 145, 132, false, this.ui, canReplace(this.recruits));
-          if (!canReplace(this.recruits)) this.label('集齐四名初始成员后开放角色替换', 0, -337, 412, 15);
+            _this91.formationPage(Math.max(0, _this91.party.indexOf(selected)), back);
+          }, 145, 132, false, this.ui, !this.trial && canReplace(this.recruits));
+          if (this.trial) this.label('机制测试使用固定小队', 0, -337, 412, 15);else if (!canReplace(this.recruits)) this.label('集齐四名初始成员后开放角色替换', 0, -337, 412, 15);
           if (this.bagMaterials) {
-            var items = Object.entries(this.inventory.materials).filter(function (_ref40) {
-              var count = _ref40[1];
-              return count > 0;
-            });
-            if (!items.length) this.label('尚无材料', 0, -52, 350, 20);
-            items.forEach(function (_ref41, i) {
-              var key = _ref41[0],
-                count = _ref41[1];
-              var cell = _this81.box('材料 · ' + key, (i % 4 - 1.5) * 102, 14, 94, 98, '#47604c');
-              _this81.label(resourceNames[key], 0, 8, 86, 20, cell);
-              _this81.label('×' + count, 22, -26, 44, 15, cell);
+            ['gold', 'ore', 'essence'].forEach(function (key, i) {
+              var count = _this91.walletBalance(key),
+                cell = _this91.box('物资 · ' + key, (i - 1) * 116, 14, 102, 98, '#47604c');
+              _this91.art('material-' + key, 0, 13, 48, 48, cell);
+              _this91.label(resourceNames[key], 0, -28, 94, 16, cell);
+              _this91.label('×' + count, 23, 31, 50, 14, cell);
+              cell.on(Node.EventType.TOUCH_END, function () {
+                if (active()) _this91.itemActions(resourceNames[key], 'material-' + key, [['属性', '物资'], ['用途', key === 'gold' ? '购买商品与支付服务' : '制作装备、淬炼或购置行装'], ['持有', String(count)]], [], function () {
+                  return _this91.roster(selected, back);
+                });
+              });
             });
           }
-          var bag = [].concat(this.potion ? [{
-            id: 'potion',
-            label: '治疗药水 ×' + this.potion,
-            icon: '',
-            item: null
-          }] : [], equipment.filter(function (item) {
-            return _this81.inventory.bag.includes(item.id);
+          var bag = [].concat(itemIds.filter(function (id) {
+            return _this91.itemCount(id) > 0;
+          }).map(function (id) {
+            return {
+              id: id,
+              label: items[id].name + ' ×' + _this91.itemCount(id),
+              icon: 'board/' + id,
+              item: null
+            };
+          }), equipment.filter(function (item) {
+            return _this91.inventory.bag.includes(item.id);
           }).map(function (item) {
             return {
               id: item.id,
@@ -17351,48 +18328,70 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }));
           this.bagPage = Math.min(this.bagPage, Math.max(0, Math.ceil(bag.length / 12) - 1));
           if (!this.bagMaterials && bag.length > 12) this.button("\u80CC\u5305 " + (this.bagPage + 1) + "/" + Math.ceil(bag.length / 12) + " \xB7 \u7FFB\u9875", -299, function () {
-            _this81.bagPage = (_this81.bagPage + 1) % Math.ceil(bag.length / 12);
-            _this81.roster(selected, back);
+            _this91.bagPage = (_this91.bagPage + 1) % Math.ceil(bag.length / 12);
+            _this91.roster(selected, back);
           });
-          var _loop12 = function _loop12() {
-            var content = bag[_this81.bagPage * 12 + _index24];
+          var _loop13 = function _loop13() {
+            var content = bag[_this91.bagPage * 12 + _index24];
             var x = (_index24 % 4 - 1.5) * 102,
-              y = 28 - Math.floor(_index24 / 4) * 108;
-            var cell = _this81.box(content ? '背包 · ' + content.label : '空背包格 ' + _index24, x, y, 94, 100, content ? '#47604c' : '#31473b');
+              y = 10 - Math.floor(_index24 / 4) * 108;
+            var cell = _this91.box(content ? '背包 · ' + content.label : '空背包格 ' + _index24, x, y, 94, 100, content ? '#47604c' : '#31473b');
             if (!content) return 1; // continue
-            if (content.id === 'potion') _this81.drawPotion(cell);else if (!_this81.art(content.icon, 0, 11, 45, 45, cell)) _this81.label('◇', 0, 11, 45, 25, cell);
-            _this81.label(content.label, 0, -28, 90, 15, cell);
+            if (!_this91.art(content.icon, 0, 11, 45, 45, cell)) _this91.label('◇', 0, 11, 45, 25, cell);
+            if (content.item) _this91.label(content.label, 0, -28, 90, 15, cell);else {
+              var id = content.id,
+                info = items[id];
+              _this91.outline(_this91.label('×' + _this91.itemCount(id), 26, 29, 40, 13, cell));
+              _this91.label(info.name, 0, -18, 90, 14, cell);
+              var tag = _this91.label(info.useTag, 0, -37, 88, 12, cell);
+              tag.color = Color.fromHEX(new Color(), info.useTag === '战斗用道具' ? '#c6e9dc' : '#ffe4a1');
+            }
             cell.on(Node.EventType.TOUCH_END, function () {
               if (!active()) return;
-              if (content.id !== 'potion') _this81.gearActions(content.id, false, selected, back);else _this81.itemActions('治疗药水', '恢复至多 45 HP。', [['使用药水', function () {
-                if (!_this81.potion || _this81.hp >= _this81.maxHP) return false;
-                _this81.potion--;
-                _this81.hp = Math.min(_this81.maxHP, _this81.hp + 45);
-                _this81.audio.play('potion');
+              if (content.item) {
+                _this91.gearActions(content.id, false, selected, back);
+                return;
+              }
+              var id = content.id,
+                info = items[id],
+                actions = [];
+              if (id === 'gift') actions.push(['打开礼包', function () {
+                if (!_this91.itemCount(id)) return false;
+                _this91.openGift();
                 return true;
-              }], ['丢弃 1 瓶', function () {
-                if (!_this81.potion) return false;
-                _this81.potion--;
+              }]);
+              if ('heal' in info) actions.push(['使用' + info.name, function () {
+                if (!_this91.itemCount(id) || _this91.hp >= _this91.maxHP) return false;
+                _this91.addItem(id, -1);
+                _this91.hp = Math.min(_this91.maxHP, _this91.hp + info.heal);
                 return true;
-              }]], function () {
-                return _this81.roster(selected, back);
-              });
+              }]);
+              actions.push(['丢弃一份', function () {
+                if (!_this91.itemCount(id)) return false;
+                _this91.addItem(id, -1);
+                return true;
+              }]);
+              _this91.itemActions(info.name, 'board/' + id, [['属性', info.useTag], ['效果', info.detail]].concat(priceLines('price' in info ? {
+                gold: info.price
+              } : undefined, 'price' in info ? salePrices.fromGold(info.price) : salePrices.gift)), actions, function () {
+                return _this91.roster(selected, back);
+              }, id);
             });
           };
           for (var _index24 = 0; !this.bagMaterials && _index24 < 12; _index24++) {
-            if (_loop12()) continue;
+            if (_loop13()) continue;
           }
-          this.button('返回地图', -380, back, 0, 300);
+          this.button(this.trial ? '返回测试准备' : '返回地图', -380, back, 0, 300);
         };
         _proto.formationPage = function formationPage(slot, back) {
-          var _this82 = this;
+          var _this92 = this;
           if (!canReplace(this.recruits) || this.party.length !== 4) return;
           var members = availableHeroes(this.recruits);
           var assets = members.flatMap(function (id) {
             return ['hero-' + id, id];
           });
           if (this.deferContent(function () {
-            return _this82.formationPage(slot, back);
+            return _this92.formationPage(slot, back);
           }, 'formation', assets)) return;
           this.reset('gear-stage');
           this.stageHeading('角色替换');
@@ -17400,124 +18399,194 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var letters = 'ABCD';
           this.party.forEach(function (id, i) {
             var selected = i === slot;
-            var card = _this82.box('队列 ' + letters[i], (i - 1.5) * 111, 254, 103, 154, selected ? '#ffe093' : '#697665');
-            _this82.box('底板', 0, 0, selected ? 96 : 100, selected ? 147 : 151, selected ? '#5e4930' : '#2f4237', card);
-            _this82.outline(_this82.label(letters[i], -34, 57, 24, 18, card));
-            _this82.art('hero-' + id, 0, 7, 84, 84, card);
-            _this82.label(heroes[id].role, 0, -47, 98, 17, card);
+            var card = _this92.box('队列 ' + letters[i], (i - 1.5) * 111, 254, 103, 154, selected ? '#ffe093' : '#697665');
+            _this92.box('底板', 0, 0, selected ? 96 : 100, selected ? 147 : 151, selected ? '#5e4930' : '#2f4237', card);
+            _this92.outline(_this92.label(letters[i], -34, 57, 24, 18, card));
+            _this92.art('hero-' + id, 0, 7, 84, 84, card);
+            _this92.label(heroes[id].role, 0, -47, 98, 17, card);
             card.on(Node.EventType.TOUCH_END, function () {
-              if (_this82.ui === root && i !== slot) _this82.formationPage(i, back);
+              if (_this92.ui === root) _this92.heroOptions(id, function () {
+                return _this92.formationPage(i, back);
+              }, '替换此位置');
             });
           });
           var current = heroes[this.party[slot]];
           this.box('换人提示底板', 0, 134, 447, 34, '#23372e');
           this.label('选择下方角色，替换 ' + letters[slot] + ' 位的' + current.role, 0, 134, 433, 17);
           members.forEach(function (id, i) {
-            var position = _this82.party.indexOf(id),
+            var position = _this92.party.indexOf(id),
               deployed = position >= 0;
-            var cell = _this82.box('候选 ' + heroes[id].role, (i % 5 - 2) * 90, 39 - Math.floor(i / 5) * 115, 84, 106, deployed ? '#eac26c' : '#647668');
-            _this82.box('底板', 0, 0, 80, 102, deployed ? '#765c30' : '#354b3f', cell);
-            _this82.art('hero-' + id, 0, 6, 63, 63, cell);
-            _this82.art(id, -27, 37, 19, 19, cell);
-            if (deployed) _this82.outline(_this82.label(letters[position], 27, 34, 18, 14, cell));
-            _this82.label(heroes[id].role, 0, -34, 79, 15, cell);
-            if (deployed) return;
+            var cell = _this92.box('候选 ' + heroes[id].role, (i % 5 - 2) * 90, 39 - Math.floor(i / 5) * 115, 84, 106, deployed ? '#eac26c' : '#647668');
+            _this92.box('底板', 0, 0, 80, 102, deployed ? '#765c30' : '#354b3f', cell);
+            _this92.art('hero-' + id, 0, 6, 63, 63, cell);
+            _this92.art(id, -27, 37, 19, 19, cell);
+            if (deployed) _this92.outline(_this92.label(letters[position], 27, 34, 18, 14, cell));
+            _this92.label(heroes[id].role, 0, -34, 79, 15, cell);
             cell.on(Node.EventType.TOUCH_END, function () {
-              if (_this82.ui !== root) return;
-              var next = replaceMember(_this82.party, _this82.recruits, slot, id);
-              if (!next || !_this82.townWrite(function () {
-                _this82.party = next;
-                _this82.hp = Math.min(_this82.hp, _this82.maxHP);
-                _this82.dp = Math.min(_this82.dp, _this82.maxDP);
-              })) return;
-              _this82.audio.play('equip');
-              _this82.formationPage(slot, back);
+              if (_this92.ui !== root) return;
+              _this92.heroOptions(id, deployed ? undefined : function () {
+                var next = replaceMember(_this92.party, _this92.recruits, slot, id);
+                if (!next || !_this92.townWrite(function () {
+                  _this92.party = next;
+                  _this92.hp = Math.min(_this92.hp, _this92.maxHP);
+                  _this92.dp = Math.min(_this92.dp, _this92.maxDP);
+                })) return;
+                _this92.audio.play('equip');
+                _this92.formationPage(slot, back);
+              }, '替换 ' + letters[slot] + ' 位');
             });
           });
           this.button('角色装备', -346, function () {
-            if (_this82.ui === root) _this82.roster(_this82.party[slot], back);
+            if (_this92.ui === root) _this92.roster(_this92.party[slot], back);
           }, -107, 194);
           this.button('完成整理', -346, function () {
-            if (_this82.ui === root) back();
+            if (_this92.ui === root) back();
           }, 107, 194);
         };
-        _proto.drawPotion = function drawPotion(parent) {
-          var vessel = this.box('药水瓶', 0, 10, 44, 48, undefined, parent);
-          var shape = vessel.addComponent(Graphics);
-          shape.lineWidth = 2;
-          shape.strokeColor = Color.fromHEX(new Color(), '#231c2c');
-          shape.fillColor = Color.fromHEX(new Color(), '#cf4672');
-          shape.roundRect(-14, -17, 28, 28, 8);
-          shape.fill();
-          shape.stroke();
-          shape.fillColor = Color.fromHEX(new Color(), '#dbc08a');
-          shape.roundRect(-7, 11, 14, 10, 3);
-          shape.fill();
-          shape.stroke();
-          shape.fillColor = Color.fromHEX(new Color(), '#ffadc3');
-          shape.circle(-6, 2, 3);
-          shape.fill();
+        _proto.inventoryModal = function inventoryModal(render) {
+          var _this93 = this;
+          var owner = this.ui;
+          this.uiManager.open('modal', function () {
+            var overlay = _this93.box('背包弹窗', 0, 0, 480, 854, '#101b17cf');
+            overlay.addComponent(BlockInputEvents);
+            var close = function close() {
+              if (_this93.ui === owner) _this93.uiManager.close('modal', overlay);
+            };
+            render(overlay, close);
+            return overlay;
+          });
+        };
+        _proto.heroOptions = function heroOptions(id, replace, caption) {
+          var _this94 = this;
+          var root = this.ui;
+          this.inventoryModal(function (overlay, close) {
+            var card = _this94.box('角色选项', 0, 0, 316, replace ? 349 : 291, '#2c4136', overlay);
+            _this94.art('hero-' + id, 0, replace ? 122 : 92, 68, 68, card);
+            _this94.label(heroes[id].name + ' · ' + heroes[id].role, 0, replace ? 63 : 36, 280, 22, card).isBold = true;
+            var action = function action(name, y, next) {
+              return _this94.button(name, y, function () {
+                if (_this94.ui !== root || overlay.parent !== root) return;
+                close();
+                next();
+              }, 0, 242, false, card);
+            };
+            action('英雄详情', replace ? 10 : -18, function () {
+              return _this94.inventoryModal(function (sheet, back) {
+                return drawHeroSheet(_this94.inventoryUI, sheet, id, _this94.inventory, back);
+              });
+            });
+            if (replace) action(caption, -49, replace);
+            action('返回', replace ? -115 : -85, function () {});
+          });
         };
         _proto.gearActions = function gearActions(id, equipped, selected, back) {
-          var _item$effect,
-            _this83 = this;
+          var _item$cost$gold2,
+            _this95 = this;
           var item = equipment.find(function (entry) {
             return entry.id === id;
           });
           if (!item) return;
-          var description = [gearUsers(item), item.attack ? (item.discipline === 'all' ? 'AP' : apNames[item.discipline]) + ' +' + item.attack : '', item.hp ? 'HP +' + item.hp : '', item.dp ? 'DP +' + item.dp : '', (_item$effect = item.effect) != null ? _item$effect : '', this.inventory.tempering[id] ? '淬炼 +' + this.inventory.tempering[id] : ''].filter(Boolean).join(' · ');
+          var lines = [].concat(gearInfo(item, this.inventory.tempering[id]), priceLines(item.cost, salePrices.fromGold((_item$cost$gold2 = item.cost.gold) != null ? _item$cost$gold2 : 0)));
           var actions = [];
           if (canEquip(selected, item)) actions.push([equipped ? '卸下装备' : '装备给' + heroes[selected].name, function () {
-            return _this83.inventory.hasEquipped(id) === equipped && _this83.inventory.toggle(id, selected);
+            return _this95.inventory.hasEquipped(id) === equipped && _this95.inventory.toggle(id, selected);
           }]);
           actions.push(['丢弃装备', function () {
-            return _this83.inventory.discard(id);
+            return _this95.inventory.discard(id);
           }]);
-          this.itemActions(item.name, description, actions, function () {
-            return _this83.roster(selected, back);
+          this.itemActions(item.name, gearArt(item), lines, actions, function () {
+            return _this95.roster(selected, back);
           });
         };
-        _proto.itemActions = function itemActions(title, detail, actions, redraw) {
-          var _this84 = this;
+        _proto.itemActions = function itemActions(title, icon, lines, actions, redraw, consumable) {
+          var _this96 = this;
           var root = this.ui;
           var overlay = this.box('物品操作', 0, 0, 480, 854, '#101913c2');
-          overlay.on(Node.EventType.TOUCH_START, function () {});
-          overlay.on(Node.EventType.TOUCH_END, function () {});
-          this.box('物品操作卡', 0, -75, 394, 320, '#2b4037', overlay);
-          this.label(title, 0, 47, 340, 25, overlay).isBold = true;
-          this.label(detail, 0, 4, 345, 16, overlay);
-          actions.forEach(function (_ref42, index) {
-            var label = _ref42[0],
-              perform = _ref42[1];
-            var button = _this84.button(label, -62 - index * 62, function () {
-              if (_this84.ui !== root || !overlay.isValid) return;
-              if (!_this84.townWrite(function () {
-                if (!perform()) return false;
-                _this84.hp = Math.min(_this84.hp, _this84.maxHP);
-                _this84.dp = Math.min(_this84.dp, _this84.maxDP);
-              })) return;
-              _this84.audio.play('equip');
-              redraw();
-            }, 0, 294);
-            button.setParent(overlay);
+          overlay.addComponent(BlockInputEvents);
+          var card = this.box('物品操作卡', 0, 0, 376, 534, '#2b4037', overlay);
+          this.art(icon, 0, 205, 76, 76, card);
+          this.label(title, 0, 145, 340, 25, card).isBold = true;
+          drawInfoLines(this.inventoryUI, card, lines, 117);
+          var playing = false;
+          actions.forEach(function (_ref44, index) {
+            var label = _ref44[0],
+              perform = _ref44[1];
+            _this96.button(label, -106 - index * 58, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee53() {
+              var apply, _motion2;
+              return _regeneratorRuntime().wrap(function _callee53$(_context56) {
+                while (1) switch (_context56.prev = _context56.next) {
+                  case 0:
+                    if (!(_this96.ui !== root || !overlay.isValid || playing)) {
+                      _context56.next = 2;
+                      break;
+                    }
+                    return _context56.abrupt("return");
+                  case 2:
+                    apply = function apply() {
+                      if (!perform()) return false;
+                      _this96.hp = Math.min(_this96.hp, _this96.maxHP);
+                      _this96.dp = Math.min(_this96.dp, _this96.maxDP);
+                    };
+                    if (!(_this96.trial && consumable ? apply() === false : !_this96.townWrite(apply))) {
+                      _context56.next = 5;
+                      break;
+                    }
+                    return _context56.abrupt("return");
+                  case 5:
+                    playing = true;
+                    if (!(consumable && !label.startsWith('丢弃'))) {
+                      _context56.next = 19;
+                      break;
+                    }
+                    _this96.audio.play(consumable === 'gift' ? 'coins' : 'potion');
+                    _motion2 = _this96.newPageMotion();
+                    _context56.next = 11;
+                    return _this96.itemAccent(consumable, _motion2, new Vec3(0, 20), overlay);
+                  case 11:
+                    _context56.t0 = !_context56.sent;
+                    if (_context56.t0) {
+                      _context56.next = 14;
+                      break;
+                    }
+                    _context56.t0 = _this96.ui !== root;
+                  case 14:
+                    if (!_context56.t0) {
+                      _context56.next = 16;
+                      break;
+                    }
+                    return _context56.abrupt("return");
+                  case 16:
+                    _this96.pageMotions["delete"](_motion2);
+                    _context56.next = 20;
+                    break;
+                  case 19:
+                    _this96.audio.play('equip');
+                  case 20:
+                    redraw();
+                  case 21:
+                  case "end":
+                    return _context56.stop();
+                }
+              }, _callee53);
+            })), 0, 294, false, card);
           });
-          var close = this.button('取消', -186, function () {
+          this.button('取消', -106 - actions.length * 58, function () {
+            if (playing) return;
             overlay.removeFromParent();
             overlay.destroy();
-          }, 0, 294);
-          close.setParent(overlay);
+          }, 0, 294, false, card);
         };
         _proto.village = function village() {
-          var _this85 = this;
+          var _this97 = this;
           if (this.deferContent(function () {
-            return _this85.village();
+            return _this97.village();
           }, 'village-scene', [].concat(contentGroups.village, ['npc-villager'], this.party.map(function (id) {
             return 'hero-' + id;
           })))) return;
           this.save();
           var hints = this.questHintTargets();
           var detail = hints.has('village') ? '点击带红色任务标记的建筑' : '休整或领取委托';
-          this.page('溪桥村', detail, 'village-stage');
+          this.page('浮空艇', detail, 'village-stage');
           this.art('village-navigation', 0, interactionGrid.mapY, interactionGrid.mapSize, interactionGrid.mapSize);
           // Building anchors measured from the supplied 1254-square navigation map.
           var destinations = [{
@@ -17527,7 +18596,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             x: -128,
             y: -24,
             action: function action() {
-              return _this85.chief();
+              return _this97.chief();
             }
           }, {
             name: '商店',
@@ -17536,7 +18605,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             x: 125,
             y: -167,
             action: function action() {
-              return _this85.villageShop();
+              return _this97.villageShop();
             }
           }, {
             name: '铁匠铺',
@@ -17545,7 +18614,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             x: 155,
             y: -39,
             action: function action() {
-              return _this85.smithy();
+              return _this97.smithy();
             }
           }, {
             name: '酒馆',
@@ -17554,7 +18623,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             x: -116,
             y: -160,
             action: function action() {
-              return _this85.tavern();
+              return _this97.tavern();
             }
           }, {
             name: '祭坛',
@@ -17563,35 +18632,35 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             x: 32,
             y: 37,
             action: function action() {
-              return _this85.altar();
+              return _this97.altar();
             }
           }];
           var root = this.ui;
-          var _loop13 = function _loop13() {
-            var site = _destinations[_i20];
+          var _loop14 = function _loop14() {
+            var site = _destinations[_i23];
             var gate = site.art === 'gate';
             var width = gate ? 180 : 151;
             var height = gate ? 64 : 112;
-            var node = _this85.box(site.name, site.x, site.y, width, height);
-            var caption = _this85.label(site.caption, 0, -height / 2 + 13, width - 18, 17, node);
+            var node = _this97.box(site.name, site.x, site.y, width, height);
+            var caption = _this97.label(site.caption, 0, -height / 2 + 13, width - 18, 17, node);
             caption.color = Color.fromHEX(new Color(), '#523420');
             caption.isBold = true;
             caption.enableOutline = true;
             caption.outlineColor = Color.fromHEX(new Color(), '#fff0cf');
             caption.outlineWidth = 3;
-            _this85.markQuestTarget(node, 'village/' + site.art, width / 2 - 12, -height / 2 + 13, hints);
+            _this97.markQuestTarget(node, 'village/' + site.art, width / 2 - 12, -height / 2 + 13, hints);
             node.on(Node.EventType.TOUCH_END, function () {
-              if (_this85.ui !== root) return;
-              _this85.audio.play('door');
-              _this85.questEvent('interact', 'village:' + site.art);
+              if (_this97.ui !== root) return;
+              _this97.audio.play('door');
+              _this97.questEvent('interact', 'village:' + site.art);
               site.action();
             });
           };
-          for (var _i20 = 0, _destinations = destinations; _i20 < _destinations.length; _i20++) {
-            _loop13();
+          for (var _i23 = 0, _destinations = destinations; _i23 < _destinations.length; _i23++) {
+            _loop14();
           }
           this.worldFooter(function () {
-            return _this85.village();
+            return _this97.village();
           }, undefined, undefined, true);
         };
         _proto.questHintTargets = function questHintTargets() {
@@ -17620,7 +18689,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         };
         _proto.townWrite = function townWrite(change) {
           var _this$saveGate10,
-            _this86 = this;
+            _this98 = this;
           if (!((_this$saveGate10 = this.saveGate) != null && _this$saveGate10.writable)) {
             this.popup('当前页面不能写入存档', 0, 85);
             return false;
@@ -17629,12 +18698,14 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           inventory.restore(this.inventory);
           var before = {
             inventory: inventory,
+            supplies: _extends({}, this.supplies),
+            shopSold: _extends({}, this.shopSold),
             latestQuest: this.latestQuest,
             exp: this.exp,
             location: this.location,
             cleared: new Set(this.cleared),
             clearedSites: new Set(this.clearedSites),
-            journal: new QuestJournal(questBook, this.journal.entries),
+            journal: new QuestJournal(questBook, this.journal.entries, !this.completedPlaytest),
             hunt: this.hunt,
             town: structuredClone(this.town),
             hp: this.hp,
@@ -17648,7 +18719,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var run = this.adventure,
             coins = run == null ? void 0 : run.coins;
           var rollback = function rollback() {
-            Object.assign(_this86, before);
+            Object.assign(_this98, before);
             if (run && coins !== undefined) run.coins = coins;
           };
           var notices = [];
@@ -17663,8 +18734,8 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }
           var result = this.save();
           if (result === 'committed' || result === 'reconciled') {
-            for (var _iterator59 = _createForOfIteratorHelperLoose(notices), _step59; !(_step59 = _iterator59()).done;) {
-              var title = _step59.value;
+            for (var _iterator66 = _createForOfIteratorHelperLoose(notices), _step66; !(_step66 = _iterator66()).done;) {
+              var title = _step66.value;
               this.questToast(title);
             }
             return true;
@@ -17678,29 +18749,29 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           return false;
         };
         _proto.altar = function altar() {
-          var _this87 = this;
+          var _this99 = this;
           this.page('溪桥村教堂', "\u796D\u575B\u795D\u798F " + this.town.altarCharge + "/1 \xB7 \u901A\u5173\u4EFB\u610F\u526F\u672C\u540E\u91CD\u65B0\u5145\u80FD\u3002", 'locations/church-background');
           this.sceneActor('locations/church-statue', 140, 114, '祭坛 ');
           this.label('祝福：生命上限 +100，并恢复 100 HP。', 0, 46, 430, 20);
           this.label('进入副本后持续，离开副本时消耗。', 0, 7, 430, 17);
           this.button(this.town.blessing ? '已获得祝福' : "\u7948\u613F \xB7 \u514D\u8D39\u9886\u53D6 (" + this.town.altarCharge + "/1)", -59, function () {
-            var next = claimAltar(_this87.town, _this87.hp, _this87.baseMaxHP);
+            var next = claimAltar(_this99.town, _this99.hp, _this99.baseMaxHP);
             if (!next) {
-              _this87.popup(_this87.town.blessing ? '已有祝福' : '祭坛尚未充能', 0, 91);
+              _this99.popup(_this99.town.blessing ? '已有祝福' : '祭坛尚未充能', 0, 91);
               return;
             }
-            var root = _this87.ui;
-            void _this87.presentRecovery('hp', function () {
-              return _this87.townWrite(function () {
-                _this87.town = next.town;
-                _this87.hp = next.hp;
+            var root = _this99.ui;
+            void _this99.presentRecovery('hp', function () {
+              return _this99.townWrite(function () {
+                _this99.town = next.town;
+                _this99.hp = next.hp;
               });
             }).then(function () {
-              if (_this87.ui === root) _this87.altar();
+              if (_this99.ui === root) _this99.altar();
             });
           });
-          this.button('返回村庄', -136, function () {
-            return _this87.village();
+          this.button('返回浮空艇', -136, function () {
+            return _this99.village();
           });
         };
         _proto.villageGarden = function villageGarden(x, y) {
@@ -17747,7 +18818,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           node == null || node.setScale(side === 'right' ? -1 : 1, 1, 1);
         };
         _proto.sceneActor = function sceneActor(art, x, height, prefix) {
-          var _this88 = this;
+          var _this100 = this;
           if (prefix === void 0) {
             prefix = '剧情人物 ';
           }
@@ -17755,26 +18826,26 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var y = this.portraitY(art, groundY, height);
           var frame = this.textures.get(art);
           if (frame) {
-            var _this$ui$getChildByNa6;
+            var _this$ui$getChildByNa7;
             var w = height * frame.originalSize.width / frame.originalSize.height;
             var actor = this.box(prefix + art, x, y, w, height);
             this.groundShadow(actor, groundY - y, art, w, x > 0 ? 'right' : 'left');
             var portrait = this.art(art, 0, 0, w, height, actor);
             if (portrait && !prefix.includes('道具') && art !== 'altar-object') this.faceStage(portrait, x > 0 ? 'right' : 'left');
             var partySpeaker = Object.values(heroes).some(function (hero) {
-              return hero.name === _this88.speechOwner;
+              return hero.name === _this100.speechOwner;
             });
             var owner = {
               'npc-chief': '村长',
               'npc-villager': '村民'
             }[art];
             if (this.speechOwner && !partySpeaker && !prefix.includes('道具') && (!owner || owner === this.speechOwner)) this.popSpeaker(actor);
-            (_this$ui$getChildByNa6 = this.ui.getChildByName(frontName)) == null || _this$ui$getChildByNa6.setSiblingIndex(this.ui.children.length - 1);
+            (_this$ui$getChildByNa7 = this.ui.getChildByName(frontName)) == null || _this$ui$getChildByNa7.setSiblingIndex(this.ui.children.length - 1);
           }
           return new Vec3(x, y, 0);
         };
         _proto.chief = function chief(step, topic) {
-          var _this89 = this;
+          var _this101 = this;
           if (step === void 0) {
             step = -1;
           }
@@ -17789,26 +18860,26 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             var y = interactionGrid.dialogueFirstY;
             var hints = this.questHintTargets();
             var option = function option(name, action, target) {
-              var button = _this89.button(name, y, action, 0, interactionGrid.dialogueWidth);
-              if (target) _this89.markQuestTarget(button, target, -153, 3, hints);
+              var button = _this101.button(name, y, action, 0, interactionGrid.dialogueWidth);
+              if (target) _this101.markQuestTarget(button, target, -153, 3, hints);
               y -= interactionGrid.dialogueGap;
             };
             var knightOffer = questInteractions['chief-knight'].target;
             var mageOffer = questInteractions['chief-mage'].target;
             if (pending) option('拯救村民 · 交付任务', function () {
-              return _this89.chief(0);
+              return _this101.chief(0);
             }, questInteractions['chief-report'].target);
             if (!this.recruits.includes('d') && (this.town.knightQuest || hints.has(knightOffer))) option(this.town.knightQuest ? '新队友 · 查看任务' : '新队友 · 领取任务', function () {
-              return _this89.chief(0, 'knight');
+              return _this101.chief(0, 'knight');
             }, knightOffer);
             if (!this.recruits.includes('m') && (this.town.mageQuest || hints.has(mageOffer))) option(this.town.mageQuest ? '法师的下落 · 查看任务' : '法师的下落 · 领取任务', function () {
-              return _this89.chief(0, 'mage');
+              return _this101.chief(0, 'mage');
             }, mageOffer);
             option('询问归印会的去向', function () {
-              return _this89.chief(0, 'order');
+              return _this101.chief(0, 'order');
             });
-            option('离开 · 返回村庄', function () {
-              return _this89.village();
+            option('返回浮空艇', function () {
+              return _this101.village();
             });
             return;
           }
@@ -17816,28 +18887,28 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             this.townInterior('村长家', '村长：归印会运走了结界石。矿镇运单上留着火印，他们正沿旧道向北。', 'chief', 'npc-chief', false);
             if (pending) this.sceneActor('npc-villager', 65, 96, '康复村民 ');
             this.button('返回话题', 30, function () {
-              return _this89.chief();
+              return _this101.chief();
             });
             return;
           }
           if (topic === 'knight' || topic === 'mage') {
             var knight = topic === 'knight',
               _active = knight ? this.town.knightQuest : this.town.mageQuest;
-            this.townInterior('村长家', knight ? '村长：盾卫罗兰在酒馆休整，去和他谈谈吧。' : '村长：沼泽的雾已经散了。法师伊芙去了亡者之城，请把她平安带回来。', 'chief', 'npc-chief', false);
+            this.townInterior('村长家', knight ? '村长：盾卫罗兰在酒馆休整，去和他谈谈吧。' : '村长：矿道已经通了。法师伊芙去了迷雾沼泽，请把她平安带回来。', 'chief', 'npc-chief', false);
             if (!_active) {
               var offer = questInteractions[knight ? 'chief-knight' : 'chief-mage'];
               var button = this.button(knight ? '接受任务 · 寻找罗兰' : '接受任务 · 法师的下落', 32, function () {
-                if (!_this89.townWrite(function () {
-                  var _this89$questEvent;
-                  if (!((_this89$questEvent = _this89.questEvent(offer.kind, offer.key)) != null && _this89$questEvent.length)) return false;
-                  if (knight) _this89.town.knightQuest = true;else _this89.town.mageQuest = true;
+                if (!_this101.townWrite(function () {
+                  var _this101$questEvent;
+                  if (!((_this101$questEvent = _this101.questEvent(offer.kind, offer.key)) != null && _this101$questEvent.length)) return false;
+                  if (knight) _this101.town.knightQuest = true;else _this101.town.mageQuest = true;
                 })) return;
-                _this89.chief();
+                _this101.chief();
               });
               this.markQuestTarget(button, offer.target);
-            } else this.label(knight ? '任务目标：前往酒馆与罗兰汇合。' : '任务目标：前往亡者之城与伊芙汇合。', 0, 32, 420, 18);
+            } else this.label(knight ? '任务目标：前往酒馆与罗兰汇合。' : '任务目标：前往迷雾沼泽与伊芙汇合。', 0, 32, 420, 18);
             this.button('返回话题', -40, function () {
-              return _this89.chief();
+              return _this101.chief();
             });
             return;
           }
@@ -17852,223 +18923,370 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           var root = this.ui;
           var rewardPlaying = false;
           var advance = function advance(text, action) {
-            var button = _this89.button(text, 38, function () {
-              if (_this89.ui !== root) return;
+            var button = _this101.button(text, 38, function () {
+              if (_this101.ui !== root) return;
               action();
             });
-            _this89.markQuestTarget(button, questInteractions['chief-report'].target);
+            _this101.markQuestTarget(button, questInteractions['chief-report'].target);
             return button;
           };
-          if (step < 3) advance(['说说林中的救援', '听米拉说明伤情', '听村民讲述'][step], function () {
-            return _this89.chief(step + 1);
-          });else if (step === 3) advance('听村长答谢', function () {
-            return _this89.chief(4);
+          if (step < 4) advance('…', function () {
+            return _this101.chief(step + 1);
           });else {
             var report = questInteractions['chief-report'];
-            var _button = advance('交付村徽 · 获得 20 金币', /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee49() {
+            var _button = advance('交付村徽 · 获得 20 金币', /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee54() {
               var _button$getChildByNam;
               var goldBefore, motion, villager, _villager$getComponen, alpha;
-              return _regeneratorRuntime().wrap(function _callee49$(_context52) {
-                while (1) switch (_context52.prev = _context52.next) {
+              return _regeneratorRuntime().wrap(function _callee54$(_context57) {
+                while (1) switch (_context57.prev = _context57.next) {
                   case 0:
-                    if (!(_this89.reported || rewardPlaying)) {
-                      _context52.next = 2;
+                    if (!(_this101.reported || rewardPlaying)) {
+                      _context57.next = 2;
                       break;
                     }
-                    return _context52.abrupt("return");
+                    return _context57.abrupt("return");
                   case 2:
-                    goldBefore = _this89.gold;
+                    goldBefore = _this101.gold;
                     rewardPlaying = true;
-                    if (_this89.townWrite(function () {
-                      if (!_this89.turnIn(report.key).length) return false;
-                      _this89.reported = true;
+                    if (_this101.townWrite(function () {
+                      if (!_this101.turnIn(report.key).length) return false;
+                      _this101.reported = true;
                     })) {
-                      _context52.next = 7;
+                      _context57.next = 7;
                       break;
                     }
                     rewardPlaying = false;
-                    return _context52.abrupt("return");
+                    return _context57.abrupt("return");
                   case 7:
                     (_button$getChildByNam = _button.getChildByName('红色任务标记')) == null || _button$getChildByNam.destroy();
-                    _context52.next = 10;
-                    return _this89.presentTownGold(goldBefore, position);
+                    _context57.next = 10;
+                    return _this101.presentTownGold(goldBefore, position);
                   case 10:
-                    _context52.t0 = !_context52.sent;
-                    if (_context52.t0) {
-                      _context52.next = 13;
+                    _context57.t0 = !_context57.sent;
+                    if (_context57.t0) {
+                      _context57.next = 13;
                       break;
                     }
-                    _context52.t0 = _this89.ui !== root;
+                    _context57.t0 = _this101.ui !== root;
                   case 13:
-                    if (!_context52.t0) {
-                      _context52.next = 15;
+                    if (!_context57.t0) {
+                      _context57.next = 15;
                       break;
                     }
-                    return _context52.abrupt("return");
+                    return _context57.abrupt("return");
                   case 15:
-                    motion = _this89.newPageMotion();
+                    motion = _this101.newPageMotion();
                     villager = root.getChildByName('康复村民 npc-villager');
                     if (!villager) {
-                      _context52.next = 21;
+                      _context57.next = 21;
                       break;
                     }
                     alpha = (_villager$getComponen = villager.getComponent(UIOpacity)) != null ? _villager$getComponen : villager.addComponent(UIOpacity);
-                    _context52.next = 21;
+                    _context57.next = 21;
                     return motion.play(tween(alpha).to(.4, {
                       opacity: 0
                     }));
                   case 21:
-                    if (_this89.ui === root) _this89.chief();
+                    if (_this101.ui === root) _this101.chief();
                   case 22:
                   case "end":
-                    return _context52.stop();
+                    return _context57.stop();
                 }
-              }, _callee49);
+              }, _callee54);
             })));
           }
-          this.button('返回村庄', -36, function () {
-            if (!rewardPlaying) _this89.village();
+          this.button('返回浮空艇', -36, function () {
+            if (!rewardPlaying) _this101.village();
           });
         };
-        _proto.villageShop = function villageShop() {
-          var _this90 = this;
-          this.audio.play('door');
-          this.townInterior('村庄商店', '老板：药水 5 金币一瓶。已携带 ' + this.potion + ' 瓶。', 'shop', 'npc-shop');
-          this.button('购买治疗药水 · 5 金币', 42, function () {
-            if (_this90.gold < 5) {
-              _this90.popup('金币不足', 0, 91);
-              return;
-            }
-            if (_this90.potion >= 99) {
-              _this90.popup('背包药水已满', 0, 91);
-              return;
-            }
-            void _this90.payGold(5, function () {
-              _this90.potion++;
-            }, {
-              persist: true,
-              redraw: function redraw() {
-                return _this90.villageShop();
-              }
-            });
-          });
-          this.button('筹备远行行装', -42, function () {
-            return _this90.provisionShop(function () {
-              return _this90.villageShop();
-            });
-          });
-          this.button('驿队 · 调剂物资', -126, function () {
-            return _this90.supplyExchange();
-          });
-          this.button('返回村庄', -224, function () {
-            return _this90.village();
-          });
-        };
-        _proto.supplyExchange = function supplyExchange() {
-          var _this91 = this;
-          this.townInterior('驿队货栈', priceText(this.inventory.materials), 'shop', 'npc-shop');
-          supplyTrades.forEach(function (trade, i) {
-            var y = 47 - i * 108;
-            _this91.navButton(trade.name + ' · ' + priceText(trade.output), y, function () {
-              if (!_this91.inventory.canAfford(trade.cost, _this91.walletGold)) {
-                _this91.popup('委托所需金币或材料不足', 0, 91);
-                return;
-              }
-              void _this91.payGold(trade.cost.gold, function () {
-                return _this91.inventory.trade(trade.id, _this91.walletGold) ? undefined : false;
-              }, {
-                persist: true,
-                redraw: function redraw() {
-                  return _this91.supplyExchange();
-                }
-              });
-            });
-            _this91.label('所需 ' + priceText(trade.cost), 0, y - 54, 424, 19);
-          });
-          this.navButton('返回村庄商店', -338, function () {
-            return _this91.villageShop();
-          });
-        };
-        _proto.smithy = function smithy(page) {
-          var _this92 = this;
-          if (page === void 0) {
-            page = 0;
+        _proto.purchaseOffer = function purchaseOffer(name, icon, details, cost, restriction, apply, verb, resale, originalCost) {
+          var _this102 = this;
+          if (verb === void 0) {
+            verb = '购买';
           }
-          var materials = Object.entries(this.inventory.materials).map(function (_ref44) {
-            var key = _ref44[0],
-              value = _ref44[1];
-            return resourceNames[key] + ' ' + value;
-          }).join(' · ');
-          this.townInterior('溪桥村铁匠铺', materials, 'smith', 'npc-smith');
-          var recipes = equipment.filter(function (item) {
-            return !item.shadow && (!item.region || _this92.cleared.has(item.region)) && !_this92.inventory.owned.includes(item.id);
-          });
-          this.button('修补护甲 · 恢复 DP · 10 金币', -286, function () {
-            if (!_this92.recruits.includes('d')) {
-              _this92.popup('盾卫入队后开放修甲', 0, 91);
-              return;
-            }
-            if (_this92.dp >= _this92.maxDP) {
-              _this92.popup('DP 已满', 0, 91);
-              return;
-            }
-            if (_this92.gold < 10) {
-              _this92.popup('金币不足', 0, 91);
-              return;
-            }
-            void _this92.presentRecovery('dp', function () {
-              return !!_this92.payGold(10, function () {
-                _this92.dp = _this92.maxDP;
+          if (originalCost === void 0) {
+            originalCost = cost;
+          }
+          var blocked = function blocked() {
+            var reason = restriction();
+            if (reason) return ['限制', reason];
+            var missing = shortage(cost, _this102.walletGold, _this102.inventory.materials);
+            if (missing) return ['缺少', missing];
+          };
+          var lines = details.concat(priceLines(originalCost, resale));
+          if (verb === '淬炼') lines.push(['费用', costText(cost) || '已达上限']);
+          return {
+            name: name,
+            icon: icon,
+            lines: lines,
+            verb: verb,
+            badge: cost.gold === undefined ? '已满' : cost.gold + '金',
+            blocked: blocked,
+            available: function available() {
+              return !blocked();
+            },
+            commit: function commit() {
+              var _cost$gold;
+              return !blocked() && !!_this102.payGold((_cost$gold = cost.gold) != null ? _cost$gold : 0, function () {
+                return !blocked() && apply() ? undefined : false;
               }, {
                 persist: true
               });
+            }
+          };
+        };
+        _proto.gearOffers = function gearOffers(shadow) {
+          var _this103 = this;
+          return equipment.filter(function (item) {
+            return !!item.shadow === shadow && (!item.region || _this103.cleared.has(item.region)) && !_this103.inventory.owned.includes(item.id);
+          }).map(function (item) {
+            var _item$cost$gold3;
+            return _this103.purchaseOffer(item.name, gearArt(item), gearInfo(item), item.cost, function () {
+              return _this103.inventory.owned.includes(item.id) ? '已拥有' : undefined;
+            }, function () {
+              return _this103.inventory.craft(item.id, _this103.walletGold, _this103.cleared, shadow) !== null;
+            }, '购买', salePrices.fromGold((_item$cost$gold3 = item.cost.gold) != null ? _item$cost$gold3 : 0));
+          });
+        };
+        _proto.stockOffers = function stockOffers() {
+          var _this104 = this;
+          return merchantItemIds.map(function (id) {
+            var item = items[id],
+              left = function left() {
+                var _this104$shopSold$id;
+                return item.stock - ((_this104$shopSold$id = _this104.shopSold[id]) != null ? _this104$shopSold$id : 0);
+              };
+            var offer = _this104.purchaseOffer(item.name, 'board/' + id, [['属性', item.useTag], ['效果', item.detail], ['库存', left() + ' 份']], {
+              gold: item.price
+            }, function () {
+              return left() > 0 ? undefined : '已售罄';
+            }, function () {
+              var _this104$shopSold$id2;
+              _this104.addItem(id, 1);
+              _this104.shopSold[id] = ((_this104$shopSold$id2 = _this104.shopSold[id]) != null ? _this104$shopSold$id2 : 0) + 1;
+              return true;
+            }, '购买', salePrices.fromGold(item.price));
+            return left() > 0 ? offer : _extends({}, offer, {
+              badge: '售罄'
             });
           });
-          var lastPage = Math.max(0, Math.ceil(recipes.length / 3) - 1);
-          page = Math.min(page, lastPage);
-          if (!recipes.length) this.label('已掌握的装备均已制作', 0, 42, 420, 19);
-          recipes.slice(page * 3, page * 3 + 3).forEach(function (item, index) {
-            var cost = Object.entries(item.cost).map(function (_ref45) {
-              var key = _ref45[0],
-                value = _ref45[1];
-              return resourceNames[key] + ' ' + value;
-            }).join(' · ');
-            var y = 17 - index * 81;
-            _this92.button(item.name + ' · ' + cost, y, function () {
-              var _item$cost$gold;
-              if (!_this92.inventory.canCraft(item.id, _this92.walletGold, _this92.cleared)) {
-                _this92.popup('材料不足', 0, 99);
+        };
+        _proto.playerOffers = function playerOffers() {
+          var _this105 = this;
+          var sell = function sell(name, icon, detail, count, price, cost, remove) {
+            return {
+              name: name,
+              icon: icon,
+              lines: [].concat(detail, [['持有', count + ' 份']], priceLines(cost, price)),
+              badge: '×' + count,
+              verb: '售出',
+              available: function available() {
+                return true;
+              },
+              blocked: function blocked() {
+                return undefined;
+              },
+              commit: function commit() {
+                var before = _extends({}, _this105.inventory.materials);
+                if (!_this105.townWrite(function () {
+                  if (!remove()) return false;
+                  _this105.gold += price;
+                })) return false;
+                void _this105.presentWalletChange({
+                  gold: price,
+                  ore: _this105.inventory.materials.ore - before.ore,
+                  essence: _this105.inventory.materials.essence - before.essence
+                });
+                return true;
+              }
+            };
+          };
+          var goods = itemIds.filter(function (id) {
+            return _this105.itemCount(id) > 0;
+          }).map(function (id) {
+            var item = items[id];
+            return sell(item.name, 'board/' + id, [['属性', item.useTag], ['效果', item.detail]], _this105.itemCount(id), 'price' in item ? salePrices.fromGold(item.price) : salePrices.gift, 'price' in item ? {
+              gold: item.price
+            } : undefined, function () {
+              if (_this105.itemCount(id) < 1) return false;
+              _this105.addItem(id, -1);
+              return true;
+            });
+          });
+          var _loop16 = function _loop16() {
+            var _item$cost$gold4;
+            var item = _step67.value;
+            goods.push(sell(item.name, gearArt(item), gearInfo(item, _this105.inventory.tempering[item.id]), 1, salePrices.fromGold((_item$cost$gold4 = item.cost.gold) != null ? _item$cost$gold4 : 0), item.cost, function () {
+              return !_this105.inventory.hasEquipped(item.id) && _this105.inventory.discard(item.id);
+            }));
+          };
+          for (var _iterator67 = _createForOfIteratorHelperLoose(equipment.filter(function (item) {
+              return _this105.inventory.bag.includes(item.id);
+            })), _step67; !(_step67 = _iterator67()).done;) {
+            _loop16();
+          }
+          var _loop15 = function _loop15() {
+            var key = _arr9[_i24];
+            var count = _this105.inventory.materials[key];
+            if (!count) return 1; // continue
+            goods.push(sell(resourceNames[key], 'material-' + key, [['属性', '材料'], ['效果', '用于制作、淬炼或物资调剂']], count, salePrices.material[key], undefined, function () {
+              if (_this105.inventory.materials[key] < 1) return false;
+              _this105.inventory.materials[key]--;
+              return true;
+            }));
+          };
+          for (var _i24 = 0, _arr9 = Object.keys(this.inventory.materials); _i24 < _arr9.length; _i24++) {
+            if (_loop15()) continue;
+          }
+          return goods;
+        };
+        _proto.tradeCounter = function tradeCounter(title, stock, services) {
+          var _this106 = this;
+          var root = this.ui,
+            ui = this.inventoryUI;
+          var playerPage = 0,
+            stockPage = 0,
+            panel;
+          var draw = function draw() {
+            if (_this106.ui !== root) return;
+            if (panel) {
+              panel.removeFromParent();
+              panel.destroy();
+            }
+            panel = _this106.box('交易柜台', 0, 0, 480, 854);
+            var current = panel;
+            var active = function active() {
+              return _this106.ui === root && current.parent === root && !_this106.goldSpendMotion && !root.getChildByName('背包弹窗');
+            };
+            var select = function select(offer) {
+              if (active() && !_this106.recoveryPlaying) _this106.inventoryModal(function (overlay, close) {
+                var commit = function commit() {
+                  if (_this106.ui !== root || overlay.parent !== root || _this106.goldSpendMotion || !offer.available() || !offer.commit()) return;
+                  close();
+                  if (offer.verb === '售出') draw();
+                  _this106.coinText.string = String(_this106.walletGold);
+                };
+                drawOffer(ui, overlay, offer, commit, close);
+              });
+            };
+            var owned = _this106.playerOffers(),
+              offers = stock();
+            playerPage = Math.min(playerPage, lastBagPage(owned.length));
+            stockPage = Math.min(stockPage, lastBagPage(offers.length));
+            drawTradeBag(ui, panel, true, '我的背包', owned, playerPage, function (p) {
+              if (active()) {
+                playerPage = p;
+                draw();
+              }
+            }, select);
+            drawTradeBag(ui, panel, false, title, offers, stockPage, function (p) {
+              if (active()) {
+                stockPage = p;
+                draw();
+              }
+            }, select);
+            var step = Math.min(151, 448 / services.length);
+            var footer = _this106.box('交易操作栏', 0, -375, 460, 78, undefined, panel);
+            services.forEach(function (service, i) {
+              var x = (i - (services.length - 1) / 2) * step;
+              _this106.button(service.name, 0, function () {
+                if (active()) service.use();
+              }, x, step - 8, i === services.length - 1, footer);
+              if (service.hint) ink(_this106.label(service.hint, x, 35, step - 3, 13, footer), '#dec795');
+            });
+          };
+          this.refreshTrade = draw;
+          draw();
+        };
+        _proto.villageShop = function villageShop() {
+          var _this107 = this;
+          this.audio.play('door');
+          this.townInterior('浮空艇商店', '每次攻克地点后与旅行商人同步补货。', 'shop', 'npc-shop');
+          this.tradeCounter('商店货架', function () {
+            return _this107.stockOffers();
+          }, [{
+            name: '远行行装',
+            use: function use() {
+              return _this107.provisionShop(function () {
+                return _this107.villageShop();
+              });
+            }
+          }, {
+            name: '调剂物资',
+            use: function use() {
+              return _this107.supplyExchange();
+            }
+          }, {
+            name: '结束交易',
+            use: function use() {
+              return _this107.village();
+            }
+          }]);
+        };
+        _proto.supplyExchange = function supplyExchange() {
+          var _this108 = this;
+          this.townInterior('驿队货栈', '选择委托查看所需物资。', 'shop', 'npc-shop');
+          this.tradeCounter('调剂委托', function () {
+            return supplyTrades.map(function (trade, i) {
+              return _this108.purchaseOffer(trade.name, ['material-essence', 'material-ore', 'board/airship'][i], [['属性', '驿队委托'], ['效果', '获得 ' + costText(trade.output)]], trade.cost, function () {
+                return undefined;
+              }, function () {
+                return _this108.inventory.trade(trade.id, _this108.walletGold);
+              }, '调剂');
+            });
+          }, [{
+            name: '返回商店',
+            use: function use() {
+              return _this108.villageShop();
+            }
+          }]);
+        };
+        _proto.smithy = function smithy() {
+          var _this109 = this;
+          this.townInterior('溪桥村铁匠铺', '选择装备查看属性与制作所需材料。', 'smith', 'npc-smith');
+          this.tradeCounter('铁匠货架', function () {
+            return _this109.gearOffers(false);
+          }, [{
+            name: '修补护甲',
+            hint: '10 金币 · 回满 DP',
+            use: function use() {
+              if (!_this109.recruits.includes('d')) {
+                _this109.popup('盾卫入队后开放修甲', 0, 91);
                 return;
               }
-              void _this92.payGold((_item$cost$gold = item.cost.gold) != null ? _item$cost$gold : 0, function () {
-                if (_this92.inventory.craft(item.id, _this92.walletGold, _this92.cleared) === null) return false;
-              }, {
-                persist: true,
-                redraw: function redraw() {
-                  return _this92.smithy(page);
-                }
+              if (_this109.dp >= _this109.maxDP) {
+                _this109.popup('DP 已满', 0, 91);
+                return;
+              }
+              if (_this109.gold < 10) {
+                _this109.popup('金币不足', 0, 91);
+                return;
+              }
+              void _this109.presentRecovery('dp', function () {
+                return !!_this109.payGold(10, function () {
+                  _this109.dp = _this109.maxDP;
+                }, {
+                  persist: true
+                });
               });
-            });
-            _this92.label(gearUsers(item) + ' · ' + gearText(item), 0, y - 34, 435, 16);
-          });
-          if (page > 0) this.button('上一页', -228, function () {
-            return _this92.smithy(page - 1);
-          }, -94, 160);
-          if (page < lastPage) this.button('下一页', -228, function () {
-            return _this92.smithy(page + 1);
-          }, 94, 160);
-          this.button('淬炼已拥有装备', 85, function () {
-            return _this92.temperShop();
-          });
-          this.button('返回村庄', -354, function () {
-            return _this92.village();
-          });
+            }
+          }, {
+            name: '装备淬炼',
+            use: function use() {
+              return _this109.temperShop();
+            }
+          }, {
+            name: '结束交易',
+            use: function use() {
+              return _this109.village();
+            }
+          }]);
         };
         _proto.tavern = function tavern(revived) {
           var _this$hunt2,
             _this$hunt3,
             _this$hunt4,
-            _this93 = this;
+            _this110 = this;
           if (revived === void 0) {
             revived = false;
           }
@@ -18085,34 +19303,34 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           if (join) {
             var meeting = questInteractions.knight;
             var button = this.button('与盾卫罗兰会合', 42, function () {
-              if (rewardPlaying || _this93.ui !== root || _this93.recruits.includes('d')) return;
-              var oldHP = _this93.maxHP,
-                oldDP = _this93.maxDP;
-              if (!_this93.townWrite(function () {
-                _this93.questEvent(meeting.kind, meeting.key);
-                _this93.turnIn(meeting.key);
-                _this93.recruit('d');
-                _this93.hp += _this93.maxHP - oldHP;
-                _this93.dp += _this93.maxDP - oldDP;
+              if (rewardPlaying || _this110.ui !== root || _this110.recruits.includes('d')) return;
+              var oldHP = _this110.maxHP,
+                oldDP = _this110.maxDP;
+              if (!_this110.townWrite(function () {
+                _this110.questEvent(meeting.kind, meeting.key);
+                _this110.turnIn(meeting.key);
+                _this110.recruit('d');
+                _this110.hp += _this110.maxHP - oldHP;
+                _this110.dp += _this110.maxDP - oldDP;
               })) return;
-              _this93.tavern();
+              _this110.tavern();
             });
             this.markQuestTarget(button, meeting.target);
           }
           var restCost = 10;
           this.button('休息 · 恢复生命 · 10 金币', -29, function () {
-            if (rewardPlaying || _this93.ui !== root) return;
-            if (_this93.hp >= _this93.maxHP) {
-              _this93.popup('生命已满', 0, 87);
+            if (rewardPlaying || _this110.ui !== root) return;
+            if (_this110.hp >= _this110.maxHP) {
+              _this110.popup('生命已满', 0, 87);
               return;
             }
-            if (_this93.gold < restCost) {
-              _this93.popup('金币不足', 0, 87);
+            if (_this110.gold < restCost) {
+              _this110.popup('金币不足', 0, 87);
               return;
             }
-            void _this93.presentRecovery('hp', function () {
-              return !!_this93.payGold(restCost, function () {
-                _this93.hp = _this93.maxHP;
+            void _this110.presentRecovery('hp', function () {
+              return !!_this110.payGold(restCost, function () {
+                _this110.hp = _this110.maxHP;
               }, {
                 persist: true
               });
@@ -18120,80 +19338,80 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           });
           if (this.taught && ready) {
             var report = questInteractions['inn-report'];
-            var _button2 = this.button('交付讨伐 · 获得 12 金币', -100, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee50() {
-              var _this93$hunt;
+            var _button2 = this.button('交付讨伐 · 获得 12 金币', -100, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee55() {
+              var _this110$hunt;
               var goldBefore, played;
-              return _regeneratorRuntime().wrap(function _callee50$(_context53) {
-                while (1) switch (_context53.prev = _context53.next) {
+              return _regeneratorRuntime().wrap(function _callee55$(_context58) {
+                while (1) switch (_context58.prev = _context58.next) {
                   case 0:
-                    if (!(rewardPlaying || _this93.recoveryPlaying || _this93.ui !== root || ((_this93$hunt = _this93.hunt) == null ? void 0 : _this93$hunt.state) !== 'ready')) {
-                      _context53.next = 2;
+                    if (!(rewardPlaying || _this110.recoveryPlaying || _this110.ui !== root || ((_this110$hunt = _this110.hunt) == null ? void 0 : _this110$hunt.state) !== 'ready')) {
+                      _context58.next = 2;
                       break;
                     }
-                    return _context53.abrupt("return");
+                    return _context58.abrupt("return");
                   case 2:
-                    goldBefore = _this93.gold;
+                    goldBefore = _this110.gold;
                     rewardPlaying = true;
-                    if (_this93.townWrite(function () {
-                      if (!_this93.turnIn(report.key).length) return false;
-                      _this93.hunt = {
+                    if (_this110.townWrite(function () {
+                      if (!_this110.turnIn(report.key).length) return false;
+                      _this110.hunt = {
                         state: 'cooldown',
                         until: Date.now() + 60000
                       };
                     })) {
-                      _context53.next = 7;
+                      _context58.next = 7;
                       break;
                     }
                     rewardPlaying = false;
-                    return _context53.abrupt("return");
+                    return _context58.abrupt("return");
                   case 7:
                     _button2.active = false;
-                    _context53.next = 10;
-                    return _this93.presentTownGold(goldBefore, innkeeper);
+                    _context58.next = 10;
+                    return _this110.presentTownGold(goldBefore, innkeeper);
                   case 10:
-                    played = _context53.sent;
-                    if (played && _this93.ui === root) _this93.tavern();
+                    played = _context58.sent;
+                    if (played && _this110.ui === root) _this110.tavern();
                   case 12:
                   case "end":
-                    return _context53.stop();
+                    return _context58.stop();
                 }
-              }, _callee50);
+              }, _callee55);
             })));
             this.markQuestTarget(_button2, report.target);
           }
-          if (this.taught && !active && !ready && !cooling) this.button('领取附近地牢讨伐', -100, function () {
-            if (_this93.hunt && !(_this93.hunt.state === 'cooldown' && _this93.hunt.until <= Date.now())) return;
+          if (this.taught && !this.completedPlaytest && !active && !ready && !cooling) this.button('领取附近地牢讨伐', -100, function () {
+            if (_this110.hunt && !(_this110.hunt.state === 'cooldown' && _this110.hunt.until <= Date.now())) return;
             var available = dungeonIds.filter(function (id) {
-              return unlocked(id, _this93.cleared);
+              return unlocked(id, _this110.cleared);
             });
             var target = available[Math.floor(Math.random() * available.length)];
-            if (_this93.townWrite(function () {
-              _this93.hunt = {
+            if (_this110.townWrite(function () {
+              _this110.hunt = {
                 state: 'active',
                 target: target
               };
-              _this93.questEvent('talk', 'accept-' + target);
+              _this110.questEvent('talk', 'accept-' + target);
             })) {
-              _this93.tavern();
+              _this110.tavern();
             }
           });
-          this.button(this.taught ? '返回村庄' : '重新开始教学', -171, function () {
-            if (!rewardPlaying && _this93.ui === root) _this93.taught ? _this93.village() : _this93.menu();
+          this.button(this.taught ? '返回浮空艇' : '重新开始教学', -171, function () {
+            if (!rewardPlaying && _this110.ui === root) _this110.taught ? _this110.village() : _this110.menu();
           });
         };
         _proto.formalTypes = function formalTypes() {
           return rosterEmblems(this.party);
         };
         _proto.enter = function enter(id, reveal, siteId) {
-          var _ref47,
+          var _ref48,
             _sitesIn$find,
-            _this94 = this,
+            _this111 = this,
             _site$visitors;
-          var site = (_ref47 = (_sitesIn$find = sitesIn(id).find(function (entry) {
+          var site = (_ref48 = (_sitesIn$find = sitesIn(id).find(function (entry) {
             return entry.id === siteId;
           })) != null ? _sitesIn$find : sitesIn(id).find(function (entry) {
-            return !_this94.clearedSites.has(entry.id);
-          })) != null ? _ref47 : sitesIn(id)[0];
+            return !_this111.clearedSites.has(entry.id);
+          })) != null ? _ref48 : sitesIn(id)[0];
           if (!unlocked(id, this.cleared) || !isOpenSite(site, this.clearedSites)) return;
           var battleArt = [].concat(contentGroups[id].filter(activeStageAsset), contentGroups.tutorial, this.party.flatMap(function (role) {
             return [role, 'hero-' + role];
@@ -18201,10 +19419,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             return foe.art;
           }), ['dungeon-chest', 'dungeon-merchant', 'dungeon-traveler']);
           if (this.deferContent(function () {
-            return _this94.enter(id, reveal, site.id);
+            return _this111.enter(id, reveal, site.id);
           }, site.id + ':' + this.party.join(''), battleArt)) return;
           var pack = provisions.find(function (pack) {
-              return pack.id === _this94.town.provisions;
+              return pack.id === _this111.town.provisions;
             }),
             roll = Math.random();
           this.phase = id;
@@ -18224,9 +19442,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             return roll;
           }, false, site.id));
           if (!this.townWrite(function () {
-            if (_this94.town.blessing) _this94.town.blessingInDungeon = true;
-            delete _this94.town.provisions;
-            if (!site.opening && !_this94.clearedSites.has(site.id)) _this94.questEvent('room', 'enter-' + site.id);
+            if (_this111.town.blessing) _this111.town.blessingInDungeon = true;
+            delete _this111.town.provisions;
+            if (!site.opening && !_this111.clearedSites.has(site.id)) _this111.questEvent('room', 'enter-' + site.id);
           })) {
             this.adventure = undefined;
             this.dungeon = undefined;
@@ -18235,10 +19453,10 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.showRoom(reveal);
         };
         _proto.advanceRoom = function advanceRoom(director, room) {
-          var _this$adventure5;
+          var _this$adventure6;
           if (this.mineRecovery) return;
           if (this.dungeon !== director || !director.advance(room)) return;
-          if ((_this$adventure5 = this.adventure) != null && _this$adventure5.siteId && director.room) {
+          if ((_this$adventure6 = this.adventure) != null && _this$adventure6.siteId && director.room) {
             this.saveRoadEntrance(director);
             return;
           }
@@ -18246,7 +19464,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         };
         _proto.saveRoadEntrance = function saveRoadEntrance(director) {
           var _this$saveGate11,
-            _this95 = this;
+            _this112 = this;
           if (this.dungeon !== director) return;
           var result = this.save();
           if (result === 'committed' || result === 'reconciled') {
@@ -18259,11 +19477,11 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }
           this.page('行程待保存', '上一房的结果已保留。保存后继续前往下一房。', this.dungeonBackdrop());
           this.navButton('重试保存', 0, function () {
-            return _this95.saveRoadEntrance(director);
+            return _this112.saveRoadEntrance(director);
           });
         };
         _proto.afterRoom = function afterRoom(director) {
-          var _this96 = this,
+          var _this113 = this,
             _incoming$map;
           if (this.dungeon !== director) return;
           if (!director.room) {
@@ -18272,7 +19490,7 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           }
           var expectedRoom = director.room;
           if (!this.contentReady && this.deferContent(function () {
-            if (_this96.dungeon === director && director.room === expectedRoom) _this96.afterRoom(director);
+            if (_this113.dungeon === director && director.room === expectedRoom) _this113.afterRoom(director);
           })) return;
           var nextRoom = expectedRoom;
           var phase = this.adventure ? this.phase : nextRoom.kind === 'battle' && nextRoom.type === 'boss' ? 'lessonBoss' : 'wolves';
@@ -18281,39 +19499,39 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             return foe.art;
           })) != null ? _incoming$map : [];
           if (art.length && this.deferContent(function () {
-            if (_this96.dungeon === director && director.room === nextRoom) _this96.afterRoom(director);
+            if (_this113.dungeon === director && director.room === nextRoom) _this113.afterRoom(director);
           }, 'encounter:' + art.join(','), art)) return;
           var before = this.dungeonBackdrop(director.depth - 1);
           var after = this.dungeonBackdrop(director.depth);
           this.page('沿路前进', '小队正在前往下一房间。', before);
           var root = this.ui;
           void this.walkParty(roomTravel.seconds, [before, after], 1, incoming).then(function (played) {
-            if (_this96.ui !== root || _this96.dungeon !== director || director.room !== nextRoom) return;
+            if (_this113.ui !== root || _this113.dungeon !== director || director.room !== nextRoom) return;
             if (played) {
-              if (incoming) _this96.arrivedEncounter = {
+              if (incoming) _this113.arrivedEncounter = {
                 director: director,
                 room: nextRoom
               };
-              _this96.showRoom();
-            } else _this96.button('重试行进', 0, function () {
-              if (_this96.ui === root && _this96.dungeon === director && director.room === nextRoom) _this96.afterRoom(director);
+              _this113.showRoom();
+            } else _this113.button('重试行进', 0, function () {
+              if (_this113.ui === root && _this113.dungeon === director && director.room === nextRoom) _this113.afterRoom(director);
             });
           });
         };
         _proto.buff = function buff(id) {
-          var _this$adventure$buffs2, _this$adventure6;
-          return (_this$adventure$buffs2 = (_this$adventure6 = this.adventure) == null ? void 0 : _this$adventure6.buffs[id]) != null ? _this$adventure$buffs2 : 0;
+          var _this$adventure$buffs2, _this$adventure7;
+          return (_this$adventure$buffs2 = (_this$adventure7 = this.adventure) == null ? void 0 : _this$adventure7.buffs[id]) != null ? _this$adventure$buffs2 : 0;
         };
         _proto.offerUpgrade = function offerUpgrade(director, room, proceed) {
-          var _this97 = this;
+          var _this114 = this;
           var run = this.adventure;
           if (!run) {
             proceed();
             return;
           }
           var options = drawUpgrades(run.buffs, function (id) {
-            return _this97.party.some(function (hero) {
-              return _this97.inventory.wears(hero, id);
+            return _this114.party.some(function (hero) {
+              return _this114.inventory.wears(hero, id);
             });
           });
           if (!options.length) {
@@ -18323,27 +19541,27 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           this.page('选择临时强化', '强化仅在本次地牢探索中生效。', this.dungeonBackdrop());
           var root = this.ui;
           options.forEach(function (option, index) {
-            return _this97.button(option.name + ' · ' + option.description, 43 - index * 72, function () {
-              if (_this97.ui !== root || _this97.dungeon !== director || director.room !== room) return;
-              run.buffs[option.id] = _this97.buff(option.id) + 1;
-              if (option.id === 'vital') _this97.hp = Math.min(_this97.maxHP, _this97.hp + 30);
-              _this97.audio.play('charge');
+            return _this114.button(option.name + ' · ' + option.description, 43 - index * 72, function () {
+              if (_this114.ui !== root || _this114.dungeon !== director || director.room !== room) return;
+              run.buffs[option.id] = _this114.buff(option.id) + 1;
+              if (option.id === 'vital') _this114.hp = Math.min(_this114.maxHP, _this114.hp + 30);
+              _this114.audio.play('charge');
               proceed();
             });
           });
           this.button('撤离', -380, function () {
-            if (_this97.ui === root && _this97.dungeon === director) _this97.finishAdventure('retreat');
+            if (_this114.ui === root && _this114.dungeon === director) _this114.finishAdventure('retreat');
           });
         };
         _proto.revealChest = /*#__PURE__*/function () {
-          var _revealChest = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee51(motion, result, detail) {
-            var root, _iterator60, _step60, option, description, node, _node$getComponent4, _opacity;
-            return _regeneratorRuntime().wrap(function _callee51$(_context54) {
-              while (1) switch (_context54.prev = _context54.next) {
+          var _revealChest = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee56(motion, result, detail) {
+            var root, _iterator68, _step68, option, description, node, _node$getComponent4, _opacity;
+            return _regeneratorRuntime().wrap(function _callee56$(_context59) {
+              while (1) switch (_context59.prev = _context59.next) {
                 case 0:
                   root = this.ui;
-                  for (_iterator60 = _createForOfIteratorHelperLoose(root.children); !(_step60 = _iterator60()).done;) {
-                    option = _step60.value;
+                  for (_iterator68 = _createForOfIteratorHelperLoose(root.children); !(_step68 = _iterator68()).done;) {
+                    option = _step68.value;
                     if (/^(打开宝箱|放弃宝箱|取走物资)/.test(option.name)) option.active = false;
                   }
                   description = root.children.find(function (node) {
@@ -18354,40 +19572,40 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
                   this.audio.play('door');
                   node = root.getChildByName('剧情道具 dungeon-chest');
                   if (!node) {
-                    _context54.next = 13;
+                    _context59.next = 13;
                     break;
                   }
                   _opacity = (_node$getComponent4 = node.getComponent(UIOpacity)) != null ? _node$getComponent4 : node.addComponent(UIOpacity);
-                  _context54.next = 11;
+                  _context59.next = 11;
                   return motion.play(tween(_opacity).delay(motion.duration(.5)).to(motion.duration(.23), {
                     opacity: 0
                   }));
                 case 11:
-                  if (_context54.sent) {
-                    _context54.next = 13;
+                  if (_context59.sent) {
+                    _context59.next = 13;
                     break;
                   }
-                  return _context54.abrupt("return", false);
+                  return _context59.abrupt("return", false);
                 case 13:
-                  return _context54.abrupt("return", !motion.cancelled && this.ui === root);
+                  return _context59.abrupt("return", !motion.cancelled && this.ui === root);
                 case 14:
                 case "end":
-                  return _context54.stop();
+                  return _context59.stop();
               }
-            }, _callee51, this);
+            }, _callee56, this);
           }));
-          function revealChest(_x90, _x91, _x92) {
+          function revealChest(_x100, _x101, _x102) {
             return _revealChest.apply(this, arguments);
           }
           return revealChest;
         }();
         _proto.showRoom = function showRoom(reveal) {
-          var _this98 = this;
+          var _this115 = this;
           var director = this.dungeon;
           var room = director == null ? void 0 : director.room;
           if (!room) return;
           if (director.depth > 0 && !this.contentReady && this.deferContent(function () {
-            return _this98.showRoom(reveal);
+            return _this115.showRoom(reveal);
           })) return;
           var run = this.adventure;
           if (!run && !this.taught && !this.trial && !this.mineRecovery) {
@@ -18404,59 +19622,59 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
           if (room.kind === 'battle') {
             this.enemies = [].concat(this.activeWave.enemies);
             if (!run) this.phase = room.type === 'boss' ? 'lessonBoss' : 'wolves';
-            if (((run == null ? void 0 : run.id) === 'undead' || (run == null ? void 0 : run.id) === 'tower') && director.depth === 0 && !this.recruits.includes('m') && !this.trial) {
+            if (((run == null ? void 0 : run.id) === 'swamp' || (run == null ? void 0 : run.id) === 'undead' || (run == null ? void 0 : run.id) === 'tower') && director.depth === 0 && !this.recruits.includes('m') && !this.trial) {
               this.questEvent('talk', 'chief-mage');
-              this.page('城门的来信', '伊芙：我找到钟声的源头了。带上日记，我和你们一起走。', this.dungeonBackdrop());
+              this.page('雾中的会合', '伊芙：我沿着河道追查钟声。前路危险，让我和你们一起走。', this.dungeonBackdrop());
               this.sceneActor('hero-m', 144, 102, '剧情人物 ');
-              var _root3 = this.ui;
+              var _root4 = this.ui;
               var allowMeeting = function allowMeeting() {
-                if (_this98.ui !== _root3 || _this98.dungeon !== director) return;
+                if (_this115.ui !== _root4 || _this115.dungeon !== director) return;
                 var meeting = questInteractions.mage;
-                var button = _this98.button('与法师伊芙会合', 32, function () {
-                  if (_this98.ui !== _root3 || _this98.recruits.includes('m')) return;
-                  var oldHP = _this98.maxHP,
-                    oldDP = _this98.maxDP;
-                  _this98.questEvent(meeting.kind, meeting.key);
-                  _this98.turnIn(meeting.key);
-                  _this98.recruit('m');
-                  _this98.hp += _this98.maxHP - oldHP;
-                  _this98.dp += _this98.maxDP - oldDP;
-                  _this98.types = _this98.formalTypes();
-                  _this98.save();
-                  _this98.beginBattle();
+                var button = _this115.button('与法师伊芙会合', 32, function () {
+                  if (_this115.ui !== _root4 || _this115.recruits.includes('m')) return;
+                  var oldHP = _this115.maxHP,
+                    oldDP = _this115.maxDP;
+                  _this115.questEvent(meeting.kind, meeting.key);
+                  _this115.turnIn(meeting.key);
+                  _this115.recruit('m');
+                  _this115.hp += _this115.maxHP - oldHP;
+                  _this115.dp += _this115.maxDP - oldDP;
+                  _this115.types = _this115.formalTypes();
+                  _this115.save();
+                  _this115.beginBattle();
                 });
-                _this98.markQuestTarget(button, meeting.target);
+                _this115.markQuestTarget(button, meeting.target);
               };
               if (reveal) void reveal().then(allowMeeting);else allowMeeting();
             } else this.beginBattle(reveal);
             return;
           }
           var advance = function advance() {
-            return _this98.advanceRoom(director, room);
+            return _this115.advanceRoom(director, room);
           };
           if (room.kind === 'rescue' || room.kind === 'recruit') {
             var recruit = room.kind === 'recruit';
             this.audio.play('dialogue');
             this.page(recruit ? '失散的牧师' : '林中的求救声', recruit ? '米拉：结界碎片就在前面。我来治疗，你来开路。' : '村民：归印会改接了结界。请把这枚村徽带给村长。', this.dungeonBackdrop());
             if (recruit) this.sceneActor('hero-h', 144, 102, '剧情人物 ');else this.sceneActor('npc-villager-down', 144, 86);
-            var _root4 = this.ui;
+            var _root5 = this.ui;
             var rescue = questInteractions.villager;
-            var button = this.button(recruit ? '邀请米拉入队' : '救下村民，接下报信任务', 30, function () {
-              if (_this98.ui !== _root4 || _this98.dungeon !== director || director.room !== room) return;
-              if (recruit && !_this98.recruits.includes('h')) {
-                _this98.recruit('h');
-                _this98.types = ['s', 'fist', 'h', 'staff'];
-                _this98.hp = Math.min(_this98.maxHP, _this98.hp + 55);
+            var button = this.button(recruit ? '邀请入队' : '接下委托', 30, function () {
+              if (_this115.ui !== _root5 || _this115.dungeon !== director || director.room !== room) return;
+              if (recruit && !_this115.recruits.includes('h')) {
+                _this115.recruit('h');
+                _this115.types = ['s', 'fist', 'h', 'staff'];
+                _this115.hp = Math.min(_this115.maxHP, _this115.hp + 55);
               }
               if (!recruit && !run) {
-                _this98.town.rescued = true;
-                _this98.questEvent(rescue.kind, rescue.key);
+                _this115.town.rescued = true;
+                _this115.questEvent(rescue.kind, rescue.key);
               }
               advance();
             });
             if (!recruit && !run && !this.trial) this.markQuestTarget(button, rescue.target);
             this.button('撤离', -380, function () {
-              return _this98.finishAdventure('retreat');
+              return _this115.finishAdventure('retreat');
             });
             return;
           }
@@ -18466,103 +19684,81 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             if (enabled === void 0) {
               enabled = true;
             }
-            var root = _this98.ui;
-            return _this98.button(label, y, function () {
-              if (payingReward || _this98.goldSpendMotion || _this98.ui !== root || _this98.dungeon !== director || director.room !== room) return;
+            var root = _this115.ui;
+            return _this115.button(label, y, function () {
+              if (payingReward || _this115.goldSpendMotion || _this115.ui !== root || _this115.dungeon !== director || director.room !== room) return;
               apply();
             }, 0, 360, false, root, enabled);
           };
           var decision = function decision(label, y, apply) {
             return action(label, y, function () {
               if (run.stopover && room.kind === 'rest') {
-                if (!_this98.townWrite(function () {
+                if (!_this115.townWrite(function () {
                   apply();
-                  _this98.town.lastRoadAltar = _this98.clearedSites.size;
+                  _this115.town.lastRoadAltar = _this115.clearedSites.size;
                 })) return;
               } else apply();
               advance();
             });
           };
           var show = function show(title, detail) {
-            return _this98.page(title, detail, _this98.dungeonBackdrop(director.depth));
+            return _this115.page(title, detail, _this115.dungeonBackdrop(director.depth));
           };
           if (room.kind === 'merchant') {
-            show('旅行商人', '金币 ' + this.walletGold + ' · 治疗药水 ×' + this.potion);
+            this.page('旅行商人', '每次攻克地点后与浮空艇商店同步补货。', this.dungeonBackdrop(director.depth), {
+              alwaysShowGold: true
+            });
             this.sceneActor('dungeon-merchant', 151, 116);
-            action('购买治疗药水 · 5 金币', 42, function () {
-              if (_this98.potion >= 99 || _this98.walletGold < 5) {
-                _this98.popup('无法购买', 0, 91);
-                return;
-              }
-              void _this98.payGold(5, function () {
-                _this98.potion++;
-              }, {
-                redraw: function redraw() {
-                  return _this98.showRoom();
+            this.tradeCounter('商人行囊', function () {
+              return _this115.stockOffers();
+            }, [{
+              name: '小队休整',
+              hint: '3 金币 · +30 HP',
+              use: function use() {
+                if (_this115.hp >= _this115.maxHP || _this115.walletGold < 3) {
+                  _this115.popup('无法休整', 0, 91);
+                  return;
                 }
-              });
-            });
-            action('小队休整 · 3 金币，恢复 30 HP', -25, function () {
-              if (_this98.hp >= _this98.maxHP || _this98.walletGold < 3) {
-                _this98.popup('无法休整', 0, 91);
-                return;
+                void _this115.payGold(3, function () {
+                  _this115.hp = Math.min(_this115.maxHP, _this115.hp + 30);
+                }, {
+                  persist: true
+                });
               }
-              void _this98.payGold(3, function () {
-                _this98.hp = Math.min(_this98.maxHP, _this98.hp + 30);
-              }, {
-                redraw: function redraw() {
-                  return _this98.showRoom();
-                }
-              });
-            });
-            action('离开商人房间', -92, advance);
+            }].concat(run.stopover ? [] : [{
+              name: '撤离',
+              use: function use() {
+                return _this115.finishAdventure('retreat');
+              }
+            }], [{
+              name: '结束交易',
+              use: advance
+            }]));
+            return;
           } else if (room.kind === 'event') {
-            var cost = roomRewards.travelerCost,
-              affordable = this.walletGold >= cost;
-            show('落难的旅人', affordable ? '他想在驿站开一家补给店，还差 15 金币。' : "\u91D1\u5E01 " + this.walletGold + " \xB7 \u8D44\u52A9\u9700\u8981 " + cost + " \u91D1\u5E01");
+            var _cost = roomRewards.travelerCost,
+              affordable = this.walletGold >= _cost;
+            var response = function response(yes) {
+              show('落难的旅人', yes ? '旅人：谢谢你们！下次经过驿站，我会备好补给。' : '旅人：我明白。愿你们一路平安。');
+              _this115.sceneActor('dungeon-traveler', 144, 99);
+              action('…', 32, advance);
+            };
+            show('落难的旅人', "\u65C5\u4EBA\uFF1A\u6211\u60F3\u5728\u9A7F\u7AD9\u5F00\u4E00\u5BB6\u8865\u7ED9\u5E97\uFF0C\u8FD8\u5DEE " + _cost + " \u91D1\u5E01\u3002\u613F\u610F\u8D44\u52A9\u6211\u5417\uFF1F");
             this.sceneActor('dungeon-traveler', 144, 99);
-            var _root5 = this.ui;
-            var offer = action("\u8D44\u52A9\u65C5\u4EBA \xB7 " + cost + " \u91D1\u5E01", 42, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee52() {
-              var payment;
-              return _regeneratorRuntime().wrap(function _callee52$(_context55) {
-                while (1) switch (_context55.prev = _context55.next) {
-                  case 0:
-                    payment = _this98.payGold(cost, function () {
-                      _this98.town.travelerSponsored = true;
-                    }, {
-                      persist: true
-                    });
-                    if (payment) {
-                      _context55.next = 3;
-                      break;
-                    }
-                    return _context55.abrupt("return");
-                  case 3:
-                    offer.active = false;
-                    leave.active = false;
-                    _this98.label('已资助旅人', 0, 42, 360, 22);
-                    _context55.next = 8;
-                    return payment;
-                  case 8:
-                    _context55.t0 = _context55.sent;
-                    if (!_context55.t0) {
-                      _context55.next = 11;
-                      break;
-                    }
-                    _context55.t0 = _this98.ui === _root5;
-                  case 11:
-                    if (!_context55.t0) {
-                      _context55.next = 13;
-                      break;
-                    }
-                    advance();
-                  case 13:
-                  case "end":
-                    return _context55.stop();
+            action('同意', 42, function () {
+              var payment = _this115.payGold(_cost, function () {
+                _this115.town.travelerSponsored = true;
+              }, {
+                persist: true,
+                redraw: function redraw() {
+                  return response(true);
                 }
-              }, _callee52);
-            })), affordable);
-            var leave = action('狠心离开', -25, advance);
+              });
+              if (!payment) _this115.popup('金币不足', 0, 92);
+            }, affordable);
+            action('不同意', -25, function () {
+              return response(false);
+            });
           } else if (room.kind === 'rest') {
             if (this.trial) {
               show('矿道休息营地', '晶岩守卫正在前方。选择一种补给后继续。');
@@ -18570,16 +19766,16 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               var _root6 = this.ui;
               var supply = function supply(restore) {
                 return function () {
-                  if (_this98.ui !== _root6 || _this98.dungeon !== director || director.room !== room) return;
+                  if (_this115.ui !== _root6 || _this115.dungeon !== director || director.room !== room) return;
                   restore();
                   advance();
                 };
               };
               this.trialButton('恢复 45 HP', -26, supply(function () {
-                _this98.hp = Math.min(_this98.maxHP, _this98.hp + 45);
+                _this115.hp = Math.min(_this115.maxHP, _this115.hp + 45);
               }));
               this.trialButton('恢复 35 DP', -92, supply(function () {
-                _this98.dp = Math.min(_this98.maxDP, _this98.dp + 35);
+                _this115.dp = Math.min(_this115.maxDP, _this115.dp + 35);
               }));
             } else {
               this.page('老旧祭坛', '选择恢复生命或修补护甲。', this.dungeonBackdrop(director.depth), {
@@ -18588,17 +19784,17 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               this.sceneActor('locations/dungeon-altar', 144, 102, '剧情道具 ');
               if (this.mineRecovery) {
                 action('恢复 45 HP', 42, function () {
-                  return _this98.commitMineRest(director, room, 'hp');
+                  return _this115.commitMineRest(director, room, 'hp');
                 });
                 action('恢复 35 DP', -25, function () {
-                  return _this98.commitMineRest(director, room, 'dp');
+                  return _this115.commitMineRest(director, room, 'dp');
                 });
               } else {
                 decision('恢复 45 HP', 42, function () {
-                  _this98.hp = Math.min(_this98.maxHP, _this98.hp + 45);
+                  _this115.hp = Math.min(_this115.maxHP, _this115.hp + 45);
                 });
                 decision('恢复 35 DP', -25, function () {
-                  _this98.dp = Math.min(_this98.maxDP, _this98.dp + 35);
+                  _this115.dp = Math.min(_this115.maxDP, _this115.dp + 35);
                 });
               }
             }
@@ -18607,90 +19803,90 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             var chest = this.sceneActor('dungeon-chest', 144, 77, '剧情道具 ');
             chest.y += 11;
             if (this.mineRecovery) {
-              action("\u53D6\u8D70\u7269\u8D44 \xB7 " + roomRewards.chestGold + " \u91D1\u5E01\uFF0C" + roomRewards.chestOre + " \u94C1\u77FF", 42, function () {
-                var current = _this98.minePermit(director, room);
+              action("\u53D6\u8D70\u7269\u8D44 \xB7 " + roomRewards.chestGold + " \u91D1\u5E01\uFF0C" + roomRewards.chestOre + " \u77FF\u77F3", 42, function () {
+                var current = _this115.minePermit(director, room);
                 if (!current) return;
                 var next = planMineChest(current.live.state, current.permit);
-                if (next) payingReward = _this98.commitMineRoom(current.live, next, director, room, chest) === true;
+                if (next) payingReward = _this115.commitMineRoom(current.live, next, director, room, chest) === true;
               });
             } else {
-              action('打开宝箱', 42, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee53() {
-                var root, motion, current, roll, result, detail, _run$loot$ore, _run$buffs$vital;
-                return _regeneratorRuntime().wrap(function _callee53$(_context56) {
-                  while (1) switch (_context56.prev = _context56.next) {
+              action('打开宝箱', 42, /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee57() {
+                var root, motion, current, roll, result, detail, _run$loot$ore3, _run$buffs$vital;
+                return _regeneratorRuntime().wrap(function _callee57$(_context60) {
+                  while (1) switch (_context60.prev = _context60.next) {
                     case 0:
                       payingReward = true;
-                      root = _this98.ui;
-                      motion = _this98.newPageMotion();
+                      root = _this115.ui;
+                      motion = _this115.newPageMotion();
                       current = function current() {
-                        return !motion.cancelled && _this98.ui === root && _this98.dungeon === director && director.room === room;
+                        return !motion.cancelled && _this115.ui === root && _this115.dungeon === director && director.room === room;
                       };
                       roll = Math.random();
-                      result = roll < .75 ? '惊喜 · 金币与铁矿' : roll < .9 ? '惊喜 · 祭坛余辉' : roll < .96 ? '遭遇埋伏' : '箱内诅咒';
-                      detail = roll < .75 ? "\u83B7\u5F97 " + roomRewards.chestGold + " \u91D1\u5E01\u3001" + roomRewards.chestOre + " \u94C1\u77FF" : roll < .9 ? '祭坛余辉令本次探索的生命上限提升' : roll < .96 ? '箱中藏着魔物，准备迎战！' : '诅咒令小队失去 10 HP';
-                      _context56.next = 9;
-                      return _this98.revealChest(motion, result, detail);
+                      result = roll < .75 ? '惊喜 · 金币与矿石' : roll < .9 ? '惊喜 · 祭坛余辉' : roll < .96 ? '遭遇埋伏' : '箱内诅咒';
+                      detail = roll < .75 ? "\u83B7\u5F97 " + roomRewards.chestGold + " \u91D1\u5E01\u3001" + roomRewards.chestOre + " \u77FF\u77F3" : roll < .9 ? '祭坛余辉令本次探索的生命上限提升' : roll < .96 ? '箱中藏着魔物，准备迎战！' : '诅咒令小队失去 10 HP';
+                      _context60.next = 9;
+                      return _this115.revealChest(motion, result, detail);
                     case 9:
-                      if (_context56.sent) {
-                        _context56.next = 11;
+                      if (_context60.sent) {
+                        _context60.next = 11;
                         break;
                       }
-                      return _context56.abrupt("return");
+                      return _context60.abrupt("return");
                     case 11:
                       if (current()) {
-                        _context56.next = 13;
+                        _context60.next = 13;
                         break;
                       }
-                      return _context56.abrupt("return");
+                      return _context60.abrupt("return");
                     case 13:
                       if (!(roll < .75)) {
-                        _context56.next = 22;
+                        _context60.next = 22;
                         break;
                       }
-                      _context56.next = 16;
-                      return Promise.all([_this98.animateCoins(motion, roomRewards.chestGold, _this98.coinText, chest, stageGrid.groundY), _this98.showMaterials(motion, {
+                      _context60.next = 16;
+                      return Promise.all([_this115.animateCoins(motion, roomRewards.chestGold, _this115.coinText, chest, stageGrid.groundY), _this115.showMaterials(motion, {
                         ore: roomRewards.chestOre
                       }, chest)]);
                     case 16:
                       if (current()) {
-                        _context56.next = 18;
+                        _context60.next = 18;
                         break;
                       }
-                      return _context56.abrupt("return");
+                      return _context60.abrupt("return");
                     case 18:
-                      _this98.receiveGold(roomRewards.chestGold);
-                      run.loot.ore = ((_run$loot$ore = run.loot.ore) != null ? _run$loot$ore : 0) + roomRewards.chestOre;
-                      _context56.next = 36;
+                      _this115.receiveGold(roomRewards.chestGold);
+                      run.loot.ore = ((_run$loot$ore3 = run.loot.ore) != null ? _run$loot$ore3 : 0) + roomRewards.chestOre;
+                      _context60.next = 36;
                       break;
                     case 22:
                       if (!(roll < .9)) {
-                        _context56.next = 28;
+                        _context60.next = 28;
                         break;
                       }
                       run.buffs.vital = ((_run$buffs$vital = run.buffs.vital) != null ? _run$buffs$vital : 0) + 1;
-                      _context56.next = 26;
-                      return _this98.combatPopup(motion, '祭坛余辉 · 生命上限提升', 0, 200, '#adf4b0', 20);
+                      _context60.next = 26;
+                      return _this115.combatPopup(motion, '祭坛余辉 · 生命上限提升', 0, 200, '#adf4b0', 20);
                     case 26:
-                      _context56.next = 36;
+                      _context60.next = 36;
                       break;
                     case 28:
                       if (!(roll < .96)) {
-                        _context56.next = 33;
+                        _context60.next = 33;
                         break;
                       }
-                      if (director.springChestTrap(room, encounter(run.id, director.depth, 'battle'))) _this98.showRoom();
-                      return _context56.abrupt("return");
+                      if (director.springChestTrap(room, encounter(run.id, director.depth, 'battle'))) _this115.showRoom();
+                      return _context60.abrupt("return");
                     case 33:
-                      _this98.hp = Math.max(1, _this98.hp - 10);
-                      _context56.next = 36;
-                      return _this98.combatPopup(motion, '箱内诅咒 · −10 HP', 0, 200, '#dfa1c8', 20);
+                      _this115.hp = Math.max(1, _this115.hp - 10);
+                      _context60.next = 36;
+                      return _this115.combatPopup(motion, '箱内诅咒 · −10 HP', 0, 200, '#dfa1c8', 20);
                     case 36:
                       if (current()) advance();
                     case 37:
                     case "end":
-                      return _context56.stop();
+                      return _context60.stop();
                   }
-                }, _callee53);
+                }, _callee57);
               })));
               action('放弃宝箱', -25, advance);
             }
@@ -18705,12 +19901,12 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
               var label = _ref50[0],
                 next = _ref50[1];
               return action(label, 42 - index * 67, function () {
-                if (director.choose(room, next)) _this98.afterRoom(director);
+                if (director.choose(room, next)) _this115.afterRoom(director);
               });
             });
           }
           action('撤离', -380, function () {
-            return _this98.finishAdventure('retreat');
+            return _this115.finishAdventure('retreat');
           });
         };
         _createClass(FourEmblemsGame, [{
@@ -18721,17 +19917,22 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         }, {
           key: "boardRoutes",
           get: function get() {
-            var _this$trial22, _this$challenge6;
-            if (((_this$trial22 = this.trial) == null ? void 0 : _this$trial22.id) === 'portal') return portalGravity();
+            var _this$trial26, _this$challenge7;
+            if (((_this$trial26 = this.trial) == null ? void 0 : _this$trial26.id) === 'portal') return portalGravity();
             var routes = this.usesRailGravity ? mineGravity : verticalGravity;
-            var id = (_this$challenge6 = this.challenge) == null ? void 0 : _this$challenge6.id;
+            var id = (_this$challenge7 = this.challenge) == null ? void 0 : _this$challenge7.id;
             return challengeGravity(id, routes);
           }
         }, {
           key: "usesRailGravity",
           get: function get() {
-            var _this$trial23;
-            return this.phase === 'mine' && (((_this$trial23 = this.trial) == null ? void 0 : _this$trial23.id) === 'rail' || !!this.mineRecovery);
+            var _this$trial27;
+            return this.phase === 'mine' && (((_this$trial27 = this.trial) == null ? void 0 : _this$trial27.id) === 'rail' || !!this.mineRecovery);
+          }
+        }, {
+          key: "packagedPlaytest",
+          get: function get() {
+            return typeof document !== 'undefined' && !!document.querySelector('meta[name="four-emblems-playtest"]');
           }
         }, {
           key: "activeWave",
@@ -18752,9 +19953,9 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         }, {
           key: "baseMaxHP",
           get: function get() {
-            var _this99 = this;
+            var _this116 = this;
             return this.party.reduce(function (sum, id) {
-              return sum + _this99.inventory.stats(id).hp;
+              return sum + _this116.inventory.stats(id).hp;
             }, 0) + 15 * this.buff('vital');
           }
         }, {
@@ -18765,16 +19966,16 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
         }, {
           key: "maxDP",
           get: function get() {
-            var _this100 = this;
+            var _this117 = this;
             return this.party.reduce(function (sum, id) {
-              return sum + _this100.inventory.stats(id).dp;
+              return sum + _this117.inventory.stats(id).dp;
             }, 0);
           }
         }, {
           key: "walletGold",
           get: function get() {
-            var _this$adventure$coins, _this$adventure7;
-            var found = (_this$adventure$coins = (_this$adventure7 = this.adventure) == null ? void 0 : _this$adventure7.coins) != null ? _this$adventure$coins : 0;
+            var _this$adventure$coins, _this$adventure8;
+            var found = (_this$adventure$coins = (_this$adventure8 = this.adventure) == null ? void 0 : _this$adventure8.coins) != null ? _this$adventure$coins : 0;
             return this.trial ? found : this.gold + found;
           }
         }, {
@@ -18794,6 +19995,23 @@ System.register("chunks:///_virtual/Game.ts", ['./rollupPluginModLoBabelHelpers.
             return this.recruits.includes('d') || this.party.some(function (id) {
               return heroes[id].action === 'd';
             });
+          }
+        }, {
+          key: "railRoutes",
+          get: function get() {
+            return this.boardRoutes.filter(function (route) {
+              return route.length > 1 && Math.floor(route[0] / cols) === Math.floor(route[route.length - 1] / cols);
+            });
+          }
+        }, {
+          key: "inventoryUI",
+          get: function get() {
+            return {
+              box: this.box.bind(this),
+              art: this.art.bind(this),
+              label: this.label.bind(this),
+              button: this.button.bind(this)
+            };
           }
         }]);
         return FourEmblemsGame;
@@ -19059,6 +20277,68 @@ System.register("chunks:///_virtual/GameAudio.ts", ['./rollupPluginModLoBabelHel
   };
 });
 
+System.register("chunks:///_virtual/HeroSheet.ts", ['cc', './Party.ts', './BattleRules.ts', './TradeView.ts'], function (exports) {
+  var cclegacy, disciplineNames, heroes, planOathSkill, newOathState, ink, textBlock;
+  return {
+    setters: [function (module) {
+      cclegacy = module.cclegacy;
+    }, function (module) {
+      disciplineNames = module.disciplineNames;
+      heroes = module.heroes;
+    }, function (module) {
+      planOathSkill = module.planOathSkill;
+      newOathState = module.newOathState;
+    }, function (module) {
+      ink = module.ink;
+      textBlock = module.textBlock;
+    }],
+    execute: function () {
+      exports('drawHeroSheet', drawHeroSheet);
+      cclegacy._RF.push({}, "72bfeAyTV1AP4Irr0itvtL0", "HeroSheet", undefined);
+      function drawHeroSheet(ui, overlay, id, inventory, back) {
+        var hero = heroes[id],
+          stats = inventory.stats(id),
+          rank = inventory.rank(id);
+        var card = ui.box('英雄详情页', 0, 0, 443, 764, '#2b4036', overlay);
+        ink(ui.label('英雄详情', 0, 345, 393, 25, card), '#f4d397', true);
+        ui.art('hero-' + id, -105, 229, 154, 162, card);
+        ui.label(hero.name, 68, 270, 198, 28, card).isBold = true;
+        ink(ui.label(hero.role + ' · ' + disciplineNames[hero.discipline], 68, 228, 202, 19, card), '#f5d391');
+        ui.label("Lv. " + rank.level + "    EXP " + rank.progress + "/" + rank.level * 2, 68, 193, 208, 16, card);
+        var band = ui.box('当前属性', 0, 119, 385, 48, '#1e312a', card);
+        ['AP ' + stats.attack, 'HP ' + stats.hp, 'DP ' + stats.dp].forEach(function (value, i) {
+          return ink(ui.label(value, (i - 1) * 125, 0, 121, 19, band), ['#f8cf83', '#b7e9af', '#a8dff2'][i], true);
+        });
+        var kind = {
+          s: '物理攻击',
+          m: '法术攻击',
+          h: '治疗',
+          d: '守护'
+        }[hero.action];
+        ui.label(hero.skill + ' · ' + kind + '纹章', 0, 65, 390, 22, card).isBold = true;
+        ink(ui.label('当前装备下的首波三消，含一枚所示棋子', 0, 32, 390, 16, card), '#d6caa9');
+        [undefined, 'skill', 'advanced'].forEach(function (tier, i) {
+          var row = ui.box(['普通棋子', '强化棋子', '高级强化棋子'][i], 0, -31 - i * 95, 390, 85, '#364d41', card);
+          ui.art(id, -144, 0, 49, 49, row);
+          if (tier) ui.art(tier === 'skill' ? 'skill-frame' : 'advanced-frame', -144, 0, 58, 58, row);
+          var counts = i === 0 ? [3, 0, 0] : i === 1 ? [2, 1, 0] : [2, 0, 1];
+          var skill = planOathSkill(id, 3, 1, tier, stats.attack, false, newOathState(), function (gear) {
+            return inventory.wears(id, gear);
+          }, function () {
+            return 0;
+          }, i ? 1 : 0, counts);
+          var value = skill.kind === 'attack' ? "\u4F24\u5BB3 " + skill.damage : skill.kind === 'heal' ? "\u6062\u590D " + skill.amount + " HP" : skill.kind === 'guard' ? "\u6062\u590D " + skill.amount + " DP" : '';
+          ink(ui.label(row.name + '   ' + value, 37, 15, 288, 18, row), '#f7dfa8', true);
+          var effect = skill.kind === 'attack' ? skill.shred ? '削减目标一层物理护甲' : skill.weaken ? '目标下次攻击降低 20%' : skill.stun ? '眩晕；对免疫目标增伤 25%' : skill.splash ? "\u5BF9\u5176\u4ED6\u76EE\u6807\u6E85\u5C04 " + skill.splash + " \u4F24\u5BB3" : skill.target === 'rear' ? '优先攻击后排敌人' : '攻击前排敌人' : skill.kind === 'guard' && skill.resist ? '本回合受到的伤害降低 15%' : skill.kind === 'guard' ? '恢复小队护甲' : '恢复小队生命';
+          textBlock(ui.label(effect, 37, -17, 287, 15, row), 287, 35);
+        });
+        ui.button('返回', -327, back, 0, 212, false, card);
+      }
+      cclegacy._RF.pop();
+    }
+  };
+});
+
 System.register("chunks:///_virtual/Inventory.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Party.ts'], function (exports) {
   var _extends, _createForOfIteratorHelperLoose, _createClass, cclegacy, heroes, disciplineNames, apNames;
   return {
@@ -19078,17 +20358,15 @@ System.register("chunks:///_virtual/Inventory.ts", ['./rollupPluginModLoBabelHel
       cclegacy._RF.push({}, "20da9QpTWNPmbvrCDEtMvn/", "Inventory", undefined);
       var resourceNames = exports('resourceNames', {
         gold: '金币',
-        herb: '草药',
-        ore: '铁矿',
-        essence: '灵质',
-        crystal: '晶体'
+        ore: '矿石',
+        essence: '魔精'
       });
       var equipment = exports('equipment', [{
         id: 'blade',
         name: '铁剑',
         discipline: 'melee',
         slot: 'weapon',
-        attack: 12,
+        attack: 8,
         cost: {
           gold: 16
         }
@@ -19097,31 +20375,31 @@ System.register("chunks:///_virtual/Inventory.ts", ['./rollupPluginModLoBabelHel
         name: '守护甲',
         discipline: 'melee',
         slot: 'armor',
-        hp: 30,
+        hp: 24,
         dp: 8,
         cost: {
           gold: 20,
-          herb: 3
+          ore: 1
         }
       }, {
         id: 'swordcore',
         name: '剑气护符',
         discipline: 'melee',
         slot: 'core',
-        effect: '佩戴者攻击四消追加剑气',
+        effect: '佩戴者剑击四消及以上追加 0.5 × AP 伤害',
         cost: {
-          gold: 24,
-          ore: 4
+          gold: 32,
+          ore: 2
         }
       }, {
         id: 'guardcore',
         name: '反击徽记',
         discipline: 'melee',
         slot: 'core',
-        effect: '佩戴者守护时 DP 已满，追加一次 1×AP 攻击',
+        effect: '佩戴者守护时若 DP 已满，追加 1 × AP 反击',
         cost: {
-          gold: 25,
-          ore: 4
+          gold: 36,
+          ore: 2
         }
       }, {
         id: 'magiccore',
@@ -19129,10 +20407,10 @@ System.register("chunks:///_virtual/Inventory.ts", ['./rollupPluginModLoBabelHel
         discipline: 'magic',
         slot: 'core',
         attack: 4,
-        effect: '攻击法术连锁追加伤害',
+        effect: '第二波起，佩戴者攻击法术追加 0.3 × AP 伤害',
         cost: {
-          gold: 28,
-          essence: 3
+          gold: 40,
+          essence: 2
         }
       }, {
         id: 'healcore',
@@ -19140,79 +20418,112 @@ System.register("chunks:///_virtual/Inventory.ts", ['./rollupPluginModLoBabelHel
         discipline: 'magic',
         slot: 'core',
         attack: 3,
-        effect: '治疗溢出转为 DP',
+        effect: '佩戴者治疗溢出量的 35% 转为 DP',
         cost: {
-          gold: 28,
-          essence: 3
+          gold: 36,
+          essence: 2
         }
       }, {
         id: 'buckler',
         name: '皮革臂盾',
         discipline: 'melee',
         slot: 'offhand',
-        dp: 6,
+        dp: 8,
         cost: {
-          gold: 12,
+          gold: 14,
           ore: 1
         }
       }]);
-      // Regional patterns become available after the preceding chapter. Weapon IDs remain stable for existing inventories.
-      var patterns = [['bronze', 'forest', ['林纹长剑', '铜柄战锤', '苔木杖', '巡林权杖', '巡林长弓'], 18, {
+      // Each family trades some attack for its secondary stat. IDs and slots are save contracts.
+      var tiers = [{
+        id: 'bronze',
+        region: 'forest',
+        names: ['林纹长剑', '铜柄战锤', '苔木法杖', '巡林权杖', '巡林长弓'],
+        attack: 18,
         gold: 55,
-        herb: 7,
-        ore: 3
-      }], ['bell', 'swamp', ['铸钟重剑', '守陵战锤', '唤魂杖', '潮汐权杖', '回声角弓'], 32, {
+        material: 2
+      }, {
+        id: 'bell',
+        region: 'swamp',
+        names: ['铸钟重剑', '守陵战锤', '唤魂法杖', '潮汐权杖', '回声角弓'],
+        attack: 32,
         gold: 115,
-        ore: 12,
-        essence: 8
-      }], ['sun', 'goblin', ['日轮弯刀', '王旗战锤', '日镜法杖', '沙海权杖', '日轮战弓'], 49, {
+        material: 4
+      }, {
+        id: 'sun',
+        region: 'goblin',
+        names: ['日轮长剑', '王旗战锤', '日镜法杖', '沙海权杖', '日轮战弓'],
+        attack: 49,
         gold: 215,
-        ore: 16,
-        essence: 12,
-        crystal: 4
-      }]];
-      var _loop = function _loop() {
-        var _patterns$_i = _patterns[_i],
-          tier = _patterns$_i[0],
-          region = _patterns$_i[1],
-          names = _patterns$_i[2],
-          power = _patterns$_i[3],
-          cost = _patterns$_i[4];
-        ['s', 'd', 'm', 'h'].forEach(function (pattern, i) {
-          return equipment.push({
-            id: tier + '-' + pattern,
-            name: names[i],
-            discipline: i < 2 ? 'melee' : 'magic',
-            slot: 'weapon',
-            attack: power,
-            dp: i === 1 ? power : 0,
-            hp: i === 3 ? power * 2 : 0,
-            region: region,
-            cost: cost,
-            icon: ['blade', 'buckler', 'magiccore', 'healcore'][i]
-          });
-        });
-        equipment.push({
-          id: tier + '-bow',
+        material: 7
+      }];
+      for (var _i = 0, _tiers = tiers; _i < _tiers.length; _i++) {
+        var tier = _tiers[_i];
+        var id = tier.id,
+          region = tier.region,
+          names = tier.names,
+          attack = tier.attack,
+          gold = tier.gold,
+          material = tier.material;
+        var weapon = {
+          slot: 'weapon',
+          region: region
+        };
+        equipment.push(_extends({}, weapon, {
+          id: id + '-s',
+          name: names[0],
+          discipline: 'melee',
+          attack: attack,
+          cost: {
+            gold: gold,
+            ore: material
+          }
+        }), _extends({}, weapon, {
+          id: id + '-d',
+          name: names[1],
+          discipline: 'melee',
+          attack: Math.round(attack * .75),
+          dp: Math.round(attack * .8),
+          cost: {
+            gold: gold + 5,
+            ore: material + 1
+          }
+        }), _extends({}, weapon, {
+          id: id + '-m',
+          name: names[2],
+          discipline: 'magic',
+          attack: attack,
+          cost: {
+            gold: gold,
+            essence: material
+          }
+        }), _extends({}, weapon, {
+          id: id + '-h',
+          name: names[3],
+          discipline: 'magic',
+          attack: Math.round(attack * .8),
+          hp: attack * 2,
+          cost: {
+            gold: gold + 5,
+            essence: material + 1
+          }
+        }), _extends({}, weapon, {
+          id: id + '-bow',
           name: names[4],
           discipline: 'ranged',
-          slot: 'weapon',
-          attack: power,
-          region: region,
-          cost: cost,
-          icon: 'archer'
-        });
-      };
-      for (var _i = 0, _patterns = patterns; _i < _patterns.length; _i++) {
-        _loop();
+          attack: attack,
+          cost: {
+            gold: gold,
+            ore: material
+          }
+        }));
       }
       equipment.push({
         id: 'bow',
         name: '猎弓',
         discipline: 'ranged',
         slot: 'weapon',
-        attack: 12,
-        icon: 'archer',
+        attack: 8,
         cost: {
           gold: 16
         }
@@ -19222,7 +20533,6 @@ System.register("chunks:///_virtual/Inventory.ts", ['./rollupPluginModLoBabelHel
         discipline: 'magic',
         slot: 'weapon',
         attack: 8,
-        icon: 'tide',
         cost: {
           gold: 16
         }
@@ -19233,31 +20543,27 @@ System.register("chunks:///_virtual/Inventory.ts", ['./rollupPluginModLoBabelHel
         slot: 'armor',
         hp: 16,
         dp: 3,
-        icon: 'shield',
         cost: {
-          gold: 12,
-          herb: 2
+          gold: 14
         }
       }, {
         id: 'focus',
         name: '水晶法珠',
         discipline: 'magic',
         slot: 'offhand',
-        attack: 3,
-        icon: 'scholar',
+        attack: 5,
         cost: {
-          gold: 18,
-          crystal: 1
+          gold: 22,
+          essence: 1
         }
       }, {
         id: 'quiver',
         name: '猎人箭袋',
         discipline: 'ranged',
         slot: 'offhand',
-        attack: 3,
-        icon: 'archer',
+        attack: 5,
         cost: {
-          gold: 18,
+          gold: 22,
           ore: 1
         }
       }, {
@@ -19265,12 +20571,11 @@ System.register("chunks:///_virtual/Inventory.ts", ['./rollupPluginModLoBabelHel
         name: '平安护符',
         discipline: 'all',
         slot: 'core',
-        hp: 12,
-        dp: 2,
-        icon: 'guardcore',
+        hp: 14,
+        dp: 3,
         cost: {
-          gold: 16,
-          herb: 2
+          gold: 18,
+          essence: 1
         }
       }, {
         id: 'nightglass',
@@ -19278,49 +20583,43 @@ System.register("chunks:///_virtual/Inventory.ts", ['./rollupPluginModLoBabelHel
         discipline: 'magic',
         slot: 'weapon',
         attack: 70,
-        icon: 'magiccore',
         shadow: true,
         region: 'desert',
         cost: {
           gold: 460,
-          crystal: 20,
-          essence: 18
+          essence: 12
         }
       }, {
         id: 'veil',
         name: '影织法衣',
         discipline: 'magic',
         slot: 'armor',
-        attack: 6,
-        hp: 95,
-        dp: 25,
-        icon: 'shield',
+        attack: 8,
+        hp: 76,
+        dp: 18,
         shadow: true,
         region: 'desert',
         cost: {
-          gold: 320,
-          crystal: 14,
-          herb: 18
+          gold: 275,
+          essence: 8
         }
       }, {
         id: 'ward',
         name: '蚀星魔盾',
         discipline: 'melee',
         slot: 'offhand',
-        hp: 65,
-        dp: 52,
-        icon: 'buckler',
+        hp: 48,
+        dp: 42,
         shadow: true,
         region: 'desert',
         cost: {
-          gold: 365,
-          crystal: 18,
-          ore: 16
+          gold: 260,
+          ore: 8,
+          essence: 2
         }
       });
       var gearArt = exports('gearArt', function gearArt(item) {
-        var _item$icon;
-        return item.icon && Object.hasOwn(heroes, item.icon) ? item.icon : 'gear-' + ((_item$icon = item.icon) != null ? _item$icon : item.id);
+        return 'gear-' + item.id;
       });
       var canEquip = exports('canEquip', function canEquip(id, item) {
         return Object.hasOwn(heroes, id) && (item.discipline === 'all' || heroes[id].discipline === item.discipline);
@@ -19338,46 +20637,41 @@ System.register("chunks:///_virtual/Inventory.ts", ['./rollupPluginModLoBabelHel
       var gearText = exports('gearText', function gearText(item) {
         return [item.attack && (item.discipline === 'all' ? 'AP' : apNames[item.discipline]) + ' +' + item.attack, item.hp && '生命 +' + item.hp, item.dp && '护甲 +' + item.dp, item.effect].filter(Boolean).join(' · ');
       });
-      // The village trades later regions' surplus for early materials used by every smithing tier.
       var supplyTrades = exports('supplyTrades', [{
         id: 'field-kit',
-        name: '采购药材',
+        name: '采购魔精',
         cost: {
-          gold: 18,
-          essence: 10
+          gold: 18
         },
         output: {
-          herb: 8
+          essence: 3
         }
       }, {
         id: 'ore-cart',
-        name: '回购矿石',
+        name: '采购矿石',
         cost: {
-          gold: 28,
-          crystal: 16
+          gold: 15
         },
         output: {
-          ore: 10
+          ore: 3
         }
       }, {
         id: 'convoy',
         name: '雇佣驿队',
         cost: {
-          gold: 70,
-          crystal: 32,
-          essence: 12
+          gold: 48
         },
         output: {
-          herb: 14,
-          ore: 14
+          ore: 5,
+          essence: 4
         }
       }]);
       var provisions = exports('provisions', [{
         id: 'healer',
-        name: '草药行囊',
+        name: '疗愈行囊',
         cost: {
           gold: 22,
-          herb: 5
+          essence: 1
         },
         buffs: {
           heal: 1,
@@ -19389,8 +20683,7 @@ System.register("chunks:///_virtual/Inventory.ts", ['./rollupPluginModLoBabelHel
         name: '磨刃油',
         cost: {
           gold: 46,
-          ore: 5,
-          essence: 3
+          ore: 2
         },
         buffs: {
           atk: 1,
@@ -19402,8 +20695,7 @@ System.register("chunks:///_virtual/Inventory.ts", ['./rollupPluginModLoBabelHel
         name: '星辉熏香',
         cost: {
           gold: 85,
-          crystal: 10,
-          essence: 8
+          essence: 3
         },
         buffs: {
           mag: 2,
@@ -19420,10 +20712,8 @@ System.register("chunks:///_virtual/Inventory.ts", ['./rollupPluginModLoBabelHel
             's:weapon': 'blade'
           };
           this.materials = {
-            herb: 0,
             ore: 0,
-            essence: 0,
-            crystal: 0
+            essence: 0
           };
           this.experience = Object.fromEntries(Object.keys(heroes).map(function (id) {
             return [id, 0];
@@ -19528,13 +20818,9 @@ System.register("chunks:///_virtual/Inventory.ts", ['./rollupPluginModLoBabelHel
           if (!item || !this.owned.includes(id) || step > 4) return;
           return _extends({
             gold: 24 * step,
-            ore: step * 2
-          }, step >= 2 ? {
-            herb: step * 2
-          } : {}, step >= 3 ? {
-            essence: step
-          } : {}, step === 4 ? {
-            crystal: 4
+            ore: step
+          }, step >= 3 ? {
+            essence: step - 2
           } : {});
         };
         _proto.temper = function temper(id, gold) {
@@ -19555,31 +20841,29 @@ System.register("chunks:///_virtual/Inventory.ts", ['./rollupPluginModLoBabelHel
             progress: progress
           };
         };
+        _proto.baseStats = function baseStats(id) {
+          var base = heroes[id],
+            levels = Math.min(20, this.rank(id).level - 1);
+          return {
+            hp: base.hp + levels * base.growth[0],
+            dp: base.dp + levels * base.growth[1],
+            attack: base.attack + levels * base.growth[2]
+          };
+        };
         _proto.stats = function stats(id) {
           var _this2 = this;
-          var base = heroes[id];
-          var gear = equipment.filter(function (item) {
-            return _this2.slots[id + ':' + item.slot] === item.id;
-          });
-          var levels = Math.min(20, this.rank(id).level - 1);
-          var temper = gear.reduce(function (sum, item) {
-            var _this2$tempering$item;
-            return sum + ((_this2$tempering$item = _this2.tempering[item.id]) != null ? _this2$tempering$item : 0);
-          }, 0);
-          return {
-            hp: base.hp + levels * base.growth[0] + temper * 5 + gear.reduce(function (sum, item) {
-              var _item$hp;
-              return sum + ((_item$hp = item.hp) != null ? _item$hp : 0);
-            }, 0),
-            dp: base.dp + levels * base.growth[1] + temper * 2 + gear.reduce(function (sum, item) {
-              var _item$dp;
-              return sum + ((_item$dp = item.dp) != null ? _item$dp : 0);
-            }, 0),
-            attack: base.attack + levels * base.growth[2] + temper * 2 + gear.reduce(function (sum, item) {
-              var _item$attack;
-              return sum + ((_item$attack = item.attack) != null ? _item$attack : 0);
-            }, 0)
-          };
+          var stats = this.baseStats(id);
+          for (var _iterator = _createForOfIteratorHelperLoose(equipment.filter(function (item) {
+              return _this2.wears(id, item.id);
+            })), _step; !(_step = _iterator()).done;) {
+            var _this$tempering$item$, _item$hp, _item$dp, _item$attack;
+            var item = _step.value;
+            var level = (_this$tempering$item$ = this.tempering[item.id]) != null ? _this$tempering$item$ : 0;
+            stats.hp += ((_item$hp = item.hp) != null ? _item$hp : 0) + level * 5;
+            stats.dp += ((_item$dp = item.dp) != null ? _item$dp : 0) + level * 2;
+            stats.attack += ((_item$attack = item.attack) != null ? _item$attack : 0) + level * 2;
+          }
+          return stats;
         };
         _proto.restore = function restore(state) {
           var _this3 = this;
@@ -19594,13 +20878,13 @@ System.register("chunks:///_virtual/Inventory.ts", ['./rollupPluginModLoBabelHel
             return item.id;
           });
           this.tempering = {};
-          for (var _iterator = _createForOfIteratorHelperLoose(this.owned), _step; !(_step = _iterator()).done;) {
+          for (var _iterator2 = _createForOfIteratorHelperLoose(this.owned), _step2; !(_step2 = _iterator2()).done;) {
             var _data$tempering;
-            var id = _step.value;
-            if (amount((_data$tempering = data.tempering) == null ? void 0 : _data$tempering[id])) this.tempering[id] = Math.min(4, amount(data.tempering[id]));
+            var _id = _step2.value;
+            if (amount((_data$tempering = data.tempering) == null ? void 0 : _data$tempering[_id])) this.tempering[_id] = Math.min(4, amount(data.tempering[_id]));
           }
           this.slots = {};
-          var _loop2 = function _loop2() {
+          var _loop = function _loop() {
             var _Object$entries2$_i = _Object$entries2[_i5],
               key = _Object$entries2$_i[0],
               id = _Object$entries2$_i[1];
@@ -19614,17 +20898,17 @@ System.register("chunks:///_virtual/Inventory.ts", ['./rollupPluginModLoBabelHel
           };
           for (var _i5 = 0, _Object$entries2 = Object.entries((_data$slots = data.slots) != null ? _data$slots : {}); _i5 < _Object$entries2.length; _i5++) {
             var _data$slots;
-            _loop2();
+            _loop();
           }
-          for (var _i6 = 0, _Object$keys3 = Object.keys(this.materials); _i6 < _Object$keys3.length; _i6++) {
-            var _data$materials;
-            var key = _Object$keys3[_i6];
-            this.materials[key] = amount((_data$materials = data.materials) == null ? void 0 : _data$materials[key]);
-          }
-          for (var _i7 = 0, _Object$keys4 = Object.keys(this.experience); _i7 < _Object$keys4.length; _i7++) {
+          var stock = data.materials;
+          this.materials = {
+            ore: amount(amount(stock == null ? void 0 : stock.ore) + amount(stock == null ? void 0 : stock.crystal)),
+            essence: amount(amount(stock == null ? void 0 : stock.essence) + amount(stock == null ? void 0 : stock.herb))
+          };
+          for (var _i6 = 0, _Object$keys3 = Object.keys(this.experience); _i6 < _Object$keys3.length; _i6++) {
             var _data$experience;
-            var _key = _Object$keys4[_i7];
-            this.experience[_key] = amount((_data$experience = data.experience) == null ? void 0 : _data$experience[_key]);
+            var key = _Object$keys3[_i6];
+            this.experience[key] = amount((_data$experience = data.experience) == null ? void 0 : _data$experience[key]);
           }
         };
         _createClass(Inventory, [{
@@ -19643,9 +20927,169 @@ System.register("chunks:///_virtual/Inventory.ts", ['./rollupPluginModLoBabelHel
   };
 });
 
-System.register("chunks:///_virtual/main", ['./ActorArt.ts', './BattleMotion.ts', './BattleRules.ts', './BattleSession.ts', './Board.ts', './BoardMechanics.ts', './BuffView.ts', './Campaign.ts', './CampaignAtlas.ts', './CampaignJourney.ts', './Chapter.ts', './battle-core.ts', './board-bridge.ts', './cocos-board-adapter.ts', './damage.ts', './derivation.ts', './effects.ts', './experiment.ts', './exploration-save.ts', './formal-rules.ts', './mine-recovery.ts', './potion-bridge.ts', './CombatSceneLab.ts', './CombatTags.ts', './ContentGroups.ts', './ContentQueue.ts', './CorridorDepth.ts', './DungeonDirector.ts', './DungeonScenery.ts', './EnemySkills.ts', './FormalSaveGate.ts', './Game.ts', './GameAudio.ts', './Inventory.ts', './MineTrial.ts', './Party.ts', './PartyArt.ts', './QuestJournal.ts', './StageLayout.ts', './TemplateBoardFx.ts', './TestBoardChallenge.ts', './TestBoardRules.ts', './TownRules.ts', './TravelClock.ts', './UIManager.ts'], function () {
+System.register("chunks:///_virtual/ItemBar.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Consumables.ts'], function (exports) {
+  var _createForOfIteratorHelperLoose, cclegacy, UIOpacity, Node, Tween, tween, Vec3, Graphics, Color, battleItemIds, items;
   return {
-    setters: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+    setters: [function (module) {
+      _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+      UIOpacity = module.UIOpacity;
+      Node = module.Node;
+      Tween = module.Tween;
+      tween = module.tween;
+      Vec3 = module.Vec3;
+      Graphics = module.Graphics;
+      Color = module.Color;
+    }, function (module) {
+      battleItemIds = module.battleItemIds;
+      items = module.items;
+    }],
+    execute: function () {
+      cclegacy._RF.push({}, "294f3H6TAlLD6ctqHYLrVpG", "ItemBar", undefined);
+      var ItemBar = exports('ItemBar', /*#__PURE__*/function () {
+        function ItemBar(root, view) {
+          this.start = 0;
+          this.counts = void 0;
+          this.controls = new Map();
+          this.root = root;
+          this.view = view;
+        }
+        var _proto = ItemBar.prototype;
+        _proto.center = function center(id) {
+          var _this$controls$get$no, _this$controls$get;
+          return (_this$controls$get$no = (_this$controls$get = this.controls.get(id)) == null ? void 0 : _this$controls$get.node.position.x) != null ? _this$controls$get$no : 192;
+        };
+        _proto.sync = function sync(counts) {
+          var _this = this;
+          this.counts = counts;
+          var ids = battleItemIds.filter(function (id) {
+            return counts(id) > 0;
+          });
+          this.start = Math.min(this.start, Math.max(0, ids.length - 5));
+          var visible = ids.slice(this.start, this.start + 5),
+            overflow = ids.length > 5;
+          var keep = new Set(visible);
+          if (overflow) {
+            keep.add('left');
+            keep.add('right');
+          }
+          var _loop2 = function _loop2() {
+              var _step$value = _step.value,
+                key = _step$value[0],
+                entry = _step$value[1];
+              if (keep.has(key) || entry.leaving) return 0; // continue
+              if (entry.label && counts(key) > 0) {
+                _this.controls["delete"](key);
+                entry.node.removeFromParent();
+                entry.node.destroy();
+                return 0; // continue
+              }
+
+              if (entry.label) entry.label.string = '0';
+              entry.leaving = true;
+              var opacity = entry.node.getComponent(UIOpacity);
+              tween(opacity).to(.18, {
+                opacity: 0
+              }).call(function () {
+                if (!entry.leaving) return;
+                _this.controls["delete"](key);
+                entry.node.destroy();
+              }).start();
+            },
+            _ret;
+          for (var _iterator = _createForOfIteratorHelperLoose(this.controls), _step; !(_step = _iterator()).done;) {
+            _ret = _loop2();
+            if (_ret === 0) continue;
+          }
+          // Keep surviving icons in place until the depleted stack has faded away.
+          var fading = Array.from(this.controls.values()).some(function (e) {
+            return e.leaving;
+          });
+          visible.forEach(function (id, i) {
+            var x = overflow ? 144 - i * 72 : 192 - i * 80;
+            var entry = _this.controls.get(id);
+            if (!entry) {
+              var node = _this.view.box(items[id].name, x, 0, 72, 72, undefined, _this.root);
+              node.addComponent(UIOpacity);
+              _this.view.art('board/' + id, 0, 2, 59, 59, node);
+              entry = {
+                node: node,
+                label: _this.view.count(22, -20, node)
+              };
+              _this.controls.set(id, entry);
+              node.on(Node.EventType.TOUCH_END, function () {
+                if (!entry.leaving && _this.view.available() && _this.counts(id) > 0) _this.view.use(id);
+              });
+            }
+            _this.revive(entry);
+            entry.label.string = String(counts(id));
+            if (entry.targetX !== x && entry.node.position.x !== x) {
+              entry.targetX = x;
+              Tween.stopAllByTarget(entry.node);
+              tween(entry.node).delay(fading ? .18 : 0).to(.14, {
+                position: new Vec3(x, 0, 0)
+              }).start();
+            }
+          });
+          if (overflow) {
+            var _loop = function _loop() {
+              var _step2$value = _step2.value,
+                key = _step2$value[0],
+                side = _step2$value[1];
+              var entry = _this.controls.get(key);
+              if (!entry) {
+                var node = _this.view.box(side < 0 ? '道具向左' : '道具向右', side * 215, 0, 44, 68, undefined, _this.root);
+                node.addComponent(UIOpacity);
+                var g = node.addComponent(Graphics);
+                g.fillColor = Color.WHITE;
+                g.strokeColor = new Color(38, 32, 31);
+                g.lineWidth = 4;
+                g.lineJoin = Graphics.LineJoin.ROUND;
+                g.moveTo(side * 10, 0);
+                g.lineTo(-side * 7, 12);
+                g.lineTo(-side * 7, -12);
+                g.close();
+                g.fill();
+                g.stroke();
+                entry = {
+                  node: node
+                };
+                _this.controls.set(key, entry);
+                node.on(Node.EventType.TOUCH_END, function () {
+                  if (!_this.view.available()) return;
+                  var pages = battleItemIds.filter(function (id) {
+                    return _this.counts(id) > 0;
+                  }).length - 4;
+                  if (pages < 2) return;
+                  _this.start = (_this.start - side + pages) % pages;
+                  _this.sync(_this.counts);
+                });
+              }
+              _this.revive(entry);
+            };
+            for (var _iterator2 = _createForOfIteratorHelperLoose([['left', -1], ['right', 1]]), _step2; !(_step2 = _iterator2()).done;) {
+              _loop();
+            }
+          }
+        };
+        _proto.revive = function revive(entry) {
+          if (!entry.leaving) return;
+          entry.leaving = false;
+          var opacity = entry.node.getComponent(UIOpacity);
+          Tween.stopAllByTarget(opacity);
+          opacity.opacity = 255;
+        };
+        return ItemBar;
+      }());
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/main", ['./ActorArt.ts', './BattleMotion.ts', './BattleRules.ts', './BattleSession.ts', './Board.ts', './BoardMechanics.ts', './BuffView.ts', './Campaign.ts', './CampaignAtlas.ts', './CampaignJourney.ts', './Chapter.ts', './battle-core.ts', './board-bridge.ts', './cocos-board-adapter.ts', './damage.ts', './derivation.ts', './effects.ts', './experiment.ts', './exploration-save.ts', './formal-rules.ts', './mine-recovery.ts', './potion-bridge.ts', './CombatSceneLab.ts', './CombatTags.ts', './Consumables.ts', './ContentGroups.ts', './ContentQueue.ts', './CorridorDepth.ts', './DungeonDirector.ts', './DungeonScenery.ts', './EnemySkills.ts', './FormalSaveGate.ts', './Game.ts', './GameAudio.ts', './HeroSheet.ts', './Inventory.ts', './ItemBar.ts', './MineTrial.ts', './Party.ts', './PartyArt.ts', './PlaytestSave.ts', './QuestJournal.ts', './StageLayout.ts', './TemplateBoardFx.ts', './TestBoardChallenge.ts', './TestBoardRules.ts', './TownRules.ts', './TradeRules.ts', './TradeView.ts', './TravelClock.ts', './UIManager.ts'], function () {
+  return {
+    setters: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
     execute: function () {}
   };
 });
@@ -19670,7 +21114,6 @@ System.register("chunks:///_virtual/mine-recovery.ts", ['./rollupPluginModLoBabe
     }, function (module) {
       planFormalRoomReward = module.planFormalRoomReward;
       roomRewards = module.roomRewards;
-      exports('planFormalRoomReward', module.planFormalRoomReward);
     }],
     execute: function () {
       exports({
@@ -19682,6 +21125,7 @@ System.register("chunks:///_virtual/mine-recovery.ts", ['./rollupPluginModLoBabe
         planMinePotion: planMinePotion,
         planMineRest: planMineRest,
         planMineTestClose: planMineTestClose,
+        planMineV1Reward: planMineV1Reward,
         readMineRecovery: readMineRecovery
       });
       var _excluded = ["potion"],
@@ -19806,6 +21250,19 @@ System.register("chunks:///_virtual/mine-recovery.ts", ['./rollupPluginModLoBabe
           save: next
         };
       }
+
+      // V1 receipts predate enemy-tag bonuses. Recompute with the original regional rate when validating or finishing these runs.
+      function planMineV1Reward(room) {
+        var _room$reinforcements;
+        return planFormalRoomReward('mine', _extends({}, room, {
+          encounters: [],
+          reinforcements: (_room$reinforcements = room.reinforcements) == null ? void 0 : _room$reinforcements.map(function (wave) {
+            return _extends({}, wave, {
+              encounters: []
+            });
+          })
+        }));
+      }
       function planMineFirstVictory(base, terminal, board) {
         var _base$run$route$, _room$rescueCells;
         var room = (_base$run$route$ = base.run.route[0]) == null ? void 0 : _base$run$route$.room;
@@ -19816,7 +21273,7 @@ System.register("chunks:///_virtual/mine-recovery.ts", ['./rollupPluginModLoBabe
             terminal: terminal,
             board: board,
             nextRoomId: 'mine:1',
-            delta: planFormalRoomReward('mine', room)
+            delta: planMineV1Reward(room)
           }
         });
         if (commit.status !== 'changed') return;
@@ -19911,7 +21368,7 @@ System.register("chunks:///_virtual/mine-recovery.ts", ['./rollupPluginModLoBabe
             i = _step$value[1];
           var room = run.route[i].room;
           var receipt = run.receipts[index].request;
-          if (room.kind !== 'battle' || receipt.terminal.roomId !== 'mine:' + i || receipt.terminal.generation !== first.generation + i || i > 0 && receipt.terminal.terminalEventId !== legacyVictoryId(receipt.terminal) || !samePending(receipt.delta, planFormalRoomReward('mine', room))) return false;
+          if (room.kind !== 'battle' || receipt.terminal.roomId !== 'mine:' + i || receipt.terminal.generation !== first.generation + i || i > 0 && receipt.terminal.terminalEventId !== legacyVictoryId(receipt.terminal) || !samePending(receipt.delta, planMineV1Reward(room))) return false;
           pending = plus(pending, receipt.delta);
         }
         if (run.cursor >= 4) {
@@ -19938,7 +21395,7 @@ System.register("chunks:///_virtual/mine-recovery.ts", ['./rollupPluginModLoBabe
               terminalEventId: legacyVictoryId(permit)
             }),
             board: board,
-            delta: planFormalRoomReward('mine', room),
+            delta: planMineV1Reward(room),
             nextRoomId: roomPosition(save.run).next
           }
         });
@@ -20357,6 +21814,86 @@ System.register("chunks:///_virtual/PartyArt.ts", ['cc'], function (exports) {
   };
 });
 
+System.register("chunks:///_virtual/PlaytestSave.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc', './Campaign.ts', './Chapter.ts', './Inventory.ts', './Party.ts', './QuestJournal.ts', './TownRules.ts'], function (exports) {
+  var _extends, cclegacy, campaignSites, campaignOrder, locations, Inventory, initialReserves, starterIds, questBook, newTownProgress;
+  return {
+    setters: [function (module) {
+      _extends = module.extends;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+    }, function (module) {
+      campaignSites = module.campaignSites;
+      campaignOrder = module.campaignOrder;
+    }, function (module) {
+      locations = module.locations;
+    }, function (module) {
+      Inventory = module.Inventory;
+    }, function (module) {
+      initialReserves = module.initialReserves;
+      starterIds = module.starterIds;
+    }, function (module) {
+      questBook = module.questBook;
+    }, function (module) {
+      newTownProgress = module.newTownProgress;
+    }],
+    execute: function () {
+      exports('completedPlaytestSave', completedPlaytestSave);
+      cclegacy._RF.push({}, "faeddjUR9ZHQqpdwIhPi5DH", "PlaytestSave", undefined);
+
+      // A package profile is installed once per save, including when upgrading an older test package.
+      var playtestRevision = exports('playtestRevision', 'cleared-party-v1');
+      function completedPlaytestSave(saveId) {
+        var inventory = new Inventory(),
+          party = [].concat(starterIds);
+        return {
+          saveId: saveId,
+          playtestRevision: playtestRevision,
+          completedPlaytest: true,
+          party: party,
+          recruits: initialReserves(party),
+          inventory: inventory,
+          sites: campaignSites.map(function (site) {
+            return site.id;
+          }),
+          cleared: [].concat(campaignOrder),
+          location: locations.indexOf('village'),
+          reported: true,
+          villageGuidePending: false,
+          town: _extends({}, newTownProgress(), {
+            rescued: true,
+            knightQuest: true,
+            mageQuest: true,
+            travelerSponsored: true
+          }),
+          quests: Object.fromEntries(questBook.map(function (q) {
+            return [q.id, {
+              active: false,
+              finished: 1,
+              counts: q.objectives.map(function (o) {
+                return o.count;
+              })
+            }];
+          })),
+          hp: party.reduce(function (total, id) {
+            return total + inventory.stats(id).hp;
+          }, 0),
+          dp: party.reduce(function (total, id) {
+            return total + inventory.stats(id).dp;
+          }, 0),
+          gold: 0,
+          exp: 0,
+          potion: 0,
+          supplies: {
+            gift: 1
+          },
+          shopSold: {}
+        };
+      }
+      cclegacy._RF.pop();
+    }
+  };
+});
+
 System.register("chunks:///_virtual/potion-bridge.ts", ['cc'], function (exports) {
   var cclegacy;
   return {
@@ -20460,7 +21997,7 @@ System.register("chunks:///_virtual/QuestJournal.ts", ['./rollupPluginModLoBabel
           target: 'village/tavern/knight'
         }),
         mage: _extends({}, talk('mage'), {
-          target: 'undead/mage'
+          target: 'swamp/mage'
         }),
         'inn-report': _extends({}, talk('inn-report'), {
           target: 'village/tavern/report'
@@ -20499,9 +22036,9 @@ System.register("chunks:///_virtual/QuestJournal.ts", ['./rollupPluginModLoBabel
         id: 'mage',
         group: chapter,
         title: '法师的下落',
-        description: '循着村长的线索到亡者之城寻找伊芙。',
+        description: '循着村长的线索到迷雾沼泽寻找伊芙。',
         requires: 'rescue',
-        requiresClear: 'swamp',
+        requiresClear: 'mine',
         accept: questInteractions['chief-mage'],
         turnIn: questInteractions.mage,
         objectives: [_extends({}, questInteractions.mage, {
@@ -20561,13 +22098,18 @@ System.register("chunks:///_virtual/QuestJournal.ts", ['./rollupPluginModLoBabel
         };
       })));
       var QuestJournal = exports('QuestJournal', /*#__PURE__*/function () {
-        function QuestJournal(definitions, saved) {
+        function QuestJournal(definitions, saved, allowRepeats) {
           var _this = this;
           if (definitions === void 0) {
             definitions = questBook;
           }
+          if (allowRepeats === void 0) {
+            allowRepeats = true;
+          }
           this.entries = {};
           this.definitions = void 0;
+          this.allowRepeats = void 0;
+          this.allowRepeats = allowRepeats;
           this.definitions = definitions;
           var _loop = function _loop() {
             var d = _step.value;
@@ -20600,7 +22142,7 @@ System.register("chunks:///_virtual/QuestJournal.ts", ['./rollupPluginModLoBabel
         _proto.canAccept = function canAccept(d, cleared) {
           var _this$entries$d$requi;
           var entry = this.entries[d.id];
-          return !(entry != null && entry.active) && (!(entry != null && entry.finished) || d.repeat) && (!d.requires || !!((_this$entries$d$requi = this.entries[d.requires]) != null && _this$entries$d$requi.finished)) && (!d.requiresClear || !cleared || cleared.has(d.requiresClear));
+          return !(entry != null && entry.active) && (!(entry != null && entry.finished) || d.repeat && this.allowRepeats) && (!d.requires || !!((_this$entries$d$requi = this.entries[d.requires]) != null && _this$entries$d$requi.finished)) && (!d.requiresClear || !cleared || cleared.has(d.requiresClear));
         };
         _proto.hintTargets = function hintTargets(stock, cleared) {
           var _this3 = this;
@@ -21694,7 +23236,10 @@ System.register("chunks:///_virtual/TestBoardRules.ts", ['./rollupPluginModLoBab
         spreadJelly: spreadJelly
       });
       cclegacy._RF.push({}, "5bab63cqzFCfJWgJHljHmAV", "TestBoardRules", undefined);
-      var rockLayout = exports('rockLayout', [[16, 1], [17, 2], [18, 1], [30, 1], [31, 2], [32, 1]]);
+      var defaultRockLayers = exports('defaultRockLayers', 5);
+      var rockLayout = exports('rockLayout', [16, 17, 18, 30, 31, 32].map(function (index) {
+        return [index, defaultRockLayers];
+      }));
       var fractureHoles = exports('fractureHoles', [0, 6, 7, 13, 17, 24, 31, 38, 42, 48, 49, 55]);
       var jellyStarts = exports('jellyStarts', [15, 17, 19, 36, 38, 40]);
       var portalLinks = exports('portalLinks', [[21, 32], [25, 28]]);
@@ -21850,6 +23395,226 @@ System.register("chunks:///_virtual/TownRules.ts", ['./rollupPluginModLoBabelHel
           }),
           hp: town.blessingInDungeon ? Math.min(hp, baseMaxHP) : hp
         };
+      }
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/TradeRules.ts", ['cc', './Inventory.ts', './Party.ts'], function (exports) {
+  var cclegacy, resourceNames, gearUsers, apNames;
+  return {
+    setters: [function (module) {
+      cclegacy = module.cclegacy;
+    }, function (module) {
+      resourceNames = module.resourceNames;
+      gearUsers = module.gearUsers;
+    }, function (module) {
+      apNames = module.apNames;
+    }],
+    execute: function () {
+      exports({
+        gearInfo: gearInfo,
+        priceLines: priceLines,
+        shortage: shortage
+      });
+      cclegacy._RF.push({}, "83d1aCWqFZOSYakywh/4AKY", "TradeRules", undefined);
+      var salePrices = exports('salePrices', {
+        material: {
+          ore: 2,
+          essence: 3
+        },
+        gift: 2,
+        fromGold: function fromGold(gold) {
+          return Math.max(1, Math.floor(gold / 2));
+        }
+      });
+      var costText = exports('costText', function costText(cost) {
+        return Object.entries(cost).map(function (_ref) {
+          var key = _ref[0],
+            n = _ref[1];
+          return n + " " + resourceNames[key];
+        }).join('、');
+      });
+      function shortage(cost, gold, materials) {
+        var missing = {};
+        for (var _i = 0, _Object$entries = Object.entries(cost); _i < _Object$entries.length; _i++) {
+          var _materials$key;
+          var _Object$entries$_i = _Object$entries[_i],
+            key = _Object$entries$_i[0],
+            need = _Object$entries$_i[1];
+          var held = key === 'gold' ? gold : (_materials$key = materials[key]) != null ? _materials$key : 0;
+          if (need > held) missing[key] = need - held;
+        }
+        return costText(missing);
+      }
+      var slotNames = exports('slotNames', {
+        weapon: '主手',
+        offhand: '副手',
+        armor: '防具',
+        core: '饰品'
+      });
+      function gearInfo(item, temper) {
+        var _item$attack, _item$hp, _item$dp, _item$effect;
+        if (temper === void 0) {
+          temper = 0;
+        }
+        var values = [[(_item$attack = item.attack) != null ? _item$attack : 0, 2, item.discipline === 'all' ? 'AP' : apNames[item.discipline]], [(_item$hp = item.hp) != null ? _item$hp : 0, 5, 'HP'], [(_item$dp = item.dp) != null ? _item$dp : 0, 2, 'DP']];
+        var stats = values.map(function (_ref2) {
+          var n = _ref2[0],
+            per = _ref2[1],
+            unit = _ref2[2];
+          return [n + per * temper, unit];
+        }).filter(function (_ref3) {
+          var n = _ref3[0];
+          return n > 0;
+        }).map(function (_ref4) {
+          var n = _ref4[0],
+            unit = _ref4[1];
+          return '+' + n + ' ' + unit;
+        });
+        return [['类型', gearUsers(item) + ' · ' + slotNames[item.slot] + (temper ? ' · 淬炼 +' + temper : '')], ['属性', stats.join('、') || '无数值加成'], ['效果', (_item$effect = item.effect) != null ? _item$effect : '提高佩戴者的对应属性']];
+      }
+      function priceLines(cost, resale) {
+        return [['买价', cost ? costText(cost) : '无单件报价'], ['卖价', resale === undefined ? '不可出售' : resale + ' 金币']];
+      }
+      cclegacy._RF.pop();
+    }
+  };
+});
+
+System.register("chunks:///_virtual/TradeView.ts", ['./rollupPluginModLoBabelHelpers.js', 'cc'], function (exports) {
+  var _createForOfIteratorHelperLoose, cclegacy, Color, UITransform, Label, Sprite, Node;
+  return {
+    setters: [function (module) {
+      _createForOfIteratorHelperLoose = module.createForOfIteratorHelperLoose;
+    }, function (module) {
+      cclegacy = module.cclegacy;
+      Color = module.Color;
+      UITransform = module.UITransform;
+      Label = module.Label;
+      Sprite = module.Sprite;
+      Node = module.Node;
+    }],
+    execute: function () {
+      exports({
+        drawInfoLines: drawInfoLines,
+        drawOffer: drawOffer,
+        drawTradeBag: drawTradeBag,
+        ink: ink,
+        textBlock: textBlock
+      });
+      cclegacy._RF.push({}, "7af53ws/WlJvaYxDkXDi17O", "TradeView", undefined);
+      var tradeSlots = exports('tradeSlots', 9);
+      var lastBagPage = exports('lastBagPage', function lastBagPage(length) {
+        return Math.max(0, Math.ceil(length / tradeSlots) - 1);
+      });
+      function ink(label, hex, bold) {
+        if (bold === void 0) {
+          bold = false;
+        }
+        label.color = Color.fromHEX(new Color(), hex);
+        label.isBold = bold;
+        return label;
+      }
+      function textBlock(label, width, height) {
+        label.node.getComponent(UITransform).setContentSize(width * 2, height * 2);
+        label.enableWrapText = true;
+        label.overflow = Label.Overflow.SHRINK;
+        return label;
+      }
+      function drawTradeBag(ui, parent, player, title, goods, page, turn, select) {
+        var key = player ? '玩家背包' : '商人背包';
+        var bag = ui.box(key, player ? -117 : 117, -110, 226, 426, undefined, parent);
+        ui.art('trade-bag', 0, 0, 226, 426, bag);
+        ink(ui.label(title, 0, 187, 195, 20, bag), '#ffdf9c', true);
+        ink(ui.label(player ? '点选出售' : '点选查看', 0, 161, 194, 14, bag), '#d6c6a2');
+        var _loop = function _loop() {
+          var _ui$art;
+          var offer = goods[page * tradeSlots + i],
+            x = (i % 3 - 1) * 69,
+            y = 94 - Math.floor(i / 3) * 91;
+          var locked = !!offer && !player && !offer.available();
+          var cell = ui.box(offer ? key + ' · ' + offer.name : '空物品格', x, y, 65, 83, offer ? locked ? '#979b90' : '#374239' : '#29332d', bag);
+          if (!offer) return 1; // continue
+          var sprite = (_ui$art = ui.art(offer.icon, 0, 7, 43, 43, cell)) == null ? void 0 : _ui$art.getComponent(Sprite);
+          if (sprite) sprite.grayscale = locked;
+          ink(ui.label(offer.name, 0, -28, 63, 14, cell), locked ? '#373a36' : '#fff1cc');
+          if (offer.badge) {
+            var tag = ui.box('数量或售价', 10, 30, 45, 16, '#24312b', cell);
+            var price = ink(ui.label(offer.badge, 0, 0, 43, 12, tag), player ? '#b8e4c3' : locked ? '#b6baaf' : '#ffffff', !player);
+            price.enableOutline = !player;
+            price.outlineWidth = 4;
+            price.outlineColor = Color.fromHEX(new Color(), '#20251f');
+          }
+          cell.on(Node.EventType.TOUCH_END, function () {
+            return select(offer);
+          });
+        };
+        for (var i = 0; i < tradeSlots; i++) {
+          if (_loop()) continue;
+        }
+        if (!goods.length) ui.label(player ? '背包为空' : '暂无货品', 0, 0, 146, 17, bag);
+        var last = lastBagPage(goods.length);
+        var _loop2 = function _loop2() {
+          var side = _arr[_i];
+          var allowed = page + side >= 0 && page + side <= last;
+          var arrow = ui.box(key + (side < 0 ? '上一页' : '下一页'), side * 66, -178, 53, 43, allowed ? '#695138' : '#30372f', bag);
+          ink(ui.label(side < 0 ? '‹' : '›', 0, 1, 40, 29, arrow), allowed ? '#ffe1a4' : '#807e6f');
+          if (allowed) arrow.on(Node.EventType.TOUCH_END, function () {
+            return turn(page + side);
+          });
+        };
+        for (var _i = 0, _arr = [-1, 1]; _i < _arr.length; _i++) {
+          _loop2();
+        }
+        ink(ui.label(page + 1 + "/" + (last + 1), 0, -178, 52, 16, bag), '#edd8ad');
+      }
+      function drawInfoLines(ui, card, lines, top, affordable) {
+        if (affordable === void 0) {
+          affordable = false;
+        }
+        var y = top;
+        for (var _iterator = _createForOfIteratorHelperLoose(lines), _step; !(_step = _iterator()).done;) {
+          var _step$value = _step.value,
+            key = _step$value[0],
+            _value = _step$value[1];
+          var text = key + '：' + _value;
+          var height = text.length > 21 ? 52 : 34;
+          var label = textBlock(ui.label(text, 0, y - height / 2, 322, 17, card), 322, height);
+          label.horizontalAlign = Label.HorizontalAlign.LEFT;
+          ink(label, key === '缺少' || key === '限制' ? '#ffb393' : key === '买价' || key === '卖价' ? '#ffdd98' : '#f1e7d0');
+          if (affordable && key === '买价') {
+            ink(label, '#ffffff', true);
+            label.enableOutline = true;
+            label.outlineWidth = 4;
+            label.outlineColor = Color.fromHEX(new Color(), '#20251f');
+          }
+          y -= height;
+        }
+        return y;
+      }
+      function drawOffer(ui, overlay, offer, confirm, cancel) {
+        var _ui$art2;
+        var blocked = offer.blocked(),
+          lines = blocked ? [].concat(offer.lines, [blocked]) : offer.lines;
+        var listHeight = lines.reduce(function (sum, _ref) {
+          var key = _ref[0],
+            value = _ref[1];
+          return sum + ((key + '：' + value).length > 21 ? 52 : 34);
+        }, 0);
+        var height = 238 + listHeight,
+          top = height / 2;
+        ui.box('交易边框', 0, 0, 379, height + 6, '#b69159', overlay);
+        var card = ui.box('交易确认卡', 0, 0, 373, height, '#293b32', overlay);
+        ink(ui.label('是否' + offer.verb + '？', 0, top - 28, 325, 21, card), '#f3d69a', true);
+        var sprite = (_ui$art2 = ui.art(offer.icon, 0, top - 85, 62, 62, card)) == null ? void 0 : _ui$art2.getComponent(Sprite);
+        if (sprite) sprite.grayscale = !!blocked;
+        if (blocked) ui.box('受限商品名称底色', 0, top - 136, 222, 36, '#adb0a2', card);
+        ink(ui.label(offer.name, 0, top - 136, 330, 23, card), blocked ? '#373a36' : '#fff1cc', true);
+        drawInfoLines(ui, card, lines, top - 165, !blocked && offer.verb === '购买');
+        ui.button('放弃', -top + 35, cancel, -84, 148, false, card);
+        ui.button(offer.verb, -top + 35, confirm, 84, 148, true, card, !blocked);
       }
       cclegacy._RF.pop();
     }

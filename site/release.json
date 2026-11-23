@@ -1,9 +1,9 @@
 {
-  "version": "20261123-party-1",
-  "bundleSha256": "2e36d516e6b10137fa885e2cd21a5d61c128491c3ce40f47c573112985cbbacf",
-  "build": "Cocos Creator 3.8.8 Web Mobile",
+  "version": "20261123-economy-1",
+  "bundleSha256": "eca957992f9fd5bdee920512601a7410e1cb915a34b775b84176fb80c8360118",
   "stage": [
     480,
     270
-  ]
+  ],
+  "build": "Cocos Creator 3.8.8 Web Mobile"
 }

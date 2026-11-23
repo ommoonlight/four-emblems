@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "groups": {
     "opening": {
-      "bytes": 409918,
+      "bytes": 412976,
       "assets": [
         {
           "name": "advanced-frame",
@@ -159,6 +159,12 @@
           "path": "assets/resources/native/bf/bf6e1b7b-f6a2-5ac6-a9c3-54471a5e8ceb.webp",
           "bytes": 60486,
           "sha256": "21c42faea601c106c3d4c83968e062003e6157d5cc94e3001ac445a18781431d"
+        },
+        {
+          "name": "material-gold",
+          "path": "assets/resources/native/63/63b91f28-9b20-4f1e-b952-e5b20a496fa6.webp",
+          "bytes": 3058,
+          "sha256": "1bc629a352fa04e0e4f224334f3d520d3c80e6f3ad18f0cc4956c0ab3a228b1a"
         }
       ]
     },
@@ -233,7 +239,7 @@
       ]
     },
     "village": {
-      "bytes": 810752,
+      "bytes": 1114464,
       "assets": [
         {
           "name": "d",
@@ -268,32 +274,32 @@
         {
           "name": "gear-blade",
           "path": "assets/resources/native/20/2055c5a1-29c8-4820-99ec-1a88de30b874.webp",
-          "bytes": 5468,
-          "sha256": "365a5891992c5042b7b396a62032786d6550ccd64a43edf5e566a5dc8ca5fd58"
+          "bytes": 10388,
+          "sha256": "a5399147790f7b651ca0ad3b6d5241a37f9c4ce4fd1e2a2d2e7a11b553c625f5"
         },
         {
           "name": "gear-buckler",
           "path": "assets/resources/native/03/03bf8938-94e5-43cd-a784-3aef3b5caece.webp",
-          "bytes": 8272,
-          "sha256": "3a6577e03222c4d1cccc7712e13fd7698e6f4579c7ddf28ccc9569a803095700"
+          "bytes": 12858,
+          "sha256": "9acedf03c3fd555de94eb380ca8ac1d13617524a77774fcd8d5ea42a920046b9"
         },
         {
           "name": "gear-guardcore",
           "path": "assets/resources/native/55/55bf40bc-6bc9-41e5-90f4-9652d37de620.webp",
-          "bytes": 7678,
-          "sha256": "bb2b611d285bf63a868d6bb81ec128f0c7490cab738de87ff03ef19d09ece1c0"
+          "bytes": 11030,
+          "sha256": "41639a732d7bdf7a5b93d5625600c94caf9dad818f11b55687e96ef80722476a"
         },
         {
           "name": "gear-healcore",
           "path": "assets/resources/native/cf/cf3a2de6-9e46-4589-a520-f2096eeb6c7c.webp",
-          "bytes": 7588,
-          "sha256": "8783c839a47d2a6d91031483f0b2b981045ccf8996279eba18e20e59c4a99f92"
+          "bytes": 11706,
+          "sha256": "2717e41750bf15fa6dd2d47b93ebc70d4c17aebc90cdbf565b6d11b7b29b871b"
         },
         {
           "name": "gear-magiccore",
           "path": "assets/resources/native/a1/a1e15809-b456-4d17-b617-607398cea4b9.webp",
-          "bytes": 8072,
-          "sha256": "5f41f35129894203067cd2e709181388255bdb34d426ed051e1d5376864963ad"
+          "bytes": 13146,
+          "sha256": "45d433a2e33b3d9ab1474f3aa5414196252b51daedd72f8e71175ec106cb2379"
         },
         {
           "name": "gear-shield",
@@ -310,8 +316,8 @@
         {
           "name": "gear-swordcore",
           "path": "assets/resources/native/79/790226fd-3740-41bc-8079-2459dfcae5f9.webp",
-          "bytes": 5550,
-          "sha256": "694b87a6f89a049dd11725537bcabf5990431af6c390259cece8b97ff5e53660"
+          "bytes": 10978,
+          "sha256": "c3dfc9481bc04edc46d7523287e1a55a3af0ccf76a74f0a22fce103ee8886624"
         },
         {
           "name": "hero-d",
@@ -408,6 +414,180 @@
           "path": "assets/resources/native/09/09609d55-2cc0-484a-8a7c-fff5c6e67b71.webp",
           "bytes": 78722,
           "sha256": "fc4412522b13925f47069cd2026c17195f42e70bcf348a4693965b509a38c1a6"
+        },
+        {
+          "name": "gear-bow",
+          "path": "assets/resources/native/d7/d752f84b-410f-43b8-93cf-01af3150e3a1.webp",
+          "bytes": 12084,
+          "sha256": "d5865168f83841642e7efe422826e3f70566de1fd220917781e3d00884af0a73"
+        },
+        {
+          "name": "gear-wand",
+          "path": "assets/resources/native/5a/5a40ef71-9ffc-444c-8a59-3c7ff24483bf.webp",
+          "bytes": 8790,
+          "sha256": "322a75efaac4db92127e60af7784dc4531b9f962dbb806fc127ebb6d6589b246"
+        },
+        {
+          "name": "gear-mantle",
+          "path": "assets/resources/native/6c/6c690d3b-3238-430d-abe1-57b08cc666c2.webp",
+          "bytes": 11418,
+          "sha256": "1acf7ff4e772fa0bc28e95ef51a35506ccb5562185c3dfed70aba33630059bb7"
+        },
+        {
+          "name": "gear-focus",
+          "path": "assets/resources/native/4b/4b9a497f-609c-4b35-aff0-c5c1f0bc0546.webp",
+          "bytes": 11420,
+          "sha256": "3c25aaf969163fce89cd50e9295e3af669ad1627db5ada3e64941ca174e8ee2c"
+        },
+        {
+          "name": "gear-quiver",
+          "path": "assets/resources/native/67/675043e5-2b54-441e-8fbf-b218d16dee79.webp",
+          "bytes": 10048,
+          "sha256": "65a869e928e1efa80fe2336f94d5458415e30145c639bd798e65b88bb44e8eda"
+        },
+        {
+          "name": "gear-charm",
+          "path": "assets/resources/native/ec/eca29053-57a9-41ae-b444-21d750329b0c.webp",
+          "bytes": 12080,
+          "sha256": "cd549a9a8dcf473e9207d102b3f273ad7dfcf71c4cdf869d9eab588e73ebfad6"
+        },
+        {
+          "name": "gear-veil",
+          "path": "assets/resources/native/9f/9f354195-e0ba-437e-a3ac-152fc7785aa5.webp",
+          "bytes": 12354,
+          "sha256": "19819d0a874c0b1bba6151b11cb386084e193663c9948ffac78273feb15e19ee"
+        },
+        {
+          "name": "gear-nightglass",
+          "path": "assets/resources/native/a3/a31ffd33-625e-40bc-b268-36e421b73aa5.webp",
+          "bytes": 8682,
+          "sha256": "c64300edf2f7fd1673135915f23917095c53c813081c10780e0ea4a3ff58ba42"
+        },
+        {
+          "name": "gear-ward",
+          "path": "assets/resources/native/97/974a3deb-46a6-4fce-a084-c40c752b614e.webp",
+          "bytes": 11380,
+          "sha256": "5549a1230d342cfcbeca6b42e51cc72cb72c5ee5fc6de745f5c9b2ad6baa0d42"
+        },
+        {
+          "name": "gear-bronze-s",
+          "path": "assets/resources/native/ad/adf12541-81df-4b31-8e65-796d38e6f594.webp",
+          "bytes": 8184,
+          "sha256": "4e5666b9e771d3c6592a99ba68bb758059d2a6b48467221795f4c7b0eabb1b1e"
+        },
+        {
+          "name": "gear-bronze-d",
+          "path": "assets/resources/native/38/3888d6f3-c8ad-4a4b-b613-11541f9e895d.webp",
+          "bytes": 10108,
+          "sha256": "ac65ddb36169d7d7ab7841b25a2f26a955c3c13d7cba2cb5cab3eb305d38a53a"
+        },
+        {
+          "name": "gear-bronze-m",
+          "path": "assets/resources/native/31/312f4c7f-3ff6-4bc2-8a0f-dad4ebe64dac.webp",
+          "bytes": 8450,
+          "sha256": "0dc0c072ea9434aab3937900417c93a67a78c51d25d8b988d81fd67fa7cbfdfa"
+        },
+        {
+          "name": "gear-bronze-h",
+          "path": "assets/resources/native/b5/b5e9070f-d61e-4a06-a0be-2185b951e69c.webp",
+          "bytes": 8826,
+          "sha256": "eb869bb0ae7c4255b2530315849f4b6274b80a3b97a281ae7fa6e450d4f1b91a"
+        },
+        {
+          "name": "gear-bronze-bow",
+          "path": "assets/resources/native/2f/2ff10f35-34cb-4f2c-8ec8-7c6e0b1c61bf.webp",
+          "bytes": 10772,
+          "sha256": "e4579f8c5b39a1051c72871962a773c99b22d68760b8053f71632535771f34d6"
+        },
+        {
+          "name": "gear-bell-s",
+          "path": "assets/resources/native/c4/c4c96835-b89a-49b0-973d-fd81a5a35403.webp",
+          "bytes": 8844,
+          "sha256": "4c37b77caf15a1a43d358c4550c7d6e81bc7bb273c0fcff3b80e03d8486ffca2"
+        },
+        {
+          "name": "gear-bell-d",
+          "path": "assets/resources/native/5c/5c6dabe6-151c-43e7-aaab-0389237a8bf5.webp",
+          "bytes": 9982,
+          "sha256": "470f70e13d0d3c4b953cb0857bea69bfcb412abd595ce04227a00461e825ca60"
+        },
+        {
+          "name": "gear-bell-m",
+          "path": "assets/resources/native/55/55bdec45-20f2-42f9-90a8-552aec554d4f.webp",
+          "bytes": 8352,
+          "sha256": "5687911335f2683242796674f71b9beaec7ba9fb1b102dc7c704b00047573d0e"
+        },
+        {
+          "name": "gear-bell-h",
+          "path": "assets/resources/native/d2/d263ef70-fba1-45c1-bece-72a2905f4b65.webp",
+          "bytes": 8930,
+          "sha256": "f3a3ea1d8e6e8d4ad016b959e97ddc4e86bf9267d015285b39396bd245516ffe"
+        },
+        {
+          "name": "gear-bell-bow",
+          "path": "assets/resources/native/e9/e9490b9e-b645-45d0-a10c-3684b5067348.webp",
+          "bytes": 11202,
+          "sha256": "dfc9d2c113777d3a5da0f03c1f25540b9bd01f354ed97dffcf9f8c494b1a02a9"
+        },
+        {
+          "name": "gear-sun-s",
+          "path": "assets/resources/native/2b/2b757bc5-7b9d-4c1d-b92d-537888fdda57.webp",
+          "bytes": 9918,
+          "sha256": "62feaaebd7ad0861834f172c2f8eb1a1f20e4c4af9057737cbc12820ad871c6d"
+        },
+        {
+          "name": "gear-sun-d",
+          "path": "assets/resources/native/dd/dda3b600-ab3c-49f2-9cf9-579c92c29b7d.webp",
+          "bytes": 10714,
+          "sha256": "27a4626867c2d744c113f7b1c12cf26ff3e2e9efbae91c797685308540aad880"
+        },
+        {
+          "name": "gear-sun-m",
+          "path": "assets/resources/native/d5/d5dcdef9-0652-4d0f-81b6-0b79e7cd2781.webp",
+          "bytes": 9108,
+          "sha256": "a0850d398097427b84aab568c64feb072e36fc05e1089464ac4acbb7f98a040a"
+        },
+        {
+          "name": "gear-sun-h",
+          "path": "assets/resources/native/76/76459b78-fbda-45a1-b139-2a4be3a799c7.webp",
+          "bytes": 10096,
+          "sha256": "966f42926a8ea3817b4e68ed19e83495de761194c3f3001ee5dbf57231e9b41f"
+        },
+        {
+          "name": "gear-sun-bow",
+          "path": "assets/resources/native/a5/a5ee90bf-b24e-46b1-a440-46f891d9c17c.webp",
+          "bytes": 11548,
+          "sha256": "af5dd74939f3fa2071c941e6d3a0d8914d0599314e21d214d54f92a565446c90"
+        },
+        {
+          "name": "material-herb",
+          "path": "assets/resources/native/9d/9dc98abd-7d9b-48d5-bda3-a47ad9f82855.webp",
+          "bytes": 4090,
+          "sha256": "9028c1bd1dc4060c2c92b7b0b21f7a6e3b385278c25ec4e4084fcc823ead722a"
+        },
+        {
+          "name": "material-ore",
+          "path": "assets/resources/native/a1/a1f1f283-5a5e-4807-88de-69435889cd67.webp",
+          "bytes": 6378,
+          "sha256": "f145fecec27583a013f279aedf69ca39a3d7d3e0408324cbe900441afa39ab73"
+        },
+        {
+          "name": "material-essence",
+          "path": "assets/resources/native/99/99b752d3-40db-4418-bb95-68a7d7a176e6.webp",
+          "bytes": 8056,
+          "sha256": "553d64e500ec818b20da2384dbb72fffb81375e16d84e17eec23a1a662907423"
+        },
+        {
+          "name": "material-crystal",
+          "path": "assets/resources/native/56/568c4fc8-3ff4-41cc-908e-240c1290fb75.webp",
+          "bytes": 4400,
+          "sha256": "fce415a5d19734dd8d8ba5dd01a2bd325f145e47d2540210e29fe1938f362142"
+        },
+        {
+          "name": "trade-bag",
+          "path": "assets/resources/native/75/753ef1a4-f22b-47c6-a36c-d3f4e31ed631.webp",
+          "bytes": 10020,
+          "sha256": "211c9f8506c7e6a94b6d8d577a546d24704fd5c5e5308a58182443dd70f6f461"
         }
       ]
     },
@@ -689,7 +869,7 @@
       ]
     },
     "goblin": {
-      "bytes": 327770,
+      "bytes": 269224,
       "assets": [
         {
           "name": "fort-boar",
@@ -744,12 +924,6 @@
           "path": "assets/resources/native/9f/9f24a5a3-af38-583f-b658-6a07422ad346.webp",
           "bytes": 28168,
           "sha256": "f4a8d320ae275f3f500e9e22f5e755a77ededcd9d135c14aab0a47836e434804"
-        },
-        {
-          "name": "goblin-reel",
-          "path": "assets/resources/native/db/db70fb4d-8d8e-5094-8c0e-a9a1214ca60f.webp",
-          "bytes": 58546,
-          "sha256": "31c664b7532abd255d5a05756ecc8400e83583afb39cc75479d6b99ea563a5d9"
         },
         {
           "name": "corridor-goblin",

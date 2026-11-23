@@ -115,18 +115,5 @@
       540
     ],
     "resized": true
-  },
-  {
-    "name": "goblin-reel",
-    "role": "rpg",
-    "before": [
-      2172,
-      724
-    ],
-    "after": [
-      1620,
-      540
-    ],
-    "resized": true
   }
 ]

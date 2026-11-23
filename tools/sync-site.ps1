@@ -1,6 +1,7 @@
-param(
+﻿param(
     [string]$GameRoot = 'D:\Project\Cocos\HX',
-    [switch]$Rebuild
+    [switch]$Rebuild,
+    [switch]$Playtest
 )
 $ErrorActionPreference = 'Stop'
 $repoRoot = Split-Path $PSScriptRoot -Parent
@@ -61,6 +62,7 @@ if ($LASTEXITCODE -ne 0) { throw 'Content delivery manifest failed' }
 
 Write-Output ""
 $html = Get-Content $indexFile -Raw
+if ($Playtest) { $html = $html.Replace('</head>', '<meta name="four-emblems-playtest" content="1"></head>') }
 $boot = '<script src="/boot.js?v=' + $releaseVersion + '"></script>'
 if (-not $html.Contains('<!-- game-brand-end -->')) { throw 'Missing branded startup shell' }
 $html = $html.Replace('<!-- game-brand-end -->', '<!-- game-brand-end -->' + $boot)
