@@ -8,7 +8,6 @@
         "03bf8938-94e5-43cd-a784-3aef3b5caece@6c48a",
         "053f5c58-c62b-5890-add4-4243b6324f85",
         "053f5c58-c62b-5890-add4-4243b6324f85@6c48a",
-        "075713abb",
         "07dcd9be-38b7-4c8e-bf0b-399a275ca36b",
         "07dcd9be-38b7-4c8e-bf0b-399a275ca36b@6c48a",
         "08314d70-4bfc-41c9-85fb-2a1d0c490e27",
@@ -21,6 +20,7 @@
         "09b61abb-2093-5175-802a-10aebbe29d78",
         "0a56eeac-e951-43ef-8045-bae5185c3be5",
         "0a56eeac-e951-43ef-8045-bae5185c3be5@6c48a",
+        "0b0711c33",
         "0b2eb066-474a-53da-8744-755091735655",
         "0b2eb066-474a-53da-8744-755091735655@6c48a",
         "0c01e240-cfa0-4778-a5c9-e5f7d39bf87c",
@@ -175,8 +175,6 @@
         "55ca03c2-f4f7-4bcf-93d7-7a3adbea0c43",
         "5642e979-baf4-4194-b671-6c2213e45f99",
         "5642e979-baf4-4194-b671-6c2213e45f99@6c48a",
-        "568c4fc8-3ff4-41cc-908e-240c1290fb75",
-        "568c4fc8-3ff4-41cc-908e-240c1290fb75@6c48a",
         "5690344c-3ec5-4d08-b399-c5e246c6daa4",
         "5690344c-3ec5-4d08-b399-c5e246c6daa4@6c48a",
         "5a138e5f-63c1-4c87-ae53-d04f77f9eb2e",
@@ -321,8 +319,6 @@
         "9a1f3407-59a6-556a-bb83-550974971c78@6c48a",
         "9bb1e362-7469-5429-ba09-535110263481",
         "9bb1e362-7469-5429-ba09-535110263481@6c48a",
-        "9dc98abd-7d9b-48d5-bda3-a47ad9f82855",
-        "9dc98abd-7d9b-48d5-bda3-a47ad9f82855@6c48a",
         "9e7dfaa7-423a-402c-a14d-1d6e542400bf",
         "9e7dfaa7-423a-402c-a14d-1d6e542400bf@6c48a",
         "9f24a5a3-af38-583f-b658-6a07422ad346",
@@ -1670,16 +1666,6 @@
             "cc.Texture2D",
             1
         ],
-        "568c4fc8-3ff4-41cc-908e-240c1290fb75": [
-            "art/material-crystal",
-            "cc.ImageAsset",
-            1
-        ],
-        "568c4fc8-3ff4-41cc-908e-240c1290fb75@6c48a": [
-            "art/material-crystal/texture",
-            "cc.Texture2D",
-            1
-        ],
         "99b752d3-40db-4418-bb95-68a7d7a176e6": [
             "art/material-essence",
             "cc.ImageAsset",
@@ -1697,16 +1683,6 @@
         ],
         "63b91f28-9b20-4f1e-b952-e5b20a496fa6@6c48a": [
             "art/material-gold/texture",
-            "cc.Texture2D",
-            1
-        ],
-        "9dc98abd-7d9b-48d5-bda3-a47ad9f82855": [
-            "art/material-herb",
-            "cc.ImageAsset",
-            1
-        ],
-        "9dc98abd-7d9b-48d5-bda3-a47ad9f82855@6c48a": [
-            "art/material-herb/texture",
             "cc.Texture2D",
             1
         ],
@@ -3058,7 +3034,7 @@
     },
     "scenes": {},
     "packs": {
-        "075713abb": [
+        "0b0711c33": [
             "0a56eeac-e951-43ef-8045-bae5185c3be5@6c48a",
             "0b2eb066-474a-53da-8744-755091735655@6c48a",
             "0c01e240-cfa0-4778-a5c9-e5f7d39bf87c@6c48a",
@@ -3129,7 +3105,6 @@
             "08f30970-1f01-5574-ae1f-cef8e05f25ee@6c48a",
             "9a1f3407-59a6-556a-bb83-550974971c78@6c48a",
             "9bb1e362-7469-5429-ba09-535110263481@6c48a",
-            "9dc98abd-7d9b-48d5-bda3-a47ad9f82855@6c48a",
             "9e7dfaa7-423a-402c-a14d-1d6e542400bf@6c48a",
             "9f24a5a3-af38-583f-b658-6a07422ad346@6c48a",
             "9f354195-e0ba-437e-a3ac-152fc7785aa5@6c48a",
@@ -3170,7 +3145,6 @@
             "328fa704-0849-5637-af87-5623b6568e46@6c48a",
             "336da0ad-5f03-4166-ac2a-45da6665f7ff@6c48a",
             "387a43b8-d9fa-4348-8b7e-54f78eb298a4@6c48a",
-            "568c4fc8-3ff4-41cc-908e-240c1290fb75@6c48a",
             "607bd360-1772-5823-88d7-2766bd4883ea@6c48a",
             "689b32ad-fd5b-52c7-af47-ae438287f41c@6c48a",
             "753ef1a4-f22b-47c6-a36c-d3f4e31ed631@6c48a",

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "groups": {
     "opening": {
-      "bytes": 412976,
+      "bytes": 565612,
       "assets": [
         {
           "name": "advanced-frame",
@@ -163,8 +163,8 @@
         {
           "name": "material-gold",
           "path": "assets/resources/native/63/63b91f28-9b20-4f1e-b952-e5b20a496fa6.webp",
-          "bytes": 3058,
-          "sha256": "1bc629a352fa04e0e4f224334f3d520d3c80e6f3ad18f0cc4956c0ab3a228b1a"
+          "bytes": 155694,
+          "sha256": "f263a5de642836c685abb33b500f7fd6d208154f970c92ea57892ca28a535e33"
         }
       ]
     },
@@ -239,7 +239,7 @@
       ]
     },
     "village": {
-      "bytes": 1114464,
+      "bytes": 1105974,
       "assets": [
         {
           "name": "d",
@@ -560,12 +560,6 @@
           "sha256": "af5dd74939f3fa2071c941e6d3a0d8914d0599314e21d214d54f92a565446c90"
         },
         {
-          "name": "material-herb",
-          "path": "assets/resources/native/9d/9dc98abd-7d9b-48d5-bda3-a47ad9f82855.webp",
-          "bytes": 4090,
-          "sha256": "9028c1bd1dc4060c2c92b7b0b21f7a6e3b385278c25ec4e4084fcc823ead722a"
-        },
-        {
           "name": "material-ore",
           "path": "assets/resources/native/a1/a1f1f283-5a5e-4807-88de-69435889cd67.webp",
           "bytes": 6378,
@@ -576,12 +570,6 @@
           "path": "assets/resources/native/99/99b752d3-40db-4418-bb95-68a7d7a176e6.webp",
           "bytes": 8056,
           "sha256": "553d64e500ec818b20da2384dbb72fffb81375e16d84e17eec23a1a662907423"
-        },
-        {
-          "name": "material-crystal",
-          "path": "assets/resources/native/56/568c4fc8-3ff4-41cc-908e-240c1290fb75.webp",
-          "bytes": 4400,
-          "sha256": "fce415a5d19734dd8d8ba5dd01a2bd325f145e47d2540210e29fe1938f362142"
         },
         {
           "name": "trade-bag",
