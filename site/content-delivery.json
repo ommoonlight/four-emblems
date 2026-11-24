@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "groups": {
     "opening": {
-      "bytes": 565612,
+      "bytes": 367896,
       "assets": [
         {
           "name": "advanced-frame",
@@ -137,45 +137,39 @@
           "sha256": "5217b6d5f40fccf93f36ce72c56a3ad771f449a134cdeb50fa87d7885200a161"
         },
         {
-          "name": "trial-ui-audio",
-          "path": "assets/resources/native/d9/d9c12dd1-e8c4-58c4-a282-79807610e303.webp",
-          "bytes": 444,
-          "sha256": "9115784e4c0b0964c705d79f5aa27f68de85d3789b00a752a5509aa752b0454a"
-        },
-        {
-          "name": "trial-ui-progress-fill",
-          "path": "assets/resources/native/f9/f9d9fa4c-de57-5b99-b657-26d82d19ce67.webp",
-          "bytes": 770,
-          "sha256": "c655bb0b4a8c5eb4472ee1050912bdc713271a2cfdf44dfa9f98a0476cfa72f2"
-        },
-        {
-          "name": "trial-ui-progress-frame",
-          "path": "assets/resources/native/6d/6d5485e8-474d-59c3-a9a1-125b0eff681d.webp",
-          "bytes": 1096,
-          "sha256": "cc8d92f874344894403f3bafefd4b8adc060ab03336bcb4599b7d163403f9bda"
-        },
-        {
           "name": "corridor-forest",
           "path": "assets/resources/native/bf/bf6e1b7b-f6a2-5ac6-a9c3-54471a5e8ceb.webp",
-          "bytes": 60486,
-          "sha256": "21c42faea601c106c3d4c83968e062003e6157d5cc94e3001ac445a18781431d"
+          "bytes": 84,
+          "sha256": "0146a1b3f35a5e95e16b67b88bb854cb3919148d5c6f4bd26393a0a2dbaf215e"
         },
         {
           "name": "material-gold",
           "path": "assets/resources/native/63/63b91f28-9b20-4f1e-b952-e5b20a496fa6.webp",
-          "bytes": 155694,
-          "sha256": "f263a5de642836c685abb33b500f7fd6d208154f970c92ea57892ca28a535e33"
+          "bytes": 20510,
+          "sha256": "306b13a00d7b86cf1a03a359d51d1526bc7b0aca5d3a6863f1fddd543a41cfd4"
+        },
+        {
+          "name": "corridor-forest-middle",
+          "path": "assets/resources/native/84/84dabf25-f955-48c9-b937-4be262535a60.webp",
+          "bytes": 90,
+          "sha256": "affeb920d28670c514d9caadd63690a236c1999fb5c4a4f96adac15057baa549"
+        },
+        {
+          "name": "corridor-forest-near",
+          "path": "assets/resources/native/a4/a45d8d47-7345-428a-b491-eced95b1418d.webp",
+          "bytes": 90,
+          "sha256": "ef3d5795131c7be9d5d9e61d70153dfe862ebdccfc62481c6b284da518b707e5"
         }
       ]
     },
     "tutorial": {
-      "bytes": 213132,
+      "bytes": 144718,
       "assets": [
         {
           "name": "boss",
           "path": "assets/resources/native/0e/0ec78096-a38c-4641-8c07-29566d452be2.webp",
-          "bytes": 103212,
-          "sha256": "72e8c7331b76b3f93598188634bc139ccd2bf1669ae008bc2d86381a0d5c773b"
+          "bytes": 34798,
+          "sha256": "2a760fb68c2ee57c57beddab6852a9a6f32d29a8f5e52799eecbf04e77628512"
         },
         {
           "name": "forest-bug",
@@ -222,19 +216,13 @@
       ]
     },
     "map": {
-      "bytes": 115992,
+      "bytes": 7518,
       "assets": [
         {
           "name": "map-parchment",
           "path": "assets/resources/native/a8/a80e926e-c400-4793-b113-8aee764b221d.webp",
           "bytes": 7518,
           "sha256": "f4466c5a2506eb69c4011b13d0ffd7e96d9d0ca8f3b2d595ac17ec3254c6a716"
-        },
-        {
-          "name": "world-map-background",
-          "path": "assets/resources/native/7c/7cb97616-45e4-5754-9f1c-b88fc36f4021.webp",
-          "bytes": 108474,
-          "sha256": "17513ca58079685bb1efa76252b3895800f0535e90d4c8056b1b1cccd9cea5fa"
         }
       ]
     },
@@ -580,14 +568,8 @@
       ]
     },
     "forest": {
-      "bytes": 86592,
+      "bytes": 69354,
       "assets": [
-        {
-          "name": "boar",
-          "path": "assets/resources/native/1a/1a00c315-ebd2-401d-9258-0bffe4de6876.webp",
-          "bytes": 17238,
-          "sha256": "7d7de32f2879bc9fd3246eb0a9acfd55035d125a607f510ec7b11ef320d11605"
-        },
         {
           "name": "forest-bear",
           "path": "assets/resources/native/95/95c9cd02-a0fd-4ad4-a57a-b0a483cc406b.webp",
@@ -609,42 +591,54 @@
       ]
     },
     "mine": {
-      "bytes": 196606,
+      "bytes": 110640,
       "assets": [
         {
           "name": "bat",
           "path": "assets/resources/native/12/1225824a-6e75-408d-b4cf-059cc262251d.webp",
-          "bytes": 10308,
-          "sha256": "b4140394f3bc72242c6fe1a91bae62277b307bd3be451015f98ea8d5728afdaf"
+          "bytes": 31508,
+          "sha256": "a195746f54e07ffd953613c834e6f686dd1ad8c5e0eba3c40eac70f5128a1fd6"
         },
         {
           "name": "beetle",
           "path": "assets/resources/native/aa/aa1076ef-e14b-4a7f-aac1-39012805b3dc.webp",
-          "bytes": 13396,
-          "sha256": "0137dc874cdfcc693e30d27d355ff6dd6ff1c2ef57a8eed6bed66178c97d9ed2"
+          "bytes": 39090,
+          "sha256": "558886707d98c7bd9a360e0fe35456ac4d9b157fcc5ece1d5886882cfe237bdd"
         },
         {
           "name": "golem",
           "path": "assets/resources/native/07/07dcd9be-38b7-4c8e-bf0b-399a275ca36b.webp",
-          "bytes": 120380,
-          "sha256": "e827cd9272af998f48865ed243d80d99046dce547bd5ea332c84c83173013c46"
+          "bytes": 39812,
+          "sha256": "1aa893ef8d19415ac44b7892f579bc851874235e5de89434c1a7689519d3a7d0"
         },
         {
           "name": "corridor-mine",
           "path": "assets/resources/native/ce/ce670ed8-e4ed-57c0-8d14-eaed9e48288a.webp",
-          "bytes": 52522,
-          "sha256": "49340bd27b5ebf7847adab3283ee91e0fa324ee761ac4b8a377294dd9cc4e358"
+          "bytes": 76,
+          "sha256": "ef727dfcebac4dd09e5fd46d83b9ef4950c4b174ae86b8c8bb53630af07a027d"
+        },
+        {
+          "name": "corridor-mine-middle",
+          "path": "assets/resources/native/51/51d1576d-124e-45af-a635-209f569b7134.webp",
+          "bytes": 74,
+          "sha256": "1094fdfa9c394909e106501a63537f48e186f68ba44858c6c5d18917f26a505e"
+        },
+        {
+          "name": "corridor-mine-near",
+          "path": "assets/resources/native/77/77afbd94-a22f-4262-b5dd-0fb5a350ec22.webp",
+          "bytes": 80,
+          "sha256": "55d33321719435e132065c68210a89225a1d50810aafdfb75d939e88a1fd7779"
         }
       ]
     },
     "swamp": {
-      "bytes": 276224,
+      "bytes": 145610,
       "assets": [
         {
           "name": "frog",
           "path": "assets/resources/native/10/10f23d81-a2a5-49c6-b4b3-900ba2d094a5.webp",
-          "bytes": 79876,
-          "sha256": "540ef296b0d776c0f88a46edfd46fb139a6639a3a468c2e8f146340ae3333256"
+          "bytes": 27386,
+          "sha256": "8dcf8f87f68f0227754d4cd3a9abce8fd939023a43c735f52ca4a7fc4ad9070a"
         },
         {
           "name": "murloc-axe",
@@ -673,25 +667,37 @@
         {
           "name": "corridor-swamp",
           "path": "assets/resources/native/3e/3ecb816e-9f91-5b56-9858-ac5113b2e7c9.webp",
-          "bytes": 78368,
-          "sha256": "7192059d45f5d0953f8de8ea325daca25e62ed09d4b2890c88ea3bb773bdf885"
+          "bytes": 82,
+          "sha256": "ad15f72f61f6702afcf0fd3db53bf5f4f1d275face7a9cb7b9c897a599d9c38a"
+        },
+        {
+          "name": "corridor-swamp-middle",
+          "path": "assets/resources/native/bc/bc6cba28-ed1d-46dd-84f6-d99077b5eb01.webp",
+          "bytes": 84,
+          "sha256": "b60731adca9a9a59e4b9bac0c81763bb65305a680e11403066df2535a9c64f6d"
+        },
+        {
+          "name": "corridor-swamp-near",
+          "path": "assets/resources/native/ea/eaa7f008-b2ca-4c16-8e66-a24e7849e04b.webp",
+          "bytes": 78,
+          "sha256": "962dfadc16946573e3d8ea879a57b338572be0b15c1ed41373e3840c2a7a5fe1"
         }
       ]
     },
     "tower": {
-      "bytes": 812540,
+      "bytes": 434420,
       "assets": [
         {
           "name": "dragon",
           "path": "assets/resources/native/28/28a213d2-33ab-4335-a4eb-052711c7c571.webp",
-          "bytes": 133698,
-          "sha256": "5e46041c3bff5fb26b324001b0997f86fa2e93f210e2f836fbe9d4476e82638e"
+          "bytes": 45628,
+          "sha256": "2b45cfbd556fa56eed0662c96792723f3b28456cf26c2b674db7d68c0af32647"
         },
         {
           "name": "ghost",
           "path": "assets/resources/native/74/74815c62-e9e8-49b0-aad1-006b71ac4881.webp",
-          "bytes": 67574,
-          "sha256": "98ffed2ad7205cd5c4c2609cb4e6f369044b7b46c07e0fd9d76bc37849c658dd"
+          "bytes": 30510,
+          "sha256": "7f56444de329d032bde225329f642d9ac4e602a9cb7c93a8bcc037d8216ed30e"
         },
         {
           "name": "hero-m",
@@ -702,14 +708,14 @@
         {
           "name": "knight",
           "path": "assets/resources/native/15/158e5a22-d775-4e03-bd2d-459880a75821.webp",
-          "bytes": 106878,
-          "sha256": "866d7dd0b8e73ebe2d73cb8ebd045ab9ef0d1c6519057c009ccada417d51598c"
+          "bytes": 36500,
+          "sha256": "9704f45fb47d5c4713bf939847f4bb9446e791312adfa7b7fde0f6afe2b3f728"
         },
         {
           "name": "lich",
           "path": "assets/resources/native/49/4996f4b8-117e-48cd-8e42-49dd489b5f95.webp",
-          "bytes": 125484,
-          "sha256": "c5ce02ea4332889b76ec6b01673b54256c813cdfdbec670285fdeddedf31e3d1"
+          "bytes": 43250,
+          "sha256": "34d406f6cd8a68ef877219ae426f66d15fa513ee5b653b5b9ab9c09aa8b3761b"
         },
         {
           "name": "m",
@@ -720,8 +726,8 @@
         {
           "name": "wizard",
           "path": "assets/resources/native/9e/9e7dfaa7-423a-402c-a14d-1d6e542400bf.webp",
-          "bytes": 109396,
-          "sha256": "f135c270c7567f4f479283635afc4fbf818f132a80cb0973f13ccbdb960ce9ad"
+          "bytes": 37432,
+          "sha256": "5de755c05172431bfb96817e3f29bbd094360708fcd289beb81759505a75a66f"
         },
         {
           "name": "spire-oracle",
@@ -780,13 +786,25 @@
         {
           "name": "corridor-tower",
           "path": "assets/resources/native/60/607bd360-1772-5823-88d7-2766bd4883ea.webp",
-          "bytes": 28656,
-          "sha256": "54c733670ab8fe3a3596a90c7656fa2ea9575dac26536cad12080340848cd370"
+          "bytes": 78,
+          "sha256": "5d7d48f7a16a39d7a559ab26147a581484746a8445997ba4f240d65e78c49c9c"
+        },
+        {
+          "name": "corridor-tower-middle",
+          "path": "assets/resources/native/45/45cb06b9-d44b-49de-b73c-d077ad95421e.webp",
+          "bytes": 82,
+          "sha256": "556f9a0441896baaa3d758a2c19e6a7da0fdde62541362c40903e3682b9bf32f"
+        },
+        {
+          "name": "corridor-tower-near",
+          "path": "assets/resources/native/d5/d5de309d-9652-466d-b1c7-9bd9e51d0765.webp",
+          "bytes": 86,
+          "sha256": "02687ee88a576d01fc7529ec408918f8e30a868e31fa638150247845e9ec5277"
         }
       ]
     },
     "undead": {
-      "bytes": 393306,
+      "bytes": 239454,
       "assets": [
         {
           "name": "bone-archer",
@@ -843,21 +861,27 @@
           "sha256": "445afb53b239efa8c4f9a7d9d07c935722bd7c1a3ec0814bf0c7a78f766479fc"
         },
         {
-          "name": "undead-reel",
-          "path": "assets/resources/native/d7/d76e5ce9-04c2-5087-8b62-b68c4b14d95c.webp",
-          "bytes": 94764,
-          "sha256": "255dfd801e1b68d500c0a24a95cae283a46eeff455b26120481ae00141a84096"
-        },
-        {
           "name": "corridor-undead",
           "path": "assets/resources/native/5b/5baf3b83-4243-5ad2-9f34-470f9231b2e9.webp",
-          "bytes": 59310,
-          "sha256": "d2de81f2075151c187763ffeb778e5f4ed11b356477e9f6ed8b421676319a4ea"
+          "bytes": 74,
+          "sha256": "dabc95ab40d1203c379f30d0226689f6324be7a55d2fbd1c80f82445ae7a03c3"
+        },
+        {
+          "name": "corridor-undead-middle",
+          "path": "assets/resources/native/09/0962a582-261e-4a4d-b3dc-56f7f4e3d16d.webp",
+          "bytes": 72,
+          "sha256": "1875baba3755a66dab7649b654c6d3ce17a87f0f52dd572403a7d3c7e1829a40"
+        },
+        {
+          "name": "corridor-undead-near",
+          "path": "assets/resources/native/b2/b2178cd1-c2dc-4877-962f-bf98240e158d.webp",
+          "bytes": 76,
+          "sha256": "41c5ab2d0e821c37222f3fe606fdde2082da5827cb8df1490a92e77260136b8d"
         }
       ]
     },
     "goblin": {
-      "bytes": 269224,
+      "bytes": 218368,
       "assets": [
         {
           "name": "fort-boar",
@@ -916,13 +940,25 @@
         {
           "name": "corridor-goblin",
           "path": "assets/resources/native/ab/abacd813-cfb2-5d40-8fd7-b7ac29839911.webp",
-          "bytes": 51118,
-          "sha256": "b2a5f2d45f8fbe25cd5ddfd449da2865e1eb5ddcd546d5f19ec6edf1c44e4837"
+          "bytes": 84,
+          "sha256": "1a6dde946b166088717f0ee304ed3d26bb1707d02c31d9de2fd4217f37c663b5"
+        },
+        {
+          "name": "corridor-goblin-middle",
+          "path": "assets/resources/native/5e/5ee5115e-5e36-48a0-813d-3294904e5b9d.webp",
+          "bytes": 88,
+          "sha256": "bff946e66f4ff9823dbd8f855b9f5c950079157ab16657929084e6cb3d822c77"
+        },
+        {
+          "name": "corridor-goblin-near",
+          "path": "assets/resources/native/d4/d49a5440-63e1-4f45-a048-4ea1ef432001.webp",
+          "bytes": 90,
+          "sha256": "a5034ac271ee39a15766b5ec4d61694b84d600c0dca42944b694bd23388feb95"
         }
       ]
     },
     "desert": {
-      "bytes": 379408,
+      "bytes": 291296,
       "assets": [
         {
           "name": "sand-scout",
@@ -985,16 +1021,22 @@
           "sha256": "4dd60991351809d9bf0518150fc74e465f31ef191d6f6560173dda2e365a9c6f"
         },
         {
-          "name": "desert-reel",
-          "path": "assets/resources/native/6a/6aece6e8-de6f-5056-8224-c2d16e54fcb3.webp",
-          "bytes": 44956,
-          "sha256": "99b43418ea7ff80dba526c060a845d55c1b1e2e8fe808f680b20fcfd35b30025"
-        },
-        {
           "name": "corridor-desert",
           "path": "assets/resources/native/1f/1f1a991c-1f37-5a16-95d4-d1f81cabf041.webp",
-          "bytes": 43424,
-          "sha256": "b4006b565dba657148e48c0545771269087093bd9496033174a77eb1f6388943"
+          "bytes": 84,
+          "sha256": "06b749a6d51b4ca9a4c9b3b2bf53e248cbbc4cb9284c96281b6c73c121c0d8c2"
+        },
+        {
+          "name": "corridor-desert-middle",
+          "path": "assets/resources/native/db/db3e9e7b-272a-453a-9854-aed36625e063.webp",
+          "bytes": 92,
+          "sha256": "77698572e6da517e3bc4c01544991b7fd3ef070af36691c28e2ff911fc956575"
+        },
+        {
+          "name": "corridor-desert-near",
+          "path": "assets/resources/native/75/75d913d7-b530-4d68-8af1-a5b60cfc2517.webp",
+          "bytes": 92,
+          "sha256": "48ac827c61315c5e26a6a43caee2a636a104689e554d1b55b0221aba5192dec1"
         }
       ]
     },

@@ -1,16 +1,18 @@
 ﻿param(
     [string]$GameRoot = 'D:\Project\Cocos\HX',
     [switch]$Rebuild,
+    [switch]$Release,
     [switch]$Playtest
 )
 $ErrorActionPreference = 'Stop'
 $repoRoot = Split-Path $PSScriptRoot -Parent
 $siteDir  = Join-Path $repoRoot 'site'
-$buildDir = Join-Path $GameRoot 'cocos\build\web-mobile'
+$outputName = if ($Release) { 'web-mobile-release' } else { 'web-mobile' }
+$buildDir = Join-Path $GameRoot ('cocos/build/' + $outputName)
 
 if ($Rebuild) {
     Write-Output "正在用 Cocos Creator 重新构建（约 1-3 分钟）..."
-    & (Join-Path $GameRoot 'scripts\build-cocos.ps1')
+    & (Join-Path $GameRoot 'scripts\build-cocos.ps1') -Release:$Release
     if ($LASTEXITCODE -ne 0) { throw "Cocos 构建失败，退出码 $LASTEXITCODE" }
 }
 
@@ -35,9 +37,12 @@ foreach ($webFile in @('boot.js','sw.js')) {
 }
 Write-Output "源目录: $buildDir"
 Write-Output "目标目录: $siteDir"
-robocopy $buildDir $siteDir /MIR /NFL /NDL /NJH /NJS /NP | Out-Null
+robocopy $buildDir $siteDir /MIR /XD .runtime-bridge /NFL /NDL /NJH /NJS /NP | Out-Null
 if ($LASTEXITCODE -gt 7) { throw "robocopy 失败，退出码 $LASTEXITCODE" }
 
+# Remove the old editor snapshot if the previous deployment included it.
+$editorSnapshot = Join-Path $resolvedSite '.runtime-bridge/config.snapshot.json'
+if (Test-Path -LiteralPath $editorSnapshot) { Remove-Item -LiteralPath $editorSnapshot }
 $files = Get-ChildItem $siteDir -Recurse -File -Force
 Write-Output "同步完成：$($files.Count) 个文件"
 
@@ -68,8 +73,8 @@ if (-not $html.Contains('<!-- game-brand-end -->')) { throw 'Missing branded sta
 $html = $html.Replace('<!-- game-brand-end -->', '<!-- game-brand-end -->' + $boot)
 [IO.File]::WriteAllText((Join-Path $siteDir 'index.html'),$html,[Text.UTF8Encoding]::new($false))
 $bundle = Join-Path $siteDir 'assets/main/index.js'
-$release = @{version=$releaseVersion;build='Cocos Creator 3.8.8 Web Mobile';stage=@(480,270);bundleSha256=(Get-FileHash $bundle -Algorithm SHA256).Hash.ToLower()}
-[IO.File]::WriteAllText((Join-Path $siteDir 'release.json'),($release | ConvertTo-Json),[Text.UTF8Encoding]::new($false))
+$releaseInfo = @{version=$releaseVersion;build='Cocos Creator 3.8.8 Web Mobile';stage=@(480,344);canvas=@(480,854);debug=(-not $Release.IsPresent);bundleSha256=(Get-FileHash $bundle -Algorithm SHA256).Hash.ToLower()}
+[IO.File]::WriteAllText((Join-Path $siteDir 'release.json'),($releaseInfo | ConvertTo-Json),[Text.UTF8Encoding]::new($false))
 Write-Output "下一步提交并发布："
 Write-Output "  git -C `"$repoRoot`" add -A"
 Write-Output "  git -C `"$repoRoot`" commit -m `"更新游戏构建`""

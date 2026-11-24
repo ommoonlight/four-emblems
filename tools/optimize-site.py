@@ -20,8 +20,8 @@ import sys
 from PIL import Image
 
 DEFAULT_SITE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "site")
-EXTNAMES_PNG = re.compile(r"(\.extnames\s*=\s*\[)'\.png'")
-EXTNAMES_WEBP = re.compile(r"\.extnames\s*=\s*\[\s*'\.webp'")
+EXTNAMES_PNG = re.compile(r"""(\.extnames\s*=\s*\[)["']\.png["']""")
+EXTNAMES_WEBP = re.compile(r"""\.extnames\s*=\s*\[\s*["']\.webp["']""")
 
 
 def patch_engine(site_dir, dry_run=False):

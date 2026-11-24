@@ -1,5 +1,18 @@
 [
   {
+    "name": "golem",
+    "role": "actor",
+    "before": [
+      1254,
+      1254
+    ],
+    "after": [
+      512,
+      512
+    ],
+    "resized": true
+  },
+  {
     "name": "village-tavern-stage",
     "role": "rpg",
     "before": [
@@ -9,6 +22,84 @@
     "after": [
       960,
       540
+    ],
+    "resized": true
+  },
+  {
+    "name": "boss",
+    "role": "actor",
+    "before": [
+      1254,
+      1254
+    ],
+    "after": [
+      512,
+      512
+    ],
+    "resized": true
+  },
+  {
+    "name": "frog",
+    "role": "actor",
+    "before": [
+      1254,
+      1254
+    ],
+    "after": [
+      512,
+      512
+    ],
+    "resized": true
+  },
+  {
+    "name": "bat",
+    "role": "actor",
+    "before": [
+      1254,
+      1254
+    ],
+    "after": [
+      512,
+      512
+    ],
+    "resized": true
+  },
+  {
+    "name": "knight",
+    "role": "actor",
+    "before": [
+      1254,
+      1254
+    ],
+    "after": [
+      512,
+      512
+    ],
+    "resized": true
+  },
+  {
+    "name": "dragon",
+    "role": "actor",
+    "before": [
+      1254,
+      1254
+    ],
+    "after": [
+      512,
+      512
+    ],
+    "resized": true
+  },
+  {
+    "name": "lich",
+    "role": "actor",
+    "before": [
+      1254,
+      1254
+    ],
+    "after": [
+      512,
+      512
     ],
     "resized": true
   },
@@ -39,19 +130,6 @@
     "resized": true
   },
   {
-    "name": "desert-reel",
-    "role": "rpg",
-    "before": [
-      2172,
-      724
-    ],
-    "after": [
-      1620,
-      540
-    ],
-    "resized": true
-  },
-  {
     "name": "village-chief-stage",
     "role": "rpg",
     "before": [
@@ -61,6 +139,19 @@
     "after": [
       960,
       540
+    ],
+    "resized": true
+  },
+  {
+    "name": "ghost",
+    "role": "actor",
+    "before": [
+      1312,
+      1199
+    ],
+    "after": [
+      512,
+      468
     ],
     "resized": true
   },
@@ -78,6 +169,19 @@
     "resized": false
   },
   {
+    "name": "wizard",
+    "role": "actor",
+    "before": [
+      1254,
+      1254
+    ],
+    "after": [
+      512,
+      512
+    ],
+    "resized": true
+  },
+  {
     "name": "village-smith-stage",
     "role": "rpg",
     "before": [
@@ -91,6 +195,19 @@
     "resized": true
   },
   {
+    "name": "beetle",
+    "role": "actor",
+    "before": [
+      1254,
+      1254
+    ],
+    "after": [
+      512,
+      512
+    ],
+    "resized": true
+  },
+  {
     "name": "village-stage",
     "role": "rpg",
     "before": [
@@ -99,19 +216,6 @@
     ],
     "after": [
       960,
-      540
-    ],
-    "resized": true
-  },
-  {
-    "name": "undead-reel",
-    "role": "rpg",
-    "before": [
-      2172,
-      724
-    ],
-    "after": [
-      1620,
       540
     ],
     "resized": true
