@@ -1,8 +1,7 @@
 {
-  "debug": false,
-  "version": "20261125-combat-tiles",
   "build": "Cocos Creator 3.8.8 Web Mobile",
-  "bundleSha256": "422899ecb29f1e5770b0237f9b532bdffd6e0afbcccc60d3f7fba8b8efc60ca4",
+  "version": "20261125-icon-focus",
+  "bundleSha256": "f431da1895172cc7745892ee7fbde31e8cc4cff28e6fc1b25ab3e21f71db8f6a",
   "stage": [
     480,
     344
@@ -10,5 +9,6 @@
   "canvas": [
     480,
     854
-  ]
+  ],
+  "debug": false
 }

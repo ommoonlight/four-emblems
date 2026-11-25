@@ -2,14 +2,8 @@
   "schemaVersion": 1,
   "groups": {
     "opening": {
-      "bytes": 367896,
+      "bytes": 355678,
       "assets": [
-        {
-          "name": "advanced-frame",
-          "path": "assets/resources/native/1f/1fd3fda3-4d9b-486d-8d7c-e735b947d4f6.webp",
-          "bytes": 6468,
-          "sha256": "8a7fa26f7e888caa39ce2990a37d7140218a215349aab786dee56ef2c99f20cb"
-        },
         {
           "name": "combat-impact",
           "path": "assets/resources/native/2e/2efe8988-cab9-456f-9b9b-9c4b25003738.webp",
@@ -93,12 +87,6 @@
           "path": "assets/resources/native/ed/ed48ebbb-1999-437f-999f-0bffe2665ff1.webp",
           "bytes": 3946,
           "sha256": "54bd5c73ac164cfe44d10b4c20f57c6bc7cff80e6fcbe16cd6711efd2c029bdf"
-        },
-        {
-          "name": "skill-frame",
-          "path": "assets/resources/native/ad/ad6cfdb8-34e0-482e-b59e-f01493341c9b.webp",
-          "bytes": 5750,
-          "sha256": "8d04f8dfb4f41a4dc575bba6e378ebd56536531cf1e073c04cb8de2b9c7430db"
         },
         {
           "name": "stone",
