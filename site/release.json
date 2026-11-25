@@ -1,14 +1,14 @@
 {
-  "stage": [
-    480,
-    344
-  ],
+  "build": "Cocos Creator 3.8.8 Web Mobile",
   "debug": false,
+  "bundleSha256": "678821b62031ecc7404c832eb87952cf688270b2e592c126ded40076b317f8c2",
+  "version": "20261125-crest-lighten",
   "canvas": [
     480,
     854
   ],
-  "version": "20261125-tier-stars",
-  "bundleSha256": "01d66e73be56a31b35d402c7ee3da35e73ee081f5a546b51bc20e62523e3fad1",
-  "build": "Cocos Creator 3.8.8 Web Mobile"
+  "stage": [
+    480,
+    344
+  ]
 }
