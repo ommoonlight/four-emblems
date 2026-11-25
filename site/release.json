@@ -1,14 +1,14 @@
 {
   "debug": false,
+  "version": "20261125-combat-tiles",
   "build": "Cocos Creator 3.8.8 Web Mobile",
-  "canvas": [
-    480,
-    854
-  ],
+  "bundleSha256": "422899ecb29f1e5770b0237f9b532bdffd6e0afbcccc60d3f7fba8b8efc60ca4",
   "stage": [
     480,
     344
   ],
-  "version": "20261124-battle-v51",
-  "bundleSha256": "b0bc033b4ed50c1ccfde8589626b3797e76ca10fc8f2fee421baeb1f5165e796"
+  "canvas": [
+    480,
+    854
+  ]
 }
