@@ -1,14 +1,14 @@
 {
-  "build": "Cocos Creator 3.8.8 Web Mobile",
-  "version": "20261125-icon-focus",
-  "bundleSha256": "f431da1895172cc7745892ee7fbde31e8cc4cff28e6fc1b25ab3e21f71db8f6a",
   "stage": [
     480,
     344
   ],
+  "debug": false,
+  "build": "Cocos Creator 3.8.8 Web Mobile",
+  "version": "20261125-tier-flames",
   "canvas": [
     480,
     854
   ],
-  "debug": false
+  "bundleSha256": "37933e098093f5821c8c1cd86d88b48ecf96888c7b44a0b5122fc5f8fc6fd50e"
 }
