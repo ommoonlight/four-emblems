@@ -4,11 +4,11 @@
     344
   ],
   "debug": false,
-  "build": "Cocos Creator 3.8.8 Web Mobile",
-  "version": "20261125-tier-flames",
   "canvas": [
     480,
     854
   ],
-  "bundleSha256": "37933e098093f5821c8c1cd86d88b48ecf96888c7b44a0b5122fc5f8fc6fd50e"
+  "version": "20261125-tier-stars",
+  "bundleSha256": "01d66e73be56a31b35d402c7ee3da35e73ee081f5a546b51bc20e62523e3fad1",
+  "build": "Cocos Creator 3.8.8 Web Mobile"
 }
