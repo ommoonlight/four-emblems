@@ -1,14 +1,14 @@
 {
-  "version": "20261125-buff-hud",
   "canvas": [
     480,
     854
   ],
+  "bundleSha256": "dba558b642f1a35cd1d2b797663d78586e1376cfae6f47adb9337dffc7ef1b93",
+  "build": "Cocos Creator 3.8.8 Web Mobile",
+  "version": "20261126-r006",
+  "debug": false,
   "stage": [
     480,
     344
-  ],
-  "bundleSha256": "30c082ef13f06cd2bda9a9af6b152573569c49c513435bc9d39ad64390108934",
-  "debug": false,
-  "build": "Cocos Creator 3.8.8 Web Mobile"
+  ]
 }

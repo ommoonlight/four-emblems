@@ -556,14 +556,8 @@
       ]
     },
     "forest": {
-      "bytes": 69354,
+      "bytes": 188836,
       "assets": [
-        {
-          "name": "forest-bear",
-          "path": "assets/resources/native/95/95c9cd02-a0fd-4ad4-a57a-b0a483cc406b.webp",
-          "bytes": 23386,
-          "sha256": "e55ab22677efdb857456936fa2a4e0c004462afbd1f0dac853c0aa6c5421033c"
-        },
         {
           "name": "forest-leafguard",
           "path": "assets/resources/native/a2/a23cf244-7932-4b29-9945-900a9513d0b4.webp",
@@ -575,11 +569,101 @@
           "path": "assets/resources/native/32/321486c5-7bde-491b-a1f8-75896e32ef7b.webp",
           "bytes": 23244,
           "sha256": "bb4a47cb35a5fd67183047a1a181992cdc1f1d055dbf9fc7410e8f6b2a5dfc86"
+        },
+        {
+          "name": "moss-cairn",
+          "path": "assets/resources/native/c6/c6a404e6-0427-5471-9de9-3e958082cb28.webp",
+          "bytes": 12636,
+          "sha256": "0755b2a6a8a945049783a864c451c101909b8b00a773217c9a0ea64940709312"
+        },
+        {
+          "name": "moss-boar",
+          "path": "assets/resources/native/74/74123120-cf26-55f1-8354-a4794b86b5a3.webp",
+          "bytes": 10714,
+          "sha256": "d6d394d1e31abd60054068721a606e6013f51a18a0167b77f60aa3f914905d1b"
+        },
+        {
+          "name": "moss-stag",
+          "path": "assets/resources/native/45/45b1340b-e1a8-5a27-83a4-cc348b7ee3ea.webp",
+          "bytes": 12154,
+          "sha256": "7be2969cefdc3d3f41e23bcac3ef611a06b1cef97fcc1fdbe832392fa668446c"
+        },
+        {
+          "name": "moss-wolf",
+          "path": "assets/resources/native/ab/ab3f0b5f-9922-51cf-883d-54df0555a559.webp",
+          "bytes": 10150,
+          "sha256": "ae689a951208300f7633e8bfc91b4ea16444fd41b541e786bbdddf4d40f973bf"
+        },
+        {
+          "name": "moss-frog",
+          "path": "assets/resources/native/ed/edf83588-42a0-59ad-98cc-3c8ec1458a2e.webp",
+          "bytes": 7090,
+          "sha256": "ab776d24dbf688d3fbd9c52f500b1c3875be5800ab5eb83af78b7fe5287b7cac"
+        },
+        {
+          "name": "moss-turtle",
+          "path": "assets/resources/native/53/53fa9aeb-e6f2-5f2d-91f6-b41dbbd3a27c.webp",
+          "bytes": 11218,
+          "sha256": "6b2443bb67f905dff32c68f9ecef77724a8204857d529f72f7d49326dc9a81bf"
+        },
+        {
+          "name": "moss-root",
+          "path": "assets/resources/native/84/84559f82-7397-547c-9e87-c138f59fee29.webp",
+          "bytes": 15516,
+          "sha256": "2be2761464f36667939896ac80050b48d8e4030cb3a1bdc10f34c6d2b8535860"
+        },
+        {
+          "name": "moss-maw",
+          "path": "assets/resources/native/65/657ced5f-acfa-5c7b-ad27-5fa23f57a645.webp",
+          "bytes": 11304,
+          "sha256": "6347523c8e555a9e2a5f08d5256d8d84b76082c8160697c569ae227e8ef2f17d"
+        },
+        {
+          "name": "moss-grub",
+          "path": "assets/resources/native/cb/cba7fd86-dc3c-5daf-839c-3363dfef60e7.webp",
+          "bytes": 6842,
+          "sha256": "0b566fa16b1e29f884a3701ecbeb4ee8e98e5c7890e1323b54635abd8d1d04c4"
+        },
+        {
+          "name": "moss-bee",
+          "path": "assets/resources/native/c7/c7341c1a-16ff-530d-aeb9-d5f043a6a900.webp",
+          "bytes": 6852,
+          "sha256": "aa40b142759b5c3ffa41dda60db4428d7def9efaa5811ee8e26aef3071bfa782"
+        },
+        {
+          "name": "moss-moth",
+          "path": "assets/resources/native/77/77a975e1-83ba-5476-8e99-ee7801df9c95.webp",
+          "bytes": 6910,
+          "sha256": "3c90f47ab5e948db52aaff7707e07b1f36720b9a5103dfbc987910a1ddbefd03"
+        },
+        {
+          "name": "moss-spider",
+          "path": "assets/resources/native/51/51b84f34-08c6-57e9-9c6a-16a1b2465b8b.webp",
+          "bytes": 8334,
+          "sha256": "48b9ccc8b3baa8f775f2560f0aa07c9683038fa1f20b3810d018bb2bab9ccd49"
+        },
+        {
+          "name": "moss-cap",
+          "path": "assets/resources/native/28/2897ef29-1c65-539b-9f41-eef2170ddfdf.webp",
+          "bytes": 7690,
+          "sha256": "95f2c0aeeaa52cd4e5e77adb83d1563c0e582442a0a48a34e95806b6bf71fdf4"
+        },
+        {
+          "name": "moss-slime",
+          "path": "assets/resources/native/59/596f204d-da47-578c-8c03-ee8a1ec3ea21.webp",
+          "bytes": 7912,
+          "sha256": "78d643d87d97c0b6577425a05c0ace883fb2cc7404e1cf92b865299658b01be1"
+        },
+        {
+          "name": "moss-bloom",
+          "path": "assets/resources/native/02/02db47ae-0174-5461-a247-ad5af1e14041.webp",
+          "bytes": 7546,
+          "sha256": "c0f4e1f8d9bb85e72db3dfdb9cf8dfe6f441b827631c47022f6e7ec1ed47af78"
         }
       ]
     },
     "mine": {
-      "bytes": 110640,
+      "bytes": 245024,
       "assets": [
         {
           "name": "bat",
@@ -616,11 +700,101 @@
           "path": "assets/resources/native/77/77afbd94-a22f-4262-b5dd-0fb5a350ec22.webp",
           "bytes": 80,
           "sha256": "55d33321719435e132065c68210a89225a1d50810aafdfb75d939e88a1fd7779"
+        },
+        {
+          "name": "mine-cairn",
+          "path": "assets/resources/native/cd/cd4ce1a9-8740-53a5-9c0e-95ddd476e1db.webp",
+          "bytes": 15324,
+          "sha256": "fc987c956c8985c228021fa2c4c950777f19ec0dbb5888dafe47f0bece12060c"
+        },
+        {
+          "name": "mine-horn",
+          "path": "assets/resources/native/8f/8f75aae7-8aed-5116-a0c3-d924dd4d068c.webp",
+          "bytes": 8918,
+          "sha256": "53e4b413ce80e96b0a808173a62e33554a5685872432793dc1d66f7c83fa5989"
+        },
+        {
+          "name": "mine-spider",
+          "path": "assets/resources/native/8d/8d4b1fee-fef8-52d7-a0af-4339de6b14da.webp",
+          "bytes": 7496,
+          "sha256": "56aa8277830dab9d5ecebcaf8f7d4479ae5bdbc344c03270a930a1a30407d15e"
+        },
+        {
+          "name": "mine-wing",
+          "path": "assets/resources/native/ae/ae43ba04-8768-57ae-97d3-9a4e0e8e0bcf.webp",
+          "bytes": 4666,
+          "sha256": "27c90f70954a16a67c8e48d3d8718f9a8a851331e6aaac38d1c4e8d84191f177"
+        },
+        {
+          "name": "mine-rat",
+          "path": "assets/resources/native/8c/8ccd36ea-4cb0-572e-aee6-91c0ef3529f4.webp",
+          "bytes": 5116,
+          "sha256": "27e28d5d6c941f4e123c08520c95a02d0916d73f51404eca66711a0f9cd63a0e"
+        },
+        {
+          "name": "mine-mole",
+          "path": "assets/resources/native/b9/b99e0fa1-481c-5d3b-9379-531cfdc27da7.webp",
+          "bytes": 8756,
+          "sha256": "c9e278f81f0282a12edb08b8a26b47404f3a3f3c4e54dd546ab12b8c61e1c2cb"
+        },
+        {
+          "name": "mine-slime",
+          "path": "assets/resources/native/9c/9cf2e5d9-d430-5e16-b872-b63948882e1b.webp",
+          "bytes": 5588,
+          "sha256": "1bc325ff24c29f7d3b6f4d977c63603d2fb1f365e78c5bdfda6e58d8bdd324e3"
+        },
+        {
+          "name": "mine-cap",
+          "path": "assets/resources/native/d8/d80a114f-4fb5-5750-a91c-dd37fece07fc.webp",
+          "bytes": 6636,
+          "sha256": "3361b196a440d11ca079255a204853cf53c161ad0f39062e1b7da5926249f43c"
+        },
+        {
+          "name": "mine-crab",
+          "path": "assets/resources/native/23/23fa19ff-524b-541e-89d1-7256201c3577.webp",
+          "bytes": 11546,
+          "sha256": "55b5392d16dbd86c1be1628d7ec1d7fafdc02856161edc2d6cf92b68cb76ed75"
+        },
+        {
+          "name": "mine-scorpion",
+          "path": "assets/resources/native/a4/a4e2c790-5659-5e43-83e3-7cf8f21c4498.webp",
+          "bytes": 8352,
+          "sha256": "afc32a742ae04b487498e4c0c7a0d92074c1201f97cc5fd07d3de9b3c4a8b7a0"
+        },
+        {
+          "name": "mine-tar",
+          "path": "assets/resources/native/fb/fbbd6c57-b8e8-5240-860e-05abadc442a8.webp",
+          "bytes": 7992,
+          "sha256": "b6f42d6910b86b44d358e1cb652f71e943f04ce022008faa9f14ad6dafcd34dc"
+        },
+        {
+          "name": "mine-newt",
+          "path": "assets/resources/native/46/4612e39a-af5e-58c3-ac1c-ff28e89154db.webp",
+          "bytes": 7658,
+          "sha256": "5fcd7386f3d22a23718ec6e36eb2c77aea24003d030a0b46481aaafaa055214b"
+        },
+        {
+          "name": "mine-worm",
+          "path": "assets/resources/native/b6/b631d6ca-1f47-52fb-aab9-be00deee29ec.webp",
+          "bytes": 12298,
+          "sha256": "b7028f7d09db7549550c747f35e6f2b3c5c1481e0590e189bd39532541f13011"
+        },
+        {
+          "name": "mine-moth",
+          "path": "assets/resources/native/c3/c31754c1-e7bb-5322-970c-c549616a9601.webp",
+          "bytes": 7116,
+          "sha256": "2e8f208d8ae1507f54cfe1edc807eee4ac34df5929762acbb6d744d1bda3070f"
+        },
+        {
+          "name": "mine-brute",
+          "path": "assets/resources/native/b9/b9fc6181-2758-532a-adff-9cd3e6e0786c.webp",
+          "bytes": 16922,
+          "sha256": "d0e696490b12ce0c37a98dea9ccc91ccca9df6e60dcd602b3c6c38f3c8a66044"
         }
       ]
     },
     "swamp": {
-      "bytes": 145610,
+      "bytes": 398214,
       "assets": [
         {
           "name": "frog",
@@ -631,26 +805,98 @@
         {
           "name": "murloc-axe",
           "path": "assets/resources/native/fb/fb96ec7e-8de1-431a-8c06-359db80043eb.webp",
-          "bytes": 26384,
-          "sha256": "00a63e2af317ed801f1b6c0333a53b784e002ddfab92be19156b76bc1acd75e4"
+          "bytes": 20054,
+          "sha256": "a1922abddd26cf5926d3c9afe01889676afcef7ac06b04213019de3346227f36"
         },
         {
           "name": "murloc-mage",
           "path": "assets/resources/native/ed/ed08c688-4ad1-46f7-8b82-cddb7ef219ed.webp",
-          "bytes": 26296,
-          "sha256": "40e67886302d6eabe3cf63cb98323274d91c327ed2d32c3ee8d03e23594d9860"
+          "bytes": 19944,
+          "sha256": "176853ef220773e2a5ff9cc79d7be309caf583b06b1dafcf7044f733733f6c0d"
         },
         {
           "name": "murloc-spear",
           "path": "assets/resources/native/e0/e00fb824-10cb-4240-96c9-504f7bcdbb16.webp",
-          "bytes": 26198,
-          "sha256": "3d582d1c45c5a17b1e441d81d6aee78fa6549d53ec3dc9464b1eb9fb74ae3f93"
+          "bytes": 19844,
+          "sha256": "c1d1ff581404603bc7d44c162dce17131bde3f413bc891b6f728128cd56ccf6c"
+        },
+        {
+          "name": "swamp-chief",
+          "path": "assets/resources/native/0d/0d3d7965-0121-4882-a038-c4e25063f7c2.webp",
+          "bytes": 24398,
+          "sha256": "e99bf806f0b6bbddc47a6d52ff178544df3f927d80b59f40b3359ce8e722d21b"
+        },
+        {
+          "name": "swamp-archer",
+          "path": "assets/resources/native/2b/2bf6c60f-0fd5-4dbe-8f66-d76e185204a1.webp",
+          "bytes": 28352,
+          "sha256": "cba5707dd3a9c482b2695c84fd97e7725751a02290634488aa44ffbe5286c424"
+        },
+        {
+          "name": "swamp-warden",
+          "path": "assets/resources/native/24/24a41dcd-f2a4-44e0-9501-05a799bde012.webp",
+          "bytes": 20880,
+          "sha256": "91cf9fafc2215f47eeba8b1a450aefed1622eadf9b52bf1e07daf2475c96b121"
+        },
+        {
+          "name": "swamp-scout",
+          "path": "assets/resources/native/5f/5f6e6cb0-3859-41c4-a9f4-2b53fcdce615.webp",
+          "bytes": 21146,
+          "sha256": "b24d9df2c8668cd2b37b7fa39ef21be6e3c1485e93529ccb550b2653916f0e4f"
+        },
+        {
+          "name": "swamp-lamplighter",
+          "path": "assets/resources/native/3e/3e5ad744-4ce4-454d-ba4c-075ff1948216.webp",
+          "bytes": 28968,
+          "sha256": "b73ff8830193482abe982e9ab1dcf416474f6f3083776d73839a6a7d724ffff6"
+        },
+        {
+          "name": "swamp-shield",
+          "path": "assets/resources/native/9c/9cd694c1-3102-4e19-8ba2-2dc3bc537313.webp",
+          "bytes": 21562,
+          "sha256": "cfd8b6cd31c7d1e5089540379d76f93b522ac3b6721964416e77c2955a29826a"
+        },
+        {
+          "name": "swamp-newt",
+          "path": "assets/resources/native/84/84bac087-f0f9-4ac3-80b5-1876d1bdfafc.webp",
+          "bytes": 21944,
+          "sha256": "930e85e3727d0d1903e8bea6bb20aa0a80aa17cf5b5bb80f568c23bdd560b345"
+        },
+        {
+          "name": "swamp-pugilist",
+          "path": "assets/resources/native/08/08819ae2-f431-41be-aeae-d4965d42aa9e.webp",
+          "bytes": 24260,
+          "sha256": "4c0970b658cb6d4fa84e72bbb6ac738c50465b55c48a1d57e1c356ca2f3c9eef"
+        },
+        {
+          "name": "swamp-redcap",
+          "path": "assets/resources/native/70/70d73270-a882-4d6c-ba10-9887ef6788cb.webp",
+          "bytes": 24580,
+          "sha256": "0deaf104ee5c8fdc758f74dcd877c846b2fa1786dd481afd42fdb34cb2fa85d4"
+        },
+        {
+          "name": "swamp-netter",
+          "path": "assets/resources/native/53/53b7f3a8-e745-4706-beb7-301e9c5ab7c7.webp",
+          "bytes": 25560,
+          "sha256": "381aa448f831e8625628c4dfb076e29b9a9d8057b21983fe9566e38bcf1604f7"
+        },
+        {
+          "name": "swamp-oracle",
+          "path": "assets/resources/native/ad/adca06a8-d3a6-4948-81ad-5312ba530760.webp",
+          "bytes": 29092,
+          "sha256": "dcbd3c45a0473976ba3a5779dd58c22d0e73d65933750d67b178bc72dbcb2094"
+        },
+        {
+          "name": "swamp-shell",
+          "path": "assets/resources/native/98/982d964b-d96a-48c0-b6e7-aaea7e62cedb.webp",
+          "bytes": 19724,
+          "sha256": "f0ffcac1149e6b14dc5cd907541d008665c6caf8199d9bb25e0283e237ea6790"
         },
         {
           "name": "vine",
           "path": "assets/resources/native/1c/1cb7102b-36f1-4cab-821d-2a21906a7d08.webp",
-          "bytes": 39102,
-          "sha256": "76f851f7f88024b455a997a92c8f46dd31c580c21d95fea9ac7fb6fd50dc906a"
+          "bytes": 20276,
+          "sha256": "fd53545afe8faf4c6e995d5fb87a6ba50241c1fd13acbee2169985fc0685198c"
         },
         {
           "name": "corridor-swamp",
@@ -869,7 +1115,7 @@
       ]
     },
     "goblin": {
-      "bytes": 218368,
+      "bytes": 243474,
       "assets": [
         {
           "name": "fort-boar",
@@ -906,6 +1152,12 @@
           "path": "assets/resources/native/d1/d1802b39-e94d-5429-a63c-d97d881601d8.webp",
           "bytes": 25710,
           "sha256": "ba13a49cc34481e76c1ef02298050d8236920cc5f37c34d6b4bbe4a576bac8c5"
+        },
+        {
+          "name": "greedy-goblin",
+          "path": "assets/resources/native/94/94d8bfeb-0b1f-4ea2-9b67-d3f39fcaedf6.webp",
+          "bytes": 25106,
+          "sha256": "a5149cb9fae1be8e71e1a4120f50db369db2ba607c07334e3442561881d11771"
         },
         {
           "name": "fort-rider",

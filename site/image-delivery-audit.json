@@ -13,6 +13,19 @@
     "resized": true
   },
   {
+    "name": "swamp-pugilist",
+    "role": "actor",
+    "before": [
+      296,
+      272
+    ],
+    "after": [
+      256,
+      235
+    ],
+    "resized": true
+  },
+  {
     "name": "village-tavern-stage",
     "role": "rpg",
     "before": [
@@ -22,6 +35,19 @@
     "after": [
       960,
       540
+    ],
+    "resized": true
+  },
+  {
+    "name": "swamp-chief",
+    "role": "actor",
+    "before": [
+      310,
+      278
+    ],
+    "after": [
+      256,
+      230
     ],
     "resized": true
   },
@@ -78,6 +104,32 @@
     "resized": true
   },
   {
+    "name": "vine",
+    "role": "actor",
+    "before": [
+      512,
+      512
+    ],
+    "after": [
+      256,
+      256
+    ],
+    "resized": true
+  },
+  {
+    "name": "swamp-warden",
+    "role": "actor",
+    "before": [
+      328,
+      270
+    ],
+    "after": [
+      256,
+      211
+    ],
+    "resized": true
+  },
+  {
     "name": "dragon",
     "role": "actor",
     "before": [
@@ -91,6 +143,32 @@
     "resized": true
   },
   {
+    "name": "swamp-archer",
+    "role": "actor",
+    "before": [
+      278,
+      283
+    ],
+    "after": [
+      251,
+      256
+    ],
+    "resized": true
+  },
+  {
+    "name": "swamp-lamplighter",
+    "role": "actor",
+    "before": [
+      306,
+      274
+    ],
+    "after": [
+      256,
+      229
+    ],
+    "resized": true
+  },
+  {
     "name": "lich",
     "role": "actor",
     "before": [
@@ -100,6 +178,19 @@
     "after": [
       512,
       512
+    ],
+    "resized": true
+  },
+  {
+    "name": "swamp-netter",
+    "role": "actor",
+    "before": [
+      323,
+      270
+    ],
+    "after": [
+      256,
+      214
     ],
     "resized": true
   },
@@ -130,6 +221,19 @@
     "resized": true
   },
   {
+    "name": "swamp-scout",
+    "role": "actor",
+    "before": [
+      290,
+      246
+    ],
+    "after": [
+      256,
+      217
+    ],
+    "resized": true
+  },
+  {
     "name": "village-chief-stage",
     "role": "rpg",
     "before": [
@@ -139,6 +243,19 @@
     "after": [
       960,
       540
+    ],
+    "resized": true
+  },
+  {
+    "name": "swamp-redcap",
+    "role": "actor",
+    "before": [
+      316,
+      273
+    ],
+    "after": [
+      256,
+      221
     ],
     "resized": true
   },
@@ -167,6 +284,45 @@
       270
     ],
     "resized": false
+  },
+  {
+    "name": "swamp-newt",
+    "role": "actor",
+    "before": [
+      324,
+      264
+    ],
+    "after": [
+      256,
+      209
+    ],
+    "resized": true
+  },
+  {
+    "name": "swamp-shell",
+    "role": "actor",
+    "before": [
+      336,
+      257
+    ],
+    "after": [
+      256,
+      196
+    ],
+    "resized": true
+  },
+  {
+    "name": "swamp-shield",
+    "role": "actor",
+    "before": [
+      314,
+      259
+    ],
+    "after": [
+      256,
+      211
+    ],
+    "resized": true
   },
   {
     "name": "wizard",
@@ -217,6 +373,58 @@
     "after": [
       960,
       540
+    ],
+    "resized": true
+  },
+  {
+    "name": "swamp-oracle",
+    "role": "actor",
+    "before": [
+      293,
+      279
+    ],
+    "after": [
+      256,
+      244
+    ],
+    "resized": true
+  },
+  {
+    "name": "murloc-spear",
+    "role": "actor",
+    "before": [
+      332,
+      332
+    ],
+    "after": [
+      256,
+      256
+    ],
+    "resized": true
+  },
+  {
+    "name": "murloc-mage",
+    "role": "actor",
+    "before": [
+      332,
+      332
+    ],
+    "after": [
+      256,
+      256
+    ],
+    "resized": true
+  },
+  {
+    "name": "murloc-axe",
+    "role": "actor",
+    "before": [
+      332,
+      332
+    ],
+    "after": [
+      256,
+      256
     ],
     "resized": true
   }
