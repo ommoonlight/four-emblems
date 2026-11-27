@@ -65,6 +65,9 @@ if ($LASTEXITCODE -ne 0) { throw "素材优化失败，退出码 $LASTEXITCODE" 
 & $py.Source (Join-Path $GameRoot 'scripts\content-delivery.py') $siteDir
 if ($LASTEXITCODE -ne 0) { throw 'Content delivery manifest failed' }
 
+& $py.Source (Join-Path $PSScriptRoot 'version-environment.py') $siteDir $GameRoot $releaseVersion
+if ($LASTEXITCODE -ne 0) { throw 'Environment versioning failed' }
+
 Write-Output ""
 $html = Get-Content $indexFile -Raw
 if ($Playtest) { $html = $html.Replace('</head>', '<meta name="four-emblems-playtest" content="1"></head>') }
@@ -72,8 +75,9 @@ $boot = '<script src="/boot.js?v=' + $releaseVersion + '"></script>'
 if (-not $html.Contains('<!-- game-brand-end -->')) { throw 'Missing branded startup shell' }
 $html = $html.Replace('<!-- game-brand-end -->', '<!-- game-brand-end -->' + $boot)
 [IO.File]::WriteAllText((Join-Path $siteDir 'index.html'),$html,[Text.UTF8Encoding]::new($false))
-$bundle = Join-Path $siteDir 'assets/main/index.js'
-$releaseInfo = @{version=$releaseVersion;build='Cocos Creator 3.8.8 Web Mobile';stage=@(432,374);canvas=@(432,960);debug=$true;bundleSha256=(Get-FileHash $bundle -Algorithm SHA256).Hash.ToLower()}
+$bundlePath = "assets/main/index.$releaseVersion.js"
+$bundle = Join-Path $siteDir $bundlePath
+$releaseInfo = @{version=$releaseVersion;build='Cocos Creator 3.8.8 Web Mobile';stage=@(432,374);canvas=@(432,960);debug=$true;bundlePath=$bundlePath;bundleSha256=(Get-FileHash $bundle -Algorithm SHA256).Hash.ToLower()}
 [IO.File]::WriteAllText((Join-Path $siteDir 'release.json'),($releaseInfo | ConvertTo-Json),[Text.UTF8Encoding]::new($false))
 Write-Output "下一步提交并发布："
 Write-Output "  git -C `"$repoRoot`" add -A"
