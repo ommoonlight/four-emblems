@@ -23,7 +23,7 @@ def prepare_site(site, game, version):
     config = json.loads(config_path.read_text('utf8'))
     for key, (name, kind, *_) in config['paths'].items():
         asset_type = config['types'][kind]
-        if not (name.startswith('environments/') or name in {'effects/depth-ground', 'effects/actor-state', 'effects/depth-foliage'}):
+        if not (name.startswith('environments/') or name in {'effects/depth-ground', 'effects/actor-state', 'effects/depth-foliage', 'effects/skill-sweep'}):
             continue
         if asset_type == 'cc.Texture2D':
             continue  # Stored in the shared import pack below.

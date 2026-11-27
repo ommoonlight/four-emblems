@@ -11,7 +11,7 @@
  * 3. 入口文件（html/js 清单）走「网络优先」，保证发版后能拿到新版本
  */
 
-const VERSION = 'fe-20261127-r013';
+const VERSION = 'fe-20261127-r014';
 const CACHE = `four-emblems-assets-${VERSION.replace(/^fe-/, '')}`;
 const IDLE_TIMEOUT = 15000; // 连续 15 秒没有数据才认为卡死
 const RETRIES = 4;
