@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "groups": {
     "opening": {
-      "bytes": 355678,
+      "bytes": 342062,
       "assets": [
         {
           "name": "combat-impact",
@@ -133,8 +133,8 @@
         {
           "name": "material-gold",
           "path": "assets/resources/native/63/63b91f28-9b20-4f1e-b952-e5b20a496fa6.webp",
-          "bytes": 20510,
-          "sha256": "306b13a00d7b86cf1a03a359d51d1526bc7b0aca5d3a6863f1fddd543a41cfd4"
+          "bytes": 6894,
+          "sha256": "14ee4b8e6d25080df633d9c178b46d8bb7642ccce0d9a7a2d0656499342c2b57"
         },
         {
           "name": "corridor-forest-middle",
