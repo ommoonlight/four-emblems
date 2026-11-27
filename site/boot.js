@@ -160,7 +160,7 @@
   }, 5000);
 
   // ---------- 2. 带重试与断流检测的 fetch ----------
-  var CACHE_NAME = 'four-emblems-assets-20261127-r009';
+  var CACHE_NAME = 'four-emblems-assets-20261127-r011';
   var IDLE_TIMEOUT = 15000;   // 连续 15 秒没数据才算断流
   var RETRIES = 5;
   var MAX_BODY = 64 * 1024 * 1024;
@@ -221,7 +221,7 @@
     throw lastErr || new Error('fetch failed');
   }
 
-  var releaseReset = (window.caches ? caches.keys().then(function(keys){return Promise.all(keys.filter(function(k){return k.indexOf('four-emblems-')===0 && k!=='four-emblems-assets-20261127-r009';}).map(function(k){return caches.delete(k);}));}).catch(function(){}) : Promise.resolve());
+  var releaseReset = (window.caches ? caches.keys().then(function(keys){return Promise.all(keys.filter(function(k){return k.indexOf('four-emblems-')===0 && k!=='four-emblems-assets-20261127-r011';}).map(function(k){return caches.delete(k);}));}).catch(function(){}) : Promise.resolve());
   var cachePromise = (window.caches && caches.open) ? caches.open(CACHE_NAME).catch(function () { return null; }) : Promise.resolve(null);
 
   window.fetch = async function (input, init) {
