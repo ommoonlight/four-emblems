@@ -1,4 +1,4 @@
-﻿param(
+param(
     [string]$GameRoot = 'D:\Project\Cocos\HX',
     [switch]$Rebuild,
     [switch]$Release,
@@ -73,7 +73,7 @@ if (-not $html.Contains('<!-- game-brand-end -->')) { throw 'Missing branded sta
 $html = $html.Replace('<!-- game-brand-end -->', '<!-- game-brand-end -->' + $boot)
 [IO.File]::WriteAllText((Join-Path $siteDir 'index.html'),$html,[Text.UTF8Encoding]::new($false))
 $bundle = Join-Path $siteDir 'assets/main/index.js'
-$releaseInfo = @{version=$releaseVersion;build='Cocos Creator 3.8.8 Web Mobile';stage=@(480,344);canvas=@(480,854);debug=(-not $Release.IsPresent);bundleSha256=(Get-FileHash $bundle -Algorithm SHA256).Hash.ToLower()}
+$releaseInfo = @{version=$releaseVersion;build='Cocos Creator 3.8.8 Web Mobile';stage=@(432,374);canvas=@(432,960);debug=$true;bundleSha256=(Get-FileHash $bundle -Algorithm SHA256).Hash.ToLower()}
 [IO.File]::WriteAllText((Join-Path $siteDir 'release.json'),($releaseInfo | ConvertTo-Json),[Text.UTF8Encoding]::new($false))
 Write-Output "下一步提交并发布："
 Write-Output "  git -C `"$repoRoot`" add -A"
