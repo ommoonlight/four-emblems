@@ -1,15 +1,15 @@
 {
-  "bundlePath": "assets/main/index.20261128-r025.js",
-  "build": "Cocos Creator 3.8.8 Web Mobile",
-  "bundleSha256": "3d04d6f797dd715c3bad968f4f9ba59c5f76acf66a05aa1f4c861a13ad74f426",
-  "debug": true,
+  "bundleSha256": "b44aaf86e9cc18dec87a2ef0fa5e6154670f1b46b6bdbedc611a1770f03ca35c",
+  "canvas": [
+    432,
+    960
+  ],
+  "version": "20261128-r026",
   "stage": [
     432,
     374
   ],
-  "version": "20261128-r025",
-  "canvas": [
-    432,
-    960
-  ]
+  "bundlePath": "assets/main/index.20261128-r026.js",
+  "debug": true,
+  "build": "Cocos Creator 3.8.8 Web Mobile"
 }
